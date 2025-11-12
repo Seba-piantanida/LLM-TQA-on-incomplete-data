@@ -1,0 +1,6 @@
+db_path,db_id,tbl_name,test_category,sql_tag,query,question
+data/db_categorical_simple.sqlite,db,dataset_auto,ORDERBY,ORDERBY-SINGLE,SELECT * FROM `dataset_auto` ORDER BY `Anno` DESC LIMIT 15,"List the top 15 rows from the table `dataset_auto`, sorted by the column `Anno` in descending order."
+data/db_categorical_simple.sqlite,db,dataset_auto,ORDERBY,ORDERBY-PROJECT,SELECT `Cavalli` FROM `dataset_auto` ORDER BY `Cavalli` DESC LIMIT 15,Select only the column `Cavalli` from `dataset_auto`. Sort it in descending order and return the first 15 values.
+data/db_categorical_simple.sqlite,db,dataset_film_famosi,ORDERBY,ORDERBY-PROJECT,SELECT `Anno` FROM `dataset_film_famosi` ORDER BY `Anno` ASC LIMIT 15,Select only the column `Anno` from `dataset_film_famosi`. Sort it in ascending order and return the first 15 values.
+data/db_categorical_simple.sqlite,db,dataset_film_famosi,ORDERBY,ORDERBY-PROJECT,SELECT `Durata` FROM `dataset_film_famosi` ORDER BY `Durata` DESC LIMIT 15,Select only the column `Durata` from `dataset_film_famosi`. Sort it in descending order and return the first 15 values.
+data/db_categorical_simple.sqlite,db,dataset_film_famosi,ORDERBY,ORDERBY-PROJECT,SELECT `Titolo` FROM `dataset_film_famosi` ORDER BY `Titolo` ASC LIMIT 15,Select only the column `Titolo` from `dataset_film_famosi`. Sort it in ascending order and return the first 15 values.

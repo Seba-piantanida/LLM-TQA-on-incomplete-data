@@ -1,0 +1,9 @@
+db_path,db_id,tbl_name,test_category,sql_tag,query,question
+data/db_music_cut_300.sqlite,db,albums,ORDERBY,ORDERBY-PROJECT,SELECT `album_id` FROM `albums` ORDER BY `album_id` ASC LIMIT 5,Select only the column `album_id` from `albums`. Sort it in ascending order and return the first 5 values.
+data/db_music_cut_300.sqlite,db,artists,ORDERBY,ORDERBY-SINGLE,SELECT * FROM `artists` ORDER BY `artist_id` ASC LIMIT 5,"List the top 5 rows from the table `artists`, sorted by the column `artist_id` in ascending order."
+data/db_music_cut_300.sqlite,db,artists,ORDERBY,ORDERBY-PROJECT,SELECT `artist_id` FROM `artists` ORDER BY `artist_id` ASC LIMIT 5,Select only the column `artist_id` from `artists`. Sort it in ascending order and return the first 5 values.
+data/db_music_cut_300.sqlite,db,artists,ORDERBY,ORDERBY-PROJECT,SELECT `artist_id` FROM `artists` ORDER BY `artist_id` DESC LIMIT 5,Select only the column `artist_id` from `artists`. Sort it in descending order and return the first 5 values.
+data/db_music_cut_300.sqlite,db,tracks,ORDERBY,ORDERBY-SINGLE,SELECT * FROM `tracks` ORDER BY `track_score` DESC LIMIT 5,"List the top 5 rows from the table `tracks`, sorted by the column `track_score` in descending order."
+data/db_music_cut_300.sqlite,db,tracks,ORDERBY,ORDERBY-PROJECT,SELECT `album_id` FROM `tracks` ORDER BY `album_id` DESC LIMIT 5,Select only the column `album_id` from `tracks`. Sort it in descending order and return the first 5 values.
+data/db_music_cut_300.sqlite,db,tracks,ORDERBY,ORDERBY-PROJECT,SELECT `title` FROM `tracks` ORDER BY `title` ASC LIMIT 5,Select only the column `title` from `tracks`. Sort it in ascending order and return the first 5 values.
+data/db_music_cut_300.sqlite,db,tracks,ORDERBY,ORDERBY-PROJECT,SELECT `all_time_rank` FROM `tracks` ORDER BY `all_time_rank` DESC LIMIT 5,Select only the column `all_time_rank` from `tracks`. Sort it in descending order and return the first 5 values.

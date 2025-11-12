@@ -1,0 +1,5 @@
+table_name,model,avg_valid_efficiency_score,avg_cell_precision,avg_cell_recall,avg_execution_accuracy,avg_tuple_cardinality,avg_tuple_constraint,avg_tuple_order
+dataset_animali,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,0.0,0.7329285714285715,0.7602857142857143,0.25,1.0,0.6589285714285714,0.7392857142857142
+dataset_auto,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,0.0,0.67075,0.7087857142857142,0.25,1.0,0.39525,0.7285714285714285
+dataset_film_famosi,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,0.0,0.6970000000000001,0.7184999999999999,0.32142857142857145,1.0,0.4886785714285714,0.8250000000000001
+monumenti_reali,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,0.0,0.6261428571428571,0.6930714285714286,0.21428571428571427,1.0,0.375,0.7589285714285714

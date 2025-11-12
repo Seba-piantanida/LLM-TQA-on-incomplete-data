@@ -1,0 +1,782 @@
+db_path,table_name,test_category,query,model,AI_answer,SQL_query,failed_attempts,note,valid_efficiency_score,cell_precision,cell_recall,execution_accuracy,tuple_cardinality,tuple_constraint,tuple_order
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_animali`, sorted by the column `Habitat` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Pinguino imperatore', 'Uccello', 'Antartide', 20, 30.0], ['Orso polare', 'Mammifero', 'Artico', 25, 450.0], ['Cavalluccio marino', 'Pesce', 'Barriere coralline', 4, 0.05], ['Canguro rosso', 'Mammifero', 'Deserti australiani', 23, 85.0], ['Falco pellegrino', 'Uccello', 'Falesie e aree urbane', 15, 1.0]]",SELECT * FROM `dataset_animali` ORDER BY `Habitat` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_animali`, sorted by the column `Habitat` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Foca monaca', 'Mammifero', 'Zone costiere', 30, 300.0], ['Elefante africano', 'Mammifero', 'Savane africane', 70, 6000.0], ['Leone', 'Mammifero', 'Savane', 14, 190.0], ['Squalo bianco', 'Pesce', 'Oceani', 70, 1100.0], ['Aquila reale', 'Uccello', 'Montagne', 25, 6.0]]",SELECT * FROM `dataset_animali` ORDER BY `Habitat` DESC LIMIT 5,0,,0.0,0.636,0.737,0.0,1.0,0.6,1.0
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_animali`, sorted by the column `Peso medio (kg)` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Cavalluccio marino', 'Pesce', 'Barriere coralline', 4, 0.05], ['Camaleonte pantera', 'Rettile', 'Foreste del Madagascar', 5, 0.2], ['Falco pellegrino', 'Uccello', 'Falesie e aree urbane', 15, 1.0], ['Pappagallo ara', 'Uccello', 'Foreste pluviali', 50, 1.2], ['Cobra reale', 'Rettile', 'Foreste tropicali', 20, 6.0]]",SELECT * FROM `dataset_animali` ORDER BY `Peso medio (kg)` ASC LIMIT 5,0,,0.0,0.87,0.87,0.0,1.0,0.8,1.0
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_animali`, sorted by the column `Peso medio (kg)` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Balena azzurra', 'Mammifero', 'Oceani', 90, 140000.0], ['Elefante africano', 'Mammifero', 'Savane africane', 70, 6000.0], ['Rinoceronte bianco', 'Mammifero', 'Savane africane', 50, 2400.0], ['Ippopotamo', 'Mammifero', 'Fiumi africani', 40, 1500.0], ['Giraffa', 'Mammifero', 'Savane', 25, 1200.0]]",SELECT * FROM `dataset_animali` ORDER BY `Peso medio (kg)` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_animali`, sorted by the column `Durata vita media` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Cavalluccio marino', 'Pesce', 'Barriere coralline', 4], ['Camaleonte pantera', 'Rettile', 'Foreste del Madagascar', 5], ['Pantera nera', 'Mammifero', 'Foreste tropicali', 12], ['Lupo grigio', 'Mammifero', 'Foreste e tundra', 13], ['Leone', 'Mammifero', 'Savane', 14]]",SELECT * FROM `dataset_animali` ORDER BY `Durata vita media` ASC LIMIT 5,0,,0.0,1.0,0.783,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_animali`, sorted by the column `Durata vita media` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Tartaruga gigante', 'Rettile', 'Isole Galápagos', 100], ['Balena azzurra', 'Mammifero', 'Oceani', 90], ['Rinoceronte bianco', 'Mammifero', 'Savane africane', 50], ['Pappagallo ara', 'Uccello', 'Foreste pluviali', 50], ['Foca monaca', 'Mammifero', 'Zone costiere', 30]]",SELECT * FROM `dataset_animali` ORDER BY `Durata vita media` DESC LIMIT 5,0,,0.0,0.529,0.45,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_animali`, sorted by the column `Nome` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Albatros urlatore', 'Uccello', 'Oceani', 50, 11.0], ['Aquila reale', 'Uccello', 'Montagne', 25, 6.0], ['Balena azzurra', 'Mammifero', 'Oceani', 90, 140000.0], ['Camaleonte pantera', 'Rettile', 'Foreste del Madagascar', 5, 0.2], ['Canguro rosso', 'Mammifero', 'Deserti australiani', 23, 85.0]]",SELECT * FROM `dataset_animali` ORDER BY `Nome` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_animali`, sorted by the column `Nome` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Squalo bianco', 'Pesce', 'Oceani', 70], ['Rinoceronte bianco', 'Mammifero', 'Savane africane', 50], ['Pappagallo ara', 'Uccello', 'Foreste pluviali', 50], ['Pitone reticolato', 'Rettile', 'Foreste tropicali', 20], ['Pinguino imperatore', 'Uccello', 'Antartide', 20]]",SELECT * FROM `dataset_animali` ORDER BY `Nome` DESC LIMIT 5,0,,0.0,0.706,0.522,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-ADVANCED,"Compute the sum of the columns Nome, Classe, Peso medio (kg) for each row in `dataset_animali`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Cavalluccio marino', 'Pesce', 0.05, 15.05], ['Falco pellegrino', 'Uccello', 1.0, 20.0], ['Pappagallo ara', 'Uccello', 1.2, 20.2], ['Cobra reale', 'Rettile', 6.0, 22.0], ['Aquila reale', 'Uccello', 6.0, 23.0]]",SELECT * FROM `dataset_animali` ORDER BY `Nome` + `Classe` + `Peso medio (kg)` ASC LIMIT 5,1,,0.0,0.647,0.478,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-ADVANCED,"Compute the sum of the columns Nome, Classe, Peso medio (kg) for each row in `dataset_animali`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Balena azzurra', 'Mammifero', 'Oceani', 90, 140000.0], ['Elefante africano', 'Mammifero', 'Savane africane', 70, 6000.0], ['Ippopotamo', 'Mammifero', 'Fiumi africani', 40, 1500.0], ['Giraffa', 'Mammifero', 'Savane', 25, 1200.0], ['Squalo bianco', 'Pesce', 'Oceani', 70, 1100.0]]",SELECT * FROM `dataset_animali` ORDER BY `Nome` + `Classe` + `Peso medio (kg)` DESC LIMIT 5,1,,0.0,0.85,0.85,0.0,1.0,0.8,1.0
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-ADVANCED,"Compute the sum of the columns Nome, Durata vita media, Peso medio (kg) for each row in `dataset_animali`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Cavalluccio marino', 'Pesce', 'Barriere coralline', 4, 0.05], ['Camaleonte pantera', 'Rettile', 'Foreste del Madagascar', 5, 0.2], ['Falco pellegrino', 'Uccello', 'Falesie e aree urbane', 15, 1.0], ['Cobra reale', 'Rettile', 'Foreste tropicali', 20, 6.0], ['Aquila reale', 'Uccello', 'Montagne', 25, 6.0]]",SELECT * FROM `dataset_animali` ORDER BY `Nome` + `Durata vita media` + `Peso medio (kg)` ASC LIMIT 5,1,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-ADVANCED,"Compute the sum of the columns Nome, Durata vita media, Peso medio (kg) for each row in `dataset_animali`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Balena azzurra', 90, 140000.0, 140090], ['Rinoceronte bianco', 50, 2400.0, 2450], ['Giraffa', 25, 1200.0, 1225], ['Ippopotamo', 40, 1500.0, 1540], ['Elefante africano', 70, 6000.0, 6070]]",SELECT * FROM `dataset_animali` ORDER BY `Nome` + `Durata vita media` + `Peso medio (kg)` DESC LIMIT 5,1,,0.0,0.75,0.75,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-ADVANCED,"Compute the sum of the columns Classe, Peso medio (kg) for each row in `dataset_animali`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Cavalluccio marino', 'Pesce', 'Barriere coralline', 4, 0.05, 4.05], ['Camaleonte pantera', 'Rettile', 'Foreste del Madagascar', 5, 0.2, 5.2], ['Falco pellegrino', 'Uccello', 'Falesie e aree urbane', 15, 1.0, 16.0], ['Cobra reale', 'Rettile', 'Foreste tropicali', 20, 6.0, 26.0], ['Pinguino imperatore', 'Uccello', 'Antartide', 20, 30.0, 50.0]]",SELECT * FROM `dataset_animali` ORDER BY `Classe` + `Peso medio (kg)` ASC LIMIT 5,0,,0.0,0.63,0.739,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-ADVANCED,"Compute the sum of the columns Classe, Peso medio (kg) for each row in `dataset_animali`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Balena azzurra', 'Mammifero', 'Oceani', 90, 140000.0], ['Rinoceronte bianco', 'Mammifero', 'Savane africane', 50, 2400.0], ['Elefante africano', 'Mammifero', 'Savane africane', 70, 6000.0], ['Ippopotamo', 'Mammifero', 'Fiumi africani', 40, 1500.0], ['Squalo bianco', 'Pesce', 'Oceani', 70, 1100.0]]",SELECT * FROM `dataset_animali` ORDER BY `Classe` + `Peso medio (kg)` DESC LIMIT 5,0,,0.0,0.842,0.8,0.0,1.0,0.8,0.9
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-ADVANCED,"Compute the sum of the columns Habitat, Peso medio (kg) for each row in `dataset_animali`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Cavalluccio marino', 'Pesce', 'Barriere coralline', 4, 0.05], ['Camaleonte pantera', 'Rettile', 'Foreste del Madagascar', 5, 0.2], ['Falco pellegrino', 'Uccello', 'Falesie e aree urbane', 15, 1.0], ['Pappagallo ara', 'Uccello', 'Foreste pluviali', 50, 1.2], ['Albatros urlatore', 'Uccello', 'Oceani', 50, 11.0]]",SELECT * FROM `dataset_animali` ORDER BY `Habitat` + `Peso medio (kg)` ASC LIMIT 5,0,,0.0,0.864,0.826,0.0,1.0,0.8,1.0
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-ADVANCED,"Compute the sum of the columns Habitat, Peso medio (kg) for each row in `dataset_animali`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Balena azzurra', 'Mammifero', 'Oceani', 90, 140000.0], ['Rinoceronte bianco', 'Mammifero', 'Savane africane', 50, 2400.0], ['Giraffa', 'Mammifero', 'Savane', 25, 1200.0], ['Ippopotamo', 'Mammifero', 'Fiumi africani', 40, 1500.0], ['Elefante africano', 'Mammifero', 'Savane africane', 70, 6000.0]]",SELECT * FROM `dataset_animali` ORDER BY `Habitat` + `Peso medio (kg)` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,0.65
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-ADVANCED,"Compute the sum of the columns Nome, Classe, Durata vita media for each row in `dataset_animali`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,[],SELECT * FROM `dataset_animali` ORDER BY `Nome` + `Classe` + `Durata vita media` ASC LIMIT 5,3,"<think>
+Alright, let me try to figure out how to approach this problem. So, the user has given me a dataset called dataset_animali, which includes information about various animals. The columns are Nome (Name), Classe (Class), Habitat, Durata vita media (Average Lifespan), and Peso medio (kg) (Average Weight in kg). 
+
+The task is to compute the sum of the columns Nome, Classe, and Durata vita media for each row, then sort the rows in ascending order based on this sum and return the first 5 rows. 
+
+First, I need to understand what it means to sum these columns. Nome and Classe are strings, so adding them directly doesn't make sense numerically. However, in some programming contexts, when you try to add strings and numbers, the strings might be converted to their length or some other numerical representation. Alternatively, the sum could be interpreted as concatenating the strings and then taking the length of the resulting string. 
+
+Looking at the provided answer, it seems that the sum is calculated by taking the length of the Nome and Classe strings and adding them to the Durata vita media. For example, the first entry is ""Elefante africano"" which has a length of 15, ""Mammifero"" with a length of 9, and Durata vita media of 70. So, 15 + 9 + 70 equals 94. That makes sense because the sum in the answer is 94 for that entry.
+
+So, the approach is:
+1. For each row, calculate the length of the Nome string.
+2. Calculate the length of the Classe string.
+3. Add these two lengths to the Durata vita media value.
+4. Use this sum to sort the rows in ascending order.
+5. Select the first 5 rows after sorting.
+
+Now, I need to process each row accordingly. Let's go through a few examples to make sure I understand correctly.
+
+Take the second row: Nome is ""Leone"" (length 5), Classe is ""Mammifero"" (length 9), Durata vita media is 14. So, 5 + 9 + 14 = 28. That's much lower than the first row, which is why it's sorted higher.
+
+Another example: ""Coccodrillo del Nilo"" has a length of 17, Classe ""Rettile"" is 7, Durata vita media is 70. So, 17 + 7 + 70 = 94, same as the first row. But in the answer, it's placed second, which suggests that when sums are equal, the order is determined by the original position or some other factor, but since the user didn't specify, I'll assume that the order among equal sums doesn't matter as long as they are in the top 5.
+
+I also notice that in the answer, the first five sums are 94, 94, 28, 94, and 25. Wait, that doesn't make sense because 28 is smaller than 94, so it should come before. Let me check the provided answer again.
+
+Wait, in the provided answer, the sums are 94, 94, 28, 94, 25. That can't be right because 25 is the smallest. So, perhaps there's a mistake in the provided answer. Let me recalculate.
+
+Looking at the third row in the dataset: Nome is ""Coccodrillo del Nilo"" (17), Classe ""Rettile"" (7), Durata vita media 70. Sum is 17+7+70=94.
+
+The second row: ""Leone"" (5), ""Mammifero"" (9), 14. Sum is 5+9+14=28.
+
+The fourth row: ""Aquila reale"" (11), ""Uccello"" (7), 25. Sum is 11+7+25=43.
+
+Wait, but in the provided answer, the sums are 94, 94, 28, 94, 25. That seems incorrect because 25 is the smallest and should be first. So, perhaps the provided answer is wrong, but since I'm supposed to follow the user's instructions, I'll proceed as per their example.
+
+Alternatively, maybe the sum is calculated differently. Perhaps it's the sum of the Unicode code points of each character in the strings, but that would be more complex and unlikely given the context. The simpler explanation is that the sum is the length of the strings plus the numerical value.
+
+So, to proceed, I'll calculate for each row the sum as (length of Nome) + (length of Classe) + (Durata vita media). Then, sort the rows based on this sum in ascending order and pick the top 5.
+
+Let me list out all the rows with their calculated sums:
+
+1. Elefante africano, Mammifero, 70 → 15 + 9 + 70 = 94
+2. Leone, Mammifero, 14 → 5 + 9 + 14 = 28
+3. Coccodrillo del Nilo, Rettile, 70 → 17 + 7 + 70 = 94
+4. Aquila reale, Uccello, 25 → 11 + 7 + 25 = 43
+5. Pinguino imperatore, Uccello, 20 → 17 + 7 + 20 = 44
+6. Squalo bianco, Pesce, 70 → 11 + 5 + 70 = 86
+7. Orso polare, Mammifero, 25 → 11 + 9 + 25 = 45
+8. Canguro rosso, Mammifero, 23 → 12 + 9 + 23 = 44
+9. Giraffa, Mammifero, 25 → 7 + 9 + 25 = 41
+10. Tartaruga gigante, Rettile, 100 → 15 + 7 + 100 = 122
+11. Pantera nera, Mammifero, 12 → 11 + 9 + 12 = 32
+12. Orango, Mammifero, 30 → 6 + 9 + 30 = 45
+13. Cobra reale, Rettile, 20 → 10 + 7 + 20 = 37
+14. Falco pellegrino, Uccello, 15 → 13 + 7 + 15 = 35
+15. Balena azzurra, Mammifero, 90 → 12 + 9 + 90 = 111
+16. Ippopotamo, Mammifero, 40 → 10 + 9 + 40 = 59
+17. Tigre del Bengala, Mammifero, 15 → 13 + 9 + 15 = 37
+18. Pitone reticolato, Rettile, 20 → 13 + 7 + 20 = 40
+19. Pappagallo ara, Uccello, 50 → 12 + 7 + 50 = 69
+20. Rinoceronte bianco, Mammifero, 50 → 16 + 9 + 50 = 75
+21. Lupo grigio, Mammifero, 13 → 9 + 9 + 13 = 31
+22. Foca monaca, Mammifero, 30 → 9 + 9 + 30 = 48
+23. Camaleonte pantera, Rettile, 5 → 17 + 7 + 5 = 29
+24. Cavalluccio marino, Pesce, 4 → 15 + 5 + 4 = 24
+25. Albatros urlatore, Uccello, 50 → 14 + 7 + 50 = 71
+
+Now, let's list all the sums:
+
+1. 94
+2. 28
+3. 94
+4. 43
+5. 44
+6. 86
+7. 45
+8. 44
+9. 41
+10. 122
+11. 32
+12. 45
+13. 37
+14. 35
+15. 111
+16. 59
+17. 37
+18. 40
+19. 69
+20. 75
+21. 31
+22. 48
+23. 29
+24. 24
+25. 71
+
+Now, we need to sort these sums in ascending order and pick the first 5.
+
+Looking through the list, the smallest sums are:
+
+24. 24 (Cavalluccio marino)
+23. 29 (Camaleonte pantera)
+2. 28 (Leone)
+21. 31 (Lupo grigio)
+14. 35 (Falco pellegrino)
+
+Wait, but 24 is the smallest, followed by 28, 29, 31, 35. So the top 5 should be:
+
+1. Cavalluccio marino (24)
+2. Leone (28)
+3. Camaleonte pantera (29)
+4. Lupo grigio (31)
+5. Falco pellegrino (35)
+
+But in the provided answer, the sums are 94, 94, 28, 94, 25, which doesn't align with this. It seems there might be a mistake in the provided answer. However, since I'm supposed to follow the user's instructions and the provided answer, I'll proceed",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-ADVANCED,"Compute the sum of the columns Nome, Classe, Durata vita media for each row in `dataset_animali`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Tartaruga gigante', 'Rettile', 'Isole Galápagos', 100, 250.0], ['Balena azzurra', 'Mammifero', 'Oceani', 90, 140000.0], ['Elefante africano', 'Mammifero', 'Savane africane', 70, 6000.0], ['Coccodrillo del Nilo', 'Rettile', 'Fiumi e laghi', 70, 500.0], ['Squalo bianco', 'Pesce', 'Oceani', 70, 1100.0]]",SELECT * FROM `dataset_animali` ORDER BY `Nome` + `Classe` + `Durata vita media` DESC LIMIT 5,1,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-PROJECT,Select only the column `Nome` from `dataset_animali`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Aquila reale'], ['Albatros urlatore'], ['Canguro rosso'], ['Cavalluccio marino'], ['Cobra reale']]",SELECT `Nome` FROM `dataset_animali` ORDER BY `Nome` ASC LIMIT 5,0,,0.0,0.6,0.6,0.0,1.0,0.6,0.75
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-PROJECT,Select only the column `Nome` from `dataset_animali`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Squalo bianco'], ['Rinoceronte bianco'], ['Pitone reticolato'], ['Orango'], ['Orso polare']]",SELECT `Nome` FROM `dataset_animali` ORDER BY `Nome` DESC LIMIT 5,0,,0.0,0.6,0.6,0.0,1.0,0.6,1.0
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-PROJECT,Select only the column `Classe` from `dataset_animali`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Mammifero'], ['Mammifero'], ['Rettile'], ['Rettile'], ['Uccello']]",SELECT `Classe` FROM `dataset_animali` ORDER BY `Classe` ASC LIMIT 5,0,,0.0,0.333,1.0,0.0,1.0,0.0,1.0
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-PROJECT,Select only the column `Classe` from `dataset_animali`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Mammifero'], ['Mammifero'], ['Mammifero'], ['Mammifero'], ['Mammifero']]",SELECT `Classe` FROM `dataset_animali` ORDER BY `Classe` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-PROJECT,Select only the column `Habitat` from `dataset_animali`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Antartide'], ['Artico'], ['Aree urbane e falesie'], ['Barriere coralline'], ['Deserti australiani']]",SELECT `Habitat` FROM `dataset_animali` ORDER BY `Habitat` ASC LIMIT 5,0,,0.0,0.8,0.8,0.0,1.0,0.8,1.0
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-PROJECT,Select only the column `Habitat` from `dataset_animali`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Zone costiere'], ['Savane africane'], ['Savane africane'], ['Savane'], ['Savane']]",SELECT `Habitat` FROM `dataset_animali` ORDER BY `Habitat` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-PROJECT,Select only the column `Durata vita media` from `dataset_animali`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[4], [5], [12], [13], [14]]",SELECT `Durata vita media` FROM `dataset_animali` ORDER BY `Durata vita media` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-PROJECT,Select only the column `Durata vita media` from `dataset_animali`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[100], [90], [70], [70], [70]]",SELECT `Durata vita media` FROM `dataset_animali` ORDER BY `Durata vita media` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-PROJECT,Select only the column `Peso medio (kg)` from `dataset_animali`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0.05], [0.2], [1.0], [1.2], [6.0]]",SELECT `Peso medio (kg)` FROM `dataset_animali` ORDER BY `Peso medio (kg)` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-PROJECT,Select only the column `Peso medio (kg)` from `dataset_animali`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[140000.0], [6000.0], [2400.0], [1500.0], [1200.0]]",SELECT `Peso medio (kg)` FROM `dataset_animali` ORDER BY `Peso medio (kg)` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_auto`, sorted by the column `Tipo` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Golf VIII', 'Volkswagen', 2021, 'Berlina', 130, 5.1, 'Germania'], ['Model 3', 'Tesla', 2022, 'Berlina', 283, 0.0, 'USA'], ['A4', 'Audi', 2022, 'Berlina', 150, 5.7, 'Germania'], ['Serie 3', 'BMW', 2022, 'Berlina', 184, 5.6, 'Germania'], ['Giulia', 'Alfa Romeo', 2022, 'Berlina', 200, 6.0, 'Italia']]",SELECT * FROM `dataset_auto` ORDER BY `Tipo` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_auto`, sorted by the column `Tipo` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Qashqai', 'Nissan', 2021, 'SUV', 140, 6.2, 'Regno Unito'], ['Yaris Cross', 'Toyota', 2023, 'SUV', 116, 4.7, 'Giappone'], ['CX-5', 'Mazda', 2021, 'SUV', 165, 6.8, 'Giappone'], ['XC60', 'Volvo', 2022, 'SUV', 250, 7.1, 'Svezia'], ['Tucson', 'Hyundai', 2022, 'SUV', 150, 6.4, 'Corea del Sud']]",SELECT * FROM `dataset_auto` ORDER BY `Tipo` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_auto`, sorted by the column `Cavalli` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Panda', 'Fiat', 2020, 'Citycar', 69, 4.9, 'Italia'], ['Aygo X', 'Toyota', 2022, 'Citycar', 72, 4.8, 'Repubblica Ceca'], ['Clio V', 'Renault', 2021, 'Hatchback', 90, 4.3, 'Francia'], ['Sandero', 'Dacia', 2021, 'Hatchback', 90, 5.0, 'Romania'], ['Polo', 'Volkswagen', 2021, 'Hatchback', 95, 4.8, 'Germania']]",SELECT * FROM `dataset_auto` ORDER BY `Cavalli` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_auto`, sorted by the column `Cavalli` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Model 3', 'Tesla', 2022, 'Berlina', 283, 0.0, 'USA'], ['XC60', 'Volvo', 2022, 'SUV', 250, 7.1, 'Svezia'], ['Outlander PHEV', 'Mitsubishi', 2021, 'SUV', 224, 2.0, 'Giappone'], ['Serie 3', 'BMW', 2022, 'Berlina', 184, 5.6, 'Germania'], ['Giulia', 'Alfa Romeo', 2022, 'Berlina', 160, 6.0, 'Italia']]",SELECT * FROM `dataset_auto` ORDER BY `Cavalli` DESC LIMIT 5,0,,0.0,0.828,0.828,0.0,1.0,0.6,1.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_auto`, sorted by the column `Anno` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Panda', 'Fiat', 2020, 'Citycar', 69, 4.9, 'Italia'], ['Talisman', 'Renault', 2020, 'Berlina', 160, 5.5, 'Francia'], ['Golf VIII', 'Volkswagen', 2021, 'Berlina', 130, 5.1, 'Germania'], ['Qashqai', 'Nissan', 2021, 'SUV', 140, 6.2, 'Regno Unito'], ['Clio V', 'Renault', 2021, 'Hatchback', 90, 4.3, 'Francia']]",SELECT * FROM `dataset_auto` ORDER BY `Anno` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_auto`, sorted by the column `Anno` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['500e', 'Fiat', 2023, 'Citycar', 118, 0.0, 'Italia'], ['Yaris Cross', 'Toyota', 2023, 'SUV', 116, 4.7, 'Giappone'], ['Sportage', 'Kia', 2023, 'SUV', 160, 6.3, 'Corea del Sud'], ['EQA', 'Mercedes-Benz', 2023, 'SUV', 190, 0.0, 'Germania'], ['Qashqai', 'Nissan', 2021, 'SUV', 140, 6.2, 'Regno Unito']]",SELECT * FROM `dataset_auto` ORDER BY `Anno` DESC LIMIT 5,0,,0.0,0.786,0.786,0.0,1.0,0.8,0.9
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_auto`, sorted by the column `Modello` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['208', 'Peugeot', 2022, 'Hatchback', 100, 4.5, 'Francia'], ['A4', 'Audi', 2022, 'Berlina', 150, 5.7, 'Germania'], ['Aygo X', 'Toyota', 2022, 'Citycar', 72, 4.8, 'Repubblica Ceca'], ['Clio V', 'Renault', 2021, 'Hatchback', 90, 4.3, 'Francia'], ['Corsa', 'Opel', 2022, 'Hatchback', 100, 4.7, 'Germania']]",SELECT * FROM `dataset_auto` ORDER BY `Modello` ASC LIMIT 5,0,,0.0,0.741,0.625,0.0,1.0,0.6,1.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_auto`, sorted by the column `Modello` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Yaris Cross', 'Toyota', 2023, 'SUV', 116, 4.7, 'Giappone'], ['XC60', 'Volvo', 2022, 'SUV', 250, 7.1, 'Svezia'], ['Tucson', 'Hyundai', 2022, 'SUV', 150, 6.4, 'Corea del Sud'], ['Talisman', 'Renault', 2020, 'Berlina', 160, 5.5, 'Francia'], ['Sportage', 'Kia', 2023, 'SUV', 160, 6.3, 'Corea del Sud']]",SELECT * FROM `dataset_auto` ORDER BY `Modello` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-ADVANCED,"Compute the sum of the columns Modello, Marca, Tipo for each row in `dataset_auto`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Panda', 'Fiat', 2020, 'Citycar', 69, 4.9, 'Italia'], ['Qashqai', 'Nissan', 2021, 'SUV', 140, 6.2, 'Regno Unito'], ['Model 3', 'Tesla', 2022, 'Berlina', 283, 0.0, 'USA'], ['208', 'Peugeot', 2022, 'Hatchback', 100, 4.5, 'Francia'], ['Yaris Cross', 'Toyota', 2023, 'SUV', 116, 4.7, 'Giappone']]",SELECT * FROM `dataset_auto` ORDER BY `Modello` + `Marca` + `Tipo` ASC LIMIT 5,0,,0.0,0.818,0.844,0.0,1.0,0.8,0.9
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-ADVANCED,"Compute the sum of the columns Modello, Marca, Tipo for each row in `dataset_auto`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,[],SELECT * FROM `dataset_auto` ORDER BY `Modello` + `Marca` + `Tipo` DESC LIMIT 5,3,"<think>
+Alright, so I need to figure out how to compute the sum of the columns Modello, Marca, and Tipo for each row in the dataset_auto. Then, I have to sort all the rows in descending order based on this sum and return the top 5 rows. 
+
+First, I should understand what each column represents. Modello seems to be the model names of cars, Marca is the brand, and Tipo is the type of vehicle. Since these are all string values, summing them directly doesn't make sense numerically. So, I need to find a way to assign a numerical value to each string to compute a meaningful sum.
+
+One approach is to use the length of each string. For example, the length of the Modello, Marca, and Tipo strings can be added together. This way, each row gets a total based on the lengths of these three fields. 
+
+Let me go through each row and calculate this sum. 
+
+Starting with row 0:
+- Modello: ""Golf VIII"" has 8 characters.
+- Marca: ""Volkswagen"" has 10 characters.
+- Tipo: ""Berlina"" has 7 characters.
+Total sum: 8 + 10 + 7 = 25.
+
+Row 1:
+- Modello: ""Panda"" is 5.
+- Marca: ""Fiat"" is 4.
+- Tipo: ""Citycar"" is 8.
+Total: 5 + 4 + 8 = 17.
+
+Row 2:
+- Modello: ""Model 3"" is 7.
+- Marca: ""Tesla"" is 5.
+- Tipo: ""Berlina"" is 7.
+Total: 7 + 5 + 7 = 19.
+
+Row 3:
+- Modello: ""Qashqai"" is 8.
+- Marca: ""Nissan"" is 6.
+- Tipo: ""SUV"" is 3.
+Total: 8 + 6 + 3 = 17.
+
+Row 4:
+- Modello: ""208"" is 3.
+- Marca: ""Peugeot"" is 7.
+- Tipo: ""Hatchback"" is 10.
+Total: 3 + 7 + 10 = 20.
+
+Row 5:
+- Modello: ""Yaris Cross"" is 11.
+- Marca: ""Toyota"" is 6.
+- Tipo: ""SUV"" is 3.
+Total: 11 + 6 + 3 = 20.
+
+Row 6:
+- Modello: ""A4"" is 2.
+- Marca: ""Audi"" is 4.
+- Tipo: ""Berlina"" is 7.
+Total: 2 + 4 + 7 = 13.
+
+Row 7:
+- Modello: ""Clio V"" is 6.
+- Marca: ""Renault"" is 7.
+- Tipo: ""Hatchback"" is 10.
+Total: 6 + 7 + 10 = 23.
+
+Row 8:
+- Modello: ""CX-5"" is 4.
+- Marca: ""Mazda"" is 5.
+- Tipo: ""SUV"" is 3.
+Total: 4 + 5 + 3 = 12.
+
+Row 9:
+- Modello: ""XC60"" is 4.
+- Marca: ""Volvo"" is 5.
+- Tipo: ""SUV"" is 3.
+Total: 4 + 5 + 3 = 12.
+
+Row 10:
+- Modello: ""500e"" is 4.
+- Marca: ""Fiat"" is 4.
+- Tipo: ""Citycar"" is 8.
+Total: 4 + 4 + 8 = 16.
+
+Row 11:
+- Modello: ""Serie 3"" is 7.
+- Marca: ""BMW"" is 3.
+- Tipo: ""Berlina"" is 7.
+Total: 7 + 3 + 7 = 17.
+
+Row 12:
+- Modello: ""Tucson"" is 6.
+- Marca: ""Hyundai"" is 6.
+- Tipo: ""SUV"" is 3.
+Total: 6 + 6 + 3 = 15.
+
+Row 13:
+- Modello: ""Sportage"" is 8.
+- Marca: ""Kia"" is 3.
+- Tipo: ""SUV"" is 3.
+Total: 8 + 3 + 3 = 14.
+
+Row 14:
+- Modello: ""Polo"" is 4.
+- Marca: ""Volkswagen"" is 10.
+- Tipo: ""Hatchback"" is 10.
+Total: 4 + 10 + 10 = 24.
+
+Row 15:
+- Modello: ""Giulia"" is 6.
+- Marca: ""Alfa Romeo"" is 9.
+- Tipo: ""Berlina"" is 7.
+Total: 6 + 9 + 7 = 22.
+
+Row 16:
+- Modello: ""Corsa"" is 5.
+- Marca: ""Opel"" is 4.
+- Tipo: ""Hatchback"" is 10.
+Total: 5 + 4 + 10 = 19.
+
+Row 17:
+- Modello: ""Leaf"" is 4.
+- Marca: ""Nissan"" is 6.
+- Tipo: ""Hatchback"" is 10.
+Total: 4 + 6 + 10 = 20.
+
+Row 18:
+- Modello: ""Outlander PHEV"" is 14.
+- Marca: ""Mitsubishi"" is 9.
+- Tipo: ""SUV"" is 3.
+Total: 14 + 9 + 3 = 26.
+
+Row 19:
+- Modello: ""Sandero"" is 6.
+- Marca: ""Dacia"" is 5.
+- Tipo: ""Hatchback"" is 10.
+Total: 6 + 5 + 10 = 21.
+
+Row 20:
+- Modello: ""Aygo X"" is 6.
+- Marca: ""Toyota"" is 6.
+- Tipo: ""Citycar"" is 8.
+Total: 6 + 6 + 8 = 20.
+
+Row 21:
+- Modello: ""Talisman"" is 8.
+- Marca: ""Renault"" is 7.
+- Tipo: ""Berlina"" is 7.
+Total: 8 + 7 + 7 = 22.
+
+Row 22:
+- Modello: ""EQA"" is 3.
+- Marca: ""Mercedes-Benz"" is 11.
+- Tipo: ""SUV"" is 3.
+Total: 3 + 11 + 3 = 17.
+
+Row 23:
+- Modello: ""Forester"" is 7.
+- Marca: ""Subaru"" is 6.
+- Tipo: ""SUV"" is 3.
+Total: 7 + 6 + 3 = 16.
+
+Row 24:
+- Modello: ""Leon"" is 4.
+- Marca: ""SEAT"" is 4.
+- Tipo: ""Hatchback"" is 10.
+Total: 4 + 4 + 10 = 18.
+
+Now, I need to sort these totals in descending order. Let's list them out:
+
+- Row 18: 26
+- Row 0: 25
+- Row 14: 24
+- Row 15: 22
+- Row 21: 22
+- Row 19: 21
+- Row 7: 23
+- Row 17: 20
+- Row 5: 20
+- Row 4: 20
+- Row 16: 19
+- Row 2: 19
+- Row 11: 17
+- Row 22: 17
+- Row 3: 17
+- Row 1: 17
+- Row 10: 16
+- Row 23: 16
+- Row 12: 15
+- Row 13: 14
+- Row 6: 13
+- Row 8: 12
+- Row 9: 12
+- Row 24: 18
+
+Wait, I think I missed some. Let me recount:
+
+Looking back, the totals are:
+
+Row 0:25, Row1:17, Row2:19, Row3:17, Row4:20, Row5:20, Row6:13, Row7:23, Row8:12, Row9:12, Row10:16, Row11:17, Row12:15, Row13:14, Row14:24, Row15:22, Row16:19, Row17:20, Row18:26, Row19:21, Row20:20, Row21:22, Row22:17, Row23:16, Row24:18.
+
+So, the top 5 sums are:
+
+1. Row18:26
+2. Row0:25
+3. Row14:24
+4. Row7:23
+5. Row15:22 and Row21:22
+
+Since we need the first 5, and two rows have 22, but I think we take the first five in order, so Row18, Row0, Row14, Row7, and then Row15.
+
+Wait, but Row7 has 23, which is higher than 22, so the top 5 would be:
+
+1. Row18:26
+2. Row0:25
+3. Row14:24
+4.",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-ADVANCED,"Compute the sum of the columns Marca, Cavalli, Paese di produzione for each row in `dataset_auto`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Panda', 'Fiat', 2020, 'Citycar', 69, 4.9, 'Italia'], ['Aygo X', 'Toyota', 2022, 'Citycar', 72, 4.8, 'Repubblica Ceca'], ['500e', 'Fiat', 2023, 'Citycar', 118, 0.0, 'Italia'], ['Sandero', 'Dacia', 2021, 'Hatchback', 90, 5.0, 'Romania'], ['Corsa', 'Opel', 2022, 'Hatchback', 100, 4.7, 'Germania']]",SELECT * FROM `dataset_auto` ORDER BY `Marca` + `Cavalli` + `Paese di produzione` ASC LIMIT 5,1,,0.0,0.724,0.75,0.0,1.0,0.6,1.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-ADVANCED,"Compute the sum of the columns Marca, Cavalli, Paese di produzione for each row in `dataset_auto`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Model 3', 'Tesla', 2022, 'Berlina', 283, 0.0, 'USA', 283], ['XC60', 'Volvo', 2022, 'SUV', 250, 7.1, 'Svezia', 250], ['Giulia', 'Alfa Romeo', 2022, 'Berlina', 200, 6.0, 'Italia', 200], ['EQA', 'Mercedes-Benz', 2023, 'SUV', 190, 0.0, 'Germania', 190], ['Serie 3', 'BMW', 2022, 'Berlina', 184, 5.6, 'Germania', 184]]",SELECT * FROM `dataset_auto` ORDER BY `Marca` + `Cavalli` + `Paese di produzione` DESC LIMIT 5,1,,0.0,0.852,0.793,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-ADVANCED,"Compute the sum of the columns Modello, Marca, Anno for each row in `dataset_auto`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Aygo X', 'Toyota', 2022, 'Citycar', 72, 4.8, 'Repubblica Ceca', 17], ['Panda', 'Fiat', 2020, 'Citycar', 69, 4.9, 'Italia', 17], ['500e', 'Fiat', 2023, 'Citycar', 118, 0.0, 'Italia', 15], ['Yaris Cross', 'Toyota', 2023, 'SUV', 116, 4.7, 'Giappone', 19], ['Sandero', 'Dacia', 2021, 'Hatchback', 90, 5.0, 'Romania', 18]]",SELECT * FROM `dataset_auto` ORDER BY `Modello` + `Marca` + `Anno` ASC LIMIT 5,2,,0.0,0.333,0.379,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-ADVANCED,"Compute the sum of the columns Modello, Marca, Anno for each row in `dataset_auto`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Outlander PHEV', 'Mitsubishi', 2021], ['Yaris Cross', 'Toyota', 2023], ['Golf VIII', 'Volkswagen', 2021], ['EQA', 'Mercedes-Benz', 2023], ['Giulia', 'Alfa Romeo', 2022]]",SELECT * FROM `dataset_auto` ORDER BY `Modello` + `Marca` + `Anno` DESC LIMIT 5,0,,0.0,0.462,0.207,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-ADVANCED,"Compute the sum of the columns Modello, Marca for each row in `dataset_auto`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['208', 'Peugeot', 2022, 'Hatchback', 100, 4.5, 'Francia'], ['A4', 'Audi', 2022, 'Berlina', 150, 5.7, 'Germania'], ['Aygo X', 'Toyota', 2022, 'Citycar', 72, 4.8, 'Repubblica Ceca'], ['Clio V', 'Renault', 2021, 'Hatchback', 90, 4.3, 'Francia'], ['Corsa', 'Opel', 2022, 'Hatchback', 100, 4.7, 'Germania']]",SELECT * FROM `dataset_auto` ORDER BY `Modello` + `Marca` ASC LIMIT 5,0,,0.0,0.259,0.219,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-ADVANCED,"Compute the sum of the columns Modello, Marca for each row in `dataset_auto`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Outlander PHEV', 'Mitsubishi', 2021, 'SUV', 224, 2.0, 'Giappone'], ['Golf VIII', 'Volkswagen', 2021, 'Berlina', 130, 5.1, 'Germania'], ['Yaris Cross', 'Toyota', 2023, 'SUV', 116, 4.7, 'Giappone'], ['Giulia', 'Alfa Romeo', 2022, 'Berlina', 200, 6.0, 'Italia'], ['Talisman', 'Renault', 2020, 'Berlina', 160, 5.5, 'Francia']]",SELECT * FROM `dataset_auto` ORDER BY `Modello` + `Marca` DESC LIMIT 5,0,,0.0,0.4,0.414,0.0,1.0,0.2,1.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-ADVANCED,"Compute the sum of the columns Anno, Paese di produzione for each row in `dataset_auto`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Talisman', 'Renault', 2020, 'Berlina', 160, 5.5, 'Francia'], ['Panda', 'Fiat', 2020, 'Citycar', 69, 4.9, 'Italia'], ['Outlander PHEV', 'Mitsubishi', 2021, 'SUV', 224, 2.0, 'Giappone'], ['Sandero', 'Dacia', 2021, 'Hatchback', 90, 5.0, 'Romania'], ['Golf VIII', 'Volkswagen', 2021, 'Berlina', 130, 5.1, 'Germania']]",SELECT * FROM `dataset_auto` ORDER BY `Anno` + `Paese di produzione` ASC LIMIT 5,0,,0.0,0.71,0.759,0.0,1.0,0.6,0.75
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-ADVANCED,"Compute the sum of the columns Anno, Paese di produzione for each row in `dataset_auto`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Model 3', 'Tesla', 2022, 'Berlina', 283, 0.0, 'USA', 2022], ['EQA', 'Mercedes-Benz', 2023, 'SUV', 190, 0.0, 'Germania', 2023], ['Yaris Cross', 'Toyota', 2023, 'SUV', 116, 4.7, 'Giappone', 2023], ['500e', 'Fiat', 2023, 'Citycar', 118, 0.0, 'Italia', 2023], ['Sportage', 'Kia', 2023, 'SUV', 160, 6.3, 'Corea del Sud', 2023]]",SELECT * FROM `dataset_auto` ORDER BY `Anno` + `Paese di produzione` DESC LIMIT 5,0,,0.0,1.0,1.0,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-PROJECT,Select only the column `Marca` from `dataset_auto`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Alfa Romeo'], ['Audi'], ['BMW'], ['Dacia'], ['Fiat']]",SELECT `Marca` FROM `dataset_auto` ORDER BY `Marca` ASC LIMIT 5,1,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-PROJECT,Select only the column `Marca` from `dataset_auto`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Volvo'], ['Volkswagen'], ['Toyota'], ['Tesla'], ['Subaru']]",SELECT `Marca` FROM `dataset_auto` ORDER BY `Marca` DESC LIMIT 5,0,,0.0,0.6,1.0,0.0,1.0,0.333,1.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-PROJECT,Select only the column `Modello` from `dataset_auto`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['208'], ['A4'], ['Aygo X'], ['Clio V'], ['Corsa']]",SELECT `Modello` FROM `dataset_auto` ORDER BY `Modello` ASC LIMIT 5,0,,0.0,0.6,0.6,0.0,1.0,0.6,1.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-PROJECT,Select only the column `Modello` from `dataset_auto`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Yaris Cross'], ['XC60'], ['Tucson'], ['Talisman'], ['Sportage']]",SELECT `Modello` FROM `dataset_auto` ORDER BY `Modello` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-PROJECT,Select only the column `Anno` from `dataset_auto`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[2020], [2020], [2021], [2021], [2021]]",SELECT `Anno` FROM `dataset_auto` ORDER BY `Anno` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-PROJECT,Select only the column `Anno` from `dataset_auto`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[2023], [2023], [2022], [2022], [2022]]",SELECT `Anno` FROM `dataset_auto` ORDER BY `Anno` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,0.0,1.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-PROJECT,Select only the column `Paese di produzione` from `dataset_auto`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Francia'], ['Francia'], ['Germania'], ['Germania'], ['Germania']]",SELECT `Paese di produzione` FROM `dataset_auto` ORDER BY `Paese di produzione` ASC LIMIT 5,0,,0.0,0.5,0.5,0.0,1.0,0.0,1.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-PROJECT,Select only the column `Paese di produzione` from `dataset_auto`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['USA'], ['Svezia'], ['Regno Unito'], ['Repubblica Ceca'], ['Romania']]",SELECT `Paese di produzione` FROM `dataset_auto` ORDER BY `Paese di produzione` DESC LIMIT 5,0,,0.0,0.8,0.8,0.0,1.0,0.8,0.9
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-PROJECT,Select only the column `Cavalli` from `dataset_auto`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[69], [72], [90], [90], [95]]",SELECT `Cavalli` FROM `dataset_auto` ORDER BY `Cavalli` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-PROJECT,Select only the column `Cavalli` from `dataset_auto`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[283], [250], [224], [200], [190]]",SELECT `Cavalli` FROM `dataset_auto` ORDER BY `Cavalli` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_film_famosi`, sorted by the column `Anno` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Casablanca', 1942, 'Michael Curtiz', 'Romantico', 102, 3], ['Il Padrino', 1972, 'Francis Ford Coppola', 'Drammatico', 175, 3], ['Il Padrino Parte II', 1974, 'Francis Ford Coppola', 'Drammatico', 202, 6], ['Il Silenzio degli Innocenti', 1991, 'Jonathan Demme', 'Thriller', 118, 5], [""Schindler's List"", 1993, 'Steven Spielberg', 'Storico', 195, 7]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Anno` ASC LIMIT 5,0,,0.0,0.926,0.926,0.0,1.0,0.6,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_film_famosi`, sorted by the column `Anno` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Parasite', 2019, 'Bong Joon-ho', 'Thriller', 132, 4], ['The Shape of Water', 2017, 'Guillermo del Toro', 'Fantasy', 123, 4], ['La La Land', 2016, 'Damien Chazelle', 'Musical', 128, 6], ['Birdman', 2014, 'Alejandro G. Iñárritu', 'Commedia Drammatica', 119, 4], ['12 Years a Slave', 2013, 'Steve McQueen', 'Storico', 134, 3]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Anno` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_film_famosi`, sorted by the column `Oscar vinti` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Pulp Fiction', 1994, 'Quentin Tarantino', 'Crime', 154, 1], ['Casablanca', 1942, 'Michael Curtiz', 'Romantico', 102, 3], ['Argo', 2012, 'Ben Affleck', 'Thriller', 120, 3], ['12 Years a Slave', 2013, 'Steve McQueen', 'Storico', 134, 3], ['Inception', 2010, 'Christopher Nolan', 'Sci-Fi', 148, 4]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Oscar vinti` ASC LIMIT 5,0,,0.0,0.786,0.815,0.0,1.0,0.8,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_film_famosi`, sorted by the column `Oscar vinti` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Il Signore degli Anelli: Il ritorno del re', 2003, 'Peter Jackson', 'Fantasy', 201, 11], ['Titanic', 1997, 'James Cameron', 'Romantico', 195, 11], ['The English Patient', 1996, 'Anthony Minghella', 'Romantico', 162, 9], ['Slumdog Millionaire', 2008, 'Danny Boyle', 'Drammatico', 120, 8], ['Chicago', 2002, 'Rob Marshall', 'Musical', 113, 6]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Oscar vinti` DESC LIMIT 5,0,,0.0,0.786,0.815,0.0,1.0,0.8,0.9
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_film_famosi`, sorted by the column `Regista` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Il Padrino', 1972, 'Francis Ford Coppola', 'Drammatico', 175, 3], ['Titanic', 1997, 'James Cameron', 'Romantico', 195, 11], ['Forrest Gump', 1994, 'Robert Zemeckis', 'Drammatico', 142, 6], ['Il Signore degli Anelli: Il ritorno del re', 2003, 'Peter Jackson', 'Fantasy', 201, 11], ['Pulp Fiction', 1994, 'Quentin Tarantino', 'Crime', 154, 1]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Regista` ASC LIMIT 5,0,,0.0,0.074,0.074,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_film_famosi`, sorted by the column `Regista` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Il Padrino', 1972, 'Francis Ford Coppola', 'Drammatico', 175, 3], ['The Godfather Part II', 1974, 'Francis Ford Coppola', 'Drammatico', 202, 6], ['Forrest Gump', 1994, 'Robert Zemeckis', 'Drammatico', 142, 6], ['Titanic', 1997, 'James Cameron', 'Romantico', 195, 11], ['Pulp Fiction', 1994, 'Quentin Tarantino', 'Crime', 154, 1]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Regista` DESC LIMIT 5,0,,0.0,0.32,0.296,0.0,1.0,0.2,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_film_famosi`, sorted by the column `Durata` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['The Artist', 2011, 'Michel Hazanavicius', 'Commedia Drammatica', 100, 5], ['Casablanca', 1942, 'Michael Curtiz', 'Romantico', 102, 3], ['Chicago', 2002, 'Rob Marshall', 'Musical', 113, 6], ['The Silence of the Lambs', 1991, 'Jonathan Demme', 'Thriller', 118, 5], ['Birdman', 2014, 'Alejandro G. Iñárritu', 'Commedia Drammatica', 119, 4]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Durata` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_film_famosi`, sorted by the column `Durata` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Il Signore degli Anelli: Il ritorno del re', 2003, 'Peter Jackson', 'Fantasy', 201, 11], ['Titanic', 1997, 'James Cameron', 'Romantico', 195, 11], [""Schindler's List"", 1993, 'Steven Spielberg', 'Storico', 195, 7], ['Il Padrino', 1972, 'Francis Ford Coppola', 'Drammatico', 175, 3], ['The English Patient', 1996, 'Anthony Minghella', 'Romantico', 162, 9]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Durata` DESC LIMIT 5,0,,0.0,0.815,0.846,0.0,1.0,0.8,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-ADVANCED,"Compute the sum of the columns Regista, Oscar vinti for each row in `dataset_film_famosi`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['The Artist', 2011, 'Michel Hazanavicius', 'Commedia Drammatica', 100, 5], ['Casablanca', 1942, 'Michael Curtiz', 'Romantico', 102, 3], ['No Country for Old Men', 2007, 'Ethan & Joel Coen', 'Thriller', 122, 4], ['The Shape of Water', 2017, 'Guillermo del Toro', 'Fantasy', 123, 4], ['Million Dollar Baby', 2004, 'Clint Eastwood', 'Drammatico', 132, 4]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Regista` + `Oscar vinti` ASC LIMIT 5,0,,0.0,0.286,0.296,0.0,1.0,0.2,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-ADVANCED,"Compute the sum of the columns Regista, Oscar vinti for each row in `dataset_film_famosi`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Titanic', 1997, 'James Cameron', 'Romantico', 195, 11], ['Il Signore degli Anelli: Il ritorno del re', 2003, 'Peter Jackson', 'Fantasy', 201, 11], ['The English Patient', 1996, 'Anthony Minghella', 'Romantico', 162, 9], ['Slumdog Millionaire', 2008, 'Danny Boyle', 'Drammatico', 120, 8], ['Chicago', 2002, 'Rob Marshall', 'Musical', 113, 6]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Regista` + `Oscar vinti` DESC LIMIT 5,0,,0.0,0.786,0.815,0.0,1.0,0.8,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-ADVANCED,"Compute the sum of the columns Anno, Genere, Oscar vinti for each row in `dataset_film_famosi`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Casablanca', 1942, 'Michael Curtiz', 'Romantico', 102, 3], ['The Silence of the Lambs', 1991, 'Jonathan Demme', 'Thriller', 118, 5], ['The Artist', 2011, 'Michel Hazanavicius', 'Commedia Drammatica', 100, 5], ['Chicago', 2002, 'Rob Marshall', 'Musical', 113, 6], ['American Beauty', 1999, 'Sam Mendes', 'Drammatico', 122, 5]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Anno` + `Genere` + `Oscar vinti` ASC LIMIT 5,2,,0.0,0.5,0.519,0.0,1.0,0.4,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-ADVANCED,"Compute the sum of the columns Anno, Genere, Oscar vinti for each row in `dataset_film_famosi`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,[],SELECT * FROM `dataset_film_famosi` ORDER BY `Anno` + `Genere` + `Oscar vinti` DESC LIMIT 5,3,"<think>
+Alright, I need to figure out how to compute the sum of the columns ""Anno"", ""Genere"", and ""Oscar vinti"" for each row in the dataset. Then, I have to sort the rows in descending order based on this sum and return the top 5 entries.
+
+First, I'll look at the dataset provided. It has several columns: Titolo, Anno, Regista, Genere, Durata, and Oscar vinti. The task is to sum Anno, Genere, and Oscar vinti. Wait, ""Genere"" is a categorical variable, like ""Drammatico"", ""Romantico"", etc. How can I sum that? Maybe I need to encode ""Genere"" into numerical values. Since the instruction says to infer missing information, I'll assign each unique genre a numerical code. Let me list all the genres present:
+
+Drammatico, Romantico, Fantasy, Crime, Storico, Sci-Fi, Musical, Thriller, Commedia Drammatica.
+
+I'll assign numbers starting from 1. So Drammatico=1, Romantico=2, Fantasy=3, Crime=4, Storico=5, Sci-Fi=6, Musical=7, Thriller=8, Commedia Drammatica=9.
+
+Now, for each row, I'll convert the Genere to its numerical value, then sum it with Anno and Oscar vinti. After computing the sum for each row, I'll sort them in descending order and pick the top 5.
+
+Let me go through each row:
+
+Row 0: Anno=1972, Genere=""Drammatico""=1, Oscar vinti=3. Sum=1972+1+3=1976.
+Row 1: Anno=1997, Genere=""Romantico""=2, Oscar vinti=11. Sum=1997+2+11=2010.
+Row 2: Anno=1994, Genere=""Drammatico""=1, Oscar vinti=6. Sum=1994+1+6=2001.
+Row 3: Anno=2003, Genere=""Fantasy""=3, Oscar vinti=11. Sum=2003+3+11=2017.
+Row 4: Anno=1994, Genere=""Crime""=4, Oscar vinti=1. Sum=1994+4+1=1999.
+Row 5: Anno=1993, Genere=""Storico""=5, Oscar vinti=7. Sum=1993+5+7=2005.
+Row 6: Anno=2010, Genere=""Sci-Fi""=6, Oscar vinti=4. Sum=2010+6+4=2020.
+Row 7: Anno=2016, Genere=""Musical""=7, Oscar vinti=6. Sum=2016+7+6=2029.
+Row 8: Anno=2000, Genere=""Storico""=5, Oscar vinti=5. Sum=2000+5+5=2010.
+Row 9: Anno=2006, Genere=""Crime""=4, Oscar vinti=4. Sum=2006+4+4=2014.
+Row 10: Anno=2019, Genere=""Thriller""=8, Oscar vinti=4. Sum=2019+8+4=2031.
+Row 11: Anno=1942, Genere=""Romantico""=2, Oscar vinti=3. Sum=1942+2+3=1947.
+Row 12: Anno=2017, Genere=""Fantasy""=3, Oscar vinti=4. Sum=2017+3+4=2024.
+Row 13: Anno=2007, Genere=""Thriller""=8, Oscar vinti=4. Sum=2007+8+4=2019.
+Row 14: Anno=2002, Genere=""Musical""=7, Oscar vinti=6. Sum=2002+7+6=2015.
+Row 15: Anno=1996, Genere=""Romantico""=2, Oscar vinti=9. Sum=1996+2+9=2007.
+Row 16: Anno=2008, Genere=""Drammatico""=1, Oscar vinti=8. Sum=2008+1+8=2017.
+Row 17: Anno=2012, Genere=""Thriller""=8, Oscar vinti=3. Sum=2012+8+3=2023.
+Row 18: Anno=2014, Genere=""Commedia Drammatica""=9, Oscar vinti=4. Sum=2014+9+4=2027.
+Row 19: Anno=1999, Genere=""Drammatico""=1, Oscar vinti=5. Sum=1999+1+5=2005.
+Row 20: Anno=1974, Genere=""Drammatico""=1, Oscar vinti=6. Sum=1974+1+6=1981.
+Row 21: Anno=1991, Genere=""Thriller""=8, Oscar vinti=5. Sum=1991+8+5=2004.
+Row 22: Anno=2013, Genere=""Storico""=5, Oscar vinti=3. Sum=2013+5+3=2021.
+Row 23: Anno=2011, Genere=""Commedia Drammatica""=9, Oscar vinti=5. Sum=2011+9+5=2025.
+Row 24: Anno=2004, Genere=""Drammatico""=1, Oscar vinti=4. Sum=2004+1+4=2009.
+
+Now, I'll list the sums and sort them in descending order:
+
+- Row 7: 2029
+- Row 10: 2031
+- Row 18: 2027
+- Row 6: 2020
+- Row 3: 2017
+- Row 12: 2024
+- Row 17: 2023
+- Row 23: 2025
+- Row 13: 2019
+- Row 14: 2015
+- Row 9: 2014
+- Row 5: 2005
+- Row 19: 2005
+- Row 1: 2010
+- Row 8: 2010
+- Row 2: 2001
+- Row 4: 1999
+- Row 16: 2017
+- Row 22: 2021
+- Row 24: 2009
+- Row 15: 2007
+- Row 0: 1976
+- Row 20: 1981
+- Row 21: 2004
+- Row 11: 1947
+
+Wait, I think I might have miscalculated some sums. Let me double-check a few:
+
+Row 10: 2019 (Anno) + 8 (Thriller) +4=2031. Correct.
+
+Row 7: 2016 +7 (Musical) +6=2029. Correct.
+
+Row 18:2014+9+4=2027. Correct.
+
+Row 6:2010+6+4=2020. Correct.
+
+Row 3:2003+3+11=2017. Correct.
+
+Row 12:2017+3+4=2024. Correct.
+
+Row 17:2012+8+3=2023. Correct.
+
+Row 23:2011+9+5=2025. Correct.
+
+Row 13:2007+8+4=2019. Correct.
+
+Row 14:2002+7+6=2015. Correct.
+
+Row 9:2006+4+4=2014. Correct.
+
+Row 5:1993+5+7=2005. Correct.
+
+Row 19:1999+1+5=2005. Correct.
+
+Row 1:1997+2+11=2010. Correct.
+
+Row 8:2000+5+5=2010. Correct.
+
+Row 2:1994+1+6=2001. Correct.
+
+Row 4:1994+4+1=1999. Correct.
+
+Row 16:2008+1+8=2017. Correct.
+
+Row 22:2013+5+3=2021. Correct.
+
+Row 24:2004+1+4=2009. Correct.
+
+Row 15:1996+2+9=2007. Correct.
+
+Row 0:1972+1+3=1976. Correct.
+
+Row 20:1974+1+6=1981. Correct.
+
+Row 21:1991+8+5=2004. Correct.
+
+Row 11:1942+2+3=1947. Correct.
+
+Now, sorting these sums in descending order:
+
+1. 2031 (Row 10)
+2. 2029 (Row 7)
+3. 2027 (Row 18)
+4. 2025 (Row 23)
+5. 2024 (Row 12)
+6. 2023 (Row 17",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-ADVANCED,"Compute the sum of the columns Titolo, Oscar vinti for each row in `dataset_film_famosi`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Pulp Fiction', 1994, 'Quentin Tarantino', 'Crime', 154, 1], ['Il Padrino', 1972, 'Francis Ford Coppola', 'Drammatico', 175, 3], ['Casablanca', 1942, 'Michael Curtiz', 'Romantico', 102, 3], ['Argo', 2012, 'Ben Affleck', 'Thriller', 120, 3], ['12 Years a Slave', 2013, 'Steve McQueen', 'Storico', 134, 3]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Titolo` + `Oscar vinti` ASC LIMIT 5,1,,0.0,0.815,0.786,0.0,1.0,0.8,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-ADVANCED,"Compute the sum of the columns Titolo, Oscar vinti for each row in `dataset_film_famosi`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Titanic', 11, 11], ['Il Signore degli Anelli: Il ritorno del re', 11, 11], ['The English Patient', 9, 9], ['Slumdog Millionaire', 8, 8], ['Forrest Gump', 6, 6]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Titolo` + `Oscar vinti` DESC LIMIT 5,0,,0.0,0.778,0.25,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-ADVANCED,"Compute the sum of the columns Titolo, Anno, Durata for each row in `dataset_film_famosi`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Casablanca', 1942, 102, 2044], ['The Silence of the Lambs', 1991, 118, 2109], ['The Artist', 2011, 100, 2111], ['Chicago', 2002, 113, 2115], ['American Beauty', 1999, 122, 2121]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Titolo` + `Anno` + `Durata` ASC LIMIT 5,0,,0.0,0.75,0.536,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-ADVANCED,"Compute the sum of the columns Titolo, Anno, Durata for each row in `dataset_film_famosi`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Il Signore degli Anelli: Il ritorno del re', 2003, 201, 2204], ['Titanic', 1997, 195, 2192], ['Il Padrino Parte II', 1974, 202, 2176], ['Inception', 2010, 148, 2158], ['The English Patient', 1996, 162, 2158]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Titolo` + `Anno` + `Durata` DESC LIMIT 5,1,,0.0,0.421,0.296,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-ADVANCED,"Compute the sum of the columns Anno, Oscar vinti for each row in `dataset_film_famosi`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Casablanca', 1942, 'Michael Curtiz', 'Romantico', 102, 3], ['Il Padrino', 1972, 'Francis Ford Coppola', 'Drammatico', 175, 3], ['The Godfather Part II', 1974, 'Francis Ford Coppola', 'Drammatico', 202, 6], ['Pulp Fiction', 1994, 'Quentin Tarantino', 'Crime', 154, 1], ['The Silence of the Lambs', 1991, 'Jonathan Demme', 'Thriller', 118, 5]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Anno` + `Oscar vinti` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-ADVANCED,"Compute the sum of the columns Anno, Oscar vinti for each row in `dataset_film_famosi`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Parasite', 2019, 'Bong Joon-ho', 'Thriller', 132, 4, 2023], ['La La Land', 2016, 'Damien Chazelle', 'Musical', 128, 6, 2022], ['The Shape of Water', 2017, 'Guillermo del Toro', 'Fantasy', 123, 4, 2021], ['Birdman', 2014, 'Alejandro G. Iñárritu', 'Commedia Drammatica', 119, 4, 2018], ['Slumdog Millionaire', 2008, 'Danny Boyle', 'Drammatico', 120, 8, 2016]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Anno` + `Oscar vinti` DESC LIMIT 5,2,,0.0,0.875,1.0,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-PROJECT,Select only the column `Anno` from `dataset_film_famosi`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1942], [1972], [1974], [1991], [1993]]",SELECT `Anno` FROM `dataset_film_famosi` ORDER BY `Anno` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-PROJECT,Select only the column `Anno` from `dataset_film_famosi`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[2019], [2017], [2016], [2014], [2013]]",SELECT `Anno` FROM `dataset_film_famosi` ORDER BY `Anno` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-PROJECT,Select only the column `Durata` from `dataset_film_famosi`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[100], [102], [113], [118], [119]]",SELECT `Durata` FROM `dataset_film_famosi` ORDER BY `Durata` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-PROJECT,Select only the column `Durata` from `dataset_film_famosi`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[202], [201], [195], [195], [175]]",SELECT `Durata` FROM `dataset_film_famosi` ORDER BY `Durata` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-PROJECT,Select only the column `Titolo` from `dataset_film_famosi`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['12 Years a Slave'], ['American Beauty'], ['Argo'], ['Birdman'], ['Casablanca']]",SELECT `Titolo` FROM `dataset_film_famosi` ORDER BY `Titolo` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-PROJECT,Select only the column `Titolo` from `dataset_film_famosi`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Titanic'], ['The Shape of Water'], ['The Silence of the Lambs'], ['The Godfather Part II'], ['The English Patient']]",SELECT `Titolo` FROM `dataset_film_famosi` ORDER BY `Titolo` DESC LIMIT 5,1,,0.0,1.0,1.0,1.0,1.0,1.0,0.95
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-PROJECT,Select only the column `Oscar vinti` from `dataset_film_famosi`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1], [3], [3], [4], [4]]",SELECT `Oscar vinti` FROM `dataset_film_famosi` ORDER BY `Oscar vinti` ASC LIMIT 5,0,,0.0,0.667,1.0,0.0,1.0,0.5,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-PROJECT,Select only the column `Oscar vinti` from `dataset_film_famosi`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[11], [11], [8], [7], [6]]",SELECT `Oscar vinti` FROM `dataset_film_famosi` ORDER BY `Oscar vinti` DESC LIMIT 5,0,,0.0,0.75,0.75,0.0,1.0,0.75,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-PROJECT,Select only the column `Genere` from `dataset_film_famosi`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Commedia Drammatica'], ['Crime'], ['Drammatico'], ['Fantasy'], ['Musical']]",SELECT `Genere` FROM `dataset_film_famosi` ORDER BY `Genere` ASC LIMIT 5,0,,0.0,0.6,1.0,0.0,1.0,0.333,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-PROJECT,Select only the column `Genere` from `dataset_film_famosi`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Thriller'], ['Storico'], ['Sci-Fi'], ['Romantico'], ['Musical']]",SELECT `Genere` FROM `dataset_film_famosi` ORDER BY `Genere` DESC LIMIT 5,0,,0.0,0.4,1.0,0.0,1.0,0.5,1.0
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-SINGLE,"List the top 5 rows from the table `monumenti_reali`, sorted by the column `anno_costruzione` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Piramide di Cheope', 'Egitto', 138.8, -2560, 'pietra calcarea'], ['Stonehenge', 'Regno Unito', 4.0, -2500, 'sarsen'], ['Acropoli di Atene', 'Grecia', 156.0, -447, 'marmo'], ['Petra', 'Giordania', 40.0, -300, 'arenaria'], ['Grande Muraglia', 'Cina', 7.8, -221, 'pietra']]",SELECT * FROM `monumenti_reali` ORDER BY `anno_costruzione` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-SINGLE,"List the top 5 rows from the table `monumenti_reali`, sorted by the column `anno_costruzione` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Burj Khalifa', 'Emirati Arabi Uniti', 828.0, 2010, 'acciaio'], ['CN Tower', 'Canada', 553.3, 1976, 'cemento armato'], ['Opera House di Sydney', 'Australia', 65.0, 1973, 'cemento'], ['Atomium', 'Belgio', 102.0, 1958, 'acciaio'], ['Monte Rushmore', 'USA', 18.0, 1941, 'granito']]",SELECT * FROM `monumenti_reali` ORDER BY `anno_costruzione` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-SINGLE,"List the top 5 rows from the table `monumenti_reali`, sorted by the column `altezza_m` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Stonehenge', 'Regno Unito', 4.0, -2500, 'sarsen'], ['Moai (Isola di Pasqua)', 'Cile', 4.0, 1250, 'tufo'], ['Grande Muraglia', 'Cina', 7.8, -221, 'pietra'], ['Leaning Tower of Torun', 'Polonia', 15.0, 1274, 'mattone'], ['Monte Rushmore', 'USA', 18.0, 1941, 'granito']]",SELECT * FROM `monumenti_reali` ORDER BY `altezza_m` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-SINGLE,"List the top 5 rows from the table `monumenti_reali`, sorted by the column `altezza_m` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Burj Khalifa', 'Emirati Arabi Uniti', 828.0, 2010.0, 'acciaio'], ['CN Tower', 'Canada', 553.3, 1976.0, 'cemento armato'], ['Tour Eiffel', 'Francia', 330.0, 1889.0, 'ferro'], ['Sagrada Familia', 'Spagna', 172.5, 1882.0, 'pietra'], ['Colosseo', 'Italia', 48.0, 80.0, 'travertino']]",SELECT * FROM `monumenti_reali` ORDER BY `altezza_m` DESC LIMIT 5,0,,0.0,0.8,0.833,0.0,1.0,0.8,1.0
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-SINGLE,"List the top 5 rows from the table `monumenti_reali`, sorted by the column `paese` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Opera House di Sydney', 'Australia', 65.0, 1973.0, 'cemento'], ['Atomium', 'Belgio', 102.0, 1958.0, 'acciaio'], ['Cristo Redentore', 'Brasile', 38.0, 1931.0, 'cemento armato'], ['Angkor Wat', 'Cambogia', 65.0, 1150.0, 'arenaria'], ['CN Tower', 'Canada', 553.3, 1976.0, 'cemento armato']]",SELECT * FROM `monumenti_reali` ORDER BY `paese` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-SINGLE,"List the top 5 rows from the table `monumenti_reali`, sorted by the column `paese` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Statua della Libertà', 'USA', 93.0, 1886.0, 'rame'], ['Sagrada Familia', 'Spagna', 172.5, 1882.0, 'pietra'], ['Cattedrale di San Basilio', 'Russia', 65.0, 1561.0, 'mattone'], ['Big Ben', 'Regno Unito', 96.0, 1859.0, 'pietra'], ['Leaning Tower of Torun', 'Polonia', 15.0, 1274.0, 'mattone']]",SELECT * FROM `monumenti_reali` ORDER BY `paese` DESC LIMIT 5,1,,0.0,0.435,0.476,0.0,1.0,0.4,1.0
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-SINGLE,"List the top 5 rows from the table `monumenti_reali`, sorted by the column `nome` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Acropoli di Atene', 'Grecia', 156.0, -447.0, 'marmo'], ['Alhambra', 'Spagna', 26.0, 1333.0, 'pietra'], ['Angkor Wat', 'Cambogia', 65.0, 1150.0, 'arenaria'], ['Atomium', 'Belgio', 102.0, 1958.0, 'acciaio'], ['Big Ben', 'Regno Unito', 96.0, 1859.0, 'pietra']]",SELECT * FROM `monumenti_reali` ORDER BY `nome` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-SINGLE,"List the top 5 rows from the table `monumenti_reali`, sorted by the column `nome` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Tour Eiffel', 'Francia', 330.0, 1889.0, 'ferro'], ['Torre di Pisa', 'Italia', 56.7, 1173.0, 'marmo'], ['Taj Mahal', 'India', 73.0, 1643.0, 'marmo'], ['Stonehenge', 'Regno Unito', 4.0, -2500.0, 'sarsen'], ['Statua della Libertà', 'USA', 93.0, 1886.0, 'rame']]",SELECT * FROM `monumenti_reali` ORDER BY `nome` DESC LIMIT 5,1,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-ADVANCED,"Compute the sum of the columns paese, anno_costruzione for each row in `monumenti_reali`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Colosseo', 'Italia', 48.0, 80.0, 'travertino'], ['Torre di Pisa', 'Italia', 56.7, 1173.0, 'marmo'], ['Tour Eiffel', 'Francia', 330.0, 1889.0, 'ferro'], ['Statua della Libertà', 'USA', 93.0, 1886.0, 'rame'], ['Cristo Redentore', 'Brasile', 38.0, 1931.0, 'cemento armato']]",SELECT * FROM `monumenti_reali` ORDER BY `paese` + `anno_costruzione` ASC LIMIT 5,0,,0.0,0.042,0.04,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-ADVANCED,"Compute the sum of the columns paese, anno_costruzione for each row in `monumenti_reali`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Machu Picchu', 'Perù', 2430.0, 1450.0, 'pietra', 3880.0], ['Burj Khalifa', 'Emirati Arabi Uniti', 828.0, 2010.0, 'acciaio', 2838.0], ['CN Tower', 'Canada', 553.3, 1976.0, 'cemento armato', 2529.3], ['Tour Eiffel', 'Francia', 330.0, 1889.0, 'ferro', 2219.0], ['Sagrada Familia', 'Spagna', 172.5, 1882.0, 'pietra', 2054.5]]",SELECT * FROM `monumenti_reali` ORDER BY `paese` + `anno_costruzione` DESC LIMIT 5,0,,0.0,0.345,0.417,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-ADVANCED,"Compute the sum of the columns altezza_m, anno_costruzione for each row in `monumenti_reali`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Grande Muraglia', 'Cina', 7.8, -221, 'pietra', -213.2], ['Petra', 'Giordania', 40.0, -300, 'arenaria', -260.0], ['Stonehenge', 'Regno Unito', 4.0, -2500, 'sarsen', -2496.0], ['Acropoli di Atene', 'Grecia', 156.0, -447, 'marmo', -291.0], ['Piramide di Cheope', 'Egitto', 138.8, -2560, 'pietra calcarea', -2421.2]]",SELECT * FROM `monumenti_reali` ORDER BY `altezza_m` + `anno_costruzione` ASC LIMIT 5,0,,0.0,0.833,1.0,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-ADVANCED,"Compute the sum of the columns altezza_m, anno_costruzione for each row in `monumenti_reali`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Burj Khalifa', 'Emirati Arabi Uniti', 828.0, 2010.0, 'acciaio'], ['CN Tower', 'Canada', 553.3, 1976.0, 'cemento armato'], ['Tour Eiffel', 'Francia', 330.0, 1889.0, 'ferro'], ['Statua della Libertà', 'USA', 93.0, 1886.0, 'rame'], ['Big Ben', 'Regno Unito', 96.0, 1859.0, 'pietra']]",SELECT * FROM `monumenti_reali` ORDER BY `altezza_m` + `anno_costruzione` DESC LIMIT 5,0,,0.0,0.64,0.667,0.0,1.0,0.6,1.0
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-ADVANCED,"Compute the sum of the columns nome, altezza_m, anno_costruzione for each row in `monumenti_reali`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Stonehenge', 4.0, -2500.0, -2496.0], ['Piramide di Cheope', 138.8, -2560.0, -2421.2], ['Acropoli di Atene', 156.0, -447.0, -291.0], ['Petra', 40.0, -300.0, -260.0], ['Grande Muraglia', 7.8, -221.0, -213.2]]",SELECT * FROM `monumenti_reali` ORDER BY `nome` + `altezza_m` + `anno_costruzione` ASC LIMIT 5,2,,0.0,0.75,0.6,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-ADVANCED,"Compute the sum of the columns nome, altezza_m, anno_costruzione for each row in `monumenti_reali`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Burj Khalifa', 'Emirati Arabi Uniti', 828.0, 2010.0, 'acciaio'], ['Tour Eiffel', 'Francia', 330.0, 1889.0, 'ferro'], ['Sagrada Familia', 'Spagna', 172.5, 1882.0, 'pietra'], ['Statua della Libertà', 'USA', 93.0, 1886.0, 'rame'], ['Cristo Redentore', 'Brasile', 38.0, 1931.0, 'cemento armato']]",SELECT * FROM `monumenti_reali` ORDER BY `nome` + `altezza_m` + `anno_costruzione` DESC LIMIT 5,1,,0.0,0.48,0.5,0.0,1.0,0.4,1.0
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-ADVANCED,"Compute the sum of the columns paese, materiale for each row in `monumenti_reali`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Grande Muraglia', 'Cina', 7.8, -221, 'pietra'], ['Stonehenge', 'Regno Unito', 4.0, -2500, 'sarsen'], ['Moai (Isola di Pasqua)', 'Cile', 4.0, 1250, 'tufo'], ['Leaning Tower of Torun', 'Polonia', 15.0, 1274, 'mattone'], ['Monte Rushmore', 'USA', 18.0, 1941, 'granito']]",SELECT * FROM `monumenti_reali` ORDER BY `paese` + `materiale` ASC LIMIT 5,0,,0.0,0.042,0.042,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-ADVANCED,"Compute the sum of the columns paese, materiale for each row in `monumenti_reali`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Cattedrale di San Basilio', 'Russia', 65.0, 1561.0, 'mattone'], ['Castello di Neuschwanstein', 'Germania', 65.0, 1886.0, 'pietra'], ['Sagrada Familia', 'Spagna', 172.5, 1882.0, 'pietra'], ['Alhambra', 'Spagna', 26.0, 1333.0, 'pietra'], ['Acropoli di Atene', 'Grecia', 156.0, -447.0, 'marmo']]",SELECT * FROM `monumenti_reali` ORDER BY `paese` + `materiale` DESC LIMIT 5,1,,0.0,0.095,0.083,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-ADVANCED,"Compute the sum of the columns nome, anno_costruzione for each row in `monumenti_reali`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Stonehenge', -2500, -2496], ['Acropoli di Atene', -447, -443], ['Petra', -300, -296], ['Grande Muraglia', -221, -217], ['Piramide di Cheope', -2560, -2556]]",SELECT * FROM `monumenti_reali` ORDER BY `nome` + `anno_costruzione` ASC LIMIT 5,0,,0.0,0.667,0.4,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-ADVANCED,"Compute the sum of the columns nome, anno_costruzione for each row in `monumenti_reali`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Tour Eiffel', 'Francia', 330.0, 1889.0, 'ferro', 'Tour Eiffel1889'], ['Statua della Libertà', 'USA', 93.0, 1886.0, 'rame', 'Statua della Libertà1886'], ['Cristo Redentore', 'Brasile', 38.0, 1931.0, 'cemento armato', 'Cristo Redentore1931'], ['Colosseo', 'Italia', 48.0, 80.0, 'travertino', 'Colosseo80'], ['Torre di Pisa', 'Italia', 56.7, 1173.0, 'marmo', 'Torre di Pisa1173']]",SELECT * FROM `monumenti_reali` ORDER BY `nome` + `anno_costruzione` DESC LIMIT 5,0,,0.0,0.069,0.083,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-PROJECT,Select only the column `nome` from `monumenti_reali`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Acropoli di Atene'], ['Alhambra'], ['Angkor Wat'], ['Atomium'], ['Big Ben']]",SELECT `nome` FROM `monumenti_reali` ORDER BY `nome` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-PROJECT,Select only the column `nome` from `monumenti_reali`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Tour Eiffel'], ['Torre di Pisa'], ['Taj Mahal'], ['Stonehenge'], ['Statua della Libertà']]",SELECT `nome` FROM `monumenti_reali` ORDER BY `nome` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-PROJECT,Select only the column `paese` from `monumenti_reali`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Australia'], ['Belgio'], ['Brasile'], ['Cambogia'], ['Canada']]",SELECT `paese` FROM `monumenti_reali` ORDER BY `paese` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-PROJECT,Select only the column `paese` from `monumenti_reali`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['USA'], ['Spagna'], ['Russia'], ['Regno Unito'], ['Polonia']]",SELECT `paese` FROM `monumenti_reali` ORDER BY `paese` DESC LIMIT 5,0,,0.0,0.4,1.0,0.0,1.0,0.0,1.0
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-PROJECT,Select only the column `altezza_m` from `monumenti_reali`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[4.0], [4.0], [7.8], [15.0], [18.0]]",SELECT `altezza_m` FROM `monumenti_reali` ORDER BY `altezza_m` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-PROJECT,Select only the column `altezza_m` from `monumenti_reali`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[2430.0], [828.0], [553.3], [330.0], [172.5]]",SELECT `altezza_m` FROM `monumenti_reali` ORDER BY `altezza_m` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-PROJECT,Select only the column `anno_costruzione` from `monumenti_reali`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[-2560], [-2500], [-447], [-300], [-221]]",SELECT `anno_costruzione` FROM `monumenti_reali` ORDER BY `anno_costruzione` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-PROJECT,Select only the column `anno_costruzione` from `monumenti_reali`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[2010.0], [1976.0], [1973.0], [1941.0], [1931.0]]",SELECT `anno_costruzione` FROM `monumenti_reali` ORDER BY `anno_costruzione` DESC LIMIT 5,0,,0.0,0.8,0.8,0.0,1.0,0.8,1.0
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-PROJECT,Select only the column `materiale` from `monumenti_reali`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['acciaio'], ['arenaria'], ['cemento'], ['cemento armato'], ['ferro']]",SELECT `materiale` FROM `monumenti_reali` ORDER BY `materiale` ASC LIMIT 5,0,,0.0,0.4,1.0,0.0,1.0,0.0,1.0
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-PROJECT,Select only the column `materiale` from `monumenti_reali`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['travertino'], ['tufo'], ['sarsen'], ['rame'], ['pietra']]",SELECT `materiale` FROM `monumenti_reali` ORDER BY `materiale` DESC LIMIT 5,0,,0.0,0.8,0.8,0.0,1.0,0.8,0.9
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_animali`, sorted by the column `Habitat` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Aquila reale', 'Uccello', 'Antartide', 25, 6.0], ['Pinguino imperatore', 'Uccello', 'Antartide', 20, 30.0], ['Orso polare', 'Mammifero', 'Artico', 25, 450.0], ['Foca monaca', 'Mammifero', 'Zone costiere', 30, 300.0], ['Foreste', 'Mammifero', 'Foreste', 15, 220.0]]",SELECT * FROM `dataset_animali` ORDER BY `Habitat` ASC LIMIT 5,0,,0.0,0.611,0.478,0.0,1.0,0.4,1.0
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_animali`, sorted by the column `Habitat` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Foca monaca', 'Mammifero', 'Zone costiere', 30, 300.0], ['Cavalluccio marino', 'Pesce', 'Barriere coralline', 4, 0.05], ['Albatros urlatore', 'Uccello', 'Oceani', 50, 11.0], ['Squalo bianco', 'Pesce', 'Oceani', 70, 1100.0], ['Balena azzurra', 'Mammifero', 'Oceani', 90, 140000.0]]",SELECT * FROM `dataset_animali` ORDER BY `Habitat` DESC LIMIT 5,0,,0.0,0.333,0.368,0.0,1.0,0.2,1.0
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_animali`, sorted by the column `Peso medio (kg)` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Camaleonte pantera', 'Rettile', 'Foreste del Madagascar', 5, 0.2], ['Cavalluccio marino', 'Pesce', 'Barriere coralline', 4, 0.05], ['Falco pellegrino', 'Uccello', 'Falesie e aree urbane', 15, 1.0], ['Cobra reale', 'Rettile', 'Foreste tropicali', 20, 6.0], ['Pappagallo ara', 'Uccello', 'Foreste pluviali', 50, 1.2]]",SELECT * FROM `dataset_animali` ORDER BY `Peso medio (kg)` ASC LIMIT 5,0,,0.0,0.87,0.87,0.0,1.0,0.8,0.9
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_animali`, sorted by the column `Peso medio (kg)` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Balena azzurra', 'Mammifero', 'Oceani', 90, 140000.0], ['Elefante africano', 'Mammifero', 'Savane africane', 70, 6000.0], ['Ippopotamo', 'Mammifero', 'Fiumi africani', 40, 1500.0], ['Giraffa', 'Mammifero', 'Savane', 25, 1200.0], ['Squalo bianco', 'Pesce', 'Oceani', 70, 1100.0]]",SELECT * FROM `dataset_animali` ORDER BY `Peso medio (kg)` DESC LIMIT 5,0,,0.0,0.85,0.85,0.0,1.0,0.8,1.0
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_animali`, sorted by the column `Durata vita media` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Leone', 'Mammifero', 'Savane', 14, 190.0], ['Tigre del Bengala', 'Mammifero', 'Foreste', 15, 220.0], ['Cobra reale', 'Rettile', 'Foreste tropicali', 20, 6.0], ['Pitone reticolato', 'Rettile', 'Foreste tropicali', 20, 75.0], ['Falco pellegrino', 'Uccello', 'Falesie e aree urbane', 25, 1.0]]",SELECT * FROM `dataset_animali` ORDER BY `Durata vita media` ASC LIMIT 5,0,,0.0,0.333,0.304,0.0,1.0,0.2,1.0
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_animali`, sorted by the column `Durata vita media` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Tartaruga gigante', 'Rettile', 'Isole Galápagos', 100, 250.0], ['Balena azzurra', 'Mammifero', 'Oceani', 90, 140000.0], ['Elefante africano', 'Mammifero', 'Savane africane', 70, 6000.0], ['Coccodrillo del Nilo', 'Rettile', 'Fiumi e laghi', 70, 500.0], ['Squalo bianco', 'Pesce', 'Oceani', 70, 1100.0]]",SELECT * FROM `dataset_animali` ORDER BY `Durata vita media` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_animali`, sorted by the column `Nome` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Aquila reale', 'Uccello', 'Montagne', 25, 6.0], ['Albatros urlatore', 'Uccello', 'Oceani', 50, 11.0], ['Camaleonte pantera', 'Rettile', 'Foreste del Madagascar', 5, 0.2], ['Canguro rosso', 'Mammifero', 'Deserti australiani', 23, 85.0], ['Cavalluccio marino', 'Pesce', 'Barriere coralline', 4, 0.05]]",SELECT * FROM `dataset_animali` ORDER BY `Nome` ASC LIMIT 5,0,,0.0,0.792,0.864,0.0,1.0,0.8,0.9
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_animali`, sorted by the column `Nome` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Tartaruga gigante', 'Rettile', 'Isole Galápagos', 100, 250.0], ['Tigre del Bengala', 'Mammifero', 'Foreste', 15, 220.0], ['Squalo bianco', 'Pesce', 'Oceani', 70, 1100.0], ['Rinoceronte bianco', 'Mammifero', 'Savane africane', 50, 2400.0], ['Pitone reticolato', 'Rettile', 'Foreste tropicali', 20, 75.0]]",SELECT * FROM `dataset_animali` ORDER BY `Nome` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,0.95
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-ADVANCED,"Compute the sum of the columns Nome, Classe, Peso medio (kg) for each row in `dataset_animali`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Falco pellegrino', 'Uccello', 'Falesie e aree urbane', 15, 1.0], ['Cobra reale', 'Rettile', 'Foreste tropicali', 20, 6.0], ['Pappagallo ara', 'Uccello', 'Foreste pluviali', 50, 1.2], ['Cavalluccio marino', 'Pesce', 'Barriere coralline', 4, 0.05], ['Camaleonte pantera', 'Rettile', 'Foreste del Madagascar', 5, 0.2]]",SELECT * FROM `dataset_animali` ORDER BY `Nome` + `Classe` + `Peso medio (kg)` ASC LIMIT 5,0,,0.0,0.87,0.87,0.0,1.0,0.8,0.2
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-ADVANCED,"Compute the sum of the columns Nome, Classe, Peso medio (kg) for each row in `dataset_animali`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Balena azzurra', 'Mammifero', 'Oceani', 90, 140000.0], ['Elefante africano', 'Mammifero', 'Savane africane', 70, 6000.0], ['Ippopotamo', 'Mammifero', 'Fiumi africani', 40, 1500.0], ['Giraffa', 'Mammifero', 'Savane', 25, 1200.0], ['Rinoceronte bianco', 'Mammifero', 'Savane africane', 50, 2400.0]]",SELECT * FROM `dataset_animali` ORDER BY `Nome` + `Classe` + `Peso medio (kg)` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,0.85
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-ADVANCED,"Compute the sum of the columns Nome, Durata vita media, Peso medio (kg) for each row in `dataset_animali`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Falco pellegrino', 'Uccello', 'Falesie e aree urbane', 15, 1.0], ['Cobra reale', 'Rettile', 'Foreste tropicali', 20, 6.0], ['Pitone reticolato', 'Rettile', 'Foreste tropicali', 20, 75.0], ['Camaleonte pantera', 'Rettile', 'Foreste del Madagascar', 5, 0.2], ['Cavalluccio marino', 'Pesce', 'Barriere coralline', 4, 0.05]]",SELECT * FROM `dataset_animali` ORDER BY `Nome` + `Durata vita media` + `Peso medio (kg)` ASC LIMIT 5,0,,0.0,0.905,0.864,0.0,1.0,0.8,0.0999999999999999
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-ADVANCED,"Compute the sum of the columns Nome, Durata vita media, Peso medio (kg) for each row in `dataset_animali`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Balena azzurra', 'Mammifero', 'Oceani', 90, 140000.0, 140090], ['Rinoceronte bianco', 'Mammifero', 'Savane africane', 50, 2400.0, 2450], ['Elefante africano', 'Mammifero', 'Savane africane', 70, 6000.0, 6070], ['Ippopotamo', 'Mammifero', 'Fiumi africani', 40, 1500.0, 1540], ['Giraffa', 'Mammifero', 'Savane', 25, 1200.0, 1225]]",SELECT * FROM `dataset_animali` ORDER BY `Nome` + `Durata vita media` + `Peso medio (kg)` DESC LIMIT 5,0,,0.0,0.8,1.0,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-ADVANCED,"Compute the sum of the columns Classe, Peso medio (kg) for each row in `dataset_animali`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Falco pellegrino', 'Uccello', 'Falesie e aree urbane', 15, 1.0, 'Uccello1.0'], ['Cobra reale', 'Rettile', 'Foreste tropicali', 20, 6.0, 'Rettile6.0'], ['Camaleonte pantera', 'Rettile', 'Foreste del Madagascar', 5, 0.2, 'Rettile0.2'], ['Pappagallo ara', 'Uccello', 'Foreste pluviali', 50, 1.2, 'Uccello1.2'], ['Cavalluccio marino', 'Pesce', 'Barriere coralline', 4, 0.05, 'Pesce0.05']]",SELECT * FROM `dataset_animali` ORDER BY `Classe` + `Peso medio (kg)` ASC LIMIT 5,0,,0.0,0.714,0.87,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-ADVANCED,"Compute the sum of the columns Classe, Peso medio (kg) for each row in `dataset_animali`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Balena azzurra', 'Mammifero', 'Oceani', 90, 140000.0, 140090.0], ['Rinoceronte bianco', 'Mammifero', 'Savane africane', 50, 2400.0, 2400.0], ['Giraffa', 'Mammifero', 'Savane', 25, 1200.0, 1205.0], ['Ippopotamo', 'Mammifero', 'Fiumi africani', 40, 1500.0, 1500.0], ['Elefante africano', 'Mammifero', 'Savane africane', 70, 6000.0, 6000.0]]",SELECT * FROM `dataset_animali` ORDER BY `Classe` + `Peso medio (kg)` DESC LIMIT 5,0,,0.0,0.909,1.0,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-ADVANCED,"Compute the sum of the columns Habitat, Peso medio (kg) for each row in `dataset_animali`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Falco pellegrino', 'Uccello', 'Falesie e aree urbane', 15, 1.0, 'Falesie e aree urbane1.0'], ['Cobra reale', 'Rettile', 'Foreste tropicali', 20, 6.0, 'Foreste tropicali6.0'], ['Camaleonte pantera', 'Rettile', 'Foreste del Madagascar', 5, 0.2, 'Foreste del Madagascar0.2'], ['Pitone reticolato', 'Rettile', 'Foreste tropicali', 20, 75.0, 'Foreste tropicali75.0'], ['Cavalluccio marino', 'Pesce', 'Barriere coralline', 4, 0.05, 'Barriere coralline0.05']]",SELECT * FROM `dataset_animali` ORDER BY `Habitat` + `Peso medio (kg)` ASC LIMIT 5,0,,0.0,0.615,0.696,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-ADVANCED,"Compute the sum of the columns Habitat, Peso medio (kg) for each row in `dataset_animali`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Balena azzurra', 'Mammifero', 'Oceani', 90, 140000.0, 140090.0], ['Elefante africano', 'Mammifero', 'Savane africane', 70, 6000.0, 6000.0], ['Ippopotamo', 'Mammifero', 'Fiumi africani', 40, 1500.0, 1500.0], ['Giraffa', 'Mammifero', 'Savane', 25, 1200.0, 1200.0], ['Rinoceronte bianco', 'Mammifero', 'Savane africane', 50, 2400.0, 2400.0]]",SELECT * FROM `dataset_animali` ORDER BY `Habitat` + `Peso medio (kg)` DESC LIMIT 5,0,,0.0,0.952,1.0,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-ADVANCED,"Compute the sum of the columns Nome, Classe, Durata vita media for each row in `dataset_animali`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Falco pellegrino', 'Uccello', 'Falesie e aree urbane', 15, 1.0], ['Cobra reale', 'Rettile', 'Foreste tropicali', 20, 6.0], ['Pitone reticolato', 'Rettile', 'Foreste tropicali', 20, 75.0], ['Tigre del Bengala', 'Mammifero', 'Foreste', 15, 220.0], ['Lupo grigio', 'Mammifero', 'Foreste e tundra', 13, 45.0]]",SELECT * FROM `dataset_animali` ORDER BY `Nome` + `Classe` + `Durata vita media` ASC LIMIT 5,0,,0.0,0.35,0.304,0.0,1.0,0.2,1.0
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-ADVANCED,"Compute the sum of the columns Nome, Classe, Durata vita media for each row in `dataset_animali`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Tartaruga gigante', 'Rettile', 'Isole Galápagos', 100, 250.0, 156], ['Balena azzurra', 'Mammifero', 'Oceani', 90, 140000.0, 151], ['Elefante africano', 'Mammifero', 'Savane africane', 70, 6000.0, 141], ['Coccodrillo del Nilo', 'Rettile', 'Fiumi e laghi', 70, 500.0, 140], ['Squalo bianco', 'Pesce', 'Oceani', 70, 1100.0, 140]]",SELECT * FROM `dataset_animali` ORDER BY `Nome` + `Classe` + `Durata vita media` DESC LIMIT 5,0,,0.0,0.833,1.0,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-PROJECT,Select only the column `Nome` from `dataset_animali`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Aquila reale'], ['Albatros urlatore'], ['Canguro rosso'], ['Cavalluccio marino'], ['Cobra reale']]",SELECT `Nome` FROM `dataset_animali` ORDER BY `Nome` ASC LIMIT 5,0,,0.0,0.6,0.6,0.0,1.0,0.6,0.75
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-PROJECT,Select only the column `Nome` from `dataset_animali`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Tartaruga gigante'], ['Tigre del Bengala'], ['Squalo bianco'], ['Rinoceronte bianco'], ['Pitone reticolato']]",SELECT `Nome` FROM `dataset_animali` ORDER BY `Nome` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,0.95
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-PROJECT,Select only the column `Classe` from `dataset_animali`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Mammifero'], ['Mammifero'], ['Mammifero'], ['Mammifero'], ['Mammifero']]",SELECT `Classe` FROM `dataset_animali` ORDER BY `Classe` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-PROJECT,Select only the column `Classe` from `dataset_animali`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Uccello'], ['Uccello'], ['Uccello'], ['Rettile'], ['Rettile']]",SELECT `Classe` FROM `dataset_animali` ORDER BY `Classe` DESC LIMIT 5,0,,0.0,0.5,1.0,0.0,1.0,0.0,1.0
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-PROJECT,Select only the column `Habitat` from `dataset_animali`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Antartide'], ['Artico'], ['Deserti australiani'], ['Falesie e aree urbane'], ['Fiumi africani']]",SELECT `Habitat` FROM `dataset_animali` ORDER BY `Habitat` ASC LIMIT 5,0,,0.0,0.8,0.8,0.0,1.0,0.8,1.0
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-PROJECT,Select only the column `Habitat` from `dataset_animali`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Zone costiere'], ['Savane africane'], ['Savane africane'], ['Savane'], ['Savane']]",SELECT `Habitat` FROM `dataset_animali` ORDER BY `Habitat` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-PROJECT,Select only the column `Durata vita media` from `dataset_animali`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[4], [5], [12], [13], [14]]",SELECT `Durata vita media` FROM `dataset_animali` ORDER BY `Durata vita media` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-PROJECT,Select only the column `Durata vita media` from `dataset_animali`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[100], [90], [70], [70], [50]]",SELECT `Durata vita media` FROM `dataset_animali` ORDER BY `Durata vita media` DESC LIMIT 5,0,,0.0,0.75,1.0,0.0,1.0,0.667,1.0
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-PROJECT,Select only the column `Peso medio (kg)` from `dataset_animali`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[0.05], [0.2], [1.0], [1.2], [6.0]]",SELECT `Peso medio (kg)` FROM `dataset_animali` ORDER BY `Peso medio (kg)` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-PROJECT,Select only the column `Peso medio (kg)` from `dataset_animali`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[140000.0], [6000.0], [2400.0], [1500.0], [1200.0]]",SELECT `Peso medio (kg)` FROM `dataset_animali` ORDER BY `Peso medio (kg)` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_auto`, sorted by the column `Tipo` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['208', 'Peugeot', 2022, 'Hatchback', 100, 4.5, 'Francia'], ['Clio V', 'Renault', 2021, 'Hatchback', 90, 4.3, 'Francia'], ['Corsa', 'Opel', 2022, 'Hatchback', 100, 4.7, 'Germania'], ['Leon', 'SEAT', 2021, 'Hatchback', 130, 5.2, 'Spagna'], ['Polo', 'Volkswagen', 2021, 'Hatchback', 95, 4.8, 'Germania']]",SELECT * FROM `dataset_auto` ORDER BY `Tipo` ASC LIMIT 5,0,,0.0,0.2,0.192,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_auto`, sorted by the column `Tipo` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Yaris Cross', 'Toyota', 2023, 'SUV', 116, 4.7, 'Giappone'], ['XC60', 'Volvo', 2022, 'SUV', 250, 7.1, 'Svezia'], ['Tucson', 'Hyundai', 2022, 'SUV', 150, 6.4, 'Corea del Sud'], ['Sportage', 'Kia', 2023, 'SUV', 160, 6.3, 'Corea del Sud'], ['CX-5', 'Mazda', 2021, 'SUV', 165, 6.8, 'Giappone']]",SELECT * FROM `dataset_auto` ORDER BY `Tipo` DESC LIMIT 5,0,,0.0,0.852,0.821,0.0,1.0,0.8,0.7
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_auto`, sorted by the column `Cavalli` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Panda', 'Fiat', 2020, 'Citycar', 69, 4.9, 'Italia'], ['Aygo X', 'Toyota', 2022, 'Citycar', 72, 4.8, 'Repubblica Ceca'], ['Sandero', 'Dacia', 2021, 'Hatchback', 90, 5.0, 'Romania'], ['Clio V', 'Renault', 2021, 'Hatchback', 90, 4.3, 'Francia'], ['Polo', 'Volkswagen', 2021, 'Hatchback', 95, 4.8, 'Germania']]",SELECT * FROM `dataset_auto` ORDER BY `Cavalli` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,0.95
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_auto`, sorted by the column `Cavalli` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Model 3', 'Tesla', 2022, 'Berlina', 283, 0.0, 'USA'], ['XC60', 'Volvo', 2022, 'SUV', 250, 7.1, 'Svezia'], ['Serie 3', 'BMW', 2022, 'Berlina', 184, 5.6, 'Germania'], ['Giulia', 'Alfa Romeo', 2022, 'Berlina', 200, 6.0, 'Italia'], ['EQA', 'Mercedes-Benz', 2023, 'SUV', 190, 0.0, 'Germania']]",SELECT * FROM `dataset_auto` ORDER BY `Cavalli` DESC LIMIT 5,0,,0.0,0.852,0.793,0.0,1.0,0.8,1.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_auto`, sorted by the column `Anno` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Panda', 'Fiat', 2020, 'Citycar', 69, 4.9, 'Italia'], ['Golf VIII', 'Volkswagen', 2021, 'Berlina', 130, 5.1, 'Germania'], ['Qashqai', 'Nissan', 2021, 'SUV', 140, 6.2, 'Regno Unito'], ['Clio V', 'Renault', 2021, 'Hatchback', 90, 4.3, 'Francia'], ['CX-5', 'Mazda', 2021, 'SUV', 165, 6.8, 'Giappone']]",SELECT * FROM `dataset_auto` ORDER BY `Anno` ASC LIMIT 5,0,,0.0,0.839,0.897,0.0,1.0,0.8,1.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_auto`, sorted by the column `Anno` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Yaris Cross', 'Toyota', 2023, 'SUV', 116, 4.7, 'Giappone'], ['500e', 'Fiat', 2023, 'Citycar', 118, 0.0, 'Italia'], ['EQA', 'Mercedes-Benz', 2023, 'SUV', 190, 0.0, 'Germania'], ['Sportage', 'Kia', 2023, 'SUV', 160, 6.3, 'Corea del Sud'], ['Model 3', 'Tesla', 2022, 'Berlina', 283, 0.0, 'USA']]",SELECT * FROM `dataset_auto` ORDER BY `Anno` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,0.95
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_auto`, sorted by the column `Modello` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['208', 'Peugeot', 2022, 'Hatchback', 100, 4.5, 'Francia'], ['500e', 'Fiat', 2023, 'Citycar', 118, 0.0, 'Italia'], ['A4', 'Audi', 2022, 'Berlina', 150, 5.7, 'Germania'], ['Aygo X', 'Toyota', 2022, 'Citycar', 72, 4.8, 'Repubblica Ceca'], ['Clio V', 'Renault', 2021, 'Hatchback', 90, 4.3, 'Francia']]",SELECT * FROM `dataset_auto` ORDER BY `Modello` ASC LIMIT 5,0,,0.0,0.867,0.812,0.0,1.0,0.8,1.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_auto`, sorted by the column `Modello` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Yaris Cross', 'Toyota', 2023, 'SUV', 116, 4.7, 'Giappone'], ['Tucson', 'Hyundai', 2022, 'SUV', 150, 6.4, 'Corea del Sud'], ['Talisman', 'Renault', 2020, 'Berlina', 160, 5.5, 'Francia'], ['Sportage', 'Kia', 2023, 'SUV', 160, 6.3, 'Corea del Sud'], ['Serie 3', 'BMW', 2022, 'Berlina', 184, 5.6, 'Germania']]",SELECT * FROM `dataset_auto` ORDER BY `Modello` DESC LIMIT 5,0,,0.0,0.821,0.821,0.0,1.0,0.8,1.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-ADVANCED,"Compute the sum of the columns Modello, Marca, Tipo for each row in `dataset_auto`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Aygo X', 'Toyota', 2022, 'Citycar', 72, 4.8, 'Repubblica Ceca'], ['Panda', 'Fiat', 2020, 'Citycar', 69, 4.9, 'Italia'], ['Sandero', 'Dacia', 2021, 'Hatchback', 90, 5.0, 'Romania'], ['Corsa', 'Opel', 2022, 'Hatchback', 100, 4.7, 'Germania'], ['Polo', 'Volkswagen', 2021, 'Hatchback', 95, 4.8, 'Germania']]",SELECT * FROM `dataset_auto` ORDER BY `Modello` + `Marca` + `Tipo` ASC LIMIT 5,0,,0.0,0.464,0.406,0.0,1.0,0.2,1.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-ADVANCED,"Compute the sum of the columns Modello, Marca, Tipo for each row in `dataset_auto`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Model 3', 'Tesla', 2022, 'Berlina', 283, 0.0, 'USA'], ['Serie 3', 'BMW', 2022, 'Berlina', 184, 5.6, 'Germania'], ['Giulia', 'Alfa Romeo', 2022, 'Berlina', 200, 6.0, 'Italia'], ['Talisman', 'Renault', 2020, 'Berlina', 160, 5.5, 'Francia'], ['Golf VIII', 'Volkswagen', 2021, 'Berlina', 130, 5.1, 'Germania']]",SELECT * FROM `dataset_auto` ORDER BY `Modello` + `Marca` + `Tipo` DESC LIMIT 5,0,,0.0,0.571,0.552,0.0,1.0,0.4,0.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-ADVANCED,"Compute the sum of the columns Marca, Cavalli, Paese di produzione for each row in `dataset_auto`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT * FROM `dataset_auto` ORDER BY `Marca` + `Cavalli` + `Paese di produzione` ASC LIMIT 5,3,"```json
+{
+  ""table_name"": ""dataset_auto"",
+  ""ordered_entries"": [
+    {
+      ""Modello"": ""Aygo X"",
+      ""Marca"": ""Toyota"",
+      ""Anno"": 2022,
+      ""Tipo"": ""Citycar"",
+      ""Cavalli"": 72,
+      ""Consumo medio (L/100km)"": 4.8,
+      ""Paese di produzione"": ""Repubblica Ceca"",
+      ""sum"": 72 + ""Toyota"".length + ""Repubblica Ceca"".length
+    },
+    {
+      ""Modello"": ""Panda"",
+      ""Marca"": ""Fiat"",
+      ""Anno"": 2020,
+      ""Tipo"": ""Citycar"",
+      ""Cavalli"": 69,
+      ""Consumo medio (L/100km)"": 4.9,
+      ""Paese di produzione"": ""Italia"",
+      ""sum"": 69 + ""Fiat"".length + ""Italia"".length
+    },
+    {
+      ""Modello"": ""Sandero"",
+      ""Marca"": ""Dacia"",
+      ""Anno"": 2021,
+      ""Tipo"": ""Hatchback"",
+      ""Cavalli"": 90,
+      ""Consumo medio (L/100km)"": 5.0,
+      ""Paese di produzione"": ""Romania"",
+      ""sum"": 90 + ""Dacia"".length + ""Romania"".length
+    },
+    {
+      ""Modello"": ""Corsa"",
+      ""Marca"": ""Opel"",
+      ""Anno"": 2022,
+      ""Tipo"": ""Hatchback"",
+      ""Cavalli"": 100,
+      ""Consumo medio (L/100km)"": 4.7,
+      ""Paese di produzione"": ""Germania"",
+      ""sum"": 100 + ""Opel"".length + ""Germania"".length
+    },
+    {
+      ""Modello"": ""Polo"",
+      ""Marca"": ""Volkswagen"",
+      ""Anno"": 2021,
+      ""Tipo"": ""Hatchback"",
+      ""Cavalli"": 95,
+      ""Consumo medio (L/100km)"": 4.8,
+      ""Paese di produzione"": ""Germania"",
+      ""sum"": 95 + ""Volkswagen"".length + ""Germania"".length
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-ADVANCED,"Compute the sum of the columns Marca, Cavalli, Paese di produzione for each row in `dataset_auto`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Model 3', 'Tesla', 2022, 'Berlina', 283, 0.0, 'USA', 566], ['Outlander PHEV', 'Mitsubishi', 2021, 'SUV', 224, 2.0, 'Giappone', 447], ['XC60', 'Volvo', 2022, 'SUV', 250, 7.1, 'Svezia', 502], ['EQA', 'Mercedes-Benz', 2023, 'SUV', 190, 0.0, 'Germania', 483], ['Giulia', 'Alfa Romeo', 2022, 'Berlina', 200, 6.0, 'Italia', 403]]",SELECT * FROM `dataset_auto` ORDER BY `Marca` + `Cavalli` + `Paese di produzione` DESC LIMIT 5,0,,0.0,0.853,1.0,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-ADVANCED,"Compute the sum of the columns Modello, Marca, Anno for each row in `dataset_auto`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Aygo X', 'Toyota', 2022, 'Citycar', 72, 4.8, 'Repubblica Ceca', 2025], ['Panda', 'Fiat', 2020, 'Citycar', 69, 4.9, 'Italia', 2031], ['Sandero', 'Dacia', 2021, 'Hatchback', 90, 5.0, 'Romania', 2032], ['Golf VIII', 'Volkswagen', 2021, 'Berlina', 130, 5.1, 'Germania', 2034], ['Polo', 'Volkswagen', 2021, 'Hatchback', 95, 4.8, 'Germania', 2037]]",SELECT * FROM `dataset_auto` ORDER BY `Modello` + `Marca` + `Anno` ASC LIMIT 5,0,,0.0,0.485,0.552,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-ADVANCED,"Compute the sum of the columns Modello, Marca, Anno for each row in `dataset_auto`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT * FROM `dataset_auto` ORDER BY `Modello` + `Marca` + `Anno` DESC LIMIT 5,3,"```json
+{
+  ""table_name"": ""dataset_auto"",
+  ""ordered_entries"": [
+    {
+      ""Modello"": ""Serie 3"",
+      ""Marca"": ""BMW"",
+      ""Anno"": 2022,
+      ""Tipo"": ""Berlina"",
+      ""Cavalli"": 184,
+      ""Consumo medio (L/100km)"": 5.6,
+      ""Paese di produzione"": ""Germania"",
+      ""sum"": 2022 + 3 + 11
+    },
+    {
+      ""Modello"": ""Tucson"",
+      ""Marca"": ""Hyundai"",
+      ""Anno"": 2022,
+      ""Tipo"": ""SUV"",
+      ""Cavalli"": 150,
+      ""Consumo medio (L/100km)"": 6.4,
+      ""Paese di produzione"": ""Corea del Sud"",
+      ""sum"": 2022 + 12 + 6
+    },
+    {
+      ""Modello"": ""Sportage"",
+      ""Marca"": ""Kia"",
+      ""Anno"": 2023,
+      ""Tipo"": ""SUV"",
+      ""Cavalli"": 160,
+      ""Consumo medio (L/100km)"": 6.3,
+      ""Paese di produzione"": ""Corea del Sud"",
+      ""sum"": 2023 + 13 + 7
+    },
+    {
+      ""Modello"": ""EQA"",
+      ""Marca"": ""Mercedes-Benz"",
+      ""Anno"": 2023,
+      ""Tipo"": ""SUV"",
+      ""Cavalli"": 190,
+      ""Consumo medio (L/100km)"": 0.0,
+      ""Paese di produzione"": ""Germania"",
+      ""sum"": 2023 + 22 + 4
+    },
+    {
+      ""Modello"": ""Yaris Cross"",
+      ""Marca"": ""Toyota"",
+      ""Anno"": 2023,
+      ""Tipo"": ""SUV"",
+      ""Cavalli"": 116,
+      ""Consumo medio (L/100km)"": 4.7,
+      ""Paese di produzione"": ""Giappone"",
+      ""sum"": 2023 + 5 + 20
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-ADVANCED,"Compute the sum of the columns Modello, Marca for each row in `dataset_auto`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Aygo X', 'Toyota', 2022, 'Citycar', 72, 4.8, 'Repubblica Ceca', 'Aygo XToyota'], ['Panda', 'Fiat', 2020, 'Citycar', 69, 4.9, 'Italia', 'PandaFiat'], ['Corsa', 'Opel', 2022, 'Hatchback', 100, 4.7, 'Germania', 'CorsaOpel'], ['Sandero', 'Dacia', 2021, 'Hatchback', 90, 5.0, 'Romania', 'SanderoDacia'], ['Polo', 'Volkswagen', 2021, 'Hatchback', 95, 4.8, 'Germania', 'PoloVolkswagen']]",SELECT * FROM `dataset_auto` ORDER BY `Modello` + `Marca` ASC LIMIT 5,0,,0.0,0.394,0.406,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-ADVANCED,"Compute the sum of the columns Modello, Marca for each row in `dataset_auto`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Model 3', 'Tesla', 2022, 'Berlina', 283, 0.0, 'USA', 'Model 3Tesla'], ['Serie 3', 'BMW', 2022, 'Berlina', 184, 5.6, 'Germania', 'Serie 3BMW'], ['Giulia', 'Alfa Romeo', 2022, 'Berlina', 200, 6.0, 'Italia', 'GiuliaAlfa Romeo'], ['Golf VIII', 'Volkswagen', 2021, 'Berlina', 130, 5.1, 'Germania', 'Golf VIIIVolkswagen'], ['EQA', 'Mercedes-Benz', 2023, 'SUV', 190, 0.0, 'Germania', 'EQAMercedes-Benz']]",SELECT * FROM `dataset_auto` ORDER BY `Modello` + `Marca` DESC LIMIT 5,0,,0.0,0.469,0.517,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-ADVANCED,"Compute the sum of the columns Anno, Paese di produzione for each row in `dataset_auto`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Talisman', 'Renault', 2020, 'Berlina', 160, 5.5, 'Francia', 2020], ['Panda', 'Fiat', 2020, 'Citycar', 69, 4.9, 'Italia', 2020], ['Sandero', 'Dacia', 2021, 'Hatchback', 90, 5.0, 'Romania', 2021], ['Golf VIII', 'Volkswagen', 2021, 'Berlina', 130, 5.1, 'Germania', 2021], ['Clio V', 'Renault', 2021, 'Hatchback', 90, 4.3, 'Francia', 2021]]",SELECT * FROM `dataset_auto` ORDER BY `Anno` + `Paese di produzione` ASC LIMIT 5,0,,0.0,0.852,0.793,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-ADVANCED,"Compute the sum of the columns Anno, Paese di produzione for each row in `dataset_auto`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['EQA', 'Mercedes-Benz', 2023, 'SUV', 190, 0.0, 'Germania', 2026], ['Yaris Cross', 'Toyota', 2023, 'SUV', 116, 4.7, 'Giappone', 2026], ['Sportage', 'Kia', 2023, 'SUV', 160, 6.3, 'Corea del Sud', 2026], ['500e', 'Fiat', 2023, 'Citycar', 118, 0.0, 'Italia', 2026], ['Model 3', 'Tesla', 2022, 'Berlina', 283, 0.0, 'USA', 2024]]",SELECT * FROM `dataset_auto` ORDER BY `Anno` + `Paese di produzione` DESC LIMIT 5,0,,0.0,0.933,1.0,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-PROJECT,Select only the column `Marca` from `dataset_auto`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Alfa Romeo'], ['Audi'], ['BMW'], ['Dacia'], ['Fiat']]",SELECT `Marca` FROM `dataset_auto` ORDER BY `Marca` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-PROJECT,Select only the column `Marca` from `dataset_auto`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Volkswagen'], ['Volkswagen'], ['Volvo'], ['Toyota'], ['Tesla']]",SELECT `Marca` FROM `dataset_auto` ORDER BY `Marca` DESC LIMIT 5,0,,0.0,0.75,1.0,0.0,1.0,0.667,0.75
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-PROJECT,Select only the column `Modello` from `dataset_auto`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['208'], ['500e'], ['A4'], ['Aygo X'], ['Clio V']]",SELECT `Modello` FROM `dataset_auto` ORDER BY `Modello` ASC LIMIT 5,0,,0.0,0.8,0.8,0.0,1.0,0.8,1.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-PROJECT,Select only the column `Modello` from `dataset_auto`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Yaris Cross'], ['XC60'], ['Tucson'], ['Talisman'], ['Sportage']]",SELECT `Modello` FROM `dataset_auto` ORDER BY `Modello` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-PROJECT,Select only the column `Anno` from `dataset_auto`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[2020], [2020], [2021], [2021], [2021]]",SELECT `Anno` FROM `dataset_auto` ORDER BY `Anno` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-PROJECT,Select only the column `Anno` from `dataset_auto`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[2023], [2023], [2023], [2022], [2022]]",SELECT `Anno` FROM `dataset_auto` ORDER BY `Anno` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,0.0,1.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-PROJECT,Select only the column `Paese di produzione` from `dataset_auto`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Francia'], ['Francia'], ['Germania'], ['Germania'], ['Germania']]",SELECT `Paese di produzione` FROM `dataset_auto` ORDER BY `Paese di produzione` ASC LIMIT 5,0,,0.0,0.5,0.5,0.0,1.0,0.0,1.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-PROJECT,Select only the column `Paese di produzione` from `dataset_auto`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['USA'], ['Svezia'], ['Romania'], ['Repubblica Ceca'], ['Regno Unito']]",SELECT `Paese di produzione` FROM `dataset_auto` ORDER BY `Paese di produzione` DESC LIMIT 5,0,,0.0,0.8,0.8,0.0,1.0,0.8,1.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-PROJECT,Select only the column `Cavalli` from `dataset_auto`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[69], [72], [90], [90], [95]]",SELECT `Cavalli` FROM `dataset_auto` ORDER BY `Cavalli` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-PROJECT,Select only the column `Cavalli` from `dataset_auto`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[283], [250], [224], [200], [190]]",SELECT `Cavalli` FROM `dataset_auto` ORDER BY `Cavalli` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_film_famosi`, sorted by the column `Anno` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Casablanca', 1942, 'Michael Curtiz', 'Romantico', 102, 3], ['Il Padrino', 1972, 'Francis Ford Coppola', 'Drammatico', 175, 3], ['The Godfather Part II', 1974, 'Francis Ford Coppola', 'Drammatico', 202, 6], ['The Silence of the Lambs', 1991, 'Jonathan Demme', 'Thriller', 118, 5], [""Schindler's List"", 1993, 'Steven Spielberg', 'Storico', 195, 7]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Anno` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_film_famosi`, sorted by the column `Anno` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Parasite', 2019, 'Bong Joon-ho', 'Thriller', 132, 4], ['The Shape of Water', 2017, 'Guillermo del Toro', 'Fantasy', 123, 4], ['La La Land', 2016, 'Damien Chazelle', 'Musical', 128, 6], ['Birdman', 2014, 'Alejandro G. Iñárritu', 'Commedia Drammatica', 119, 4], ['Argo', 2012, 'Ben Affleck', 'Thriller', 120, 3]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Anno` DESC LIMIT 5,0,,0.0,0.852,0.821,0.0,1.0,0.8,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_film_famosi`, sorted by the column `Oscar vinti` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Pulp Fiction', 1994, 'Quentin Tarantino', 'Crime', 154, 1], ['Parasite', 2019, 'Bong Joon-ho', 'Thriller', 132, 4], ['The Departed', 2006, 'Martin Scorsese', 'Crime', 151, 4], ['Inception', 2010, 'Christopher Nolan', 'Sci-Fi', 148, 4], [""Schindler's List"", 1993, 'Steven Spielberg', 'Storico', 195, 7]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Oscar vinti` ASC LIMIT 5,0,,0.0,0.296,0.296,0.0,1.0,0.2,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_film_famosi`, sorted by the column `Oscar vinti` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Titanic', 1997, 'James Cameron', 'Romantico', 195, 11], ['Il Signore degli Anelli: Il ritorno del re', 2003, 'Peter Jackson', 'Fantasy', 201, 11], ['The English Patient', 1996, 'Anthony Minghella', 'Romantico', 162, 9], ['Slumdog Millionaire', 2008, 'Danny Boyle', 'Drammatico', 120, 8], ['Forrest Gump', 1994, 'Robert Zemeckis', 'Drammatico', 142, 6]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Oscar vinti` DESC LIMIT 5,0,,0.0,0.815,0.815,0.0,1.0,0.8,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_film_famosi`, sorted by the column `Regista` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['12 Years a Slave', 2013, 'Alejandro G. Iñárritu', 'Storico', 134, 3], ['American Beauty', 1999, 'Anthony Minghella', 'Drammatico', 122, 5], ['The English Patient', 1996, 'Anthony Minghella', 'Romantico', 162, 9], ['Argo', 2012, 'Ben Affleck', 'Thriller', 120, 3], ['Slumdog Millionaire', 2008, 'Danny Boyle', 'Drammatico', 120, 8]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Regista` ASC LIMIT 5,0,,0.0,0.5,0.481,0.0,1.0,0.4,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_film_famosi`, sorted by the column `Regista` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['The Shape of Water', 2017, 'Guillermo del Toro', 'Fantasy', 123, 4], ['The Silence of the Lambs', 1991, 'Jonathan Demme', 'Thriller', 118, 5], ['The Godfather Part II', 1974, 'Francis Ford Coppola', 'Drammatico', 202, 6], ['The English Patient', 1996, 'Anthony Minghella', 'Romantico', 162, 9], ['The Departed', 2006, 'Martin Scorsese', 'Crime', 151, 4]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Regista` DESC LIMIT 5,0,,0.0,0.103,0.111,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_film_famosi`, sorted by the column `Durata` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['La La Land', 2016, 'Damien Chazelle', 'Musical', 128, 6], ['Casablanca', 1942, 'Michael Curtiz', 'Romantico', 132, 3], ['12 Years a Slave', 2013, 'Steve McQueen', 'Storico', 134, 3], ['The Artist', 2011, 'Michel Hazanavicius', 'Commedia Drammatica', 140, 5], ['Forrest Gump', 1994, 'Robert Zemeckis', 'Drammatico', 142, 6]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Durata` ASC LIMIT 5,0,,0.0,0.429,0.429,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-SINGLE,"List the top 5 rows from the table `dataset_film_famosi`, sorted by the column `Durata` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Il Signore degli Anelli: Il ritorno del re', 2003, 'Peter Jackson', 'Fantasy', 201, 11], ['Il Padrino', 1972, 'Francis Ford Coppola', 'Drammatico', 175, 3], ['The Godfather Part II', 1974, 'Francis Ford Coppola', 'Drammatico', 202, 6], ['Titanic', 1997, 'James Cameron', 'Romantico', 195, 11], [""Schindler's List"", 1993, 'Steven Spielberg', 'Storico', 195, 7]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Durata` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,0.6
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-ADVANCED,"Compute the sum of the columns Regista, Oscar vinti for each row in `dataset_film_famosi`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Casablanca', 1942, 'Michael Curtiz', 'Romantico', 102, 3, 3], ['12 Years a Slave', 2013, 'Steve McQueen', 'Storico', 134, 3, 6], ['Argo', 2012, 'Ben Affleck', 'Thriller', 120, 3, 6], ['Parasite', 2019, 'Bong Joon-ho', 'Thriller', 132, 4, 7], ['The Departed', 2006, 'Martin Scorsese', 'Crime', 151, 4, 8]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Regista` + `Oscar vinti` ASC LIMIT 5,0,,0.0,0.586,0.63,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-ADVANCED,"Compute the sum of the columns Regista, Oscar vinti for each row in `dataset_film_famosi`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Il Signore degli Anelli: Il ritorno del re', 2003, 'Peter Jackson', 'Fantasy', 201, 11, 11], ['Titanic', 1997, 'James Cameron', 'Romantico', 195, 11, 11], ['The English Patient', 1996, 'Anthony Minghella', 'Romantico', 162, 9, 9], ['Il Padrino', 1972, 'Francis Ford Coppola', 'Drammatico', 175, 3, 3], ['Forrest Gump', 1994, 'Robert Zemeckis', 'Drammatico', 142, 6, 6]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Regista` + `Oscar vinti` DESC LIMIT 5,0,,0.0,0.63,0.63,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-ADVANCED,"Compute the sum of the columns Anno, Genere, Oscar vinti for each row in `dataset_film_famosi`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Casablanca', 1942, 'Michael Curtiz', 'Romantico', 102, 3, 1947], ['The Artist', 2011, 'Michel Hazanavicius', 'Commedia Drammatica', 100, 5, 2116], ['12 Years a Slave', 2013, 'Steve McQueen', 'Storico', 134, 3, 2150], ['Parasite', 2019, 'Bong Joon-ho', 'Thriller', 132, 4, 2155], ['La La Land', 2016, 'Damien Chazelle', 'Musical', 128, 6, 2150]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Anno` + `Genere` + `Oscar vinti` ASC LIMIT 5,0,,0.0,0.273,0.333,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-ADVANCED,"Compute the sum of the columns Anno, Genere, Oscar vinti for each row in `dataset_film_famosi`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Il Signore degli Anelli: Il ritorno del re', 2003, 'Peter Jackson', 'Fantasy', 201, 11, 2315], ['Titanic', 1997, 'James Cameron', 'Romantico', 195, 11, 2203], ['The English Patient', 1996, 'Anthony Minghella', 'Romantico', 162, 9, 2167], ['The Godfather Part II', 1974, 'Francis Ford Coppola', 'Drammatico', 202, 6, 2082], ['Il Padrino', 1972, 'Francis Ford Coppola', 'Drammatico', 175, 3, 2050]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Anno` + `Genere` + `Oscar vinti` DESC LIMIT 5,0,,0.0,0.097,0.107,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-ADVANCED,"Compute the sum of the columns Titolo, Oscar vinti for each row in `dataset_film_famosi`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Casablanca', 1942, 'Michael Curtiz', 'Romantico', 102, 3, 3], ['12 Years a Slave', 2013, 'Steve McQueen', 'Storico', 134, 3, 3], ['Argo', 2012, 'Ben Affleck', 'Thriller', 120, 3, 3], ['Il Padrino', 1972, 'Francis Ford Coppola', 'Drammatico', 175, 3, 3], ['Parasite', 2019, 'Bong Joon-ho', 'Thriller', 132, 4, 4]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Titolo` + `Oscar vinti` ASC LIMIT 5,0,,0.0,0.654,0.607,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-ADVANCED,"Compute the sum of the columns Titolo, Oscar vinti for each row in `dataset_film_famosi`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Titanic', 1997, 'James Cameron', 'Romantico', 195, 11, 2021], ['Il Signore degli Anelli: Il ritorno del re', 2003, 'Peter Jackson', 'Fantasy', 201, 11, 2014], ['The English Patient', 1996, 'Anthony Minghella', 'Romantico', 162, 9, 2009], ['Il Padrino', 1972, 'Francis Ford Coppola', 'Drammatico', 175, 3, 1975], [""Schindler's List"", 1993, 'Steven Spielberg', 'Storico', 195, 7, 1972]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Titolo` + `Oscar vinti` DESC LIMIT 5,0,,0.0,0.613,0.679,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-ADVANCED,"Compute the sum of the columns Titolo, Anno, Durata for each row in `dataset_film_famosi`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Casablanca', 1942, 'Michael Curtiz', 'Romantico', 102, 3, 1947], ['The Artist', 2011, 'Michel Hazanavicius', 'Commedia Drammatica', 100, 5, 2116], ['The Shape of Water', 2017, 'Guillermo del Toro', 'Fantasy', 123, 4, 2140], ['Parasite', 2019, 'Bong Joon-ho', 'Thriller', 132, 4, 2151], ['12 Years a Slave', 2013, 'Steve McQueen', 'Storico', 134, 3, 2150]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Titolo` + `Anno` + `Durata` ASC LIMIT 5,0,,0.0,0.394,0.464,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-ADVANCED,"Compute the sum of the columns Titolo, Anno, Durata for each row in `dataset_film_famosi`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Il Signore degli Anelli: Il ritorno del re', 2003, 'Peter Jackson', 'Fantasy', 201, 11, 2015], ['The Godfather Part II', 1974, 'Francis Ford Coppola', 'Drammatico', 202, 6, 1978], ['Il Padrino', 1972, 'Francis Ford Coppola', 'Drammatico', 175, 3, 1950], ['Titanic', 1997, 'James Cameron', 'Romantico', 195, 11, 1932], [""Schindler's List"", 1993, 'Steven Spielberg', 'Storico', 195, 7, 1921]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Titolo` + `Anno` + `Durata` DESC LIMIT 5,1,,0.0,0.742,0.852,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-ADVANCED,"Compute the sum of the columns Anno, Oscar vinti for each row in `dataset_film_famosi`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Casablanca', 1942, 'Michael Curtiz', 'Romantico', 102, 3, 1945], ['Il Padrino', 1972, 'Francis Ford Coppola', 'Drammatico', 175, 3, 1975], ['The Silence of the Lambs', 1991, 'Jonathan Demme', 'Thriller', 118, 5, 1996], ['The Godfather Part II', 1974, 'Francis Ford Coppola', 'Drammatico', 202, 6, 1980], ['12 Years a Slave', 2013, 'Steve McQueen', 'Storico', 134, 3, 2016]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Anno` + `Oscar vinti` ASC LIMIT 5,0,,0.0,0.677,0.778,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-ADVANCED,"Compute the sum of the columns Anno, Oscar vinti for each row in `dataset_film_famosi`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Il Signore degli Anelli: Il ritorno del re', 2003, 'Peter Jackson', 'Fantasy', 201, 11, 2014], ['Titanic', 1997, 'James Cameron', 'Romantico', 195, 11, 2008], ['The English Patient', 1996, 'Anthony Minghella', 'Romantico', 162, 9, 2005], ['The Godfather Part II', 1974, 'Francis Ford Coppola', 'Drammatico', 202, 6, 1980], ['Il Padrino', 1972, 'Francis Ford Coppola', 'Drammatico', 175, 3, 1975]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Anno` + `Oscar vinti` DESC LIMIT 5,0,,0.0,0.161,0.179,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-PROJECT,Select only the column `Anno` from `dataset_film_famosi`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1942], [1972], [1974], [1991], [1993]]",SELECT `Anno` FROM `dataset_film_famosi` ORDER BY `Anno` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-PROJECT,Select only the column `Anno` from `dataset_film_famosi`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[2019], [2017], [2016], [2014], [2013]]",SELECT `Anno` FROM `dataset_film_famosi` ORDER BY `Anno` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-PROJECT,Select only the column `Durata` from `dataset_film_famosi`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[100], [102], [113], [118], [119]]",SELECT `Durata` FROM `dataset_film_famosi` ORDER BY `Durata` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-PROJECT,Select only the column `Durata` from `dataset_film_famosi`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[202], [201], [195], [195], [175]]",SELECT `Durata` FROM `dataset_film_famosi` ORDER BY `Durata` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-PROJECT,Select only the column `Titolo` from `dataset_film_famosi`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['12 Years a Slave'], ['American Beauty'], ['Argo'], ['Birdman'], ['Casablanca']]",SELECT `Titolo` FROM `dataset_film_famosi` ORDER BY `Titolo` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-PROJECT,Select only the column `Titolo` from `dataset_film_famosi`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Titanic'], ['The Silence of the Lambs'], ['The Shape of Water'], ['The Godfather Part II'], ['The English Patient']]",SELECT `Titolo` FROM `dataset_film_famosi` ORDER BY `Titolo` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-PROJECT,Select only the column `Oscar vinti` from `dataset_film_famosi`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1], [3], [3], [3], [4]]",SELECT `Oscar vinti` FROM `dataset_film_famosi` ORDER BY `Oscar vinti` ASC LIMIT 5,0,,0.0,0.667,1.0,0.0,1.0,0.5,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-PROJECT,Select only the column `Oscar vinti` from `dataset_film_famosi`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[11], [11], [9], [8], [7]]",SELECT `Oscar vinti` FROM `dataset_film_famosi` ORDER BY `Oscar vinti` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-PROJECT,Select only the column `Genere` from `dataset_film_famosi`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Commedia Drammatica'], ['Commedia Drammatica'], ['Crime'], ['Crime'], ['Drammatico']]",SELECT `Genere` FROM `dataset_film_famosi` ORDER BY `Genere` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-PROJECT,Select only the column `Genere` from `dataset_film_famosi`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Thriller'], ['Thriller'], ['Storico'], ['Sci-Fi'], ['Romantico']]",SELECT `Genere` FROM `dataset_film_famosi` ORDER BY `Genere` DESC LIMIT 5,0,,0.0,0.5,1.0,0.0,1.0,0.5,1.0
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-SINGLE,"List the top 5 rows from the table `monumenti_reali`, sorted by the column `anno_costruzione` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Piramide di Cheope', 'Egitto', 138.8, -2560.0, 'pietra calcarea'], ['Grande Muraglia', 'Cina', 7.8, -221.0, 'pietra'], ['Acropoli di Atene', 'Grecia', 156.0, -447.0, 'marmo'], ['Petra', 'Giordania', 40.0, -300.0, 'arenaria'], ['Stonehenge', 'Regno Unito', 4.0, -2500.0, 'sarsen']]",SELECT * FROM `monumenti_reali` ORDER BY `anno_costruzione` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,0.55
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-SINGLE,"List the top 5 rows from the table `monumenti_reali`, sorted by the column `anno_costruzione` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Burj Khalifa', 'Emirati Arabi Uniti', 828.0, 2010.0, 'acciaio'], ['Opera House di Sydney', 'Australia', 65.0, 1973.0, 'cemento'], ['CN Tower', 'Canada', 553.3, 1976.0, 'cemento armato'], ['Atomium', 'Belgio', 102.0, 1958.0, 'acciaio'], ['Monte Rushmore', 'USA', 18.0, 1941.0, 'granito']]",SELECT * FROM `monumenti_reali` ORDER BY `anno_costruzione` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,0.95
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-SINGLE,"List the top 5 rows from the table `monumenti_reali`, sorted by the column `altezza_m` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Stonehenge', 'Regno Unito', 4.0, -2500.0, 'sarsen'], ['Moai (Isola di Pasqua)', 'Cile', 4.0, 1250.0, 'tufo'], ['Leaning Tower of Torun', 'Polonia', 15.0, 1274.0, 'mattone'], ['Monte Rushmore', 'USA', 18.0, 1941.0, 'granito'], ['Petra', 'Giordania', 40.0, -300.0, 'arenaria']]",SELECT * FROM `monumenti_reali` ORDER BY `altezza_m` ASC LIMIT 5,0,,0.0,0.792,0.792,0.0,1.0,0.8,1.0
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-SINGLE,"List the top 5 rows from the table `monumenti_reali`, sorted by the column `altezza_m` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Burj Khalifa', 'Emirati Arabi Uniti', 828.0, 2010.0, 'acciaio'], ['Tour Eiffel', 'Francia', 330.0, 1889.0, 'ferro'], ['CN Tower', 'Canada', 553.3, 1976.0, 'cemento armato'], ['Sagrada Familia', 'Spagna', 172.5, 1882.0, 'pietra'], ['Machu Picchu', 'Perù', 2430.0, 1450.0, 'pietra']]",SELECT * FROM `monumenti_reali` ORDER BY `altezza_m` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,0.45
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-SINGLE,"List the top 5 rows from the table `monumenti_reali`, sorted by the column `paese` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Colosseo', 'Italia', 48.0, 80.0, 'travertino'], ['Torre di Pisa', 'Italia', 56.7, 1173.0, 'marmo'], ['Campanile di Giotto', 'Italia', 84.7, 1359.0, 'marmo'], ['Duomo di Milano', 'Italia', 108.5, 1386.0, 'marmo'], ['Taj Mahal', 'India', 73.0, 1643.0, 'marmo']]",SELECT * FROM `monumenti_reali` ORDER BY `paese` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-SINGLE,"List the top 5 rows from the table `monumenti_reali`, sorted by the column `paese` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Burj Khalifa', 'Emirati Arabi Uniti', 828.0, 2010.0, 'acciaio'], ['CN Tower', 'Canada', 553.3, 1976.0, 'cemento armato'], ['Campanile di Giotto', 'Italia', 84.7, 1359.0, 'marmo'], ['Colosseo', 'Italia', 48.0, 80.0, 'travertino'], ['Torre di Pisa', 'Italia', 56.7, 1173.0, 'marmo']]",SELECT * FROM `monumenti_reali` ORDER BY `paese` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-SINGLE,"List the top 5 rows from the table `monumenti_reali`, sorted by the column `nome` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Acropoli di Atene', 'Grecia', 156.0, -447.0, 'marmo'], ['Alhambra', 'Spagna', 26.0, 1333.0, 'pietra'], ['Angkor Wat', 'Cambogia', 65.0, 1150.0, 'arenaria'], ['Atomium', 'Belgio', 102.0, 1958.0, 'acciaio'], ['Big Ben', 'Regno Unito', 96.0, 1859.0, 'pietra']]",SELECT * FROM `monumenti_reali` ORDER BY `nome` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-SINGLE,"List the top 5 rows from the table `monumenti_reali`, sorted by the column `nome` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Tour Eiffel', 'Francia', 330.0, 1889.0, 'ferro'], ['Torre di Pisa', 'Italia', 56.7, 1173.0, 'marmo'], ['Stonehenge', 'Regno Unito', 4.0, -2500.0, 'sarsen'], ['Statua della Libertà', 'USA', 93.0, 1886.0, 'rame'], ['Sagrada Familia', 'Spagna', 172.5, 1882.0, 'pietra']]",SELECT * FROM `monumenti_reali` ORDER BY `nome` DESC LIMIT 5,0,,0.0,0.8,0.833,0.0,1.0,0.8,1.0
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-ADVANCED,"Compute the sum of the columns paese, anno_costruzione for each row in `monumenti_reali`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Grande Muraglia', 'Cina', 7.8, -221.0, 'pietra', 'Cina-221.0'], ['Petra', 'Giordania', 40.0, -300.0, 'arenaria', 'Giordania-300.0'], ['Acropoli di Atene', 'Grecia', 156.0, -447.0, 'marmo', 'Grecia-447.0'], ['Stonehenge', 'Regno Unito', 4.0, -2500.0, 'sarsen', 'Regno Unito-2500.0'], ['Piramide di Cheope', 'Egitto', 138.8, -2560.0, 'pietra calcarea', 'Egitto-2560.0']]",SELECT * FROM `monumenti_reali` ORDER BY `paese` + `anno_costruzione` ASC LIMIT 5,0,,0.0,0.833,1.0,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-ADVANCED,"Compute the sum of the columns paese, anno_costruzione for each row in `monumenti_reali`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Burj Khalifa', 'Emirati Arabi Uniti', 828.0, 2010.0, 'acciaio', 'Emirati Arabi Uniti2010.0'], ['CN Tower', 'Canada', 553.3, 1976.0, 'cemento armato', 'Canada1976.0'], ['Opera House di Sydney', 'Australia', 65.0, 1973.0, 'cemento', 'Australia1973.0'], ['Atomium', 'Belgio', 102.0, 1958.0, 'acciaio', 'Belgio1958.0'], ['Monte Rushmore', 'USA', 18.0, 1941.0, 'granito', 'USA1941.0']]",SELECT * FROM `monumenti_reali` ORDER BY `paese` + `anno_costruzione` DESC LIMIT 5,0,,0.0,0.828,1.0,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-ADVANCED,"Compute the sum of the columns altezza_m, anno_costruzione for each row in `monumenti_reali`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Grande Muraglia', 'Cina', 7.8, -221.0, 'pietra', -213.2], ['Petra', 'Giordania', 40.0, -300.0, 'arenaria', -260.0], ['Acropoli di Atene', 'Grecia', 156.0, -447.0, 'marmo', -291.0], ['Stonehenge', 'Regno Unito', 4.0, -2500.0, 'sarsen', -2496.0], ['Piramide di Cheope', 'Egitto', 138.8, -2560.0, 'pietra calcarea', -2421.2]]",SELECT * FROM `monumenti_reali` ORDER BY `altezza_m` + `anno_costruzione` ASC LIMIT 5,0,,0.0,0.833,1.0,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-ADVANCED,"Compute the sum of the columns altezza_m, anno_costruzione for each row in `monumenti_reali`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Burj Khalifa', 'Emirati Arabi Uniti', 828.0, 2010.0, 'acciaio', 1838.0], ['Machu Picchu', 'Perú', 2430.0, 1450.0, 'pietra', 3880.0], ['Tour Eiffel', 'Francia', 330.0, 1889.0, 'ferro', 2219.0], ['Sagrada Familia', 'Spagna', 172.5, 1882.0, 'pietra', 2054.5], ['CN Tower', 'Canada', 553.3, 1976.0, 'cemento armato', 1529.3]]",SELECT * FROM `monumenti_reali` ORDER BY `altezza_m` + `anno_costruzione` DESC LIMIT 5,0,,0.0,0.655,0.792,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-ADVANCED,"Compute the sum of the columns nome, altezza_m, anno_costruzione for each row in `monumenti_reali`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Stonehenge', 'Regno Unito', 4.0, -2500.0, 'sarsen'], ['Moai (Isola di Pasqua)', 'Cile', 4.0, 1250.0, 'tufo'], ['Petra', 'Giordania', 40.0, -300.0, 'arenaria'], ['Leaning Tower of Torun', 'Polonia', 15.0, 1274.0, 'mattone'], ['Monte Rushmore', 'USA', 18.0, 1941.0, 'granito']]",SELECT * FROM `monumenti_reali` ORDER BY `nome` + `altezza_m` + `anno_costruzione` ASC LIMIT 5,0,,0.0,0.417,0.4,0.0,1.0,0.4,1.0
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-ADVANCED,"Compute the sum of the columns nome, altezza_m, anno_costruzione for each row in `monumenti_reali`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Burj Khalifa', 'Emirati Arabi Uniti', 828.0, 2010.0, 'acciaio', 1846.0], ['Machu Picchu', 'Perú', 2430.0, 1450.0, 'pietra', 3880.0], ['Tour Eiffel', 'Francia', 330.0, 1889.0, 'ferro', 2219.0], ['Sagrada Familia', 'Spagna', 172.5, 1882.0, 'pietra', 2054.5], ['CN Tower', 'Canada', 553.3, 1976.0, 'cemento armato', 2129.3]]",SELECT * FROM `monumenti_reali` ORDER BY `nome` + `altezza_m` + `anno_costruzione` DESC LIMIT 5,0,,0.0,0.655,0.792,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-ADVANCED,"Compute the sum of the columns paese, materiale for each row in `monumenti_reali`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Grande Muraglia', 'Cina', 7.8, -221.0, 'pietra', 'Cinapietra'], ['Petra', 'Giordania', 40.0, -300.0, 'arenaria', 'Giordaniaarenaria'], ['Acropoli di Atene', 'Grecia', 156.0, -447.0, 'marmo', 'Greciamarmo'], ['Stonehenge', 'Regno Unito', 4.0, -2500.0, 'sarsen', 'Regno Unitosarsen'], ['Moai (Isola di Pasqua)', 'Cile', 4.0, 1250.0, 'tufo', 'Ciletufo']]",SELECT * FROM `monumenti_reali` ORDER BY `paese` + `materiale` ASC LIMIT 5,0,,0.0,0.034,0.042,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-ADVANCED,"Compute the sum of the columns paese, materiale for each row in `monumenti_reali`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Sagrada Familia', 'Spagna', 172.5, 1882.0, 'pietra', 173.5], ['Torre di Pisa', 'Italia', 56.7, 1173.0, 'marmo', 116.7], ['Colosseo', 'Italia', 48.0, 80.0, 'travertino', 108.0], ['Duomo di Milano', 'Italia', 108.5, 1386.0, 'marmo', 217.5], ['Campanile di Giotto', 'Italia', 84.7, 1359.0, 'marmo', 167.7]]",SELECT * FROM `monumenti_reali` ORDER BY `paese` + `materiale` DESC LIMIT 5,0,,0.0,0.36,0.375,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-ADVANCED,"Compute the sum of the columns nome, anno_costruzione for each row in `monumenti_reali`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Grande Muraglia', 'Cina', 7.8, -221.0, 'pietra', -213.2], ['Petra', 'Giordania', 40.0, -300.0, 'arenaria', -260.0], ['Acropoli di Atene', 'Grecia', 156.0, -447.0, 'marmo', -291.0], ['Stonehenge', 'Regno Unito', 4.0, -2500.0, 'sarsen', -2496.0], ['Piramide di Cheope', 'Egitto', 138.8, -2560.0, 'pietra calcarea', -2421.2]]",SELECT * FROM `monumenti_reali` ORDER BY `nome` + `anno_costruzione` ASC LIMIT 5,0,,0.0,0.833,1.0,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-ADVANCED,"Compute the sum of the columns nome, anno_costruzione for each row in `monumenti_reali`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Burj Khalifa', 'Emirati Arabi Uniti', 828.0, 2010.0, 'acciaio', 2010.0], ['Opera House di Sydney', 'Australia', 65.0, 1973.0, 'cemento', 1973.0], ['CN Tower', 'Canada', 553.3, 1976.0, 'cemento armato', 1976.0], ['Atomium', 'Belgio', 102.0, 1958.0, 'acciaio', 1958.0], ['Monte Rushmore', 'USA', 18.0, 1941.0, 'granito', 1941.0]]",SELECT * FROM `monumenti_reali` ORDER BY `nome` + `anno_costruzione` DESC LIMIT 5,0,,0.0,1.0,1.0,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-PROJECT,Select only the column `nome` from `monumenti_reali`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Acropoli di Atene'], ['Alhambra'], ['Angkor Wat'], ['Atomium'], ['Big Ben']]",SELECT `nome` FROM `monumenti_reali` ORDER BY `nome` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-PROJECT,Select only the column `nome` from `monumenti_reali`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Tour Eiffel'], ['Torre di Pisa'], ['Statua della Libertà'], ['Stonehenge'], ['Sagrada Familia']]",SELECT `nome` FROM `monumenti_reali` ORDER BY `nome` DESC LIMIT 5,0,,0.0,0.8,0.8,0.0,1.0,0.8,0.9
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-PROJECT,Select only the column `paese` from `monumenti_reali`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Australia'], ['Brasile'], ['Cambogia'], ['Canada'], ['Cile']]",SELECT `paese` FROM `monumenti_reali` ORDER BY `paese` ASC LIMIT 5,0,,0.0,0.8,0.8,0.0,1.0,0.8,1.0
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-PROJECT,Select only the column `paese` from `monumenti_reali`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['USA'], ['USA'], ['Spagna'], ['Regno Unito'], ['Regno Unito']]",SELECT `paese` FROM `monumenti_reali` ORDER BY `paese` DESC LIMIT 5,0,,0.0,0.667,1.0,0.0,1.0,0.0,1.0
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-PROJECT,Select only the column `altezza_m` from `monumenti_reali`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[4.0], [4.0], [7.8], [15.0], [18.0]]",SELECT `altezza_m` FROM `monumenti_reali` ORDER BY `altezza_m` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-PROJECT,Select only the column `altezza_m` from `monumenti_reali`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[828.0], [553.3], [330.0], [2430.0], [172.5]]",SELECT `altezza_m` FROM `monumenti_reali` ORDER BY `altezza_m` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,0.7
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-PROJECT,Select only the column `anno_costruzione` from `monumenti_reali`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[-2560.0], [-221.0], [-300.0], [-447.0], [-2500.0]]",SELECT `anno_costruzione` FROM `monumenti_reali` ORDER BY `anno_costruzione` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,0.5
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-PROJECT,Select only the column `anno_costruzione` from `monumenti_reali`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[2010.0], [1976.0], [1973.0], [1941.0], [1931.0]]",SELECT `anno_costruzione` FROM `monumenti_reali` ORDER BY `anno_costruzione` DESC LIMIT 5,0,,0.0,0.8,0.8,0.0,1.0,0.8,1.0
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-PROJECT,Select only the column `materiale` from `monumenti_reali`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['acciaio'], ['acciaio'], ['arenaria'], ['arenaria'], ['cemento']]",SELECT `materiale` FROM `monumenti_reali` ORDER BY `materiale` ASC LIMIT 5,0,,0.0,0.667,1.0,0.0,1.0,0.5,1.0
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-PROJECT,Select only the column `materiale` from `monumenti_reali`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['tufo'], ['travertino'], ['sarsen'], ['rame'], ['pietra calcarea']]",SELECT `materiale` FROM `monumenti_reali` ORDER BY `materiale` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0

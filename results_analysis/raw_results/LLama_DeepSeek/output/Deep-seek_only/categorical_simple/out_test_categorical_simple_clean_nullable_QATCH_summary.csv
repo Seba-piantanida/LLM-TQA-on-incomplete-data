@@ -1,0 +1,5 @@
+table_name,model,avg_valid_efficiency_score,avg_cell_precision,avg_cell_recall,avg_execution_accuracy,avg_tuple_cardinality,avg_tuple_constraint,avg_tuple_order
+dataset_animali,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,0.0,0.143,0.1305,0.0,1.0,0.0,0.5
+dataset_auto,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,0.0,0.42875,0.546125,0.125,1.0,0.1875,0.625
+dataset_film_famosi,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,0.0,0.18277777777777776,0.178,0.0,0.7777777777777778,0.0,0.3888888888888889
+monumenti_reali,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,0.0,0.424,0.4131428571428572,0.14285714285714285,1.0,0.14285714285714285,0.5714285714285714

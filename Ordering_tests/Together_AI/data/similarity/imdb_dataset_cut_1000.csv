@@ -1,0 +1,101 @@
+IMDB_id,title,year,genre,directors,writers,main_cast,duration_min,AVG_score,number_of_votes
+tt0477071,Premonition,2007,Drama|Fantasy|Mystery,Mennan Yapo,Bill Kelly,Sandra Bullock|Julian McMahon|Amber Valletta,96,5.9,84114
+tt0448157,Hancock,2008,Action|Comedy|Drama,Peter Berg,Vince Gilligan,Will Smith|Charlize Theron|Jason Bateman|Eddie Marsan,92,6.4,531905
+tt0993846,The Wolf of Wall Street,2013,Biography|Comedy|Crime,Martin Scorsese,Jordan Belfort,Leonardo DiCaprio|Matthew McConaughey|Kyle Chandler,180,8.2,1722007
+tt0451279,Wonder Woman,2017,Action|Adventure|Fantasy,Patty Jenkins,Allan Heinberg|Zack Snyder|Jason Fuchs|William Moulton Marston,Robin Wright|Lucy Davis|Connie Nielsen,141,7.3,726715
+tt0285861,Owning Mahowny,2003,Crime|Drama|Thriller,Richard Kwietniowski,Maurice Chauvet,Philip Seymour Hoffman|Minnie Driver|John Hurt|Maury Chaykin|Ian Tracey,104,7.0,15741
+tt1013743,Knight and Day,2010,Action|Adventure|Comedy,James Mangold,Patrick O'Neill,Tom Cruise|Cameron Diaz|Peter Sarsgaard|Jordi Mollà|Viola Davis,109,6.3,220944
+tt0114887,A Walk in the Clouds,1995,Drama|Romance,Alfonso Arau,Robert Mark Kamen|Mark Miller|Harvey Weitzman|Piero Tellini|Cesare Zavattini|Vittorio de Benedetti,Keanu Reeves|Aitana Sánchez-Gijón|Anthony Quinn|Giancarlo Giannini|Angélica Aragón,102,6.7,38374
+tt0116313,The First Wives Club,1996,Comedy,Hugh Wilson,Olivia Goldsmith|Robert Harling,Goldie Hawn|Bette Midler|Diane Keaton|Maggie Smith|Sarah Jessica Parker,103,6.5,57323
+tt0116722,Jude,1996,Drama|Romance,Michael Winterbottom,Hossein Amini|Thomas Hardy,Christopher Eccleston|Kate Winslet|Liam Cunningham|Rachel Griffiths|June Whitfield,123,6.9,11580
+tt0113419,The Indian in the Cupboard,1995,Drama|Family|Fantasy,Frank Oz,Lynne Reid Banks|Melissa Mathison,Hal Scardino|Litefoot|Lindsay Crouse|Richard Jenkins|Rishi Bhat,96,6.0,32502
+tt0119668,Midnight in the Garden of Good and Evil,1997,Crime|Drama|Mystery,Clint Eastwood,John Berendt|John Lee Hancock,John Cusack|Kevin Spacey|Jack Thompson|Irma P. Hall|Jude Law,155,6.6,43049
+tt0456144,Lage Raho Munna Bhai,2006,Comedy|Drama|Romance,Rajkumar Hirani,Vidhu Vinod Chopra|Rajkumar Hirani|Abhijat Joshi,Sanjay Dutt|Arshad Warsi,144,8.0,52540
+tt1176740,Away We Go,2009,Comedy|Drama|Romance,Sam Mendes,,Maya Rudolph|Allison Janney|Carmen Ejogo|Catherine O'Hara,98,7.0,56267
+tt0105415,Singles,1992,Comedy|Drama|Music,Cameron Crowe,Cameron Crowe,Bridget Fonda|Campbell Scott|Kyra Sedgwick|Sheila Kelley|Jim True-Frost,99,6.7,34565
+tt12037194,Furiosa: A Mad Max Saga,2024,Action|Adventure|Sci-Fi,George Miller,George Miller|Nick Lathouris,Tom Burke|George Shevtsov,148,7.5,303019
+tt0118015,Family Resemblances,1996,Comedy|Drama,Cédric Klapisch,Agnès Jaoui|Jean-Pierre Bacri|Cédric Klapisch,Jean-Pierre Bacri|Jean-Pierre Darroussin|Catherine Frot|Agnès Jaoui|Claire Maurier,110,7.4,5759
+tt1067106,A Christmas Carol,2009,Adventure|Animation|Comedy,Robert Zemeckis,Charles Dickens|Robert Zemeckis,Jim Carrey|Jim Carrey|Jim Carrey|Gary Oldman|Gary Oldman,96,6.8,136831
+tt0107659,Loaded Weapon 1,1993,Action|Comedy|Crime,Gene Quintano,Don Holley|Tori Tellem|Gene Quintano,Emilio Estevez|Samuel L. Jackson|Jon Lovitz|Tim Curry|Kathy Ireland,84,6.2,53291
+tt1291580,Behind the Candelabra,2013,Biography|Drama|Music,Steven Soderbergh,Richard LaGravenese,Michael Douglas|Matt Damon|Scott Bakula|Eric Zuckerman|Eddie Jemison,118,7.0,46759
+tt0177507,Gigantic,1999,Comedy|Drama,Sebastian Schipper,Sebastian Schipper,Frank Giering|Florian Lukas|Antoine Monot|Julia Hummer|Jochen Nickel,80,7.6,5021
+tt1149362,The White Ribbon,2009,Drama|Mystery|Thriller,Michael Haneke,Michael Haneke,Ernst Jacobi|Ulrich Tukur|Ursina Lardi,144,7.8,80412
+tt1125254,Dragon Ball Z: Cooler's Revenge,1991,Action|Animation|Sci-Fi,Mitsuo Hashimoto,Akira Toriyama|Takao Koyama,Masako Nozawa|Masako Nozawa|Masako Nozawa|Toshio Furukawa|Mayumi Tanaka,47,7.0,9159
+tt1034389,The Eagle,2011,Action|Adventure|Drama,Kevin Macdonald,Jeremy Brock|Rosemary Sutcliff,Jamie Bell|Donald Sutherland|István Göz,114,6.2,76556
+tt0910936,Pineapple Express,2008,Action|Comedy|Crime,David Gordon Green,Seth Rogen|Judd Apatow,Seth Rogen|James Franco|Gary Cole|Kevin Corrigan,111,6.9,368280
+tt0362227,The Terminal,2004,Comedy|Drama|Romance,Steven Spielberg,Andrew Niccol|Sacha Gervasi|Jeff Nathanson,Tom Hanks|Catherine Zeta-Jones|Chi McBride|Stanley Tucci|Diego Luna,128,7.4,522141
+tt0379225,The Corporation,2003,Documentary|History,Mark Achbar|Jennifer Abbott,Harold Crooks|Mark Achbar|Thomas Shandel,Christopher Gora|Richard Kopycinski,145,8.0,22160
+tt0107034,The Good Son,1993,Drama|Thriller,Joseph Ruben,Ian McEwan,Macaulay Culkin|Elijah Wood|Wendy Crewson|David Morse|Daniel Hugh Kelly,87,6.4,47978
+tt0186253,Jesus' Son,1999,Drama,Alison Maclean,Denis Johnson|Elizabeth Cuthrell|David Urrutia|Oren Moverman,Billy Crudup|Robert Michael Kelly|Torben Brooks|Dierdre Lewis|Jimmy Moffit,107,6.9,7692
+tt0395584,The Devil's Rejects,2005,Crime|Drama|Horror,Rob Zombie,Rob Zombie,Sid Haig|Sheri Moon Zombie|Bill Moseley|William Forsythe|Ken Foree,107,6.7,109509
+tt0104254,FernGully: The Last Rainforest,1992,Adventure|Animation|Family,Bill Kroyer,Jim Cox|Diana Young,Samantha Mathis|Christian Slater|Robin Williams|Tim Curry|Jonathan Ward,76,6.6,36319
+tt0100046,The Long Walk Home,1990,Drama|History,Richard Pearce,John Cork,Sissy Spacek|Whoopi Goldberg|Dwight Schultz|Ving Rhames|Dylan Baker,97,7.3,5398
+tt0162650,Shaft,2000,Action|Crime|Thriller,John Singleton,Ernest Tidyman|John Singleton|Shane Salerno|Richard Price,Samuel L. Jackson|Vanessa Williams|Christian Bale|Jeffrey Wright|Busta Rhymes,99,6.0,84022
+tt0351817,The Twilight Samurai,2002,Drama|Romance,Yôji Yamada,Yôji Yamada|Yoshitaka Asama,Hiroyuki Sanada|Rie Miyazawa|Nenji Kobayashi|Ren Ôsugi|Mitsuru Fukikoshi,129,8.1,26621
+tt0762073,Thirst,2009,Drama|Fantasy|Horror,Park Chan-wook,Émile Zola|Park Chan-wook,Song Kang-ho,134,7.1,53683
+tt1077258,Planet Terror,2007,Action|Comedy|Horror,Robert Rodriguez,Robert Rodriguez,Rose McGowan|Freddy Rodríguez|Josh Brolin|Marley Shelton|Jeff Fahey,105,7.0,230291
+tt0331370,Whisky,2004,Comedy|Drama,Juan Pablo Rebella|Pablo Stoll,Pablo Stoll|Juan Pablo Rebella|Gonzalo Delgado,,94,7.1,7266
+tt1028532,Hachi: A Dog's Tale,2009,Biography|Drama|Family,Lasse Hallström,Kaneto Shindô,Richard Gere|Joan Allen|Cary-Hiroyuki Tagawa|Jason Alexander,93,8.1,333723
+tt0115641,Beavis and Butt-Head Do America,1996,Adventure|Animation|Comedy,Mike Judge|Mike de Seve|Yvette Kaplan,Mike Judge|Joe Stillman,Mike Judge|Mike Judge|Mike Judge|Bruce Willis|Demi Moore,81,6.8,62234
+tt0181536,Finding Forrester,2000,Drama|Sport,Gus Van Sant,Mike Rich,Sean Connery|Rob Brown|F. Murray Abraham|Anna Paquin|Busta Rhymes,136,7.3,92230
+tt0107166,Hum Hain Rahi Pyar Ke,1993,Comedy|Drama|Romance,Mahesh Bhatt,Robin Bhatt|Aamir Khan|Sujit Sen,Aamir Khan|Juhi Chawla|Sharokh Bharucha|Kunal Kemmu|Baby Ashrafa,163,7.3,6613
+tt0275847,Lilo & Stitch,2002,Adventure|Animation|Comedy,Dean DeBlois|Chris Sanders,Chris Sanders|Dean DeBlois,Daveigh Chase|Chris Sanders|Tia Carrere|David Ogden Stiers|Kevin McDonald,85,7.4,237488
+tt0144214,The General's Daughter,1999,Crime|Drama|Mystery,Simon West,Nelson DeMille|Christopher Bertolini|William Goldman,John Travolta|Madeleine Stowe|James Cromwell|Timothy Hutton|Leslie Stefanson,116,6.4,67065
+tt0132347,Mystery Men,1999,Action|Comedy|Fantasy,Kinka Usher,Neil Cuthbert|Bob Burden,Ben Stiller|Janeane Garofalo|William H. Macy|Hank Azaria|Kel Mitchell,121,6.1,73029
+tt0189584,The Big Kahuna,1999,Comedy|Drama,John Swanbeck,Roger Rueff,Kevin Spacey|Danny DeVito|Peter Facinelli|Paul Dawson,90,6.5,15344
+tt0401729,John Carter,2012,Action|Adventure|Sci-Fi,Andrew Stanton,Andrew Stanton|Mark Andrews|Michael Chabon|Edgar Rice Burroughs,Willem Dafoe|Samantha Morton|Thomas Haden Church,132,6.6,295413
+tt0105690,Under Siege,1992,Action|Thriller,Andrew Davis,J.F. Lawton,Steven Seagal|Gary Busey|Tommy Lee Jones|Erika Eleniak|Damian Chapa,103,6.5,100423
+tt0118583,Alien: Resurrection,1997,Action|Horror|Sci-Fi,Jean-Pierre Jeunet,Dan O'Bannon|Ronald Shusett|Joss Whedon,Sigourney Weaver|Winona Ryder|Dominique Pinon|Ron Perlman|Gary Dourdan,109,6.2,286473
+tt0173840,Final Fantasy: The Spirits Within,2001,Action|Adventure|Animation,Hironobu Sakaguchi,Hironobu Sakaguchi|Al Reinert|Jeff Vintar|Jack Fletcher,Alec Baldwin|Steve Buscemi|Ming-Na Wen|Ving Rhames|Peri Gilpin,106,6.4,85396
+tt0421206,Gridiron Gang,2006,Biography|Crime|Drama,Phil Joanou,Jeff Maguire|Jac Flanders,Dwayne Johnson|Xzibit|L. Scott Caldwell|Leon Rippy|Kevin Dunn,125,7.1,83040
+tt12718300,"Confess, Fletch",2022,Comedy|Crime|Mystery,Greg Mottola,Gregory McDonald|Greg Mottola,Jon Hamm,98,6.4,26407
+tt0489664,Shattered,2007,Crime|Drama|Thriller,Mike Barker,,Pierce Brosnan|Maria Bello|Gerard Butler|Claudette Mink,95,6.6,34710
+tt0268690,13 Conversations About One Thing,2001,Drama,Jill Sprecher,Karen Sprecher|Jill Sprecher,Alan Arkin|John Turturro|Matthew McConaughey|Joseph Siravo,104,7.0,11772
+tt0361596,Fahrenheit 9/11,2004,Documentary|Drama|War,Michael Moore,Michael Moore,,122,7.5,134293
+tt0108174,So I Married an Axe Murderer,1993,Comedy|Romance,Thomas Schlamme,Robbie Fox,Mike Myers|Mike Myers|Nancy Travis|Anthony LaPaglia|Amanda Plummer,93,6.5,44871
+tt0112896,Dracula: Dead and Loving It,1995,Comedy|Fantasy|Horror,Mel Brooks,Mel Brooks|Rudy De Luca|Steve Haberman|Bram Stoker,Leslie Nielsen|Mel Brooks|Peter MacNicol|Steven Weber|Amy Yasbeck,88,5.9,47742
+tt0160797,Rules of Engagement,2000,Drama|Thriller|War,William Friedkin,Jim Webb|Stephen Gaghan,Tommy Lee Jones|Samuel L. Jackson|Guy Pearce|Ben Kingsley|Bruce Greenwood,128,6.4,52017
+tt0326449,Zona Zamfirova,2002,Comedy|Drama,Zdravko Sotra,Zdravko Sotra|Stevan Sremac,Vojin Cetkovic|Katarina Radivojevic|Dragan Nikolic|Milena Dravic|Radmila Zivkovic,104,7.3,5093
+tt0111693,When a Man Loves a Woman,1994,Drama|Romance,Luis Mandoki,Ron Bass|Al Franken,Meg Ryan|Andy Garcia|Ellen Burstyn|Tina Majorino|Mae Whitman,126,6.6,24552
+tt0938341,Tokyo Sonata,2008,Drama,Kiyoshi Kurosawa,Kiyoshi Kurosawa,Teruyuki Kagawa|Kyôko Koizumi,120,7.5,13406
+tt0109508,Crumb,1994,Biography|Comedy|Documentary,Terry Zwigoff,,,119,8.0,22668
+tt0239894,Paradise Lost 2: Revelations,2000,Crime|Documentary,Joe Berlinger|Bruce Sinofsky,,,130,7.5,10124
+tt1260502,Ghost in the Shell 2.0,2008,Action|Animation|Crime,Mamoru Oshii,Shirow Masamune|Kazunori Itô,Atsuko Tanaka|Akio Ôtsuka|Kôichi Yamadera|Tesshô Genda|Masato Yamanouchi,83,7.8,15807
+tt0109831,Four Weddings and a Funeral,1994,Comedy|Drama|Romance,Mike Newell,Richard Curtis,Hugh Grant|Andie MacDowell|James Fleet|Simon Callow|John Hannah,117,7.1,176499
+tt0974661,17 Again,2009,Comedy|Drama|Fantasy,Burr Steers,Jason Filardi,Matthew Perry|Leslie Mann|Thomas Lennon,102,6.4,228075
+tt0117737,Stealing Beauty,1996,Drama|Mystery|Romance,Bernardo Bertolucci,Bernardo Bertolucci|Susan Minot,Jeremy Irons|Liv Tyler|Carlo Cecchi|Sinéad Cusack|Joseph Fiennes,118,6.5,31905
+tt1084972,Wanted,2009,Action|Thriller,Prabhu Deva,Wajid Ali|Puri Jagannadh|Jalees Sherwani,Salman Khan|Prakash Raj|Vinod Khanna|Govind Namdeo,147,6.6,28206
+tt0104815,El Mariachi,1992,Action|Crime|Thriller,Robert Rodriguez,Robert Rodriguez,Carlos Gallardo|Consuelo Gómez|Jaime de Hoyos|Peter Marquardt|Reinol Martinez,81,6.8,73856
+tt0829297,Ten Inch Hero,2007,Comedy|Drama|Romance,David Mackay,,Elisabeth Harnois|Clea DuVall|Sean Patrick Flanery|Jensen Ackles,102,7.3,14143
+tt0101587,City Slickers,1991,Comedy|Western,Ron Underwood,Lowell Ganz|Babaloo Mandel,Billy Crystal|Jack Palance|Daniel Stern|Bruno Kirby|Patricia Wettig,113,6.8,66453
+tt1186370,Spread,2009,Comedy|Drama|Romance,David Mackenzie,Jason Hall|Paul Kolsby,Ashton Kutcher|Anne Heche|Ashley Johnson,97,5.8,42946
+tt0112572,The Brady Bunch Movie,1995,Comedy,Betty Thomas,Sherwood Schwartz|Laurice Elehwany|Rick Copp|Bonnie Turner|Terry Turner,Shelley Long|Gary Cole|Christine Taylor|Christopher Daniel Barnes|Jennifer Elise Cox,90,6.2,25603
+tt0283283,Millennium Mambo,2001,Drama|Romance,Hsiao-Hsien Hou,T'ien-wen Chu,Shu Qi|Jack Kao|Chun-hao Tuan|Jun Takeuchi,119,7.0,7923
+tt1031280,Splinter,2008,Crime|Horror|Sci-Fi,Toby Wilkins,Toby Wilkins,Shea Whigham|Paulo Costanzo,82,6.1,43160
+tt0140348,Mahanadi,1994,Crime|Drama,Santhana Bharathi,Kamal Haasan,Kamal Haasan|Sukanya|Cochin Hanifa,162,8.6,4945
+tt0243794,Pellet,2000,Drama,Achero Mañas,Achero Mañas|Verónica Fernández,Juan José Ballesta|Pablo Galán|Alberto Jiménez|Manuel Morón|Ana Wagener,88,7.3,7341
+tt0366996,The Saddest Music in the World,2003,Comedy|Musical,Guy Maddin,Kazuo Ishiguro|George Toles|Guy Maddin,Isabella Rossellini|Mark McKinney|Maria de Medeiros|David Fox|Ross McMillan,100,7.0,6500
+tt0350193,Take My Eyes,2003,Drama|Romance,Icíar Bollaín,Icíar Bollaín|Alicia Luna,Laia Marull|Luis Tosar|Candela Peña|Rosa Maria Sardà|Kiti Mánver,109,7.4,7770
+tt0278504,Insomnia,2002,Drama|Mystery|Thriller,Christopher Nolan,Hillary Seitz|Nikolaj Frobenius|Erik Skjoldbjærg,Al Pacino|Robin Williams|Hilary Swank|Martin Donovan,118,7.2,334253
+tt0263488,Jeepers Creepers,2001,Horror|Mystery,Victor Salva,Victor Salva,Gina Philips|Justin Long|Jonathan Breck|Patricia Belcher|Brandon Smith,90,6.2,153068
+tt0107472,"The Wonderful, Horrible Life of Leni Riefenstahl",1993,Biography|Documentary|History,Ray Müller,Ray Müller,,183,8.0,3137
+tt1121096,Seventh Son,2014,Action|Adventure|Fantasy,Sergei Bodrov,Charles Leavitt|Matt Greenberg,Julianne Moore|Jeff Bridges,102,5.5,82893
+tt0109045,"The Adventures of Priscilla, Queen of the Desert",1994,Comedy|Music,Stephan Elliott,Stephan Elliott,Hugo Weaving|Hugo Weaving|Guy Pearce|Guy Pearce|Terence Stamp,104,7.5,59941
+tt0395461,Bab'Aziz: The Prince That Contemplated His Soul,2005,Drama,Nacer Khemir,Tonino Guerra|Nacer Khemir,Golshifteh Farahani|Hossein Panahi,96,7.5,3948
+tt0250323,The Deep End,2001,Crime|Drama|Mystery,Scott McGehee|David Siegel,Elisabeth Sanxay Holding|Scott McGehee|David Siegel,Tilda Swinton|Goran Visnjic|Jonathan Tucker|Peter Donat|Josh Lucas,101,6.5,12421
+tt0103105,Toto the Hero,1991,Comedy|Drama|Fantasy,Jaco Van Dormael,Didier De Neck|Pascal Lonhay|Jaco Van Dormael|Laurette Vankeerberghen,Michel Bouquet|Michel Bouquet|Mireille Perrier|Mireille Perrier|Jo De Backer,91,7.4,6609
+tt0431021,The Possession,2012,Horror|Mystery|Thriller,Ole Bornedal,Stiles White,Jeffrey Dean Morgan|Kyra Sedgwick,92,5.9,65213
+tt1172991,The Company Men,2010,Drama,John Wells,John Wells,Ben Affleck|Chris Cooper|Tommy Lee Jones|Suzanne Rico|Kent Shocknek,104,6.7,50226
+tt12618926,Parallel Mothers,2021,Drama,Pedro Almodóvar,Pedro Almodóvar,Penélope Cruz|Aitana Sánchez-Gijón|Rossy de Palma,123,7.1,39292
+tt1033643,What Happens in Vegas,2008,Comedy|Romance,Tom Vaughan,,Cameron Diaz|Ashton Kutcher|Jason Sudeikis,99,6.1,193242
+tt1152850,Wendy and Lucy,2008,Drama,Kelly Reichardt,Kelly Reichardt,Michelle Williams,80,7.1,20662
+tt0237539,Bread and Tulips,2000,Comedy|Romance,Silvio Soldini,Silvio Soldini|Doriana Leondeff,Licia Maglietta|Bruno Ganz|Giuseppe Battiston|Antonio Catania|Marina Massironi,114,7.3,12262
+tt0416212,The Secret Life of Bees,2008,Drama,Gina Prince-Bythewood,Gina Prince-Bythewood,Dakota Fanning|Queen Latifah|Alicia Keys|Sophie Okonedo,114,7.2,29314
+tt0188453,Birthday Girl,2001,Comedy|Crime|Thriller,Jez Butterworth,Tom Butterworth|Jez Butterworth,Nicole Kidman|Vincent Cassel|Ben Chaplin|Mathieu Kassovitz|Kate Lynn Evans,93,6.0,26932
+tt0107120,Hocus Pocus,1993,Comedy|Family|Fantasy,Kenny Ortega,David Kirschner|Mick Garris|Neil Cuthbert,Bette Midler|Sarah Jessica Parker|Kathy Najimy|Omri Katz|Thora Birch,96,6.9,166092
+tt1028576,Secretariat,2010,Biography|Drama|Family,Randall Wallace,Mike Rich|William Nack,Diane Lane|John Malkovich|Margo Martindale|Dylan Walsh,123,7.2,32088
+tt0119626,Martín (Hache),1997,Drama,Adolfo Aristarain,Adolfo Aristarain|Kathy Saavedra,Federico Luppi|Juan Diego Botto|Eusebio Poncela|Cecilia Roth|Ana María Picchio,123,7.6,4978
+tt0795368,Death at a Funeral,2007,Comedy,Frank Oz,,Matthew Macfadyen|Peter Dinklage|Ewen Bremner|Keeley Hawes|Andy Nyman,90,7.3,125996
+tt0383694,Vera Drake,2004,Crime|Drama,Mike Leigh,Mike Leigh,Imelda Staunton|Jim Broadbent|Heather Craney|Richard Graham|Eddie Marsan,125,7.6,28072
+tt1206885,Rambo: Last Blood,2019,Action|Crime|Thriller,Adrian Grunberg,Matthew Cirulnick|Sylvester Stallone|Dan Gordon|David Morrell,Sylvester Stallone|Paz Vega|Sergio Peris-Mencheta|Adriana Barraza,89,6.1,116915
+tt0104756,Lorenzo's Oil,1992,Biography|Drama,George Miller,George Miller|Nick Enright,Nick Nolte|Susan Sarandon|Peter Ustinov|Kathleen Wilhoite|Gerry Bamman,129,7.3,25141

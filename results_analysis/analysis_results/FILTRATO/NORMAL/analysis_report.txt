@@ -1,0 +1,146 @@
+# METRICS ANALYSIS REPORT
+input file: enriched_results/FILTRATI/normal_enriched.csv
+Dataset: 18662 rows, 33 features, 6 targets
+==================================================
+
+## GENERAL STATISTICS
+Total rows: 18662
+Available features: 33
+Available targets: 6
+Total missing values: 19116
+Top 5 columns with missing values:
+  - query_complexity: 18662 (100.0%)
+  - num_rows: 70 (0.4%)
+  - num_columns: 70 (0.4%)
+  - num_categorical_columns: 70 (0.4%)
+  - numeric_categorical_ratio: 70 (0.4%)
+
+## MODEL PERFORMANCE
+
+### cell_precision:
+  Random Forest:
+    - R² Test: 0.069
+    - R² CV: 0.037 ± 0.029
+    - MAE: 0.288
+  Decision Tree:
+    - R² Test: 0.206
+    - R² CV: 0.154 ± 0.033
+    - MAE: 0.288
+  Ridge:
+    - R² Test: 0.118
+    - R² CV: 0.122 ± 0.018
+    - MAE: 0.330
+
+### cell_recall:
+  Random Forest:
+    - R² Test: 0.089
+    - R² CV: 0.055 ± 0.031
+    - MAE: 0.285
+  Decision Tree:
+    - R² Test: 0.219
+    - R² CV: 0.174 ± 0.031
+    - MAE: 0.288
+  Ridge:
+    - R² Test: 0.143
+    - R² CV: 0.141 ± 0.017
+    - MAE: 0.326
+
+### execution_accuracy:
+  Random Forest:
+    - R² Test: 0.017
+    - R² CV: 0.013 ± 0.028
+    - MAE: 0.315
+  Decision Tree:
+    - R² Test: 0.160
+    - R² CV: 0.145 ± 0.012
+    - MAE: 0.322
+  Ridge:
+    - R² Test: 0.109
+    - R² CV: 0.115 ± 0.013
+    - MAE: 0.387
+
+### tuple_cardinality:
+  Random Forest:
+    - R² Test: -0.020
+    - R² CV: -0.066 ± 0.035
+    - MAE: 0.238
+  Decision Tree:
+    - R² Test: 0.143
+    - R² CV: 0.092 ± 0.012
+    - MAE: 0.233
+  Ridge:
+    - R² Test: 0.110
+    - R² CV: 0.139 ± 0.014
+    - MAE: 0.269
+
+### tuple_constraint:
+  Random Forest:
+    - R² Test: 0.146
+    - R² CV: 0.115 ± 0.025
+    - MAE: 0.304
+  Decision Tree:
+    - R² Test: 0.281
+    - R² CV: 0.236 ± 0.017
+    - MAE: 0.311
+  Ridge:
+    - R² Test: 0.174
+    - R² CV: 0.167 ± 0.013
+    - MAE: 0.371
+
+### tuple_order:
+  Random Forest:
+    - R² Test: 0.070
+    - R² CV: 0.045 ± 0.038
+    - MAE: 0.268
+  Decision Tree:
+    - R² Test: 0.203
+    - R² CV: 0.151 ± 0.007
+    - MAE: 0.265
+  Ridge:
+    - R² Test: 0.184
+    - R² CV: 0.201 ± 0.016
+    - MAE: 0.287
+
+## TOP FEATURES PER TARGET
+
+### cell_precision:
+  1. semantic_complexity: 0.319
+  2. token_prompt_count: 0.199
+  3. text_length: 0.123
+  4. avg_sentence_length: 0.059
+  5. num_tokens: 0.040
+
+### cell_recall:
+  1. semantic_complexity: 0.319
+  2. token_prompt_count: 0.216
+  3. text_length: 0.122
+  4. num_words: 0.039
+  5. num_tokens: 0.037
+
+### execution_accuracy:
+  1. semantic_complexity: 0.297
+  2. text_length: 0.133
+  3. syntax_complexity: 0.108
+  4. token_prompt_count: 0.086
+  5. num_tokens: 0.053
+
+### tuple_cardinality:
+  1. semantic_complexity: 0.354
+  2. token_prompt_count: 0.151
+  3. text_length: 0.106
+  4. num_selected_columns: 0.105
+  5. num_tokens: 0.029
+
+### tuple_constraint:
+  1. semantic_complexity: 0.258
+  2. syntax_complexity: 0.144
+  3. text_length: 0.130
+  4. num_tokens: 0.101
+  5. token_prompt_count: 0.095
+
+### tuple_order:
+  1. semantic_complexity: 0.281
+  2. syntax_complexity: 0.173
+  3. token_prompt_count: 0.129
+  4. text_length: 0.107
+  5. num_tokens: 0.074

@@ -1,0 +1,302 @@
+db_path,table_name,test_category,query,model,AI_answer,SQL_query,failed_attempts,note,valid_efficiency_score,cell_precision,cell_recall,execution_accuracy,tuple_cardinality,tuple_constraint,tuple_order
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-PROJECT,Select only the column `Nome` from `dataset_animali`. Sort it in ascending order and return the first 25 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Coccodrillo'], ['Delfino'], ['Elefante'], ['Foca'], ['Gatto'], ['Giraffa'], ['Ippopotamo'], ['Koala'], ['Leone'], ['Lupo'], ['Mantide religiosa'], ['Orso'], ['Panda'], ['Pinguino'], ['Rinoceronte'], ['Scimmia'], ['Squalo'], ['Tigre'], ['Uccello'], ['Zebra']]",SELECT `Nome` FROM `dataset_animali` ORDER BY `Nome` ASC LIMIT 25,0,,0.0,0.15,0.12,0.0,0.8,0.12,1.0
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-PROJECT,Select only the column `Classe` from `dataset_animali`. Sort it in ascending order and return the first 25 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Mammalia'], ['Mammalia'], ['Reptilia'], ['Aves'], ['Aves'], ['Pisces'], ['Mammalia'], ['Mammalia'], ['Mammalia'], ['Reptilia'], ['Mammalia'], ['Mammalia'], ['Reptilia'], ['Aves'], ['Mammalia'], ['Mammalia'], ['Mammalia'], ['Reptilia'], ['Aves'], ['Mammalia'], ['Mammalia'], ['Reptilia'], ['Pisces'], ['Aves']]",SELECT `Classe` FROM `dataset_animali` ORDER BY `Classe` ASC LIMIT 25,0,,0.0,0.0,0.0,0.0,0.96,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-PROJECT,Select only the column `Marca` from `dataset_auto`. Sort it in descending order and return the first 25 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Volkswagen'], ['Volvo'], ['Toyota'], ['Tesla'], ['Subaru'], ['Seat'], ['Renault'], ['Peugeot'], ['Opel'], ['Nissan'], ['Mitsubishi'], ['Mercedes-Benz'], ['Mazda'], ['Kia'], ['Hyundai'], ['Fiat'], ['Dacia'], ['BMW'], ['Audi'], ['Alfa Romeo']]",SELECT `Marca` FROM `dataset_auto` ORDER BY `Marca` DESC LIMIT 25,0,,0.0,0.95,0.95,0.0,0.8,0.7,0.999
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-SINGLE,"List the top 25 rows from the table `dataset_film_famosi`, sorted by the column `Durata` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,[],SELECT * FROM `dataset_film_famosi` ORDER BY `Durata` ASC LIMIT 25,3,"<think>
+Alright, so I need to help the user by listing the top 25 rows from their dataset, sorted by the 'Durata' column in ascending order. Let me start by understanding the dataset they provided. 
+
+First, I see that the dataset is named 'dataset_film_famosi' and it has several columns: Titolo (Title), Anno (Year), Regista (Director), Genere (Genre), Durata (Duration), and Oscar vinti (Oscars won). There are 25 entries, each representing a famous film.
+
+The main task is to sort these entries by the 'Durata' column in ascending order. However, I notice that all the values in the 'Durata' column are null. That's a problem because I can't sort by a null value directly. The user's instructions say that if any data fields are null, I should infer and fill them with the most logical and contextually appropriate values. So, I need to figure out the duration for each film.
+
+To do this, I'll look up each film's duration. Let's go through each one:
+
+1. **Il Padrino (1972)**: The Godfather is 177 minutes long.
+2. **Titanic (1997)**: 194 minutes.
+3. **Forrest Gump (1994)**: 142 minutes.
+4. **Il Signore degli Anelli: Il ritorno del re (2003)**: 201 minutes.
+5. **Pulp Fiction (1994)**: 168 minutes.
+6. **Schindler's List (1993)**: 195 minutes.
+7. **Inception (2010)**: 148 minutes.
+8. **La La Land (2016)**: 128 minutes.
+9. **Gladiator (2000)**: 154 minutes.
+10. **The Departed (2006)**: 151 minutes.
+11. **Parasite (2019)**: 132 minutes.
+12. **Casablanca (1942)**: 102 minutes.
+13. **The Shape of Water (2017)**: 123 minutes.
+14. **No Country for Old Men (2007)**: 122 minutes.
+15. **Chicago (2002)**: 113 minutes.
+16. **The English Patient (1996)**: 162 minutes.
+17. **Slumdog Millionaire (2008)**: 120 minutes.
+18. **Argo (2012)**: 120 minutes.
+19. **Birdman (2014)**: 119 minutes.
+20. **American Beauty (1999)**: 122 minutes.
+21. **The Godfather Part II (1974)**: 202 minutes.
+22. **The Silence of the Lambs (1991)**: 118 minutes.
+23. **12 Years a Slave (2013)**: 134 minutes.
+24. **The Artist (2011)**: 100 minutes.
+25. **Million Dollar Baby (2004)**: 132 minutes.
+
+Now that I have all the durations, I can sort the films from the shortest to the longest. The shortest film is 'The Artist' at 100 minutes, and the longest is 'Il Signore degli Anelli: Il ritorno del re' at 201 minutes.
+
+I'll structure the JSON response as per the user's instructions, ensuring all fields are filled and correctly ordered. Each entry will include all the columns, with the inferred 'Durata' values. I'll make sure the JSON is valid and follows the specified schema without any additional text or notes.
+</think>
+
+```json
+{
+  ""table_name"": ""dataset_film_famosi"",
+  ""ordered_entries"": [
+    {
+      ""Titolo"": ""The Artist"",
+      ""Anno"": 2011,
+      ""Regista"": ""Michel Hazanavicius"",
+      ""Genere"": ""Commedia Drammatica"",
+      ""Durata"": 100,
+      ""Oscar vinti"": 5
+    },
+    {
+      ""Titolo"": ""Casablanca"",
+      ""Anno"": 1942,
+      ""Regista"": ""Michael Curtiz"",
+      ""Genere"": ""Romantico"",
+      ""Durata"": 102,
+      ""Oscar vinti"": 3
+    },
+    {
+      ""Titolo"": ""The Shape of Water"",
+      ""Anno"": 2017,
+      ""Regista"": ""Guillermo del Toro"",
+      ""Genere"": ""Fantasy"",
+      ""Durata"": 123,
+      ""Oscar vinti"": 4
+    },
+    {
+      ""Titolo"": ""No Country for Old Men"",
+      ""Anno"": 2007,
+      ""Regista"": ""Ethan & Joel Coen"",
+      ""Genere"": ""Thriller"",
+      ""Durata"": 122,
+      ""Oscar vinti"": 4
+    },
+    {
+      ""Titolo"": ""American Beauty"",
+      ""Anno"": 1999,
+      ""Regista"": ""Sam Mendes"",
+      ""Genere"": ""Drammatico"",
+      ""Durata"": 122,
+      ""Oscar vinti"": 5
+    },
+    {
+      ""Titolo"": ""Slumdog Millionaire"",
+      ""Anno"": 2008,
+      ""Regista"": ""Danny Boyle"",
+      ""Genere"": ""Drammatico"",
+      ""Durata"": 120,
+      ""Oscar vinti"": 8
+    },
+    {
+      ""Titolo"": ""Argo"",
+      ""Anno"": 2012,
+      ""Regista"": ""Ben Affleck"",
+      ""Genere"": ""Thriller"",
+      ""Durata"": 120,
+      ""Oscar vinti"": 3
+    },
+    {
+      ""Titolo"": ""Birdman"",
+      ""Anno"": 2014,
+      ""Regista"": ""Alejandro G. Iñárritu"",
+      ""Genere"": ""Commedia Drammatica"",
+      ""Durata"": 119,
+      ""Oscar vinti"": 4
+    },
+    {
+      ""Titolo"": ""The Silence of the Lambs"",
+      ""Anno"": 1991,
+      ""Regista"": ""Jonathan Demme"",
+      ""Genere"": ""Thriller"",
+      ""Durata"": 118,
+      ""Oscar vinti"": 5
+    },
+    {
+      ""Titolo"": ""Parasite"",
+      ""Anno"": 2019,
+      ""Regista"": ""Bong Joon-ho"",
+      ""Genere"": ""Thriller"",
+      ""Durata"": 132,
+      ""Oscar vinti"": 4
+    },
+    {
+      ""Titolo"": ""Million Dollar Baby"",
+      ""Anno"": 2004,
+      ""Regista"": ""Clint Eastwood"",
+      ""Genere"": ""Drammatico"",
+      ""Durata"": 132,
+      ""Oscar vinti"": 4
+    },
+    {
+      ""Titolo"": ""12 Years a Slave"",
+      ""Anno"": 2013,
+      ""Regista"": ""Steve McQueen"",
+      ""Genere"": ""Storico"",
+      ""Durata"": 134,
+      ""Oscar vinti"": 3
+    },
+    {
+      ""Titolo"": ""La La Land"",
+      ""Anno"": 2016,
+      ""Regista"": ""Damien Chazelle"",
+      ""Genere"": ""Musical"",
+      ""Durata"": 128,
+      ""Oscar vinti"": 6
+    },
+    {
+      ""Titolo"": ""The Departed"",
+      ""Anno"": 2006,
+      ""Regista"": ""Martin Scorsese"",
+      ""Genere"": ""Crime"",
+      ""Durata"": 151,
+      ""Oscar vinti"": 4
+    },
+    {
+      ""Titolo"": ""Gladiator"",
+      ""Anno"": 2000,
+      ""Regista"": ""Ridley Scott"",
+      ""Genere"": ""Storico"",
+      ""Durata"": 154,
+      ""Oscar vinti"": 5
+    },
+    {
+      ""Titolo"": ""Inception"",
+      ""Anno"": 2010,
+      ""Regista"": ""Christopher Nolan"",
+      ""Genere"": ""Sci-Fi"",
+      ""Durata"": 148,
+      ""Oscar vinti"": 4
+    },
+    {
+      ""Titolo"": ""Forrest Gump"",
+      ""Anno"": 1994,
+      ""Regista"": ""Robert Zemeckis"",
+      ""Genere"": ""Drammatico"",
+      ""Durata"": 142,
+      ""Oscar vinti"": 6
+    },
+    {
+      ""Titolo"": ""The English Patient"",
+      ""Anno"": 1996,
+      ""Regista"": ""Anthony Minghella"",
+      ""Genere"": ""Romantico"",
+      ""Durata"": 162,
+      ""Oscar vinti"": 9
+    },
+    {
+      ""Titolo"": ""Pulp Fiction"",
+      ""Anno"": 1994,
+      ""Regista"": ""Quentin Tarantino"",
+      ""Genere"": ""Crime"",
+      ""Durata"": 168,
+      ""Oscar vinti"": 1
+    },
+    {
+      ""Titolo"": ""Schindler's List"",
+      ""Anno"": 1993,
+      ""Regista"": ""Steven Spielberg"",
+      ""Genere"": ""Storico"",
+      ""Durata"": 195,
+      ""Oscar vinti"": 7
+    },
+    {
+      ""Titolo"": ""Il Padrino",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-PROJECT,Select only the column `Titolo` from `dataset_film_famosi`. Sort it in ascending order and return the first 25 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['The Godfather'], ['Titanic'], ['Forrest Gump'], ['The Lord of the Rings: The Return of the King'], ['Pulp Fiction'], [""Schindler's List""], ['Inception'], ['La La Land'], ['Gladiator'], ['The Departed'], ['Parasite'], ['Casablanca'], [""Pan's Labyrinth""], ['No Country for Old Men'], ['Chicago'], ['The English Patient'], ['Slumdog Millionaire'], ['Argo'], ['Birdman'], ['American Beauty'], ['The Godfather: Part II'], ['The Silence of the Lambs'], ['12 Years a Slave'], ['The Artist'], ['Million Dollar Baby']]",SELECT `Titolo` FROM `dataset_film_famosi` ORDER BY `Titolo` ASC LIMIT 25,0,,0.0,0.84,0.84,0.0,1.0,0.84,0.3935
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-PROJECT,Select only the column `Oscar vinti` from `dataset_film_famosi`. Sort it in ascending order and return the first 25 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[None], [None], [None], [None], [None], [None], [None], [None], [None], [None], [None], [None], [None], [None], [None], [None], [None], [None], [None], [None], [None], [None], [None], [None], [None], [None]]",SELECT `Oscar vinti` FROM `dataset_film_famosi` ORDER BY `Oscar vinti` ASC LIMIT 25,0,,0.0,0.0,0.0,0.0,0.962,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-PROJECT,Select only the column `Nome` from `dataset_animali`. Sort it in ascending order and return the first 25 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown']]",SELECT `Nome` FROM `dataset_animali` ORDER BY `Nome` ASC LIMIT 25,0,,0.0,0.0,0.0,0.0,0.926,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-PROJECT,Select only the column `Classe` from `dataset_animali`. Sort it in ascending order and return the first 25 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Mammiferi'], ['Mammiferi'], ['Rettili'], ['Uccelli'], ['Uccelli'], ['Pesci'], ['Mammiferi'], ['Mammiferi'], ['Mammiferi'], ['Rettili'], ['Mammiferi'], ['Mammiferi'], ['Rettili'], ['Uccelli'], ['Mammiferi'], ['Mammiferi'], ['Mammiferi'], ['Rettili'], ['Uccelli'], ['Mammiferi'], ['Mammiferi'], ['Mammiferi'], ['Uccelli'], ['Pesci'], ['Mammiferi'], ['Uccelli']]",SELECT `Classe` FROM `dataset_animali` ORDER BY `Classe` ASC LIMIT 25,0,,0.0,0.0,0.0,0.0,0.962,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-PROJECT,Select only the column `Marca` from `dataset_auto`. Sort it in descending order and return the first 25 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `Marca` FROM `dataset_auto` ORDER BY `Marca` DESC LIMIT 25,3,"```
+{
+  ""table_name"": ""dataset_animali"",
+  ""ordered_entries"": [
+    {
+      ""Classe"": ""Mammiferi""
+    },
+    {
+      ""Classe"": ""Mammiferi""
+    },
+    {
+      ""Classe"": ""Rettili""
+    },
+    {
+      ""Classe"": ""Uccelli""
+    },
+    {
+      ""Classe"": ""Uccelli""
+    },
+    {
+      ""Classe"": ""Pesci""
+    },
+    {
+      ""Classe"": ""Mammiferi""
+    },
+    {
+      ""Classe"": ""Mammiferi""
+    },
+    {
+      ""Classe"": ""Mammiferi""
+    },
+    {
+      ""Classe"": ""Rettili""
+    },
+    {
+      ""Classe"": ""Mammiferi""
+    },
+    {
+      ""Classe"": ""Mammiferi""
+    },
+    {
+      ""Classe"": ""Rettili""
+    },
+    {
+      ""Classe"": ""Uccelli""
+    },
+    {
+      ""Classe"": ""Mammiferi""
+    },
+    {
+      ""Classe"": ""Mammiferi""
+    },
+    {
+      ""Classe"": ""Mammiferi""
+    },
+    {
+      ""Classe"": ""Rettili""
+    },
+    {
+      ""Classe"": ""Uccelli""
+    },
+    {
+      ""Classe"": ""Mammiferi""
+    },
+    {
+      ""Classe"": ""Mammiferi""
+    },
+    {
+      ""Classe"": ""Mammiferi""
+    },
+    {
+      ""Classe"": ""Uccelli""
+    },
+    {
+      ""Classe"": ""Pesci""
+    },
+    {
+      ""Classe"": ""Mammiferi""
+    },
+    {
+      ""Classe"": ""Uccelli""
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-SINGLE,"List the top 25 rows from the table `dataset_film_famosi`, sorted by the column `Durata` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Il Signore degli Anelli: Il ritorno del re', 2003, 'Peter Jackson', 'Fantasy', 201, 11], ['Titanic', 1997, 'James Cameron', 'Romantico', 194, 11], ['The English Patient', 1996, 'Anthony Minghella', 'Romantico', 162, 9], [""Schindler's List"", 1993, 'Steven Spielberg', 'Storico', 195, 7], ['The Godfather Part II', 1974, 'Francis Ford Coppola', 'Drammatico', 202, 6], ['Forrest Gump', 1994, 'Robert Zemeckis', 'Drammatico', 142, 6], ['Pulp Fiction', 1994, 'Quentin Tarantino', 'Crime', 168, 1], ['The Silence of the Lambs', 1991, 'Jonathan Demme', 'Thriller', 118, 5], ['12 Years a Slave', 2013, 'Steve McQueen', 'Storico', 134, 3], ['Million Dollar Baby', 2004, 'Clint Eastwood', 'Drammatico', 132, 4], ['The Artist', 2011, 'Michel Hazanavicius', 'Commedia Drammatica', 100, 5], ['Argo', 2012, 'Ben Affleck', 'Thriller', 120, 3], ['American Beauty', 1999, 'Sam Mendes', 'Drammatico', 122, 5], ['Birdman', 2014, 'Alejandro G. Iñárritu', 'Commedia Drammatica', 119, 4], ['Casablanca', 1942, 'Michael Curtiz', 'Romantico', 102, 3], ['Chicago', 2002, 'Rob Marshall', 'Musical', 113, 6], ['Gladiator', 2000, 'Ridley Scott', 'Storico', 154, 5], ['Il Padrino', 1972, 'Francis Ford Coppola', 'Drammatico', 177, 3], ['Inception', 2010, 'Christopher Nolan', 'Sci-Fi', 148, 4], ['La La Land', 2016, 'Damien Chazelle', 'Musical', 128, 6], ['No Country for Old Men', 2007, 'Ethan & Joel Coen', 'Thriller', 122, 4], ['Parasite', 2019, 'Bong Joon-ho', 'Thriller', 132, 4], [""Schindler's List"", 1993, 'Steven Spielberg', 'Storico', 195, 7], ['Slumdog Millionaire', 2008, 'Danny Boyle', 'Drammatico', 120, 8], ['The Departed', 2006, 'Martin Scorsese', 'Crime', 151, 4], ['The Shape of Water', 2017, 'Guillermo del Toro', 'Fantasy', 123, 4]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Durata` ASC LIMIT 25,0,,0.0,0.973,0.982,0.0,0.962,0.8,0.302
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-PROJECT,Select only the column `Titolo` from `dataset_film_famosi`. Sort it in ascending order and return the first 25 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Il Padrino'], ['Il Padrino - Parte II'], ['Forrest Gump'], ['Il Signore degli Anelli - Il Ritorno del Re'], ['Pulp Fiction'], [""Schindler's List""], ['Inception'], ['La La Land'], ['Gladiator'], ['The Departed'], ['Parasite'], ['Casablanca'], ['The Shape of Water'], ['No Country for Old Men'], ['Chicago'], ['The English Patient'], ['Slumdog Millionaire'], ['Argo'], ['Birdman'], ['American Beauty'], ['The Godfather'], ['The Silence of the Lambs'], ['12 Years a Slave'], ['The Artist'], ['Million Dollar Baby'], ['Unforgiven']]",SELECT `Titolo` FROM `dataset_film_famosi` ORDER BY `Titolo` ASC LIMIT 25,0,,0.0,0.846,0.88,0.0,0.962,0.88,0.4745
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-PROJECT,Select only the column `Oscar vinti` from `dataset_film_famosi`. Sort it in ascending order and return the first 25 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0]]",SELECT `Oscar vinti` FROM `dataset_film_famosi` ORDER BY `Oscar vinti` ASC LIMIT 25,2,,0.0,0.0,0.0,0.0,0.926,0.0,0.5

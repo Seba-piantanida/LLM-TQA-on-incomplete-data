@@ -1,0 +1,4 @@
+table,model,avg_valid_efficiency_score,avg_cell_precision,avg_cell_recall,avg_execution_accuracy,avg_tuple_cardinality,avg_tuple_constraint,avg_tuple_order
+albums,gpt-5_mini,0.0,0.85,0.85,0.5,1.0,0.85,
+artists,gpt-5_mini,0.0,0.4666666666666666,0.4666666666666666,0.3333333333333333,1.0,0.4666666666666666,
+tracks,gpt-5_mini,0.0,0.5031,0.5809,0.3,0.9409000000000001,0.45499999999999996,

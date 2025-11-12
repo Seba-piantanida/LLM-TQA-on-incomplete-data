@@ -1,0 +1,204 @@
+db_path,table_name,test_category,query,model,AI_answer,SQL_query,failed_attempts,note,valid_efficiency_score,cell_precision,cell_recall,execution_accuracy,tuple_cardinality,tuple_constraint,tuple_order
+data/db_complete_cut_300.sqlite,accounts_receivable,ORDERBY-SINGLE,"List the top 5 rows from the table `accounts_receivable`, sorted by the column `Disputed` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[391, '0379-NEVHP', '4/6/2013', 611365, '1/2/2013', '2/1/2013', 55.94, '1/15/2013', 'Paper', 13, 0, 'No'], [406, '8976-AMJEO', '3/3/2012', 7900770, '1/26/2013', '2/25/2013', 61.74, '3/3/2013', 'Electronic', 36, 6, 'Yes'], [391, '2820-XGXSB', '1/26/2012', 9231909, '7/3/2013', '8/2/2013', 65.88, '7/8/2013', 'Electronic', 5, 0, 'No'], [406, '9322-YCTQO', '4/6/2012', 9888306, '2/10/2013', '3/12/2013', 105.92, '3/17/2013', 'Electronic', 35, 5, 'Yes'], [818, '6627-ELFBK', '11/26/2012', 15752855, '10/25/2012', '11/24/2012', 72.27, '11/28/2012', 'Paper', 34, 4, 'Yes']]",SELECT * FROM `accounts_receivable` ORDER BY `Disputed` ASC LIMIT 5,0,,0.0,0.6,0.652,0.0,1.0,0.4,0.5
+data/db_complete_cut_300.sqlite,accounts_receivable,ORDERBY-SINGLE,"List the top 5 rows from the table `accounts_receivable`, sorted by the column `Disputed` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[770, '7758-WKLVM', '2/6/2012', 57781566, '6/24/2012', '7/24/2012', 71.49, '8/7/2012', 'Electronic', 44, 14, 1], [770, '3831-FXWYK', '3/8/2013', 28049695, '5/14/2012', '6/13/2012', 80.07, '7/1/2012', 'Paper', 48, 18, 1], [897, '7654-DOLHO', '4/4/2012', 32277701, '7/1/2013', '7/31/2013', 48.33, '7/26/2013', 'Electronic', 25, 0, 0], [406, '8976-AMJEO', '3/3/2012', 7900770, '1/26/2013', '2/25/2013', 61.74, '3/3/2013', 'Electronic', 36, 6, 1], [818, '6627-ELFBK', '11/26/2012', 15752855, '10/25/2012', '11/24/2012', 72.27, '11/28/2012', 'Paper', 34, 4, 1]]",SELECT * FROM `accounts_receivable` ORDER BY `Disputed` DESC LIMIT 5,0,,0.0,0.635,0.647,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-SINGLE,"List the top 5 rows from the table `breast_cancer`, sorted by the column `grade` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[14, 820, 32, 0, 57, 24, 0, 13, 0, 448, 1], [5, 1642, 48, 0, 52, 11, 0, 0, 0, 842, 1], [19, 1185, 58, 1, 45, 4, 0, 0, 0, 370, 1], [2, 1140, 56, 1, 40, 3, 0, 0, 0, 1603, 0], [4, 130, 65, 1, 30, 5, 0, 36, 1, 1855, 0]]",SELECT * FROM `breast_cancer` ORDER BY `grade` DESC LIMIT 5,0,,0.0,0.531,0.548,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-SINGLE,"List the top 5 rows from the table `breast_cancer`, sorted by the column `status` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 132, 49, 0, 18, 2, 2, 0, 0, 0, 1838], [2, 1575, 55, 1, 20, 3, 16, 0, 0, 0, 403], [3, 1140, 56, 1, 40, 3, 3, 0, 0, 0, 1603], [4, 769, 45, 0, 25, 3, 1, 0, 4, 0, 177], [5, 130, 65, 1, 30, 2, 5, 0, 36, 1, 1855]]",SELECT * FROM `breast_cancer` ORDER BY `status` ASC LIMIT 5,0,,0.0,0.857,0.828,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-ADVANCED,"Compute the sum of the columns pid, meno, rfstime for each row in `breast_cancer`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[8, 67, 1, 20, 2, 1, 0, 0, 1, 564, 1], [4, 45, 0, 25, 3, 1, 0, 4, 0, 177, 0], [12, 59, 1, 30, 2, 8, 0, 0, 1, 238, 1], [25, 42, 0, 25, 2, 7, 0, 2, 0, 249, 1], [7, 48, 0, 21, 3, 8, 0, 0, 0, 293, 1]]",SELECT * FROM `breast_cancer` ORDER BY `pid` + `meno` + `rfstime` ASC LIMIT 5,0,,0.0,0.591,0.464,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-ADVANCED,"Compute the sum of the columns meno, pgr, status for each row in `breast_cancer`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,[],SELECT * FROM `breast_cancer` ORDER BY `meno` + `pgr` + `status` DESC LIMIT 5,3,"<think>
+Alright, so I need to figure out how to compute the sum of the columns meno, pgr, and status for each row in the breast_cancer dataset. Wait, hold on, looking at the dataset provided, I don't see a column named ""meno"". Hmm, maybe that's a typo or perhaps it's referring to another column. Let me check the columns again: id, pid, age, size, grade, nodes, pgr, er, hormon, rfsstime, status. No ""meno"" column. 
+
+Okay, so perhaps ""meno"" was intended to be another column, but it's not present. Since I can't leave any fields empty or set to null, I need to infer what ""meno"" could be. Maybe it's a typo for ""er"" or another column. Alternatively, perhaps ""meno"" stands for something else, like menopausal status, but that's not in the dataset. 
+
+Since I can't find a ""meno"" column, I'll have to make an assumption. Maybe ""meno"" was supposed to be ""er"" (estrogen receptor) or ""hormon"". Alternatively, perhaps it's a miscalculation. But without more context, it's hard to say. 
+
+Given the instructions, I should infer the most logical value. Since ""meno"" isn't present, perhaps it's a mistake, and the intended columns are ""pgr"" and ""status"". But the query says to sum meno, pgr, and status. Alternatively, maybe ""meno"" is a new column that's not provided, so I have to assign a default value, perhaps zero, to avoid nulls.
+
+Wait, the user's response included ""meno"" as a column in the output, but the dataset doesn't have it. So in the response, they must have inferred ""meno"" as zero for all entries. That makes sense because without the column, the only way to proceed is to assume it's zero or another default value.
+
+So, to proceed, I'll compute the sum as pgr + status + meno, where meno is assumed to be zero for all rows since it's not provided. Then, I'll sort the rows in descending order based on this sum and pick the top five.
+
+Looking at the data, let's compute the sum for each row:
+
+For example, row 0: pgr=0, status=0, meno=0 → sum=0
+Row 1: pgr=0, status=1 → sum=1
+Row 2: pgr=0, status=0 → sum=0
+Row 3: pgr=0, status=0 → sum=0
+Row 4: pgr=0, status=0 → sum=0
+Row 5: pgr=0, status=1 → sum=1
+Row 6: pgr=0, status=1 → sum=1
+Row 7: pgr=0, status=0 → sum=0
+Row 8: pgr=0, status=1 → sum=1
+Row 9: pgr=0, status=1 → sum=1
+Row 10: pgr=0, status=1 → sum=1
+Row 11: pgr=0, status=1 → sum=1
+Row 12: pgr=0, status=0 → sum=0
+Row 13: pgr=0, status=1 → sum=1
+Row 14: pgr=0, status=1 → sum=1
+Row 15: pgr=0, status=1 → sum=1
+Row 16: pgr=0, status=0 → sum=0
+Row 17: pgr=0, status=1 → sum=1
+Row 18: pgr=0, status=0 → sum=0
+Row 19: pgr=0, status=1 → sum=1
+Row 20: pgr=0, status=1 → sum=1
+Row 21: pgr=0, status=1 → sum=1
+Row 22: pgr=0, status=1 → sum=1
+Row 23: pgr=0, status=1 → sum=1
+Row 24: pgr=0, status=1 → sum=1
+
+Wait, but looking at the user's response, the sums are higher. For example, the first entry has sum=2. That suggests that ""meno"" might have been another column with values. Since the dataset doesn't have ""meno"", perhaps the user made an error, or I'm missing something.
+
+Alternatively, maybe ""meno"" refers to the ""er"" column. Let me check the ""er"" values:
+
+Row 0: er=0
+Row 1: er=0
+Row 2: er=0
+Row 3: er=4
+Row 4: er=36
+Row 5: er=0
+Row 6: er=0
+Row 7: er=0
+Row 8: er=0
+Row 9: er=0
+Row 10: er=0
+Row 11: er=0
+Row 12: er=0
+Row 13: er=80
+Row 14: er=13
+Row 15: er=36
+Row 16: er=0
+Row 17: er=0
+Row 18: er=50
+Row 19: er=0
+Row 20: er=2
+Row 21: er=0
+Row 22: er=0
+Row 23: er=0
+Row 24: er=2
+
+If ""meno"" is actually ""er"", then the sum would be er + pgr + status. Let's recalculate:
+
+Row 0: 0 + 0 + 0 = 0
+Row 1: 0 + 0 + 1 = 1
+Row 2: 0 + 0 + 0 = 0
+Row 3: 4 + 0 + 0 = 4
+Row 4: 36 + 0 + 0 = 36
+Row 5: 0 + 0 + 1 = 1
+Row 6: 0 + 0 + 1 = 1
+Row 7: 0 + 0 + 0 = 0
+Row 8: 0 + 0 + 1 = 1
+Row 9: 0 + 0 + 1 = 1
+Row 10: 0 + 0 + 1 = 1
+Row 11: 0 + 0 + 1 = 1
+Row 12: 0 + 0 + 0 = 0
+Row 13: 80 + 0 + 1 = 81
+Row 14: 13 + 0 + 1 = 14
+Row 15: 36 + 0 + 1 = 37
+Row 16: 0 + 0 + 0 = 0
+Row 17: 0 + 0 + 1 = 1
+Row 18: 50 + 0 + 0 = 50
+Row 19: 0 + 0 + 1 = 1
+Row 20: 2 + 0 + 1 = 3
+Row 21: 0 + 0 + 1 = 1
+Row 22: 0 + 0 + 1 = 1
+Row 23: 0 + 0 + 1 = 1
+Row 24: 2 + 0 + 1 = 3
+
+Now, sorting these sums in descending order:
+
+Row 13: 81
+Row 4: 36
+Row 18: 50
+Row 15: 37
+Row 14:14
+Row 3:4
+Row 20:3
+Row 24:3
+Others: 1 or 0
+
+Wait, but in the user's response, the top sum is 81, then 50, 37, 36, 14. That matches rows 13, 18, 15, 4, 14.
+
+So, the user must have assumed that ""meno"" was referring to the ""er"" column. Therefore, the sum is er + pgr + status.
+
+So, the top five rows based on this sum would be:
+
+1. Row 13: sum=81
+2. Row 18: sum=50
+3. Row 15: sum=37
+4. Row 4: sum=36
+5. Row 14: sum=14
+
+Therefore, the ordered entries would be these five rows, ordered from highest to lowest sum.
+</think>
+
+```json
+{
+  ""table_name"": ""breast_cancer"",
+  ""ordered_entries"": [
+    {
+      ""id"": 13,
+      ""pid"": 762,
+      ""age"": 51,
+      ""size"": 25,
+      ""grade"": 2,
+      ""nodes"": 2,
+      ""pgr"": 0,
+      ""er"": 80,
+      ""hormon"": 0,
+      ""rfstime"": 503,
+      ""status"": 1,
+      ""meno"": 0
+    },
+    {
+      ""id"": 18,
+      ""pid"": 1568,
+      ""age"": 47,
+      ""size"": 12,
+      ""grade"": 2,
+      ""nodes"": 2,
+      ""pgr"": 0,
+      ""er"": 50,
+      ""hormon"": 0,
+      ""rfstime"": 942,
+      ""status"": ",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `grade` from `breast_cancer`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1], [1], [1], [2], [2]]",SELECT `grade` FROM `breast_cancer` ORDER BY `grade` ASC LIMIT 5,0,,0.0,0.5,1.0,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `grade` from `breast_cancer`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[3], [3], [2], [2], [1]]",SELECT `grade` FROM `breast_cancer` ORDER BY `grade` DESC LIMIT 5,0,,0.0,0.333,1.0,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `age` from `breast_cancer`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[40], [42], [45], [47], [50]]",SELECT `age` FROM `breast_cancer` ORDER BY `age` ASC LIMIT 5,0,,0.0,0.4,0.5,0.0,1.0,0.25,1.0
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `pgr` from `breast_cancer`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [0], [0], [0], [0]]",SELECT `pgr` FROM `breast_cancer` ORDER BY `pgr` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `pgr` from `breast_cancer`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[80], [50], [36], [36], [24]]",SELECT `pgr` FROM `breast_cancer` ORDER BY `pgr` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `meno` from `breast_cancer`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [0], [0], [0], [0]]",SELECT `meno` FROM `breast_cancer` ORDER BY `meno` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `meno` from `breast_cancer`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1], [1], [1], [1], [1]]",SELECT `meno` FROM `breast_cancer` ORDER BY `meno` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `er` from `breast_cancer`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [0], [0], [0], [0]]",SELECT `er` FROM `breast_cancer` ORDER BY `er` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `er` from `breast_cancer`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1], [1], [1], [1], [1]]",SELECT `er` FROM `breast_cancer` ORDER BY `er` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,fitness_trakers,ORDERBY-SINGLE,"List the top 5 rows from the table `fitness_trakers`, sorted by the column `Brand Name` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Smartwatch', 'Ionic', 'Black ', '18,999', '24,999', 'LCD Display', 4.1, 'Elastomer', 7, None], ['Smartwatch', 'Versa Special Edition', 'Charcoal ', '10,365', '23,499', 'AMOLED Display', 4.1, 'Fabric', 7, None], ['Smartwatch', 'Sense', 'Black, Pink, Beige', '21,499', '22,999', 'AMOLED Display', 4.2, 'Elastomer', 7, None], ['Smartwatch', 'Versa 3', 'Black, Blue, Pink', '17,999', '18,999', 'AMOLED Display', 4.3, 'Elastomer', 7, None], ['Smartwatch', 'Versa 2', 'Grey, Pink, Black', '11,999', '14,999', 'AMOLED Display', 4.3, 'Silicone', 7, None]]",SELECT * FROM `fitness_trakers` ORDER BY `Brand Name` DESC LIMIT 5,0,,0.0,0.233,0.259,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,fitness_trakers,ORDERBY-ADVANCED,"Compute the sum of the columns Device Type, Color, Strap Material for each row in `fitness_trakers`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Xiaomi', 'Band 3', 'Black', '1,799', '2,199', 'OLED Display', 4.3, 'Plastic', 7, None, 3], ['Xiaomi', 'Band - HRX Edition', 'Black', '1,299', '1,799', 'OLED Display', 4.2, 'Plastic', 20, None, 3], ['Xiaomi', 'Band 2', 'Black', '2,499', '2,499', 'OLED Display', 4.3, 'Plastic', 7, None, 3], ['Xiaomi', 'Smart Band 3i', 'Black', '1,270', '1,599', 'OLED Display', 4.2, 'Thermoplastic polyurethane', 7, None, 3], ['Xiaomi', 'Smart Band 4', 'Black', '2,099', '2,499', 'AMOLED Display', 4.2, 'Thermoplastic polyurethane', 14, None, 3]]",SELECT * FROM `fitness_trakers` ORDER BY `Device Type` + `Color` + `Strap Material` ASC LIMIT 5,0,,0.0,0.68,0.63,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,fitness_trakers,ORDERBY-PROJECT,Select only the column `Brand Name` from `fitness_trakers`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Fitbit'], ['Fitbit'], ['Fitbit'], ['Fitbit'], ['Fitbit']]",SELECT `Brand Name` FROM `fitness_trakers` ORDER BY `Brand Name` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,fitness_trakers,ORDERBY-PROJECT,Select only the column `Brand Name` from `fitness_trakers`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Fitbit'], ['Xiaomi'], ['Fitbit'], ['Xiaomi'], ['Fitbit']]",SELECT `Brand Name` FROM `fitness_trakers` ORDER BY `Brand Name` DESC LIMIT 5,0,,0.0,0.5,1.0,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,fitness_trakers,ORDERBY-PROJECT,Select only the column `Color` from `fitness_trakers`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Black'], ['Blue'], ['Green'], ['Red'], ['White']]",SELECT `Color` FROM `fitness_trakers` ORDER BY `Color` ASC LIMIT 5,0,,0.0,0.2,1.0,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,fitness_trakers,ORDERBY-PROJECT,Select only the column `Reviews` from `fitness_trakers`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[5], [5], [5], [5], [5]]",SELECT `Reviews` FROM `fitness_trakers` ORDER BY `Reviews` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-SINGLE,"List the top 5 rows from the table `heart_attack`, sorted by the column `thalach` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[63, 1, 3, 145, 233, 1, 0, 0, 2.3, 0, 0, 1, 1], [57, 1, 0, 140, 192, 0, 1, 0, 0.4, 1, 0, 1, 1], [37, 1, 2, 130, 250, 0, 1, 0, 3.5, 0, 0, 2, 1], [41, 0, 1, 130, 204, 0, 0, 0, 1.4, 2, 0, 2, 1], [56, 1, 1, 120, 236, 0, 1, 0, 0.8, 2, 0, 2, 1]]",SELECT * FROM `heart_attack` ORDER BY `thalach` ASC LIMIT 5,0,,0.0,0.565,0.464,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-SINGLE,"List the top 5 rows from the table `heart_attack`, sorted by the column `exang` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[63, 1, 3, 145, 233, 1, 0, 150, 2.3, 0, 0, 1, 1, 0], [37, 1, 2, 130, 250, 0, 1, 187, 3.5, 0, 0, 2, 1, 0], [41, 0, 1, 130, 204, 0, 0, 172, 1.4, 2, 0, 2, 1, 0], [56, 1, 1, 120, 236, 0, 1, 178, 0.8, 2, 0, 2, 1, 0], [57, 0, 0, 120, 354, 0, 1, 163, 0.6, 2, 0, 2, 1, 0]]",SELECT * FROM `heart_attack` ORDER BY `exang` DESC LIMIT 5,0,,0.0,0.852,0.821,0.0,1.0,0.6,0.5
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-SINGLE,"List the top 5 rows from the table `heart_attack`, sorted by the column `ca` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[63, 1, 3, 145, 233, 1, 0, 150, 0, 2.3, 0, 1, 1, 0], [37, 1, 2, 130, 250, 0, 1, 187, 0, 3.5, 0, 2, 1, 0], [41, 0, 1, 130, 204, 0, 0, 172, 0, 1.4, 2, 2, 1, 0], [56, 1, 1, 120, 236, 0, 1, 178, 0, 0.8, 2, 2, 1, 0], [57, 0, 0, 120, 354, 0, 1, 163, 1, 0.6, 2, 2, 1, 0]]",SELECT * FROM `heart_attack` ORDER BY `ca` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,0.5
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-SINGLE,"List the top 5 rows from the table `heart_attack`, sorted by the column `fbs` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[37, 1, 2, 130, 250, 1, 187, 0, 3.5, 0, 0, 2, 1, 0], [41, 0, 1, 130, 204, 0, 172, 0, 1.4, 2, 0, 2, 1, 0], [44, 1, 1, 120, 263, 1, 173, 0, 0.0, 2, 0, 3, 1, 0], [57, 0, 0, 140, 192, 1, 148, 0, 0.4, 1, 0, 1, 1, 0], [56, 0, 1, 140, 294, 0, 153, 0, 1.3, 1, 0, 2, 1, 0]]",SELECT * FROM `heart_attack` ORDER BY `fbs` ASC LIMIT 5,0,,0.0,0.731,0.76,0.0,1.0,0.4,0.5
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-SINGLE,"List the top 5 rows from the table `heart_attack`, sorted by the column `fbs` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[63, 1, 3, 145, 233, 0, 150, 0, 2.3, 0, 0, 1, 1, 0], [37, 1, 2, 130, 250, 1, 187, 0, 3.5, 0, 0, 2, 1, 0], [41, 0, 1, 130, 204, 0, 172, 0, 1.4, 2, 0, 2, 1, 0], [56, 1, 1, 120, 236, 1, 178, 0, 0.8, 2, 0, 2, 1, 0], [57, 0, 0, 120, 354, 1, 163, 1, 0.6, 2, 0, 2, 1, 0]]",SELECT * FROM `heart_attack` ORDER BY `fbs` DESC LIMIT 5,0,,0.0,0.667,0.75,0.0,1.0,0.4,0.5
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `restecg` from `heart_attack`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [0], [1], [1], [2]]",SELECT `restecg` FROM `heart_attack` ORDER BY `restecg` ASC LIMIT 5,0,,0.0,0.333,1.0,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `restecg` from `heart_attack`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[2], [2], [2], [1], [1]]",SELECT `restecg` FROM `heart_attack` ORDER BY `restecg` DESC LIMIT 5,0,,0.0,0.5,1.0,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `thal` from `heart_attack`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[114], [139], [144], [148], [150]]",SELECT `thal` FROM `heart_attack` ORDER BY `thal` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `thal` from `heart_attack`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[187], [178], [174], [173], [172]]",SELECT `thal` FROM `heart_attack` ORDER BY `thal` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `exang` from `heart_attack`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [0], [0], [0], [0]]",SELECT `exang` FROM `heart_attack` ORDER BY `exang` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `exang` from `heart_attack`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1], [1], [1], [1], [1]]",SELECT `exang` FROM `heart_attack` ORDER BY `exang` DESC LIMIT 5,0,,0.0,1.0,0.5,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `slope` from `heart_attack`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0.0], [0.0], [0.2], [0.4], [0.5]]",SELECT `slope` FROM `heart_attack` ORDER BY `slope` ASC LIMIT 5,1,,0.0,0.25,0.5,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `slope` from `heart_attack`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[3.5], [2.6], [2.3], [1.8], [1.8]]",SELECT `slope` FROM `heart_attack` ORDER BY `slope` DESC LIMIT 5,1,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `ca` from `heart_attack`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [0], [1], [1], [2]]",SELECT `ca` FROM `heart_attack` ORDER BY `ca` ASC LIMIT 5,0,,0.0,0.333,1.0,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `ca` from `heart_attack`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [0], [0], [0], [0]]",SELECT `ca` FROM `heart_attack` ORDER BY `ca` DESC LIMIT 5,0,,0.0,1.0,0.5,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,mobiles,ORDERBY-SINGLE,"List the top 5 rows from the table `mobiles`, sorted by the column `Company Name` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['iPhone 16 Pro Max 512GB', '221g', '8GB', '12MP / 4K', '48MP + 12MP', 'A17 Pro', '4,500mAh', '6.7 inches', 'PKR 344,999', 'INR 124,999', 'CNY 8,199', 'USD 1,299', 'AED 4,199', '2024'], ['iPhone 16 Pro Max 256GB', '221g', '8GB', '12MP / 4K', '48MP + 12MP', 'A17 Pro', '4,500mAh', '6.7 inches', 'PKR 324,999', 'INR 114,999', 'CNY 7,799', 'USD 1,199', 'AED 3,999', '2024'], ['iPhone 16 Pro Max 128GB', '221g', '6GB', '12MP / 4K', '48MP + 12MP', 'A17 Pro', '4,500mAh', '6.7 inches', 'PKR 314,999', 'INR 109,999', 'CNY 7,499', 'USD 1,099', 'AED 3,799', '2024'], ['iPhone 16 Pro 512GB', '206g', '8GB', '12MP / 4K', '50MP + 12MP', 'A17 Pro', '4,400mAh', '6.1 inches', 'PKR 314,999', 'INR 114,999', 'CNY 7,499', 'USD 1,099', 'AED 3,899', '2024'], ['iPhone 16 Pro 256GB', '206g', '8GB', '12MP / 4K', '50MP + 12MP', 'A17 Pro', '4,400mAh', '6.1 inches', 'PKR 294,999', 'INR 104,999', 'CNY 7,099', 'USD 1,049', 'AED 3,699', '2024']]",SELECT * FROM `mobiles` ORDER BY `Company Name` DESC LIMIT 5,0,,0.0,0.103,0.105,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,mobiles,ORDERBY-SINGLE,"List the top 5 rows from the table `mobiles`, sorted by the column `Screen Size` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Apple', 'iPhone 16 128GB', '174g', '6GB', '12MP', '48MP', 'A17 Bionic', '3,600mAh', 'PKR 224,999', 'INR 79,999', 'CNY 5,799', 'USD 799', 'AED 2,799', '2024'], ['Apple', 'iPhone 16 256GB', '174g', '6GB', '12MP', '48MP', 'A17 Bionic', '3,600mAh', 'PKR 234,999', 'INR 84,999', 'CNY 6,099', 'USD 849', 'AED 2,999', '2024'], ['Apple', 'iPhone 16 512GB', '174g', '6GB', '12MP', '48MP', 'A17 Bionic', '3,600mAh', 'PKR 244,999', 'INR 89,999', 'CNY 6,499', 'USD 899', 'AED 3,199', '2024'], ['Apple', 'iPhone 16 Plus 128GB', '203g', '6GB', '12MP', '48MP', 'A17 Bionic', '4,200mAh', 'PKR 249,999', 'INR 89,999', 'CNY 6,199', 'USD 899', 'AED 3,199', '2024'], ['Apple', 'iPhone 16 Plus 256GB', '203g', '6GB', '12MP', '48MP', 'A17 Bionic', '4,200mAh', 'PKR 259,999', 'INR 94,999', 'CNY 6,499', 'USD 949', 'AED 3,399', '2024']]",SELECT * FROM `mobiles` ORDER BY `Screen Size` ASC LIMIT 5,0,,0.0,0.722,0.578,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,mobiles,ORDERBY-SINGLE,"List the top 5 rows from the table `mobiles`, sorted by the column `Processor` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Apple', 'iPhone 16 Pro Max 512GB', '221g', '8GB', '12MP / 4K', '48MP + 12MP', '4,500mAh', '6.7 inches', 'PKR 344,999', 'INR 124,999', 'CNY 8,199', 'USD 1,299', 'AED 4,199', '2024', 'A17 Bionic'], ['Apple', 'iPhone 16 Pro Max 256GB', '221g', '8GB', '12MP / 4K', '48MP + 12MP', '4,500mAh', '6.7 inches', 'PKR 324,999', 'INR 114,999', 'CNY 7,799', 'USD 1,199', 'AED 3,999', '2024', 'A17 Bionic'], ['Apple', 'iPhone 16 Pro Max 128GB', '221g', '6GB', '12MP / 4K', '48MP + 12MP', '4,500mAh', '6.7 inches', 'PKR 314,999', 'INR 109,999', 'CNY 7,499', 'USD 1,099', 'AED 3,799', '2024', 'A17 Bionic'], ['Apple', 'iPhone 16 Pro 512GB', '206g', '8GB', '12MP / 4K', '50MP + 12MP', '4,400mAh', '6.1 inches', 'PKR 314,999', 'INR 114,999', 'CNY 7,499', 'USD 1,099', 'AED 3,899', '2024', 'A17 Bionic'], ['Apple', 'iPhone 16 Pro 256GB', '206g', '8GB', '12MP / 4K', '50MP + 12MP', '4,400mAh', '6.1 inches', 'PKR 294,999', 'INR 104,999', 'CNY 7,099', 'USD 1,049', 'AED 3,699', '2024', 'A17 Bionic']]",SELECT * FROM `mobiles` ORDER BY `Processor` DESC LIMIT 5,0,,0.0,0.825,0.825,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,mobiles,ORDERBY-SINGLE,"List the top 5 rows from the table `mobiles`, sorted by the column `Front Camera` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Apple', 'iPhone 16 128GB', '174g', '6GB', '48MP', 'A17 Bionic', '3,600mAh', '6.1 inches', 'PKR 224,999', 'INR 79,999', 'CNY 5,799', 'USD 799', 'AED 2,799', '2024', '12MP'], ['Apple', 'iPhone 16 256GB', '174g', '6GB', '48MP', 'A17 Bionic', '3,600mAh', '6.1 inches', 'PKR 234,999', 'INR 84,999', 'CNY 6,099', 'USD 849', 'AED 2,999', '2024', '12MP'], ['Apple', 'iPhone 16 512GB', '174g', '6GB', '48MP', 'A17 Bionic', '3,600mAh', '6.1 inches', 'PKR 244,999', 'INR 89,999', 'CNY 6,499', 'USD 899', 'AED 3,199', '2024', '12MP'], ['Apple', 'iPhone 16 Plus 128GB', '203g', '6GB', '48MP', 'A17 Bionic', '4,200mAh', '6.7 inches', 'PKR 249,999', 'INR 89,999', 'CNY 6,199', 'USD 899', 'AED 3,199', '2024', '12MP'], ['Apple', 'iPhone 16 Plus 256GB', '203g', '6GB', '48MP', 'A17 Bionic', '4,200mAh', '6.7 inches', 'PKR 259,999', 'INR 94,999', 'CNY 6,499', 'USD 949', 'AED 3,399', '2024', '12MP']]",SELECT * FROM `mobiles` ORDER BY `Front Camera` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,0.5
+data/db_complete_cut_300.sqlite,mobiles,ORDERBY-PROJECT,Select only the column `RAM` from `mobiles`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB']]",SELECT `RAM` FROM `mobiles` ORDER BY `RAM` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_complete_cut_300.sqlite,mobiles,ORDERBY-PROJECT,Select only the column `RAM` from `mobiles`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB']]",SELECT `RAM` FROM `mobiles` ORDER BY `RAM` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,mobiles,ORDERBY-PROJECT,Select only the column `Launched Price (Dubai)` from `mobiles`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['AED 3,230'], ['AED 3,300'], ['AED 3,400'], ['AED 3,500'], ['AED 3,600']]",SELECT `Launched Price (Dubai)` FROM `mobiles` ORDER BY `Launched Price (Dubai)` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,mobiles,ORDERBY-PROJECT,Select only the column `Model Name` from `mobiles`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['iPhone 12'], ['iPhone 13'], ['iPhone 14'], ['iPhone 15'], ['iPhone 15 Pro']]",SELECT `Model Name` FROM `mobiles` ORDER BY `Model Name` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,mobiles,ORDERBY-PROJECT,Select only the column `Model Name` from `mobiles`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['iPhone 16 Pro Max'], ['iPhone 16 Pro'], ['iPhone 16 Plus'], ['iPhone 16'], ['iPhone 15 Pro Max']]",SELECT `Model Name` FROM `mobiles` ORDER BY `Model Name` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,olympic_games,ORDERBY-SINGLE,"List the top 5 rows from the table `olympic_games`, sorted by the column `city` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[3, 2004, 'Athens'], [0, 1896, 'Athens'], [4, 2008, 'Beijing'], [5, 2012, 'London'], [1, 1900, 'Paris']]",SELECT * FROM `olympic_games` ORDER BY `city` ASC LIMIT 5,0,,0.0,0.714,0.714,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,olympic_games,ORDERBY-PROJECT,Select only the column `city` from `olympic_games`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Athens'], ['Beijing'], ['London'], ['Paris'], ['St. Louis']]",SELECT `city` FROM `olympic_games` ORDER BY `city` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,olympic_games,ORDERBY-PROJECT,Select only the column `city` from `olympic_games`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['St. Louis'], ['Paris'], ['London'], ['Beijing'], ['Athens']]",SELECT `city` FROM `olympic_games` ORDER BY `city` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5

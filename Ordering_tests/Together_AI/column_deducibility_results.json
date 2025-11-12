@@ -1,0 +1,112 @@
+{
+    "accounts_receivable": {
+        "removable_columns": [
+            "countryCode",
+            "customerID",
+            "PaperlessDate",
+            "InvoiceDate",
+            "DueDate",
+            "SettledDate",
+            "DaysToSettle",
+            "DaysLate"
+        ],
+        "reconstruction_errors": {
+            "countryCode": 0.123675,
+            "customerID": 0.026112,
+            "PaperlessDate": 0.036102,
+            "invoiceNumber": 39.808579,
+            "InvoiceDate": 0.018715,
+            "DueDate": 0.007204,
+            "InvoiceAmount": 0.642469,
+            "Disputed": 0.250403,
+            "SettledDate": 0.127657,
+            "PaperlessBill": 0.251817,
+            "DaysToSettle": 0.097068,
+            "DaysLate": 0.001178
+        }
+    },
+    "breast_cancer": {
+        "removable_columns": [
+            "meno"
+        ],
+        "reconstruction_errors": {
+            "id": 2.562974,
+            "pid": 0.824975,
+            "age": 0.443324,
+            "meno": 0.109235,
+            "size": 1.017308,
+            "grade": 0.899609,
+            "nodes": 1.037871,
+            "pgr": 4.079663,
+            "er": 0.978871,
+            "hormon": 0.418238,
+            "rfstime": 0.780977,
+            "status": 0.615233
+        }
+    },
+    "fitness_trakers": {
+        "removable_columns": [
+            "Device Type"
+        ],
+        "reconstruction_errors": {
+            "Brand Name": 7.020683,
+            "Device Type": 0.109735,
+            "Model Name": 1.198783,
+            "Color": 1.09863,
+            "Selling Price": 0.642862,
+            "Original Price": 1.626303,
+            "Display": 0.270796,
+            "Rating (Out of 5)": 1.413729,
+            "Strap Material": 1.462353,
+            "Average Battery Life (in days)": 2.513834,
+            "Reviews": 3.621411
+        }
+    },
+    "heart_attack": {
+        "removable_columns": [],
+        "reconstruction_errors": {
+            "age": 0.82703,
+            "sex": 0.310109,
+            "cp": 0.504536,
+            "trestbps": 1.052295,
+            "chol": 1.07094,
+            "fbs": 0.15847,
+            "restecg": 0.462022,
+            "thalach": 0.793804,
+            "exang": 0.261366,
+            "oldpeak": 0.891331,
+            "slope": 0.293716,
+            "ca": 0.432787,
+            "thal": 0.33377,
+            "target": 0.191639
+        }
+    },
+    "mobiles": {
+        "removable_columns": [],
+        "reconstruction_errors": {
+            "Company Name": 2.371769,
+            "Model Name": 1.059139,
+            "Mobile Weight": 0.203713,
+            "RAM": 0.965229,
+            "Front Camera": 0.912292,
+            "Back Camera": 1.098518,
+            "Processor": 1.229493,
+            "Battery Capacity": 0.745422,
+            "Screen Size": 0.376293,
+            "Launched Price (Pakistan)": 0.765659,
+            "Launched Price (India)": 0.545787,
+            "Launched Price (China)": 0.313994,
+            "Launched Price (USA)": 0.255376,
+            "Launched Price (Dubai)": 0.46026,
+            "Launched Year": 0.896481
+        }
+    },
+    "olympic_games": {
+        "removable_columns": [],
+        "reconstruction_errors": {
+            "id": NaN,
+            "year": NaN,
+            "city": NaN
+        }
+    }
+}

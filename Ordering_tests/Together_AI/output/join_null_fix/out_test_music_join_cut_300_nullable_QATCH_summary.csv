@@ -1,0 +1,5 @@
+table_name,model,avg_valid_efficiency_score,avg_cell_precision,avg_cell_recall,avg_execution_accuracy,avg_tuple_cardinality,avg_tuple_constraint,avg_tuple_order
+albums,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,0.0,0.3758333333333333,0.38711111111111113,0.05555555555555555,1.0,0.14166666666666666,0.5833333333333334
+albums,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,0.0,0.35044444444444445,0.36588888888888893,0.05555555555555555,1.0,0.14166666666666666,0.5833333333333334
+tracks,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,0.0,0.46464,0.44136000000000003,0.06,1.0,0.076,0.55
+tracks,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,0.0,0.36564,0.36546,0.04,1.0,0.055999999999999994,0.53

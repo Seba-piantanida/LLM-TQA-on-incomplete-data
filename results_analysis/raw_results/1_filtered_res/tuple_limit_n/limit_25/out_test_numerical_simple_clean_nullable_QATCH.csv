@@ -1,0 +1,268 @@
+db_path,table_name,test_category,query,model,AI_answer,SQL_query,failed_attempts,note,valid_efficiency_score,cell_precision,cell_recall,execution_accuracy,tuple_cardinality,tuple_constraint,tuple_order
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-PROJECT,Select only the column `id` from `energy_consumption`. Sort it in ascending order and return the first 25 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25]]",SELECT `id` FROM `energy_consumption` ORDER BY `id` ASC LIMIT 25,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-PROJECT,Select only the column `household_name` from `energy_consumption`. Sort it in descending order and return the first 25 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Household 25'], ['Household 24'], ['Household 23'], ['Household 22'], ['Household 21'], ['Household 20'], ['Household 19'], ['Household 18'], ['Household 17'], ['Household 16'], ['Household 15'], ['Household 14'], ['Household 13'], ['Household 12'], ['Household 11'], ['Household 10'], ['Household 9'], ['Household 8'], ['Household 7'], ['Household 6'], ['Household 5'], ['Household 4'], ['Household 3'], ['Household 2'], ['Household 1']]",SELECT `household_name` FROM `energy_consumption` ORDER BY `household_name` DESC LIMIT 25,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-PROJECT,Select only the column `id` from `logistics_delivery`. Sort it in ascending order and return the first 25 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25]]",SELECT `id` FROM `logistics_delivery` ORDER BY `id` ASC LIMIT 25,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-PROJECT,Select only the column `id` from `logistics_delivery`. Sort it in descending order and return the first 25 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[25], [24], [23], [22], [21], [20], [19], [18], [17], [16], [15], [14], [13], [12], [11], [10], [9], [8], [7], [6], [5], [4], [3], [2], [1]]",SELECT `id` FROM `logistics_delivery` ORDER BY `id` DESC LIMIT 25,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-PROJECT,Select only the column `driver_name` from `logistics_delivery`. Sort it in ascending order and return the first 25 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Driver 1'], ['Driver 2'], ['Driver 3'], ['Driver 4'], ['Driver 5'], ['Driver 6'], ['Driver 7'], ['Driver 8'], ['Driver 9'], ['Driver 10'], ['Driver 11'], ['Driver 12'], ['Driver 13'], ['Driver 14'], ['Driver 15'], ['Driver 16'], ['Driver 17'], ['Driver 18'], ['Driver 19'], ['Driver 20'], ['Driver 21'], ['Driver 22'], ['Driver 23'], ['Driver 24'], ['Driver 25']]",SELECT `driver_name` FROM `logistics_delivery` ORDER BY `driver_name` ASC LIMIT 25,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-PROJECT,Select only the column `driver_name` from `logistics_delivery`. Sort it in descending order and return the first 25 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Zachary'], ['Victoria'], ['Tyler'], ['Sophia'], ['Robert'], ['Richard'], ['Olivia'], ['Nathan'], ['Michael'], ['Matthew'], ['Lucas'], ['Lauren'], ['Kevin'], ['Jordan'], ['Jessica'], ['James'], ['Hannah'], ['George'], ['Emily'], ['Daniel'], ['Christopher'], ['Carolyn'], ['Brian'], ['Abigail'], ['William'], ['Sarah']]",SELECT `driver_name` FROM `logistics_delivery` ORDER BY `driver_name` DESC LIMIT 25,0,,0.0,0.0,0.0,0.0,0.962,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-SINGLE,"List the top 25 rows from the table `student_performance`, sorted by the column `id` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 'Student_1', 82, 85, 83.5, 'Yes'], [2, 'Student_2', 48, 93, 70.5, 'Yes'], [3, 'Student_3', 52, 58, 55.0, 'Yes'], [4, 'Student_4', 62, 83, 72.5, 'Yes'], [5, 'Student_5', 51, 52, 51.5, 'Yes'], [6, 'Student_6', 37, 75, 56.0, 'Yes'], [7, 'Student_7', 76, 84, 80.0, 'Yes'], [8, 'Student_8', 40, 54, 47.0, 'No'], [9, 'Student_9', 57, 55, 56.0, 'Yes'], [10, 'Student_10', 52, 42, 47.0, 'No'], [11, 'Student_11', 92, 32, 62.0, 'Yes'], [12, 'Student_12', 47, 60, 53.5, 'Yes'], [13, 'Student_13', 31, 56, 43.5, 'No'], [14, 'Student_14', 81, 76, 78.5, 'Yes'], [15, 'Student_15', 42, 53, 47.5, 'No'], [16, 'Student_16', 62, 30, 46.0, 'No'], [17, 'Student_17', 90, 92, 91.0, 'Yes'], [18, 'Student_18', 78, 69, 73.5, 'Yes'], [19, 'Student_19', 84, 75, 79.5, 'Yes'], [20, 'Student_20', 51, 65, 58.0, 'Yes'], [21, 'Student_21', 49, 55, 52.0, 'Yes'], [22, 'Student_22', 60, 41, 50.5, 'Yes'], [23, 'Student_23', 98, 94, 96.0, 'Yes'], [24, 'Student_24', 85, 87, 86.0, 'Yes'], [25, 'Student_25', 97, 46, 71.5, 'Yes']]",SELECT * FROM `student_performance` ORDER BY `id` ASC LIMIT 25,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-PROJECT,Select only the column `id` from `student_performance`. Sort it in ascending order and return the first 25 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25]]",SELECT `id` FROM `student_performance` ORDER BY `id` ASC LIMIT 25,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-PROJECT,Select only the column `student_name` from `student_performance`. Sort it in ascending order and return the first 25 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Student 1'], ['Student 2'], ['Student 3'], ['Student 4'], ['Student 5'], ['Student 6'], ['Student 7'], ['Student 8'], ['Student 9'], ['Student 10'], ['Student 11'], ['Student 12'], ['Student 13'], ['Student 14'], ['Student 15'], ['Student 16'], ['Student 17'], ['Student 18'], ['Student 19'], ['Student 20'], ['Student 21'], ['Student 22'], ['Student 23'], ['Student 24'], ['Student 25']]",SELECT `student_name` FROM `student_performance` ORDER BY `student_name` ASC LIMIT 25,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-PROJECT,Select only the column `id` from `energy_consumption`. Sort it in ascending order and return the first 25 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25]]",SELECT `id` FROM `energy_consumption` ORDER BY `id` ASC LIMIT 25,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-PROJECT,Select only the column `household_name` from `energy_consumption`. Sort it in descending order and return the first 25 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Household 20'], ['Household 19'], ['Household 18'], ['Household 17'], ['Household 16'], ['Household 15'], ['Household 14'], ['Household 13'], ['Household 12'], ['Household 11'], ['Household 10'], ['Household 9'], ['Household 8'], ['Household 7'], ['Household 6'], ['Household 5'], ['Household 4'], ['Household 3'], ['Household 2'], ['Household 1'], ['Household 0'], ['Household 0'], ['Household 0'], ['Household 0'], ['Household 0'], ['Household 0']]",SELECT `household_name` FROM `energy_consumption` ORDER BY `household_name` DESC LIMIT 25,0,,0.0,0.0,0.0,0.0,0.962,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-PROJECT,Select only the column `id` from `logistics_delivery`. Sort it in ascending order and return the first 25 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `id` FROM `logistics_delivery` ORDER BY `id` ASC LIMIT 25,3,"{
+  ""table_name"": ""energy_consumption"",
+  ""ordered_entries"": [
+    {
+      ""household_name"": ""Household 20""
+    },
+    {
+      ""household_name"": ""Household 19""
+    },
+    {
+      ""household_name"": ""Household 18""
+    },
+    {
+      ""household_name"": ""Household 17""
+    },
+    {
+      ""household_name"": ""Household 16""
+    },
+    {
+      ""household_name"": ""Household 15""
+    },
+    {
+      ""household_name"": ""Household 14""
+    },
+    {
+      ""household_name"": ""Household 13""
+    },
+    {
+      ""household_name"": ""Household 12""
+    },
+    {
+      ""household_name"": ""Household 11""
+    },
+    {
+      ""household_name"": ""Household 10""
+    },
+    {
+      ""household_name"": ""Household 9""
+    },
+    {
+      ""household_name"": ""Household 8""
+    },
+    {
+      ""household_name"": ""Household 7""
+    },
+    {
+      ""household_name"": ""Household 6""
+    },
+    {
+      ""household_name"": ""Household 5""
+    },
+    {
+      ""household_name"": ""Household 4""
+    },
+    {
+      ""household_name"": ""Household 3""
+    },
+    {
+      ""household_name"": ""Household 2""
+    },
+    {
+      ""household_name"": ""Household 1""
+    },
+    {
+      ""household_name"": ""Household 0""
+    },
+    {
+      ""household_name"": ""Household 0""
+    },
+    {
+      ""household_name"": ""Household 0""
+    },
+    {
+      ""household_name"": ""Household 0""
+    },
+    {
+      ""household_name"": ""Household 0""
+    },
+    {
+      ""household_name"": ""Household 0""
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-PROJECT,Select only the column `id` from `logistics_delivery`. Sort it in descending order and return the first 25 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[25], [24], [23], [22], [21], [20], [19], [18], [17], [16], [15], [14], [13], [12], [11], [10], [9], [8], [7], [6], [5], [4], [3], [2], [1]]",SELECT `id` FROM `logistics_delivery` ORDER BY `id` DESC LIMIT 25,1,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-PROJECT,Select only the column `driver_name` from `logistics_delivery`. Sort it in ascending order and return the first 25 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Driver 1'], ['Driver 1'], ['Driver 1'], ['Driver 1'], ['Driver 1'], ['Driver 1'], ['Driver 1'], ['Driver 1'], ['Driver 1'], ['Driver 1'], ['Driver 1'], ['Driver 1'], ['Driver 1'], ['Driver 1'], ['Driver 1'], ['Driver 1'], ['Driver 1'], ['Driver 1'], ['Driver 1'], ['Driver 1'], ['Driver 1'], ['Driver 1'], ['Driver 1'], ['Driver 1'], ['Driver 1'], ['Driver 1'], ['Driver 1'], ['Driver 1']]",SELECT `driver_name` FROM `logistics_delivery` ORDER BY `driver_name` ASC LIMIT 25,0,,0.0,0.0,0.0,0.0,0.893,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-PROJECT,Select only the column `driver_name` from `logistics_delivery`. Sort it in descending order and return the first 25 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `driver_name` FROM `logistics_delivery` ORDER BY `driver_name` DESC LIMIT 25,3,"{
+  ""table_name"": ""logistics_delivery"",
+  ""ordered_entries"": [
+    {
+      ""driver_name"": ""Driver 1""
+    },
+    {
+      ""driver_name"": ""Driver 1""
+    },
+    {
+      ""driver_name"": ""Driver 1""
+    },
+    {
+      ""driver_name"": ""Driver 1""
+    },
+    {
+      ""driver_name"": ""Driver 1""
+    },
+    {
+      ""driver_name"": ""Driver 1""
+    },
+    {
+      ""driver_name"": ""Driver 1""
+    },
+    {
+      ""driver_name"": ""Driver 1""
+    },
+    {
+      ""driver_name"": ""Driver 1""
+    },
+    {
+      ""driver_name"": ""Driver 1""
+    },
+    {
+      ""driver_name"": ""Driver 1""
+    },
+    {
+      ""driver_name"": ""Driver 1""
+    },
+    {
+      ""driver_name"": ""Driver 1""
+    },
+    {
+      ""driver_name"": ""Driver 1""
+    },
+    {
+      ""driver_name"": ""Driver 1""
+    },
+    {
+      ""driver_name"": ""Driver 1""
+    },
+    {
+      ""driver_name"": ""Driver 1""
+    },
+    {
+      ""driver_name"": ""Driver 1""
+    },
+    {
+      ""driver_name"": ""Driver 1""
+    },
+    {
+      ""driver_name"": ""Driver 1""
+    },
+    {
+      ""driver_name"": ""Driver 1""
+    },
+    {
+      ""driver_name"": ""Driver 1""
+    },
+    {
+      ""driver_name"": ""Driver 1""
+    },
+    {
+      ""driver_name"": ""Driver 1""
+    },
+    {
+      ""driver_name"": ""Driver 1""
+    },
+    {
+      ""driver_name"": ""Driver 1""
+    },
+    {
+      ""driver_name"": ""Driver 1""
+    },
+    {
+      ""driver_name"": ""Driver 1""
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-SINGLE,"List the top 25 rows from the table `student_performance`, sorted by the column `id` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1, 'Student_1', 82, 85, 83.5, 'Yes'], [2, 'Student_2', 48, 93, 70.5, 'Yes'], [3, 'Student_3', 52, 58, 55.0, 'Yes'], [4, 'Student_4', 62, 83, 72.5, 'Yes'], [5, 'Student_5', 51, 52, 51.5, 'Yes'], [6, 'Student_6', 37, 75, 56.0, 'Yes'], [7, 'Student_7', 76, 84, 80.0, 'Yes'], [8, 'Student_8', 40, 54, 47.0, 'No'], [9, 'Student_9', 57, 55, 56.0, 'Yes'], [10, 'Student_10', 52, 42, 47.0, 'No'], [11, 'Student_11', 92, 32, 62.0, 'Yes'], [12, 'Student_12', 47, 60, 53.5, 'Yes'], [13, 'Student_13', 31, 56, 43.5, 'No'], [14, 'Student_14', 81, 76, 78.5, 'Yes'], [15, 'Student_15', 42, 53, 47.5, 'No'], [16, 'Student_16', 62, 30, 46.0, 'No'], [17, 'Student_17', 90, 92, 91.0, 'Yes'], [18, 'Student_18', 78, 69, 73.5, 'Yes'], [19, 'Student_19', 84, 75, 79.5, 'Yes'], [20, 'Student_20', 51, 65, 58.0, 'Yes'], [21, 'Student_21', 49, 55, 52.0, 'Yes'], [22, 'Student_22', 60, 41, 50.5, 'Yes'], [23, 'Student_23', 98, 94, 96.0, 'Yes'], [24, 'Student_24', 85, 87, 86.0, 'Yes'], [25, 'Student_25', 97, 46, 71.5, 'Yes']]",SELECT * FROM `student_performance` ORDER BY `id` ASC LIMIT 25,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-PROJECT,Select only the column `id` from `student_performance`. Sort it in ascending order and return the first 25 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25]]",SELECT `id` FROM `student_performance` ORDER BY `id` ASC LIMIT 25,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-PROJECT,Select only the column `student_name` from `student_performance`. Sort it in ascending order and return the first 25 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `student_name` FROM `student_performance` ORDER BY `student_name` ASC LIMIT 25,3,"{
+  ""table_name"": ""student_performance"",
+  ""ordered_entries"": [
+    {
+      ""id"": 1
+    },
+    {
+      ""id"": 2
+    },
+    {
+      ""id"": 3
+    },
+    {
+      ""id"": 4
+    },
+    {
+      ""id"": 5
+    },
+    {
+      ""id"": 6
+    },
+    {
+      ""id"": 7
+    },
+    {
+      ""id"": 8
+    },
+    {
+      ""id"": 9
+    },
+    {
+      ""id"": 10
+    },
+    {
+      ""id"": 11
+    },
+    {
+      ""id"": 12
+    },
+    {
+      ""id"": 13
+    },
+    {
+      ""id"": 14
+    },
+    {
+      ""id"": 15
+    },
+    {
+      ""id"": 16
+    },
+    {
+      ""id"": 17
+    },
+    {
+      ""id"": 18
+    },
+    {
+      ""id"": 19
+    },
+    {
+      ""id"": 20
+    },
+    {
+      ""id"": 21
+    },
+    {
+      ""id"": 22
+    },
+    {
+      ""id"": 23
+    },
+    {
+      ""id"": 24
+    },
+    {
+      ""id"": 25
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0

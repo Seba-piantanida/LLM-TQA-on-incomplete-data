@@ -1,0 +1,17 @@
+tbl_name,query,question
+animals,SELECT `Name` FROM `animals` ORDER BY `Name` ASC LIMIT 5,Select only the column `Name` from `animals`. Sort it in ascending order and return the first 5 values.
+cars,SELECT * FROM `cars` ORDER BY `Country of production` ASC LIMIT 5,"List the top 5 rows from the table `cars`, sorted by the column `Country of production` in ascending order."
+monuments,SELECT * FROM `monuments` ORDER BY `height_m` + `year_built` ASC LIMIT 5,"Compute the sum of the columns height_m, year_built for each row in `monuments`. Sort all rows in ascending order by this sum and return the first 5 rows."
+movies,SELECT `Duration` FROM `movies` ORDER BY `Duration` ASC LIMIT 5,Select only the column `Duration` from `movies`. Sort it in ascending order and return the first 5 values.
+accounts_receivable,SELECT * FROM `accounts_receivable` ORDER BY `InvoiceDate` ASC LIMIT 5,"List the top 5 rows from the table `accounts_receivable`, sorted by the column `InvoiceDate` in ascending order."
+breast_cancer,SELECT * FROM `breast_cancer` ORDER BY `size` + `grade` + `hormon` ASC LIMIT 5,"Compute the sum of the columns size, grade, hormon for each row in `breast_cancer`. Sort all rows in ascending order by this sum and return the first 5 rows."
+fitness_trakers,SELECT `Brand Name` FROM `fitness_trakers` ORDER BY `Brand Name` ASC LIMIT 5,Select only the column `Brand Name` from `fitness_trakers`. Sort it in ascending order and return the first 5 values.
+heart_attack,SELECT * FROM `heart_attack` ORDER BY `thalach` ASC LIMIT 5,"List the top 5 rows from the table `heart_attack`, sorted by the column `thalach` in ascending order."
+mobiles,SELECT * FROM `mobiles` ORDER BY `Front Camera` + `Back Camera` + `Launched Price (Dubai)` ASC LIMIT 5,"Compute the sum of the columns Front Camera, Back Camera, Launched Price (Dubai) for each row in `mobiles`. Sort all rows in ascending order by this sum and return the first 5 rows."
+olympic_games,SELECT `city` FROM `olympic_games` ORDER BY `city` ASC LIMIT 5,Select only the column `city` from `olympic_games`. Sort it in ascending order and return the first 5 values.
+BMI,SELECT * FROM `BMI` ORDER BY `height_m` ASC LIMIT 5,"List the top 5 rows from the table `BMI`, sorted by the column `height_m` in ascending order."
+energy_consumption,SELECT * FROM `energy_consumption` ORDER BY `id` + `household_name` ASC LIMIT 5,"Compute the sum of the columns id, household_name for each row in `energy_consumption`. Sort all rows in ascending order by this sum and return the first 5 rows."
+financial,SELECT `income` FROM `financial` ORDER BY `income` ASC LIMIT 5,Select only the column `income` from `financial`. Sort it in ascending order and return the first 5 values.
+logistics_delivery,SELECT * FROM `logistics_delivery` ORDER BY `fuel_used_l` ASC LIMIT 5,"List the top 5 rows from the table `logistics_delivery`, sorted by the column `fuel_used_l` in ascending order."
+products,SELECT * FROM `products` ORDER BY `category` + `units_sold` + `is_top_seller` ASC LIMIT 5,"Compute the sum of the columns category, units_sold, is_top_seller for each row in `products`. Sort all rows in ascending order by this sum and return the first 5 rows."
+student_performance,SELECT `english_score` FROM `student_performance` ORDER BY `english_score` ASC LIMIT 5,Select only the column `english_score` from `student_performance`. Sort it in ascending order and return the first 5 values.

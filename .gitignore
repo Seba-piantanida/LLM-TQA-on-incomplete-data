@@ -35,7 +35,9 @@ Thumbs.db
 *~
 *.tmp
 *.bak
+.*
 *.swp
 
 /UDF_preparation
 /UDF_tests
+/results feature analysis

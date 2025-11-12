@@ -1,0 +1,10 @@
+table_name,model,avg_valid_efficiency_score,avg_cell_precision,avg_cell_recall,avg_execution_accuracy,avg_tuple_cardinality,avg_tuple_constraint,avg_tuple_order
+fitness_trakers,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,0.0,0.37770000000000004,0.4307,0.1,0.7,0.13999999999999999,0.45
+fitness_trakers,google/gemma-2-27b-it,0.0,0.5709,0.6113000000000001,0.1,1.0,0.42000000000000004,0.71
+fitness_trakers,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,0.0,0.6688,0.6652,0.2,1.0,0.28,0.625
+mobiles,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,0.0,0.375,0.375,0.375,0.5,0.375,0.4375
+mobiles,google/gemma-2-27b-it,0.0,0.5720000000000001,0.560875,0.375,1.0,0.475,0.75
+mobiles,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,0.0,0.572375,0.56675,0.5,1.0,0.5,0.75
+olympic_games,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,0.0,1.0,1.0,1.0,1.0,1.0,0.95
+olympic_games,google/gemma-2-27b-it,0.0,0.9856999999999999,0.9800000000000001,0.9,1.0,0.9800000000000001,0.9400000000000001
+olympic_games,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,0.0,0.7971,0.9550000000000001,0.5,1.0,0.58,0.74

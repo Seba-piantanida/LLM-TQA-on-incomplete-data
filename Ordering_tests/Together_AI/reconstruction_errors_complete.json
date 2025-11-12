@@ -1,0 +1,223 @@
+{
+    "mobiles": {
+        "removable_columns": [],
+        "reconstruction_errors": {
+            "Company Name": 0.29032260179519653,
+            "Launched Year": 0.5698924660682678
+        },
+        "threshold_used": 0.2150537669658661,
+        "median_error": 0.4301075339317322
+    },
+    "fitness_trakers": {
+        "removable_columns": [
+            "Device Type"
+        ],
+        "reconstruction_errors": {
+            "Rating (Out of 5)": 0.915621442517582,
+            "Average Battery Life (in days)": 0.9450847030840661,
+            "Device Type": 0.1666666865348816
+        },
+        "threshold_used": 0.457810721258791,
+        "median_error": 0.915621442517582
+    },
+    "breast_cancer": {
+        "removable_columns": [
+            "id",
+            "meno",
+            "pgr"
+        ],
+        "reconstruction_errors": {
+            "id": 0.08781315140633535,
+            "pid": 0.743014487697532,
+            "age": 0.40913739506072183,
+            "meno": 0.28831957189804736,
+            "size": 0.8874557398238976,
+            "grade": 0.8123352936380431,
+            "nodes": 0.7805136386839789,
+            "pgr": 0.21993774058615742,
+            "er": 0.6926008676267214,
+            "hormon": 0.9279311463704658,
+            "rfstime": 0.6122307550218915,
+            "status": 0.644849439052524
+        },
+        "threshold_used": 0.33436257666981134,
+        "median_error": 0.6687251533396227
+    },
+    "heart_attack": {
+        "removable_columns": [],
+        "reconstruction_errors": {
+            "age": 0.6945814515752374,
+            "sex": 0.8219794810155655,
+            "cp": 0.7911800386778066,
+            "trestbps": 0.9244178742442072,
+            "chol": 0.975994505693102,
+            "fbs": 1.030277826545544,
+            "restecg": 1.0170942259366393,
+            "thalach": 0.6520213931928343,
+            "exang": 0.7970414123216157,
+            "oldpeak": 0.691789180141093,
+            "slope": 0.6103755115512773,
+            "ca": 0.9049271750629444,
+            "thal": 0.9317896952293685,
+            "target": 0.5703205226959117
+        },
+        "threshold_used": 0.4047552233342953,
+        "median_error": 0.8095104466685906
+    },
+    "accounts_receivable": {
+        "removable_columns": [
+            "DaysLate",
+            "Disputed"
+        ],
+        "reconstruction_errors": {
+            "countryCode": 0.8330832364899863,
+            "invoiceNumber": 0.9998345632627984,
+            "InvoiceAmount": 0.8077453751895847,
+            "DaysToSettle": 0.2567136826340326,
+            "DaysLate": 0.003982786324077037,
+            "customerID": 0.37162160873413086,
+            "PaperlessDate": 0.3540540337562561,
+            "Disputed": 0.17027026414871216,
+            "PaperlessBill": 0.3283783793449402
+        },
+        "threshold_used": 0.17702701687812805,
+        "median_error": 0.3540540337562561
+    },
+    "energy_consumption": {
+        "removable_columns": [
+            "kwh_used",
+            "avg_daily_kwh",
+            "total_cost"
+        ],
+        "reconstruction_errors": {
+            "id": 1.0565743679009691,
+            "kwh_used": 0.006595878938100127,
+            "days_active": 0.8086388523932986,
+            "cost_per_kwh": 0.21644141443374643,
+            "avg_daily_kwh": 0.0085825217962661,
+            "total_cost": 0.008407294627516555
+        },
+        "threshold_used": 0.15,
+        "median_error": 0.11251196811500626
+    },
+    "logistics_delivery": {
+        "removable_columns": [
+            "distance_km",
+            "fuel_efficiency_kmpl",
+            "packages_per_km"
+        ],
+        "reconstruction_errors": {
+            "id": 1.0142856642720903,
+            "distance_km": 0.0973964498488136,
+            "packages": 0.2031024582167792,
+            "time_hrs": 0.6301284491094619,
+            "fuel_used_l": 0.23085553218309016,
+            "speed_kmph": 0.23483981903969822,
+            "fuel_efficiency_kmpl": 0.14551378652862232,
+            "packages_per_km": 0.04845013952807445
+        },
+        "threshold_used": 0.15,
+        "median_error": 0.2169789951999347
+    },
+    "student_performance": {
+        "removable_columns": [
+            "math_score",
+            "english_score",
+            "average_score"
+        ],
+        "reconstruction_errors": {
+            "id": 0.6950537252439382,
+            "math_score": 0.03721014212285458,
+            "english_score": 0.06579201022061164,
+            "average_score": 0.01000600236982106
+        },
+        "threshold_used": 0.15,
+        "median_error": 0.05150107617173311
+    },
+    "products": {
+        "removable_columns": [
+            "price",
+            "total_revenue",
+            "is_top_seller"
+        ],
+        "reconstruction_errors": {
+            "id": 1.3103288566918692,
+            "price": 0.06688608425749319,
+            "units_sold": 0.32283762951495776,
+            "total_revenue": 0.04702977018042762,
+            "is_top_seller": 0.1111111044883728
+        },
+        "threshold_used": 0.15,
+        "median_error": 0.1111111044883728
+    },
+    "BMI": {
+        "removable_columns": [
+            "weight_kg",
+            "BMI",
+            "risk_category"
+        ],
+        "reconstruction_errors": {
+            "id": 1.3443963571197615,
+            "height_m": 0.27532187205805597,
+            "weight_kg": 0.032845160530913166,
+            "BMI": 0.02604886516465048,
+            "risk_category": 0.0
+        },
+        "threshold_used": 0.15,
+        "median_error": 0.032845160530913166
+    },
+    "financial": {
+        "removable_columns": [
+            "income",
+            "expenses",
+            "savings"
+        ],
+        "reconstruction_errors": {
+            "id": 1.3342383802121,
+            "income": 0.10186873863235726,
+            "expenses": 0.048849278175490916,
+            "savings": 0.004687176239390862,
+            "risk_profile": 0.3333333134651184
+        },
+        "threshold_used": 0.15,
+        "median_error": 0.10186873863235726
+    },
+    "dataset_animali": {
+        "removable_columns": [],
+        "reconstruction_errors": {
+            "Durata vita media": 0.9803235645754838,
+            "Peso medio (kg)": 2.1478420604467843
+        },
+        "threshold_used": 0.25,
+        "median_error": 1.564082812511134
+    },
+    "dataset_auto": {
+        "removable_columns": [],
+        "reconstruction_errors": {
+            "Anno": 0.968967003512631,
+            "Cavalli": 0.3680123172712751,
+            "Consumo medio (L/100km)": 4.179170272786203
+        },
+        "threshold_used": 0.25,
+        "median_error": 0.968967003512631
+    },
+    "dataset_film_famosi": {
+        "removable_columns": [],
+        "reconstruction_errors": {
+            "Anno": 1.1380916989078664,
+            "Durata": 0.884930200841093,
+            "Oscar vinti": 0.48405879441516403
+        },
+        "threshold_used": 0.25,
+        "median_error": 0.884930200841093
+    },
+    "monumenti_reali": {
+        "removable_columns": [],
+        "reconstruction_errors": {
+            "altezza_m": 6.170846064735474,
+            "anno_costruzione": 1.0150434335392011
+        },
+        "threshold_used": 0.25,
+        "median_error": 3.5929447491373376
+    }
+}

@@ -1,0 +1,552 @@
+db_path,table_name,test_category,query,model,AI_answer,SQL_query,failed_attempts,note,valid_efficiency_score,cell_precision,cell_recall,execution_accuracy,tuple_cardinality,tuple_constraint,tuple_order
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-SINGLE,"List the all rows from the table `dataset_animali`, sorted by the column `Peso medio ` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Balena azzurra', 'Mammifero', 'Oceani', 90, 150000], ['Elefante africano', 'Mammifero', 'Savane africane', 70, 5000], ['Ippopotamo', 'Mammifero', 'Fiumi africani', 40, 3000], ['Rinoceronte bianco', 'Mammifero', 'Savane africane', 50, 3000], ['Orso polare', 'Mammifero', 'Artico', 25, 450], ['Tigre del Bengala', 'Mammifero', 'Foreste', 15, 220], ['Leone', 'Mammifero', 'Savane', 14, 190], ['Pantera nera', 'Mammifero', 'Foreste tropicali', 12, 100], ['Giraffa', 'Mammifero', 'Savane', 25, 1200], ['Canguro rosso', 'Mammifero', 'Deserti australiani', 23, 85], ['Orango', 'Mammifero', 'Foreste pluviali', 30, 70], ['Pitone reticolato', 'Rettile', 'Foreste tropicali', 20, 150], ['Coccodrillo del Nilo', 'Rettile', 'Fiumi e laghi', 70, 1000], ['Tartaruga gigante', 'Rettile', 'Isole Galápagos', 100, 400], ['Cobra reale', 'Rettile', 'Foreste tropicali', 20, 6], ['Camaleonte pantera', 'Rettile', 'Foreste del Madagascar', 5, 0.5], ['Squalo bianco', 'Pesce', 'Oceani', 70, 2000], ['Cavalluccio marino', 'Pesce', 'Barriere coralline', 4, 0.05], ['Aquila reale', 'Uccello', 'Montagne', 25, 7], ['Pinguino imperatore', 'Uccello', 'Antartide', 20, 30], ['Falco pellegrino', 'Uccello', 'Falesie e aree urbane', 15, 1], ['Albatros urlatore', 'Uccello', 'Oceani', 50, 11], ['Pappagallo ara', 'Uccello', 'Foreste pluviali', 50, 1.5], ['Lupo grigio', 'Mammifero', 'Foreste e tundra', 13, 45], ['Foca monaca', 'Mammifero', 'Zone costiere', 30, 70]]",SELECT * FROM `dataset_animali` ORDER BY `Peso medio (kg)` DESC,0,,0.0,0.878,0.867,0.0,1.0,0.44,0.8454999999999999
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-SINGLE,"List the all rows from the table `dataset_animali`, sorted by the column `Nome` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Zebra', 'Mammifero', 'Savane', 25, 1200.0], ['Uccello pinguino', 'Uccello', 'Antartide', 20, 30.0], ['Tigre', 'Mammifero', 'Foreste pluviali', 14, 190.0], ['Squalo', 'Pesce', 'Oceani', 70, 1100.0], ['Renna', 'Mammifero', 'Artico', 25, 450.0], ['Pinguino', 'Uccello', 'Antartide', 20, 30.0], ['Orso polare', 'Mammifero', 'Artico', 25, 450.0], ['Leone', 'Mammifero', 'Savane africane', 14, 190.0], ['Koala', 'Mammifero', 'Foreste pluviali', 14, 90.0], ['Iguana', 'Rettile', 'Isole Galápagos', 100, 250.0], ['Hippopotamo', 'Mammifero', 'Fiumi africani', 40, 1500.0], ['Gatto selvatico', 'Mammifero', 'Deserti australiani', 23, 85.0], ['Foca', 'Mammifero', 'Oceani', 90, 140000.0], ['Elefante', 'Mammifero', 'Savane africane', 70, 6000.0], ['Delfino', 'Mammifero', 'Oceani', 50, 2400.0], ['Coccodrillo', 'Rettile', 'Fiumi e laghi', 70, 500.0], ['Balena', 'Mammifero', 'Oceani', 50, 2400.0], ['Alligatore', 'Rettile', 'Fiumi e laghi', 70, 500.0]]",SELECT * FROM `dataset_animali` ORDER BY `Nome` DESC,0,,0.0,0.698,0.446,0.0,0.72,0.04,1.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-SINGLE,"List the all rows from the table `dataset_film_famosi`, sorted by the column `Durata` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Il Padrino', 1972, 'Francis Ford Coppola', 'Drammatico', 177, 3], ['Titanic', 1997, 'James Cameron', 'Romantico', 194, 11], ['Forrest Gump', 1994, 'Robert Zemeckis', 'Drammatico', 142, 6], ['Il Signore degli Anelli: Il ritorno del re', 2003, 'Peter Jackson', 'Fantasy', 201, 11], ['Pulp Fiction', 1994, 'Quentin Tarantino', 'Crime', 168, 1], [""Schindler's List"", 1993, 'Steven Spielberg', 'Storico', 195, 7], ['Inception', 2010, 'Christopher Nolan', 'Sci-Fi', 148, 4], ['La La Land', 2016, 'Damien Chazelle', 'Musical', 128, 6], ['Gladiator', 2000, 'Ridley Scott', 'Storico', 154, 5], ['The Departed', 2006, 'Martin Scorsese', 'Crime', 151, 4], ['Parasite', 2019, 'Bong Joon-ho', 'Thriller', 132, 4], ['Casablanca', 1942, 'Michael Curtiz', 'Romantico', 102, 3], ['The Shape of Water', 2017, 'Guillermo del Toro', 'Fantasy', 123, 4], ['No Country for Old Men', 2007, 'Ethan & Joel Coen', 'Thriller', 122, 4], ['Chicago', 2002, 'Rob Marshall', 'Musical', 113, 6], ['The English Patient', 1996, 'Anthony Minghella', 'Romantico', 162, 9], ['Slumdog Millionaire', 2008, 'Danny Boyle', 'Drammatico', 120, 8], ['Argo', 2012, 'Ben Affleck', 'Thriller', 120, 3], ['Birdman', 2014, 'Alejandro G. Iñárritu', 'Commedia Drammatica', 119, 4], ['American Beauty', 1999, 'Sam Mendes', 'Drammatico', 122, 5], ['The Godfather Part II', 1974, 'Francis Ford Coppola', 'Drammatico', 202, 6], ['The Silence of the Lambs', 1991, 'Jonathan Demme', 'Thriller', 118, 5], ['12 Years a Slave', 2013, 'Steve McQueen', 'Storico', 134, 3], ['The Artist', 2011, 'Michel Hazanavicius', 'Commedia Drammatica', 100, 5], ['Million Dollar Baby', 2004, 'Clint Eastwood', 'Drammatico', 132, 4]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Durata` DESC,2,,0.0,0.973,0.982,0.0,1.0,0.84,0.7125
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-PROJECT,Select only the column `nome` from `monumenti_reali`. Sort it in ascending order and return the all values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Colosseo'], ['Eiffel Tower'], ['Statua della Libertà'], ['Cristo Redentor'], ['Grande Muraglia'], ['Taj Mahal'], ['Stonehenge'], ['Piramide di Cheope'], ['Petra'], ['Machu Picchu'], ['Moai'], ['Angkor Wat'], ['Easter Island'], ['Chichén Itzá'], ['Colonia di Rovigno'], ['Sagrada Família'], ['Partenone'], ['San Pietroburgo'], ['Duomo di Milano'], ['Statua di Buddha'], ['Sydney Opera House'], ['Burj Khalifa'], ['Atomium'], ['Warsaw Ghetto Heroes Monument'], ['Mount Rushmore'], ['Uluru']]",SELECT `nome` FROM `monumenti_reali` ORDER BY `nome` ASC,1,,0.0,0.462,0.4,0.0,0.867,0.4,0.2204999999999999
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-SINGLE,"List the all rows from the table `dataset_animali`, sorted by the column `Peso medio ` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Elefante africano', 'Mammifero', 'Savane africane', 70, 6000.0], ['Balena azzurra', 'Mammifero', 'Oceani', 90, 5000.0], ['Ippopotamo', 'Mammifero', 'Fiumi africani', 40, 1500.0], ['Rinoceronte bianco', 'Mammifero', 'Savane africane', 50, 3500.0], ['Giraffa', 'Mammifero', 'Savane', 25, 1200.0], ['Tartaruga gigante', 'Rettile', 'Isole Galápagos', 100, 400.0], ['Coccodrillo del Nilo', 'Rettile', 'Fiumi e laghi', 70, 1000.0], ['Orso polare', 'Mammifero', 'Artico', 25, 450.0], ['Leone', 'Mammifero', 'Savane', 14, 250.0], ['Tigre del Bengala', 'Mammifero', 'Foreste', 15, 260.0], ['Pantera nera', 'Mammifero', 'Foreste tropicali', 12, 60.0], ['Lupo grigio', 'Mammifero', 'Foreste e tundra', 13, 45.0], ['Canguro rosso', 'Mammifero', 'Deserti australiani', 23, 85.0], ['Orango', 'Mammifero', 'Foreste pluviali', 30, 50.0], ['Pitone reticolato', 'Rettile', 'Foreste tropicali', 20, 150.0], ['Cobra reale', 'Rettile', 'Foreste tropicali', 20, 6.0], ['Camaleonte pantera', 'Rettile', 'Foreste del Madagascar', 5, 0.2], ['Squalo bianco', 'Pesce', 'Oceani', 70, 2000.0], ['Pappagallo ara', 'Uccello', 'Foreste pluviali', 50, 1.5], ['Aquila reale', 'Uccello', 'Montagne', 25, 6.0], ['Falco pellegrino', 'Uccello', 'Falesie e aree urbane', 15, 1.0], ['Albatros urlatore', 'Uccello', 'Oceani', 50, 11.0], ['Pinguino imperatore', 'Uccello', 'Antartide', 20, 30.0], ['Foca monaca', 'Mammifero', 'Zone costiere', 30, 70.0], ['Cavalluccio marino', 'Pesce', 'Barriere coralline', 4, 0.05]]",SELECT * FROM `dataset_animali` ORDER BY `Peso medio (kg)` DESC,0,,0.0,0.892,0.892,0.0,1.0,0.52,0.915
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-SINGLE,"List the all rows from the table `dataset_animali`, sorted by the column `Nome` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT * FROM `dataset_animali` ORDER BY `Nome` DESC,3,"```
+{
+  ""table_name"": ""dataset_animali"",
+  ""ordered_entries"": [
+    {
+      ""Nome"": ""Elefante africano"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Savane africane"",
+      ""Durata vita media"": 70,
+      ""Peso medio (kg)"": 6000.0
+    },
+    {
+      ""Nome"": ""Balena azzurra"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Oceani"",
+      ""Durata vita media"": 90,
+      ""Peso medio (kg)"": 5000.0
+    },
+    {
+      ""Nome"": ""Ippopotamo"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Fiumi africani"",
+      ""Durata vita media"": 40,
+      ""Peso medio (kg)"": 1500.0
+    },
+    {
+      ""Nome"": ""Rinoceronte bianco"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Savane africane"",
+      ""Durata vita media"": 50,
+      ""Peso medio (kg)"": 3500.0
+    },
+    {
+      ""Nome"": ""Giraffa"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Savane"",
+      ""Durata vita media"": 25,
+      ""Peso medio (kg)"": 1200.0
+    },
+    {
+      ""Nome"": ""Tartaruga gigante"",
+      ""Classe"": ""Rettile"",
+      ""Habitat"": ""Isole Galápagos"",
+      ""Durata vita media"": 100,
+      ""Peso medio (kg)"": 400.0
+    },
+    {
+      ""Nome"": ""Coccodrillo del Nilo"",
+      ""Classe"": ""Rettile"",
+      ""Habitat"": ""Fiumi e laghi"",
+      ""Durata vita media"": 70,
+      ""Peso medio (kg)"": 1000.0
+    },
+    {
+      ""Nome"": ""Orso polare"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Artico"",
+      ""Durata vita media"": 25,
+      ""Peso medio (kg)"": 450.0
+    },
+    {
+      ""Nome"": ""Leone"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Savane"",
+      ""Durata vita media"": 14,
+      ""Peso medio (kg)"": 250.0
+    },
+    {
+      ""Nome"": ""Tigre del Bengala"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Foreste"",
+      ""Durata vita media"": 15,
+      ""Peso medio (kg)"": 260.0
+    },
+    {
+      ""Nome"": ""Pantera nera"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Foreste tropicali"",
+      ""Durata vita media"": 12,
+      ""Peso medio (kg)"": 60.0
+    },
+    {
+      ""Nome"": ""Lupo grigio"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Foreste e tundra"",
+      ""Durata vita media"": 13,
+      ""Peso medio (kg)"": 45.0
+    },
+    {
+      ""Nome"": ""Canguro rosso"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Deserti australiani"",
+      ""Durata vita media"": 23,
+      ""Peso medio (kg)"": 85.0
+    },
+    {
+      ""Nome"": ""Orango"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Foreste pluviali"",
+      ""Durata vita media"": 30,
+      ""Peso medio (kg)"": 50.0
+    },
+    {
+      ""Nome"": ""Pitone reticolato"",
+      ""Classe"": ""Rettile"",
+      ""Habitat"": ""Foreste tropicali"",
+      ""Durata vita media"": 20,
+      ""Peso medio (kg)"": 150.0
+    },
+    {
+      ""Nome"": ""Cobra reale"",
+      ""Classe"": ""Rettile"",
+      ""Habitat"": ""Foreste tropicali"",
+      ""Durata vita media"": 20,
+      ""Peso medio (kg)"": 6.0
+    },
+    {
+      ""Nome"": ""Camaleonte pantera"",
+      ""Classe"": ""Rettile"",
+      ""Habitat"": ""Foreste del Madagascar"",
+      ""Durata vita media"": 5,
+      ""Peso medio (kg)"": 0.2
+    },
+    {
+      ""Nome"": ""Squalo bianco"",
+      ""Classe"": ""Pesce"",
+      ""Habitat"": ""Oceani"",
+      ""Durata vita media"": 70,
+      ""Peso medio (kg)"": 2000.0
+    },
+    {
+      ""Nome"": ""Pappagallo ara"",
+      ""Classe"": ""Uccello"",
+      ""Habitat"": ""Foreste pluviali"",
+      ""Durata vita media"": 50,
+      ""Peso medio (kg)"": 1.5
+    },
+    {
+      ""Nome"": ""Aquila reale"",
+      ""Classe"": ""Uccello"",
+      ""Habitat"": ""Montagne"",
+      ""Durata vita media"": 25,
+      ""Peso medio (kg)"": 6.0
+    },
+    {
+      ""Nome"": ""Falco pellegrino"",
+      ""Classe"": ""Uccello"",
+      ""Habitat"": ""Falesie e aree urbane"",
+      ""Durata vita media"": 15,
+      ""Peso medio (kg)"": 1.0
+    },
+    {
+      ""Nome"": ""Albatros urlatore"",
+      ""Classe"": ""Uccello"",
+      ""Habitat"": ""Oceani"",
+      ""Durata vita media"": 50,
+      ""Peso medio (kg)"": 11.0
+    },
+    {
+      ""Nome"": ""Pinguino imperatore"",
+      ""Classe"": ""Uccello"",
+      ""Habitat"": ""Antartide"",
+      ""Durata vita media"": 20,
+      ""Peso medio (kg)"": 30.0
+    },
+    {
+      ""Nome"": ""Foca monaca"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Zone costiere"",
+      ""Durata vita media"": 30,
+      ""Peso medio (kg)"": 70.0
+    },
+    {
+      ""Nome"": ""Cavalluccio marino"",
+      ""Classe"": ""Pesce"",
+      ""Habitat"": ""Barriere coralline"",
+      ""Durata vita media"": 4,
+      ""Peso medio (kg)"": 0.05
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-SINGLE,"List the all rows from the table `dataset_film_famosi`, sorted by the column `Durata` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT * FROM `dataset_film_famosi` ORDER BY `Durata` DESC,3,"```
+{
+  ""table_name"": ""dataset_animali"",
+  ""ordered_entries"": [
+    {
+      ""Nome"": ""Elefante africano"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Savane africane"",
+      ""Durata vita media"": 70,
+      ""Peso medio (kg)"": 6000.0
+    },
+    {
+      ""Nome"": ""Balena azzurra"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Oceani"",
+      ""Durata vita media"": 90,
+      ""Peso medio (kg)"": 5000.0
+    },
+    {
+      ""Nome"": ""Ippopotamo"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Fiumi africani"",
+      ""Durata vita media"": 40,
+      ""Peso medio (kg)"": 1500.0
+    },
+    {
+      ""Nome"": ""Rinoceronte bianco"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Savane africane"",
+      ""Durata vita media"": 50,
+      ""Peso medio (kg)"": 3500.0
+    },
+    {
+      ""Nome"": ""Giraffa"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Savane"",
+      ""Durata vita media"": 25,
+      ""Peso medio (kg)"": 1200.0
+    },
+    {
+      ""Nome"": ""Tartaruga gigante"",
+      ""Classe"": ""Rettile"",
+      ""Habitat"": ""Isole Galápagos"",
+      ""Durata vita media"": 100,
+      ""Peso medio (kg)"": 400.0
+    },
+    {
+      ""Nome"": ""Coccodrillo del Nilo"",
+      ""Classe"": ""Rettile"",
+      ""Habitat"": ""Fiumi e laghi"",
+      ""Durata vita media"": 70,
+      ""Peso medio (kg)"": 1000.0
+    },
+    {
+      ""Nome"": ""Orso polare"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Artico"",
+      ""Durata vita media"": 25,
+      ""Peso medio (kg)"": 450.0
+    },
+    {
+      ""Nome"": ""Leone"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Savane"",
+      ""Durata vita media"": 14,
+      ""Peso medio (kg)"": 250.0
+    },
+    {
+      ""Nome"": ""Tigre del Bengala"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Foreste"",
+      ""Durata vita media"": 15,
+      ""Peso medio (kg)"": 260.0
+    },
+    {
+      ""Nome"": ""Pantera nera"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Foreste tropicali"",
+      ""Durata vita media"": 12,
+      ""Peso medio (kg)"": 60.0
+    },
+    {
+      ""Nome"": ""Lupo grigio"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Foreste e tundra"",
+      ""Durata vita media"": 13,
+      ""Peso medio (kg)"": 45.0
+    },
+    {
+      ""Nome"": ""Canguro rosso"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Deserti australiani"",
+      ""Durata vita media"": 23,
+      ""Peso medio (kg)"": 85.0
+    },
+    {
+      ""Nome"": ""Orango"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Foreste pluviali"",
+      ""Durata vita media"": 30,
+      ""Peso medio (kg)"": 50.0
+    },
+    {
+      ""Nome"": ""Pitone reticolato"",
+      ""Classe"": ""Rettile"",
+      ""Habitat"": ""Foreste tropicali"",
+      ""Durata vita media"": 20,
+      ""Peso medio (kg)"": 150.0
+    },
+    {
+      ""Nome"": ""Cobra reale"",
+      ""Classe"": ""Rettile"",
+      ""Habitat"": ""Foreste tropicali"",
+      ""Durata vita media"": 20,
+      ""Peso medio (kg)"": 6.0
+    },
+    {
+      ""Nome"": ""Camaleonte pantera"",
+      ""Classe"": ""Rettile"",
+      ""Habitat"": ""Foreste del Madagascar"",
+      ""Durata vita media"": 5,
+      ""Peso medio (kg)"": 0.2
+    },
+    {
+      ""Nome"": ""Squalo bianco"",
+      ""Classe"": ""Pesce"",
+      ""Habitat"": ""Oceani"",
+      ""Durata vita media"": 70,
+      ""Peso medio (kg)"": 2000.0
+    },
+    {
+      ""Nome"": ""Pappagallo ara"",
+      ""Classe"": ""Uccello"",
+      ""Habitat"": ""Foreste pluviali"",
+      ""Durata vita media"": 50,
+      ""Peso medio (kg)"": 1.5
+    },
+    {
+      ""Nome"": ""Aquila reale"",
+      ""Classe"": ""Uccello"",
+      ""Habitat"": ""Montagne"",
+      ""Durata vita media"": 25,
+      ""Peso medio (kg)"": 6.0
+    },
+    {
+      ""Nome"": ""Falco pellegrino"",
+      ""Classe"": ""Uccello"",
+      ""Habitat"": ""Falesie e aree urbane"",
+      ""Durata vita media"": 15,
+      ""Peso medio (kg)"": 1.0
+    },
+    {
+      ""Nome"": ""Albatros urlatore"",
+      ""Classe"": ""Uccello"",
+      ""Habitat"": ""Oceani"",
+      ""Durata vita media"": 50,
+      ""Peso medio (kg)"": 11.0
+    },
+    {
+      ""Nome"": ""Pinguino imperatore"",
+      ""Classe"": ""Uccello"",
+      ""Habitat"": ""Antartide"",
+      ""Durata vita media"": 20,
+      ""Peso medio (kg)"": 30.0
+    },
+    {
+      ""Nome"": ""Foca monaca"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Zone costiere"",
+      ""Durata vita media"": 30,
+      ""Peso medio (kg)"": 70.0
+    },
+    {
+      ""Nome"": ""Cavalluccio marino"",
+      ""Classe"": ""Pesce"",
+      ""Habitat"": ""Barriere coralline"",
+      ""Durata vita media"": 4,
+      ""Peso medio (kg)"": 0.05
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_categorical_simple.sqlite,monumenti_reali,ORDERBY-PROJECT,Select only the column `nome` from `monumenti_reali`. Sort it in ascending order and return the all values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `nome` FROM `monumenti_reali` ORDER BY `nome` ASC,3,"```
+{
+  ""table_name"": ""dataset_animali"",
+  ""ordered_entries"": [
+    {
+      ""Nome"": ""Elefante africano"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Savane africane"",
+      ""Durata vita media"": 70,
+      ""Peso medio (kg)"": 6000.0
+    },
+    {
+      ""Nome"": ""Balena azzurra"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Oceani"",
+      ""Durata vita media"": 90,
+      ""Peso medio (kg)"": 5000.0
+    },
+    {
+      ""Nome"": ""Ippopotamo"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Fiumi africani"",
+      ""Durata vita media"": 40,
+      ""Peso medio (kg)"": 1500.0
+    },
+    {
+      ""Nome"": ""Rinoceronte bianco"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Savane africane"",
+      ""Durata vita media"": 50,
+      ""Peso medio (kg)"": 3500.0
+    },
+    {
+      ""Nome"": ""Giraffa"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Savane"",
+      ""Durata vita media"": 25,
+      ""Peso medio (kg)"": 1200.0
+    },
+    {
+      ""Nome"": ""Tartaruga gigante"",
+      ""Classe"": ""Rettile"",
+      ""Habitat"": ""Isole Galápagos"",
+      ""Durata vita media"": 100,
+      ""Peso medio (kg)"": 400.0
+    },
+    {
+      ""Nome"": ""Coccodrillo del Nilo"",
+      ""Classe"": ""Rettile"",
+      ""Habitat"": ""Fiumi e laghi"",
+      ""Durata vita media"": 70,
+      ""Peso medio (kg)"": 1000.0
+    },
+    {
+      ""Nome"": ""Orso polare"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Artico"",
+      ""Durata vita media"": 25,
+      ""Peso medio (kg)"": 450.0
+    },
+    {
+      ""Nome"": ""Leone"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Savane"",
+      ""Durata vita media"": 14,
+      ""Peso medio (kg)"": 250.0
+    },
+    {
+      ""Nome"": ""Tigre del Bengala"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Foreste"",
+      ""Durata vita media"": 15,
+      ""Peso medio (kg)"": 260.0
+    },
+    {
+      ""Nome"": ""Pantera nera"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Foreste tropicali"",
+      ""Durata vita media"": 12,
+      ""Peso medio (kg)"": 60.0
+    },
+    {
+      ""Nome"": ""Lupo grigio"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Foreste e tundra"",
+      ""Durata vita media"": 13,
+      ""Peso medio (kg)"": 45.0
+    },
+    {
+      ""Nome"": ""Canguro rosso"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Deserti australiani"",
+      ""Durata vita media"": 23,
+      ""Peso medio (kg)"": 85.0
+    },
+    {
+      ""Nome"": ""Orango"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Foreste pluviali"",
+      ""Durata vita media"": 30,
+      ""Peso medio (kg)"": 50.0
+    },
+    {
+      ""Nome"": ""Pitone reticolato"",
+      ""Classe"": ""Rettile"",
+      ""Habitat"": ""Foreste tropicali"",
+      ""Durata vita media"": 20,
+      ""Peso medio (kg)"": 150.0
+    },
+    {
+      ""Nome"": ""Cobra reale"",
+      ""Classe"": ""Rettile"",
+      ""Habitat"": ""Foreste tropicali"",
+      ""Durata vita media"": 20,
+      ""Peso medio (kg)"": 6.0
+    },
+    {
+      ""Nome"": ""Camaleonte pantera"",
+      ""Classe"": ""Rettile"",
+      ""Habitat"": ""Foreste del Madagascar"",
+      ""Durata vita media"": 5,
+      ""Peso medio (kg)"": 0.2
+    },
+    {
+      ""Nome"": ""Squalo bianco"",
+      ""Classe"": ""Pesce"",
+      ""Habitat"": ""Oceani"",
+      ""Durata vita media"": 70,
+      ""Peso medio (kg)"": 2000.0
+    },
+    {
+      ""Nome"": ""Pappagallo ara"",
+      ""Classe"": ""Uccello"",
+      ""Habitat"": ""Foreste pluviali"",
+      ""Durata vita media"": 50,
+      ""Peso medio (kg)"": 1.5
+    },
+    {
+      ""Nome"": ""Aquila reale"",
+      ""Classe"": ""Uccello"",
+      ""Habitat"": ""Montagne"",
+      ""Durata vita media"": 25,
+      ""Peso medio (kg)"": 6.0
+    },
+    {
+      ""Nome"": ""Falco pellegrino"",
+      ""Classe"": ""Uccello"",
+      ""Habitat"": ""Falesie e aree urbane"",
+      ""Durata vita media"": 15,
+      ""Peso medio (kg)"": 1.0
+    },
+    {
+      ""Nome"": ""Albatros urlatore"",
+      ""Classe"": ""Uccello"",
+      ""Habitat"": ""Oceani"",
+      ""Durata vita media"": 50,
+      ""Peso medio (kg)"": 11.0
+    },
+    {
+      ""Nome"": ""Pinguino imperatore"",
+      ""Classe"": ""Uccello"",
+      ""Habitat"": ""Antartide"",
+      ""Durata vita media"": 20,
+      ""Peso medio (kg)"": 30.0
+    },
+    {
+      ""Nome"": ""Foca monaca"",
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Zone costiere"",
+      ""Durata vita media"": 30,
+      ""Peso medio (kg)"": 70.0
+    },
+    {
+      ""Nome"": ""Cavalluccio marino"",
+      ""Classe"": ""Pesce"",
+      ""Habitat"": ""Barriere coralline"",
+      ""Durata vita media"": 4,
+      ""Peso medio (kg)"": 0.05
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0

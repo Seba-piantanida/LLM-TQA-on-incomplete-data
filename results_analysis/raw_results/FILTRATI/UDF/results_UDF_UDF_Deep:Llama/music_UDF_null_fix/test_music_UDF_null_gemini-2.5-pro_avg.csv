@@ -1,0 +1,4 @@
+table,model,avg_valid_efficiency_score,avg_cell_precision,avg_cell_recall,avg_execution_accuracy,avg_tuple_cardinality,avg_tuple_constraint,avg_tuple_order
+albums,gemini-2.5-pro,0.0,0.6666666666666666,0.6666666666666666,0.6666666666666666,1.0,0.6666666666666666,1.0
+artists,gemini-2.5-pro,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+tracks,gemini-2.5-pro,0.0,0.088,0.12940000000000002,0.0,0.7112,0.0334,0.7112

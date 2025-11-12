@@ -1,0 +1,9 @@
+table_name,model,avg_valid_efficiency_score,avg_cell_precision,avg_cell_recall,avg_execution_accuracy,avg_tuple_cardinality,avg_tuple_constraint,avg_tuple_order
+dataset_animali,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,0.0,0.30300000000000005,0.29419999999999996,0.0,0.9800000000000001,0.12,0.6
+dataset_animali,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,0.0,0.2487,0.2467,0.0,1.0,0.06000000000000001,0.55
+dataset_auto,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,0.0,0.4912,0.5623333333333334,0.13333333333333333,1.0,0.17779999999999999,0.6
+dataset_auto,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,0.0,0.5778666666666666,0.6257333333333333,0.0,1.0,0.1422,0.6166666666666667
+dataset_film_famosi,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,0.0,0.38063636363636366,0.4559090909090909,0.2727272727272727,1.0,0.36363636363636365,0.5454545454545454
+dataset_film_famosi,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,0.0,0.4284545454545455,0.6163636363636363,0.18181818181818182,1.0,0.36363636363636365,0.5
+monumenti_reali,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,0.0,0.240625,0.2865,0.0,1.0,0.15,0.5625
+monumenti_reali,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,0.0,0.238,0.29475,0.0,1.0,0.13125,0.5

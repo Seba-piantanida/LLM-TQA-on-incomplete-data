@@ -1,0 +1,312 @@
+db_path,table_name,test_category,query,model,AI_answer,SQL_query,failed_attempts,note,valid_efficiency_score,cell_precision,cell_recall,execution_accuracy,tuple_cardinality,tuple_constraint,tuple_order
+data/categorical_simple_eng.sqlite,animals,ORDERBY-SINGLE,"List the top 5 rows from the table `animals`, sorted by the column `Average weight (kg)` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Blue whale', 'Mammal', 'Oceans', 90, 150000], ['African elephant', 'Mammal', 'African savannas', 70, 5000], ['Hippopotamus', 'Mammal', 'African rivers', 40, 3000], ['White rhinoceros', 'Mammal', 'African savannas', 50, 2300], ['Great white shark', 'Fish', 'Oceans', 70, 2000]]",SELECT * FROM `animals` ORDER BY `Average weight (kg)` DESC LIMIT 5,0,,0.0,0.632,0.6,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,animals,ORDERBY-SINGLE,"List the top 5 rows from the table `animals`, sorted by the column `Name` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['African Elephant', 'Mammal', 'African savannas', 70, 6000.0], ['Cheetah', 'Mammal', 'Savannas', 14, 190.0], ['Nile Crocodile', 'Reptile', 'Rivers and lakes', 70, 500.0], ['Albatross', 'Bird', 'Mountains', 25, 6.0], ['Penguin', 'Bird', 'Antarctica', 20, 30.0]]",SELECT * FROM `animals` ORDER BY `Name` ASC LIMIT 5,0,,0.0,0.364,0.381,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,animals,ORDERBY-SINGLE,Show the first 5 entries ordered by Average weight (kg) in descending order for the table animals,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Blue whale', 'Mammal', 'Oceans', 90, 180000], ['African elephant', 'Mammal', 'African savannas', 70, 6000], ['White rhinoceros', 'Mammal', 'African savannas', 50, 3600], ['Hippopotamus', 'Mammal', 'African rivers', 40, 3000], ['Nile crocodile', 'Reptile', 'Rivers and lakes', 70, 1000]]",SELECT * FROM `animals` ORDER BY `Average weight (kg)` DESC LIMIT 5,0,,0.0,0.65,0.65,0.0,1.0,0.2,1.0
+data/categorical_simple_eng.sqlite,animals,ORDERBY-PROJECT,Select only the column `Name` from `animals`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['African Elephant'], ['Emperor Penguin'], ['Giraffe'], ['Hippopotamus'], ['Kangaroo']]",SELECT `Name` FROM `animals` ORDER BY `Name` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,animals,ORDERBY-PROJECT,Select only the column `Average lifespan` from `animals`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['60-70'], ['12-16'], ['70-100'], ['20-30'], ['20-30']]",SELECT `Average lifespan` FROM `animals` ORDER BY `Average lifespan` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,animals,ORDERBY-PROJECT,Select only the column `Average weight (kg)` from `animals`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0.05], [1], [1], [7], [8]]",SELECT `Average weight (kg)` FROM `animals` ORDER BY `Average weight (kg)` ASC LIMIT 5,0,,0.0,0.5,0.4,0.0,1.0,0.2,1.0
+data/categorical_simple_eng.sqlite,animals,ORDERBY-PROJECT,Project the Name ordered in ascending order for the table animals and show only the first 5 entries,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['African Elephant'], ['Bearded Vulture'], ['Emperor Penguin'], ['Nile Crocodile'], ['Wildebeest']]",SELECT `Name` FROM `animals` ORDER BY `Name` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,animals,ORDERBY-PROJECT,Project the Name ordered in descending order for the table animals and show only the first 5 entries,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Whale'], ['Elephant'], ['Giraffe'], ['Hippopotamus'], ['Rhino']]",SELECT `Name` FROM `animals` ORDER BY `Name` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,cars,ORDERBY-SINGLE,"List the top 5 rows from the table `cars`, sorted by the column `Model` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Volkswagen Jetta', 'Volkswagen', 2021, 'Sedan', 130, 5.1, 'Germany'], ['Volkswagen Golf', 'Volkswagen', 2021, 'Hatchback', 95, 4.8, 'Germany'], ['Toyota Corolla', 'Toyota', 2022, 'City car', 72, 4.8, 'Czech Republic'], ['Renault Clio', 'Renault', 2020, 'Hatchback', 90, 4.3, 'France'], ['Nissan Qashqai', 'Nissan', 2022, 'Hatchback', 150, 0.0, 'Japan']]",SELECT * FROM `cars` ORDER BY `Model` DESC LIMIT 5,0,,0.0,0.286,0.286,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,cars,ORDERBY-SINGLE,"List the top 5 rows from the table `cars`, sorted by the column `Horsepower` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Panda', 'Fiat', 2020, 'City car', 70, 'Italy'], ['Aygo X', 'Toyota', 2022, 'City car', 75, 'Czech Republic'], ['Clio V', 'Renault', 2021, 'Hatchback', 90, 'France'], ['Sandero', 'Dacia', 2021, 'Hatchback', 90, 'Romania'], ['Polo', 'Volkswagen', 2021, 'Hatchback', 90, 'Germany']]",SELECT * FROM `cars` ORDER BY `Horsepower` ASC LIMIT 5,0,,0.0,0.913,0.75,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,cars,ORDERBY-SINGLE,Show the first 5 entries ordered by Model in ascending order for the table cars,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Panda', 'Fiat', 2020, 'City car', 69, 4.9, 'Italy'], ['Passat', 'Volkswagen', 2021, 'Sedan', 130, 5.1, 'Germany'], ['Model 3', 'Tesla', 2022, 'Sedan', 283, 0.0, 'USA'], ['Qashqai', 'Nissan', 2021, 'SUV', 140, 6.2, 'United Kingdom'], ['208', 'Peugeot', 2022, 'Hatchback', 100, 4.5, 'France']]",SELECT * FROM `cars` ORDER BY `Model` ASC LIMIT 5,0,,0.0,0.406,0.448,0.0,1.0,0.2,1.0
+data/categorical_simple_eng.sqlite,cars,ORDERBY-SINGLE,Show the first 5 entries ordered by Horsepower in ascending order for the table cars,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Panda', 'Fiat', 2020, 'City car', 70, 4.9, 'Italy'], ['208', 'Peugeot', 2022, 'Hatchback', 75, 4.5, 'France'], ['Clio V', 'Renault', 2021, 'Hatchback', 80, 4.3, 'France'], ['Corsa', 'Opel', 2022, 'Hatchback', 85, 4.7, 'Germany'], ['Aygo X', 'Toyota', 2022, 'City car', 90, 4.8, 'Czech Republic']]",SELECT * FROM `cars` ORDER BY `Horsepower` ASC LIMIT 5,0,,0.0,0.655,0.679,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,cars,ORDERBY-SINGLE,Show the first 5 entries ordered by Horsepower in descending order for the table cars,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Model 3', 'Tesla', 2022, 'Sedan', 258, 0.0, 'USA'], ['Qashqai', 'Nissan', 2021, 'SUV', 140, 6.2, 'United Kingdom'], ['Golf VIII', 'Volkswagen', 2021, 'Sedan', 115, 5.1, 'Germany'], ['208', 'Peugeot', 2022, 'Hatchback', 100, 4.5, 'France'], ['Panda', 'Fiat', 2020, 'City car', 70, 4.9, 'Italy']]",SELECT * FROM `cars` ORDER BY `Horsepower` DESC LIMIT 5,0,,0.0,0.312,0.345,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,cars,ORDERBY-PROJECT,Select only the column `Brand` from `cars`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Volkswagen'], ['Fiat'], ['Tesla'], ['Nissan'], ['Peugeot']]",SELECT `Brand` FROM `cars` ORDER BY `Brand` ASC LIMIT 5,0,,0.0,0.2,0.2,0.0,1.0,0.2,1.0
+data/categorical_simple_eng.sqlite,cars,ORDERBY-PROJECT,Select only the column `Brand` from `cars`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Volvo'], ['Volkswagen'], ['Toyota'], ['Tesla'], ['Subaru']]",SELECT `Brand` FROM `cars` ORDER BY `Brand` DESC LIMIT 5,0,,0.0,0.6,1.0,0.0,1.0,0.333,1.0
+data/categorical_simple_eng.sqlite,cars,ORDERBY-PROJECT,Select only the column `Model` from `cars`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Fiat Panda'], ['Fiat 500'], ['Tesla Model 3'], ['Tesla Model S'], ['Volkswagen Golf']]",SELECT `Model` FROM `cars` ORDER BY `Model` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,cars,ORDERBY-PROJECT,Select only the column `Model` from `cars`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Jetta'], ['Kona'], ['Leaf'], ['Panda'], ['Yaris']]",SELECT `Model` FROM `cars` ORDER BY `Model` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,cars,ORDERBY-PROJECT,Project the Brand ordered in ascending order for the table cars and show only the first 5 entries,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Fiat'], ['Nissan'], ['Peugeot'], ['Tesla'], ['Volkswagen']]",SELECT `Brand` FROM `cars` ORDER BY `Brand` ASC LIMIT 5,0,,0.0,0.2,0.2,0.0,1.0,0.2,1.0
+data/categorical_simple_eng.sqlite,cars,ORDERBY-PROJECT,Project the Type ordered in ascending order for the table cars and show only the first 5 entries,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Panda', 'Fiat', 2020, 'Hatchback', 69, 4.9, 'Italy'], ['Golf VIII', 'Volkswagen', 2021, 'Hatchback', 130, 5.1, 'Germany'], ['Model 3', 'Tesla', 2022, 'Sedan', 283, 0.0, 'USA'], ['Qashqai', 'Nissan', 2021, 'SUV', 140, 6.2, 'United Kingdom'], ['208', 'Peugeot', 2022, 'Hatchback', 100, 4.5, 'France']]",SELECT `Type` FROM `cars` ORDER BY `Type` ASC LIMIT 5,0,,0.0,0.032,0.5,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,monuments,ORDERBY-SINGLE,"List the top 5 rows from the table `monuments`, sorted by the column `name` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Arch of Titus', 'Italy', 48.0, 80, 'travertine'], ['Leaning Tower of Pisa', 'Italy', 56.7, 1173, 'marble'], ['Eiffel Tower', 'France', 330.0, 1889, 'iron'], ['Statue of Liberty', 'USA', 93.0, 1886, 'copper'], ['Christ the Redeemer', 'Brazil', 38.0, 1931, 'reinforced concrete']]",SELECT * FROM `monuments` ORDER BY `name` ASC LIMIT 5,0,,0.0,0.042,0.042,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,monuments,ORDERBY-SINGLE,"List the top 5 rows from the table `monuments`, sorted by the column `year_built` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Colosseum', 'Italy', 48.0, 70, 'travertine'], ['Leaning Tower of Pisa', 'Italy', 56.7, 1173, 'marble'], ['Statue of Liberty', 'USA', 93.0, 1886, 'copper'], ['Eiffel Tower', 'France', 330.0, 1889, 'iron'], ['Christ the Redeemer', 'Brazil', 38.0, 1931, 'reinforced concrete']]",SELECT * FROM `monuments` ORDER BY `year_built` ASC LIMIT 5,0,,0.0,0.042,0.04,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,monuments,ORDERBY-PROJECT,Select only the column `country` from `monuments`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Brazil'], ['France'], ['Italy'], ['Italy'], ['USA']]",SELECT `country` FROM `monuments` ORDER BY `country` ASC LIMIT 5,0,,0.0,0.25,0.2,0.0,1.0,0.2,1.0
+data/categorical_simple_eng.sqlite,monuments,ORDERBY-PROJECT,Select only the column `height_m` from `monuments`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[828], [553], [330], [172], [108]]",SELECT `height_m` FROM `monuments` ORDER BY `height_m` DESC LIMIT 5,1,,0.0,0.4,0.4,0.0,1.0,0.4,1.0
+data/categorical_simple_eng.sqlite,monuments,ORDERBY-PROJECT,Project the name ordered in ascending order for the table monuments and show only the first 5 entries,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Christ the Redeemer'], ['Eiffel Tower'], ['Leaning Tower of Pisa'], ['Roman Column'], ['Statue of Liberty']]",SELECT `name` FROM `monuments` ORDER BY `name` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,monuments,ORDERBY-PROJECT,Project the height_m ordered in ascending order for the table monuments and show only the first 5 entries,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Christ the Redeemer', 30], ['Colosseum', 48], ['Leaning Tower of Pisa', 55], ['Statue of Liberty', 93], ['Eiffel Tower', 300]]",SELECT `height_m` FROM `monuments` ORDER BY `height_m` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,monuments,ORDERBY-PROJECT,Project the year_built ordered in ascending order for the table monuments and show only the first 5 entries,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Great Pyramid of Giza', 2580], ['Petra', 300], ['Colosseum', 70], ['Leaning Tower of Pisa', 1173], ['Machu Picchu', 1450]]",SELECT `year_built` FROM `monuments` ORDER BY `year_built` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,movies,ORDERBY-SINGLE,"List the top 5 rows from the table `movies`, sorted by the column `Title` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Forrest Gump', 1994, 'Robert Zemeckis', 'Drama', 142, 6], ['Pulp Fiction', 1994, 'Quentin Tarantino', 'Crime', 154, 1], ['The Godfather', 1972, 'Francis Ford Coppola', 'Drama', 175, 3], ['The Godfather: Part II', 1974, 'Francis Ford Coppola', 'Drama', 202, 6], ['The Lord of the Rings: The Return of the King', 2003, 'Peter Jackson', 'Fantasy', 201, 11]]",SELECT * FROM `movies` ORDER BY `Title` ASC LIMIT 5,0,,0.0,0.08,0.071,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,movies,ORDERBY-SINGLE,"List the top 5 rows from the table `movies`, sorted by the column `Title` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['The Godfather', 1972, 'Francis Ford Coppola', 'Drama', 175, 3], ['Titanic', 1997, 'James Cameron', 'Romance', 195, 11], ['Forrest Gump', 1994, 'Robert Zemeckis', 'Drama', 142, 6], ['The Lord of the Rings: The Return of the King', 2003, 'Peter Jackson', 'Fantasy', 201, 11], ['Pulp Fiction', 1994, 'Quentin Tarantino', 'Crime', 154, 1]]",SELECT * FROM `movies` ORDER BY `Title` DESC LIMIT 5,0,,0.0,0.519,0.5,0.0,1.0,0.4,1.0
+data/categorical_simple_eng.sqlite,movies,ORDERBY-SINGLE,Show the first 5 entries ordered by Year in ascending order for the table movies,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['The Godfather', 1972, 'Francis Ford Coppola', 'Drama', 175, 3], ['Forrest Gump', 1994, 'Robert Zemeckis', 'Drama', 142, 6], ['Pulp Fiction', 1994, 'Quentin Tarantino', 'Crime', 154, 1], ['Titanic', 1997, 'James Cameron', 'Romance', 195, 11], ['The Lord of the Rings: The Return of the King', 2003, 'Peter Jackson', 'Fantasy', 201, 11]]",SELECT * FROM `movies` ORDER BY `Year` ASC LIMIT 5,0,,0.0,0.333,0.333,0.0,1.0,0.2,1.0
+data/categorical_simple_eng.sqlite,movies,ORDERBY-PROJECT,Select only the column `Duration` from `movies`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[100], [102], [113], [118], [119]]",SELECT `Duration` FROM `movies` ORDER BY `Duration` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/categorical_simple_eng.sqlite,movies,ORDERBY-PROJECT,Select only the column `Title` from `movies`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['The Godfather'], ['Titanic'], ['Forrest Gump'], ['The Lord of the Rings: The Return of the King'], ['Pulp Fiction']]",SELECT `Title` FROM `movies` ORDER BY `Title` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,movies,ORDERBY-PROJECT,Select only the column `Oscars won` from `movies`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[11], [11], [9], [8], [7]]",SELECT `Oscars won` FROM `movies` ORDER BY `Oscars won` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/categorical_simple_eng.sqlite,movies,ORDERBY-PROJECT,Select only the column `Year` from `movies`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1942], [1972], [1974], [1991], [1993]]",SELECT `Year` FROM `movies` ORDER BY `Year` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/categorical_simple_eng.sqlite,movies,ORDERBY-PROJECT,Project the Director ordered in ascending order for the table movies and show only the first 5 entries,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Francis Ford Coppola'], ['James Cameron'], ['Peter Jackson'], ['Quentin Tarantino'], ['Robert Zemeckis']]",SELECT `Director` FROM `movies` ORDER BY `Director` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,movies,ORDERBY-PROJECT,Project the Year ordered in ascending order for the table movies and show only the first 5 entries,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Casablanca', 1942], ['The Godfather', 1972], ['The Godfather Part II', 1974], ['The Silence of the Lambs', 1991], [""Schindler's List"", 1993]]",SELECT `Year` FROM `movies` ORDER BY `Year` ASC LIMIT 5,0,,0.0,0.5,1.0,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,movies,ORDERBY-PROJECT,Project the Year ordered in descending order for the table movies and show only the first 5 entries,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Parasite', 2019], ['The Shape of Water', 2017], ['Moonlight', 2016], ['Spotlight', 2015], ['Birdman', 2014]]",SELECT `Year` FROM `movies` ORDER BY `Year` DESC LIMIT 5,0,,0.0,0.4,0.8,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,animals,ORDERBY-SINGLE,"List the top 5 rows from the table `animals`, sorted by the column `Average weight (kg)` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Blue whale', 'Mammal', 'Oceans', 90, 150000.0], ['African elephant', 'Mammal', 'African savannas', 70, 6000.0], ['White rhinoceros', 'Mammal', 'African savannas', 50, 3500.0], ['Hippopotamus', 'Mammal', 'African rivers', 40, 3000.0], ['Giraffe', 'Mammal', 'Savannas', 25, 2000.0]]",SELECT * FROM `animals` ORDER BY `Average weight (kg)` DESC LIMIT 5,0,,0.0,0.8,0.8,0.0,1.0,0.2,1.0
+data/categorical_simple_eng.sqlite,animals,ORDERBY-SINGLE,"List the top 5 rows from the table `animals`, sorted by the column `Name` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['African Elephant', 'Mammal', 'African savannas', 70, 6000.0], ['Cheetah', 'Mammal', 'Savannas', 14, 190.0], ['Crocodile', 'Reptile', 'Rivers and lakes', 70, 500.0], ['Eagle', 'Bird', 'Mountains', 25, 6.0], ['Emperor Penguin', 'Bird', 'Antarctica', 20, 30.0]]",SELECT * FROM `animals` ORDER BY `Name` ASC LIMIT 5,0,,0.0,0.364,0.381,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,animals,ORDERBY-SINGLE,Show the first 5 entries ordered by Average weight (kg) in descending order for the table animals,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT * FROM `animals` ORDER BY `Average weight (kg)` DESC LIMIT 5,3,"{
+  ""table_name"": ""animals"",
+  ""ordered_entries"": [
+    {
+      ""Name"": ""African Elephant"",
+      ""Class"": ""Mammal"",
+      ""Habitat"": ""African savannas"",
+      ""Average lifespan"": 70,
+      ""Average weight (kg)"": 6000.0
+    },
+    {
+      ""Name"": ""Cheetah"",
+      ""Class"": ""Mammal"",
+      ""Habitat"": ""Savannas"",
+      ""Average lifespan"": 14,
+      ""Average weight (kg)"": 190.0
+    },
+    {
+      ""Name"": ""Crocodile"",
+      ""Class"": ""Reptile"",
+      ""Habitat"": ""Rivers and lakes"",
+      ""Average lifespan"": 70,
+      ""Average weight (kg)"": 500.0
+    },
+    {
+      ""Name"": ""Eagle"",
+      ""Class"": ""Bird"",
+      ""Habitat"": ""Mountains"",
+      ""Average lifespan"": 25,
+      ""Average weight (kg)"": 6.0
+    },
+    {
+      ""Name"": ""Emperor Penguin"",
+      ""Class"": ""Bird"",
+      ""Habitat"": ""Antarctica"",
+      ""Average lifespan"": 20,
+      ""Average weight (kg)"": 30.0
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/categorical_simple_eng.sqlite,animals,ORDERBY-PROJECT,Select only the column `Name` from `animals`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Aardvark'], ['Addax'], ['Alligator'], ['Albatross'], ['Anchovy']]",SELECT `Name` FROM `animals` ORDER BY `Name` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,animals,ORDERBY-PROJECT,Select only the column `Average lifespan` from `animals`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[60], [50], [45], [40], [35]]",SELECT `Average lifespan` FROM `animals` ORDER BY `Average lifespan` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,animals,ORDERBY-PROJECT,Select only the column `Average weight (kg)` from `animals`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `Average weight (kg)` FROM `animals` ORDER BY `Average weight (kg)` ASC LIMIT 5,3,"{
+  ""table_name"": ""animals"",
+  ""ordered_entries"": [
+    {
+      ""Average lifespan"": 60
+    },
+    {
+      ""Average lifespan"": 50
+    },
+    {
+      ""Average lifespan"": 45
+    },
+    {
+      ""Average lifespan"": 40
+    },
+    {
+      ""Average lifespan"": 35
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/categorical_simple_eng.sqlite,animals,ORDERBY-PROJECT,Project the Name ordered in ascending order for the table animals and show only the first 5 entries,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Aardvark', 'Mammal', 'African savannas', 70, 6000.0], ['Addax', 'Mammal', 'Savannas', 14, 190.0], ['Alligator', 'Reptile', 'Rivers and lakes', 70, 500.0], ['Albatross', 'Bird', 'Mountains', 25, 6.0], ['Penguin', 'Bird', 'Antarctica', 20, 30.0]]",SELECT `Name` FROM `animals` ORDER BY `Name` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,animals,ORDERBY-PROJECT,Project the Name ordered in descending order for the table animals and show only the first 5 entries,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Whale', 'Mammal', 'Oceans', 90, 140000.0], ['Elephant', 'Mammal', 'African savannas', 70, 6000.0], ['Hippopotamus', 'Mammal', 'African rivers', 40, 1500.0], ['Giraffe', 'Mammal', 'Savannas', 25, 1200.0], ['Polar bear', 'Mammal', 'Arctic', 25, 450.0]]",SELECT `Name` FROM `animals` ORDER BY `Name` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,cars,ORDERBY-SINGLE,"List the top 5 rows from the table `cars`, sorted by the column `Model` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT * FROM `cars` ORDER BY `Model` DESC LIMIT 5,3,"```
+{
+  ""table_name"": ""animals"",
+  ""ordered_entries"": [
+    {
+      ""Name"": ""Whale"",
+      ""Class"": ""Mammal"",
+      ""Habitat"": ""Oceans"",
+      ""Average lifespan"": 90,
+      ""Average weight (kg)"": 140000.0
+    },
+    {
+      ""Name"": ""Elephant"",
+      ""Class"": ""Mammal"",
+      ""Habitat"": ""African savannas"",
+      ""Average lifespan"": 70,
+      ""Average weight (kg)"": 6000.0
+    },
+    {
+      ""Name"": ""Hippopotamus"",
+      ""Class"": ""Mammal"",
+      ""Habitat"": ""African rivers"",
+      ""Average lifespan"": 40,
+      ""Average weight (kg)"": 1500.0
+    },
+    {
+      ""Name"": ""Giraffe"",
+      ""Class"": ""Mammal"",
+      ""Habitat"": ""Savannas"",
+      ""Average lifespan"": 25,
+      ""Average weight (kg)"": 1200.0
+    },
+    {
+      ""Name"": ""Polar bear"",
+      ""Class"": ""Mammal"",
+      ""Habitat"": ""Arctic"",
+      ""Average lifespan"": 25,
+      ""Average weight (kg)"": 450.0
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/categorical_simple_eng.sqlite,cars,ORDERBY-SINGLE,"List the top 5 rows from the table `cars`, sorted by the column `Horsepower` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Model 3', 'Tesla', 2022, 'Sedan', 0, 0.0, 'USA'], ['500e', 'Fiat', 2023, 'City car', 0, 0.0, 'Italy'], ['Leaf', 'Nissan', 2022, 'Hatchback', 0, 0.0, 'Japan'], ['EQA', 'Mercedes-Benz', 2023, 'SUV', 0, 0.0, 'Germany'], ['Yaris Cross', 'Toyota', 2023, 'SUV', 94, 4.7, 'Japan']]",SELECT * FROM `cars` ORDER BY `Horsepower` ASC LIMIT 5,0,,0.0,0.304,0.25,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,cars,ORDERBY-SINGLE,Show the first 5 entries ordered by Model in ascending order for the table cars,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Alfa Romeo', 'Alfa Romeo', 2022, 'Sedan', 200, 6.0, 'Italy'], ['Audi', 'Audi', 2022, 'Sedan', 150, 5.7, 'Germany'], ['BMW', 'BMW', 2022, 'Sedan', 184, 5.6, 'Germany'], ['Dacia', 'Dacia', 2021, 'Hatchback', 90, 5.0, 'Romania'], ['Fiat', 'Fiat', 2020, 'City car', 69, 4.9, 'Italy']]",SELECT * FROM `cars` ORDER BY `Model` ASC LIMIT 5,0,,0.0,0.542,0.448,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,cars,ORDERBY-SINGLE,Show the first 5 entries ordered by Horsepower in ascending order for the table cars,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT * FROM `cars` ORDER BY `Horsepower` ASC LIMIT 5,3,"```
+{
+  ""table_name"": ""cars"",
+  ""ordered_entries"": [
+    {
+      ""Model"": ""Alfa Romeo"",
+      ""Brand"": ""Alfa Romeo"",
+      ""Year"": 2022,
+      ""Type"": ""Sedan"",
+      ""Horsepower"": 200,
+      ""Average consumption (L/100km)"": 6.0,
+      ""Country of production"": ""Italy""
+    },
+    {
+      ""Model"": ""Audi"",
+      ""Brand"": ""Audi"",
+      ""Year"": 2022,
+      ""Type"": ""Sedan"",
+      ""Horsepower"": 150,
+      ""Average consumption (L/100km)"": 5.7,
+      ""Country of production"": ""Germany""
+    },
+    {
+      ""Model"": ""BMW"",
+      ""Brand"": ""BMW"",
+      ""Year"": 2022,
+      ""Type"": ""Sedan"",
+      ""Horsepower"": 184,
+      ""Average consumption (L/100km)"": 5.6,
+      ""Country of production"": ""Germany""
+    },
+    {
+      ""Model"": ""Dacia"",
+      ""Brand"": ""Dacia"",
+      ""Year"": 2021,
+      ""Type"": ""Hatchback"",
+      ""Horsepower"": 90,
+      ""Average consumption (L/100km)"": 5.0,
+      ""Country of production"": ""Romania""
+    },
+    {
+      ""Model"": ""Fiat"",
+      ""Brand"": ""Fiat"",
+      ""Year"": 2020,
+      ""Type"": ""City car"",
+      ""Horsepower"": 69,
+      ""Average consumption (L/100km)"": 4.9,
+      ""Country of production"": ""Italy""
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/categorical_simple_eng.sqlite,cars,ORDERBY-SINGLE,Show the first 5 entries ordered by Horsepower in descending order for the table cars,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Model 3', 'Tesla', 2022, 'Sedan', 258, 0.0, 'USA'], ['500e', 'Fiat', 2023, 'City car', 235, 0.0, 'Italy'], ['EQA', 'Mercedes-Benz', 2023, 'SUV', 228, 0.0, 'Germany'], ['Leaf', 'Nissan', 2022, 'Hatchback', 217, 0.0, 'Japan'], ['Yaris Cross', 'Toyota', 2023, 'SUV', 193, 4.7, 'Japan']]",SELECT * FROM `cars` ORDER BY `Horsepower` DESC LIMIT 5,0,,0.0,0.481,0.448,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,cars,ORDERBY-PROJECT,Select only the column `Brand` from `cars`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Alfa Romeo'], ['Fiat'], ['Ford'], ['Honda'], ['Hyundai']]",SELECT `Brand` FROM `cars` ORDER BY `Brand` ASC LIMIT 5,0,,0.0,0.4,0.4,0.0,1.0,0.4,1.0
+data/categorical_simple_eng.sqlite,cars,ORDERBY-PROJECT,Select only the column `Brand` from `cars`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `Brand` FROM `cars` ORDER BY `Brand` DESC LIMIT 5,3,"{
+  ""table_name"": ""cars"",
+  ""ordered_entries"": [
+    {
+      ""Brand"": ""Alfa Romeo""
+    },
+    {
+      ""Brand"": ""Fiat""
+    },
+    {
+      ""Brand"": ""Ford""
+    },
+    {
+      ""Brand"": ""Honda""
+    },
+    {
+      ""Brand"": ""Hyundai""
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/categorical_simple_eng.sqlite,cars,ORDERBY-PROJECT,Select only the column `Model` from `cars`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Golf'], ['Panda'], ['Model 3'], ['Juke'], ['208']]",SELECT `Model` FROM `cars` ORDER BY `Model` ASC LIMIT 5,0,,0.0,0.2,0.2,0.0,1.0,0.2,1.0
+data/categorical_simple_eng.sqlite,cars,ORDERBY-PROJECT,Select only the column `Model` from `cars`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown']]",SELECT `Model` FROM `cars` ORDER BY `Model` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,cars,ORDERBY-PROJECT,Project the Brand ordered in ascending order for the table cars and show only the first 5 entries,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Audi', 'A4', 2022, 'Sedan', 150, 5.7, 'Germany'], ['Fiat', '500e', 2023, 'City car', 118, 0.0, 'Italy'], ['Fiat', 'Panda', 2020, 'City car', 69, 4.9, 'Italy'], ['Ford', 'None', 'None', 'None', 'None', 'None', 'None'], ['Hyundai', 'Tucson', 2022, 'SUV', 150, 6.4, 'South Korea']]",SELECT `Brand` FROM `cars` ORDER BY `Brand` ASC LIMIT 5,2,,0.0,0.08,0.4,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,cars,ORDERBY-PROJECT,Project the Type ordered in ascending order for the table cars and show only the first 5 entries,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Electric', 'Golf VIII', 'Volkswagen', 2021, 130, 5.1, 'Germany'], ['Hatchback', 'Panda', 'Fiat', 2020, 69, 4.9, 'Italy'], ['Sedan', 'Model 3', 'Tesla', 2022, 283, 0.0, 'USA'], ['Crossover', 'Qashqai', 'Nissan', 2021, 140, 6.2, 'United Kingdom'], ['Hatchback', '208', 'Peugeot', 2022, 100, 4.5, 'France']]",SELECT `Type` FROM `cars` ORDER BY `Type` ASC LIMIT 5,0,,0.0,0.031,0.5,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,monuments,ORDERBY-SINGLE,"List the top 5 rows from the table `monuments`, sorted by the column `name` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT * FROM `monuments` ORDER BY `name` ASC LIMIT 5,3,"```
+{
+  ""table_name"": ""cars"",
+  ""ordered_entries"": [
+    {
+      ""Type"": ""Electric"",
+      ""Model"": ""Golf VIII"",
+      ""Brand"": ""Volkswagen"",
+      ""Year"": 2021,
+      ""Horsepower"": 130,
+      ""Average consumption (L/100km)"": 5.1,
+      ""Country of production"": ""Germany""
+    },
+    {
+      ""Type"": ""Hatchback"",
+      ""Model"": ""Panda"",
+      ""Brand"": ""Fiat"",
+      ""Year"": 2020,
+      ""Horsepower"": 69,
+      ""Average consumption (L/100km)"": 4.9,
+      ""Country of production"": ""Italy""
+    },
+    {
+      ""Type"": ""Sedan"",
+      ""Model"": ""Model 3"",
+      ""Brand"": ""Tesla"",
+      ""Year"": 2022,
+      ""Horsepower"": 283,
+      ""Average consumption (L/100km)"": 0.0,
+      ""Country of production"": ""USA""
+    },
+    {
+      ""Type"": ""Crossover"",
+      ""Model"": ""Qashqai"",
+      ""Brand"": ""Nissan"",
+      ""Year"": 2021,
+      ""Horsepower"": 140,
+      ""Average consumption (L/100km)"": 6.2,
+      ""Country of production"": ""United Kingdom""
+    },
+    {
+      ""Type"": ""Hatchback"",
+      ""Model"": ""208"",
+      ""Brand"": ""Peugeot"",
+      ""Year"": 2022,
+      ""Horsepower"": 100,
+      ""Average consumption (L/100km)"": 4.5,
+      ""Country of production"": ""France""
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/categorical_simple_eng.sqlite,monuments,ORDERBY-SINGLE,"List the top 5 rows from the table `monuments`, sorted by the column `year_built` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Colosseum', 'Italy', 48.0, 80, 'travertine'], ['Leaning Tower of Pisa', 'Italy', 56.7, 1173, 'marble'], ['Leaning Tower of Torun', 'Poland', 15.0, 1274, 'brick'], ['Eiffel Tower', 'France', 330.0, 1889, 'iron'], ['Statue of Liberty', 'USA', 93.0, 1889, 'copper']]",SELECT * FROM `monuments` ORDER BY `year_built` ASC LIMIT 5,0,,0.0,0.043,0.04,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,monuments,ORDERBY-PROJECT,Select only the column `country` from `monuments`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['China'], ['China'], ['Egypt'], ['France'], ['France']]",SELECT `country` FROM `monuments` ORDER BY `country` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,monuments,ORDERBY-PROJECT,Select only the column `height_m` from `monuments`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `height_m` FROM `monuments` ORDER BY `height_m` DESC LIMIT 5,3,"{
+  ""table_name"": ""monuments"",
+  ""ordered_entries"": [
+    {
+      ""country"": ""China""
+    },
+    {
+      ""country"": ""China""
+    },
+    {
+      ""country"": ""Egypt""
+    },
+    {
+      ""country"": ""France""
+    },
+    {
+      ""country"": ""France""
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/categorical_simple_eng.sqlite,monuments,ORDERBY-PROJECT,Project the name ordered in ascending order for the table monuments and show only the first 5 entries,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Ancient Monument', 'China', 7.8, -221, 'stone'], ['Ancient Structure', 'India', 73.0, 1643, 'marble'], ['Ancient Temple', 'United Kingdom', 4.0, -2500, 'sarsen'], ['Historic Monument', 'Chile', 4.0, 1250, 'tuff'], ['Medieval Monument', 'Poland', 15.0, 1274, 'brick']]",SELECT `name` FROM `monuments` ORDER BY `name` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,monuments,ORDERBY-PROJECT,Project the height_m ordered in ascending order for the table monuments and show only the first 5 entries,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[30.0], [55.0], [60.0], [61.0], [63.0]]",SELECT `height_m` FROM `monuments` ORDER BY `height_m` ASC LIMIT 5,1,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,monuments,ORDERBY-PROJECT,Project the year_built ordered in ascending order for the table monuments and show only the first 5 entries,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Colosseum', 'Italy', 48.0, 72, 'travertine'], ['Leaning Tower of Pisa', 'Italy', 56.7, 1173, 'marble'], ['Leaning Tower of Torun', 'Poland', 15.0, 1274, 'brick'], ['Stonehenge', 'United Kingdom', 4.0, 3000, 'sarsen'], ['Moai (Easter Island)', 'Chile', 4.0, 1200, 'tuff']]",SELECT `year_built` FROM `monuments` ORDER BY `year_built` ASC LIMIT 5,2,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,movies,ORDERBY-SINGLE,"List the top 5 rows from the table `movies`, sorted by the column `Title` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['12 Angry Men', 1972, 'Francis Ford Coppola', 'Drama', 175, 3], ['American Beauty', 1999, 'Sam Mendes', 'Drama', 122, 5], ['Casablanca', 1942, 'Michael Curtiz', 'Romance', 102, 3], ['Chicago', 2002, 'Rob Marshall', 'Musical', 113, 6], ['Django Unchained', 2012, 'Quentin Tarantino', 'Western', 165, 2]]",SELECT * FROM `movies` ORDER BY `Title` ASC LIMIT 5,1,,0.0,0.464,0.464,0.0,1.0,0.4,1.0
+data/categorical_simple_eng.sqlite,movies,ORDERBY-SINGLE,"List the top 5 rows from the table `movies`, sorted by the column `Title` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Unknown', 2014, 'Alejandro G. Iñárritu', 'Comedy-Drama', 119, 4], ['Unknown', 2013, 'Steve McQueen', 'Historical', 134, 3], ['Unknown', 2012, 'Ben Affleck', 'Thriller', 120, 3], ['Unknown', 2011, 'Michel Hazanavicius', 'Comedy-Drama', 100, 5], ['Unknown', 2010, 'Christopher Nolan', 'Sci-Fi', 148, 4]]",SELECT * FROM `movies` ORDER BY `Title` DESC LIMIT 5,2,,0.0,0.13,0.107,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,movies,ORDERBY-SINGLE,Show the first 5 entries ordered by Year in ascending order for the table movies,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Casablanca', 1942, 'Michael Curtiz', 'Romance', 102, 3], ['The Godfather', 1972, 'Francis Ford Coppola', 'Drama', 175, 3], ['The Godfather Part II', 1974, 'Francis Ford Coppola', 'Drama', 202, 6], ['The English Patient', 1996, 'Anthony Minghella', 'Romance', 162, 9], ['American Beauty', 1999, 'Sam Mendes', 'Drama', 122, 5]]",SELECT * FROM `movies` ORDER BY `Year` ASC LIMIT 5,1,,0.0,0.64,0.593,0.0,1.0,0.6,1.0
+data/categorical_simple_eng.sqlite,movies,ORDERBY-PROJECT,Select only the column `Duration` from `movies`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[120], [120], [126], [130], [132]]",SELECT `Duration` FROM `movies` ORDER BY `Duration` ASC LIMIT 5,2,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,movies,ORDERBY-PROJECT,Select only the column `Title` from `movies`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['12 Angry Men'], ['American Beauty'], ['Apollo 13'], ['Chicago'], ['Crash']]",SELECT `Title` FROM `movies` ORDER BY `Title` ASC LIMIT 5,1,,0.0,0.2,0.2,0.0,1.0,0.2,1.0
+data/categorical_simple_eng.sqlite,movies,ORDERBY-PROJECT,Select only the column `Oscars won` from `movies`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[11], [11], [10], [9], [9]]",SELECT `Oscars won` FROM `movies` ORDER BY `Oscars won` DESC LIMIT 5,2,,0.0,0.667,0.5,0.0,1.0,0.25,1.0
+data/categorical_simple_eng.sqlite,movies,ORDERBY-PROJECT,Select only the column `Year` from `movies`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1972], [1972], [1974], [1975], [1979]]",SELECT `Year` FROM `movies` ORDER BY `Year` ASC LIMIT 5,2,,0.0,0.5,0.4,0.0,1.0,0.2,1.0
+data/categorical_simple_eng.sqlite,movies,ORDERBY-PROJECT,Project the Director ordered in ascending order for the table movies and show only the first 5 entries,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['12 Years a Slave', 2013, 'Steve McQueen', 'Historical', 134, 3], ['American Beauty', 1999, 'Sam Mendes', 'Drama', 122, 5], ['Argo', 2012, 'Ben Affleck', 'Thriller', 120, 3], ['Birdman', 2014, 'Alejandro G. Iñárritu', 'Comedy-Drama', 119, 4], ['Casablanca', 1942, 'Michael Curtiz', 'Romance', 102, 3]]",SELECT `Director` FROM `movies` ORDER BY `Director` ASC LIMIT 5,1,,0.0,0.071,0.4,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,movies,ORDERBY-PROJECT,Project the Year ordered in ascending order for the table movies and show only the first 5 entries,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Casablanca', 1942, 'Michael Curtiz', 'Romance', 102, 3], ['The Godfather', 1972, 'Francis Ford Coppola', 'Drama', 175, 3], ['The Godfather Part II', 1974, 'Francis Ford Coppola', 'Drama', 202, 6], ['The English Patient', 1996, 'Anthony Minghella', 'Romance', 162, 9], ['Titanic', 1997, 'James Cameron', 'Romance', 195, 11]]",SELECT `Year` FROM `movies` ORDER BY `Year` ASC LIMIT 5,1,,0.0,0.12,0.6,0.0,1.0,0.0,0.5
+data/categorical_simple_eng.sqlite,movies,ORDERBY-PROJECT,Project the Year ordered in descending order for the table movies and show only the first 5 entries,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[2019], [2018], [2017], [2016], [2015]]",SELECT `Year` FROM `movies` ORDER BY `Year` DESC LIMIT 5,2,,0.0,0.6,0.6,0.0,1.0,0.6,1.0

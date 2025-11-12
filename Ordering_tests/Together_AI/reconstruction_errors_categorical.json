@@ -1,0 +1,40 @@
+{
+    "dataset_animali": {
+        "removable_columns": [],
+        "reconstruction_errors": {
+            "Durata vita media": 0.9803235645754838,
+            "Peso medio (kg)": 2.1478420604467843
+        },
+        "threshold_used": 0.25,
+        "median_error": 1.564082812511134
+    },
+    "dataset_auto": {
+        "removable_columns": [],
+        "reconstruction_errors": {
+            "Anno": 0.968967003512631,
+            "Cavalli": 0.3680123172712751,
+            "Consumo medio (L/100km)": 4.179170272786203
+        },
+        "threshold_used": 0.25,
+        "median_error": 0.968967003512631
+    },
+    "dataset_film_famosi": {
+        "removable_columns": [],
+        "reconstruction_errors": {
+            "Anno": 1.1380916989078664,
+            "Durata": 0.884930200841093,
+            "Oscar vinti": 0.48405879441516403
+        },
+        "threshold_used": 0.25,
+        "median_error": 0.884930200841093
+    },
+    "monumenti_reali": {
+        "removable_columns": [],
+        "reconstruction_errors": {
+            "altezza_m": 6.170846064735474,
+            "anno_costruzione": 1.0150434335392011
+        },
+        "threshold_used": 0.25,
+        "median_error": 3.5929447491373376
+    }
+}

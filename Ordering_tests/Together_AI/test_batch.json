@@ -1,0 +1,117 @@
+{
+  "models": [
+    "meta-llama/Llama-3.3-70B-Instruct-Turbo-Free",
+    "deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free"
+    
+  ],
+  "tests": [
+      {
+      "test_file": "tests/tuple_limit_n/clean/test_numerical_simple_clean_limit_10.csv",
+      "out_path": "output/tuple_limit_n/limit_10_clean"
+    },
+     {
+      "test_file": "tests/tuple_limit_n/clean/test_numerical_simple_clean_limit_15.csv",
+      "out_path": "output/tuple_limit_n/limit_15_clean"
+    },
+     {
+      "test_file": "tests/tuple_limit_n/clean/test_numerical_simple_clean_limit_20.csv",
+      "out_path": "output/tuple_limit_n/limit_20_clean"
+    },
+     {
+      "test_file": "tests/tuple_limit_n/clean/test_numerical_simple_clean_limit_25.csv",
+      "out_path": "output/tuple_limit_n/limit_25_clean"
+    }
+    ,
+     {
+      "test_file": "tests/tuple_limit_n/clean/test_numerical_simple_clean_limit_n.csv",
+      "out_path": "output/tuple_limit_n/limit_n_clean"
+    }
+  
+
+  ],
+  "not_included": [
+     {
+      "test_file": "tests/advanced_num_only/categorical_simple/test_categorical_simple.csv",
+      "out_path": "output/advanced_orederby_num_only/categorical_simple"
+    },
+    {
+      "test_file": "tests/advanced_num_only/numerical_simple/test_numerical_simple.csv",
+      "out_path": "output/advanced_orederby_num_only/numerical_simple"
+    },
+     {
+      "test_file": "tests/type_fix/test_numerical_simple.csv",
+      "out_path": "output/type_fix/numerical_simple"
+    },
+    {
+      "test_file": "tests/reduced_db/test_numerical_simple_r_10.csv",
+      "out_path": "output/reduced_db/numerical_simple/row_10"
+    },
+    {
+      "test_file": "tests/test_categorical_simple.csv",
+      "out_path": "output/categorical_simple"
+    },
+
+    {
+      "test_file": "tests/test_complete_cut_300.csv",
+      "out_path": "output/complete_cut_300"
+    },{
+      "test_file": "tests/reduced_db/categorical_simple/test_categorical_simple_r_20.csv",
+      "out_path": "output/reduced_db/categorical_simple/row_20"
+    },
+
+    {
+      "test_file": "tests/tuple_limit_n/limit_25/test_complete_cut_300.csv",
+      "out_path": "output/tuple_limit_n/limit_25"
+    },
+    {
+      "test_file": "tests/tuple_limit_n/limit_25/test_numerical_simple.csv",
+      "out_path": "output/tuple_limit_n/limit_25"
+    },
+
+    {
+      "test_file": "tests/tuple_limit_n/limit_30/test_categorical_simple.csv",
+      "out_path": "output/tuple_limit_n/limit_30"
+    },
+    {
+      "test_file": "tests/tuple_limit_n/limit_30/test_complete_cut_300.csv",
+      "out_path": "output/tuple_limit_n/limit_30"
+    },
+    {
+      "test_file": "tests/tuple_limit_n/limit_30/test_numerical_simple.csv",
+      "out_path": "output/tuple_limit_n/limit_30"
+    },
+
+    {
+      "test_file": "tests/tuple_limit_n/limit_n/test_categorical_simple.csv",
+      "out_path": "output/tuple_limit_n/limit_n"
+    },
+    {
+      "test_file": "tests/tuple_limit_n/limit_n/test_complete_cut_300.csv",
+      "out_path": "output/tuple_limit_n/limit_n"
+    },
+    {
+      "test_file": "tests/tuple_limit_n/limit_n/test_numerical_simple.csv",
+      "out_path": "output/tuple_limit_n/limit_n"
+    },
+         {
+      "test_file": "tests/tuple_limit_n/limit_15/test_complete_cut_300.csv",
+      "out_path": "output/tuple_limit_n/limit_15_null"
+    },
+    
+      
+    {
+      "test_file": "tests/complete_multi_cut/test_complete_cut_600.csv",
+      "out_path": "output/complete_multi_cut/test_complete_cut_600"
+    },
+    {
+      "test_file": "tests/complete_multi_cut/test_complete_cut_1000.csv",
+      "out_path": "output/complete_multi_cut/test_complete_cut_1000"
+    },
+    {
+      "test_file": "tests/complete_multi_cut/test_complete_cut_2000.csv",
+      "out_path": "output/complete_multi_cut/test_complete_cut_2000"
+    }
+     
+  ]
+}
+

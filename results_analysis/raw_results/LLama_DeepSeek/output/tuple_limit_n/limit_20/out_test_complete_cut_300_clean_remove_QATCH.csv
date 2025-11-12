@@ -1,0 +1,278 @@
+db_path,table_name,test_category,query,model,AI_answer,SQL_query,failed_attempts,note,valid_efficiency_score,cell_precision,cell_recall,execution_accuracy,tuple_cardinality,tuple_constraint,tuple_order
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `age` from `breast_cancer`. Sort it in ascending order and return the first 20 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0]]",SELECT `age` FROM `breast_cancer` ORDER BY `age` ASC LIMIT 20,1,,0.0,0.0,0.0,0.0,0.952,0.0,0.5
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `meno` from `breast_cancer`. Sort it in ascending order and return the first 20 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['premenopausal'], ['postmenopausal'], ['postmenopausal'], ['premenopausal'], ['postmenopausal'], ['premenopausal'], ['premenopausal'], ['postmenopausal'], ['postmenopausal'], ['premenopausal'], ['postmenopausal'], ['postmenopausal'], ['premenopausal'], ['premenopausal'], ['postmenopausal'], ['premenopausal'], ['postmenopausal'], ['postmenopausal'], ['premenopausal'], ['postmenopausal']]",SELECT `meno` FROM `breast_cancer` ORDER BY `meno` ASC LIMIT 20,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `exang` from `heart_attack`. Sort it in ascending order and return the first 20 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0]]",SELECT `exang` FROM `heart_attack` ORDER BY `exang` ASC LIMIT 20,0,,0.0,1.0,0.5,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,mobiles,ORDERBY-PROJECT,Select only the column `RAM` from `mobiles`. Sort it in ascending order and return the first 20 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB']]",SELECT `RAM` FROM `mobiles` ORDER BY `RAM` ASC LIMIT 20,0,,0.0,1.0,0.5,0.0,0.952,0.0,1.0
+data/db_complete_cut_300.sqlite,mobiles,ORDERBY-PROJECT,Select only the column `RAM` from `mobiles`. Sort it in descending order and return the first 20 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['8GB'], ['8GB'], ['8GB'], ['8GB'], ['8GB'], ['8GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB']]",SELECT `RAM` FROM `mobiles` ORDER BY `RAM` DESC LIMIT 20,0,,0.0,1.0,1.0,1.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,mobiles,ORDERBY-PROJECT,Select only the column `Model Name` from `mobiles`. Sort it in ascending order and return the first 20 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['iPhone 15'], ['iPhone 15'], ['iPhone 15'], ['iPhone 15'], ['iPhone 15'], ['iPhone 15'], ['iPhone 16'], ['iPhone 16'], ['iPhone 16'], ['iPhone 16 Plus'], ['iPhone 16 Plus'], ['iPhone 16 Plus'], ['iPhone 16 Pro'], ['iPhone 16 Pro'], ['iPhone 16 Pro'], ['iPhone 16 Pro Max'], ['iPhone 16 Pro Max'], ['iPhone 16 Pro Max'], ['iPhone 16 Pro Max'], ['iPhone 16 Pro Max']]",SELECT `Model Name` FROM `mobiles` ORDER BY `Model Name` ASC LIMIT 20,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,mobiles,ORDERBY-PROJECT,Select only the column `Model Name` from `mobiles`. Sort it in descending order and return the first 20 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['iPhone 15 Pro Max'], ['iPhone 15 Pro'], ['iPhone 15 Pro'], ['iPhone 15 Pro'], ['iPhone 15 Pro'], ['iPhone 15 Pro'], ['iPhone 15 Pro'], ['iPhone 15 Pro'], ['iPhone 15 Pro'], ['iPhone 15 Pro'], ['iPhone 15 Pro'], ['iPhone 15 Pro'], ['iPhone 15 Pro'], ['iPhone 15 Pro'], ['iPhone 15 Pro'], ['iPhone 15 Pro'], ['iPhone 15 Pro'], ['iPhone 15 Pro'], ['iPhone 15 Pro'], ['iPhone 15 Pro']]",SELECT `Model Name` FROM `mobiles` ORDER BY `Model Name` DESC LIMIT 20,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,olympic_games,ORDERBY-SINGLE,"List the top 20 rows from the table `olympic_games`, sorted by the column `city` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0, 1896, 'Athens'], [1, 1900, 'Paris'], [2, 1904, 'St. Louis'], [3, 2004, 'Athens'], [4, 2008, 'Beijing'], [5, 2012, 'London']]",SELECT * FROM `olympic_games` ORDER BY `city` ASC LIMIT 20,0,,0.0,0.706,0.706,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `age` from `breast_cancer`. Sort it in ascending order and return the first 20 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `age` FROM `breast_cancer` ORDER BY `age` ASC LIMIT 20,3,"""table_name"": ""breast_cancer"",
+""ordered_entries"": [
+  {
+    ""age"": 30
+  },
+  {
+    ""age"": 30
+  },
+  {
+    ""age"": 30
+  },
+  {
+    ""age"": 32
+  },
+  {
+    ""age"": 33
+  },
+  {
+    ""age"": 33
+  },
+  {
+    ""age"": 34
+  },
+  {
+    ""age"": 35
+  },
+  {
+    ""age"": 36
+  },
+  {
+    ""age"": 37
+  },
+  {
+    ""age"": 38
+  },
+  {
+    ""age"": 39
+  },
+  {
+    ""age"": 40
+  },
+  {
+    ""age"": 41
+  },
+  {
+    ""age"": 42
+  },
+  {
+    ""age"": 43
+  },
+  {
+    ""age"": 44
+  },
+  {
+    ""age"": 45
+  },
+  {
+    ""age"": 46
+  },
+  {
+    ""age"": 47
+  },
+  {
+    ""age"": 48
+  }
+]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `meno` from `breast_cancer`. Sort it in ascending order and return the first 20 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `meno` FROM `breast_cancer` ORDER BY `meno` ASC LIMIT 20,3,"""table_name"": ""breast_cancer"",
+""ordered_entries"": [
+  {
+    ""meno"": 0
+  },
+  {
+    ""meno"": 0
+  },
+  {
+    ""meno"": 0
+  },
+  {
+    ""meno"": 0
+  },
+  {
+    ""meno"": 0
+  },
+  {
+    ""meno"": 0
+  },
+  {
+    ""meno"": 0
+  },
+  {
+    ""meno"": 0
+  },
+  {
+    ""meno"": 0
+  },
+  {
+    ""meno"": 0
+  },
+  {
+    ""meno"": 0
+  },
+  {
+    ""meno"": 0
+  },
+  {
+    ""meno"": 0
+  },
+  {
+    ""meno"": 0
+  },
+  {
+    ""meno"": 0
+  },
+  {
+    ""meno"": 0
+  },
+  {
+    ""meno"": 0
+  },
+  {
+    ""meno"": 0
+  },
+  {
+    ""meno"": 0
+  },
+  {
+    ""meno"": 0
+  },
+  {
+    ""meno"": 0
+  }
+]",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `exang` from `heart_attack`. Sort it in ascending order and return the first 20 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0]]",SELECT `exang` FROM `heart_attack` ORDER BY `exang` ASC LIMIT 20,0,,0.0,1.0,0.5,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,mobiles,ORDERBY-PROJECT,Select only the column `RAM` from `mobiles`. Sort it in ascending order and return the first 20 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `RAM` FROM `mobiles` ORDER BY `RAM` ASC LIMIT 20,3,"{
+  ""table_name"": ""heart_attack"",
+  ""ordered_entries"": [
+    {
+      ""exang"": 0
+    },
+    {
+      ""exang"": 0
+    },
+    {
+      ""exang"": 0
+    },
+    {
+      ""exang"": 0
+    },
+    {
+      ""exang"": 0
+    },
+    {
+      ""exang"": 0
+    },
+    {
+      ""exang"": 0
+    },
+    {
+      ""exang"": 0
+    },
+    {
+      ""exang"": 0
+    },
+    {
+      ""exang"": 0
+    },
+    {
+      ""exang"": 0
+    },
+    {
+      ""exang"": 0
+    },
+    {
+      ""exang"": 0
+    },
+    {
+      ""exang"": 0
+    },
+    {
+      ""exang"": 0
+    },
+    {
+      ""exang"": 0
+    },
+    {
+      ""exang"": 0
+    },
+    {
+      ""exang"": 0
+    },
+    {
+      ""exang"": 0
+    },
+    {
+      ""exang"": 0
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_300.sqlite,mobiles,ORDERBY-PROJECT,Select only the column `RAM` from `mobiles`. Sort it in descending order and return the first 20 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['16GB'], ['16GB'], ['16GB'], ['16GB'], ['16GB'], ['16GB'], ['16GB'], ['16GB'], ['16GB'], ['16GB'], ['16GB'], ['16GB'], ['16GB'], ['16GB'], ['16GB'], ['16GB'], ['16GB'], ['16GB'], ['16GB'], ['16GB']]",SELECT `RAM` FROM `mobiles` ORDER BY `RAM` DESC LIMIT 20,1,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,mobiles,ORDERBY-PROJECT,Select only the column `Model Name` from `mobiles`. Sort it in ascending order and return the first 20 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Apple iPhone 14'], ['Apple iPhone 14'], ['Apple iPhone 14'], ['Apple iPhone 14 Pro'], ['Apple iPhone 14 Pro'], ['Apple iPhone 14 Pro'], ['Apple iPhone 14 Pro Max'], ['Apple iPhone 14 Pro Max'], ['Apple iPhone 14 Pro Max'], ['Apple iPhone 14 Pro Max'], ['Apple iPhone 14 Pro Max'], ['Apple iPhone 14 Pro Max'], ['Apple iPhone 13'], ['Apple iPhone 13'], ['Apple iPhone 13'], ['Apple iPhone 13 Pro'], ['Apple iPhone 13 Pro'], ['Apple iPhone 13 Pro'], ['Apple iPhone 13 Pro Max'], ['Apple iPhone 13 Pro Max']]",SELECT `Model Name` FROM `mobiles` ORDER BY `Model Name` ASC LIMIT 20,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,mobiles,ORDERBY-PROJECT,Select only the column `Model Name` from `mobiles`. Sort it in descending order and return the first 20 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `Model Name` FROM `mobiles` ORDER BY `Model Name` DESC LIMIT 20,3,"```
+{
+  ""table_name"": ""mobiles"",
+  ""ordered_entries"": [
+    {
+      ""Model Name"": ""Apple iPhone 14""
+    },
+    {
+      ""Model Name"": ""Apple iPhone 14""
+    },
+    {
+      ""Model Name"": ""Apple iPhone 14""
+    },
+    {
+      ""Model Name"": ""Apple iPhone 14 Pro""
+    },
+    {
+      ""Model Name"": ""Apple iPhone 14 Pro""
+    },
+    {
+      ""Model Name"": ""Apple iPhone 14 Pro""
+    },
+    {
+      ""Model Name"": ""Apple iPhone 14 Pro Max""
+    },
+    {
+      ""Model Name"": ""Apple iPhone 14 Pro Max""
+    },
+    {
+      ""Model Name"": ""Apple iPhone 14 Pro Max""
+    },
+    {
+      ""Model Name"": ""Apple iPhone 14 Pro Max""
+    },
+    {
+      ""Model Name"": ""Apple iPhone 14 Pro Max""
+    },
+    {
+      ""Model Name"": ""Apple iPhone 14 Pro Max""
+    },
+    {
+      ""Model Name"": ""Apple iPhone 13""
+    },
+    {
+      ""Model Name"": ""Apple iPhone 13""
+    },
+    {
+      ""Model Name"": ""Apple iPhone 13""
+    },
+    {
+      ""Model Name"": ""Apple iPhone 13 Pro""
+    },
+    {
+      ""Model Name"": ""Apple iPhone 13 Pro""
+    },
+    {
+      ""Model Name"": ""Apple iPhone 13 Pro""
+    },
+    {
+      ""Model Name"": ""Apple iPhone 13 Pro Max""
+    },
+    {
+      ""Model Name"": ""Apple iPhone 13 Pro Max""
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_300.sqlite,olympic_games,ORDERBY-SINGLE,"List the top 20 rows from the table `olympic_games`, sorted by the column `city` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[0, 1896, 'Athens'], [1, 1900, 'Paris'], [2, 1904, 'St. Louis'], [3, 2004, 'Athens'], [4, 2008, 'Beijing'], [5, 2012, 'London'], [6, 1908, 'London'], [7, 1912, 'Stockholm'], [8, 1916, 'Berlin'], [9, 1920, 'Antwerp'], [10, 1924, 'Paris'], [11, 1928, 'Amsterdam'], [12, 1932, 'Los Angeles'], [13, 1936, 'Berlin'], [14, 1948, 'London'], [15, 1952, 'Helsinki'], [16, 1956, 'Melbourne'], [17, 1960, 'Rome'], [18, 1964, 'Tokyo'], [19, 1968, 'Mexico City']]",SELECT * FROM `olympic_games` ORDER BY `city` ASC LIMIT 20,0,,0.0,0.218,0.706,0.0,0.3,0.0,0.5

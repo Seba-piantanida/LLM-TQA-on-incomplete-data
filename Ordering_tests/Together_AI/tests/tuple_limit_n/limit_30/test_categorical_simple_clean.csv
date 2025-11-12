@@ -1,0 +1,6 @@
+db_path,db_id,tbl_name,test_category,sql_tag,query,question
+data/db_categorical_simple.sqlite,db,dataset_animali,ORDERBY,ORDERBY-SINGLE,SELECT * FROM `dataset_animali` ORDER BY `Nome` DESC LIMIT 30,"List the top 30 rows from the table `dataset_animali`, sorted by the column `Nome` in descending order."
+data/db_categorical_simple.sqlite,db,dataset_auto,ORDERBY,ORDERBY-PROJECT,SELECT `Marca` FROM `dataset_auto` ORDER BY `Marca` ASC LIMIT 30,Select only the column `Marca` from `dataset_auto`. Sort it in ascending order and return the first 30 values.
+data/db_categorical_simple.sqlite,db,dataset_auto,ORDERBY,ORDERBY-PROJECT,SELECT `Marca` FROM `dataset_auto` ORDER BY `Marca` DESC LIMIT 30,Select only the column `Marca` from `dataset_auto`. Sort it in descending order and return the first 30 values.
+data/db_categorical_simple.sqlite,db,dataset_auto,ORDERBY,ORDERBY-PROJECT,SELECT `Modello` FROM `dataset_auto` ORDER BY `Modello` ASC LIMIT 30,Select only the column `Modello` from `dataset_auto`. Sort it in ascending order and return the first 30 values.
+data/db_categorical_simple.sqlite,db,dataset_film_famosi,ORDERBY,ORDERBY-SINGLE,SELECT * FROM `dataset_film_famosi` ORDER BY `Durata` ASC LIMIT 30,"List the top 30 rows from the table `dataset_film_famosi`, sorted by the column `Durata` in ascending order."

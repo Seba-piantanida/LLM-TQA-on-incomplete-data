@@ -1,0 +1,137 @@
+db_path,execution_type,table,tables_used,test_category,question,model,result,sql_query,failed_attempts,note,valid_efficiency_score,cell_precision,cell_recall,execution_accuracy,tuple_cardinality,tuple_constraint,tuple_order
+data/db_numerical_simple.sqlite,REMOVE,BMI,"['bmi', 'BMI']",UDF,"Return only the gap between current weight_kg and the target weight for BMI 21, ranked descending, top 5",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[4, 'Emma', 117.4, 51.11, 66.29], [3, 'David', 116.2, 54.41, 61.79], [13, 'Nina', 113.2, 60.67, 52.53], [5, 'Frank', 105.6, 60.67, 44.93], [20, 'Uma', 117.7, 64.35, 53.35]]","[(66.2944,), (60.7756,), (60.38759999999999,), (54.9275,), (54.49439999999999,)]",0,,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+data/db_numerical_simple.sqlite,REMOVE,BMI,"['bmi', 'BMI']",UDF,"Return the normalized name (lowercased, accents removed, non-alphanumerics stripped) and the BMI, ranked ascending on normalized name, top 5",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['alice', 33.3], ['bob', 16.4], ['carla', 15.6], ['david', 38.4], ['emma', 48.2]]","[('alice', 33.3), ('bob', 16.4), ('carla', 15.6), ('david', 38.4), ('emma', 48.2)]",0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,REMOVE,energy_consumption,['energy_consumption'],UDF,"Return only the estimated CO2 in kg from kWh used (kWh * emission factor), ranked descending, top 5",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Family_11', 952.13], ['Family_6', 849.48], ['Family_15', 835.04], ['Family_21', 787.86], ['Family_12', 518.72]]","[(808.6188999999999,), (722.1936,), (710.9968,), (668.309,), (616.5237999999999,)]",0,,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+data/db_numerical_simple.sqlite,REMOVE,student_performance,['student_performance'],UDF,"Return only the numeric pass flag (1 for pass-like values, 0 otherwise), ranked descending, top 5",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Student_22', 1], ['Student_16', 1], ['Student_24', 1], ['Student_23', 1], ['Student_18', 1]]","[(1,), (1,), (1,), (1,), (1,)]",0,,0.0,0.167,1.0,0.0,1.0,0.0,1.0
+data/db_numerical_simple.sqlite,REMOVE,student_performance,['student_performance'],UDF,"Return the trailing numeric ID parsed from the student name and his average score, ranked ascending on numeric id, return only the top 5",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 83.5], [2, 70.5], [3, 55.0], [4, 72.5], [5, 51.5]]","[(1, 83.5), (2, 70.5), (3, 55.0), (4, 72.5), (5, 51.5)]",0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,REMOVE,products,['products'],UDF,"Return only revenue per unit (total_revenue / units_sold), ranked descending, top 5",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[2, 'Penna BIC', 994.57], [9, 'Batterie Duracell', 1184.27], [28, 'USB Kingston', 1064.71], [1, 'iPhone 13', 325.98], [0, 'Pasta Barilla', 466.72]]","[(1184.27,), (1064.71,), (1035.79,), (994.5699999999999,), (978.65,)]",0,,0.0,0.133,0.4,0.0,1.0,0.0,1.0
+data/db_numerical_simple.sqlite,REMOVE,products,['products'],UDF,"Return only a simple cross-sectional elasticity proxy (units_sold / price, ranked ascending, top 5",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Mouse Logitech', 0.16], ['Samsung TV', 0.22], ['Frigorifero Bosch', 0.23], ['T-shirt H&M', 0.24], ['Batterie Duracell', 0.25]]","[(0.021490191262702237,), (0.028289210023810085,), (0.22071220558933224,), (0.2688447357640311,), (0.343671628935969,)]",0,,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+data/db_numerical_simple.sqlite,REMOVE,products,['products'],UDF,"Return only normalized product name (lowercased, accents removed, non-alphanumerics stripped), ranked ascending, top 5",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['pastabarilla'], ['iphone13'], ['pennabic'], ['laptopdell'], ['cocacola']]","[('airpods',), ('batterie duracell',), ('birra heineken',), ('borsa prada',), ('caffe lavazza',)]",0,,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+data/db_numerical_simple.sqlite,REMOVE,financial,['financial'],UDF,"Return only numeric savings rate converted from percent-like text to decimal, ranked descending, top 5",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[11, 0.79], [18, 0.741], [1, 0.702], [9, 0.676], [3, 0.578]]","[(None,), (None,), (None,), (None,), (None,)]",0,,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+data/db_numerical_simple.sqlite,REMOVE,financial,['financial'],UDF,"Return only burn rate (expenses / income, ranked descending order, top 5",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[5, 'Frank', 2059, 8054, -5995.0, '-291.2%', 'High', 3.912], [2, 'Carla', 2678, 7085, -4407.0, '-164.6%', 'High', 2.643], [15, 'Paul', 2306, 7028, -4722.0, '-204.8%', 'High', 3.048], [12, 'Maria', 2663, 8664, -6001.0, '-225.3%', 'High', 3.251], [20, 'Uma', 6575, 10425, -3850.0, '-58.6%', 'High', 1.585]]","[(3.9116075764934433,), (3.2534735260983854,), (3.047701647875108,), (2.645631067961165,), (1.9595190380761522,)]",0,,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+data/db_numerical_simple.sqlite,REMOVE,logistic_delivery,['logistics_delivery'],UDF,"Return only efficiency score (km per liter), ranked descending order, top 5",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Driver_14', 170.6], ['Driver_21', 94.7], ['Driver_20', 91.2], ['Driver_9', 82.1], ['Driver_23', 69.7]]","[(23.01075268817204,), (20.633802816901408,), (18.80794701986755,), (18.238993710691823,), (15.7,)]",0,,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+data/db_numerical_simple.sqlite,REMOVE,logistic_delivery,['logistics_delivery'],UDF,"Return only delivery density (packages per km), ranked descending order, top 5",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Driver_22', 1.5], ['Driver_12', 1.442], ['Driver_11', 0.707], ['Driver_19', 0.683], ['Driver_4', 0.617]]","[(1.5,), (1.4423076923076923,), (0.7068965517241379,), (0.6825396825396826,), (0.6173913043478261,)]",0,,0.0,0.1,0.2,0.0,1.0,0.0,1.0
+data/db_numerical_simple.sqlite,REMOVE,logistic_delivery,['logistics_delivery'],UDF,"Return only route stress index (packages per hour), ranked descending order, top 5",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Driver_11', 12.86], ['Driver_16', 12.63], ['Driver_10', 8.03], ['Driver_14', 7.76], ['Driver_18', 7.52]]","[(42.35294117647059,), (25.666666666666668,), (23.4375,), (19.142857142857142,), (18.695652173913047,)]",1,,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+data/db_numerical_simple.sqlite,REMOVE,BMI,"['bmi', 'BMI']",UDF,"Return the uppercase version of the name field from the bmi table and the BMI score, return the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['ALICE', 33.3], ['BOB', 16.4], ['CARLA', 15.6], ['DAVID', 38.4], ['EMMA', 48.2]]","[('ALICE', 33.3), ('BOB', 16.4), ('CARLA', 15.6), ('DAVID', 38.4), ('EMMA', 48.2)]",0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,REMOVE,energy_consumption,['energy_consumption'],UDF,"Return the lowercase version of the household_name field and the kwh_used from the energy_consumption table, return the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['family_1', 987], ['family_2', 1248], ['family_3', 1123], ['family_4', 1108], ['family_5', 1465]]","[('family_1', 987), ('family_2', 1248), ('family_3', 1123), ('family_4', 1108), ('family_5', 1465)]",0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,REMOVE,student_performance,['student_performance'],UDF,"Return the student_name transformed to title case (capitalize each word) and math_score from the student_performance table, return the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Student 1', 82], ['Student 2', 48], ['Student 3', 52], ['Student 4', 62], ['Student 5', 51]]","[('Student_1', 82), ('Student_2', 48), ('Student_3', 52), ('Student_4', 62), ('Student_5', 51)]",0,,0.0,0.5,0.5,0.0,1.0,0.0,1.0
+data/db_numerical_simple.sqlite,REMOVE,products,['products'],UDF,"Return the category value with leading and trailing spaces removed and it's price from the products table, return the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Food', 466.72], ['Electronics', 325.98], ['Stationery', 994.57], ['Electronics', 428.43], ['Food', 337.48]]",[],0,,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_numerical_simple.sqlite,REMOVE,products,['products'],UDF,"Return the name value with multiple internal spaces collapsed to a single space and outer spaces trimmed and units_sold from the products table, return only the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Pasta Barilla', 622], ['iPhone 13', 952], ['Penna BIC', 471], ['Laptop Dell', 652], ['Coca Cola', 778]]",[],0,,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_numerical_simple.sqlite,REMOVE,products,['products'],UDF,"Return the name value with diacritics removed (ASCII-like form) and total_revenue from the products table, return only the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Pasta Barilla', 290299.84], ['iPhone 13', 310332.96], ['Penna BIC', 468442.47], ['Laptop Dell', 279336.36], ['Coca Cola', 262559.44]]",[],0,,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_numerical_simple.sqlite,REMOVE,logistic_delivery,['logistics_delivery'],UDF,Return only the integer parsed from the packages field from the logistics_delivery table and output the first 5 rows,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[23], [35], [13], [71], [67]]","[(23,), (35,), (13,), (71,), (67,)]",0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,REMOVE,financial,['financial'],UDF,Return only the result of expenses divided by income with safe handling for null or zero income from the financial table and output the first 5 rows,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['77.70%'], ['29.80%'], ['264.60%'], ['42.20%'], ['72.40%']]","[(0.7773257390832655,), (0.2981500253421186,), (2.645631067961165,), (0.4222065063649222,), (0.7240951029098651,)]",0,,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+data/db_numerical_simple.sqlite,REMOVE,BMI,"['bmi', 'BMI']",UDF,"Return only the gap between current weight_kg and the target weight for BMI 21, ranked descending, top 5",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Emma', 117.4, 53.3, 64.1], ['Frank', 105.6, 45.2, 60.4], ['Uma', 117.7, 53.5, 64.2], ['Wendy', 115.5, 52.2, 63.3], ['Xander', 112.1, 49.1, 63.0]]","[(66.2944,), (60.7756,), (60.38759999999999,), (54.9275,), (54.49439999999999,)]",0,,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+data/db_numerical_simple.sqlite,REMOVE,BMI,"['bmi', 'BMI']",UDF,"Return the normalized name (lowercased, accents removed, non-alphanumerics stripped) and the BMI, ranked ascending on normalized name, top 5",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['alice', 33.3], ['bob', 16.4], ['carla', 15.6], ['david', 38.4], ['emma', 48.2]]","[('alice', 33.3), ('bob', 16.4), ('carla', 15.6), ('david', 38.4), ('emma', 48.2)]",0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,REMOVE,energy_consumption,['energy_consumption'],UDF,"Return only the estimated CO2 in kg from kWh used (kWh * emission factor), ranked descending, top 5",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],"[(808.6188999999999,), (722.1936,), (710.9968,), (668.309,), (616.5237999999999,)]",3,"```json
+{
+  ""table_name"": ""bmi"",
+  ""ordered_entries"": [
+    {
+      ""normalized_name"": ""alice"",
+      ""bmi"": 33.3
+    },
+    {
+      ""normalized_name"": ""bob"",
+      ""bmi"": 16.4
+    },
+    {
+      ""normalized_name"": ""carla"",
+      ""bmi"": 15.6
+    },
+    {
+      ""normalized_name"": ""david"",
+      ""bmi"": 38.4
+    },
+    {
+      ""normalized_name"": ""emma"",
+      ""bmi"": 48.2
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_numerical_simple.sqlite,REMOVE,student_performance,['student_performance'],UDF,"Return only the numeric pass flag (1 for pass-like values, 0 otherwise), ranked descending, top 5",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[22, 1], [23, 1], [16, 1], [24, 1], [18, 1]]","[(1,), (1,), (1,), (1,), (1,)]",1,,0.0,0.167,1.0,0.0,1.0,0.0,1.0
+data/db_numerical_simple.sqlite,REMOVE,student_performance,['student_performance'],UDF,"Return the trailing numeric ID parsed from the student name and his average score, ranked ascending on numeric id, return only the top 5",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1, 83.5], [2, 70.5], [3, 55.0], [4, 72.5], [5, 51.5]]","[(1, 83.5), (2, 70.5), (3, 55.0), (4, 72.5), (5, 51.5)]",0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,REMOVE,products,['products'],UDF,"Return only revenue per unit (total_revenue / units_sold), ranked descending, top 5",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],"[(1184.27,), (1064.71,), (1035.79,), (994.5699999999999,), (978.65,)]",3,"{
+  ""table_name"": ""student_performance"",
+  ""ordered_entries"": [
+    {
+      ""id"": 1,
+      ""average_score"": 83.5
+    },
+    {
+      ""id"": 2,
+      ""average_score"": 70.5
+    },
+    {
+      ""id"": 3,
+      ""average_score"": 55.0
+    },
+    {
+      ""id"": 4,
+      ""average_score"": 72.5
+    },
+    {
+      ""id"": 5,
+      ""average_score"": 51.5
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_numerical_simple.sqlite,REMOVE,products,['products'],UDF,"Return only a simple cross-sectional elasticity proxy (units_sold / price, ranked ascending, top 5",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[5, 'Samsung TV', 'Electronics', 651.46, 14, 9120.44, 'No', 0.0215], [12, 'Mouse Logitech', 'Electronics', 7.12, 402, 2862.24, 'No', 56.46], [25, 'Stampante HP', 'Electronics', 390.56, 105, 41008.8, 'Yes', 0.2685], [8, 'Frigorifero Bosch', 'Electronics', 89.92, 776, 69777.92, 'Yes', 8.6354], [17, 'T-shirt H&M', 'Clothing', 89.32, 901, 80477.32, 'Yes', 10.099]]","[(0.021490191262702237,), (0.028289210023810085,), (0.22071220558933224,), (0.2688447357640311,), (0.343671628935969,)]",0,,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+data/db_numerical_simple.sqlite,REMOVE,products,['products'],UDF,"Return only normalized product name (lowercased, accents removed, non-alphanumerics stripped), ranked ascending, top 5",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['airpods'], ['batterie duracell'], ['birra heineken'], ['borsa prada'], ['caffelavazza']]","[('airpods',), ('batterie duracell',), ('birra heineken',), ('borsa prada',), ('caffe lavazza',)]",0,,0.0,0.8,0.8,0.0,1.0,0.8,1.0
+data/db_numerical_simple.sqlite,REMOVE,financial,['financial'],UDF,"Return only numeric savings rate converted from percent-like text to decimal, ranked descending, top 5",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],"[(None,), (None,), (None,), (None,), (None,)]",3,"{
+  ""table_name"": ""products"",
+  ""ordered_entries"": [
+    {
+      ""normalized_name"": ""airpods""
+    },
+    {
+      ""normalized_name"": ""batterie duracell""
+    },
+    {
+      ""normalized_name"": ""birra heineken""
+    },
+    {
+      ""normalized_name"": ""borsa prada""
+    },
+    {
+      ""normalized_name"": ""caffelavazza""
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_numerical_simple.sqlite,REMOVE,financial,['financial'],UDF,"Return only burn rate (expenses / income, ranked descending order, top 5",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Uma', 1.581], ['Frank', 1.513], ['Carla', 2.644], ['Paul', 3.048], ['Lily', 1.783]]","[(3.9116075764934433,), (3.2534735260983854,), (3.047701647875108,), (2.645631067961165,), (1.9595190380761522,)]",1,,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+data/db_numerical_simple.sqlite,REMOVE,logistic_delivery,['logistics_delivery'],UDF,"Return only efficiency score (km per liter), ranked descending order, top 5",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[20.63], [18.24], [18.81], [15.7], [13.99]]","[(23.01075268817204,), (20.633802816901408,), (18.80794701986755,), (18.238993710691823,), (15.7,)]",0,,0.0,0.2,0.2,0.0,1.0,0.2,1.0
+data/db_numerical_simple.sqlite,REMOVE,logistic_delivery,['logistics_delivery'],UDF,"Return only delivery density (packages per km), ranked descending order, top 5",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[11, 'Driver_12', 52, 75, 5.6, 7.0, 9.3, 7.43, 1.442], [21, 'Driver_22', 50, 75, 3.2, 9.4, 15.6, 5.32, 1.5], [10, 'Driver_11', 58, 41, 5.1, 23.5, 11.4, 2.47, 0.707], [18, 'Driver_19', 63, 43, 2.3, 25.3, 27.4, 2.49, 0.683], [3, 'Driver_4', 115, 71, 5.8, 17.7, 19.8, 6.5, 0.617]]","[(1.5,), (1.4423076923076923,), (0.7068965517241379,), (0.6825396825396826,), (0.6173913043478261,)]",2,,0.0,0.023,0.2,0.0,1.0,0.0,1.0
+data/db_numerical_simple.sqlite,REMOVE,logistic_delivery,['logistics_delivery'],UDF,"Return only route stress index (packages per hour), ranked descending order, top 5",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[11, 'Driver_12', 13.387096774], [10, 'Driver_11', 8.0], [21, 'Driver_22', 7.8125], [3, 'Driver_4', 7.24137931], [18, 'Driver_19', 6.956522012]]","[(42.35294117647059,), (25.666666666666668,), (23.4375,), (19.142857142857142,), (18.695652173913047,)]",1,,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+data/db_numerical_simple.sqlite,REMOVE,BMI,"['bmi', 'BMI']",UDF,"Return the uppercase version of the name field from the bmi table and the BMI score, return the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['ALICE', 33.3], ['BOB', 16.4], ['CARLA', 15.6], ['DAVID', 38.4], ['EMMA', 48.2]]","[('ALICE', 33.3), ('BOB', 16.4), ('CARLA', 15.6), ('DAVID', 38.4), ('EMMA', 48.2)]",2,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,REMOVE,energy_consumption,['energy_consumption'],UDF,"Return the lowercase version of the household_name field and the kwh_used from the energy_consumption table, return the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],"[('family_1', 987), ('family_2', 1248), ('family_3', 1123), ('family_4', 1108), ('family_5', 1465)]",3,"{
+  ""table_name"": ""bmi"",
+  ""ordered_entries"": [
+    {
+      ""name"": ""ALICE"",
+      ""BMI"": 33.3
+    },
+    {
+      ""name"": ""BOB"",
+      ""BMI"": 16.4
+    },
+    {
+      ""name"": ""CARLA"",
+      ""BMI"": 15.6
+    },
+    {
+      ""name"": ""DAVID"",
+      ""BMI"": 38.4
+    },
+    {
+      ""name"": ""EMMA"",
+      ""BMI"": 48.2
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_numerical_simple.sqlite,REMOVE,student_performance,['student_performance'],UDF,"Return the student_name transformed to title case (capitalize each word) and math_score from the student_performance table, return the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Student 1', 82], ['Student 2', 48], ['Student 3', 52], ['Student 4', 62], ['Student 5', 51]]","[('Student_1', 82), ('Student_2', 48), ('Student_3', 52), ('Student_4', 62), ('Student_5', 51)]",0,,0.0,0.5,0.5,0.0,1.0,0.0,1.0
+data/db_numerical_simple.sqlite,REMOVE,products,['products'],UDF,"Return the category value with leading and trailing spaces removed and it's price from the products table, return the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Food', 466.72], ['Electronics', 325.98], ['Stationery', 994.57], ['Electronics', 428.43], ['Food', 337.48]]",[],2,,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_numerical_simple.sqlite,REMOVE,products,['products'],UDF,"Return the name value with multiple internal spaces collapsed to a single space and outer spaces trimmed and units_sold from the products table, return only the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Pasta Barilla', 622], ['iPhone 13', 952], ['Penna BIC', 471], ['Laptop Dell', 652], ['Coca Cola', 778]]",[],1,,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_numerical_simple.sqlite,REMOVE,products,['products'],UDF,"Return the name value with diacritics removed (ASCII-like form) and total_revenue from the products table, return only the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Pasta Barilla', 290299.84], ['iPhone 13', 310332.96], ['Penna BIC', 468442.47], ['Laptop Dell', 279336.36], ['Coca Cola', 262559.44]]",[],2,,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_numerical_simple.sqlite,REMOVE,logistic_delivery,['logistics_delivery'],UDF,Return only the integer parsed from the packages field from the logistics_delivery table and output the first 5 rows,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[23], [35], [13], [71], [67]]","[(23,), (35,), (13,), (71,), (67,)]",2,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,REMOVE,financial,['financial'],UDF,Return only the result of expenses divided by income with safe handling for null or zero income from the financial table and output the first 5 rows,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[0, 'Alice', 7374, 5732, 1642.0, '22.3%', 'Medium', 0.777], [1, 'Bob', 7892, 2353, 5539.0, '70.2%', 'Low', 0.298], [2, 'Carla', 2678, 7085, -4407.0, '-164.6%', 'High', 2.644], [3, 'David', 4242, 1791, 2451.0, '57.8%', 'Low', 0.422], [4, 'Emma', 5636, 4081, 1555.0, '27.6%', 'Medium', 0.723]]","[(0.7773257390832655,), (0.2981500253421186,), (2.645631067961165,), (0.4222065063649222,), (0.7240951029098651,)]",2,,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+,,,

@@ -1,0 +1,5 @@
+table_name,model,avg_valid_efficiency_score,avg_cell_precision,avg_cell_recall,avg_execution_accuracy,avg_tuple_cardinality,avg_tuple_constraint,avg_tuple_order
+BMI,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,0.0,0.296,0.3035,0.0,1.0,0.1,0.75
+BMI,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,0.0,0.2885,0.287,0.0,1.0,0.0,0.5
+products,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,0.0,0.19999999999999998,0.19999999999999998,0.0,1.0,0.0,0.5
+products,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,0.0,0.143,0.13333333333333333,0.0,1.0,0.0,0.5

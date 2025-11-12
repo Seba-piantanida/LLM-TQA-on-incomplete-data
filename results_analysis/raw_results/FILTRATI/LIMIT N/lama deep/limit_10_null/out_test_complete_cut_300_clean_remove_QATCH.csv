@@ -1,0 +1,256 @@
+db_path,table_name,test_category,query,model,AI_answer,SQL_query,failed_attempts,note,valid_efficiency_score,cell_precision,cell_recall,execution_accuracy,tuple_cardinality,tuple_constraint,tuple_order
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `grade` from `breast_cancer`. Sort it in ascending order and return the first 10 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1], [1], [1], [1], [1], [1], [1], [1], [1], [1]]",SELECT `grade` FROM `breast_cancer` ORDER BY `grade` ASC LIMIT 10,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `age` from `breast_cancer`. Sort it in ascending order and return the first 10 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[14], [14], [15], [15], [16], [16], [17], [17], [18], [18]]",SELECT `age` FROM `breast_cancer` ORDER BY `age` ASC LIMIT 10,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `pgr` from `breast_cancer`. Sort it in ascending order and return the first 10 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [0], [0], [0], [0], [0], [0], [0], [0], [0]]",SELECT `pgr` FROM `breast_cancer` ORDER BY `pgr` ASC LIMIT 10,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `restecg` from `heart_attack`. Sort it in ascending order and return the first 10 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [0], [1], [1], [1], [2], [2], [2], [2], [2]]",SELECT `restecg` FROM `heart_attack` ORDER BY `restecg` ASC LIMIT 10,0,,0.0,0.667,1.0,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `thal` from `heart_attack`. Sort it in ascending order and return the first 10 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[114], [139], [144], [148], [150], [151], [153], [158], [160], [162]]",SELECT `thal` FROM `heart_attack` ORDER BY `thal` ASC LIMIT 10,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `slope` from `heart_attack`. Sort it in ascending order and return the first 10 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [0], [0], [0], [0], [0], [0], [0], [0], [0]]",SELECT `slope` FROM `heart_attack` ORDER BY `slope` ASC LIMIT 10,0,,0.0,1.0,0.333,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `ca` from `heart_attack`. Sort it in ascending order and return the first 10 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [0], [0], [0], [0], [0], [0], [0], [0], [0]]",SELECT `ca` FROM `heart_attack` ORDER BY `ca` ASC LIMIT 10,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_complete_cut_300.sqlite,mobiles,ORDERBY-PROJECT,Select only the column `RAM` from `mobiles`. Sort it in descending order and return the first 10 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB'], ['6GB']]",SELECT `RAM` FROM `mobiles` ORDER BY `RAM` DESC LIMIT 10,0,,0.0,1.0,0.5,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,mobiles,ORDERBY-PROJECT,Select only the column `Model Name` from `mobiles`. Sort it in descending order and return the first 10 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['iPhone 15 Pro Max'], ['iPhone 15 Pro'], ['iPhone 15'], ['iPhone 14 Pro Max'], ['iPhone 14 Pro'], ['iPhone 14'], ['iPhone 13 Pro Max'], ['iPhone 13 Pro'], ['iPhone 13'], ['iPhone 12 Pro Max']]",SELECT `Model Name` FROM `mobiles` ORDER BY `Model Name` DESC LIMIT 10,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,olympic_games,ORDERBY-SINGLE,"List the top 10 rows from the table `olympic_games`, sorted by the column `city` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[5, 2012], [4, 2008], [3, 2004], [2, 1904], [1, 1900], [0, 1896]]",SELECT * FROM `olympic_games` ORDER BY `city` DESC LIMIT 10,0,,0.0,1.0,0.706,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `grade` from `breast_cancer`. Sort it in ascending order and return the first 10 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `grade` FROM `breast_cancer` ORDER BY `grade` ASC LIMIT 10,3,"""table_name"": ""breast_cancer"",
+""ordered_entries"": [
+  {
+    ""grade"": 1
+  },
+  {
+    ""grade"": 1
+  },
+  {
+    ""grade"": 1
+  },
+  {
+    ""grade"": 1
+  },
+  {
+    ""grade"": 1
+  },
+  {
+    ""grade"": 1
+  },
+  {
+    ""grade"": 1
+  },
+  {
+    ""grade"": 1
+  },
+  {
+    ""grade"": 1
+  },
+  {
+    ""grade"": 1
+  }
+]",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `age` from `breast_cancer`. Sort it in ascending order and return the first 10 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `age` FROM `breast_cancer` ORDER BY `age` ASC LIMIT 10,3,"""table_name"": ""breast_cancer"",
+""ordered_entries"": [
+  {
+    ""age"": 29
+  },
+  {
+    ""age"": 30
+  },
+  {
+    ""age"": 30
+  },
+  {
+    ""age"": 30
+  },
+  {
+    ""age"": 31
+  },
+  {
+    ""age"": 31
+  },
+  {
+    ""age"": 32
+  },
+  {
+    ""age"": 33
+  },
+  {
+    ""age"": 34
+  },
+  {
+    ""age"": 35
+  }
+]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `pgr` from `breast_cancer`. Sort it in ascending order and return the first 10 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `pgr` FROM `breast_cancer` ORDER BY `pgr` ASC LIMIT 10,3,"""table_name"": ""breast_cancer"",
+""ordered_entries"": [
+  {
+    ""age"": 29
+  },
+  {
+    ""age"": 30
+  },
+  {
+    ""age"": 30
+  },
+  {
+    ""age"": 30
+  },
+  {
+    ""age"": 31
+  },
+  {
+    ""age"": 31
+  },
+  {
+    ""age"": 32
+  },
+  {
+    ""age"": 33
+  },
+  {
+    ""age"": 34
+  },
+  {
+    ""age"": 35
+  }
+]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `restecg` from `heart_attack`. Sort it in ascending order and return the first 10 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[0], [0], [0], [0], [0], [0], [0], [0], [0], [0]]",SELECT `restecg` FROM `heart_attack` ORDER BY `restecg` ASC LIMIT 10,1,,0.0,1.0,0.5,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `thal` from `heart_attack`. Sort it in ascending order and return the first 10 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `thal` FROM `heart_attack` ORDER BY `thal` ASC LIMIT 10,3,"{
+  ""table_name"": ""heart_attack"",
+  ""ordered_entries"": [
+    {
+      ""restecg"": 0
+    },
+    {
+      ""restecg"": 0
+    },
+    {
+      ""restecg"": 0
+    },
+    {
+      ""restecg"": 0
+    },
+    {
+      ""restecg"": 0
+    },
+    {
+      ""restecg"": 0
+    },
+    {
+      ""restecg"": 0
+    },
+    {
+      ""restecg"": 0
+    },
+    {
+      ""restecg"": 0
+    },
+    {
+      ""restecg"": 0
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `slope` from `heart_attack`. Sort it in ascending order and return the first 10 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1], [1], [1], [1], [1], [1], [1], [1], [1], [1]]",SELECT `slope` FROM `heart_attack` ORDER BY `slope` ASC LIMIT 10,1,,0.0,1.0,0.333,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `ca` from `heart_attack`. Sort it in ascending order and return the first 10 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `ca` FROM `heart_attack` ORDER BY `ca` ASC LIMIT 10,3,"{
+  ""table_name"": ""heart_attack"",
+  ""ordered_entries"": [
+    {
+      ""slope"": 1
+    },
+    {
+      ""slope"": 1
+    },
+    {
+      ""slope"": 1
+    },
+    {
+      ""slope"": 1
+    },
+    {
+      ""slope"": 1
+    },
+    {
+      ""slope"": 1
+    },
+    {
+      ""slope"": 1
+    },
+    {
+      ""slope"": 1
+    },
+    {
+      ""slope"": 1
+    },
+    {
+      ""slope"": 1
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_300.sqlite,mobiles,ORDERBY-PROJECT,Select only the column `RAM` from `mobiles`. Sort it in descending order and return the first 10 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `RAM` FROM `mobiles` ORDER BY `RAM` DESC LIMIT 10,3,"""table_name"": ""mobiles"",
+""ordered_entries"": [
+  {
+    ""RAM"": ""16GB""
+  },
+  {
+    ""RAM"": ""16GB""
+  },
+  {
+    ""RAM"": ""16GB""
+  },
+  {
+    ""RAM"": ""16GB""
+  },
+  {
+    ""RAM"": ""16GB""
+  },
+  {
+    ""RAM"": ""16GB""
+  },
+  {
+    ""RAM"": ""16GB""
+  },
+  {
+    ""RAM"": ""16GB""
+  },
+  {
+    ""RAM"": ""16GB""
+  },
+  {
+    ""RAM"": ""16GB""
+  }
+]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_300.sqlite,mobiles,ORDERBY-PROJECT,Select only the column `Model Name` from `mobiles`. Sort it in descending order and return the first 10 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['iPhone 15 Pro Max'], ['iPhone 15 Pro'], ['iPhone 15 Plus'], ['iPhone 15'], ['iPhone 14 Pro Max'], ['iPhone 14 Pro'], ['iPhone 14 Plus'], ['iPhone 14'], ['iPhone 13 Pro Max'], ['iPhone 13 Pro']]",SELECT `Model Name` FROM `mobiles` ORDER BY `Model Name` DESC LIMIT 10,2,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,olympic_games,ORDERBY-SINGLE,"List the top 10 rows from the table `olympic_games`, sorted by the column `city` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT * FROM `olympic_games` ORDER BY `city` DESC LIMIT 10,3,"```
+{
+  ""table_name"": ""mobiles"",
+  ""ordered_entries"": [
+    {
+      ""Model Name"": ""iPhone 15 Pro Max""
+    },
+    {
+      ""Model Name"": ""iPhone 15 Pro""
+    },
+    {
+      ""Model Name"": ""iPhone 15 Plus""
+    },
+    {
+      ""Model Name"": ""iPhone 15""
+    },
+    {
+      ""Model Name"": ""iPhone 14 Pro Max""
+    },
+    {
+      ""Model Name"": ""iPhone 14 Pro""
+    },
+    {
+      ""Model Name"": ""iPhone 14 Plus""
+    },
+    {
+      ""Model Name"": ""iPhone 14""
+    },
+    {
+      ""Model Name"": ""iPhone 13 Pro Max""
+    },
+    {
+      ""Model Name"": ""iPhone 13 Pro""
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0

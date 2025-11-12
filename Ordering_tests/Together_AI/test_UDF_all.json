@@ -1,0 +1,21 @@
+{
+  "models": ["deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free",
+    "meta-llama/Llama-3.3-70B-Instruct-Turbo-Free"],
+  "tests": [
+    {
+      "test_file": "tests/UDF/test_UDF_categorical_simple.csv",
+      "out_path": "output/UDF/categorical_simple",
+      "test_types": [  "nullable"]
+    },
+     {
+      "test_file": "tests/UDF/test_UDF_numerical_simple.csv",
+      "out_path": "output/UDF/numerical_simple",
+      "test_types": [  "nullable"]
+    },
+     {
+      "test_file": "tests/UDF/test_UDF_complete_cut_300.csv",
+      "out_path": "output/UDF/complete_cut_300",
+      "test_types": [  "nullable"]
+    }
+  ]
+}

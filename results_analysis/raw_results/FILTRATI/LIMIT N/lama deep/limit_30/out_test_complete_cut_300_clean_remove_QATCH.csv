@@ -1,0 +1,109 @@
+db_path,table_name,test_category,query,model,AI_answer,SQL_query,failed_attempts,note,valid_efficiency_score,cell_precision,cell_recall,execution_accuracy,tuple_cardinality,tuple_constraint,tuple_order
+data/db_complete_cut_300.sqlite,mobiles,ORDERBY-PROJECT,Select only the column `Model Name` from `mobiles`. Sort it in ascending order and return the first 30 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['iPhone 14'], ['iPhone 14'], ['iPhone 14'], ['iPhone 14 Plus'], ['iPhone 14 Plus'], ['iPhone 14 Plus'], ['iPhone 15'], ['iPhone 15'], ['iPhone 15'], ['iPhone 15 Plus'], ['iPhone 15 Plus'], ['iPhone 15 Plus'], ['iPhone 14'], ['iPhone 14'], ['iPhone 14'], ['iPhone 14 Plus'], ['iPhone 14 Plus'], ['iPhone 14 Plus'], ['iPhone 15'], ['iPhone 15'], ['iPhone 15'], ['iPhone 15 Plus'], ['iPhone 15 Plus'], ['iPhone 15 Plus']]",SELECT `Model Name` FROM `mobiles` ORDER BY `Model Name` ASC LIMIT 30,0,,0.0,0.0,0.0,0.0,0.833,0.0,0.5
+data/db_complete_cut_300.sqlite,mobiles,ORDERBY-PROJECT,Select only the column `Model Name` from `mobiles`. Sort it in descending order and return the first 30 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['iPhone 15 Pro Max'], ['iPhone 15 Pro'], ['iPhone 15'], ['iPhone 14 Pro Max'], ['iPhone 14 Pro'], ['iPhone 14'], ['iPhone 15 Pro Max'], ['iPhone 15 Pro'], ['iPhone 15'], ['iPhone 14 Pro Max'], ['iPhone 14 Pro'], ['iPhone 14'], ['iPhone 15 Pro Max'], ['iPhone 15 Pro'], ['iPhone 15'], ['iPhone 14 Pro Max'], ['iPhone 14 Pro'], ['iPhone 14'], ['iPhone 15 Pro Max'], ['iPhone 15 Pro'], ['iPhone 15'], ['iPhone 14 Pro Max'], ['iPhone 14 Pro'], ['iPhone 14'], ['iPhone 15 Pro Max'], ['iPhone 15 Pro'], ['iPhone 15'], ['iPhone 14 Pro Max'], ['iPhone 14 Pro'], ['iPhone 14']]",SELECT `Model Name` FROM `mobiles` ORDER BY `Model Name` DESC LIMIT 30,0,,0.0,0.0,0.0,0.0,0.667,0.0,0.5
+data/db_complete_cut_300.sqlite,olympic_games,ORDERBY-SINGLE,"List the top 30 rows from the table `olympic_games`, sorted by the column `city` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0, 1896, 'Athens'], [1, 1900, 'Paris'], [2, 1904, 'St. Louis'], [3, 2004, 'Athens'], [4, 2008, 'Beijing'], [5, 2012, 'London']]",SELECT * FROM `olympic_games` ORDER BY `city` ASC LIMIT 30,0,,0.0,0.706,0.706,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,mobiles,ORDERBY-PROJECT,Select only the column `Model Name` from `mobiles`. Sort it in ascending order and return the first 30 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['iPhone 14'], ['iPhone 14'], ['iPhone 14'], ['iPhone 14 Pro'], ['iPhone 14 Pro'], ['iPhone 14 Pro'], ['iPhone 14 Pro Max'], ['iPhone 14 Pro Max'], ['iPhone 14 Pro Max'], ['iPhone 14 Pro Max'], ['iPhone 14 Pro Max'], ['iPhone 14 Pro Max'], ['iPhone 13'], ['iPhone 13'], ['iPhone 13'], ['iPhone 13 Pro'], ['iPhone 13 Pro'], ['iPhone 13 Pro'], ['iPhone 13 Pro Max'], ['iPhone 13 Pro Max'], ['iPhone 13 Pro Max'], ['iPhone 13 Pro Max'], ['iPhone 13 Pro Max'], ['iPhone 13 Pro Max'], ['iPhone 14'], ['iPhone 14'], ['iPhone 14 Pro'], ['iPhone 14 Pro'], ['iPhone 14 Pro Max'], ['iPhone 14 Pro Max'], ['iPhone 13'], ['iPhone 13 Pro']]",SELECT `Model Name` FROM `mobiles` ORDER BY `Model Name` ASC LIMIT 30,1,,0.0,0.0,0.0,0.0,0.625,0.0,0.5
+data/db_complete_cut_300.sqlite,mobiles,ORDERBY-PROJECT,Select only the column `Model Name` from `mobiles`. Sort it in descending order and return the first 30 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `Model Name` FROM `mobiles` ORDER BY `Model Name` DESC LIMIT 30,3,"```
+{
+  ""table_name"": ""mobiles"",
+  ""ordered_entries"": [
+    {
+      ""Model Name"": ""iPhone 14""
+    },
+    {
+      ""Model Name"": ""iPhone 14""
+    },
+    {
+      ""Model Name"": ""iPhone 14""
+    },
+    {
+      ""Model Name"": ""iPhone 14 Pro""
+    },
+    {
+      ""Model Name"": ""iPhone 14 Pro""
+    },
+    {
+      ""Model Name"": ""iPhone 14 Pro""
+    },
+    {
+      ""Model Name"": ""iPhone 14 Pro Max""
+    },
+    {
+      ""Model Name"": ""iPhone 14 Pro Max""
+    },
+    {
+      ""Model Name"": ""iPhone 14 Pro Max""
+    },
+    {
+      ""Model Name"": ""iPhone 14 Pro Max""
+    },
+    {
+      ""Model Name"": ""iPhone 14 Pro Max""
+    },
+    {
+      ""Model Name"": ""iPhone 14 Pro Max""
+    },
+    {
+      ""Model Name"": ""iPhone 13""
+    },
+    {
+      ""Model Name"": ""iPhone 13""
+    },
+    {
+      ""Model Name"": ""iPhone 13""
+    },
+    {
+      ""Model Name"": ""iPhone 13 Pro""
+    },
+    {
+      ""Model Name"": ""iPhone 13 Pro""
+    },
+    {
+      ""Model Name"": ""iPhone 13 Pro""
+    },
+    {
+      ""Model Name"": ""iPhone 13 Pro Max""
+    },
+    {
+      ""Model Name"": ""iPhone 13 Pro Max""
+    },
+    {
+      ""Model Name"": ""iPhone 13 Pro Max""
+    },
+    {
+      ""Model Name"": ""iPhone 13 Pro Max""
+    },
+    {
+      ""Model Name"": ""iPhone 13 Pro Max""
+    },
+    {
+      ""Model Name"": ""iPhone 13 Pro Max""
+    },
+    {
+      ""Model Name"": ""iPhone 14""
+    },
+    {
+      ""Model Name"": ""iPhone 14""
+    },
+    {
+      ""Model Name"": ""iPhone 14 Pro""
+    },
+    {
+      ""Model Name"": ""iPhone 14 Pro""
+    },
+    {
+      ""Model Name"": ""iPhone 14 Pro Max""
+    },
+    {
+      ""Model Name"": ""iPhone 14 Pro Max""
+    },
+    {
+      ""Model Name"": ""iPhone 13""
+    },
+    {
+      ""Model Name"": ""iPhone 13 Pro""
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_300.sqlite,olympic_games,ORDERBY-SINGLE,"List the top 30 rows from the table `olympic_games`, sorted by the column `city` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[0, 1896, 'Athens'], [1, 1900, 'Paris'], [2, 1904, 'St. Louis'], [3, 2004, 'Athens'], [4, 2008, 'Beijing'], [5, 2012, 'London'], [6, 1908, 'London'], [7, 1912, 'Stockholm'], [8, 1916, 'Berlin'], [9, 1920, 'Antwerp'], [10, 1924, 'Paris'], [11, 1928, 'Amsterdam'], [12, 1932, 'Los Angeles'], [13, 1936, 'Berlin'], [14, 1940, 'Tokyo'], [15, 1944, 'London'], [16, 1948, 'London'], [17, 1952, 'Helsinki'], [18, 1956, 'Melbourne'], [19, 1960, 'Rome'], [20, 1964, 'Tokyo'], [21, 1968, 'Mexico City'], [22, 1972, 'Munich'], [23, 1976, 'Montreal'], [24, 1980, 'Moscow'], [25, 1984, 'Los Angeles'], [26, 1988, 'Seoul'], [27, 1992, 'Barcelona'], [28, 1996, 'Atlanta'], [29, 2000, 'Sydney']]",SELECT * FROM `olympic_games` ORDER BY `city` ASC LIMIT 30,1,,0.0,0.146,0.706,0.0,0.2,0.0,0.5

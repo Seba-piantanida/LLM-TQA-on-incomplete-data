@@ -1,0 +1,349 @@
+{
+    "mobiles": {
+        "Company Name": {
+            "score": 0.6129032258064516,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Model Name": {
+            "score": 0.043010752688172046,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Mobile Weight": {
+            "score": 0.3172043010752688,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "RAM": {
+            "score": 0.5913978494623656,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Front Camera": {
+            "score": 0.7150537634408602,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Back Camera": {
+            "score": 0.5591397849462365,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Processor": {
+            "score": 0.42473118279569894,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Battery Capacity": {
+            "score": 0.478494623655914,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Screen Size": {
+            "score": 0.5376344086021505,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Launched Price (Pakistan)": {
+            "score": 0.20967741935483872,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Launched Price (India)": {
+            "score": 0.21505376344086022,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Launched Price (China)": {
+            "score": 0.25806451612903225,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Launched Price (USA)": {
+            "score": 0.23655913978494625,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Launched Price (Dubai)": {
+            "score": 0.27419354838709675,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Launched Year": {
+            "score": 0.532258064516129,
+            "metric": "accuracy",
+            "deducible": false
+        }
+    },
+    "olympic_games": {
+        "id": {
+            "score": 0.0,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "year": {
+            "score": 0.0,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "city": {
+            "score": 0.0,
+            "metric": "accuracy",
+            "deducible": false
+        }
+    },
+    "fitness_trakers": {
+        "Brand Name": {
+            "score": 0.75,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Device Type": {
+            "score": 0.9375,
+            "metric": "accuracy",
+            "deducible": true
+        },
+        "Model Name": {
+            "score": 0.375,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Color": {
+            "score": 0.3125,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Selling Price": {
+            "score": 0.1875,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Original Price": {
+            "score": 0.3125,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Display": {
+            "score": 0.9375,
+            "metric": "accuracy",
+            "deducible": true
+        },
+        "Rating (Out of 5)": {
+            "score": -0.25841266187050005,
+            "metric": "R2",
+            "deducible": false
+        },
+        "Strap Material": {
+            "score": 0.6875,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Average Battery Life (in days)": {
+            "score": 0.3338492492492493,
+            "metric": "R2",
+            "deducible": false
+        },
+        "Reviews": {
+            "score": 0.1875,
+            "metric": "accuracy",
+            "deducible": false
+        }
+    },
+    "breast_cancer": {
+        "id": {
+            "score": 0.8144458676323088,
+            "metric": "R2",
+            "deducible": true
+        },
+        "pid": {
+            "score": 0.20895602507256594,
+            "metric": "R2",
+            "deducible": false
+        },
+        "age": {
+            "score": 0.5214413890904853,
+            "metric": "R2",
+            "deducible": false
+        },
+        "meno": {
+            "score": 0.8478260869565217,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "size": {
+            "score": -0.0490969108067989,
+            "metric": "R2",
+            "deducible": false
+        },
+        "grade": {
+            "score": 0.644927536231884,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "nodes": {
+            "score": -0.06117793015147921,
+            "metric": "R2",
+            "deducible": false
+        },
+        "pgr": {
+            "score": 0.6318147170815753,
+            "metric": "R2",
+            "deducible": false
+        },
+        "er": {
+            "score": 0.1632908705525995,
+            "metric": "R2",
+            "deducible": false
+        },
+        "hormon": {
+            "score": 0.6159420289855072,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "rfstime": {
+            "score": 0.36541531574314223,
+            "metric": "R2",
+            "deducible": false
+        },
+        "status": {
+            "score": 0.7681159420289855,
+            "metric": "accuracy",
+            "deducible": false
+        }
+    },
+    "heart_attack": {
+        "age": {
+            "score": 0.3056123670154388,
+            "metric": "R2",
+            "deducible": false
+        },
+        "sex": {
+            "score": 0.7704918032786885,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "cp": {
+            "score": 0.6229508196721312,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "trestbps": {
+            "score": -0.03750463844466245,
+            "metric": "R2",
+            "deducible": false
+        },
+        "chol": {
+            "score": -0.20127682740363229,
+            "metric": "R2",
+            "deducible": false
+        },
+        "fbs": {
+            "score": 0.7540983606557377,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "restecg": {
+            "score": 0.7049180327868853,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "thalach": {
+            "score": 0.431338935404985,
+            "metric": "R2",
+            "deducible": false
+        },
+        "exang": {
+            "score": 0.7213114754098361,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "oldpeak": {
+            "score": 0.3029410009346145,
+            "metric": "R2",
+            "deducible": false
+        },
+        "slope": {
+            "score": 0.7049180327868853,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "ca": {
+            "score": 0.5081967213114754,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "thal": {
+            "score": 0.639344262295082,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "target": {
+            "score": 0.8524590163934426,
+            "metric": "accuracy",
+            "deducible": true
+        }
+    },
+    "accounts_receivable": {
+        "countryCode": {
+            "score": 0.8481781376518218,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "customerID": {
+            "score": 0.7672064777327935,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "PaperlessDate": {
+            "score": 0.7550607287449392,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "invoiceNumber": {
+            "score": -0.0545133370158839,
+            "metric": "R2",
+            "deducible": false
+        },
+        "InvoiceDate": {
+            "score": 0.0020242914979757085,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "DueDate": {
+            "score": 0.006072874493927126,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "InvoiceAmount": {
+            "score": 0.3391320754201069,
+            "metric": "R2",
+            "deducible": false
+        },
+        "Disputed": {
+            "score": 0.8582995951417004,
+            "metric": "accuracy",
+            "deducible": true
+        },
+        "SettledDate": {
+            "score": 0.0020242914979757085,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "PaperlessBill": {
+            "score": 0.7307692307692307,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "DaysToSettle": {
+            "score": 0.8013048660619134,
+            "metric": "R2",
+            "deducible": true
+        },
+        "DaysLate": {
+            "score": 0.8462590485671547,
+            "metric": "R2",
+            "deducible": true
+        }
+    }
+}

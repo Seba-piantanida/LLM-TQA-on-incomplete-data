@@ -1,0 +1,251 @@
+# RECOMMENDATION METRICS ANALYSIS REPORT
+Input file: enrich_res/enriched_final_results.csv
+Dataset: 13674 rows, 10 features, 5 targets
+======================================================================
+
+## GENERAL STATISTICS
+Total rows: 13674
+Available features: 10
+Available targets: 5
+
+## TARGET METRICS STATISTICS
+
+precision:
+  Mean: 0.2251
+  Median: 0.2000
+  Std: 0.2055
+  Min: 0.0000
+  Max: 1.0000
+
+recall:
+  Mean: 0.2478
+  Median: 0.2000
+  Std: 0.2458
+  Min: 0.0000
+  Max: 1.0000
+
+accuracy:
+  Mean: 0.1481
+  Median: 0.1111
+  Std: 0.1481
+  Min: 0.0000
+  Max: 0.8182
+
+ndcg_10:
+  Mean: 0.3685
+  Median: 0.3337
+  Std: 0.3471
+  Min: -0.0193
+  Max: 1.0000
+
+precision_5:
+  Mean: 0.2803
+  Median: 0.2000
+  Std: 0.2833
+  Min: 0.0000
+  Max: 1.0000
+
+## MISSING VALUES
+Total missing values: 1308
+Top columns with missing values:
+  - dataset_num_rows: 144 (1.1%)
+  - dataset_num_columns_original: 144 (1.1%)
+  - dataset_num_columns_after_removal: 144 (1.1%)
+  - query_length: 144 (1.1%)
+  - query_word_count: 144 (1.1%)
+  - query_avg_word_length: 144 (1.1%)
+  - query_unique_words: 144 (1.1%)
+  - query_lexical_diversity: 144 (1.1%)
+  - token_prompt_count: 144 (1.1%)
+  - precision: 3 (0.0%)
+
+## MODEL PERFORMANCE
+
+### precision:
+  Random Forest:
+    - R² Test: 0.2930
+    - R² CV: 0.2694 ± 0.0279
+    - MAE: 0.1328
+    - MSE: 0.0301
+  Decision Tree:
+    - R² Test: 0.3675
+    - R² CV: 0.3480 ± 0.0202
+    - MAE: 0.1273
+    - MSE: 0.0270
+  Ridge:
+    - R² Test: 0.1572
+    - R² CV: 0.1571 ± 0.0141
+    - MAE: 0.1542
+    - MSE: 0.0359
+
+### recall:
+  Random Forest:
+    - R² Test: 0.2661
+    - R² CV: 0.2476 ± 0.0242
+    - MAE: 0.1563
+    - MSE: 0.0454
+  Decision Tree:
+    - R² Test: 0.3559
+    - R² CV: 0.3375 ± 0.0156
+    - MAE: 0.1477
+    - MSE: 0.0399
+  Ridge:
+    - R² Test: 0.1421
+    - R² CV: 0.1465 ± 0.0119
+    - MAE: 0.1788
+    - MSE: 0.0531
+
+### accuracy:
+  Random Forest:
+    - R² Test: 0.2964
+    - R² CV: 0.2715 ± 0.0287
+    - MAE: 0.0924
+    - MSE: 0.0159
+  Decision Tree:
+    - R² Test: 0.3642
+    - R² CV: 0.3420 ± 0.0200
+    - MAE: 0.0893
+    - MSE: 0.0143
+  Ridge:
+    - R² Test: 0.1456
+    - R² CV: 0.1473 ± 0.0111
+    - MAE: 0.1099
+    - MSE: 0.0193
+
+### ndcg_10:
+  Random Forest:
+    - R² Test: 0.0277
+    - R² CV: -0.0235 ± 0.0262
+    - MAE: 0.2759
+    - MSE: 0.1181
+  Decision Tree:
+    - R² Test: 0.1692
+    - R² CV: 0.1497 ± 0.0148
+    - MAE: 0.2593
+    - MSE: 0.1009
+  Ridge:
+    - R² Test: 0.0984
+    - R² CV: 0.0942 ± 0.0146
+    - MAE: 0.2847
+    - MSE: 0.1095
+
+### precision_5:
+  Random Forest:
+    - R² Test: 0.1845
+    - R² CV: 0.1520 ± 0.0252
+    - MAE: 0.1970
+    - MSE: 0.0655
+  Decision Tree:
+    - R² Test: 0.2713
+    - R² CV: 0.2220 ± 0.0224
+    - MAE: 0.1903
+    - MSE: 0.0586
+  Ridge:
+    - R² Test: 0.1272
+    - R² CV: 0.1163 ± 0.0140
+    - MAE: 0.2189
+    - MSE: 0.0701
+
+## TOP FEATURES PER TARGET (Random Forest)
+
+### precision:
+  1. dataset_num_rows: 0.2946
+  2. token_prompt_count: 0.2722
+  3. num_removed_columns: 0.1305
+  4. query_avg_word_length: 0.1009
+  5. query_length: 0.0856
+  6. query_lexical_diversity: 0.0540
+  7. query_unique_words: 0.0213
+  8. dataset_num_columns_after_removal: 0.0205
+  9. query_word_count: 0.0195
+  10. dataset_num_columns_original: 0.0009
+
+### recall:
+  1. dataset_num_rows: 0.3263
+  2. token_prompt_count: 0.2712
+  3. num_removed_columns: 0.1065
+  4. query_avg_word_length: 0.0938
+  5. query_length: 0.0851
+  6. query_lexical_diversity: 0.0534
+  7. query_unique_words: 0.0213
+  8. query_word_count: 0.0208
+  9. dataset_num_columns_after_removal: 0.0205
+  10. dataset_num_columns_original: 0.0011
+
+### accuracy:
+  1. dataset_num_rows: 0.3224
+  2. token_prompt_count: 0.2511
+  3. num_removed_columns: 0.1288
+  4. query_avg_word_length: 0.0968
+  5. query_length: 0.0864
+  6. query_lexical_diversity: 0.0539
+  7. query_unique_words: 0.0214
+  8. query_word_count: 0.0206
+  9. dataset_num_columns_after_removal: 0.0177
+  10. dataset_num_columns_original: 0.0008
+
+### ndcg_10:
+  1. token_prompt_count: 0.4318
+  2. query_avg_word_length: 0.1640
+  3. query_length: 0.1330
+  4. query_lexical_diversity: 0.0858
+  5. num_removed_columns: 0.0520
+  6. dataset_num_rows: 0.0400
+  7. query_unique_words: 0.0362
+  8. query_word_count: 0.0309
+  9. dataset_num_columns_after_removal: 0.0263
+  10. dataset_num_columns_original: 0.0001
+
+### precision_5:
+  1. token_prompt_count: 0.2661
+  2. dataset_num_rows: 0.2040
+  3. num_removed_columns: 0.1310
+  4. query_avg_word_length: 0.1309
+  5. query_length: 0.1130
+  6. query_lexical_diversity: 0.0772
+  7. query_unique_words: 0.0294
+  8. query_word_count: 0.0244
+  9. dataset_num_columns_after_removal: 0.0238
+  10. dataset_num_columns_original: 0.0002
+
+## FEATURE STATISTICS
+
+dataset_num_rows:
+  Mean: 662.2195, Std: 1422.6027
+  Range: [30.0000, 4000.0000]
+
+dataset_num_columns_original:
+  Mean: 10.0000, Std: 0.0000
+  Range: [10.0000, 10.0000]
+
+dataset_num_columns_after_removal:
+  Mean: 8.5586, Std: 2.7645
+  Range: [2.0000, 10.0000]
+
+num_removed_columns:
+  Mean: 2.9000, Std: 3.3375
+  Range: [0.0000, 8.0000]
+
+query_length:
+  Mean: 57.2134, Std: 13.7864
+  Range: [32.0000, 114.0000]
+
+query_word_count:
+  Mean: 9.1261, Std: 2.3385
+  Range: [4.0000, 16.0000]
+
+query_avg_word_length:
+  Mean: 5.5015, Std: 1.0313
+  Range: [3.5800, 9.8000]
+
+query_unique_words:
+  Mean: 6.2984, Std: 1.9524
+  Range: [3.0000, 13.0000]
+
+query_lexical_diversity:
+  Mean: 0.6878, Std: 0.1052
+  Range: [0.4000, 0.8890]
+
+token_prompt_count:
+  Mean: 65329.8885, Std: 150712.0437
+  Range: [901.0000, 471776.0000]

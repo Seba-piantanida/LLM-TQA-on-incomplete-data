@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "qatch"
+version = "1.0.29"
+description = ""
+license = "apache-2.0"
+authors = ["spapicchio <simone.papicchio@polito.it>"]
+readme = "README.md"
+packages = [
+    { include = "qatch" },
+]
+
+# These packages are mandatory and form the core of this package’s distribution.
+[tool.poetry.dependencies]
+python = "^3.9"
+pandas = "^2"
+tqdm = "^4.66.1"
+sqlalchemy = "^2.0.36"
+langgraph = "^0.2.53"
+langchain = "^0.3.9"
+func-timeout = "^4.3.5"
+eval-type-backport = "^0.2.0"
+
+# TEST group
+[tool.poetry.group.test]
+optional = true
+[tool.poetry.group.test.dependencies]
+pytest = "*"
+
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.5.3"
+mkdocs-material = "^9.4.7"
+mkdocstrings-python = "^1.12.2"
+
+[tool.poetry.group.dev.dependencies]
+setuptools = "^69.0.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

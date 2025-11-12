@@ -1,0 +1,4 @@
+,db_path,db_id,tbl_name,test_category,sql_tag,query,question
+0,data/db_numerical_simple_cut_300.sqlite,db,BMI,ORDERBY,ORDERBY-SINGLE,SELECT * FROM `BMI` ORDER BY `height_m` ASC LIMIT 5,Show the first 5 entries ordered by height_m in ascending order for the table BMI
+80,data/db_numerical_simple_cut_300.sqlite,db,products,ORDERBY,ORDERBY-PROJECT,SELECT `is_top_seller` FROM `products` ORDER BY `is_top_seller` ASC LIMIT 5,Project the is_top_seller ordered in ascending order for the table products and show only the first 5 entries
+81,data/db_numerical_simple_cut_300.sqlite,db,products,ORDERBY,ORDERBY-PROJECT,SELECT `is_top_seller` FROM `products` ORDER BY `is_top_seller` DESC LIMIT 5,Project the is_top_seller ordered in descending order for the table products and show only the first 5 entries

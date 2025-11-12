@@ -1,0 +1,8 @@
+db_path,db_id,tbl_name,test_category,sql_tag,query,question
+data/db_complete_cut_300.sqlite,db,breast_cancer,ORDERBY,ORDERBY-PROJECT,SELECT `pgr` FROM `breast_cancer` ORDER BY `pgr` DESC,Select only the column `pgr` from `breast_cancer`. Sort it in descending order and return the all values.
+data/db_complete_cut_300.sqlite,db,mobiles,ORDERBY,ORDERBY-PROJECT,SELECT `Model Name` FROM `mobiles` ORDER BY `Model Name` ASC,Select only the column `Model Name` from `mobiles`. Sort it in ascending order and return the all values.
+data/db_complete_cut_300.sqlite,db,mobiles,ORDERBY,ORDERBY-PROJECT,SELECT `Model Name` FROM `mobiles` ORDER BY `Model Name` DESC,Select only the column `Model Name` from `mobiles`. Sort it in descending order and return the all values.
+data/db_complete_cut_300.sqlite,db,olympic_games,ORDERBY,ORDERBY-SINGLE,SELECT * FROM `olympic_games` ORDER BY `city` ASC,"List the all rows from the table `olympic_games`, sorted by the column `city` in ascending order."
+data/db_complete_cut_300.sqlite,db,olympic_games,ORDERBY,ORDERBY-SINGLE,SELECT * FROM `olympic_games` ORDER BY `city` DESC,"List the all rows from the table `olympic_games`, sorted by the column `city` in descending order."
+data/db_complete_cut_300.sqlite,db,olympic_games,ORDERBY,ORDERBY-PROJECT,SELECT `city` FROM `olympic_games` ORDER BY `city` ASC,Select only the column `city` from `olympic_games`. Sort it in ascending order and return the all values.
+data/db_complete_cut_300.sqlite,db,olympic_games,ORDERBY,ORDERBY-PROJECT,SELECT `city` FROM `olympic_games` ORDER BY `city` DESC,Select only the column `city` from `olympic_games`. Sort it in descending order and return the all values.

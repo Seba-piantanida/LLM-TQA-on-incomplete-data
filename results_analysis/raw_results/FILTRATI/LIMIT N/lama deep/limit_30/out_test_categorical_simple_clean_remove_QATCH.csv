@@ -1,0 +1,493 @@
+db_path,table_name,test_category,query,model,AI_answer,SQL_query,failed_attempts,note,valid_efficiency_score,cell_precision,cell_recall,execution_accuracy,tuple_cardinality,tuple_constraint,tuple_order
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-SINGLE,"List the top 30 rows from the table `dataset_animali`, sorted by the column `Nome` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Mammifero', 'Savane africane', 70, 6000.0, 'Zebra'], ['Mammifero', 'Savane', 14, 190.0, 'Leone'], ['Rettile', 'Fiumi e laghi', 70, 500.0, 'Coccodrillo'], ['Uccello', 'Montagne', 25, 6.0, 'Aquila'], ['Uccello', 'Antartide', 20, 30.0, 'Pinguino'], ['Pesce', 'Oceani', 70, 1100.0, 'Squalo'], ['Mammifero', 'Artico', 25, 450.0, 'Orso polare'], ['Mammifero', 'Deserti australiani', 23, 85.0, 'Canguro'], ['Mammifero', 'Savane', 25, 1200.0, 'Ippopotamo'], ['Rettile', 'Isole Galápagos', 100, 250.0, 'Tartaruga gigante'], ['Mammifero', 'Foreste tropicali', 12, 90.0, 'Scimmia'], ['Mammifero', 'Foreste pluviali', 30, 75.0, 'Gorilla'], ['Rettile', 'Foreste tropicali', 20, 6.0, 'Anakonda'], ['Uccello', 'Falesie e aree urbane', 15, 1.0, 'Pigeon'], ['Mammifero', 'Oceani', 90, 140000.0, 'Balena'], ['Mammifero', 'Fiumi africani', 40, 1500.0, 'Ippopotamo'], ['Mammifero', 'Foreste', 15, 220.0, 'Cervo'], ['Rettile', 'Foreste tropicali', 20, 75.0, 'Boa constrictor'], ['Uccello', 'Foreste pluviali', 50, 1.2, 'Pappagallo'], ['Mammifero', 'Savane africane', 50, 2400.0, 'Elefante'], ['Mammifero', 'Foreste e tundra', 13, 45.0, 'Lupo'], ['Mammifero', 'Zone costiere', 30, 300.0, 'Foca'], ['Rettile', 'Foreste del Madagascar', 5, 0.2, 'Camaleonte'], ['Pesce', 'Barriere coralline', 4, 0.05, 'Clownfish'], ['Uccello', 'Oceani', 50, 11.0, 'Albatros']]",SELECT * FROM `dataset_animali` ORDER BY `Nome` DESC LIMIT 30,0,,0.0,0.756,0.747,0.0,1.0,0.16,0.5
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-PROJECT,Select only the column `Marca` from `dataset_auto`. Sort it in ascending order and return the first 30 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Alfa Romeo'], ['Audi'], ['BMW'], ['Dacia'], ['Fiat'], ['Fiat'], ['Hyundai'], ['Kia'], ['Mazda'], ['Mercedes-Benz'], ['Mitsubishi'], ['Nissan'], ['Nissan'], ['Opel'], ['Peugeot'], ['Peugeot'], ['Renault'], ['Seat'], ['Subaru'], ['Tesla'], ['Toyota'], ['Toyota'], ['Volkswagen'], ['Volkswagen'], ['Volvo']]",SELECT `Marca` FROM `dataset_auto` ORDER BY `Marca` ASC LIMIT 30,0,,0.0,0.95,0.95,0.0,1.0,0.85,1.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-PROJECT,Select only the column `Marca` from `dataset_auto`. Sort it in descending order and return the first 30 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Volkswagen'], ['Fiat'], ['Tesla'], ['Nissan'], ['Peugeot'], ['Toyota'], ['Audi'], ['Renault'], ['Mazda'], ['Volvo'], ['Fiat'], ['BMW'], ['Hyundai'], ['Kia'], ['Volkswagen'], ['Alfa Romeo'], ['Opel'], ['Nissan'], ['Mitsubishi'], ['Dacia'], ['Toyota'], ['Peugeot'], ['Mercedes-Benz'], ['Subaru'], ['Seat']]",SELECT `Marca` FROM `dataset_auto` ORDER BY `Marca` DESC LIMIT 30,0,,0.0,0.95,0.95,0.0,1.0,0.85,0.6405000000000001
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-PROJECT,Select only the column `Modello` from `dataset_auto`. Sort it in ascending order and return the first 30 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Alfa Romeo'], ['Audi'], ['BMW'], ['Dacia'], ['Fiat'], ['Fiat'], ['Hyundai'], ['Kia'], ['Mazda'], ['Mercedes-Benz'], ['Mitsubishi'], ['Nissan'], ['Nissan'], ['Opel'], ['Peugeot'], ['Renault'], ['Renault'], ['SEAT'], ['Subaru'], ['Tesla'], ['Toyota'], ['Toyota'], ['Volkswagen'], ['Volkswagen'], ['Volvo']]",SELECT `Modello` FROM `dataset_auto` ORDER BY `Modello` ASC LIMIT 30,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-SINGLE,"List the top 30 rows from the table `dataset_film_famosi`, sorted by the column `Durata` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,[],SELECT * FROM `dataset_film_famosi` ORDER BY `Durata` ASC LIMIT 30,3,"<think>
+Alright, so I need to figure out how to respond to the user's query. They provided a dataset of famous films with several columns: Titolo, Anno, Regista, Genere, and Oscar vinti. The task is to list the top 30 rows sorted by Durata in ascending order. 
+
+First, I notice that the dataset doesn't include a ""Durata"" column. That's a problem because the query specifically asks to sort by this missing column. Since Durata isn't available, I can't directly sort the data as requested. 
+
+I need to handle this missing information. The instructions say that if any data fields are NULL, missing, or incomplete, I should infer and fill them with the most logical value based on context. So, I have to figure out a way to estimate the Durata for each film. 
+
+How can I estimate the duration? Well, I know that some genres typically have longer or shorter movies. For example, epics or historical films might be longer, while comedies or musicals might be shorter. Also, older films might be shorter on average compared to modern ones. 
+
+Looking at the dataset, I see a variety of genres: Drammatico, Romantico, Fantasy, Crime, etc. I can assign an average duration based on the genre. For instance, Drammatico films might average around 120 minutes, while Fantasy or Storico could be longer, say 130-140 minutes. Musicals might be around 110 minutes. 
+
+I'll go through each entry, check the genre, and assign a Durata that makes sense. I'll make sure not to leave any Durata fields empty. Once all Durata values are filled in, I'll sort the entries from the shortest to longest duration. 
+
+After sorting, I'll prepare the JSON response as specified, including the table name and the ordered entries. I'll ensure that all fields are filled and that the JSON is valid. 
+
+I also need to remember that the user wants the top 30 rows, but the dataset only has 25 entries, so I'll include all of them sorted. 
+
+Finally, I'll double-check the JSON structure to make sure it's correct and that there are no null values. This way, the response meets all the user's requirements despite the missing Durata column.
+</think>
+
+```json
+{
+  ""table_name"": ""dataset_film_famosi"",
+  ""ordered_entries"": [
+    {
+      ""Titolo"": ""Il Padrino"",
+      ""Anno"": 1972,
+      ""Regista"": ""Francis Ford Coppola"",
+      ""Genere"": ""Drammatico"",
+      ""Oscar vinti"": 3,
+      ""Durata"": 177
+    },
+    {
+      ""Titolo"": ""Titanic"",
+      ""Anno"": 1997,
+      ""Regista"": ""James Cameron"",
+      ""Genere"": ""Romantico"",
+      ""Oscar vinti"": 11,
+      ""Durata"": 194
+    },
+    {
+      ""Titolo"": ""Forrest Gump"",
+      ""Anno"": 1994,
+      ""Regista"": ""Robert Zemeckis"",
+      ""Genere"": ""Drammatico"",
+      ""Oscar vinti"": 6,
+      ""Durata"": 142
+    },
+    {
+      ""Titolo"": ""Il Signore degli Anelli: Il ritorno del re"",
+      ""Anno"": 2003,
+      ""Regista"": ""Peter Jackson"",
+      ""Genere"": ""Fantasy"",
+      ""Oscar vinti"": 11,
+      ""Durata"": 201
+    },
+    {
+      ""Titolo"": ""Pulp Fiction"",
+      ""Anno"": 1994,
+      ""Regista"": ""Quentin Tarantino"",
+      ""Genere"": ""Crime"",
+      ""Oscar vinti"": 1,
+      ""Durata"": 168
+    },
+    {
+      ""Titolo"": ""Schindler's List"",
+      ""Anno"": 1993,
+      ""Regista"": ""Steven Spielberg"",
+      ""Genere"": ""Storico"",
+      ""Oscar vinti"": 7,
+      ""Durata"": 195
+    },
+    {
+      ""Titolo"": ""Inception"",
+      ""Anno"": 2010,
+      ""Regista"": ""Christopher Nolan"",
+      ""Genere"": ""Sci-Fi"",
+      ""Oscar vinti"": 4,
+      ""Durata"": 148
+    },
+    {
+      ""Titolo"": ""La La Land"",
+      ""Anno"": 2016,
+      ""Regista"": ""Damien Chazelle"",
+      ""Genere"": ""Musical"",
+      ""Oscar vinti"": 6,
+      ""Durata"": 128
+    },
+    {
+      ""Titolo"": ""Gladiator"",
+      ""Anno"": 2000,
+      ""Regista"": ""Ridley Scott"",
+      ""Genere"": ""Storico"",
+      ""Oscar vinti"": 5,
+      ""Durata"": 154
+    },
+    {
+      ""Titolo"": ""The Departed"",
+      ""Anno"": 2006,
+      ""Regista"": ""Martin Scorsese"",
+      ""Genere"": ""Crime"",
+      ""Oscar vinti"": 4,
+      ""Durata"": 151
+    },
+    {
+      ""Titolo"": ""Parasite"",
+      ""Anno"": 2019,
+      ""Regista"": ""Bong Joon-ho"",
+      ""Genere"": ""Thriller"",
+      ""Oscar vinti"": 4,
+      ""Durata"": 132
+    },
+    {
+      ""Titolo"": ""Casablanca"",
+      ""Anno"": 1942,
+      ""Regista"": ""Michael Curtiz"",
+      ""Genere"": ""Romantico"",
+      ""Oscar vinti"": 3,
+      ""Durata"": 102
+    },
+    {
+      ""Titolo"": ""The Shape of Water"",
+      ""Anno"": 2017,
+      ""Regista"": ""Guillermo del Toro"",
+      ""Genere"": ""Fantasy"",
+      ""Oscar vinti"": 4,
+      ""Durata"": 123
+    },
+    {
+      ""Titolo"": ""No Country for Old Men"",
+      ""Anno"": 2007,
+      ""Regista"": ""Ethan & Joel Coen"",
+      ""Genere"": ""Thriller"",
+      ""Oscar vinti"": 4,
+      ""Durata"": 122
+    },
+    {
+      ""Titolo"": ""Chicago"",
+      ""Anno"": 2002,
+      ""Regista"": ""Rob Marshall"",
+      ""Genere"": ""Musical"",
+      ""Oscar vinti"": 6,
+      ""Durata"": 113
+    },
+    {
+      ""Titolo"": ""The English Patient"",
+      ""Anno"": 1996,
+      ""Regista"": ""Anthony Minghella"",
+      ""Genere"": ""Romantico"",
+      ""Oscar vinti"": 9,
+      ""Durata"": 162
+    },
+    {
+      ""Titolo"": ""Slumdog Millionaire"",
+      ""Anno"": 2008,
+      ""Regista"": ""Danny Boyle"",
+      ""Genere"": ""Drammatico"",
+      ""Oscar vinti"": 8,
+      ""Durata"": 120
+    },
+    {
+      ""Titolo"": ""Argo"",
+      ""Anno"": 2012,
+      ""Regista"": ""Ben Affleck"",
+      ""Genere"": ""Thriller"",
+      ""Oscar vinti"": 3,
+      ""Durata"": 120
+    },
+    {
+      ""Titolo"": ""Birdman"",
+      ""Anno"": 2014,
+      ""Regista"": ""Alejandro G. Iñárritu"",
+      ""Genere"": ""Commedia Drammatica"",
+      ""Oscar vinti"": 4,
+      ""Durata"": 119
+    },
+    {
+      ""Titolo"": ""American Beauty"",
+      ""Anno"": 1999,
+      ""Regista"": ""Sam Mendes"",
+      ""Genere"": ""Drammatico"",
+      ""Oscar vinti"": 5,
+      ""Durata"": 122
+    },
+    {
+      ""Titolo"": ""The Godfather Part II"",
+      ""Anno"": 1974,
+      ""Regista"": ""Francis Ford Coppola"",
+      ""Genere"": ""Drammatico"",
+      ""Oscar vinti"": 6,
+      ""Durata"": 202
+    },
+    {
+      ""Titolo"": ""The Silence of the Lambs"",
+      ""Anno"": 1991,
+      ""Regista"": ""Jonathan Demme"",
+      ""Genere"": ""Thriller"",
+      ""Oscar vinti"": 5,
+      ""Durata"": 118
+    },
+    {
+      ""Titolo"": ""12 Years a Slave"",
+      ""Anno"": 2013,
+      ""Regista"": ""Steve McQueen"",
+      ""Genere"": ""Storico"",
+      ""Oscar vinti"": 3,
+      ""Durata"": 134
+    },
+    {
+      ""Titolo"": ""The Artist"",
+      ""Anno"": 2011,
+      ""Regista"": ""Michel Hazanavicius"",
+      ""Genere"": ""Commedia Drammatica"",
+      ""Oscar vinti"": 5,
+      ""Durata"": 100
+    },
+    {
+      ""Titolo"": ""Million Dollar Baby"",
+      ""Anno"": 200",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_categorical_simple.sqlite,dataset_animali,ORDERBY-SINGLE,"List the top 30 rows from the table `dataset_animali`, sorted by the column `Nome` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Uccello', 'Oceani', 50, 11.0, 'Pinguino'], ['Uccello', 'Falesie e aree urbane', 15, 1.0, 'Gabbiano'], ['Uccello', 'Montagne', 25, 6.0, 'Aquila'], ['Uccello', 'Foreste pluviali', 50, 1.2, 'Tucano'], ['Uccello', 'Antartide', 20, 30.0, 'Pinguino imperatore'], ['Rettile', 'Isole Galápagos', 100, 250.0, 'Tartaruga gigante'], ['Rettile', 'Foreste tropicali', 20, 6.0, 'Boa constrictor'], ['Rettile', 'Foreste del Madagascar', 5, 0.2, 'Camaleonte'], ['Rettile', 'Fiumi e laghi', 70, 500.0, 'Coccodrillo'], ['Pesce', 'Oceani', 70, 1100.0, 'Squalo'], ['Pesce', 'Barriere coralline', 4, 0.05, 'Pesciolino'], ['Mammifero', 'Savane africane', 70, 6000.0, 'Elefante'], ['Mammifero', 'Savane', 14, 190.0, 'Leone'], ['Mammifero', 'Artico', 25, 450.0, 'Orso polare'], ['Mammifero', 'Deserti australiani', 23, 85.0, 'Canguro'], ['Mammifero', 'Savane', 25, 1200.0, 'Ippopotamo'], ['Mammifero', 'Foreste tropicali', 12, 90.0, 'Scimmia'], ['Mammifero', 'Foreste pluviali', 30, 75.0, 'Gorilla'], ['Mammifero', 'Oceani', 90, 140000.0, 'Balena'], ['Mammifero', 'Fiumi africani', 40, 1500.0, 'Ippopotamo nano'], ['Mammifero', 'Foreste', 15, 220.0, 'Orso bruno'], ['Mammifero', 'Foreste tropicali', 20, 75.0, 'Puma'], ['Mammifero', 'Foreste pluviali', 50, 1.2, 'Lemure'], ['Mammifero', 'Savane africane', 50, 2400.0, 'Rinoceronte'], ['Mammifero', 'Foreste e tundra', 13, 45.0, 'Lupo'], ['Mammifero', 'Zone costiere', 30, 300.0, 'Foca']]",SELECT * FROM `dataset_animali` ORDER BY `Nome` DESC LIMIT 30,0,,0.0,0.75,0.759,0.0,0.962,0.16,0.5
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-PROJECT,Select only the column `Marca` from `dataset_auto`. Sort it in ascending order and return the first 30 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `Marca` FROM `dataset_auto` ORDER BY `Marca` ASC LIMIT 30,3,"```
+{
+  ""table_name"": ""dataset_animali"",
+  ""ordered_entries"": [
+    {
+      ""Classe"": ""Uccello"",
+      ""Habitat"": ""Oceani"",
+      ""Durata vita media"": 50,
+      ""Peso medio (kg)"": 11.0,
+      ""Nome"": ""Pinguino""
+    },
+    {
+      ""Classe"": ""Uccello"",
+      ""Habitat"": ""Falesie e aree urbane"",
+      ""Durata vita media"": 15,
+      ""Peso medio (kg)"": 1.0,
+      ""Nome"": ""Gabbiano""
+    },
+    {
+      ""Classe"": ""Uccello"",
+      ""Habitat"": ""Montagne"",
+      ""Durata vita media"": 25,
+      ""Peso medio (kg)"": 6.0,
+      ""Nome"": ""Aquila""
+    },
+    {
+      ""Classe"": ""Uccello"",
+      ""Habitat"": ""Foreste pluviali"",
+      ""Durata vita media"": 50,
+      ""Peso medio (kg)"": 1.2,
+      ""Nome"": ""Tucano""
+    },
+    {
+      ""Classe"": ""Uccello"",
+      ""Habitat"": ""Antartide"",
+      ""Durata vita media"": 20,
+      ""Peso medio (kg)"": 30.0,
+      ""Nome"": ""Pinguino imperatore""
+    },
+    {
+      ""Classe"": ""Rettile"",
+      ""Habitat"": ""Isole Galápagos"",
+      ""Durata vita media"": 100,
+      ""Peso medio (kg)"": 250.0,
+      ""Nome"": ""Tartaruga gigante""
+    },
+    {
+      ""Classe"": ""Rettile"",
+      ""Habitat"": ""Foreste tropicali"",
+      ""Durata vita media"": 20,
+      ""Peso medio (kg)"": 6.0,
+      ""Nome"": ""Boa constrictor""
+    },
+    {
+      ""Classe"": ""Rettile"",
+      ""Habitat"": ""Foreste del Madagascar"",
+      ""Durata vita media"": 5,
+      ""Peso medio (kg)"": 0.2,
+      ""Nome"": ""Camaleonte""
+    },
+    {
+      ""Classe"": ""Rettile"",
+      ""Habitat"": ""Fiumi e laghi"",
+      ""Durata vita media"": 70,
+      ""Peso medio (kg)"": 500.0,
+      ""Nome"": ""Coccodrillo""
+    },
+    {
+      ""Classe"": ""Pesce"",
+      ""Habitat"": ""Oceani"",
+      ""Durata vita media"": 70,
+      ""Peso medio (kg)"": 1100.0,
+      ""Nome"": ""Squalo""
+    },
+    {
+      ""Classe"": ""Pesce"",
+      ""Habitat"": ""Barriere coralline"",
+      ""Durata vita media"": 4,
+      ""Peso medio (kg)"": 0.05,
+      ""Nome"": ""Pesciolino""
+    },
+    {
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Savane africane"",
+      ""Durata vita media"": 70,
+      ""Peso medio (kg)"": 6000.0,
+      ""Nome"": ""Elefante""
+    },
+    {
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Savane"",
+      ""Durata vita media"": 14,
+      ""Peso medio (kg)"": 190.0,
+      ""Nome"": ""Leone""
+    },
+    {
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Artico"",
+      ""Durata vita media"": 25,
+      ""Peso medio (kg)"": 450.0,
+      ""Nome"": ""Orso polare""
+    },
+    {
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Deserti australiani"",
+      ""Durata vita media"": 23,
+      ""Peso medio (kg)"": 85.0,
+      ""Nome"": ""Canguro""
+    },
+    {
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Savane"",
+      ""Durata vita media"": 25,
+      ""Peso medio (kg)"": 1200.0,
+      ""Nome"": ""Ippopotamo""
+    },
+    {
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Foreste tropicali"",
+      ""Durata vita media"": 12,
+      ""Peso medio (kg)"": 90.0,
+      ""Nome"": ""Scimmia""
+    },
+    {
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Foreste pluviali"",
+      ""Durata vita media"": 30,
+      ""Peso medio (kg)"": 75.0,
+      ""Nome"": ""Gorilla""
+    },
+    {
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Oceani"",
+      ""Durata vita media"": 90,
+      ""Peso medio (kg)"": 140000.0,
+      ""Nome"": ""Balena""
+    },
+    {
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Fiumi africani"",
+      ""Durata vita media"": 40,
+      ""Peso medio (kg)"": 1500.0,
+      ""Nome"": ""Ippopotamo nano""
+    },
+    {
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Foreste"",
+      ""Durata vita media"": 15,
+      ""Peso medio (kg)"": 220.0,
+      ""Nome"": ""Orso bruno""
+    },
+    {
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Foreste tropicali"",
+      ""Durata vita media"": 20,
+      ""Peso medio (kg)"": 75.0,
+      ""Nome"": ""Puma""
+    },
+    {
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Foreste pluviali"",
+      ""Durata vita media"": 50,
+      ""Peso medio (kg)"": 1.2,
+      ""Nome"": ""Lemure""
+    },
+    {
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Savane africane"",
+      ""Durata vita media"": 50,
+      ""Peso medio (kg)"": 2400.0,
+      ""Nome"": ""Rinoceronte""
+    },
+    {
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Foreste e tundra"",
+      ""Durata vita media"": 13,
+      ""Peso medio (kg)"": 45.0,
+      ""Nome"": ""Lupo""
+    },
+    {
+      ""Classe"": ""Mammifero"",
+      ""Habitat"": ""Zone costiere"",
+      ""Durata vita media"": 30,
+      ""Peso medio (kg)"": 300.0,
+      ""Nome"": ""Foca""
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-PROJECT,Select only the column `Marca` from `dataset_auto`. Sort it in descending order and return the first 30 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Volkswagen'], ['Fiat'], ['Tesla'], ['Nissan'], ['Peugeot'], ['Toyota'], ['Audi'], ['Renault'], ['Mazda'], ['Volvo'], ['Fiat'], ['BMW'], ['Hyundai'], ['Kia'], ['Volkswagen'], ['Alfa Romeo'], ['Opel'], ['Nissan'], ['Dacia'], ['Toyota'], ['Peugeot'], ['Mercedes'], ['Subaru'], ['Seat']]",SELECT `Marca` FROM `dataset_auto` ORDER BY `Marca` DESC LIMIT 30,0,,0.0,0.895,0.85,0.0,0.96,0.75,0.6605
+data/db_categorical_simple.sqlite,dataset_auto,ORDERBY-PROJECT,Select only the column `Modello` from `dataset_auto`. Sort it in ascending order and return the first 30 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `Modello` FROM `dataset_auto` ORDER BY `Modello` ASC LIMIT 30,3,"{
+  ""table_name"": ""dataset_auto"",
+  ""ordered_entries"": [
+    {
+      ""Marca"": ""Volkswagen""
+    },
+    {
+      ""Marca"": ""Fiat""
+    },
+    {
+      ""Marca"": ""Tesla""
+    },
+    {
+      ""Marca"": ""Nissan""
+    },
+    {
+      ""Marca"": ""Peugeot""
+    },
+    {
+      ""Marca"": ""Toyota""
+    },
+    {
+      ""Marca"": ""Audi""
+    },
+    {
+      ""Marca"": ""Renault""
+    },
+    {
+      ""Marca"": ""Mazda""
+    },
+    {
+      ""Marca"": ""Volvo""
+    },
+    {
+      ""Marca"": ""Fiat""
+    },
+    {
+      ""Marca"": ""BMW""
+    },
+    {
+      ""Marca"": ""Hyundai""
+    },
+    {
+      ""Marca"": ""Kia""
+    },
+    {
+      ""Marca"": ""Volkswagen""
+    },
+    {
+      ""Marca"": ""Alfa Romeo""
+    },
+    {
+      ""Marca"": ""Opel""
+    },
+    {
+      ""Marca"": ""Nissan""
+    },
+    {
+      ""Marca"": ""Dacia""
+    },
+    {
+      ""Marca"": ""Toyota""
+    },
+    {
+      ""Marca"": ""Peugeot""
+    },
+    {
+      ""Marca"": ""Mercedes""
+    },
+    {
+      ""Marca"": ""Subaru""
+    },
+    {
+      ""Marca"": ""Seat""
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_categorical_simple.sqlite,dataset_film_famosi,ORDERBY-SINGLE,"List the top 30 rows from the table `dataset_film_famosi`, sorted by the column `Durata` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Casablanca', 1942, 'Michael Curtiz', 'Romantico', 3, 102], ['Il Padrino', 1972, 'Francis Ford Coppola', 'Drammatico', 3, 177], ['The Godfather Part II', 1974, 'Francis Ford Coppola', 'Drammatico', 6, 202], ['The Silence of the Lambs', 1991, 'Jonathan Demme', 'Thriller', 5, 118], [""Schindler's List"", 1993, 'Steven Spielberg', 'Storico', 7, 195], ['Forrest Gump', 1994, 'Robert Zemeckis', 'Drammatico', 6, 142], ['Pulp Fiction', 1994, 'Quentin Tarantino', 'Crime', 1, 168], ['The English Patient', 1996, 'Anthony Minghella', 'Romantico', 9, 162], ['American Beauty', 1999, 'Sam Mendes', 'Drammatico', 5, 122], ['Gladiator', 2000, 'Ridley Scott', 'Storico', 5, 154], ['Chicago', 2002, 'Rob Marshall', 'Musical', 6, 113], ['Il Signore degli Anelli: Il ritorno del re', 2003, 'Peter Jackson', 'Fantasy', 11, 201], ['Million Dollar Baby', 2004, 'Clint Eastwood', 'Drammatico', 4, 132], ['The Departed', 2006, 'Martin Scorsese', 'Crime', 4, 151], ['No Country for Old Men', 2007, 'Ethan & Joel Coen', 'Thriller', 4, 122], ['Slumdog Millionaire', 2008, 'Danny Boyle', 'Drammatico', 8, 120], ['Inception', 2010, 'Christopher Nolan', 'Sci-Fi', 4, 148], ['The Artist', 2011, 'Michel Hazanavicius', 'Commedia Drammatica', 5, 100], ['Argo', 2012, 'Ben Affleck', 'Thriller', 3, 120], ['12 Years a Slave', 2013, 'Steve McQueen', 'Storico', 3, 134], ['Birdman', 2014, 'Alejandro G. Iñárritu', 'Commedia Drammatica', 4, 119], ['La La Land', 2016, 'Damien Chazelle', 'Musical', 6, 128], ['The Shape of Water', 2017, 'Guillermo del Toro', 'Fantasy', 4, 123], ['Parasite', 2019, 'Bong Joon-ho', 'Thriller', 4, 132], ['Titanic', 1997, 'James Cameron', 'Romantico', 11, 194]]",SELECT * FROM `dataset_film_famosi` ORDER BY `Durata` ASC LIMIT 30,0,,0.0,0.973,0.982,0.0,1.0,0.84,0.5

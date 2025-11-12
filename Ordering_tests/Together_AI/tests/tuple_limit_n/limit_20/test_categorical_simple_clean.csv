@@ -1,0 +1,3 @@
+db_path,db_id,tbl_name,test_category,sql_tag,query,question
+data/db_categorical_simple.sqlite,db,dataset_auto,ORDERBY,ORDERBY-PROJECT,SELECT `Anno` FROM `dataset_auto` ORDER BY `Anno` DESC LIMIT 20,Select only the column `Anno` from `dataset_auto`. Sort it in descending order and return the first 20 values.
+data/db_categorical_simple.sqlite,db,dataset_film_famosi,ORDERBY,ORDERBY-PROJECT,SELECT `Durata` FROM `dataset_film_famosi` ORDER BY `Durata` ASC LIMIT 20,Select only the column `Durata` from `dataset_film_famosi`. Sort it in ascending order and return the first 20 values.

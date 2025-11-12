@@ -1,0 +1,321 @@
+db_path,table_name,test_category,query,model,AI_answer,SQL_query,failed_attempts,note,valid_efficiency_score,cell_precision,cell_recall,execution_accuracy,tuple_cardinality,tuple_constraint,tuple_order
+data/db_numerical_simple.sqlite,BMI,ORDERBY-PROJECT,Select only the column `BMI` from `BMI`. Sort it in descending order and return the first 15 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[33.29], [32.83], [32.76], [32.59], [32.45], [31.93], [31.67], [31.58], [31.45], [31.28], [30.96], [30.78], [30.59], [30.45], [30.26]]",SELECT `BMI` FROM `BMI` ORDER BY `BMI` DESC LIMIT 15,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-SINGLE,"List the top 15 rows from the table `energy_consumption`, sorted by the column `id` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 'Family_1', 987, 33, 0.28, 29.91, 276.36], [2, 'Family_2', 1248, 27, 0.25, 46.22, 312.0], [3, 'Family_3', 1123, 32, 0.22, 35.09, 247.06], [4, 'Family_4', 1108, 29, 0.27, 38.21, 299.16], [5, 'Family_5', 1465, 30, 0.25, 48.83, 366.25], [6, 'Family_6', 1762, 31, 0.33, 56.84, 581.46], [7, 'Family_7', 2064, 33, 0.2, 62.55, 412.8], [8, 'Family_8', 810, 30, 0.28, 27.0, 226.8], [9, 'Family_9', 1027, 30, 0.28, 34.23, 287.56], [10, 'Family_10', 1272, 31, 0.21, 41.03, 267.12], [11, 'Family_11', 1322, 30, 0.3, 44.07, 396.6], [12, 'Family_12', 2311, 25, 0.34, 92.44, 785.74], [13, 'Family_13', 1265, 32, 0.32, 39.53, 404.8], [14, 'Family_14', 899, 25, 0.34, 35.96, 305.66], [15, 'Family_15', 862, 27, 0.28, 31.93, 241.36]]",SELECT * FROM `energy_consumption` ORDER BY `id` ASC LIMIT 15,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-ADVANCED,"Compute the sum of the columns id, household_name for each row in `energy_consumption`. Sort all rows in ascending order by this sum and return the first 15 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 'Family_1', 987, 33, 0.28, 29.91, 276.36], [2, 'Family_2', 1248, 27, 0.25, 46.22, 312.0], [3, 'Family_3', 1123, 32, 0.22, 35.09, 247.06], [4, 'Family_4', 1108, 29, 0.27, 38.21, 299.16], [5, 'Family_5', 1465, 30, 0.25, 48.83, 366.25], [6, 'Family_6', 1762, 31, 0.33, 56.84, 581.46], [7, 'Family_7', 2064, 33, 0.2, 62.55, 412.8], [8, 'Family_8', 810, 30, 0.28, 27.0, 226.8], [9, 'Family_9', 1027, 30, 0.28, 34.23, 287.56], [10, 'Family_10', 1272, 31, 0.21, 41.03, 267.12], [11, 'Family_11', 1322, 30, 0.3, 44.07, 396.6], [12, 'Family_12', 2311, 25, 0.34, 92.44, 785.74], [13, 'Family_13', 1265, 32, 0.32, 39.53, 404.8], [14, 'Family_14', 899, 25, 0.34, 35.96, 305.66], [15, 'Family_15', 862, 27, 0.28, 31.93, 241.36]]",SELECT * FROM `energy_consumption` ORDER BY `id` + `household_name` ASC LIMIT 15,1,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-PROJECT,Select only the column `id` from `energy_consumption`. Sort it in ascending order and return the first 15 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14]]",SELECT `id` FROM `energy_consumption` ORDER BY `id` ASC LIMIT 15,0,,0.0,0.933,0.933,0.0,1.0,0.933,1.0
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-PROJECT,Select only the column `id` from `energy_consumption`. Sort it in descending order and return the first 15 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[25], [24], [23], [22], [21], [20], [19], [18], [17], [16], [15], [14], [13], [12], [11]]",SELECT `id` FROM `energy_consumption` ORDER BY `id` DESC LIMIT 15,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-PROJECT,Select only the column `avg_daily_kwh` from `energy_consumption`. Sort it in descending order and return the first 15 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[62.55], [58.52], [48.03], [46.9], [44.87], [43.58], [42.9], [42.46], [41.93], [41.76], [40.76], [39.73], [38.92], [38.35]]",SELECT `avg_daily_kwh` FROM `energy_consumption` ORDER BY `avg_daily_kwh` DESC LIMIT 15,1,,0.0,0.071,0.067,0.0,0.933,0.067,1.0
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-PROJECT,Select only the column `total_cost` from `energy_consumption`. Sort it in ascending order and return the first 15 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[631.0], [805.0], [810.0], [849.0], [862.0], [899.0], [927.0], [1027.0], [1108.0], [1123.0], [1149.0], [1201.0], [1248.0], [1257.0], [1265.0]]",SELECT `total_cost` FROM `energy_consumption` ORDER BY `total_cost` ASC LIMIT 15,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,financial,ORDERBY-PROJECT,Select only the column `risk_profile` from `financial`. Sort it in ascending order and return the first 15 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['null'], ['null'], ['null'], ['null'], ['null'], ['null'], ['null'], ['null'], ['null'], ['null'], ['null'], ['null'], ['null'], ['null'], ['null']]",SELECT `risk_profile` FROM `financial` ORDER BY `risk_profile` ASC LIMIT 15,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-SINGLE,"List the top 15 rows from the table `logistics_delivery`, sorted by the column `id` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 'Driver_1', 149, 23, 2.5, 29.3, 59.6, 5.09, 0.154], [2, 'Driver_2', 210, 35, 1.9, 25.4, 110.5, 8.27, 0.167], [3, 'Driver_3', 293, 13, 3.7, 14.2, 79.2, 20.63, 0.044], [4, 'Driver_4', 115, 71, 5.8, 17.7, 19.8, 6.5, 0.617], [5, 'Driver_5', 152, 67, 3.5, 29.5, 43.4, 5.15, 0.441], [6, 'Driver_6', 204, 72, 5.6, 25.2, 36.4, 8.1, 0.353], [7, 'Driver_7', 200, 73, 5.4, 14.3, 37.0, 13.99, 0.365], [8, 'Driver_8', 181, 24, 4.8, 19.6, 37.7, 9.23, 0.133], [9, 'Driver_9', 230, 15, 2.8, 27.8, 82.1, 8.27, 0.065], [10, 'Driver_10', 157, 69, 5.1, 10.0, 30.8, 15.7, 0.439], [11, 'Driver_11', 58, 41, 5.1, 23.5, 11.4, 2.47, 0.707], [12, 'Driver_12', 52, 75, 5.6, 7.0, 9.3, 7.43, 1.442], [13, 'Driver_13', 272, 25, 5.8, 23.4, 46.9, 11.62, 0.092], [14, 'Driver_14', 290, 72, 1.7, 15.9, 170.6, 18.24, 0.248], [15, 'Driver_15', 64, 22, 5.8, 21.8, 11.0, 2.94, 0.344]]",SELECT * FROM `logistics_delivery` ORDER BY `id` ASC LIMIT 15,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-PROJECT,Select only the column `id` from `logistics_delivery`. Sort it in ascending order and return the first 15 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15]]",SELECT `id` FROM `logistics_delivery` ORDER BY `id` ASC LIMIT 15,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-PROJECT,Select only the column `id` from `logistics_delivery`. Sort it in descending order and return the first 15 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[25], [24], [23], [22], [21], [20], [19], [18], [17], [16], [15], [14], [13], [12], [11]]",SELECT `id` FROM `logistics_delivery` ORDER BY `id` DESC LIMIT 15,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-PROJECT,Select only the column `time_hrs` from `logistics_delivery`. Sort it in ascending order and return the first 15 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1.7], [1.9], [2.3], [2.5], [2.6], [2.8], [3.0], [3.2], [3.5], [3.6], [3.7], [3.8], [3.9], [4.2]]",SELECT `time_hrs` FROM `logistics_delivery` ORDER BY `time_hrs` ASC LIMIT 15,0,,0.0,1.0,0.933,0.0,0.933,0.933,1.0
+data/db_numerical_simple.sqlite,products,ORDERBY-PROJECT,Select only the column `category` from `products`. Sort it in descending order and return the first 15 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Food'], ['Electronics'], ['Stationery'], ['Electronics'], ['Food'], ['Electronics'], ['Electronics'], ['Electronics'], ['Electronics'], ['Electronics'], ['Electronics'], ['Electronics'], ['Electronics'], ['Electronics'], ['Electronics']]",SELECT `category` FROM `products` ORDER BY `category` DESC LIMIT 15,0,,0.0,1.0,0.75,0.0,1.0,0.0,0.25
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-SINGLE,"List the top 15 rows from the table `student_performance`, sorted by the column `id` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 'Student_1', 82, 85, 83.5, 'Yes'], [2, 'Student_2', 48, 93, 70.5, 'Yes'], [3, 'Student_3', 52, 58, 55.0, 'Yes'], [4, 'Student_4', 62, 83, 72.5, 'Yes'], [5, 'Student_5', 51, 52, 51.5, 'Yes'], [6, 'Student_6', 37, 75, 56.0, 'Yes'], [7, 'Student_7', 76, 84, 80.0, 'Yes'], [8, 'Student_8', 40, 54, 47.0, 'No'], [9, 'Student_9', 57, 55, 56.0, 'Yes'], [10, 'Student_10', 52, 42, 47.0, 'No'], [11, 'Student_11', 92, 32, 62.0, 'Yes'], [12, 'Student_12', 47, 60, 53.5, 'Yes'], [13, 'Student_13', 31, 56, 43.5, 'No'], [14, 'Student_14', 81, 76, 78.5, 'Yes'], [15, 'Student_15', 42, 53, 47.5, 'No']]",SELECT * FROM `student_performance` ORDER BY `id` ASC LIMIT 15,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-PROJECT,Select only the column `id` from `student_performance`. Sort it in ascending order and return the first 15 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15]]",SELECT `id` FROM `student_performance` ORDER BY `id` ASC LIMIT 15,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-PROJECT,Select only the column `id` from `student_performance`. Sort it in descending order and return the first 15 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[None], [None], [None], [None], [None], [None], [None], [None], [None], [None], [None], [None], [None], [None], [None]]",SELECT `id` FROM `student_performance` ORDER BY `id` DESC LIMIT 15,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,BMI,ORDERBY-PROJECT,Select only the column `BMI` from `BMI`. Sort it in descending order and return the first 15 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[33.65], [32.92], [32.86], [32.59], [32.42], [31.95], [31.67], [31.46], [30.88], [30.63], [30.44], [29.92], [29.74], [29.59], [29.46]]",SELECT `BMI` FROM `BMI` ORDER BY `BMI` DESC LIMIT 15,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-SINGLE,"List the top 15 rows from the table `energy_consumption`, sorted by the column `id` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1, 'Family_1', 987, 33, 0.28, 29.91, 276.36], [2, 'Family_2', 1248, 27, 0.25, 46.22, 312.0], [3, 'Family_3', 1123, 32, 0.22, 35.09, 247.06], [4, 'Family_4', 1108, 29, 0.27, 38.21, 299.16], [5, 'Family_5', 1465, 30, 0.25, 48.83, 366.25], [6, 'Family_6', 1762, 31, 0.33, 56.84, 581.46], [7, 'Family_7', 2064, 33, 0.2, 62.55, 412.8], [8, 'Family_8', 810, 30, 0.28, 27.0, 226.8], [9, 'Family_9', 1027, 30, 0.28, 34.23, 287.56], [10, 'Family_10', 1272, 31, 0.21, 41.03, 267.12], [11, 'Family_11', 1322, 30, 0.3, 44.07, 396.6], [12, 'Family_12', 2311, 25, 0.34, 92.44, 785.74], [13, 'Family_13', 1265, 32, 0.32, 39.53, 404.8], [14, 'Family_14', 899, 25, 0.34, 35.96, 305.66], [15, 'Family_15', 862, 27, 0.28, 31.93, 241.36]]",SELECT * FROM `energy_consumption` ORDER BY `id` ASC LIMIT 15,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-ADVANCED,"Compute the sum of the columns id, household_name for each row in `energy_consumption`. Sort all rows in ascending order by this sum and return the first 15 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT * FROM `energy_consumption` ORDER BY `id` + `household_name` ASC LIMIT 15,3,"```
+{
+  ""table_name"": ""energy_consumption"",
+  ""ordered_entries"": [
+    {
+      ""id"": 1,
+      ""household_name"": ""Family_1"",
+      ""kwh_used"": 987,
+      ""days_active"": 33,
+      ""cost_per_kwh"": 0.28,
+      ""avg_daily_kwh"": 29.91,
+      ""total_cost"": 276.36
+    },
+    {
+      ""id"": 2,
+      ""household_name"": ""Family_2"",
+      ""kwh_used"": 1248,
+      ""days_active"": 27,
+      ""cost_per_kwh"": 0.25,
+      ""avg_daily_kwh"": 46.22,
+      ""total_cost"": 312.0
+    },
+    {
+      ""id"": 3,
+      ""household_name"": ""Family_3"",
+      ""kwh_used"": 1123,
+      ""days_active"": 32,
+      ""cost_per_kwh"": 0.22,
+      ""avg_daily_kwh"": 35.09,
+      ""total_cost"": 247.06
+    },
+    {
+      ""id"": 4,
+      ""household_name"": ""Family_4"",
+      ""kwh_used"": 1108,
+      ""days_active"": 29,
+      ""cost_per_kwh"": 0.27,
+      ""avg_daily_kwh"": 38.21,
+      ""total_cost"": 299.16
+    },
+    {
+      ""id"": 5,
+      ""household_name"": ""Family_5"",
+      ""kwh_used"": 1465,
+      ""days_active"": 30,
+      ""cost_per_kwh"": 0.25,
+      ""avg_daily_kwh"": 48.83,
+      ""total_cost"": 366.25
+    },
+    {
+      ""id"": 6,
+      ""household_name"": ""Family_6"",
+      ""kwh_used"": 1762,
+      ""days_active"": 31,
+      ""cost_per_kwh"": 0.33,
+      ""avg_daily_kwh"": 56.84,
+      ""total_cost"": 581.46
+    },
+    {
+      ""id"": 7,
+      ""household_name"": ""Family_7"",
+      ""kwh_used"": 2064,
+      ""days_active"": 33,
+      ""cost_per_kwh"": 0.2,
+      ""avg_daily_kwh"": 62.55,
+      ""total_cost"": 412.8
+    },
+    {
+      ""id"": 8,
+      ""household_name"": ""Family_8"",
+      ""kwh_used"": 810,
+      ""days_active"": 30,
+      ""cost_per_kwh"": 0.28,
+      ""avg_daily_kwh"": 27.0,
+      ""total_cost"": 226.8
+    },
+    {
+      ""id"": 9,
+      ""household_name"": ""Family_9"",
+      ""kwh_used"": 1027,
+      ""days_active"": 30,
+      ""cost_per_kwh"": 0.28,
+      ""avg_daily_kwh"": 34.23,
+      ""total_cost"": 287.56
+    },
+    {
+      ""id"": 10,
+      ""household_name"": ""Family_10"",
+      ""kwh_used"": 1272,
+      ""days_active"": 31,
+      ""cost_per_kwh"": 0.21,
+      ""avg_daily_kwh"": 41.03,
+      ""total_cost"": 267.12
+    },
+    {
+      ""id"": 11,
+      ""household_name"": ""Family_11"",
+      ""kwh_used"": 1322,
+      ""days_active"": 30,
+      ""cost_per_kwh"": 0.3,
+      ""avg_daily_kwh"": 44.07,
+      ""total_cost"": 396.6
+    },
+    {
+      ""id"": 12,
+      ""household_name"": ""Family_12"",
+      ""kwh_used"": 2311,
+      ""days_active"": 25,
+      ""cost_per_kwh"": 0.34,
+      ""avg_daily_kwh"": 92.44,
+      ""total_cost"": 785.74
+    },
+    {
+      ""id"": 13,
+      ""household_name"": ""Family_13"",
+      ""kwh_used"": 1265,
+      ""days_active"": 32,
+      ""cost_per_kwh"": 0.32,
+      ""avg_daily_kwh"": 39.53,
+      ""total_cost"": 404.8
+    },
+    {
+      ""id"": 14,
+      ""household_name"": ""Family_14"",
+      ""kwh_used"": 899,
+      ""days_active"": 25,
+      ""cost_per_kwh"": 0.34,
+      ""avg_daily_kwh"": 35.96,
+      ""total_cost"": 305.66
+    },
+    {
+      ""id"": 15,
+      ""household_name"": ""Family_15"",
+      ""kwh_used"": 862,
+      ""days_active"": 27,
+      ""cost_per_kwh"": 0.28,
+      ""avg_daily_kwh"": 31.93,
+      ""total_cost"": 241.36
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-PROJECT,Select only the column `id` from `energy_consumption`. Sort it in ascending order and return the first 15 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15]]",SELECT `id` FROM `energy_consumption` ORDER BY `id` ASC LIMIT 15,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-PROJECT,Select only the column `id` from `energy_consumption`. Sort it in descending order and return the first 15 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[24], [23], [22], [21], [20], [19], [18], [17], [16], [15], [14], [13], [12], [11], [10]]",SELECT `id` FROM `energy_consumption` ORDER BY `id` DESC LIMIT 15,0,,0.0,0.933,0.933,0.0,1.0,0.933,1.0
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-PROJECT,Select only the column `avg_daily_kwh` from `energy_consumption`. Sort it in descending order and return the first 15 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `avg_daily_kwh` FROM `energy_consumption` ORDER BY `avg_daily_kwh` DESC LIMIT 15,3,"{
+  ""table_name"": ""energy_consumption"",
+  ""ordered_entries"": [
+    {
+      ""id"": 24
+    },
+    {
+      ""id"": 23
+    },
+    {
+      ""id"": 22
+    },
+    {
+      ""id"": 21
+    },
+    {
+      ""id"": 20
+    },
+    {
+      ""id"": 19
+    },
+    {
+      ""id"": 18
+    },
+    {
+      ""id"": 17
+    },
+    {
+      ""id"": 16
+    },
+    {
+      ""id"": 15
+    },
+    {
+      ""id"": 14
+    },
+    {
+      ""id"": 13
+    },
+    {
+      ""id"": 12
+    },
+    {
+      ""id"": 11
+    },
+    {
+      ""id"": 10
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-PROJECT,Select only the column `total_cost` from `energy_consumption`. Sort it in ascending order and return the first 15 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[226.29], [248.79], [253.41], [264.51], [273.59], [299.93], [307.19], [313.11], [321.39], [329.67], [342.87], [351.15], [359.43], [367.71], [376.0]]",SELECT `total_cost` FROM `energy_consumption` ORDER BY `total_cost` ASC LIMIT 15,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,financial,ORDERBY-PROJECT,Select only the column `risk_profile` from `financial`. Sort it in ascending order and return the first 15 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Low'], ['Low'], ['Low'], ['Low'], ['Low'], ['Low'], ['Low'], ['Low'], ['Low'], ['Low'], ['Low'], ['Low'], ['Low'], ['Low'], ['Low']]",SELECT `risk_profile` FROM `financial` ORDER BY `risk_profile` ASC LIMIT 15,0,,0.0,1.0,0.5,0.0,1.0,0.0,1.0
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-SINGLE,"List the top 15 rows from the table `logistics_delivery`, sorted by the column `id` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT * FROM `logistics_delivery` ORDER BY `id` ASC LIMIT 15,3,"{
+  ""table_name"": ""financial"",
+  ""ordered_entries"": [
+    {
+      ""risk_profile"": ""Low""
+    },
+    {
+      ""risk_profile"": ""Low""
+    },
+    {
+      ""risk_profile"": ""Low""
+    },
+    {
+      ""risk_profile"": ""Low""
+    },
+    {
+      ""risk_profile"": ""Low""
+    },
+    {
+      ""risk_profile"": ""Low""
+    },
+    {
+      ""risk_profile"": ""Low""
+    },
+    {
+      ""risk_profile"": ""Low""
+    },
+    {
+      ""risk_profile"": ""Low""
+    },
+    {
+      ""risk_profile"": ""Low""
+    },
+    {
+      ""risk_profile"": ""Low""
+    },
+    {
+      ""risk_profile"": ""Low""
+    },
+    {
+      ""risk_profile"": ""Low""
+    },
+    {
+      ""risk_profile"": ""Low""
+    },
+    {
+      ""risk_profile"": ""Low""
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-PROJECT,Select only the column `id` from `logistics_delivery`. Sort it in ascending order and return the first 15 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15]]",SELECT `id` FROM `logistics_delivery` ORDER BY `id` ASC LIMIT 15,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-PROJECT,Select only the column `id` from `logistics_delivery`. Sort it in descending order and return the first 15 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[24], [23], [22], [21], [20], [19], [18], [17], [16], [15], [14], [13], [12], [11], [10]]",SELECT `id` FROM `logistics_delivery` ORDER BY `id` DESC LIMIT 15,0,,0.0,0.933,0.933,0.0,1.0,0.933,1.0
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-PROJECT,Select only the column `time_hrs` from `logistics_delivery`. Sort it in ascending order and return the first 15 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `time_hrs` FROM `logistics_delivery` ORDER BY `time_hrs` ASC LIMIT 15,3,"{
+  ""table_name"": ""logistics_delivery"",
+  ""ordered_entries"": [
+    {
+      ""id"": 24
+    },
+    {
+      ""id"": 23
+    },
+    {
+      ""id"": 22
+    },
+    {
+      ""id"": 21
+    },
+    {
+      ""id"": 20
+    },
+    {
+      ""id"": 19
+    },
+    {
+      ""id"": 18
+    },
+    {
+      ""id"": 17
+    },
+    {
+      ""id"": 16
+    },
+    {
+      ""id"": 15
+    },
+    {
+      ""id"": 14
+    },
+    {
+      ""id"": 13
+    },
+    {
+      ""id"": 12
+    },
+    {
+      ""id"": 11
+    },
+    {
+      ""id"": 10
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_numerical_simple.sqlite,products,ORDERBY-PROJECT,Select only the column `category` from `products`. Sort it in descending order and return the first 15 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Electronics'], ['Electronics'], ['Office Supplies'], ['Electronics'], ['Food and Beverages'], ['Electronics'], ['Office Supplies'], ['Home Appliances'], ['Home Appliances'], ['Electronics'], ['Fashion'], ['Electronics'], ['Electronics'], ['Fashion'], ['Food and Beverages']]",SELECT `category` FROM `products` ORDER BY `category` DESC LIMIT 15,0,,0.0,0.2,0.25,0.0,1.0,0.0,1.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-SINGLE,"List the top 15 rows from the table `student_performance`, sorted by the column `id` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1, 'Student_1', 82, 85, 83.5, 'Yes'], [2, 'Student_2', 48, 93, 70.5, 'Yes'], [3, 'Student_3', 52, 58, 55.0, 'Yes'], [4, 'Student_4', 62, 83, 72.5, 'Yes'], [5, 'Student_5', 51, 52, 51.5, 'Yes'], [6, 'Student_6', 37, 75, 56.0, 'Yes'], [7, 'Student_7', 76, 84, 80.0, 'Yes'], [8, 'Student_8', 40, 54, 47.0, 'No'], [9, 'Student_9', 57, 55, 56.0, 'Yes'], [10, 'Student_10', 52, 42, 47.0, 'No'], [11, 'Student_11', 92, 32, 62.0, 'Yes'], [12, 'Student_12', 47, 60, 53.5, 'Yes'], [13, 'Student_13', 31, 56, 43.5, 'No'], [14, 'Student_14', 81, 76, 78.5, 'Yes'], [15, 'Student_15', 42, 53, 47.5, 'No']]",SELECT * FROM `student_performance` ORDER BY `id` ASC LIMIT 15,2,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-PROJECT,Select only the column `id` from `student_performance`. Sort it in ascending order and return the first 15 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15]]",SELECT `id` FROM `student_performance` ORDER BY `id` ASC LIMIT 15,2,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-PROJECT,Select only the column `id` from `student_performance`. Sort it in descending order and return the first 15 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[24], [23], [22], [21], [20], [19], [18], [17], [16], [15], [14], [13], [12], [11], [10]]",SELECT `id` FROM `student_performance` ORDER BY `id` DESC LIMIT 15,1,,0.0,0.933,0.933,0.0,1.0,0.933,1.0

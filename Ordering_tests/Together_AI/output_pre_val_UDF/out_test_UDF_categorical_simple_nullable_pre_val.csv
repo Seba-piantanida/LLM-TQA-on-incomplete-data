@@ -1,0 +1,307 @@
+db_path,table_name,test_category,query,model,AI_answer,SQL_query,failed_attempts,note
+data/categorical_simple_eng.sqlite,movies,UDF,"Return only the director name transformed to uppercase from the movies table, order results by the uppercase value ascending, and output the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,[],SELECT upper_case(Director) AS director_upper FROM movies ORDER BY director_upper ASC LIMIT 5;,0,
+data/categorical_simple_eng.sqlite,movies,UDF,"Return only the director name with diacritics removed from the movies table, order results by the ASCII-like value ascending, and output the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Alfred Hitchcock'], ['Billy Wilder'], ['Christopher Nolan'], ['David Fincher'], ['Francis Ford Coppola']]",SELECT remove_accents(Director) AS director_ascii FROM movies ORDER BY director_ascii ASC LIMIT 5;,0,
+data/categorical_simple_eng.sqlite,movies,UDF,"Return only the number of oscar won in string format from oscar_won field from the movies table, order results by that string value ascending, and output the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['0'], ['1'], ['2'], ['3'], ['4']]","SELECT number_to_words_en(\""Oscar won\"") AS oscars_won_num FROM movies ORDER BY oscars_won_num ASC LIMIT 5;",0,
+data/categorical_simple_eng.sqlite,monuments,UDF,"Return only the country name converted to title case from the monuments table, order results by the title-cased value ascending, and output the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['France'], ['Germany'], ['Italy'], ['Spain'], ['Sweden']]",SELECT title_case(country) AS country_title FROM monuments ORDER BY country_title ASC LIMIT 5;,0,
+data/categorical_simple_eng.sqlite,monuments,UDF,"Return only the construction year parsed as a string from the monuments table, order results by the parsed year ascending, and output the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['2580 BC'], ['600 BC'], ['550 BC'], ['432 BC'], ['350 BC']]",SELECT number_to_words_en(year_built) AS year_built_int FROM monuments ORDER BY year_built_int ASC LIMIT 5;,0,
+data/categorical_simple_eng.sqlite,monuments,UDF,"Return only the monument name with multiple spaces collapsed and trimmed from the monuments table, order results by the normalized name ascending, and output the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Colosseum'], ['Eiffel Tower'], ['Great Wall of China'], ['Statue of Liberty'], ['Taj Mahal']]",SELECT normalize_spaces(name) AS name_ns FROM monuments ORDER BY name_ns ASC LIMIT 5;,1,
+data/categorical_simple_eng.sqlite,cars,UDF,"Return only the brand name transformed to uppercase from the cars table, order results by the uppercase value ascending, and output the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['BMW'], ['CHEVROLET'], ['FORD'], ['HONDA'], ['NISSAN']]",SELECT upper_case(Brand) AS brand_upper FROM cars ORDER BY brand_upper ASC LIMIT 5;,0,
+data/categorical_simple_eng.sqlite,cars,UDF,"Return only the country of production transformed to lowercase from the cars table, order results by the lowercase value ascending, and output the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['germany'], ['italy'], ['japan'], ['south korea'], ['usa']]","SELECT lower_case(\""Country of production\"") AS country_lower FROM cars ORDER BY country_lower ASC LIMIT 5;",0,
+data/categorical_simple_eng.sqlite,animals,UDF,"Return only the animal name converted to title case from the animals table, order results by the title-cased value ascending, and output the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Elephant'], ['Giraffe'], ['Kangaroo'], ['Lion'], ['Zebra']]",SELECT title_case(Name) AS name_title FROM animals ORDER BY name_title ASC LIMIT 5;,0,
+data/categorical_simple_eng.sqlite,animals,UDF,"Return only the habitat value transformed to lowercase from the animals table, order results by the lowercase value ascending, and output the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['desert'], ['forest'], ['grassland'], ['jungle'], ['ocean']]",SELECT lower_case(Habitat) AS habitat_lower FROM animals ORDER BY habitat_lower ASC LIMIT 5;,0,
+data/categorical_simple_eng.sqlite,movies,UDF,"Return only the movie title without leading articles (A/An/The), order by the stripped title ascending, and output the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Avengers'], ['Dark Knight'], ['Godfather'], ['Matrix'], ['Shawshank Redemption']]",SELECT strip_articles(Title) AS title_no_articles FROM movies ORDER BY title_no_articles ASC LIMIT 5;,0,
+data/categorical_simple_eng.sqlite,movies,UDF,"Return only the director last name extracted from the Director field, order results ascending, and output the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Anderson'], ['Nolan'], ['Scorsese'], ['Spielberg'], ['Tarantino']]",SELECT director_lastname(Director) AS director_last FROM movies ORDER BY director_last ASC LIMIT 5;,0,
+data/categorical_simple_eng.sqlite,movies,UDF,"Return only the decade label derived from Year from the movies table, order by the label ascending, and output the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['1980s'], ['1990s'], ['2000s'], ['2010s'], ['2020s']]",SELECT year_decade(Year) AS decade FROM movies ORDER BY decade ASC LIMIT 5;,0,
+data/categorical_simple_eng.sqlite,cars,UDF,"Return only the efficiency label computed from horsepower and fuel consumption from the cars table, order ascending, and output the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0.15], [0.18], [0.2], [0.22], [0.25]]","SELECT efficiency_label(Horsepower, 'Average consumption (L/100km)') AS eff_label FROM cars ORDER BY eff_label ASC LIMIT 5;",0,
+data/categorical_simple_eng.sqlite,cars,UDF,"Return only the two-letter country code derived from country of production from the cars table, order ascending, and output the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['DE'], ['GB'], ['IT'], ['JP'], ['US']]","SELECT country_code(""Country of production"") AS country_code FROM cars ORDER BY country_code ASC LIMIT 5;",0,
+data/categorical_simple_eng.sqlite,monuments,UDF,"Return only the century label (handling BCE/CE) from the monuments table, order ascending, and output the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['26th century BCE'], ['6th century BCE'], ['6th century BCE'], ['5th century BCE'], ['4th century BCE']]",SELECT year_century(year_built) AS century_label FROM monuments ORDER BY century_label ASC LIMIT 5;,0,
+data/categorical_simple_eng.sqlite,monuments,UDF,"Return only the canonicalized monument name (parentheses removed, spaces normalized, diacritics stripped) from the monuments table, order ascending, and output the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Chichen Itza'], ['Colosseum'], ['Eiffel Tower'], ['Great Wall of China'], ['Machu Picchu']]",SELECT name_canonical(name) AS name_canon FROM monuments ORDER BY name_canon ASC LIMIT 5;,0,
+data/categorical_simple_eng.sqlite,movies,UDF,"Return only the director name transformed to uppercase from the movies table, order results by the uppercase value ascending, and output the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT upper_case(Director) AS director_upper FROM movies ORDER BY director_upper ASC LIMIT 5;,3,"""table_name"": ""movies"",
+""ordered_entries"": [
+  {
+    ""director_name"": ""CHRISTOPHER NOLAN""
+  },
+  {
+    ""director_name"": ""JAMES CAMERON""
+  },
+  {
+    ""director_name"": ""JASON REITMAN""
+  },
+  {
+    ""director_name"": ""MARTIN SCORSESE""
+  },
+  {
+    ""director_name"": ""QUENTIN TARANTINO""
+  }
+]}"
+data/categorical_simple_eng.sqlite,movies,UDF,"Return only the director name with diacritics removed from the movies table, order results by the ASCII-like value ascending, and output the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT remove_accents(Director) AS director_ascii FROM movies ORDER BY director_ascii ASC LIMIT 5;,3,"""table_name"": ""movies"",
+""ordered_entries"": [
+  {
+    ""director_name"": ""CHRISTOPHER NOLAN""
+  },
+  {
+    ""director_name"": ""JAMES CAMERON""
+  },
+  {
+    ""director_name"": ""JASON REITMAN""
+  },
+  {
+    ""director_name"": ""MARTIN SCORSESE""
+  },
+  {
+    ""director_name"": ""QUENTIN TARANTINO""
+  }
+]}"
+data/categorical_simple_eng.sqlite,movies,UDF,"Return only the number of oscar won in string format from oscar_won field from the movies table, order results by that string value ascending, and output the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],"SELECT number_to_words_en(\""Oscar won\"") AS oscars_won_num FROM movies ORDER BY oscars_won_num ASC LIMIT 5;",3,"""table_name"": ""movies"",
+""ordered_entries"": [
+  {
+    ""oscar_won"": ""0""
+  },
+  {
+    ""oscar_won"": ""1""
+  },
+  {
+    ""oscar_won"": ""1""
+  },
+  {
+    ""oscar_won"": ""2""
+  },
+  {
+    ""oscar_won"": ""2""
+  }
+]}"
+data/categorical_simple_eng.sqlite,monuments,UDF,"Return only the country name converted to title case from the monuments table, order results by the title-cased value ascending, and output the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT title_case(country) AS country_title FROM monuments ORDER BY country_title ASC LIMIT 5;,3,"""table_name"": ""monuments"",
+""ordered_entries"": [
+  {
+    ""country"": ""Australia""
+  },
+  {
+    ""country"": ""Brazil""
+  },
+  {
+    ""country"": ""Canada""
+  },
+  {
+    ""country"": ""China""
+  },
+  {
+    ""country"": ""Egypt""
+  }
+]}"
+data/categorical_simple_eng.sqlite,monuments,UDF,"Return only the construction year parsed as a string from the monuments table, order results by the parsed year ascending, and output the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT number_to_words_en(year_built) AS year_built_int FROM monuments ORDER BY year_built_int ASC LIMIT 5;,3,"""table_name"": ""monuments"",
+""ordered_entries"": [
+  {
+    ""construction_year"": ""1000""
+  },
+  {
+    ""construction_year"": ""1200""
+  },
+  {
+    ""construction_year"": ""1300""
+  },
+  {
+    ""construction_year"": ""1400""
+  },
+  {
+    ""construction_year"": ""1500""
+  }
+]}"
+data/categorical_simple_eng.sqlite,monuments,UDF,"Return only the monument name with multiple spaces collapsed and trimmed from the monuments table, order results by the normalized name ascending, and output the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT normalize_spaces(name) AS name_ns FROM monuments ORDER BY name_ns ASC LIMIT 5;,3,"""table_name"": ""monuments"",
+""ordered_entries"": [
+  {
+    ""monument_name"": ""Arc de Triomphe""
+  },
+  {
+    ""monument_name"": ""Eiffel Tower""
+  },
+  {
+    ""monument_name"": ""Great Pyramid of Giza""
+  },
+  {
+    ""monument_name"": ""Great Wall of China""
+  },
+  {
+    ""monument_name"": ""Machu Picchu""
+  }
+]"
+data/categorical_simple_eng.sqlite,cars,UDF,"Return only the brand name transformed to uppercase from the cars table, order results by the uppercase value ascending, and output the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT upper_case(Brand) AS brand_upper FROM cars ORDER BY brand_upper ASC LIMIT 5;,3,"""table_name"": ""cars"",
+""ordered_entries"": [
+  {
+    ""brand_name"": ""BMW""
+  },
+  {
+    ""brand_name"": ""CHEVY""
+  },
+  {
+    ""brand_name"": ""FORD""
+  },
+  {
+    ""brand_name"": ""HONDA""
+  },
+  {
+    ""brand_name"": ""HYUNDAI""
+  }
+]}"
+data/categorical_simple_eng.sqlite,cars,UDF,"Return only the country of production transformed to lowercase from the cars table, order results by the lowercase value ascending, and output the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['australia'], ['china'], ['france'], ['germany'], ['india']]","SELECT lower_case(\""Country of production\"") AS country_lower FROM cars ORDER BY country_lower ASC LIMIT 5;",0,
+data/categorical_simple_eng.sqlite,animals,UDF,"Return only the animal name converted to title case from the animals table, order results by the title-cased value ascending, and output the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT title_case(Name) AS name_title FROM animals ORDER BY name_title ASC LIMIT 5;,3,"""table_name"": ""animals"",
+""ordered_entries"": [
+  {
+    ""animal_name"": ""Aardvark""
+  },
+  {
+    ""animal_name"": ""Alligator""
+  },
+  {
+    ""animal_name"": ""Alpaca""
+  },
+  {
+    ""animal_name"": ""Anaconda""
+  },
+  {
+    ""animal_name"": ""Antelope""
+  }
+]}"
+data/categorical_simple_eng.sqlite,animals,UDF,"Return only the habitat value transformed to lowercase from the animals table, order results by the lowercase value ascending, and output the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT lower_case(Habitat) AS habitat_lower FROM animals ORDER BY habitat_lower ASC LIMIT 5;,3,"""table_name"": ""animals"",
+""ordered_entries"": [
+  {
+    ""habitat"": ""desert""
+  },
+  {
+    ""habitat"": ""forest""
+  },
+  {
+    ""habitat"": ""grassland""
+  },
+  {
+    ""habitat"": ""mountain""
+  },
+  {
+    ""habitat"": ""ocean""
+  }
+]"
+data/categorical_simple_eng.sqlite,movies,UDF,"Return only the movie title without leading articles (A/An/The), order by the stripped title ascending, and output the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT strip_articles(Title) AS title_no_articles FROM movies ORDER BY title_no_articles ASC LIMIT 5;,3,"""table_name"": ""movies"",
+""ordered_entries"": [
+  {
+    ""title"": ""Alien""
+  },
+  {
+    ""title"": ""Avatar""
+  },
+  {
+    ""title"": ""Batman""
+  },
+  {
+    ""title"": ""Dark Knight""
+  },
+  {
+    ""title"": ""Die Hard""
+  }
+]}"
+data/categorical_simple_eng.sqlite,movies,UDF,"Return only the director last name extracted from the Director field, order results ascending, and output the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT director_lastname(Director) AS director_last FROM movies ORDER BY director_last ASC LIMIT 5;,3,"""table_name"": ""Directors"",
+""ordered_entries"": [
+  {
+    ""director_last_name"": ""Allen""
+  },
+  {
+    ""director_last_name"": ""Cameron""
+  },
+  {
+    ""director_last_name"": ""Coppola""
+  },
+  {
+    ""director_last_name"": ""Hitchcock""
+  },
+  {
+    ""director_last_name"": ""Kubrick""
+  }
+]}"
+data/categorical_simple_eng.sqlite,movies,UDF,"Return only the decade label derived from Year from the movies table, order by the label ascending, and output the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT year_decade(Year) AS decade FROM movies ORDER BY decade ASC LIMIT 5;,3,"""table_name"": ""movies"",
+""ordered_entries"": [
+  {
+    ""decade_label"": ""1960s""
+  },
+  {
+    ""decade_label"": ""1960s""
+  },
+  {
+    ""decade_label"": ""1970s""
+  },
+  {
+    ""decade_label"": ""1970s""
+  },
+  {
+    ""decade_label"": ""1980s""
+  }
+]}"
+data/categorical_simple_eng.sqlite,cars,UDF,"Return only the efficiency label computed from horsepower and fuel consumption from the cars table, order ascending, and output the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],"SELECT efficiency_label(Horsepower, 'Average consumption (L/100km)') AS eff_label FROM cars ORDER BY eff_label ASC LIMIT 5;",3,"""table_name"": ""cars"",
+""ordered_entries"": [
+  {
+    ""efficiency_label"": ""Low""
+  },
+  {
+    ""efficiency_label"": ""Low""
+  },
+  {
+    ""efficiency_label"": ""Medium""
+  },
+  {
+    ""efficiency_label"": ""Medium""
+  },
+  {
+    ""efficiency_label"": ""Medium""
+  }
+]}"
+data/categorical_simple_eng.sqlite,cars,UDF,"Return only the two-letter country code derived from country of production from the cars table, order ascending, and output the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],"SELECT country_code(""Country of production"") AS country_code FROM cars ORDER BY country_code ASC LIMIT 5;",3,"""table_name"": ""cars"",
+""ordered_entries"": [
+  {
+    ""country_code"": ""US""
+  },
+  {
+    ""country_code"": ""US""
+  },
+  {
+    ""country_code"": ""JP""
+  },
+  {
+    ""country_code"": ""DE""
+  },
+  {
+    ""country_code"": ""GB""
+  }
+]}"
+data/categorical_simple_eng.sqlite,monuments,UDF,"Return only the century label (handling BCE/CE) from the monuments table, order ascending, and output the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT year_century(year_built) AS century_label FROM monuments ORDER BY century_label ASC LIMIT 5;,3,"""table_name"": ""monuments"",
+""ordered_entries"": [
+  {
+    ""century_label"": ""10th BCE""
+  },
+  {
+    ""century_label"": ""9th BCE""
+  },
+  {
+    ""century_label"": ""8th BCE""
+  },
+  {
+    ""century_label"": ""7th BCE""
+  },
+  {
+    ""century_label"": ""6th BCE""
+  }
+]}"
+data/categorical_simple_eng.sqlite,monuments,UDF,"Return only the canonicalized monument name (parentheses removed, spaces normalized, diacritics stripped) from the monuments table, order ascending, and output the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT name_canonical(name) AS name_canon FROM monuments ORDER BY name_canon ASC LIMIT 5;,3,"""table_name"": ""monuments"",
+""ordered_entries"": [
+  {
+    ""monument_name"": ""Arc De Triomphe""
+  },
+  {
+    ""monument_name"": ""Big Ben""
+  },
+  {
+    ""monument_name"": ""Eiffel Tower""
+  },
+  {
+    ""monument_name"": ""Great Pyramid Of Giza""
+  },
+  {
+    ""monument_name"": ""Great Wall Of China""
+  }
+]}"

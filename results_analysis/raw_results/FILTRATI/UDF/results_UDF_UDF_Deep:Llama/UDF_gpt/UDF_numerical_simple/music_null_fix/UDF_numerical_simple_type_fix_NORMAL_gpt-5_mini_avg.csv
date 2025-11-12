@@ -1,0 +1,7 @@
+table,model,avg_valid_efficiency_score,avg_cell_precision,avg_cell_recall,avg_execution_accuracy,avg_tuple_cardinality,avg_tuple_constraint,avg_tuple_order
+BMI,gpt-5_mini,0.0,0.6666666666666666,0.6666666666666666,0.6666666666666666,1.0,0.6666666666666666,1.0
+energy_consumption,gpt-5_mini,0.0,0.5,0.5,0.5,1.0,0.5,1.0
+financial,gpt-5_mini,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+logistic_delivery,gpt-5_mini,0.0,0.35,0.35,0.25,1.0,0.35,1.0
+products,gpt-5_mini,0.0,0.11666666666666665,0.13333333333333333,0.0,0.5,0.09999999999999999,0.5
+student_performance,gpt-5_mini,0.0,0.7223333333333333,1.0,0.6666666666666666,1.0,0.6666666666666666,1.0

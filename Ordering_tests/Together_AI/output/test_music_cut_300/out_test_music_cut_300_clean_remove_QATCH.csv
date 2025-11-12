@@ -1,0 +1,119 @@
+db_path,table_name,test_category,query,model,AI_answer,SQL_query,failed_attempts,note,valid_efficiency_score,cell_precision,cell_recall,execution_accuracy,tuple_cardinality,tuple_constraint,tuple_order
+data/db_music_cut_300.sqlite,albums,ORDERBY-PROJECT,Select only the column `album_id` from `albums`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [1], [2], [3], [4]]",SELECT `album_id` FROM `albums` ORDER BY `album_id` ASC LIMIT 5,0,,0.0,0.8,0.8,0.0,1.0,0.8,1.0
+data/db_music_cut_300.sqlite,artists,ORDERBY-SINGLE,"List the top 5 rows from the table `artists`, sorted by the column `artist_id` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0, 'Tommy Richman', '21-03-2000'], [1, 'Kendrick Lamar', '17-06-1987'], [2, 'Artemas', '23-09-1999'], [3, 'Miley Cyrus', '23-11-1992'], [4, 'Eminem', '17-10-1972']]",SELECT * FROM `artists` ORDER BY `artist_id` ASC LIMIT 5,0,,0.0,0.933,0.933,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,artists,ORDERBY-PROJECT,Select only the column `artist_id` from `artists`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [1], [2], [3], [4]]",SELECT `artist_id` FROM `artists` ORDER BY `artist_id` ASC LIMIT 5,0,,0.0,0.8,0.8,0.0,1.0,0.8,1.0
+data/db_music_cut_300.sqlite,artists,ORDERBY-PROJECT,Select only the column `artist_id` from `artists`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[100], [99], [98], [97], [96]]",SELECT `artist_id` FROM `artists` ORDER BY `artist_id` DESC LIMIT 5,0,,0.0,0.8,0.8,0.0,1.0,0.8,1.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-SINGLE,"List the top 5 rows from the table `tracks`, sorted by the column `track_score` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[3, 'Flowers', 'USSM12209777', 4, 4, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0, 95.7], [19, 'As It Was', 'USSM12200612', 19, 20, 3301814535.0, 87.0, 800899315.0, 2755903.0, 0, 94.9], [26, 'STAY (with Justin Bieber)', 'USSM12103949', 26, 27, 3107100349.0, 78.0, 1256973582.0, 7485966.0, 1, 93.8], [20, 'Paint The Town Red', 'USRC12300907', 20, 21, 1065399331.0, 78.0, 240970670.0, 3091732.0, 1, 89.5], [17, 'greedy', 'USRC12301932', 18, 18, 1258569694.0, 87.0, 141646818.0, 2294429.0, 1, 88.2]]",SELECT * FROM `tracks` ORDER BY `track_score` DESC LIMIT 5,0,,0.0,0.227,0.256,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,ORDERBY-PROJECT,Select only the column `album_id` from `tracks`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[27], [26], [25], [24], [23]]",SELECT `album_id` FROM `tracks` ORDER BY `album_id` DESC LIMIT 5,0,,0.0,0.8,0.8,0.0,1.0,0.8,1.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-PROJECT,Select only the column `title` from `tracks`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['QM24S2402528'], ['USUG12400910'], ['USUG12403398'], ['USAT22311371'], ['USWB12307016']]",SELECT `title` FROM `tracks` ORDER BY `title` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,ORDERBY-PROJECT,Select only the column `all_time_rank` from `tracks`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0, 1], [2, 2], [1, 3], [3, 4], [4, 5]]",SELECT `all_time_rank` FROM `tracks` ORDER BY `all_time_rank` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,ORDERBY-PROJECT,Select only the column `album_id` from `albums`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[0], [1], [2], [3], [4]]",SELECT `album_id` FROM `albums` ORDER BY `album_id` ASC LIMIT 5,0,,0.0,0.8,0.8,0.0,1.0,0.8,1.0
+data/db_music_cut_300.sqlite,artists,ORDERBY-SINGLE,"List the top 5 rows from the table `artists`, sorted by the column `artist_id` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[0, 'Tommy Richman', '21-03-2000'], [1, 'Kendrick Lamar', '17-06-1987'], [2, 'Artemas', '23-09-1999'], [3, 'Miley Cyrus', '23-11-1992'], [4, 'Eminem', '17-10-1972']]",SELECT * FROM `artists` ORDER BY `artist_id` ASC LIMIT 5,0,,0.0,0.933,0.933,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,artists,ORDERBY-PROJECT,Select only the column `artist_id` from `artists`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `artist_id` FROM `artists` ORDER BY `artist_id` ASC LIMIT 5,3,"```
+{
+  ""table_name"": ""artists"",
+  ""ordered_entries"": [
+    {
+      ""artist_id"": 0,
+      ""name"": ""Tommy Richman"",
+      ""birth_date"": ""21-03-2000""
+    },
+    {
+      ""artist_id"": 1,
+      ""name"": ""Kendrick Lamar"",
+      ""birth_date"": ""17-06-1987""
+    },
+    {
+      ""artist_id"": 2,
+      ""name"": ""Artemas"",
+      ""birth_date"": ""23-09-1999""
+    },
+    {
+      ""artist_id"": 3,
+      ""name"": ""Miley Cyrus"",
+      ""birth_date"": ""23-11-1992""
+    },
+    {
+      ""artist_id"": 4,
+      ""name"": ""Eminem"",
+      ""birth_date"": ""17-10-1972""
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,artists,ORDERBY-PROJECT,Select only the column `artist_id` from `artists`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[100], [99], [98], [97], [96]]",SELECT `artist_id` FROM `artists` ORDER BY `artist_id` DESC LIMIT 5,1,,0.0,0.8,0.8,0.0,1.0,0.8,1.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-SINGLE,"List the top 5 rows from the table `tracks`, sorted by the column `track_score` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[3, 'Flowers', 'USSM12209777', 4, 4, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0, 2748381292.0], [19, 'As It Was', 'USSM12200612', 19, 20, 3301814535.0, 87.0, 800899315.0, 2755903.0, 0, 2606716853.0], [20, 'Paint The Town Red', 'USRC12300907', 20, 21, 1065399331.0, 78.0, 240970670.0, 3091732.0, 1, 1573103683.0], [26, 'STAY (with Justin Bieber)', 'USSM12103949', 26, 27, 3107100349.0, 78.0, 1256973582.0, 7485966.0, 1, 2469078977.0], [8, 'Danza Kuduro - Cover', 'TCJPA2463708', 9, 9, 1653018119.0, 85.0, 1655575417.0, 3500000.0, 1, 2358598536.0]]",SELECT * FROM `tracks` ORDER BY `track_score` DESC LIMIT 5,0,,0.0,0.227,0.256,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,ORDERBY-PROJECT,Select only the column `album_id` from `tracks`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `album_id` FROM `tracks` ORDER BY `album_id` DESC LIMIT 5,3,"```
+{
+  ""table_name"": ""tracks"",
+  ""ordered_entries"": [
+    {
+      ""track_id"": 3,
+      ""title"": ""Flowers"",
+      ""isrc"": ""USSM12209777"",
+      ""album_id"": 4,
+      ""all_time_rank"": 4,
+      ""spotify_streams"": 2031280633.0,
+      ""spotify_popularity"": 85.0,
+      ""youtube_views"": 1096100899.0,
+      ""tiktok_posts"": 7189811.0,
+      ""explicit_track"": 0,
+      ""track_score"": 2748381292.0
+    },
+    {
+      ""track_id"": 19,
+      ""title"": ""As It Was"",
+      ""isrc"": ""USSM12200612"",
+      ""album_id"": 19,
+      ""all_time_rank"": 20,
+      ""spotify_streams"": 3301814535.0,
+      ""spotify_popularity"": 87.0,
+      ""youtube_views"": 800899315.0,
+      ""tiktok_posts"": 2755903.0,
+      ""explicit_track"": 0,
+      ""track_score"": 2606716853.0
+    },
+    {
+      ""track_id"": 20,
+      ""title"": ""Paint The Town Red"",
+      ""isrc"": ""USRC12300907"",
+      ""album_id"": 20,
+      ""all_time_rank"": 21,
+      ""spotify_streams"": 1065399331.0,
+      ""spotify_popularity"": 78.0,
+      ""youtube_views"": 240970670.0,
+      ""tiktok_posts"": 3091732.0,
+      ""explicit_track"": 1,
+      ""track_score"": 1573103683.0
+    },
+    {
+      ""track_id"": 26,
+      ""title"": ""STAY (with Justin Bieber)"",
+      ""isrc"": ""USSM12103949"",
+      ""album_id"": 26,
+      ""all_time_rank"": 27,
+      ""spotify_streams"": 3107100349.0,
+      ""spotify_popularity"": 78.0,
+      ""youtube_views"": 1256973582.0,
+      ""tiktok_posts"": 7485966.0,
+      ""explicit_track"": 1,
+      ""track_score"": 2469078977.0
+    },
+    {
+      ""track_id"": 8,
+      ""title"": ""Danza Kuduro - Cover"",
+      ""isrc"": ""TCJPA2463708"",
+      ""album_id"": 9,
+      ""all_time_rank"": 9,
+      ""spotify_streams"": 1653018119.0,
+      ""spotify_popularity"": 85.0,
+      ""youtube_views"": 1655575417.0,
+      ""tiktok_posts"": 3500000.0,
+      ""explicit_track"": 1,
+      ""track_score"": 2358598536.0
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-PROJECT,Select only the column `title` from `tracks`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown']]",SELECT `title` FROM `tracks` ORDER BY `title` ASC LIMIT 5,1,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,ORDERBY-PROJECT,Select only the column `all_time_rank` from `tracks`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1], [2], [3], [4], [5]]",SELECT `all_time_rank` FROM `tracks` ORDER BY `all_time_rank` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5

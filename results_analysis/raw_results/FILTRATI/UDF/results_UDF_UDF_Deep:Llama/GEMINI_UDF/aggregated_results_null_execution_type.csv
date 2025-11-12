@@ -1,0 +1,17 @@
+model,execution_type,test_category,valid_efficiency_score,cell_precision,cell_recall,execution_accuracy,tuple_cardinality,tuple_constraint,tuple_order
+gemini-2.5-flash,NORMAL,UDF-compute,0.0,0.0472,0.1111,0.0,1.0,0.0,1.0
+gemini-2.5-flash,NORMAL,UDF-conversion,0.0,0.4556,0.5556,0.4444,0.8889,0.4444,0.8889
+gemini-2.5-flash,NORMAL,UDF-extraction,0.0,0.6,0.6,0.6,1.0,0.6,1.0
+gemini-2.5-flash,NORMAL,UDF-string-manipolation,0.0,0.8333,0.84,0.8,0.8667,0.8317,0.8667
+gemini-2.5-pro,NORMAL,UDF-compute,0.0,0.0556,0.1111,0.0,1.0,0.0,1.0
+gemini-2.5-pro,NORMAL,UDF-convertion,0.0,0.2711,0.4444,0.2222,0.7778,0.2222,0.7778
+gemini-2.5-pro,NORMAL,UDF-extraction,0.0,0.32,0.4,0.2,1.0,0.2666,1.0
+gemini-2.5-pro,NORMAL,UDF-string-manipolation,0.0,0.79,0.79,0.7667,0.8333,0.7733,0.8333
+gemini-2.5-flash,NULL,UDF-compute,0.0,0.0298,0.1333,0.0,1.0,0.0,1.0
+gemini-2.5-flash,NULL,UDF-conversion,0.0,0.1156,0.2222,0.1111,0.7778,0.1111,0.7778
+gemini-2.5-flash,NULL,UDF-extraction,0.0,0.56,0.56,0.4,1.0,0.56,1.0
+gemini-2.5-flash,NULL,UDF-string-manipolation,0.0,0.485,0.5117,0.3667,0.8267,0.4283,0.8267
+gemini-2.5-pro,NULL,UDF-compute,0.0,0.063,0.1333,0.0,1.0,0.0,1.0
+gemini-2.5-pro,NULL,UDF-convertion,0.0,0.2323,0.2778,0.1111,0.8889,0.1111,0.8889
+gemini-2.5-pro,,UDF-extraction,0.0,0.48,0.56,0.2,1.0,0.4266,1.0
+gemini-2.5-pro,,UDF-string-manipolation,0.0,0.47,0.47,0.3,0.8333,0.42,0.8333

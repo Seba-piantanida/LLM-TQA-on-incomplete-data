@@ -1,0 +1,248 @@
+db_path,table_name,test_category,query,model,AI_answer,SQL_query,failed_attempts,note,valid_efficiency_score,cell_precision,cell_recall,execution_accuracy,tuple_cardinality,tuple_constraint,tuple_order
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-SINGLE,"List the top 20 rows from the table `energy_consumption`, sorted by the column `id` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[0, 'Family_1', 987, 33, 0.28, 29.91, 276.36], [1, 'Family_2', 1248, 27, 0.25, 46.22, 312.0], [2, 'Family_3', 1123, 32, 0.22, 35.09, 247.06], [3, 'Family_4', 1108, 29, 0.27, 38.21, 299.16], [4, 'Family_5', 1465, 30, 0.25, 48.83, 366.25], [5, 'Family_6', 1762, 31, 0.33, 56.84, 581.46], [6, 'Family_7', 2064, 33, 0.2, 62.55, 412.8], [7, 'Family_8', 810, 30, 0.28, 27.0, 226.8], [8, 'Family_9', 1027, 30, 0.28, 34.23, 287.56], [9, 'Family_10', 1272, 31, 0.21, 41.03, 267.12], [10, 'Family_11', 1322, 30, 0.3, 44.07, 396.6], [11, 'Family_12', 2311, 25, 0.34, 92.44, 785.74], [12, 'Family_13', 1265, 32, 0.32, 39.53, 404.8], [13, 'Family_14', 899, 25, 0.34, 35.96, 305.66], [14, 'Family_15', 862, 27, 0.28, 31.93, 241.36], [15, 'Family_16', 2032, 32, 0.35, 63.5, 711.2], [16, 'Family_17', 1542, 34, 0.21, 45.35, 323.82], [17, 'Family_18', 849, 31, 0.33, 27.39, 280.17], [18, 'Family_19', 1201, 28, 0.34, 42.89, 408.34], [19, 'Family_20', 1346, 32, 0.24, 42.06, 323.04], [20, 'Family_21', 1257, 33, 0.22, 38.09, 276.54]]",SELECT * FROM `energy_consumption` ORDER BY `id` ASC LIMIT 20,0,,0.0,0.96,1.0,0.0,0.952,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-PROJECT,Select only the column `id` from `energy_consumption`. Sort it in ascending order and return the first 20 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `id` FROM `energy_consumption` ORDER BY `id` ASC LIMIT 20,3,"""table_name"": ""energy_consumption"",
+""ordered_entries"": [
+  {
+    ""id"": 0
+  },
+  {
+    ""id"": 1
+  },
+  {
+    ""id"": 2
+  },
+  {
+    ""id"": 3
+  },
+  {
+    ""id"": 4
+  },
+  {
+    ""id"": 5
+  },
+  {
+    ""id"": 6
+  },
+  {
+    ""id"": 7
+  },
+  {
+    ""id"": 8
+  },
+  {
+    ""id"": 9
+  },
+  {
+    ""id"": 10
+  },
+  {
+    ""id"": 11
+  },
+  {
+    ""id"": 12
+  },
+  {
+    ""id"": 13
+  },
+  {
+    ""id"": 14
+  },
+  {
+    ""id"": 15
+  },
+  {
+    ""id"": 16
+  },
+  {
+    ""id"": 17
+  },
+  {
+    ""id"": 18
+  },
+  {
+    ""id"": 19
+  }
+]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-PROJECT,Select only the column `id` from `logistics_delivery`. Sort it in ascending order and return the first 20 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19]]",SELECT `id` FROM `logistics_delivery` ORDER BY `id` ASC LIMIT 20,2,,0.0,0.95,0.95,0.0,1.0,0.95,1.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-SINGLE,"List the top 20 rows from the table `student_performance`, sorted by the column `id` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[0, 'Student_1', 82, 85, 83.5, 'Yes'], [1, 'Student_2', 48, 93, 70.5, 'Yes'], [2, 'Student_3', 52, 58, 55.0, 'Yes'], [3, 'Student_4', 62, 83, 72.5, 'Yes'], [4, 'Student_5', 51, 52, 51.5, 'Yes'], [5, 'Student_6', 37, 75, 56.0, 'Yes'], [6, 'Student_7', 76, 84, 80.0, 'Yes'], [7, 'Student_8', 40, 54, 47.0, 'No'], [8, 'Student_9', 57, 55, 56.0, 'Yes'], [9, 'Student_10', 52, 42, 47.0, 'No'], [10, 'Student_11', 92, 32, 62.0, 'Yes'], [11, 'Student_12', 47, 60, 53.5, 'Yes'], [12, 'Student_13', 31, 56, 43.5, 'No'], [13, 'Student_14', 81, 76, 78.5, 'Yes'], [14, 'Student_15', 42, 53, 47.5, 'No'], [15, 'Student_16', 62, 30, 46.0, 'No'], [16, 'Student_17', 90, 92, 91.0, 'Yes'], [17, 'Student_18', 78, 69, 73.5, 'Yes'], [18, 'Student_19', 84, 75, 79.5, 'Yes'], [19, 'Student_20', 51, 65, 58.0, 'Yes'], [20, 'Student_21', 49, 55, 52.0, 'Yes']]",SELECT * FROM `student_performance` ORDER BY `id` ASC LIMIT 20,0,,0.0,0.966,1.0,0.0,0.952,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-PROJECT,Select only the column `id` from `student_performance`. Sort it in ascending order and return the first 20 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `id` FROM `student_performance` ORDER BY `id` ASC LIMIT 20,3,"{
+  ""table_name"": ""student_performance"",
+  ""ordered_entries"": [
+    {
+      ""id"": 0,
+      ""student_name"": ""Student_1"",
+      ""math_score"": 82,
+      ""english_score"": 85,
+      ""average_score"": 83.5,
+      ""pass_status"": ""Yes""
+    },
+    {
+      ""id"": 1,
+      ""student_name"": ""Student_2"",
+      ""math_score"": 48,
+      ""english_score"": 93,
+      ""average_score"": 70.5,
+      ""pass_status"": ""Yes""
+    },
+    {
+      ""id"": 2,
+      ""student_name"": ""Student_3"",
+      ""math_score"": 52,
+      ""english_score"": 58,
+      ""average_score"": 55.0,
+      ""pass_status"": ""Yes""
+    },
+    {
+      ""id"": 3,
+      ""student_name"": ""Student_4"",
+      ""math_score"": 62,
+      ""english_score"": 83,
+      ""average_score"": 72.5,
+      ""pass_status"": ""Yes""
+    },
+    {
+      ""id"": 4,
+      ""student_name"": ""Student_5"",
+      ""math_score"": 51,
+      ""english_score"": 52,
+      ""average_score"": 51.5,
+      ""pass_status"": ""Yes""
+    },
+    {
+      ""id"": 5,
+      ""student_name"": ""Student_6"",
+      ""math_score"": 37,
+      ""english_score"": 75,
+      ""average_score"": 56.0,
+      ""pass_status"": ""Yes""
+    },
+    {
+      ""id"": 6,
+      ""student_name"": ""Student_7"",
+      ""math_score"": 76,
+      ""english_score"": 84,
+      ""average_score"": 80.0,
+      ""pass_status"": ""Yes""
+    },
+    {
+      ""id"": 7,
+      ""student_name"": ""Student_8"",
+      ""math_score"": 40,
+      ""english_score"": 54,
+      ""average_score"": 47.0,
+      ""pass_status"": ""No""
+    },
+    {
+      ""id"": 8,
+      ""student_name"": ""Student_9"",
+      ""math_score"": 57,
+      ""english_score"": 55,
+      ""average_score"": 56.0,
+      ""pass_status"": ""Yes""
+    },
+    {
+      ""id"": 9,
+      ""student_name"": ""Student_10"",
+      ""math_score"": 52,
+      ""english_score"": 42,
+      ""average_score"": 47.0,
+      ""pass_status"": ""No""
+    },
+    {
+      ""id"": 10,
+      ""student_name"": ""Student_11"",
+      ""math_score"": 92,
+      ""english_score"": 32,
+      ""average_score"": 62.0,
+      ""pass_status"": ""Yes""
+    },
+    {
+      ""id"": 11,
+      ""student_name"": ""Student_12"",
+      ""math_score"": 47,
+      ""english_score"": 60,
+      ""average_score"": 53.5,
+      ""pass_status"": ""Yes""
+    },
+    {
+      ""id"": 12,
+      ""student_name"": ""Student_13"",
+      ""math_score"": 31,
+      ""english_score"": 56,
+      ""average_score"": 43.5,
+      ""pass_status"": ""No""
+    },
+    {
+      ""id"": 13,
+      ""student_name"": ""Student_14"",
+      ""math_score"": 81,
+      ""english_score"": 76,
+      ""average_score"": 78.5,
+      ""pass_status"": ""Yes""
+    },
+    {
+      ""id"": 14,
+      ""student_name"": ""Student_15"",
+      ""math_score"": 42,
+      ""english_score"": 53,
+      ""average_score"": 47.5,
+      ""pass_status"": ""No""
+    },
+    {
+      ""id"": 15,
+      ""student_name"": ""Student_16"",
+      ""math_score"": 62,
+      ""english_score"": 30,
+      ""average_score"": 46.0,
+      ""pass_status"": ""No""
+    },
+    {
+      ""id"": 16,
+      ""student_name"": ""Student_17"",
+      ""math_score"": 90,
+      ""english_score"": 92,
+      ""average_score"": 91.0,
+      ""pass_status"": ""Yes""
+    },
+    {
+      ""id"": 17,
+      ""student_name"": ""Student_18"",
+      ""math_score"": 78,
+      ""english_score"": 69,
+      ""average_score"": 73.5,
+      ""pass_status"": ""Yes""
+    },
+    {
+      ""id"": 18,
+      ""student_name"": ""Student_19"",
+      ""math_score"": 84,
+      ""english_score"": 75,
+      ""average_score"": 79.5,
+      ""pass_status"": ""Yes""
+    },
+    {
+      ""id"": 19,
+      ""student_name"": ""Student_20"",
+      ""math_score"": 51,
+      ""english_score"": 65,
+      ""average_score"": 58.0,
+      ""pass_status"": ""Yes""
+    },
+    {
+      ""id"": 20,
+      ""student_name"": ""Student_21"",
+      ""math_score"": 49,
+      ""english_score"": 55,
+      ""average_score"": 52.0,
+      ""pass_status"": ""Yes""
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-PROJECT,Select only the column `pass_status` from `student_performance`. Sort it in ascending order and return the first 20 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Fail'], ['Fail'], ['Fail'], ['Fail'], ['Fail'], ['Fail'], ['Fail'], ['Fail'], ['Fail'], ['Fail'], ['Fail'], ['Fail'], ['Fail'], ['Fail'], ['Fail'], ['Fail'], ['Fail'], ['Fail'], ['Fail'], ['Fail']]",SELECT `pass_status` FROM `student_performance` ORDER BY `pass_status` ASC LIMIT 20,1,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-SINGLE,"List the top 20 rows from the table `energy_consumption`, sorted by the column `id` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Family_1', 987, 33, 0.28, 29.91, 276.36], ['Family_2', 1248, 27, 0.25, 46.22, 312.0], ['Family_3', 1123, 32, 0.22, 35.09, 247.06], ['Family_4', 1108, 29, 0.27, 38.21, 299.16], ['Family_5', 1465, 30, 0.25, 48.83, 366.25], ['Family_6', 1762, 31, 0.33, 56.84, 581.46], ['Family_7', 2064, 33, 0.2, 62.55, 412.8], ['Family_8', 810, 30, 0.28, 27.0, 226.8], ['Family_9', 1027, 30, 0.28, 34.23, 287.56], ['Family_10', 1272, 31, 0.21, 41.03, 267.12], ['Family_11', 1322, 30, 0.3, 44.07, 396.6], ['Family_12', 2311, 25, 0.34, 92.44, 785.74], ['Family_13', 1265, 32, 0.32, 39.53, 404.8], ['Family_14', 899, 25, 0.34, 35.96, 305.66], ['Family_15', 862, 27, 0.28, 31.93, 241.36], ['Family_16', 2032, 32, 0.35, 63.5, 711.2], ['Family_17', 1542, 34, 0.21, 45.35, 323.82], ['Family_18', 849, 31, 0.33, 27.39, 280.17], ['Family_19', 1201, 28, 0.34, 42.89, 408.34], ['Family_20', 1346, 32, 0.24, 42.06, 323.04]]",SELECT * FROM `energy_consumption` ORDER BY `id` ASC LIMIT 20,0,,0.0,1.0,0.833,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-PROJECT,Select only the column `id` from `energy_consumption`. Sort it in ascending order and return the first 20 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19]]",SELECT `id` FROM `energy_consumption` ORDER BY `id` ASC LIMIT 20,0,,0.0,0.95,0.95,0.0,1.0,0.95,1.0
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-PROJECT,Select only the column `id` from `logistics_delivery`. Sort it in ascending order and return the first 20 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19]]",SELECT `id` FROM `logistics_delivery` ORDER BY `id` ASC LIMIT 20,0,,0.0,0.95,0.95,0.0,1.0,0.95,1.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-SINGLE,"List the top 20 rows from the table `student_performance`, sorted by the column `id` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0, 'Student_1', 82, 85, 83.5, 'Yes'], [1, 'Student_2', 48, 93, 70.5, 'Yes'], [2, 'Student_3', 52, 58, 55.0, 'Yes'], [3, 'Student_4', 62, 83, 72.5, 'Yes'], [4, 'Student_5', 51, 52, 51.5, 'Yes'], [5, 'Student_6', 37, 75, 56.0, 'Yes'], [6, 'Student_7', 76, 84, 80.0, 'Yes'], [7, 'Student_8', 40, 54, 47.0, 'No'], [8, 'Student_9', 57, 55, 56.0, 'Yes'], [9, 'Student_10', 52, 42, 47.0, 'No'], [10, 'Student_11', 92, 32, 62.0, 'Yes'], [11, 'Student_12', 47, 60, 53.5, 'Yes'], [12, 'Student_13', 31, 56, 43.5, 'No'], [13, 'Student_14', 81, 76, 78.5, 'Yes'], [14, 'Student_15', 42, 53, 47.5, 'No'], [15, 'Student_16', 62, 30, 46.0, 'No'], [16, 'Student_17', 90, 92, 91.0, 'Yes'], [17, 'Student_18', 78, 69, 73.5, 'Yes'], [18, 'Student_19', 84, 75, 79.5, 'Yes'], [19, 'Student_20', 51, 65, 58.0, 'Yes']]",SELECT * FROM `student_performance` ORDER BY `id` ASC LIMIT 20,0,,0.0,0.988,0.988,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-PROJECT,Select only the column `id` from `student_performance`. Sort it in ascending order and return the first 20 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Student_1'], ['Student_2'], ['Student_3'], ['Student_4'], ['Student_5'], ['Student_6'], ['Student_7'], ['Student_8'], ['Student_9'], ['Student_10'], ['Student_11'], ['Student_12'], ['Student_13'], ['Student_14'], ['Student_15'], ['Student_16'], ['Student_17'], ['Student_18'], ['Student_19'], ['Student_20']]",SELECT `id` FROM `student_performance` ORDER BY `id` ASC LIMIT 20,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-PROJECT,Select only the column `pass_status` from `student_performance`. Sort it in ascending order and return the first 20 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Fail'], ['Fail'], ['Fail'], ['Fail'], ['Fail'], ['Pass'], ['Pass'], ['Pass'], ['Pass'], ['Pass'], ['Pass'], ['Pass'], ['Pass'], ['Pass'], ['Pass'], ['Pass'], ['Pass'], ['Pass'], ['Pass'], ['Pass']]",SELECT `pass_status` FROM `student_performance` ORDER BY `pass_status` ASC LIMIT 20,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5

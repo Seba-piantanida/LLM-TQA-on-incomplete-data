@@ -1,0 +1,13 @@
+table_name,model,avg_valid_efficiency_score,avg_cell_precision,avg_cell_recall,avg_execution_accuracy,avg_tuple_cardinality,avg_tuple_constraint,avg_tuple_order
+BMI,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,0.0,0.288,0.2582,0.0,1.0,0.0,0.5
+BMI,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,0.0,0.328,0.3408,0.0,0.8,0.0,0.4
+energy_consumption,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,0.0,0.6666666666666666,0.6054166666666666,0.08333333333333333,1.0,0.25,0.6666666666666666
+energy_consumption,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,0.0,0.35591666666666666,0.47900000000000004,0.0,0.8333333333333334,0.0,0.4166666666666667
+financial,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,0.0,0.07533333333333334,0.073,0.0,1.0,0.06666666666666667,0.5
+financial,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,0.0,0.14200000000000002,0.1396666666666667,0.0,0.6666666666666666,0.13333333333333333,0.5
+logistics_delivery,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,0.0,0.4615,0.51275,0.0,1.0,0.20000000000000004,0.625
+logistics_delivery,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,0.0,0.39666666666666667,0.52775,0.0,1.0,0.13333333333333333,0.5833333333333334
+products,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,0.0,0.35566666666666663,0.5,0.0,1.0,0.0,0.6666666666666666
+products,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,0.0,0.3446666666666667,0.3333333333333333,0.0,1.0,0.0,0.6666666666666666
+student_performance,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,0.0,0.4466666666666667,0.5008333333333334,0.16666666666666666,1.0,0.2708333333333333,0.7083333333333334
+student_performance,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,0.0,0.25666666666666665,0.31416666666666665,0.0,0.75,0.06666666666666667,0.4583333333333333

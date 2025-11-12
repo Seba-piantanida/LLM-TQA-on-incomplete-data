@@ -1,0 +1,854 @@
+db_path,table_name,test_category,query,model,AI_answer,SQL_query,failed_attempts,note,valid_efficiency_score,cell_precision,cell_recall,execution_accuracy,tuple_cardinality,tuple_constraint,tuple_order
+data/db_numerical_simple.sqlite,BMI,ORDERBY-SINGLE,"List the top 5 rows from the table `BMI`, sorted by the column `height_m` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['6', 'Grace', '1.52', '67.8', '29.3', 'Medium'], ['29', 'Lily', '1.52', '69.4', '30.0', 'Medium'], ['4', 'Emma', '1.56', '117.4', '48.2', 'High'], ['5', 'Frank', '1.56', '105.6', '43.4', 'High'], ['13', 'Nina', '1.58', '113.2', '45.3', 'High']]",SELECT * FROM `BMI` ORDER BY `height_m` ASC LIMIT 5,0,,0.0,0.8,0.769,0.0,1.0,0.8,1.0
+data/db_numerical_simple.sqlite,BMI,ORDERBY-SINGLE,"List the top 5 rows from the table `BMI`, sorted by the column `height_m` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['11', 'Leo', '1.89', '82.1', '23.0', 'Low'], ['1', 'Bob', '1.88', '57.8', '16.4', 'Low'], ['7', 'Helen', '1.85', '52.3', '15.3', 'Low'], ['12', 'Maria', '1.83', '47.6', '14.2', 'Low'], ['25', 'Zane', '1.81', '114.1', '34.8', 'Medium']]",SELECT * FROM `BMI` ORDER BY `height_m` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,BMI,ORDERBY-SINGLE,"List the top 5 rows from the table `BMI`, sorted by the column `weight_kg` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['28', 'Mia', '1.74', '48.4', '16.0', 'Low'], ['26', 'Liam', '1.58', '51.6', '20.7', 'Low'], ['7', 'Helen', '1.85', '52.3', '15.3', 'Low'], ['10', 'Karen', '1.51', '54.2', '23.8', 'Low'], ['19', 'Tina', '1.62', '58.9', '22.4', 'Low']]",SELECT * FROM `BMI` ORDER BY `weight_kg` ASC LIMIT 5,0,,0.0,0.038,0.038,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,BMI,ORDERBY-SINGLE,"List the top 5 rows from the table `BMI`, sorted by the column `weight_kg` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['4', 'Emma', '1.56', '117.4', '48.2', 'High'], ['3', 'David', '1.74', '116.2', '38.4', 'High'], ['25', 'Zane', '1.81', '114.1', '34.8', 'Medium'], ['13', 'Nina', '1.58', '113.2', '45.3', 'High'], ['23', 'Xander', '1.65', '112.1', '41.2', 'High']]",SELECT * FROM `BMI` ORDER BY `weight_kg` DESC LIMIT 5,0,,0.0,0.185,0.192,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,BMI,ORDERBY-SINGLE,"List the top 5 rows from the table `BMI`, sorted by the column `BMI` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['12', 'Maria', '1.83', '47.6', '14.2', 'Low'], ['7', 'Helen', '1.85', '52.3', '15.3', 'Low'], ['2', 'Carla', '1.79', '49.9', '15.6', 'Low'], ['27', 'Noah', '1.71', '59.7', '20.4', 'Low'], ['26', 'Liam', '1.58', '51.6', '20.7', 'Low']]",SELECT * FROM `BMI` ORDER BY `BMI` ASC LIMIT 5,0,,0.0,0.615,0.615,0.0,1.0,0.6,1.0
+data/db_numerical_simple.sqlite,BMI,ORDERBY-SINGLE,"List the top 5 rows from the table `BMI`, sorted by the column `BMI` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['4', 'Emma', '1.56', '117.4', '48.2', 'High'], ['22', 'Wendy', '1.62', '115.5', '44.0', 'High'], ['21', 'Victor', '1.56', '103.1', '42.4', 'High'], ['13', 'Nina', '1.58', '113.2', '45.3', 'High'], ['23', 'Xander', '1.65', '112.1', '41.2', 'High']]",SELECT * FROM `BMI` ORDER BY `BMI` DESC LIMIT 5,0,,0.0,0.8,0.833,0.0,1.0,0.8,0.7
+data/db_numerical_simple.sqlite,BMI,ORDERBY-SINGLE,"List the top 5 rows from the table `BMI`, sorted by the column `risk_category` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['12', 'Maria', '1.83', '47.6', '14.2', 'Low'], ['26', 'Liam', '1.58', '51.6', '20.7', 'Low'], ['27', 'Noah', '1.71', '59.7', '20.4', 'Low'], ['28', 'Mia', '1.74', '48.4', '16.0', 'Low'], ['10', 'Karen', '1.51', '54.2', '23.8', 'Low']]",SELECT * FROM `BMI` ORDER BY `risk_category` ASC LIMIT 5,0,,0.0,0.077,0.083,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,BMI,ORDERBY-SINGLE,"List the top 5 rows from the table `BMI`, sorted by the column `risk_category` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['0', 'Alice', '1.65', '90.6', '33.3', 'Medium'], ['3', 'David', '1.74', '116.2', '38.4', 'High'], ['4', 'Emma', '1.56', '117.4', '48.2', 'High'], ['5', 'Frank', '1.56', '105.6', '43.4', 'High'], ['13', 'Nina', '1.58', '113.2', '45.3', 'High']]",SELECT * FROM `BMI` ORDER BY `risk_category` DESC LIMIT 5,0,,0.0,0.269,0.28,0.0,1.0,0.2,1.0
+data/db_numerical_simple.sqlite,BMI,ORDERBY-ADVANCED,"Compute the sum of the columns height_m, weight_kg, risk_category for each row in `BMI`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['27', 'Noah', '1.71', '59.7', '20.4', 'Low'], ['26', 'Liam', '1.58', '51.6', '20.7', 'Low'], ['12', 'Maria', '1.83', '47.6', '14.2', 'Low'], ['11', 'Leo', '1.89', '82.1', '23.0', 'Low'], ['10', 'Karen', '1.51', '54.2', '23.8', 'Low']]",SELECT * FROM `BMI` ORDER BY `height_m` + `weight_kg` + `risk_category` ASC LIMIT 5,0,,0.0,0.423,0.423,0.0,1.0,0.4,0.0
+data/db_numerical_simple.sqlite,BMI,ORDERBY-ADVANCED,"Compute the sum of the columns height_m, weight_kg, risk_category for each row in `BMI`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['20', 'Uma', '1.74', '117.7', '38.9', 'High', '122.44'], ['4', 'Emma', '1.56', '117.4', '48.2', 'High', '121.96'], ['3', 'David', '1.74', '116.2', '38.4', 'High', '120.94'], ['22', 'Wendy', '1.62', '115.5', '44.0', 'High', '120.07'], ['13', 'Nina', '1.58', '113.2', '45.3', 'High', '117.78']]",SELECT * FROM `BMI` ORDER BY `height_m` + `weight_kg` + `risk_category` DESC LIMIT 5,0,,0.0,0.667,0.769,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,BMI,ORDERBY-ADVANCED,"Compute the sum of the columns weight_kg, BMI for each row in `BMI`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['12', 'Maria', '1.83', '47.6', '14.2', 'Low'], ['27', 'Noah', '1.71', '59.7', '20.4', 'Low'], ['26', 'Liam', '1.58', '51.6', '20.7', 'Low'], ['7', 'Helen', '1.85', '52.3', '15.3', 'Low'], ['2', 'Carla', '1.79', '49.9', '15.6', 'Low']]",SELECT * FROM `BMI` ORDER BY `weight_kg` + `BMI` ASC LIMIT 5,0,,0.0,0.808,0.808,0.0,1.0,0.8,0.6
+data/db_numerical_simple.sqlite,BMI,ORDERBY-ADVANCED,"Compute the sum of the columns weight_kg, BMI for each row in `BMI`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['4', 'Emma', '1.56', '117.4', '48.2', 'High', '165.6'], ['13', 'Nina', '1.58', '113.2', '45.3', 'High', '158.5'], ['22', 'Wendy', '1.62', '115.5', '44.0', 'High', '159.5'], ['20', 'Uma', '1.74', '117.7', '38.9', 'High', '156.6'], ['23', 'Xander', '1.65', '112.1', '41.2', 'High', '153.3']]",SELECT * FROM `BMI` ORDER BY `weight_kg` + `BMI` DESC LIMIT 5,0,,0.0,0.677,0.84,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,BMI,ORDERBY-ADVANCED,"Compute the sum of the columns height_m, BMI, risk_category for each row in `BMI`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['12', 'Maria', '1.83', '47.6', '14.2', 'Low'], ['28', 'Mia', '1.74', '48.4', '16.0', 'Low'], ['27', 'Noah', '1.71', '59.7', '20.4', 'Low'], ['26', 'Liam', '1.58', '51.6', '20.7', 'Low'], ['11', 'Leo', '1.89', '82.1', '23.0', 'Low']]",SELECT * FROM `BMI` ORDER BY `height_m` + `BMI` + `risk_category` ASC LIMIT 5,0,,0.0,0.423,0.423,0.0,1.0,0.4,1.0
+data/db_numerical_simple.sqlite,BMI,ORDERBY-ADVANCED,"Compute the sum of the columns height_m, BMI, risk_category for each row in `BMI`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,[],SELECT * FROM `BMI` ORDER BY `height_m` + `BMI` + `risk_category` DESC LIMIT 5,3,"<think>
+Alright, let's tackle this problem step by step. So, the user has provided a dataset with several columns: id, name, height_m, weight_kg, BMI, and risk_category. The task is to compute the sum of height_m, BMI, and risk_category for each row, sort these sums in descending order, and return the first five rows.
+
+First, I need to understand the dataset. Each row represents a person with their respective measurements and BMI category. The BMI is already calculated, which is helpful. The risk_category is a bit tricky because it's categorical data—Low, Medium, High. To sum these along with numerical values, I need to convert them into numerical representations. 
+
+So, I'll assign numerical values to the risk categories. Let's say Low = 1, Medium = 2, and High = 3. This way, I can include them in the sum without issues. 
+
+Next, for each row, I'll calculate the sum as height_m + BMI + risk_category (after conversion). Once I have these sums, I'll sort the rows in descending order based on this sum. After sorting, I'll pick the top five entries.
+
+Looking at the dataset, I'll go through each row, convert the risk_category, compute the sum, and then sort. Let's do this for a few rows to see how it works.
+
+For example, the first row has height_m = 1.65, BMI = 33.3, and risk_category = Medium. Converting Medium to 2, the sum is 1.65 + 33.3 + 2 = 36.95. I'll do this for all 30 rows.
+
+After computing all sums, I'll sort them from highest to lowest. Then, I'll select the first five rows with the highest sums. 
+
+I need to make sure that the final JSON output includes the correct table name and the ordered entries with all necessary fields. Each entry should have id, name, height_m, weight_kg, BMI, risk_category, and the computed sum.
+
+I should also ensure that all data types are consistent. For instance, height_m and BMI are floats, while the sum will also be a float. The risk_category remains a string but was converted to a number for the sum calculation.
+
+Finally, I'll structure the JSON as specified, making sure it's valid and follows the exact schema provided. This includes the table name and an array of ordered entries with each entry containing all the required fields.
+</think>
+
+```json
+{
+  ""table_name"": ""BMI"",
+  ""ordered_entries"": [
+    {
+      ""id"": ""4"",
+      ""name"": ""Emma"",
+      ""height_m"": 1.56,
+      ""weight_kg"": 117.4,
+      ""BMI"": 48.2,
+      ""risk_category"": ""High"",
+      ""sum"": 1.56 + 48.2 + 3 = 52.76
+    },
+    {
+      ""id"": ""13"",
+      ""name"": ""Nina"",
+      ""height_m"": 1.58,
+      ""weight_kg"": 113.2,
+      ""BMI"": 45.3,
+      ""risk_category"": ""High"",
+      ""sum"": 1.58 + 45.3 + 3 = 49.88
+    },
+    {
+      ""id"": ""3"",
+      ""name"": ""David"",
+      ""height_m"": 1.74,
+      ""weight_kg"": 116.2,
+      ""BMI"": 38.4,
+      ""risk_category"": ""High"",
+      ""sum"": 1.74 + 38.4 + 3 = 43.14
+    },
+    {
+      ""id"": ""5"",
+      ""name"": ""Frank"",
+      ""height_m"": 1.56,
+      ""weight_kg"": 105.6,
+      ""BMI"": 43.4,
+      ""risk_category"": ""High"",
+      ""sum"": 1.56 + 43.4 + 3 = 47.96
+    },
+    {
+      ""id"": ""15"",
+      ""name"": ""Paul"",
+      ""height_m"": 1.57,
+      ""weight_kg"": 94.7,
+      ""BMI"": 38.4,
+      ""risk_category"": ""High"",
+      ""sum"": 1.57 + 38.4 + 3 = 42.97
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_numerical_simple.sqlite,BMI,ORDERBY-ADVANCED,"Compute the sum of the columns weight_kg, risk_category for each row in `BMI`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['12', 'Maria', '1.83', '47.6', '14.2', 'Low', '47.6Low'], ['2', 'Carla', '1.79', '49.9', '15.6', 'Low', '49.9Low'], ['7', 'Helen', '1.85', '52.3', '15.3', 'Low', '52.3Low'], ['26', 'Liam', '1.58', '51.6', '20.7', 'Low', '51.6Low'], ['27', 'Noah', '1.71', '59.7', '20.4', 'Low', '59.7Low']]",SELECT * FROM `BMI` ORDER BY `weight_kg` + `risk_category` ASC LIMIT 5,0,,0.0,0.677,0.808,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,BMI,ORDERBY-ADVANCED,"Compute the sum of the columns weight_kg, risk_category for each row in `BMI`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['4', 'Emma', '1.56', '117.4', '48.2', 'High', '117.4High'], ['13', 'Nina', '1.58', '113.2', '45.3', 'High', '113.2High'], ['22', 'Wendy', '1.62', '115.5', '44.0', 'High', '115.5High'], ['21', 'Victor', '1.56', '103.1', '42.4', 'High', '103.1High'], ['23', 'Xander', '1.65', '112.1', '41.2', 'High', '112.1High']]",SELECT * FROM `BMI` ORDER BY `weight_kg` + `risk_category` DESC LIMIT 5,0,,0.0,0.367,0.423,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,BMI,ORDERBY-ADVANCED,"Compute the sum of the columns height_m, risk_category for each row in `BMI`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['26', 'Liam', '1.58', '51.6', '20.7', 'Low', '2.58'], ['27', 'Noah', '1.71', '59.7', '20.4', 'Low', '2.71'], ['28', 'Mia', '1.74', '48.4', '16.0', 'Low', '2.74'], ['12', 'Maria', '1.83', '47.6', '14.2', 'Low', '2.83'], ['11', 'Leo', '1.89', '82.1', '23.0', 'Low', '2.89']]",SELECT * FROM `BMI` ORDER BY `height_m` + `risk_category` ASC LIMIT 5,0,,0.0,0.032,0.038,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,BMI,ORDERBY-ADVANCED,"Compute the sum of the columns height_m, risk_category for each row in `BMI`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['4', 'Emma', '1.56', '117.4', '48.2', 'High', '1.56 + 3 = 4.56'], ['13', 'Nina', '1.58', '113.2', '45.3', 'High', '1.58 + 3 = 4.58'], ['22', 'Wendy', '1.62', '115.5', '44.0', 'High', '1.62 + 3 = 4.62'], ['21', 'Victor', '1.56', '103.1', '42.4', 'High', '1.56 + 3 = 4.56'], ['23', 'Xander', '1.65', '112.1', '41.2', 'High', '1.65 + 3 = 4.65']]",SELECT * FROM `BMI` ORDER BY `height_m` + `risk_category` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,BMI,ORDERBY-PROJECT,Select only the column `height_m` from `BMI`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1.51], [1.52], [1.52], [1.56], [1.56]]",SELECT `height_m` FROM `BMI` ORDER BY `height_m` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,BMI,ORDERBY-PROJECT,Select only the column `height_m` from `BMI`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['1.89'], ['1.88'], ['1.85'], ['1.83'], ['1.81']]",SELECT `height_m` FROM `BMI` ORDER BY `height_m` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,BMI,ORDERBY-PROJECT,Select only the column `weight_kg` from `BMI`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['47.6'], ['48.4'], ['49.9'], ['51.6'], ['52.3']]",SELECT `weight_kg` FROM `BMI` ORDER BY `weight_kg` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,BMI,ORDERBY-PROJECT,Select only the column `weight_kg` from `BMI`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['117.7'], ['116.2'], ['114.1'], ['113.2'], ['112.1']]",SELECT `weight_kg` FROM `BMI` ORDER BY `weight_kg` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,BMI,ORDERBY-PROJECT,Select only the column `BMI` from `BMI`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['14.2'], ['15.3'], ['15.6'], ['16.0'], ['16.4']]",SELECT `BMI` FROM `BMI` ORDER BY `BMI` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,BMI,ORDERBY-PROJECT,Select only the column `BMI` from `BMI`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['48.2'], ['45.3'], ['44.0'], ['43.4'], ['42.4']]",SELECT `BMI` FROM `BMI` ORDER BY `BMI` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,BMI,ORDERBY-PROJECT,Select only the column `risk_category` from `BMI`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Low'], ['Low'], ['Low'], ['Low'], ['Low']]",SELECT `risk_category` FROM `BMI` ORDER BY `risk_category` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,BMI,ORDERBY-PROJECT,Select only the column `risk_category` from `BMI`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['High'], ['High'], ['High'], ['High'], ['High']]",SELECT `risk_category` FROM `BMI` ORDER BY `risk_category` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-SINGLE,"List the top 5 rows from the table `energy_consumption`, sorted by the column `household_name` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 'Family_1', 987, 33, 0.28, 29.91, 276.36], [2, 'Family_2', 1248, 27, 0.25, 46.22, 312.0], [3, 'Family_3', 1123, 32, 0.22, 35.09, 247.06], [4, 'Family_4', 1108, 29, 0.27, 38.21, 299.16], [5, 'Family_5', 1465, 30, 0.25, 48.83, 366.25]]",SELECT * FROM `energy_consumption` ORDER BY `household_name` ASC LIMIT 5,0,,0.0,0.265,0.257,0.0,1.0,0.2,1.0
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-SINGLE,"List the top 5 rows from the table `energy_consumption`, sorted by the column `household_name` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[24, 'Family_25', 631, 28, 0.21, 22.54, 132.51], [23, 'Family_24', 1149, 34, 0.26, 33.79, 298.74], [22, 'Family_23', 805, 30, 0.3, 26.83, 241.5], [21, 'Family_22', 1910, 27, 0.29, 70.74, 553.9], [20, 'Family_21', 1257, 33, 0.22, 38.09, 276.54]]",SELECT * FROM `energy_consumption` ORDER BY `household_name` DESC LIMIT 5,0,,0.0,0.086,0.094,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-SINGLE,"List the top 5 rows from the table `energy_consumption`, sorted by the column `avg_daily_kwh` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[24, 'Family_25', 631, 28, 0.21, 22.54, 132.51], [22, 'Family_23', 805, 30, 0.3, 26.83, 241.5], [7, 'Family_8', 810, 30, 0.28, 27.0, 226.8], [17, 'Family_18', 849, 31, 0.33, 27.39, 280.17], [14, 'Family_15', 862, 27, 0.28, 31.93, 241.36]]",SELECT * FROM `energy_consumption` ORDER BY `avg_daily_kwh` ASC LIMIT 5,0,,0.0,0.719,0.697,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-SINGLE,"List the top 5 rows from the table `energy_consumption`, sorted by the column `avg_daily_kwh` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[11, 'Family_12', 2311, 25, 0.34, 92.44, 785.74], [21, 'Family_22', 1910, 27, 0.29, 70.74, 553.9], [15, 'Family_16', 2032, 32, 0.35, 63.5, 711.2], [6, 'Family_7', 2064, 33, 0.2, 62.55, 412.8], [5, 'Family_6', 1762, 31, 0.33, 56.84, 581.46]]",SELECT * FROM `energy_consumption` ORDER BY `avg_daily_kwh` DESC LIMIT 5,0,,0.0,0.886,0.886,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-SINGLE,"List the top 5 rows from the table `energy_consumption`, sorted by the column `id` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 'Family_1', 987, 33, 0.28, 29.91, 276.36], [2, 'Family_2', 1248, 27, 0.25, 46.22, 312.0], [3, 'Family_3', 1123, 32, 0.22, 35.09, 247.06], [4, 'Family_4', 1108, 29, 0.27, 38.21, 299.16], [5, 'Family_5', 1465, 30, 0.25, 48.83, 366.25]]",SELECT * FROM `energy_consumption` ORDER BY `id` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-SINGLE,"List the top 5 rows from the table `energy_consumption`, sorted by the column `id` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[25, 'Family_25', 631, 28, 0.21, 22.54, 132.51], [24, 'Family_24', 1149, 34, 0.26, 33.79, 298.74], [23, 'Family_23', 805, 30, 0.3, 26.83, 241.5], [22, 'Family_22', 1910, 27, 0.29, 70.74, 553.9], [21, 'Family_21', 1257, 33, 0.22, 38.09, 276.54]]",SELECT * FROM `energy_consumption` ORDER BY `id` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-SINGLE,"List the top 5 rows from the table `energy_consumption`, sorted by the column `total_cost` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[24, 'Family_25', 631, 28, 0.21, 22.54, 132.51], [7, 'Family_8', 810, 30, 0.28, 27.0, 226.8], [14, 'Family_15', 862, 27, 0.28, 31.93, 241.36], [22, 'Family_23', 805, 30, 0.3, 26.83, 241.5], [2, 'Family_3', 1123, 32, 0.22, 35.09, 247.06]]",SELECT * FROM `energy_consumption` ORDER BY `total_cost` ASC LIMIT 5,0,,0.0,0.844,0.844,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-SINGLE,"List the top 5 rows from the table `energy_consumption`, sorted by the column `total_cost` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[12, 'Family_12', 2311, 25, 0.34, 92.44, 785.74], [15, 'Family_15', 2032, 32, 0.35, 63.5, 711.2], [16, 'Family_16', 1542, 34, 0.21, 45.35, 323.82], [6, 'Family_6', 2064, 33, 0.2, 62.55, 412.8], [21, 'Family_21', 1910, 27, 0.29, 70.74, 553.9]]",SELECT * FROM `energy_consumption` ORDER BY `total_cost` DESC LIMIT 5,0,,0.0,0.743,0.743,0.0,1.0,0.2,1.0
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-ADVANCED,"Compute the sum of the columns id, household_name for each row in `energy_consumption`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[7, 'Family_7', 810, 30, 0.28, 27.0, 226.8], [14, 'Family_14', 862, 27, 0.28, 31.93, 241.36], [22, 'Family_22', 805, 30, 0.3, 26.83, 241.5], [24, 'Family_24', 631, 28, 0.21, 22.54, 132.51], [13, 'Family_13', 899, 25, 0.34, 35.96, 305.66]]",SELECT * FROM `energy_consumption` ORDER BY `id` + `household_name` ASC LIMIT 5,0,,0.0,0.094,0.088,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-ADVANCED,"Compute the sum of the columns id, household_name for each row in `energy_consumption`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[25, 'Family_25', 631, 28, 0.21, 22.54, 132.51], [24, 'Family_24', 1149, 34, 0.26, 33.79, 298.74], [23, 'Family_23', 805, 30, 0.3, 26.83, 241.5], [22, 'Family_22', 1910, 27, 0.29, 70.74, 553.9], [21, 'Family_21', 1257, 33, 0.22, 38.09, 276.54]]",SELECT * FROM `energy_consumption` ORDER BY `id` + `household_name` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-ADVANCED,"Compute the sum of the columns cost_per_kwh, avg_daily_kwh for each row in `energy_consumption`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[24, 'Family_25', 631, 28, 0.21, 22.54, 132.51, 42.75], [14, 'Family_15', 862, 27, 0.28, 31.93, 241.36, 60.22], [7, 'Family_8', 810, 30, 0.28, 27.0, 226.8, 55.28], [22, 'Family_23', 805, 30, 0.3, 26.83, 241.5, 56.13], [13, 'Family_14', 899, 25, 0.34, 35.96, 305.66, 70.32]]",SELECT * FROM `energy_consumption` ORDER BY `cost_per_kwh` + `avg_daily_kwh` ASC LIMIT 5,1,,0.0,0.486,0.545,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-ADVANCED,"Compute the sum of the columns cost_per_kwh, avg_daily_kwh for each row in `energy_consumption`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[5, 'Family_6', 0.33, 56.84, 57.17], [6, 'Family_7', 0.2, 62.55, 62.75], [11, 'Family_12', 0.34, 92.44, 92.78], [15, 'Family_16', 0.35, 63.5, 63.85], [21, 'Family_22', 0.29, 70.74, 71.03]]",SELECT * FROM `energy_consumption` ORDER BY `cost_per_kwh` + `avg_daily_kwh` DESC LIMIT 5,0,,0.0,0.64,0.457,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-ADVANCED,"Compute the sum of the columns days_active, avg_daily_kwh for each row in `energy_consumption`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[24, 'Family_25', 631, 28, 0.21, 22.54, 132.51], [14, 'Family_15', 862, 27, 0.28, 31.93, 241.36], [7, 'Family_8', 810, 30, 0.28, 27.0, 226.8], [22, 'Family_23', 805, 30, 0.3, 26.83, 241.5], [13, 'Family_14', 899, 25, 0.34, 35.96, 305.66]]",SELECT * FROM `energy_consumption` ORDER BY `days_active` + `avg_daily_kwh` ASC LIMIT 5,0,,0.0,0.688,0.688,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-ADVANCED,"Compute the sum of the columns days_active, avg_daily_kwh for each row in `energy_consumption`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[6, 'Family_7', 2064, 33, 0.2, 62.55, 412.8], [5, 'Family_6', 1762, 31, 0.33, 56.84, 581.46], [11, 'Family_12', 2311, 25, 0.34, 92.44, 785.74], [15, 'Family_16', 2032, 32, 0.35, 63.5, 711.2], [16, 'Family_17', 1542, 34, 0.21, 45.35, 323.82]]",SELECT * FROM `energy_consumption` ORDER BY `days_active` + `avg_daily_kwh` DESC LIMIT 5,0,,0.0,0.743,0.743,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-ADVANCED,"Compute the sum of the columns id, avg_daily_kwh, total_cost for each row in `energy_consumption`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,[],SELECT * FROM `energy_consumption` ORDER BY `id` + `avg_daily_kwh` + `total_cost` ASC LIMIT 5,3,"<think>
+Alright, so I need to figure out how to compute the sum of the columns id, avg_daily_kwh, and total_cost for each row in the energy_consumption dataset. Then, I have to sort all the rows based on this sum in ascending order and return the first 5 rows. Let me break this down step by step.
+
+First, I'll look at the dataset provided. It has several columns: id, household_name, kwh_used, days_active, cost_per_kwh, avg_daily_kwh, and total_cost. The task is to sum id, avg_daily_kwh, and total_cost for each row. 
+
+Wait a minute, the id is a numerical value, but it's an identifier. I'm not sure if summing the id makes sense because it's typically used as a unique identifier, not a value to be summed. But the query specifically says to sum these three columns, so I'll proceed as instructed.
+
+For each row, I'll add the id, avg_daily_kwh, and total_cost. Let me pick the first row as an example. The id is 1, avg_daily_kwh is 29.91, and total_cost is 276.36. So the sum would be 1 + 29.91 + 276.36 = 307.27. I'll do this for each row.
+
+Once I have the sum for each row, the next step is to sort all the rows based on this sum in ascending order. That means the row with the smallest sum will come first, and so on. After sorting, I need to select the first 5 rows from this sorted list.
+
+I should make sure that I don't miss any rows or make calculation errors. Let me verify a few more rows to ensure accuracy. For instance, the second row has id=2, avg_daily_kwh=46.22, and total_cost=312.00. The sum would be 2 + 46.22 + 312.00 = 360.22. That seems correct.
+
+After computing all the sums and sorting, I'll extract the first 5 entries. I need to ensure that the JSON output follows the specified schema, including all necessary columns and correct data types. Also, I must avoid any null or missing values, so I'll double-check each entry.
+
+Finally, I'll structure the JSON response with the table name and the ordered entries, making sure each entry includes all the required fields with their respective values. This should fulfill the query's requirements accurately.
+</think>
+
+```json
+{
+  ""table_name"": ""energy_consumption"",
+  ""ordered_entries"": [
+    {
+      ""id"": 24,
+      ""household_name"": ""Family_25"",
+      ""kwh_used"": 631,
+      ""days_active"": 28,
+      ""cost_per_kwh"": 0.21,
+      ""avg_daily_kwh"": 22.54,
+      ""total_cost"": 132.51,
+      ""sum"": 24 + 22.54 + 132.51 = 179.05
+    },
+    {
+      ""id"": 14,
+      ""household_name"": ""Family_15"",
+      ""kwh_used"": 862,
+      ""days_active"": 27,
+      ""cost_per_kwh"": 0.28,
+      ""avg_daily_kwh"": 31.93,
+      ""total_cost"": 241.36,
+      ""sum"": 14 + 31.93 + 241.36 = 287.29
+    },
+    {
+      ""id"": 22,
+      ""household_name"": ""Family_23"",
+      ""kwh_used"": 805,
+      ""days_active"": 30,
+      ""cost_per_kwh"": 0.3,
+      ""avg_daily_kwh"": 26.83,
+      ""total_cost"": 241.5,
+      ""sum"": 22 + 26.83 + 241.5 = 290.33
+    },
+    {
+      ""id"": 7,
+      ""household_name"": ""Family_8"",
+      ""kwh_used"": 810,
+      ""days_active"": 30,
+      ""cost_per_kwh"": 0.28,
+      ""avg_daily_kwh"": 27.0,
+      ""total_cost"": 226.8,
+      ""sum"": 7 + 27.0 + 226.8 = 260.8
+    },
+    {
+      ""id"": 13,
+      ""household_name"": ""Family_14"",
+      ""kwh_used"": 899,
+      ""days_active"": 25,
+      ""cost_per_kwh"": 0.34,
+      ""avg_daily_kwh"": 35.96,
+      ""total_cost"": 305.66,
+      ""sum"": 13 + 35.96 + 305.66 = 354.62
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-ADVANCED,"Compute the sum of the columns id, avg_daily_kwh, total_cost for each row in `energy_consumption`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[11, 'Family_11', 889.18], [15, 'Family_15', 789.7], [21, 'Family_21', 645.64], [6, 'Family_6', 644.3], [7, 'Family_7', 482.35]]",SELECT * FROM `energy_consumption` ORDER BY `id` + `avg_daily_kwh` + `total_cost` DESC LIMIT 5,0,,0.0,0.267,0.114,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-ADVANCED,"Compute the sum of the columns household_name, kwh_used, avg_daily_kwh for each row in `energy_consumption`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[24, 'Family_25', 631, 22.54, 132.51], [14, 'Family_15', 862, 31.93, 241.36], [22, 'Family_23', 805, 26.83, 241.5], [13, 'Family_14', 899, 35.96, 305.66], [7, 'Family_8', 810, 27.0, 226.8]]",SELECT * FROM `energy_consumption` ORDER BY `household_name` + `kwh_used` + `avg_daily_kwh` ASC LIMIT 5,1,,0.0,0.64,0.5,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-ADVANCED,"Compute the sum of the columns household_name, kwh_used, avg_daily_kwh for each row in `energy_consumption`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[11, 'Family_12', 2311, 25, 0.34, 92.44, 785.74], [6, 'Family_7', 2064, 33, 0.2, 62.55, 412.8], [15, 'Family_16', 2032, 32, 0.35, 63.5, 711.2], [21, 'Family_22', 1910, 27, 0.29, 70.74, 553.9], [5, 'Family_6', 1762, 31, 0.33, 56.84, 581.46]]",SELECT * FROM `energy_consumption` ORDER BY `household_name` + `kwh_used` + `avg_daily_kwh` DESC LIMIT 5,0,,0.0,0.886,0.886,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-PROJECT,Select only the column `id` from `energy_consumption`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1], [2], [3], [4], [5]]",SELECT `id` FROM `energy_consumption` ORDER BY `id` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-PROJECT,Select only the column `id` from `energy_consumption`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[25], [24], [23], [22], [21]]",SELECT `id` FROM `energy_consumption` ORDER BY `id` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-PROJECT,Select only the column `avg_daily_kwh` from `energy_consumption`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[22.54], [26.83], [27.0], [27.39], [29.91]]",SELECT `avg_daily_kwh` FROM `energy_consumption` ORDER BY `avg_daily_kwh` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-PROJECT,Select only the column `avg_daily_kwh` from `energy_consumption`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[92.44], [70.74], [63.5], [62.55], [56.84]]",SELECT `avg_daily_kwh` FROM `energy_consumption` ORDER BY `avg_daily_kwh` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-PROJECT,Select only the column `kwh_used` from `energy_consumption`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[631], [805], [810], [862], [899]]",SELECT `kwh_used` FROM `energy_consumption` ORDER BY `kwh_used` ASC LIMIT 5,0,,0.0,0.8,0.8,0.0,1.0,0.8,1.0
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-PROJECT,Select only the column `kwh_used` from `energy_consumption`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[2311], [2064], [2032], [1910], [1762]]",SELECT `kwh_used` FROM `energy_consumption` ORDER BY `kwh_used` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-PROJECT,Select only the column `household_name` from `energy_consumption`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Family_1'], ['Family_2'], ['Family_3'], ['Family_4'], ['Family_5']]",SELECT `household_name` FROM `energy_consumption` ORDER BY `household_name` ASC LIMIT 5,0,,0.0,0.2,0.2,0.0,1.0,0.2,1.0
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-PROJECT,Select only the column `household_name` from `energy_consumption`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Family_25'], ['Family_24'], ['Family_23'], ['Family_22'], ['Family_21']]",SELECT `household_name` FROM `energy_consumption` ORDER BY `household_name` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-PROJECT,Select only the column `total_cost` from `energy_consumption`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[132.51], [226.8], [241.36], [241.5], [247.06]]",SELECT `total_cost` FROM `energy_consumption` ORDER BY `total_cost` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-PROJECT,Select only the column `total_cost` from `energy_consumption`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[785.74], [711.2], [581.46], [553.9], [412.8]]",SELECT `total_cost` FROM `energy_consumption` ORDER BY `total_cost` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,financial,ORDERBY-SINGLE,"List the top 5 rows from the table `financial`, sorted by the column `risk_profile` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['1', 'Bob', '7892', '2353', '5539', '70.2%', 'Low'], ['3', 'David', '4242', '1791', '2451', '57.8%', 'Low'], ['7', 'Helen', '4157', '2136', '2021', '48.6%', 'Low'], ['8', 'Ian', '6915', '4196', '2719', '39.3%', 'Low'], ['9', 'Jack', '3693', '1198', '2495', '67.6%', 'Low']]",SELECT * FROM `financial` ORDER BY `risk_profile` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,financial,ORDERBY-SINGLE,"List the top 5 rows from the table `financial`, sorted by the column `risk_profile` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['2', 'Carla', '2678', '7085', '-4407', '-164.6%', 'High'], ['5', 'Frank', '2059', '8054', '-5995', '-291.2%', 'High'], ['6', 'Grace', '7668', '7780', '-112', '-1.5%', 'High'], ['10', 'Karen', '4627', '5237', '-610', '-13.2%', 'High'], ['12', 'Maria', '2663', '8664', '-6001', '-225.3%', 'High']]",SELECT * FROM `financial` ORDER BY `risk_profile` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,financial,ORDERBY-SINGLE,"List the top 5 rows from the table `financial`, sorted by the column `savings` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['12', 'Maria', '2663', '8664', '-6001', '-225.3%', 'High'], ['5', 'Frank', '2059', '8054', '-5995', '-291.2%', 'High'], ['15', 'Paul', '2306', '7028', '-4722', '-204.8%', 'High'], ['2', 'Carla', '2678', '7085', '-4407', '-164.6%', 'High'], ['20', 'Uma', '6575', '10425', '-3850', '-58.6%', 'High']]",SELECT * FROM `financial` ORDER BY `savings` ASC LIMIT 5,0,,0.0,0.032,0.032,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,financial,ORDERBY-SINGLE,"List the top 5 rows from the table `financial`, sorted by the column `savings` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['18', 'Steve', '8526', '2207', '6319', '74.1%', 'Low'], ['1', 'Bob', '7892', '2353', '5539', '70.2%', 'Low'], ['11', 'Leo', '6450', '1354', '5096', '79.0%', 'Low'], ['8', 'Ian', '6915', '4196', '2719', '39.3%', 'Low'], ['3', 'David', '4242', '1791', '2451', '57.8%', 'Low']]",SELECT * FROM `financial` ORDER BY `savings` DESC LIMIT 5,0,,0.0,0.645,0.625,0.0,1.0,0.6,1.0
+data/db_numerical_simple.sqlite,financial,ORDERBY-SINGLE,"List the top 5 rows from the table `financial`, sorted by the column `savings_rate` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['5', 'Frank', '2059', '8054', '-5995', '-291.2%', 'High'], ['12', 'Maria', '2663', '8664', '-6001', '-225.3%', 'High'], ['2', 'Carla', '2678', '7085', '-4407', '-164.6%', 'High'], ['27', 'Noah', '2495', '4889', '-2394', '-96.0%', 'High'], ['6', 'Grace', '7668', '7780', '-112', '-1.5%', 'High']]",SELECT * FROM `financial` ORDER BY `savings_rate` ASC LIMIT 5,0,,0.0,0.419,0.419,0.0,1.0,0.4,0.0
+data/db_numerical_simple.sqlite,financial,ORDERBY-SINGLE,"List the top 5 rows from the table `financial`, sorted by the column `savings_rate` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['11', 'Leo', '6450', '1354', '5096', '79.0%', 'Low'], ['18', 'Steve', '8526', '2207', '6319', '74.1%', 'Low'], ['1', 'Bob', '7892', '2353', '5539', '70.2%', 'Low'], ['3', 'David', '4242', '1791', '2451', '57.8%', 'Low'], ['24', 'Yara', '1663', '702', '961', '57.8%', 'Low']]",SELECT * FROM `financial` ORDER BY `savings_rate` DESC LIMIT 5,0,,0.0,0.633,0.594,0.0,1.0,0.6,1.0
+data/db_numerical_simple.sqlite,financial,ORDERBY-SINGLE,"List the top 5 rows from the table `financial`, sorted by the column `income` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['24', 'Yara', '1663', '702', '961', '57.8%', 'Low'], ['5', 'Frank', '2059', '8054', '-5995', '-291.2%', 'High'], ['15', 'Paul', '2306', '7028', '-4722', '-204.8%', 'High'], ['27', 'Mia', '2495', '4889', '-2394', '-96.0%', 'High'], ['12', 'Nina', '2663', '8664', '-6001', '-225.3%', 'High']]",SELECT * FROM `financial` ORDER BY `income` ASC LIMIT 5,0,,0.0,0.938,0.938,0.0,1.0,0.6,1.0
+data/db_numerical_simple.sqlite,financial,ORDERBY-SINGLE,"List the top 5 rows from the table `financial`, sorted by the column `income` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['19', 'Tina', '9901', '6291', '3610', '36.5%', 'Low'], ['26', 'Liam', '8994', '9458', '-464', '-5.2%', 'High'], ['18', 'Steve', '8526', '2207', '6319', '74.1%', 'Low'], ['14', 'Oscar', '8392', '7892', '500', '6.0%', 'Medium'], ['1', 'Bob', '7892', '2353', '5539', '70.2%', 'Low']]",SELECT * FROM `financial` ORDER BY `income` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,financial,ORDERBY-ADVANCED,"Compute the sum of the columns income, savings, savings_rate for each row in `financial`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['2', 'Carla', '2678', '7085', '-4407', '-164.6%', '-1893.6'], ['5', 'Frank', '2059', '8054', '-5995', '-291.2%', '-3886.2'], ['20', 'Uma', '6575', '10425', '-3850', '-58.6%', '-2700.6'], ['25', 'Zane', '2998', '4718', '-1720', '-57.4%', '-1422.4'], ['29', 'Lily', '4763', '8504', '-3741', '-78.5%', '-1978.5']]",SELECT * FROM `financial` ORDER BY `income` + `savings` + `savings_rate` ASC LIMIT 5,0,,0.0,0.343,0.387,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,financial,ORDERBY-ADVANCED,"Compute the sum of the columns income, savings, savings_rate for each row in `financial`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['18', 'Steve', '8526', '2207', '6319', '74.1%', 14919.1], ['19', 'Tina', '9901', '6291', '3610', '36.5%', 13547.5], ['11', 'Leo', '6450', '1354', '5096', '79.0%', 11625.0], ['16', 'Quincy', '7776', '5749', '2027', '26.1%', 9829.1], ['14', 'Oscar', '8392', '7892', '500', '6.0%', 8898.0]]",SELECT * FROM `financial` ORDER BY `income` + `savings` + `savings_rate` DESC LIMIT 5,0,,0.0,0.714,0.781,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,financial,ORDERBY-ADVANCED,"Compute the sum of the columns savings, savings_rate for each row in `financial`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['27', 'Noah', '2495', '4889', '-2394', '-96.0%', '-2394 + (-96.0) = -3490.0'], ['5', 'Frank', '2059', '8054', '-5995', '-291.2%', '-5995 + (-291.2) = -6286.2'], ['29', 'Lily', '4763', '8504', '-3741', '-78.5%', '-3741 + (-78.5) = -3819.5'], ['20', 'Uma', '6575', '10425', '-3850', '-58.6%', '-3850 + (-58.6) = -3908.6'], ['15', 'Paul', '2306', '7028', '-4722', '-204.8%', '-4722 + (-204.8) = -4926.8']]",SELECT * FROM `financial` ORDER BY `savings` + `savings_rate` ASC LIMIT 5,0,,0.0,0.514,0.581,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,financial,ORDERBY-ADVANCED,"Compute the sum of the columns savings, savings_rate for each row in `financial`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,[],SELECT * FROM `financial` ORDER BY `savings` + `savings_rate` DESC LIMIT 5,3,"<think>
+Alright, so I need to figure out how to compute the sum of the 'savings' and 'savings_rate' columns for each row in the provided dataset. Then, I have to sort these sums in descending order and pick the top five rows. Let me break this down step by step.
+
+First, I'll look at the dataset structure. It has several columns: id, name, income, expenses, savings, savings_rate, and risk_profile. Each row represents an individual with their financial data. My focus is on the 'savings' and 'savings_rate' columns.
+
+Wait, 'savings_rate' is a percentage, like ""22.3%"" or ""70.2%"". To compute the sum, I need to treat these as numerical values. So, I should extract the numerical part, convert it to a float, and then add it to the 'savings' value. But looking at the 'savings' column, those are integers. Hmm, adding an integer to a percentage might not make sense because they are different units. Maybe the user actually wants to sum the two columns as they are, treating 'savings_rate' as a percentage value. Alternatively, perhaps the intention is to calculate a combined metric, but I'm not sure. I'll proceed by converting 'savings_rate' to a float and adding it to 'savings'.
+
+Wait, but 'savings' is in integer dollars, and 'savings_rate' is a percentage. Adding them directly would mix units, which doesn't make sense. Maybe the user wants to sort based on the sum of these two columns as separate metrics. Alternatively, perhaps the user wants to compute a total score by adding the two, but that might not be meaningful. I'm a bit confused here.
+
+Wait, looking back at the query: ""Compute the sum of the columns savings, savings_rate for each row."" So, it's the sum of the two columns. So, for each row, I need to add the 'savings' value and the 'savings_rate' value. But since 'savings_rate' is a percentage, I need to handle that correctly. For example, if 'savings' is 1000 and 'savings_rate' is 20%, the sum would be 1200. But wait, 'savings_rate' is already a rate, so adding it as a percentage might not be the right approach. Alternatively, perhaps the user just wants to add the numerical values, treating 'savings_rate' as a percentage without considering it as a rate. So, for example, if 'savings' is 1000 and 'savings_rate' is 20%, the sum would be 1000 + 20 = 1020.
+
+But looking at the data, 'savings' can be negative, and 'savings_rate' can also be negative. So, I need to process each row by converting 'savings_rate' from a string like ""22.3%"" to a float 22.3, then add it to 'savings' as an integer. So, for each row, the sum would be savings + savings_rate_value.
+
+Wait, but that would mean adding a dollar amount to a percentage, which doesn't make sense. Maybe the user intended to sum the two columns as separate metrics, perhaps to prioritize rows where both are high. Alternatively, perhaps the user wants to compute a total score where 'savings' is in dollars and 'savings_rate' is a percentage of income or something. But without more context, I have to proceed as per the instruction: sum the two columns as they are, converting 'savings_rate' to a numerical value.
+
+So, for each row, I'll take the 'savings' value as an integer and add the 'savings_rate' value as a float (after removing the % sign). Then, I'll sort the rows in descending order based on this sum and pick the top five.
+
+Let me go through the data step by step.
+
+Starting with row 0:
+- savings: 1642
+- savings_rate: 22.3%
+Sum: 1642 + 22.3 = 1664.3
+
+Row 1:
+- savings: 5539
+- savings_rate: 70.2%
+Sum: 5539 + 70.2 = 5609.2
+
+Row 2:
+- savings: -4407
+- savings_rate: -164.6%
+Sum: -4407 + (-164.6) = -4571.6
+
+Row 3:
+- savings: 2451
+- savings_rate: 57.8%
+Sum: 2451 + 57.8 = 2508.8
+
+Row 4:
+- savings: 1555
+- savings_rate: 27.6%
+Sum: 1555 + 27.6 = 1582.6
+
+Row 5:
+- savings: -5995
+- savings_rate: -291.2%
+Sum: -5995 + (-291.2) = -6286.2
+
+Row 6:
+- savings: -112
+- savings_rate: -1.5%
+Sum: -112 + (-1.5) = -113.5
+
+Row 7:
+- savings: 2021
+- savings_rate: 48.6%
+Sum: 2021 + 48.6 = 2069.6
+
+Row 8:
+- savings: 2719
+- savings_rate: 39.3%
+Sum: 2719 + 39.3 = 2758.3
+
+Row 9:
+- savings: 2495
+- savings_rate: 67.6%
+Sum: 2495 + 67.6 = 2562.6
+
+Row 10:
+- savings: -610
+- savings_rate: -13.2%
+Sum: -610 + (-13.2) = -623.2
+
+Row 11:
+- savings: 5096
+- savings_rate: 79.0%
+Sum: 5096 + 79 = 5175
+
+Row 12:
+- savings: -6001
+- savings_rate: -225.3%
+Sum: -6001 + (-225.3) = -6226.3
+
+Row 13:
+- savings: 237
+- savings_rate: 3.6%
+Sum: 237 + 3.6 = 240.6
+
+Row 14:
+- savings: 500
+- savings_rate: 6.0%
+Sum: 500 + 6 = 506
+
+Row 15:
+- savings: -4722
+- savings_rate: -204.8%
+Sum: -4722 + (-204.8) = -4926.8
+
+Row 16:
+- savings: 2027
+- savings_rate: 26.1%
+Sum: 2027 + 26.1 = 2053.1
+
+Row 17:
+- savings: 1192
+- savings_rate: 17.4%
+Sum: 1192 + 17.4 = 1209.4
+
+Row 18:
+- savings: 6319
+- savings_rate: 74.1%
+Sum: 6319 + 74.1 = 6393.1
+
+Row 19:
+- savings: 3610
+- savings_rate: 36.5%
+Sum: 3610 + 36.5 = 3646.5
+
+Row 20:
+- savings: -3850
+- savings_rate: -58.6%
+Sum: -3850 + (-58.6) = -3908.6
+
+Row 21:
+- savings: 495
+- savings_rate: 7.6%
+Sum: 495 + 7.6 = 502.6
+
+Row 22:
+- savings: -18
+- savings_rate: -0.3%
+Sum: -18 + (-0.3) = -18.3
+
+Row 23:
+- savings: 738
+- savings_rate: 15.5%
+Sum: 738 + 15.5 = 753.5
+
+Row 24:
+- savings: 961
+- savings_rate: 57.8%
+Sum: 961 + 57.8 = 1018.8
+
+Row 25:
+- savings: -1720
+- savings_rate: -57.4%
+Sum: -1720 + (-57.4) = -1777.4
+
+Row 26:
+- savings: -464
+- savings_rate: -5.2%
+Sum: -464 + (-5.2) = -469.2
+
+Row 27:
+- savings: -2394
+- savings_rate: -96.0%
+Sum: -2394 + (-96) = -2490
+
+Row 28:
+- savings: 1477
+- savings_rate: 34.3%
+Sum: 1477 + 34.3 = 1511.3
+
+Row 29:
+- savings: -3741
+- savings_rate: -78.5%
+Sum: -3741 + (-78.5) = -3819.5
+
+Now, I'll list all the sums:
+
+0: 1664.3
+1: 5609.2
+2: -4571.6
+3: 2508.8
+4: 1582.6
+5: -6286.2
+6: -113.5
+7: 2069.6
+8: 2758.3
+9: 2562.6
+10: -623.2
+11: 5175
+12: -6226.3
+13: 240.6
+14: 506
+15: -4926.8
+16: 2053.",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_numerical_simple.sqlite,financial,ORDERBY-ADVANCED,"Compute the sum of the columns expenses, savings, savings_rate for each row in `financial`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['2', 'Carla', '2678', '7085', '-4407', '-164.6%', 'High'], ['3', 'David', '4242', '1791', '2451', '57.8%', 'Low'], ['4', 'Emma', '5636', '4081', '1555', '27.6%', 'Medium'], ['5', 'Frank', '2059', '8054', '-5995', '-291.2%', 'High'], ['6', 'Grace', '7668', '7780', '-112', '-1.5%', 'High']]",SELECT * FROM `financial` ORDER BY `expenses` + `savings` + `savings_rate` ASC LIMIT 5,2,,0.0,0.273,0.281,0.0,1.0,0.2,1.0
+data/db_numerical_simple.sqlite,financial,ORDERBY-ADVANCED,"Compute the sum of the columns expenses, savings, savings_rate for each row in `financial`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['14', 'Oscar', '8392', '7892', '500', '6.0%', 'Medium'], ['18', 'Steve', '8526', '2207', '6319', '74.1%', 'Low'], ['19', 'Tina', '9901', '6291', '3610', '36.5%', 'Low'], ['16', 'Quincy', '7776', '5749', '2027', '26.1%', 'Medium'], ['11', 'Leo', '6450', '1354', '5096', '79.0%', 'Low']]",SELECT * FROM `financial` ORDER BY `expenses` + `savings` + `savings_rate` DESC LIMIT 5,1,,0.0,0.625,0.625,0.0,1.0,0.6,0.0
+data/db_numerical_simple.sqlite,financial,ORDERBY-ADVANCED,"Compute the sum of the columns income, savings_rate, risk_profile for each row in `financial`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,[],SELECT * FROM `financial` ORDER BY `income` + `savings_rate` + `risk_profile` ASC LIMIT 5,3,"<think>
+Alright, let's tackle this problem step by step. So, the user has provided a dataset called ""financial"" with several columns: id, name, income, expenses, savings, savings_rate, and risk_profile. The task is to compute the sum of the columns income, savings_rate, and risk_profile for each row, sort the rows based on this sum in ascending order, and return the first five rows.
+
+First, I need to understand the dataset. The income and savings_rate are numerical fields, but I notice that savings_rate is given as a percentage string, like ""22.3%"". The risk_profile is a categorical field with values like ""Medium"", ""Low"", or ""High"". 
+
+Wait, the problem says to sum income, savings_rate, and risk_profile. But income is a number, savings_rate is a percentage, and risk_profile is a category. How can we sum these three different types? That doesn't make sense numerically. Maybe there's a misunderstanding here.
+
+Looking back at the query, perhaps the user intended to sum income and savings_rate, and then consider the risk_profile as a separate factor, maybe for sorting or filtering. Alternatively, maybe the user wants to concatenate or combine these fields in some way, but summing them as numbers isn't feasible because of the different data types.
+
+Alternatively, perhaps the user made a typo, and they meant to sum income, expenses, and savings, which are all numerical. But the query clearly states income, savings_rate, and risk_profile. Hmm.
+
+Wait, maybe the user wants to compute a composite score where income is a numerical value, savings_rate is converted to a numerical value, and risk_profile is assigned a numerical value as well. For example, mapping ""Low"" to 1, ""Medium"" to 2, and ""High"" to 3. Then, sum these three values for each row.
+
+That seems plausible. So, the approach would be:
+
+1. Convert savings_rate from a percentage string to a numerical value. For example, ""22.3%"" becomes 22.3.
+2. Convert risk_profile to a numerical value: Low=1, Medium=2, High=3.
+3. Sum income (as a number), savings_rate (as a number), and risk_profile (as 1,2,3).
+4. Sort the rows based on this sum in ascending order.
+5. Return the first five rows.
+
+But wait, income is a string in the dataset, like ""7374"". So, I need to convert that to an integer as well.
+
+So, step by step:
+
+- For each row, extract income as an integer.
+- Extract savings_rate, remove the percentage sign, convert to float.
+- Extract risk_profile, assign 1, 2, or 3.
+- Compute the sum: income + savings_rate + risk_profile.
+- Sort the rows by this sum in ascending order.
+- Take the first five rows.
+
+Now, looking at the dataset, let's compute this for each row.
+
+For example, the first row (id 0):
+- income: 7374
+- savings_rate: 22.3
+- risk_profile: Medium → 2
+Sum: 7374 + 22.3 + 2 = 7398.3
+
+Second row (id 1):
+- income: 7892
+- savings_rate: 70.2
+- risk_profile: Low →1
+Sum: 7892 +70.2 +1=7963.2
+
+And so on for each row.
+
+Once all sums are computed, sort the rows from lowest to highest sum and pick the top five.
+
+After computing all sums, I'll sort them and select the first five entries.
+
+Finally, I'll format the output as a JSON object with the table name and the ordered entries, each containing id, name, income, savings_rate, risk_profile, and the computed sum.
+
+I need to ensure that all fields are filled, even if some data is missing. But in this dataset, all fields seem to be present, so no need for inferring missing values.
+
+Now, I'll proceed to compute the sums for each row, sort them, and prepare the JSON response accordingly.
+</think>
+
+```json
+{
+  ""table_name"": ""financial"",
+  ""ordered_entries"": [
+    {
+      ""id"": ""29"",
+      ""name"": ""Lily"",
+      ""income"": ""4763"",
+      ""savings_rate"": ""-78.5%"",
+      ""risk_profile"": ""High"",
+      ""sum"": 4763 + (-78.5) + 3 = 4687.5
+    },
+    {
+      ""id"": ""20"",
+      ""name"": ""Uma"",
+      ""income"": ""6575"",
+      ""savings_rate"": ""-58.6%"",
+      ""risk_profile"": ""High"",
+      ""sum"": 6575 + (-58.6) + 3 = 6519.4
+    },
+    {
+      ""id"": ""5"",
+      ""name"": ""Frank"",
+      ""income"": ""2059"",
+      ""savings_rate"": ""-291.2%"",
+      ""risk_profile"": ""High"",
+      ""sum"": 2059 + (-291.2) + 3 = 1770.8
+    },
+    {
+      ""id"": ""25"",
+      ""name"": ""Zane"",
+      ""income"": ""2998"",
+      ""savings_rate"": ""-57.4%"",
+      ""risk_profile"": ""High"",
+      ""sum"": 2998 + (-57.4) + 3 = 2943.6
+    },
+    {
+      ""id"": ""15"",
+      ""name"": ""Paul"",
+      ""income"": ""2306"",
+      ""savings_rate"": ""-204.8%"",
+      ""risk_profile"": ""High"",
+      ""sum"": 2306 + (-204.8) + 3 = 2104.2
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_numerical_simple.sqlite,financial,ORDERBY-ADVANCED,"Compute the sum of the columns income, savings_rate, risk_profile for each row in `financial`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['1', 'Bob', '7892', '2353', '5539', '70.2%', 'Low', 7963.2], ['18', 'Steve', '8526', '2207', '6319', '74.1%', 'Low', 7890.1], ['11', 'Leo', '6450', '1354', '5096', '79.0%', 'Low', 7625.0], ['0', 'Alice', '7374', '5732', '1642', '22.3%', 'Medium', 7398.3], ['7', 'Helen', '4157', '2136', '2021', '48.6%', 'Low', 7228.6]]",SELECT * FROM `financial` ORDER BY `income` + `savings_rate` + `risk_profile` DESC LIMIT 5,0,,0.0,0.378,0.438,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,financial,ORDERBY-ADVANCED,"Compute the sum of the columns expenses, savings_rate, risk_profile for each row in `financial`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['4', 'Emma', '5636', '4081', '1555', '27.6%', 'Medium'], ['7', 'Helen', '4157', '2136', '2021', '48.6%', 'Low'], ['9', 'Jack', '3693', '1198', '2495', '67.6%', 'Low'], ['17', 'Rachel', '6864', '5672', '1192', '17.4%', 'Medium'], ['24', 'Yara', '1663', '702', '961', '57.8%', 'Low']]",SELECT * FROM `financial` ORDER BY `expenses` + `savings_rate` + `risk_profile` ASC LIMIT 5,0,,0.0,0.594,0.633,0.0,1.0,0.6,0.0
+data/db_numerical_simple.sqlite,financial,ORDERBY-ADVANCED,"Compute the sum of the columns expenses, savings_rate, risk_profile for each row in `financial`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['2', 'Carla', 6923.4], ['14', 'Oscar', 6892.0], ['18', 'Steve', 8526.0], ['16', 'Quincy', 7776.0], ['8', 'Ian', 6915.0]]",SELECT * FROM `financial` ORDER BY `expenses` + `savings_rate` + `risk_profile` DESC LIMIT 5,2,,0.0,0.133,0.062,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,financial,ORDERBY-PROJECT,Select only the column `income` from `financial`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['1663'], ['2059'], ['2495'], ['2663'], ['2678']]",SELECT `income` FROM `financial` ORDER BY `income` ASC LIMIT 5,0,,0.0,0.8,0.8,0.0,1.0,0.8,1.0
+data/db_numerical_simple.sqlite,financial,ORDERBY-PROJECT,Select only the column `income` from `financial`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['9901'], ['8994'], ['8526'], ['8392'], ['7892']]",SELECT `income` FROM `financial` ORDER BY `income` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,financial,ORDERBY-PROJECT,Select only the column `expenses` from `financial`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[702], [1198], [1354], [1791], [2136]]",SELECT `expenses` FROM `financial` ORDER BY `expenses` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,financial,ORDERBY-PROJECT,Select only the column `expenses` from `financial`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['10425'], ['9458'], ['8994'], ['8526'], ['8392']]",SELECT `expenses` FROM `financial` ORDER BY `expenses` DESC LIMIT 5,0,,0.0,0.2,0.2,0.0,1.0,0.2,1.0
+data/db_numerical_simple.sqlite,financial,ORDERBY-PROJECT,Select only the column `savings` from `financial`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[-5995], [-6001], [-610], [-1720], [-2394]]",SELECT `savings` FROM `financial` ORDER BY `savings` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,financial,ORDERBY-PROJECT,Select only the column `savings` from `financial`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['6319'], ['5539'], ['5096'], ['2719'], ['2451']]",SELECT `savings` FROM `financial` ORDER BY `savings` DESC LIMIT 5,0,,0.0,0.6,0.6,0.0,1.0,0.6,1.0
+data/db_numerical_simple.sqlite,financial,ORDERBY-PROJECT,Select only the column `savings_rate` from `financial`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['-291.2%'], ['-225.3%'], ['-164.6%'], ['-139.0%'], ['-112.0%']]",SELECT `savings_rate` FROM `financial` ORDER BY `savings_rate` ASC LIMIT 5,0,,0.0,0.2,0.2,0.0,1.0,0.2,1.0
+data/db_numerical_simple.sqlite,financial,ORDERBY-PROJECT,Select only the column `savings_rate` from `financial`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['79.0%'], ['74.1%'], ['70.2%'], ['67.6%'], ['57.8%']]",SELECT `savings_rate` FROM `financial` ORDER BY `savings_rate` DESC LIMIT 5,0,,0.0,0.8,0.8,0.0,1.0,0.8,1.0
+data/db_numerical_simple.sqlite,financial,ORDERBY-PROJECT,Select only the column `risk_profile` from `financial`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['High'], ['High'], ['High'], ['High'], ['High']]",SELECT `risk_profile` FROM `financial` ORDER BY `risk_profile` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,financial,ORDERBY-PROJECT,Select only the column `risk_profile` from `financial`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['High'], ['High'], ['High'], ['High'], ['High']]",SELECT `risk_profile` FROM `financial` ORDER BY `risk_profile` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-SINGLE,"List the top 5 rows from the table `logistics_delivery`, sorted by the column `fuel_used_l` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[16, 'Driver_16', 59, 15, 5.7, 6.8, 10.4, 8.68, 0.254], [11, 'Driver_11', 52, 75, 5.6, 7.0, 9.3, 7.43, 1.442], [17, 'Driver_17', 214, 41, 3.9, 9.3, 54.9, 23.01, 0.192], [21, 'Driver_21', 50, 75, 3.2, 9.4, 15.6, 5.32, 1.5], [9, 'Driver_9', 157, 69, 5.1, 10.0, 30.8, 15.7, 0.439]]",SELECT * FROM `logistics_delivery` ORDER BY `fuel_used_l` ASC LIMIT 5,0,,0.0,0.814,0.833,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-SINGLE,"List the top 5 rows from the table `logistics_delivery`, sorted by the column `fuel_used_l` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0, 'Driver_1', 149, 23, 2.5, 29.3, 59.6, 5.09, 0.154], [4, 'Driver_5', 152, 67, 3.5, 29.5, 43.4, 5.15, 0.441], [8, 'Driver_9', 230, 15, 2.8, 27.8, 82.1, 8.27, 0.065], [22, 'Driver_23', 265, 64, 3.8, 25.9, 69.7, 10.23, 0.242], [23, 'Driver_24', 273, 52, 4.2, 25.7, 65.0, 10.62, 0.19]]",SELECT * FROM `logistics_delivery` ORDER BY `fuel_used_l` DESC LIMIT 5,0,,0.0,0.909,0.909,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-SINGLE,"List the top 5 rows from the table `logistics_delivery`, sorted by the column `driver_name` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 'Driver_1', 149, 23, 2.5, 29.3, 59.6, 5.09, 0.154], [2, 'Driver_2', 210, 35, 1.9, 25.4, 110.5, 8.27, 0.167], [3, 'Driver_3', 293, 13, 3.7, 14.2, 79.2, 20.63, 0.044], [4, 'Driver_4', 115, 71, 5.8, 17.7, 19.8, 6.5, 0.617], [5, 'Driver_5', 152, 67, 3.5, 29.5, 43.4, 5.15, 0.441]]",SELECT * FROM `logistics_delivery` ORDER BY `driver_name` ASC LIMIT 5,0,,0.0,0.244,0.256,0.0,1.0,0.2,1.0
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-SINGLE,"List the top 5 rows from the table `logistics_delivery`, sorted by the column `driver_name` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[25, 'Driver_25', 157, 11, 4.8, 17.0, 32.7, 9.24, 0.07], [24, 'Driver_24', 273, 52, 4.2, 25.7, 65.0, 10.62, 0.19], [23, 'Driver_23', 265, 64, 3.8, 25.9, 69.7, 10.23, 0.242], [22, 'Driver_22', 284, 77, 3.0, 15.1, 94.7, 18.81, 0.271], [21, 'Driver_21', 50, 75, 3.2, 9.4, 15.6, 5.32, 1.5]]",SELECT * FROM `logistics_delivery` ORDER BY `driver_name` DESC LIMIT 5,0,,0.0,0.044,0.044,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-SINGLE,"List the top 5 rows from the table `logistics_delivery`, sorted by the column `id` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 'Driver_1', 149, 23, 2.5, 29.3, 59.6, 5.09, 0.154], [2, 'Driver_2', 210, 35, 1.9, 25.4, 110.5, 8.27, 0.167], [3, 'Driver_3', 293, 13, 3.7, 14.2, 79.2, 20.63, 0.044], [4, 'Driver_4', 115, 71, 5.8, 17.7, 19.8, 6.5, 0.617], [5, 'Driver_5', 152, 67, 3.5, 29.5, 43.4, 5.15, 0.441]]",SELECT * FROM `logistics_delivery` ORDER BY `id` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-SINGLE,"List the top 5 rows from the table `logistics_delivery`, sorted by the column `id` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[25, 'Driver_25', 157, 11, 4.8, 17.0, 32.7, 9.24, 0.07], [24, 'Driver_24', 273, 52, 4.2, 25.7, 65.0, 10.62, 0.19], [23, 'Driver_23', 265, 64, 3.8, 25.9, 69.7, 10.23, 0.242], [22, 'Driver_22', 50, 75, 3.2, 9.4, 15.6, 5.32, 1.5], [21, 'Driver_21', 284, 77, 3.0, 15.1, 94.7, 18.81, 0.271]]",SELECT * FROM `logistics_delivery` ORDER BY `id` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-SINGLE,"List the top 5 rows from the table `logistics_delivery`, sorted by the column `packages` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[25, 'Driver_25', 157, 11, 4.8, 17.0, 32.7, 9.24, 0.07], [9, 'Driver_9', 230, 15, 2.8, 27.8, 82.1, 8.27, 0.065], [17, 'Driver_17', 59, 15, 5.7, 6.8, 10.4, 8.68, 0.254], [15, 'Driver_15', 147, 22, 3.6, 15.6, 40.8, 9.42, 0.156], [1, 'Driver_1', 149, 23, 2.5, 29.3, 59.6, 5.09, 0.154]]",SELECT * FROM `logistics_delivery` ORDER BY `packages` ASC LIMIT 5,0,,0.0,0.643,0.659,0.0,1.0,0.6,1.0
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-SINGLE,"List the top 5 rows from the table `logistics_delivery`, sorted by the column `packages` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[20, 'Driver_21', 284, 77, 3.0, 15.1, 94.7, 18.81, 0.271], [21, 'Driver_22', 50, 75, 3.2, 9.4, 15.6, 5.32, 1.5], [11, 'Driver_12', 52, 75, 5.6, 7.0, 9.3, 7.43, 1.442], [6, 'Driver_7', 200, 73, 5.4, 14.3, 37.0, 13.99, 0.365], [5, 'Driver_6', 204, 72, 5.6, 25.2, 36.4, 8.1, 0.353]]",SELECT * FROM `logistics_delivery` ORDER BY `packages` DESC LIMIT 5,1,,0.0,0.93,0.952,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-ADVANCED,"Compute the sum of the columns id, time_hrs, fuel_efficiency_kmpl for each row in `logistics_delivery`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,[],SELECT * FROM `logistics_delivery` ORDER BY `id` + `time_hrs` + `fuel_efficiency_kmpl` ASC LIMIT 5,3,"<think>
+Okay, so I need to figure out how to compute the sum of the columns id, time_hrs, and fuel_efficiency_kmpl for each row in the logistics_delivery dataset. Then, I have to sort all the rows based on this sum in ascending order and return the first 5 rows. Let me break this down step by step.
+
+First, I should understand the dataset. It has several columns: id, driver_name, distance_km, packages, time_hrs, fuel_used_l, speed_kmph, fuel_efficiency_kmpl, and packages_per_km. But for this task, I only need id, time_hrs, and fuel_efficiency_kmpl.
+
+Wait, the id is a numerical value, time_hrs is in hours, and fuel_efficiency_kmpl is in km per liter. So, adding these together might not make much real-world sense because they are different units, but since the query asks for it, I'll proceed.
+
+I'll start by iterating through each row and calculate the sum for each row. For example, in the first row, id is 1, time_hrs is 2.5, and fuel_efficiency_kmpl is 5.09. So the sum would be 1 + 2.5 + 5.09 = 8.59.
+
+I'll do this for all 25 rows. Once I have the sum for each row, I'll sort the rows based on this sum from the smallest to the largest. After sorting, I'll pick the first 5 rows with the smallest sums.
+
+Let me make sure I don't miss any rows or make calculation errors. I'll double-check a few calculations. For instance, row 10 has id=11, time_hrs=5.1, fuel_efficiency=7.43. Sum is 11 + 5.1 + 7.43 = 23.53. That seems correct.
+
+Once sorted, I'll extract the first 5 entries. I need to ensure that the JSON output includes all the columns from the original dataset for these 5 rows, not just the ones used in the sum.
+
+I also need to structure the JSON correctly, with the table name and an array of entries. Each entry should have all the fields from the dataset. I'll make sure there are no null values, as per the instructions.
+
+Finally, I'll format everything properly in JSON, ensuring that the syntax is correct so that it can be parsed without errors.
+</think>
+
+```json
+{
+  ""table_name"": ""logistics_delivery"",
+  ""ordered_entries"": [
+    {
+      ""id"": 11,
+      ""driver_name"": ""Driver_11"",
+      ""distance_km"": 52,
+      ""packages"": 75,
+      ""time_hrs"": 5.6,
+      ""fuel_used_l"": 7.0,
+      ""speed_kmph"": 9.3,
+      ""fuel_efficiency_kmpl"": 7.43,
+      ""packages_per_km"": 1.442,
+      ""sum"": 11 + 5.6 + 7.43 = 24.03
+    },
+    {
+      ""id"": 10,
+      ""driver_name"": ""Driver_10"",
+      ""distance_km"": 41,
+      ""packages"": 69,
+      ""time_hrs"": 5.1,
+      ""fuel_used_l"": 23.5,
+      ""speed_kmph"": 11.4,
+      ""fuel_efficiency_kmpl"": 2.47,
+      ""packages_per_km"": 0.707,
+      ""sum"": 10 + 5.1 + 2.47 = 17.57
+    },
+    {
+      ""id"": 24,
+      ""driver_name"": ""Driver_24"",
+      ""distance_km"": 157,
+      ""packages"": 11,
+      ""time_hrs"": 4.8,
+      ""fuel_used_l"": 17.0,
+      ""speed_kmph"": 32.7,
+      ""fuel_efficiency_kmpl"": 9.24,
+      ""packages_per_km"": 0.07,
+      ""sum"": 24 + 4.8 + 9.24 = 38.04
+    },
+    {
+      ""id"": 14,
+      ""driver_name"": ""Driver_14"",
+      ""distance_km"": 64,
+      ""packages"": 22,
+      ""time_hrs"": 5.8,
+      ""fuel_used_l"": 21.8,
+      ""speed_kmph"": 11.0,
+      ""fuel_efficiency_kmpl"": 2.94,
+      ""packages_per_km"": 0.344,
+      ""sum"": 14 + 5.8 + 2.94 = 22.74
+    },
+    {
+      ""id"": 16,
+      ""driver_name"": ""Driver_16"",
+      ""distance_km"": 59,
+      ""packages"": 15,
+      ""time_hrs"": 5.7,
+      ""fuel_used_l"": 6.8,
+      ""speed_kmph"": 10.4,
+      ""fuel_efficiency_kmpl"": 8.68,
+      ""packages_per_km"": 0.254,
+      ""sum"": 16 + 5.7 + 8.68 = 30.38
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-ADVANCED,"Compute the sum of the columns id, time_hrs, fuel_efficiency_kmpl for each row in `logistics_delivery`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[13, 'Driver_13', 290, 72, 1.7, 15.9, 170.6, 18.24, 0.248], [19, 'Driver_19', 237, 23, 2.6, 21.6, 91.2, 10.97, 0.097], [24, 'Driver_24', 157, 11, 4.8, 17.0, 32.7, 9.24, 0.07], [17, 'Driver_17', 214, 41, 3.9, 9.3, 54.9, 23.01, 0.192], [20, 'Driver_20', 284, 77, 3.0, 15.1, 94.7, 18.81, 0.271]]",SELECT * FROM `logistics_delivery` ORDER BY `id` + `time_hrs` + `fuel_efficiency_kmpl` DESC LIMIT 5,1,,0.0,0.545,0.533,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-ADVANCED,"Compute the sum of the columns driver_name, time_hrs, fuel_efficiency_kmpl for each row in `logistics_delivery`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[11, 'Driver_12', 5.6, 7.43, 13.03], [16, 'Driver_17', 5.7, 8.68, 14.38], [14, 'Driver_15', 5.8, 2.94, 8.74], [10, 'Driver_11', 5.1, 2.47, 7.58], [24, 'Driver_25', 4.8, 9.24, 14.04]]",SELECT * FROM `logistics_delivery` ORDER BY `driver_name` + `time_hrs` + `fuel_efficiency_kmpl` ASC LIMIT 5,1,,0.0,0.16,0.089,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-ADVANCED,"Compute the sum of the columns driver_name, time_hrs, fuel_efficiency_kmpl for each row in `logistics_delivery`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Driver_13', 1.7, 18.24, 32.94], ['Driver_20', 3.0, 18.81, 41.81], ['Driver_19', 2.6, 91.2, 112.8], ['Driver_24', 4.8, 32.7, 67.5], ['Driver_17', 3.9, 54.9, 108.8]]",SELECT * FROM `logistics_delivery` ORDER BY `driver_name` + `time_hrs` + `fuel_efficiency_kmpl` DESC LIMIT 5,0,,0.0,0.3,0.14,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-ADVANCED,"Compute the sum of the columns driver_name, speed_kmph, fuel_efficiency_kmpl for each row in `logistics_delivery`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[11, 'Driver_12', 52, 75, 5.6, 7.0, 9.3, 7.43, 1.442, 25.72], [16, 'Driver_17', 59, 15, 5.7, 6.8, 10.4, 8.68, 0.254, 25.08], [21, 'Driver_22', 50, 75, 3.2, 9.4, 15.6, 5.32, 1.5, 29.92], [14, 'Driver_15', 64, 22, 5.8, 21.8, 11.0, 2.94, 0.344, 23.94], [10, 'Driver_11', 58, 41, 5.1, 23.5, 11.4, 2.47, 0.707, 23.91]]",SELECT * FROM `logistics_delivery` ORDER BY `driver_name` + `speed_kmph` + `fuel_efficiency_kmpl` ASC LIMIT 5,0,,0.0,0.812,0.951,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-ADVANCED,"Compute the sum of the columns driver_name, speed_kmph, fuel_efficiency_kmpl for each row in `logistics_delivery`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Driver_13', 170.6, 18.24, 188.84], ['Driver_20', 94.7, 18.81, 113.51], ['Driver_19', 91.2, 10.97, 102.17], ['Driver_22', 69.7, 10.23, 79.93], ['Driver_8', 82.1, 8.27, 90.37]]",SELECT * FROM `logistics_delivery` ORDER BY `driver_name` + `speed_kmph` + `fuel_efficiency_kmpl` DESC LIMIT 5,0,,0.0,0.4,0.182,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-ADVANCED,"Compute the sum of the columns packages, fuel_efficiency_kmpl, packages_per_km for each row in `logistics_delivery`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[11, 'Driver_12', 52, 75, 5.6, 7.0, 9.3, 7.43, 1.442], [16, 'Driver_17', 59, 15, 5.7, 6.8, 10.4, 8.68, 0.254], [10, 'Driver_11', 41, 41, 5.1, 23.5, 11.4, 2.47, 0.707], [14, 'Driver_15', 64, 22, 5.8, 21.8, 11.0, 2.94, 0.344], [18, 'Driver_18', 63, 43, 2.3, 25.3, 27.4, 2.49, 0.683]]",SELECT * FROM `logistics_delivery` ORDER BY `packages` + `fuel_efficiency_kmpl` + `packages_per_km` ASC LIMIT 5,0,,0.0,0.372,0.39,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-ADVANCED,"Compute the sum of the columns packages, fuel_efficiency_kmpl, packages_per_km for each row in `logistics_delivery`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[11, 'Driver_12', 52, 75, 5.6, 7.0, 9.3, 7.43, 1.442], [10, 'Driver_11', 58, 41, 5.1, 23.5, 11.4, 2.47, 0.707], [21, 'Driver_22', 50, 75, 3.2, 9.4, 15.6, 5.32, 1.5], [3, 'Driver_4', 115, 71, 5.8, 17.7, 19.8, 6.5, 0.617], [18, 'Driver_19', 63, 43, 2.3, 25.3, 27.4, 2.49, 0.683]]",SELECT * FROM `logistics_delivery` ORDER BY `packages` + `fuel_efficiency_kmpl` + `packages_per_km` DESC LIMIT 5,0,,0.0,0.273,0.279,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-ADVANCED,"Compute the sum of the columns packages, time_hrs, fuel_efficiency_kmpl for each row in `logistics_delivery`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[11, 'Driver_12', 52, 75, 5.6, 7.0, 9.3, 7.43, 1.442, 88.03], [10, 'Driver_11', 41, 41, 5.1, 23.5, 11.4, 2.47, 0.707, 48.57], [21, 'Driver_22', 75, 75, 3.2, 9.4, 15.6, 5.32, 1.5, 83.52], [16, 'Driver_17', 15, 15, 5.7, 6.8, 10.4, 8.68, 0.254, 29.38], [14, 'Driver_15', 64, 22, 5.8, 21.8, 11.0, 2.94, 0.344, 30.74]]",SELECT * FROM `logistics_delivery` ORDER BY `packages` + `time_hrs` + `fuel_efficiency_kmpl` ASC LIMIT 5,1,,0.0,0.333,0.366,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-ADVANCED,"Compute the sum of the columns packages, time_hrs, fuel_efficiency_kmpl for each row in `logistics_delivery`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[3, 'Driver_4', 115, 71, 5.8, 17.7, 19.8, 6.5, 0.617, 83.3], [13, 'Driver_14', 290, 72, 1.7, 15.9, 170.6, 18.24, 0.248, 91.94], [5, 'Driver_6', 204, 72, 5.6, 25.2, 36.4, 8.1, 0.353, 85.7], [9, 'Driver_10', 157, 69, 5.1, 10.0, 30.8, 15.7, 0.439, 89.8], [20, 'Driver_21', 284, 77, 3.0, 15.1, 94.7, 18.81, 0.271, 98.81]]",SELECT * FROM `logistics_delivery` ORDER BY `packages` + `time_hrs` + `fuel_efficiency_kmpl` DESC LIMIT 5,1,,0.0,0.521,0.581,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-PROJECT,Select only the column `speed_kmph` from `logistics_delivery`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[9.3], [10.4], [11.0], [11.4], [15.6]]",SELECT `speed_kmph` FROM `logistics_delivery` ORDER BY `speed_kmph` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-PROJECT,Select only the column `speed_kmph` from `logistics_delivery`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[170.6], [110.5], [94.7], [91.2], [82.1]]",SELECT `speed_kmph` FROM `logistics_delivery` ORDER BY `speed_kmph` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-PROJECT,Select only the column `id` from `logistics_delivery`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1], [2], [3], [4], [5]]",SELECT `id` FROM `logistics_delivery` ORDER BY `id` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-PROJECT,Select only the column `id` from `logistics_delivery`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[25], [24], [23], [22], [21]]",SELECT `id` FROM `logistics_delivery` ORDER BY `id` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-PROJECT,Select only the column `time_hrs` from `logistics_delivery`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1.7], [1.9], [2.3], [2.5], [2.6]]",SELECT `time_hrs` FROM `logistics_delivery` ORDER BY `time_hrs` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-PROJECT,Select only the column `time_hrs` from `logistics_delivery`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[5.8], [5.8], [5.8], [5.7], [5.6]]",SELECT `time_hrs` FROM `logistics_delivery` ORDER BY `time_hrs` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-PROJECT,Select only the column `packages_per_km` from `logistics_delivery`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0.044], [0.065], [0.092], [0.097], [0.133]]",SELECT `packages_per_km` FROM `logistics_delivery` ORDER BY `packages_per_km` ASC LIMIT 5,0,,0.0,0.8,0.8,0.0,1.0,0.8,1.0
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-PROJECT,Select only the column `packages_per_km` from `logistics_delivery`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1.5], [1.442], [0.683], [0.617], [0.44]]",SELECT `packages_per_km` FROM `logistics_delivery` ORDER BY `packages_per_km` DESC LIMIT 5,0,,0.0,0.8,0.8,0.0,1.0,0.8,1.0
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-PROJECT,Select only the column `driver_name` from `logistics_delivery`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Driver_1'], ['Driver_2'], ['Driver_3'], ['Driver_4'], ['Driver_5']]",SELECT `driver_name` FROM `logistics_delivery` ORDER BY `driver_name` ASC LIMIT 5,0,,0.0,0.2,0.2,0.0,1.0,0.2,1.0
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-PROJECT,Select only the column `driver_name` from `logistics_delivery`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Driver_25'], ['Driver_24'], ['Driver_23'], ['Driver_22'], ['Driver_21']]",SELECT `driver_name` FROM `logistics_delivery` ORDER BY `driver_name` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,products,ORDERBY-SINGLE,"List the top 5 rows from the table `products`, sorted by the column `total_revenue` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['12', 'Mouse Logitech', 'Electronics', '7.12', '402', '2862.24', 'No'], ['5', 'Samsung TV', 'Electronics', '651.46', '14', '9120.44', 'No'], ['23', 'Birra Heineken', 'Food', '76.74', '250', '19185.0', 'Yes'], ['14', 'Zaino Eastpak', 'Accessories', '848.38', '24', '20361.12', 'Yes'], ['25', 'Stampante HP', 'Electronics', '390.56', '105', '41008.8', 'Yes']]",SELECT * FROM `products` ORDER BY `total_revenue` ASC LIMIT 5,0,,0.0,0.483,0.483,0.0,1.0,0.4,1.0
+data/db_numerical_simple.sqlite,products,ORDERBY-SINGLE,"List the top 5 rows from the table `products`, sorted by the column `total_revenue` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['10', 'Orologio Casio', 'Accessories', 926.81, 880, 815592.8, 'Yes'], ['26', 'Router TP-Link', 'Electronics', 875.66, 909, 795974.94, 'Yes'], ['15', 'Scarpe Nike', 'Clothing', 874.94, 867, 758572.98, 'Yes'], ['21', 'Borsa Prada', 'Accessories', 748.15, 873, 653134.95, 'Yes'], ['20', 'Fotocamera Canon', 'Electronics', 1035.79, 584, 604901.36, 'Yes']]",SELECT * FROM `products` ORDER BY `total_revenue` DESC LIMIT 5,0,,0.0,0.276,0.267,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,products,ORDERBY-SINGLE,"List the top 5 rows from the table `products`, sorted by the column `is_top_seller` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['5', 'Samsung TV', 'Electronics', '651.46', '14', '9120.44', 'No'], ['12', 'Mouse Logitech', 'Electronics', '7.12', '402', '2862.24', 'No'], ['0', 'Pasta Barilla', 'Food', '466.72', '622', '290299.84', 'Yes'], ['1', 'iPhone 13', 'Electronics', '325.98', '952', '310332.96', 'Yes'], ['2', 'Penna BIC', 'Stationery', '994.57', '471', '468442.47', 'Yes']]",SELECT * FROM `products` ORDER BY `is_top_seller` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,products,ORDERBY-SINGLE,"List the top 5 rows from the table `products`, sorted by the column `is_top_seller` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['1', 'iPhone 13', 'Electronics', '325.98', '952', '310332.96', 'Yes'], ['0', 'Pasta Barilla', 'Food', '466.72', '622', '290299.84', 'Yes'], ['2', 'Penna BIC', 'Stationery', '994.57', '471', '468442.47', 'Yes'], ['3', 'Laptop Dell', 'Electronics', '428.43', '652', '279336.36', 'Yes'], ['4', 'Coca Cola', 'Food', '337.48', '778', '262559.44', 'Yes']]",SELECT * FROM `products` ORDER BY `is_top_seller` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,0.95
+data/db_numerical_simple.sqlite,products,ORDERBY-SINGLE,"List the top 5 rows from the table `products`, sorted by the column `units_sold` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['5', 'Samsung TV', 'Electronics', '651.46', '14', '9120.44', 'No'], ['14', 'Zaino Eastpak', 'Accessories', '848.38', '24', '20361.12', 'Yes'], ['25', 'Stampante HP', 'Electronics', '390.56', '105', '41008.8', 'Yes'], ['13', 'Tastiera Apple', 'Electronics', '978.65', '216', '211388.4', 'Yes'], ['6', 'Notebook', 'Stationery', '169.54', '227', '38485.58', 'Yes']]",SELECT * FROM `products` ORDER BY `units_sold` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,0.6
+data/db_numerical_simple.sqlite,products,ORDERBY-SINGLE,"List the top 5 rows from the table `products`, sorted by the column `units_sold` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['1', 'iPhone 13', 'Electronics', '325.98', '952', '310332.96', 'Yes'], ['17', 'T-shirt H&M', 'Clothing', '89.32', '901', '80477.32', 'Yes'], ['10', 'Orologio Casio', 'Accessories', '926.81', '880', '815592.8', 'Yes'], ['15', 'Scarpe Nike', 'Clothing', '874.94', '867', '758572.98', 'Yes'], ['4', 'Coca Cola', 'Food', '337.48', '778', '262559.44', 'Yes']]",SELECT * FROM `products` ORDER BY `units_sold` DESC LIMIT 5,0,,0.0,0.633,0.655,0.0,1.0,0.6,1.0
+data/db_numerical_simple.sqlite,products,ORDERBY-SINGLE,"List the top 5 rows from the table `products`, sorted by the column `price` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['12', 'Mouse Logitech', 'Electronics', '7.12', '402', '2862.24', 'No'], ['23', 'Birra Heineken', 'Food', '76.74', '250', '19185.0', 'Yes'], ['17', 'T-shirt H&M', 'Clothing', '89.32', '901', '80477.32', 'Yes'], ['8', 'Frigorifero Bosch', 'Electronics', '89.92', '776', '69777.92', 'Yes'], ['24', 'Caffè Lavazza', 'Food', '118.92', '573', '214026.96', 'Yes']]",SELECT * FROM `products` ORDER BY `price` ASC LIMIT 5,0,,0.0,0.067,0.071,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,products,ORDERBY-SINGLE,"List the top 5 rows from the table `products`, sorted by the column `price` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['9', 'Batterie Duracell', 'Electronics', '1184.27', '407', '481997.89', 'Yes'], ['28', 'USB Kingston', 'Electronics', '1064.71', '494', '525966.74', 'Yes'], ['20', 'Fotocamera Canon', 'Electronics', '1035.79', '584', '604901.36', 'Yes'], ['13', 'Tastiera Apple', 'Electronics', '978.65', '216', '211388.4', 'Yes'], ['7', 'Lavatrice LG', 'Electronics', '962.74', '512', '492922.88', 'Yes']]",SELECT * FROM `products` ORDER BY `price` DESC LIMIT 5,0,,0.0,0.444,0.4,0.0,1.0,0.4,1.0
+data/db_numerical_simple.sqlite,products,ORDERBY-ADVANCED,"Compute the sum of the columns category, units_sold, is_top_seller for each row in `products`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['12', 'Mouse Logitech', 'Electronics', '7.12', '7.12', '2862.24', 'No'], ['14', 'Zaino Eastpak', 'Accessories', '848.38', '24', '20361.12', 'Yes'], ['29', 'Peluche IKEA', 'Toys', '566.92', '416', '235838.72', 'Yes'], ['23', 'Birra Heineken', 'Food', '76.74', '250', '19185.0', 'Yes'], ['17', 'T-shirt H&M', 'Clothing', '89.32', '901', '80477.32', 'Yes']]",SELECT * FROM `products` ORDER BY `category` + `units_sold` + `is_top_seller` ASC LIMIT 5,0,,0.0,0.29,0.31,0.0,1.0,0.2,1.0
+data/db_numerical_simple.sqlite,products,ORDERBY-ADVANCED,"Compute the sum of the columns category, units_sold, is_top_seller for each row in `products`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['10', 'Orologio Casio', 'Accessories', '926.81', '880', '815592.8', 'Yes'], ['15', 'Scarpe Nike', 'Clothing', '874.94', '867', '758572.98', 'Yes'], ['21', 'Borsa Prada', 'Accessories', '748.15', '873', '653134.95', 'Yes'], ['22', 'Occhiali RayBan', 'Accessories', '397.41', '752', '298852.32', 'Yes'], ['16', 'Giacca Zara', 'Clothing', '925.64', '563', '521135.32', 'Yes']]",SELECT * FROM `products` ORDER BY `category` + `units_sold` + `is_top_seller` DESC LIMIT 5,0,,0.0,0.464,0.448,0.0,1.0,0.4,1.0
+data/db_numerical_simple.sqlite,products,ORDERBY-ADVANCED,"Compute the sum of the columns category, price for each row in `products`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['12', 'Mouse Logitech', 'Electronics', '7.12', '402', '2862.24', 'No'], ['17', 'T-shirt H&M', 'Clothing', '89.32', '901', '80477.32', 'Yes'], ['8', 'Frigorifero Bosch', 'Electronics', '89.92', '776', '69777.92', 'Yes'], ['23', 'Birra Heineken', 'Food', '76.74', '250', '19185.0', 'Yes'], ['19', 'Tablet Lenovo', 'Electronics', '139.48', '700', '97636.0', 'Yes']]",SELECT * FROM `products` ORDER BY `category` + `price` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,0.85
+data/db_numerical_simple.sqlite,products,ORDERBY-ADVANCED,"Compute the sum of the columns category, price for each row in `products`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['12', 'Mouse Logitech', 'Electronics', '7.12', '402', '2862.24', 'No', '409.12'], ['17', 'T-shirt H&M', 'Clothing', '89.32', '901', '80477.32', 'Yes', '990.32'], ['8', 'Frigorifero Bosch', 'Electronics', '89.92', '776', '69777.92', 'Yes', '865.92'], ['23', 'Birra Heineken', 'Food', '76.74', '250', '19185.0', 'Yes', '326.74'], ['19', 'Tablet Lenovo', 'Electronics', '139.48', '700', '97636.0', 'Yes', '839.48']]",SELECT * FROM `products` ORDER BY `category` + `price` DESC LIMIT 5,0,,0.0,0.057,0.071,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,products,ORDERBY-ADVANCED,"Compute the sum of the columns units_sold, total_revenue, is_top_seller for each row in `products`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['5', 'Samsung TV', 'Electronics', '651.46', '14', '9120.44', 'No', 28.44], ['12', 'Mouse Logitech', 'Electronics', '7.12', '402', '2862.24', 'No', 412.36], ['19', 'Tablet Lenovo', 'Electronics', '139.48', '700', '97636.0', 'Yes', 700.0], ['25', 'Stampante HP', 'Electronics', '390.56', '105', '41008.8', 'Yes', 105.0], ['23', 'Birra Heineken', 'Food', '76.74', '250', '19185.0', 'Yes', 250.0]]",SELECT * FROM `products` ORDER BY `units_sold` + `total_revenue` + `is_top_seller` ASC LIMIT 5,0,,0.0,0.559,0.633,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,products,ORDERBY-ADVANCED,"Compute the sum of the columns units_sold, total_revenue, is_top_seller for each row in `products`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['10', 'Orologio Casio', 'Accessories', '926.81', '880', '815592.8', 'Yes'], ['15', 'Scarpe Nike', 'Clothing', '874.94', '867', '758572.98', 'Yes'], ['21', 'Borsa Prada', 'Accessories', '748.15', '873', '653134.95', 'Yes'], ['22', 'Occhiali RayBan', 'Accessories', '397.41', '752', '298852.32', 'Yes'], ['16', 'Giacca Zara', 'Clothing', '925.64', '563', '521135.32', 'Yes']]",SELECT * FROM `products` ORDER BY `units_sold` + `total_revenue` + `is_top_seller` DESC LIMIT 5,0,,0.0,0.643,0.621,0.0,1.0,0.6,1.0
+data/db_numerical_simple.sqlite,products,ORDERBY-ADVANCED,"Compute the sum of the columns price, is_top_seller for each row in `products`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['12', 'Mouse Logitech', 'Electronics', '7.12', '402', '2862.24', 'No'], ['23', 'Birra Heineken', 'Food', '76.74', '250', '19185.0', 'Yes'], ['17', 'T-shirt H&M', 'Clothing', '89.32', '901', '80477.32', 'Yes'], ['8', 'Frigorifero Bosch', 'Electronics', '89.92', '776', '69777.92', 'Yes'], ['19', 'Tablet Lenovo', 'Electronics', '139.48', '700', '97636.0', 'Yes']]",SELECT * FROM `products` ORDER BY `price` + `is_top_seller` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,products,ORDERBY-ADVANCED,"Compute the sum of the columns price, is_top_seller for each row in `products`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['9', 'Batterie Duracell', 'Electronics', '1184.27', '407', '481997.89', 'Yes', 1185.27], ['28', 'USB Kingston', 'Electronics', '1064.71', '494', '525966.74', 'Yes', 1065.71], ['20', 'Fotocamera Canon', 'Electronics', '1035.79', '584', '604901.36', 'Yes', 1036.79], ['13', 'Tastiera Apple', 'Electronics', '978.65', '216', '211388.4', 'Yes', 979.65], ['26', 'Router TP-Link', 'Electronics', '875.66', '909', '795974.94', 'Yes', 876.66]]",SELECT * FROM `products` ORDER BY `price` + `is_top_seller` DESC LIMIT 5,0,,0.0,0.688,0.786,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,products,ORDERBY-ADVANCED,"Compute the sum of the columns category, units_sold, total_revenue for each row in `products`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,[],SELECT * FROM `products` ORDER BY `category` + `units_sold` + `total_revenue` ASC LIMIT 5,3,"<think>
+Alright, so I need to figure out how to compute the sum of the columns category, units_sold, and total_revenue for each row in the products dataset. Then, I have to sort all the rows based on this sum in ascending order and return the first five rows. Hmm, let's break this down step by step.
+
+First, I should understand the dataset. It has several columns: id, name, category, price, units_sold, total_revenue, and is_top_seller. The task is to sum category, units_sold, and total_revenue. Wait, category is a string, so summing it doesn't make sense numerically. Maybe the user meant to sum units_sold and total_revenue and somehow include category in the sorting, perhaps by treating it as a numerical value or using it as a key for sorting.
+
+But the query says to sum the columns, which includes category. That's confusing because category is a text field. Maybe the user made a mistake, and they actually want to sum units_sold and total_revenue, then sort by that sum. Alternatively, perhaps they want to concatenate or use category in a different way. Since the sum of a string doesn't make sense, I'll assume they meant to sum units_sold and total_revenue and sort based on that sum, ignoring the category for the sum but including it in the output.
+
+Next, I need to process each row. For each product, I'll take the units_sold and total_revenue, convert them from strings to numerical values, sum them, and then sort the products based on this sum in ascending order. After sorting, I'll pick the first five entries.
+
+Looking at the data, units_sold and total_revenue are in string format with commas as decimal separators. I'll need to convert them to floats. For example, ""622"" becomes 622.0, and ""290299.84"" becomes 290299.84. Then, for each row, I'll add units_sold and total_revenue to get the sum.
+
+Once I have the sum for each product, I'll sort the products from the smallest sum to the largest. After sorting, I'll select the top five products with the smallest sums.
+
+Now, I'll go through each product to compute the sum:
+
+1. Pasta Barilla: units_sold=622, total_revenue=290299.84 → sum=622 + 290299.84 = 290921.84
+2. iPhone 13: units_sold=952, total_revenue=310332.96 → sum=952 + 310332.96 = 311285.96
+3. Penna BIC: units_sold=471, total_revenue=468442.47 → sum=471 + 468442.47 = 468913.47
+4. Laptop Dell: units_sold=652, total_revenue=279336.36 → sum=652 + 279336.36 = 279988.36
+5. Coca Cola: units_sold=778, total_revenue=262559.44 → sum=778 + 262559.44 = 263337.44
+6. Samsung TV: units_sold=14, total_revenue=9120.44 → sum=14 + 9120.44 = 9134.44
+7. Notebook: units_sold=227, total_revenue=38485.58 → sum=227 + 38485.58 = 38712.58
+8. Lavatrice LG: units_sold=512, total_revenue=492922.88 → sum=512 + 492922.88 = 493434.88
+9. Frigorifero Bosch: units_sold=776, total_revenue=69777.92 → sum=776 + 69777.92 = 70553.92
+10. Batterie Duracell: units_sold=407, total_revenue=481997.89 → sum=407 + 481997.89 = 482404.89
+11. Orologio Casio: units_sold=880, total_revenue=815592.8 → sum=880 + 815592.8 = 816472.8
+12. AirPods: units_sold=804, total_revenue=192043.44 → sum=804 + 192043.44 = 192847.44
+13. Mouse Logitech: units_sold=402, total_revenue=2862.24 → sum=402 + 2862.24 = 3264.24
+14. Tastiera Apple: units_sold=216, total_revenue=211388.4 → sum=216 + 211388.4 = 211604.4
+15. Zaino Eastpak: units_sold=24, total_revenue=20361.12 → sum=24 + 20361.12 = 20385.12
+16. Scarpe Nike: units_sold=867, total_revenue=758572.98 → sum=867 + 758572.98 = 759439.98
+17. Giacca Zara: units_sold=563, total_revenue=521135.32 → sum=563 + 521135.32 = 521698.32
+18. T-shirt H&M: units_sold=901, total_revenue=80477.32 → sum=901 + 80477.32 = 81378.32
+19. Cuffie Sony: units_sold=470, total_revenue=202325.6 → sum=470 + 202325.6 = 202795.6
+20. Tablet Lenovo: units_sold=700, total_revenue=97636.0 → sum=700 + 97636.0 = 98336.0
+21. Fotocamera Canon: units_sold=584, total_revenue=604901.36 → sum=584 + 604901.36 = 605485.36
+22. Borsa Prada: units_sold=873, total_revenue=653134.95 → sum=873 + 653134.95 = 654007.95
+23. Occhiali RayBan: units_sold=752, total_revenue=298852.32 → sum=752 + 298852.32 = 299604.32
+24. Birra Heineken: units_sold=250, total_revenue=19185.0 → sum=250 + 19185.0 = 19435.0
+25. Caffè Lavazza: units_sold=573, total_revenue=214026.96 → sum=573 + 214026.96 = 214599.96
+26. Stampante HP: units_sold=105, total_revenue=41008.8 → sum=105 + 41008.8 = 41113.8
+27. Router TP-Link: units_sold=909, total_revenue=795974.94 → sum=909 + 795974.94 = 796883.94
+28. Monitor Samsung: units_sold=743, total_revenue=568580.75 → sum=743 + 568580.75 = 569323.75
+29. USB Kingston: units_sold=494, total_revenue=525966.74 → sum=494 + 525966.74 = 526460.74
+30. Peluche IKEA: units_sold=416, total_revenue=235838.72 → sum=416 + 235838.72 = 236254.72
+
+Now, I'll list all the sums:
+
+1. Pasta Barilla: 290921.84
+2. iPhone 13: 311285.96
+3. Penna BIC: 468913.47
+4. Laptop Dell: 279988.36
+5. Coca Cola: 263337.44
+6. Samsung TV: 9134.44
+7. Notebook: 38712.58
+8. Lavatrice LG: 493434.88
+9. Frigorifero Bosch: 70553.92
+10. Batterie Duracell: 482404.89
+11. Orologio Casio: 816472.8
+12. AirPods: 192847.44
+13. Mouse Logitech: 3264.24
+14. Tastiera Apple: 211604.4
+15. Zaino Eastpak: 20385.12
+16. Scarpe Nike: 759439.98
+17. Giacca Zara: 521698.32
+18. T-shirt H&M: 81378.32
+19. Cuffie Sony: 202795.6
+20. Tablet Lenovo: 98336.0
+21. Fotocamera Canon: 605485.36
+22. Borsa Prada: 654007.95
+23. Occhiali RayBan: 299604.32
+24. Birra Heineken: 19435.0
+25. Caffè Lavazza: 214599.96
+26. Stampante HP: 41113.8
+27. Router TP-Link: 796883.94
+28. Monitor Samsung: 569323.75
+29. USB Kingston: 526460.74
+30. Peluche IKEA: 236254.72
+
+Next, I'll sort these sums in ascending order:
+
+1. Mouse Logitech: 3264.24
+2. Samsung TV: 9134.44
+3. Zaino Eastpak: 20385.12
+4. Notebook: 38712.58
+5. Frigorifero Bosch: 70553.92
+6. Tablet Lenovo: 98336.0
+7. Birra Heineken: 19435.",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_numerical_simple.sqlite,products,ORDERBY-ADVANCED,"Compute the sum of the columns category, units_sold, total_revenue for each row in `products`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['0', 'Pasta Barilla', 'Food', 466.72, 622, 290299.84, 'Yes', 290921.84], ['10', 'Orologio Casio', 'Accessories', 926.81, 880, 815592.8, 'Yes', 816472.8], ['15', 'Scarpe Nike', 'Clothing', 874.94, 867, 758572.98, 'Yes', 759439.98], ['21', 'Borsa Prada', 'Accessories', 748.15, 873, 653134.95, 'Yes', 653907.95], ['7', 'Lavatrice LG', 'Electronics', 962.74, 512, 492922.88, 'Yes', 493434.88]]",SELECT * FROM `products` ORDER BY `category` + `units_sold` + `total_revenue` DESC LIMIT 5,0,,0.0,0.286,0.345,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,products,ORDERBY-PROJECT,Select only the column `category` from `products`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Accessories'], ['Clothing'], ['Electronics'], ['Food'], ['Stationery']]",SELECT `category` FROM `products` ORDER BY `category` ASC LIMIT 5,0,,0.0,0.4,1.0,0.0,1.0,0.5,1.0
+data/db_numerical_simple.sqlite,products,ORDERBY-PROJECT,Select only the column `category` from `products`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Electronics'], ['Food'], ['Clothing'], ['Accessories'], ['Stationery']]",SELECT `category` FROM `products` ORDER BY `category` DESC LIMIT 5,0,,0.0,0.4,0.667,0.0,1.0,0.0,0.0
+data/db_numerical_simple.sqlite,products,ORDERBY-PROJECT,Select only the column `price` from `products`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['7.12'], ['76.74'], ['89.32'], ['89.92'], ['118.12']]",SELECT `price` FROM `products` ORDER BY `price` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,products,ORDERBY-PROJECT,Select only the column `price` from `products`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1184.27], [1064.71], [994.57], [978.65], [962.74]]",SELECT `price` FROM `products` ORDER BY `price` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,products,ORDERBY-PROJECT,Select only the column `units_sold` from `products`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['7.12'], ['14'], ['24'], ['76.74'], ['105']]",SELECT `units_sold` FROM `products` ORDER BY `units_sold` ASC LIMIT 5,0,,0.0,0.6,0.6,0.0,1.0,0.6,0.25
+data/db_numerical_simple.sqlite,products,ORDERBY-PROJECT,Select only the column `units_sold` from `products`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['952'], ['901'], ['880'], ['873'], ['867']]",SELECT `units_sold` FROM `products` ORDER BY `units_sold` DESC LIMIT 5,0,,0.0,0.8,0.8,0.0,1.0,0.8,1.0
+data/db_numerical_simple.sqlite,products,ORDERBY-PROJECT,Select only the column `total_revenue` from `products`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[19185.0], [38485.58], [69777.92], [91200.0], [9120.44]]",SELECT `total_revenue` FROM `products` ORDER BY `total_revenue` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,products,ORDERBY-PROJECT,Select only the column `total_revenue` from `products`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['815592.8'], ['758572.98'], ['653134.95'], ['604901.36'], ['568580.75']]",SELECT `total_revenue` FROM `products` ORDER BY `total_revenue` DESC LIMIT 5,0,,0.0,0.2,0.2,0.0,1.0,0.2,1.0
+data/db_numerical_simple.sqlite,products,ORDERBY-PROJECT,Select only the column `is_top_seller` from `products`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['No'], ['No'], ['Yes'], ['Yes'], ['Yes']]",SELECT `is_top_seller` FROM `products` ORDER BY `is_top_seller` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,products,ORDERBY-PROJECT,Select only the column `is_top_seller` from `products`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Yes'], ['Yes'], ['Yes'], ['Yes'], ['Yes']]",SELECT `is_top_seller` FROM `products` ORDER BY `is_top_seller` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-SINGLE,"List the top 5 rows from the table `student_performance`, sorted by the column `average_score` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[12, 'Student_12', 31, 56, 43.5, 'No'], [15, 'Student_15', 62, 30, 46.0, 'No'], [7, 'Student_7', 40, 54, 47.0, 'No'], [14, 'Student_14', 42, 53, 47.5, 'No'], [9, 'Student_9', 52, 42, 47.0, 'No']]",SELECT * FROM `student_performance` ORDER BY `average_score` ASC LIMIT 5,0,,0.0,0.667,0.667,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-SINGLE,"List the top 5 rows from the table `student_performance`, sorted by the column `average_score` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[22, 'Student_22', 98, 94, 96.0, 'Yes'], [16, 'Student_16', 90, 92, 91.0, 'Yes'], [23, 'Student_23', 85, 87, 86.0, 'Yes'], [1, 'Student_1', 82, 85, 83.5, 'Yes'], [7, 'Student_7', 76, 84, 80.0, 'Yes']]",SELECT * FROM `student_performance` ORDER BY `average_score` DESC LIMIT 5,0,,0.0,0.84,0.84,0.0,1.0,0.4,1.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-SINGLE,"List the top 5 rows from the table `student_performance`, sorted by the column `english_score` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[5, 'Student_6', 37, 75, 56.0, 'Yes'], [9, 'Student_10', 52, 42, 47.0, 'No'], [12, 'Student_13', 31, 56, 43.5, 'No'], [14, 'Student_15', 42, 53, 47.5, 'No'], [21, 'Student_22', 60, 41, 50.5, 'Yes']]",SELECT * FROM `student_performance` ORDER BY `english_score` ASC LIMIT 5,0,,0.0,0.4,0.4,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-SINGLE,"List the top 5 rows from the table `student_performance`, sorted by the column `english_score` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[22, 'Student_22', 98, 94, 96.0, 'Yes'], [24, 'Student_24', 97, 46, 71.5, 'Yes'], [1, 'Student_2', 48, 93, 70.5, 'Yes'], [16, 'Student_16', 90, 92, 91.0, 'Yes'], [0, 'Student_1', 82, 85, 83.5, 'Yes']]",SELECT * FROM `student_performance` ORDER BY `english_score` DESC LIMIT 5,0,,0.0,0.692,0.72,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-SINGLE,"List the top 5 rows from the table `student_performance`, sorted by the column `math_score` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[12, 'Student_13', 31, 56, 43.5, 'No'], [5, 'Student_6', 37, 75, 56.0, 'Yes'], [7, 'Student_8', 40, 54, 47.0, 'No'], [14, 'Student_15', 42, 53, 47.5, 'No'], [11, 'Student_12', 47, 60, 53.5, 'Yes']]",SELECT * FROM `student_performance` ORDER BY `math_score` ASC LIMIT 5,0,,0.0,0.84,0.84,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-SINGLE,"List the top 5 rows from the table `student_performance`, sorted by the column `math_score` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[22, 'Student_22', 98, 94, 96.0, 'Yes'], [24, 'Student_24', 97, 46, 71.5, 'Yes'], [16, 'Student_16', 90, 92, 91.0, 'Yes'], [17, 'Student_17', 78, 69, 73.5, 'Yes'], [23, 'Student_23', 85, 87, 86.0, 'Yes']]",SELECT * FROM `student_performance` ORDER BY `math_score` DESC LIMIT 5,0,,0.0,0.731,0.76,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-SINGLE,"List the top 5 rows from the table `student_performance`, sorted by the column `id` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 'Student_1', 82, 85, 83.5, 'Yes'], [2, 'Student_2', 48, 93, 70.5, 'Yes'], [3, 'Student_3', 52, 58, 55.0, 'Yes'], [4, 'Student_4', 62, 83, 72.5, 'Yes'], [5, 'Student_5', 51, 52, 51.5, 'Yes']]",SELECT * FROM `student_performance` ORDER BY `id` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-SINGLE,"List the top 5 rows from the table `student_performance`, sorted by the column `id` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[25, 'Student_25', 97, 46, 71.5, 'Yes'], [24, 'Student_24', 85, 87, 86.0, 'Yes'], [23, 'Student_23', 98, 94, 96.0, 'Yes'], [22, 'Student_22', 60, 41, 50.5, 'Yes'], [21, 'Student_21', 49, 55, 52.0, 'Yes']]",SELECT * FROM `student_performance` ORDER BY `id` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-ADVANCED,"Compute the sum of the columns student_name, math_score, pass_status for each row in `student_performance`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Student_12', 31, 'No'], ['Student_15', 30, 'No'], ['Student_21', 41, 'Yes'], ['Student_14', 42, 'No'], ['Student_5', 37, 'Yes']]",SELECT * FROM `student_performance` ORDER BY `student_name` + `math_score` + `pass_status` ASC LIMIT 5,0,,0.0,0.583,0.28,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-ADVANCED,"Compute the sum of the columns student_name, math_score, pass_status for each row in `student_performance`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[23, 'Student_23', 98, 'Yes', 99], [24, 'Student_24', 97, 'Yes', 98], [17, 'Student_17', 90, 'Yes', 91], [23, 'Student_23', 85, 'Yes', 86], [19, 'Student_19', 84, 'Yes', 85]]",SELECT * FROM `student_performance` ORDER BY `student_name` + `math_score` + `pass_status` DESC LIMIT 5,0,,0.0,0.765,0.52,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-ADVANCED,"Compute the sum of the columns student_name, math_score, average_score for each row in `student_performance`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,[],SELECT * FROM `student_performance` ORDER BY `student_name` + `math_score` + `average_score` ASC LIMIT 5,3,"<think>
+Alright, so I need to figure out how to compute the sum of the columns student_name, math_score, and average_score for each row in the student_performance dataset. Then, I have to sort all the rows based on this sum in ascending order and return the first 5 rows. 
+
+First, I realize that adding student_name, which is a string, to numerical scores doesn't make sense mathematically. But since the instruction says to compute the sum, I have to find a way to handle this. Maybe I can convert the student_name into a numerical representation. One common method is to use the ASCII values of the characters. So, for each character in the student_name, I'll calculate its ASCII value and sum them up. Then, I'll add this sum to the math_score and average_score.
+
+Looking at the dataset, I see that each student_name is in the format ""Student_X"", where X is a number from 1 to 25. The length of each student_name is consistent, so the number of characters is the same for each. However, the numbers at the end vary, which will affect the ASCII sum. For example, ""Student_1"" has an underscore and a '1', while ""Student_10"" has two digits. I need to make sure I account for all characters, including the underscore and any digits.
+
+Next, I'll go through each row and calculate the sum. Let's take the first row as an example. The student_name is ""Student_1"". The ASCII values for 'S' is 83, 't' is 116, 'u' is 117, 'd' is 100, 'e' is 101, 'n' is 110, 't' is 116, '_' is 95, and '1' is 49. Adding these up: 83 + 116 + 117 + 100 + 101 + 110 + 116 + 95 + 49. Let me calculate that: 83+116=199, +117=316, +100=416, +101=517, +110=627, +116=743, +95=838, +49=887. So the sum for student_name is 887. Then, add math_score (82) and average_score (83.5). Total sum = 887 + 82 + 83.5 = 1052.5.
+
+I'll repeat this process for each row. However, this is time-consuming. Maybe there's a pattern or a simpler way. Since all student_names start with ""Student_"", which has a fixed ASCII sum, the variable part is the number at the end. For example, ""Student_1"" has '1' which is 49, ""Student_2"" has '2' which is 50, and so on. But wait, for numbers 10 and above, there are two digits, so their ASCII sum will be higher. For instance, ""Student_10"" has '1' (49) and '0' (48), adding 97 to the base sum of ""Student_"" which is 83+116+117+100+101+110+116+95 = 838. So ""Student_10"" would be 838 + 49 + 48 = 935.
+
+Wait, but in my initial calculation for ""Student_1"", I included the underscore and the '1', so the base ""Student_"" sum is 838, and then adding the number's ASCII. So for each student_name, the sum is 838 plus the sum of the ASCII values of the digits in their number.
+
+This realization simplifies the calculation. I can compute the base sum once and then add the sum of the digits' ASCII values. For single-digit numbers (1-9), it's just one character, and for 10-25, it's two characters.
+
+Now, I'll compute the sum for each row:
+
+1. Student_1: 838 + 49 (for '1') = 887. Total sum = 887 + 82 + 83.5 = 1052.5
+2. Student_2: 838 + 50 = 888. Total sum = 888 + 48 + 70.5 = 1006.5
+3. Student_3: 838 + 51 = 889. Total sum = 889 + 52 + 55 = 996
+4. Student_4: 838 + 52 = 890. Total sum = 890 + 62 + 72.5 = 1024.5
+5. Student_5: 838 + 53 = 891. Total sum = 891 + 51 + 51.5 = 993.5
+6. Student_6: 838 + 54 = 892. Total sum = 892 + 37 + 56 = 985
+7. Student_7: 838 + 55 = 893. Total sum = 893 + 76 + 80 = 1049
+8. Student_8: 838 + 56 = 894. Total sum = 894 + 40 + 47 = 981
+9. Student_9: 838 + 57 = 895. Total sum = 895 + 57 + 56 = 998
+10. Student_10: 838 + 49 + 48 = 935. Total sum = 935 + 92 + 62 = 1089
+11. Student_11: 838 + 49 + 49 = 936. Total sum = 936 + 47 + 53.5 = 1036.5
+12. Student_12: 838 + 49 + 50 = 937. Total sum = 937 + 31 + 43.5 = 1011.5
+13. Student_13: 838 + 49 + 51 = 938. Total sum = 938 + 81 + 78.5 = 1097.5
+14. Student_14: 838 + 49 + 52 = 939. Total sum = 939 + 42 + 47.5 = 1028.5
+15. Student_15: 838 + 49 + 53 = 940. Total sum = 940 + 62 + 46 = 1048
+16. Student_16: 838 + 49 + 54 = 941. Total sum = 941 + 90 + 91 = 1122
+17. Student_17: 838 + 49 + 55 = 942. Total sum = 942 + 78 + 73.5 = 1093.5
+18. Student_18: 838 + 49 + 56 = 943. Total sum = 943 + 84 + 79.5 = 1106.5
+19. Student_19: 838 + 49 + 57 = 944. Total sum = 944 + 51 + 58 = 1053
+20. Student_20: 838 + 49 + 58 = 945. Total sum = 945 + 49 + 52 = 1046
+21. Student_21: 838 + 49 + 59 = 946. Total sum = 946 + 60 + 50.5 = 1056.5
+22. Student_22: 838 + 49 + 50 = 937. Total sum = 937 + 98 + 96 = 2031
+23. Student_23: 838 + 49 + 51 = 938. Total sum = 938 + 85 + 86 = 2009
+24. Student_24: 838 + 49 + 52 = 939. Total sum = 939 + 97 + 71.5 = 2007.5
+25. Student_25: 838 + 49 + 53 = 940. Total sum = 940 + 46 + ... Wait, looking back, the last entry is student 25, but in the dataset, the average_score for id 24 is 71.5, and math_score is 97. So for Student_25, the math_score is 97, average_score is 71.5. So total sum = 940 + 97 + 71.5 = 1108.5.
+
+Wait, I think I made a mistake here. The dataset has 25 students, from id 0 to 24, so student 25 is actually id 24. So the last row is student 25 with math_score 97 and average_score 71.5. So the sum is 940 (from student_name) + 97 + 71.5 = 1108.5.
+
+Now, I need to list all these total sums and sort them in ascending order. Then pick the first 5 rows.
+
+Let me list them out:
+
+1. 1052.5
+2. 1006.5
+3. 996
+4. 1024.5
+5. 993.5
+6. 985
+7. 1049
+8. 981
+9. 998
+10. 1089
+11. 1036.5
+12. 1011.5
+13. 1097.5
+14. 1028.5
+15. 1048
+16. 1122
+17. 1093.5
+18. 1106.5
+19. 1053
+20. 1046
+21. 1056.5
+22. 2031
+23. 2009
+24. 2007.5
+25. 1108.5
+
+Now, sorting these",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-ADVANCED,"Compute the sum of the columns student_name, math_score, average_score for each row in `student_performance`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Student_23', 98, 96.0, 194.0], ['Student_24', 85, 86.0, 171.0], ['Student_25', 97, 71.5, 168.5], ['Student_1', 82, 83.5, 165.5], ['Student_19', 84, 79.5, 163.5]]",SELECT * FROM `student_performance` ORDER BY `student_name` + `math_score` + `average_score` DESC LIMIT 5,0,,0.0,0.6,0.48,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-ADVANCED,"Compute the sum of the columns student_name, average_score, pass_status for each row in `student_performance`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[12, 'Student_13', 31, 56, 43.5, 'No'], [15, 'Student_16', 30, 62, 46.0, 'No'], [21, 'Student_22', 41, 60, 50.5, 'Yes'], [9, 'Student_10', 42, 52, 47.0, 'No'], [14, 'Student_15', 53, 42, 47.5, 'No']]",SELECT * FROM `student_performance` ORDER BY `student_name` + `average_score` + `pass_status` ASC LIMIT 5,0,,0.0,0.654,0.708,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-ADVANCED,"Compute the sum of the columns student_name, average_score, pass_status for each row in `student_performance`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Student_23', 96.0, 'Yes'], ['Student_17', 91.0, 'Yes'], ['Student_19', 79.5, 'Yes'], ['Student_14', 78.5, 'No'], ['Student_18', 79.5, 'Yes']]",SELECT * FROM `student_performance` ORDER BY `student_name` + `average_score` + `pass_status` DESC LIMIT 5,0,,0.0,0.455,0.2,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-ADVANCED,"Compute the sum of the columns english_score, pass_status for each row in `student_performance`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[12, 'Student_13', 31, 56, 43.5, 'No'], [9, 'Student_10', 52, 42, 47.0, 'No'], [15, 'Student_16', 30, 53, 46.0, 'No'], [14, 'Student_15', 42, 53, 47.5, 'No'], [5, 'Student_6', 37, 75, 56.0, 'Yes']]",SELECT * FROM `student_performance` ORDER BY `english_score` + `pass_status` ASC LIMIT 5,0,,0.0,0.375,0.36,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-ADVANCED,"Compute the sum of the columns english_score, pass_status for each row in `student_performance`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[22, 'Student_22', 98, 94, 96.0, 'Yes', 95], [2, 'Student_2', 48, 93, 70.5, 'Yes', 94], [16, 'Student_16', 90, 92, 91.0, 'Yes', 93], [23, 'Student_23', 85, 87, 86.0, 'Yes', 88], [1, 'Student_1', 82, 85, 83.5, 'Yes', 86]]",SELECT * FROM `student_performance` ORDER BY `english_score` + `pass_status` DESC LIMIT 5,0,,0.0,0.778,0.84,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-ADVANCED,"Compute the sum of the columns id, average_score, pass_status for each row in `student_performance`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 83.5, 'Yes', 85.5], [2, 70.5, 'Yes', 73.5], [3, 72.5, 'Yes', 76.5], [4, 51.5, 'Yes', 56.5], [5, 56.0, 'Yes', 61.0]]",SELECT * FROM `student_performance` ORDER BY `id` + `average_score` + `pass_status` ASC LIMIT 5,0,,0.0,0.312,0.208,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-ADVANCED,"Compute the sum of the columns id, average_score, pass_status for each row in `student_performance`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[22, 96.0, 'Yes'], [23, 86.0, 'Yes'], [16, 91.0, 'Yes'], [18, 79.5, 'Yes'], [25, 71.5, 'Yes']]",SELECT * FROM `student_performance` ORDER BY `id` + `average_score` + `pass_status` DESC LIMIT 5,1,,0.0,0.727,0.308,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-PROJECT,Select only the column `english_score` from `student_performance`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[30], [32], [41], [42], [46]]",SELECT `english_score` FROM `student_performance` ORDER BY `english_score` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-PROJECT,Select only the column `english_score` from `student_performance`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[98], [94], [93], [92], [87]]",SELECT `english_score` FROM `student_performance` ORDER BY `english_score` DESC LIMIT 5,1,,0.0,0.8,0.8,0.0,1.0,0.8,1.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-PROJECT,Select only the column `id` from `student_performance`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1], [2], [3], [4], [5]]",SELECT `id` FROM `student_performance` ORDER BY `id` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-PROJECT,Select only the column `id` from `student_performance`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[25], [24], [23], [22], [21]]",SELECT `id` FROM `student_performance` ORDER BY `id` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-PROJECT,Select only the column `average_score` from `student_performance`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[43.5], [46.0], [47.0], [47.0], [47.5]]",SELECT `average_score` FROM `student_performance` ORDER BY `average_score` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-PROJECT,Select only the column `average_score` from `student_performance`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[96.0], [91.0], [86.0], [85.0], [83.5]]",SELECT `average_score` FROM `student_performance` ORDER BY `average_score` DESC LIMIT 5,0,,0.0,0.8,0.8,0.0,1.0,0.8,1.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-PROJECT,Select only the column `pass_status` from `student_performance`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['No'], ['No'], ['No'], ['No'], ['No']]",SELECT `pass_status` FROM `student_performance` ORDER BY `pass_status` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-PROJECT,Select only the column `pass_status` from `student_performance`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Yes'], ['Yes'], ['Yes'], ['Yes'], ['Yes']]",SELECT `pass_status` FROM `student_performance` ORDER BY `pass_status` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-PROJECT,Select only the column `student_name` from `student_performance`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Student_1'], ['Student_2'], ['Student_3'], ['Student_4'], ['Student_5']]",SELECT `student_name` FROM `student_performance` ORDER BY `student_name` ASC LIMIT 5,0,,0.0,0.2,0.2,0.0,1.0,0.2,1.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-PROJECT,Select only the column `student_name` from `student_performance`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Student_25'], ['Student_24'], ['Student_23'], ['Student_22'], ['Student_21']]",SELECT `student_name` FROM `student_performance` ORDER BY `student_name` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5

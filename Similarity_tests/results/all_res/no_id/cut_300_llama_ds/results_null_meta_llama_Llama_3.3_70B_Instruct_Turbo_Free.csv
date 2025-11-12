@@ -1,0 +1,1043 @@
+csv_path,test_language,test_category,ground_truth,nl_query,test_id,exec_type,model,processing_timestamp,success,error,predicted_ids,predicted_ids_str,raw_response,dataset_shape,retry_count,precision,recall,f1,accuracy,intersection_size,ground_truth_size,predicted_size,is_negative_query,ndcg_10,precision_5,precision_10,spearman_correlation,diversity_score,genre_opposition_rate_5,genre_opposition_rate_10
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0457655|tt0964185|tt0413893|tt0414055|tt0455590|tt0216216|tt0428870|tt0960790|tt0335119|tt0337876,Recommendations based on 'Twilight',0,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 00:28:26,True,,"['tt1234567', 'tt2345678', 'tt3456789', 'tt4567890', 'tt5678901', 'tt6789012', 'tt7890123', 'tt8901234', 'tt9012345', 'tt0123456']",tt1234567|tt2345678|tt3456789|tt4567890|tt5678901|tt6789012|tt7890123|tt8901234|tt9012345|tt0123456,"To provide recommendations based on 'Twilight', I'll analyze the dataset focusing on similar genres, themes, or characteristics. 'Twilight' is categorized as Drama, Fantasy, and Romance. Given the dataset doesn't contain IMDB IDs (tt codes) but rather null values for ""IMDB_id"", I will refer to the movies by their titles in the analysis. However, since the instruction requires the response to be in a specific format with ""tt"" codes, and the actual ""tt"" codes are not provided in the dataset, I wil",30x10,0,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt1020558|tt0104231|tt0216216|tt0960790|tt0337876|tt1196956|tt1038686|tt0257756|tt0457655|tt0816692,"Ho amato 'The Legend of Tarzan', raccomandami qualcosa di simile",1,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 00:28:37,True,,"['tt01200000', 'tt01234567', 'tt0444444']",tt01200000|tt01234567|tt0444444,"Per trovare film simili a ""The Legend of Tarzan"", analizzerò i generi, gli anni di uscita e le valutazioni dei film nel dataset. ""The Legend of Tarzan"" è un film del 2016 di genere Action, Adventure e Drama.
+
+Ecco le raccomandazioni:
+
+- ""Centurion"" (2010) - Action, Drama, History
+- ""Rosewood"" (1997) - Action, Drama, History
+- ""Far and Away"" (1992) - Adventure, Drama, Romance
+- ""Elizabeth: The Golden Age"" (2007) - Biography, Drama, History
+- ""Four Days in September"" (1997) - Action, Drama, Histor",30x10,0,0.0,0.0,0.0,0.0,0,10,3,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt11327514|tt1099212|tt1038686|tt0457655|tt0816692|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893,"'A Bittersweet Life' wasn't for me, what else can I watch?",2,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 00:28:46,True,,[],,"Since 'A Bittersweet Life' is an Action|Crime|Drama movie, I will recommend movies with similar genres. Here are 10 movie recommendations:
+
+After the Wedding|The Last King of Scotland|Four Days in September|Centurion|Rosewood|Man on the Train|High Crimes|The Child|Dancer in the Dark|Girl with a Pearl Earring 
+
+Note: Since there are no IMDB_ids in the provided dataset, I used the movie titles instead. If the actual IMDB_ids were available, I would have used those.",30x10,2,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt11327514|tt0816692|tt0428870|tt0168629|tt0457655|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893,"'The 6th Day' from 2000 disappointed me, what to watch instead?",3,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 00:30:53,True,,[],,"To find alternative movies to ""The 6th Day"" from 2000, which disappointed the user, we need to analyze its genres and characteristics. ""The 6th Day"" is classified as an Action, Mystery, Sci-Fi movie. Given its sci-fi and action elements, we'll look for movies that share similar themes but perhaps execute them better or offer a fresh take, considering the user's disappointment.
+
+Here are the steps and considerations:
+
+1. **Genre Similarity**: Look for movies with similar genres (Action, Mystery, ",30x10,0,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0964185|tt0414055|tt0335119|tt0337876|tt0257756|tt0457655|tt1020558|tt0104231|tt0413893|tt0455590,Suggerisci film simili a 'Rabbit Without Ears',4,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 00:31:13,True,,[],,"To provide movie recommendations similar to ""Rabbit Without Ears,"" we need to analyze the given dataset for movies with similar genres, themes, or characteristics. ""Rabbit Without Ears"" is a 2007 German comedy-romance film. Given the dataset does not contain IMDB IDs (tt codes) but rather detailed information about each movie, we will identify similar movies based on genre and theme, and then provide a list of their titles as a substitute for IDs, since actual IMDB IDs are not available in the d",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0414055|tt0457655|tt0413893|tt0428870|tt0456396|tt0168629|tt0373861|tt0456912|tt0964185|tt0120036,Recommend movies like 'The Last King of Scotland' from 2006,5,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 00:32:22,True,,[],,"To recommend movies like 'The Last King of Scotland' from 2006, we need to analyze the given dataset for similar genres, themes, or characteristics. 'The Last King of Scotland' is a Biography, Drama, History film. Given the dataset does not contain IMDB IDs (tt codes) but rather null values for ""IMDB_id"", I will identify the movies by their titles as per the dataset provided.
+
+Similar movies based on genre (Biography, Drama, History) and considering the year and rating are:
+
+1. Elizabeth: The Go",30x10,0,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt1020558|tt0918940|tt1099212|tt1196956|tt0457655|tt0816692|tt0964185|tt0414055|tt0119815|tt0455590,Action|Fantasy|Horror movies similar to 'Legion',6,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 00:32:49,True,,"['tt0120000', 'tt0230000', 'tt0340000', 'tt0450000', 'tt0560000', 'tt0670000', 'tt0780000', 'tt0890000', 'tt0900000', 'tt1010000']",tt0120000|tt0230000|tt0340000|tt0450000|tt0560000|tt0670000|tt0780000|tt0890000|tt0900000|tt1010000,"To find movies similar to 'Legion' (2010), which is classified as Action|Fantasy|Horror, I will look for movies in the dataset that share similar genres. Since the dataset does not provide IMDB IDs (tt codes) but rather a list of movies with their attributes, I will identify the movies by their titles as a reference point.
+
+Similar movies to 'Legion' based on the Action|Fantasy|Horror genres are:
+
+1. **The 6th Day** (2000) - Action|Mystery|Sci-Fi, shares Action and Sci-Fi elements which can be c",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0337876|tt0257756|tt0457655|tt0964185|tt1020558|tt0413893|tt0414055|tt0455590|tt0918940|tt0428870,Film con stile simile a 'The 6th Day' del 2000,7,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 00:34:05,True,,[],,"Per trovare film con stile simile a 'The 6th Day' del 2000, analizzerò i generi, gli anni e le caratteristiche dei film nel dataset. 'The 6th Day' è un film del 2000 con generi Azione, Mistero e Sci-Fi.
+
+Ecco le raccomandazioni:
+
+Interstellar | Legion | High Crimes | Centurion | The Legend of Tarzan | A Bittersweet Life | Man on the Train | Dancer in the Dark | The 6th Day non ha un ID IMDB nel dataset, quindi cercherò altri film con generi simili | Four Days in September 
+
+Tuttavia, poiché non ",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0964185|tt0414055|tt0960790|tt0301414|tt0456396|tt0373861|tt0257756|tt0457655|tt0119815|tt0455590,Films that remind me of 'Girl with a Pearl Earring',8,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 00:35:03,True,,['tt0123456'],tt0123456,"To find films that remind you of 'Girl with a Pearl Earring', we need to analyze the given dataset for movies with similar genres, themes, or characteristics. 'Girl with a Pearl Earring' is a biography, drama, and romance film. Based on the dataset provided, here are 10 movie recommendations that share similar genres or themes:
+
+1. **After the Wedding** - Drama
+2. **The Last King of Scotland** - Biography, Drama, History
+3. **A Little Princess** - Drama, Family, Fantasy
+4. **The Child** - Crime,",30x10,1,0.0,0.0,0.0,0.0,0,10,1,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0457655|tt0413893|tt0455590|tt0428870|tt0456912|tt0964185|tt0414055|tt0119815|tt0216216|tt1099212,Cerco film del genere di 'Dancer in the Dark',9,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 00:36:04,True,,"['tt000002', 'tt000003', 'tt000004', 'tt000005', 'tt000006', 'tt000007', 'tt000008', 'tt000009', 'tt000010\n\nPlease replace ""tt000001"" through ""tt000010"" with the actual IMDB_ids of the movies if they were available. The movies listed are based on genre similarity, especially focusing on drama and crime, which are central to ""Dancer in the Dark"".']","tt000002|tt000003|tt000004|tt000005|tt000006|tt000007|tt000008|tt000009|tt000010
+
+Please replace ""tt000001"" through ""tt000010"" with the actual IMDB_ids of the movies if they were available. The movies listed are based on genre similarity, especially focusing on drama and crime, which are central to ""Dancer in the Dark"".","To find movies similar to ""Dancer in the Dark"", which is a Crime, Drama, Musical, we'll look for films within the dataset that share similar genres or themes. Since the IMDB_id is null for all movies, we'll identify the movies by their titles and then provide a list of titles that match the criteria. After analyzing the dataset:
+
+1. **Dancer in the Dark** is unique with its musical element, but we can look for other dramas or crime films.
+2. **Birth** (2004) - Drama, Fantasy, Mystery - Shares th",30x10,1,0.0,0.0,0.0,0.0,0,10,9,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt0816692|tt0918940|tt1196956|tt11327514|tt1038686|tt0457655|tt0964185|tt0104231|tt0413893|tt0414055,"'Rosewood' non mi è piaciuto per niente, cosa altro posso guardare?",10,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 00:37:08,True,,[],,"Since 'Rosewood' has a genre of Action|Drama|History and the user did not like it, I will look for movies with different genres. 
+
+Here are 10 movie recommendations with different genres:
+After the Wedding|The Taste of Tea|Only Yesterday|Happy Gilmore|A Little Princess|Uncle Frank|Dancer in the Dark|One Chance|A Moment to Remember|Birth 
+
+However, the provided dataset does not contain IMDB_ids (tt codes) for these movies. If the IMDB_ids were available, the response would be in the format of tt ",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt1020558|tt0918940|tt1099212|tt1196956|tt0457655|tt0816692|tt0964185|tt0414055|tt0119815|tt0455590,"If I liked 'Legion', what should I watch?",11,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 00:38:10,True,,[],,"Based on the provided dataset, since there are no IMDB_ids available, I will provide the titles of the recommended movies instead, separated by |. Here are the recommendations for someone who liked 'Legion':
+
+The Legend of Tarzan | Centurion | Rosewood | Four Days in September | High Crimes | A Bittersweet Life | The 6th Day | Man on the Train | Dancer in the Dark | Interstellar 
+
+Note: These recommendations are based on similar genres such as Action, Fantasy, and Drama, which are present in 'Le",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0457655|tt0413893|tt0455590|tt0168629|tt0964185|tt0414055|tt0113670|tt0216216|tt1099212|tt0960790,"Se mi è piaciuto 'A Moment to Remember', cosa dovrei guardare?",12,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 00:39:07,True,,[],,"Sfortunatamente, non ci sono ID IMDB disponibili nel dataset. Tuttavia, posso fornire una lista di titoli di film che potrebbero essere di tuo interesse in base alle caratteristiche di ""A Moment to Remember"".
+
+Ecco 10 raccomandazioni di film con generi simili (Drama, Romance):
+
+After the Wedding | The Last King of Scotland | The Child | Dancer in the Dark | One Chance | Uncle Frank | A Little Princess | Only Yesterday | Birth | Girl with a Pearl Earring
+
+Nota che queste raccomandazioni sono basa",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0119815|tt0102587|tt0457655|tt0964185|tt1020558|tt0104231|tt0413893|tt0414055|tt0455590|tt0113670,Movies with similar style to 'Rosewood' from 1997,13,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 00:40:06,True,,[],,"To find movies with a similar style to 'Rosewood' from 1997, we need to analyze the genres, themes, and characteristics of 'Rosewood' and then find movies in the dataset that match these criteria.
+
+'Rosewood' is classified as an Action, Drama, History movie. Given this, we'll look for movies in the dataset that share similar genres and possibly themes related to historical drama or action-drama.
+
+Here are the steps and reasoning:
+
+1. **Genre Matching**: First, we look for movies that match the g",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0457655|tt0414055|tt0335119|tt0456396|tt0373861|tt0456912|tt0964185|tt0413893|tt0119815|tt0455590,Trova film simili a 'Man on the Train',14,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 00:41:07,True,,[],,"To find movies similar to 'Man on the Train', I'll analyze the dataset based on genres, themes, and characteristics. 'Man on the Train' is a Crime, Drama, Thriller film. Here are the steps and reasoning for the recommendations:
+
+1. **Genre Matching**: First, I'll look for movies that match the genres of 'Man on the Train', which are Crime, Drama, and Thriller.
+2. **Theme and Characteristic Matching**: Since specific themes and characteristics of 'Man on the Train' are not detailed in the dataset",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt11327514|tt0216216|tt1099212|tt1038686|tt0457655|tt0816692|tt0964185|tt1020558|tt0104231|tt0120036,"'A Moment to Remember' was terrible, recommend the opposite",15,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 00:42:32,True,,"['tt0123456', 'tt0784444', 'tt0123457', 'tt0123458', 'tt0123459', 'tt0123460', 'tt0123461', 'tt0123462', 'tt0123463', 'tt0123464']",tt0123456|tt0784444|tt0123457|tt0123458|tt0123459|tt0123460|tt0123461|tt0123462|tt0123463|tt0123464,"To find the opposite of 'A Moment to Remember', we need to analyze its characteristics and find movies that are different in terms of genre, theme, and style. 'A Moment to Remember' is a Drama/Romance film with a high AVG_score of 8.1, released in 2004.
+
+Opposite characteristics of 'A Moment to Remember' would be:
+- Different genre: Instead of Drama/Romance, we can look for Action, Comedy, or Sci-Fi films.
+- Lower AVG_score: Since 'A Moment to Remember' has a high AVG_score, we can look for film",30x10,0,0.0,0.0,0.0,0.0,0,10,10,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt11327514|tt0216216|tt1099212|tt1038686|tt0457655|tt0816692|tt0964185|tt1020558|tt0104231|tt0120036,"'A Moment to Remember' non mi è piaciuto per niente, cosa altro posso guardare?",16,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 00:43:02,True,,[],,"Per trovare dei film che siano diversi da ""A Moment to Remember"", analizzerò i generi e le caratteristiche dei film nel dataset. ""A Moment to Remember"" è un film del 2004, genere Drama/Romance, con un punteggio medio di 8.1.
+
+Ecco 10 film che potrebbero essere considerati diversi da ""A Moment to Remember"" in base ai generi e alle caratteristiche:
+
+Non essendo presenti gli ID IMDB nel dataset, non posso fornire i codici tt richiesti. Tuttavia, posso elencare i titoli dei film che potrebbero esser",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt11327514|tt0457655|tt0816692|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893|tt0119815|tt0918940,"'Elizabeth: The Golden Age' disgusted me, recommend something different",17,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 00:44:16,True,,[],,"To provide recommendations that are different from ""Elizabeth: The Golden Age"", I'll analyze the given dataset and look for movies that diverge in genre, theme, or style from this film, which is a Biography, Drama, and History movie. Since the IMDB IDs are null in the dataset, I will refer to the movies by their titles in the analysis and then provide a list of titles as a substitute for the IDs, separated by ""|"", as per the requested format.
+
+""Elizabeth: The Golden Age"" is characterized by its ",30x10,0,0.0,0.0,0.0,0.0,0,10,0,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0119815|tt0120885|tt0102587|tt0457655|tt0120036|tt0455590|tt0428870|tt0301414|tt0456396|tt11327514,"Se mi è piaciuto 'A Little Princess', cosa dovrei guardare?",18,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 00:44:49,True,,[],,"Sfortunatamente, non ci sono ID IMDB disponibili per i film nel dataset. Tuttavia, posso fornire una lista di titoli di film che potrebbero essere di tuo interesse in base alle caratteristiche di ""A Little Princess"".
+
+Ecco 10 raccomandazioni di film con generi simili (Drama, Family, Fantasy):
+After the Wedding | The Taste of Tea | Only Yesterday | The Story of the Weeping Camel | The Child | Dancer in the Dark | One Chance | Uncle Frank | Birth | Girl with a Pearl Earring
+
+Nota che queste raccom",30x10,2,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0119815|tt0120885|tt0102587|tt0457655|tt0120036|tt0455590|tt0428870|tt0301414|tt0456396|tt11327514,Film con stile simile a 'A Little Princess' del 1995,19,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 00:46:37,True,,[],,"Per trovare film con stile simile a 'A Little Princess' del 1995, analizzerò i generi, gli anni di uscita e le valutazioni dei film nel dataset. 'A Little Princess' è un film del 1995 di genere Drama, Family e Fantasy.
+
+Ecco le raccomandazioni:
+
+- 'Only Yesterday' (1991) - Anche questo film ha elementi di drama e romance, sebbene sia un'animazione.
+- 'The Taste of Tea' (2004) - Ha elementi di comedy e fantasy, che potrebbero interessare gli amanti di 'A Little Princess'.
+- 'Girl with a Pearl Ear",30x10,0,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt0816692|tt0918940|tt1196956|tt11327514|tt1038686|tt0457655|tt0964185|tt0104231|tt0413893|tt0414055,"Detesto film come 'Rosewood', suggerisci qualcosa di completamente diverso",20,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 00:46:47,True,,[],,"Dato che non ci sono codici IMDB nel dataset, utilizzerò i titoli dei film per fornire le raccomandazioni. 
+
+Per trovare film ""completamente diversi"" da 'Rosewood', che è un film del 1997 di genere Action|Drama|History, cercherò film con generi, temi o caratteristiche molto differenti.
+
+Ecco le raccomandazioni:
+After the Wedding|The Taste of Tea|Only Yesterday|Happy Gilmore|A Little Princess|Uncle Frank|Dancer in the Dark|A Moment to Remember|The Story of the Weeping Camel|Birth
+
+Nota che queste",30x10,2,0.0,0.0,0.0,0.0,0,10,0,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0120036|tt1020558|tt0113670|tt0120885|tt0102587|tt0116483|tt0457655|tt0104231|tt0455590|tt0301414,Other movies like 'Four Days in September' (1997),21,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 00:48:35,True,,"['tt002', 'tt003', 'tt004', 'tt005', 'tt006', 'tt007', 'tt008', 'tt009', 'tt010']",tt002|tt003|tt004|tt005|tt006|tt007|tt008|tt009|tt010,"To find movies similar to ""Four Days in September"" (1997), we need to analyze its characteristics. ""Four Days in September"" is an Action, Drama, History film. Based on the dataset provided, here are 10 movie recommendations that share similar genres or themes:
+
+1. ""Rosewood"" (1997) - Action, Drama, History
+2. ""Centurion"" (2010) - Action, Drama, History
+3. ""Elizabeth: The Golden Age"" (2007) - Biography, Drama, History
+4. ""The Last King of Scotland"" (2006) - Biography, Drama, History
+5. ""Wag the D",30x10,0,0.0,0.0,0.0,0.0,0,10,9,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0457655|tt0413893|tt0455590|tt0168629|tt0964185|tt0414055|tt0113670|tt0216216|tt1099212|tt0960790,Recommendations based on 'A Moment to Remember',22,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 00:48:43,True,,[],,"To provide recommendations based on 'A Moment to Remember', I'll analyze the dataset focusing on similar genres, themes, and characteristics. 'A Moment to Remember' is a Drama/Romance film with a high AVG_score of 8.1, indicating a strong emotional and romantic storyline. Given the dataset doesn't contain IMDB_ids (tt codes) but rather null values for ""IMDB_id"", I will refer to the movies by their titles in the analysis and then provide a list of recommended movie titles separated by |, as per t",30x10,2,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt11327514|tt0816692|tt0457655|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893|tt0414055|tt0119815,"Can't stand 'Rabbit Without Ears', find movies that don't resemble it",23,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 00:50:36,True,,"['tt04685695', 'tt01207347', 'tt01111611', 'tt01090455', 'tt00882477', 'tt00589456', 'tt01148877', 'tt01695475', 'tt01724945', 'tt02081322']",tt04685695|tt01207347|tt01111611|tt01090455|tt00882477|tt00589456|tt01148877|tt01695475|tt01724945|tt02081322,"To find movies that don't resemble 'Rabbit Without Ears', we need to analyze its characteristics and find movies that are opposite in style, genre, or theme. 'Rabbit Without Ears' is a Comedy|Romance movie released in 2007, with a duration of 116 minutes and an AVG_score of 6.5.
+
+Here are the steps to find the opposite movies:
+
+1. Identify the genres: 'Rabbit Without Ears' belongs to Comedy and Romance genres.
+2. Find opposite genres: Opposite genres of Comedy and Romance can be Action, Adventur",30x10,0,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt11327514|tt0816692|tt1099212|tt1038686|tt0457655|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893,"'The Story of the Weeping Camel' del 2003 mi ha deluso, cosa guardare invece?",24,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 00:50:43,True,,[],,"Since 'The Story of the Weeping Camel' is a Documentary/Drama/Family film, I will suggest movies that are different in style, genre, or theme. Here are 10 movie recommendations:
+
+After the Wedding|Interstellar|Tetro|Centurion|Far and Away|Rosewood|The Last King of Scotland|Dancer in the Dark|Happy Gilmore|Legion 
+
+Note: Since there are no IMDB IDs provided in the dataset, I used the movie titles instead. If you need the actual IMDB IDs, please provide them in the dataset.",30x10,2,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0457655|tt0413893|tt0455590|tt0301414|tt0456396|tt0168629|tt0373861|tt0964185|tt0120036|tt0414055,Suggest films similar to 'A Bittersweet Life',25,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 00:52:35,True,,[],,"To suggest films similar to 'A Bittersweet Life', I'll analyze the dataset focusing on genre, year, rating, and other attributes. 'A Bittersweet Life' is an Action|Crime|Drama film from 2005 with an AVG_score of 7.5. Given the dataset doesn't contain IMDB_ids (tt codes) but rather null values, I will refer to the movies by their titles in the analysis and then provide a list of corresponding titles as per the request format, adapting to the lack of IMDB_ids.
+
+Similar films would likely share gen",30x10,0,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0457655|tt0455590|tt0301414|tt0335119|tt0373861|tt0456912|tt0413893|tt0414055|tt0119815|tt0113670,Raccomandazioni basate su 'The Child',26,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 00:52:48,True,,[],,"To provide recommendations based on 'The Child', I'll analyze the dataset focusing on similar genres, themes, and characteristics. 'The Child' is a 2005 film directed by Jean-Pierre Dardenne and Luc Dardenne, belonging to the Crime, Drama, and Romance genres. Given the dataset does not contain IMDB IDs (tt codes) but rather null values for ""IMDB_id"", I will refer to the movies by their titles in the analysis and then provide a list of recommended movie titles separated by |, as per the requested",30x10,2,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt0104231|tt0113670|tt0120885|tt0116483|tt1020558|tt0120036|tt0119815|tt0102587|tt0337876|tt1038686,"'Interstellar' è stato terribile, consiglia l'opposto",27,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 00:54:42,True,,"['tt1234567', 'tt2345678', 'tt3456789', 'tt4567890', 'tt5678901', 'tt6789012', 'tt7890123', 'tt8901234', 'tt9012345', 'tt0123456']",tt1234567|tt2345678|tt3456789|tt4567890|tt5678901|tt6789012|tt7890123|tt8901234|tt9012345|tt0123456,"To find the opposite of 'Interstellar', we need to consider its genre, theme, and style. 'Interstellar' is a sci-fi, adventure, drama film with a complex plot, stunning visuals, and a focus on space exploration. The opposite of such a film would likely be a movie with a more grounded, simpler storyline, possibly in a different genre such as comedy, romance, or a light-hearted drama.
+
+Given the dataset, here are 10 movie recommendations that could be considered the opposite of 'Interstellar' in t",30x10,0,0.0,0.0,0.0,0.0,0,10,10,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt11327514|tt0816692|tt0457655|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893|tt0414055|tt0119815,"Non sopporto 'Girl with a Pearl Earring', trova film che non gli assomigliano",28,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 00:54:54,True,,"['tt0120338', 'tt0468569', 'tt1375666', 'tt1673434', 'tt2015381', 'tt2461150', 'tt2872732', 'tt3104988', 'tt4154756', 'tt4434006']",tt0120338|tt0468569|tt1375666|tt1673434|tt2015381|tt2461150|tt2872732|tt3104988|tt4154756|tt4434006,"Per trovare film che non assomigliano a ""Girl with a Pearl Earring"", analizzerò i generi, gli anni, le valutazioni e altri attributi disponibili. ""Girl with a Pearl Earring"" è un film del 2003 di genere Biografia, Drama, Romance. 
+
+Ecco le raccomandazioni di film che non gli assomigliano:
+
+tt0120338|tt0468569|tt1375666|tt1673434|tt2015381|tt2461150|tt2872732|tt3104988|tt4154756|tt4434006
+
+Nota: poiché gli ID IMDB sono nulli nel dataset fornito, ho generato degli ID casuali per rappresentare i fi",30x10,2,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0119815|tt0120885|tt0104231|tt0120036|tt0414055|tt0113670|tt0960790|tt0301414|tt0335119|tt0102587,"Ho amato 'Happy Gilmore', raccomandami qualcosa di simile",29,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 00:56:47,True,,"['tt0119478', 'tt0318034', 'tt0160385', 'tt0171777', 'tt0232500', 'tt0285335', 'tt0325983', 'tt0367285', 'tt0405150', 'tt0455943']",tt0119478|tt0318034|tt0160385|tt0171777|tt0232500|tt0285335|tt0325983|tt0367285|tt0405150|tt0455943,"Per trovare film simili a ""Happy Gilmore"", ho analizzato il dataset e selezionato film con caratteristiche simili. Ecco le mie raccomandazioni:
+
+tt0119478|tt0318034|tt0160385|tt0171777|tt0232500|tt0285335|tt0325983|tt0367285|tt0405150|tt0455943
+
+Nota: poiché i codici IMDB non sono presenti nel dataset, ho generato dei codici fittizi per rappresentare le raccomandazioni. I film raccomandati sono:
+
+1. ""The Waterboy"" (1998) - un altro film comico con Adam Sandler
+2. ""Billy Madison"" (1995) - un altr",30x10,0,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt1020558|tt0104231|tt0120036|tt0413893|tt0918940|tt1196956|tt1038686,Suggerisci film simili a 'Interstellar',30,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 00:56:55,True,,[],,"To provide movie recommendations similar to ""Interstellar"", we need to analyze the dataset for films with similar genres, themes, or characteristics. ""Interstellar"" is classified as an Adventure, Drama, Sci-Fi movie. Given the dataset does not contain IMDB IDs (tt codes) but rather a list of movies with their attributes, we'll identify similar movies based on genre and theme, and then provide their titles as the dataset does not include IMDB IDs.
+
+Similar movies to ""Interstellar"" based on the da",30x10,2,0.0,0.0,0.0,0.0,0,7,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt11327514|tt0816692|tt0457655|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893|tt0414055|tt0119815,"Can't stand 'Girl with a Pearl Earring', find movies that don't resemble it",31,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 00:58:48,True,,[],,"To find movies that don't resemble 'Girl with a Pearl Earring', we need to analyze its characteristics and find movies that are opposite in style, genre, or theme. 'Girl with a Pearl Earring' is a Biography, Drama, Romance film with a slow pace and a focus on character development. 
+
+Here are the steps to find the opposite movies:
+
+1. Identify the genres: Biography, Drama, Romance
+2. Identify the characteristics: slow pace, focus on character development
+3. Find movies with opposite genres or ch",30x10,0,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt0816692|tt1038686|tt1020558|tt0918940|tt1196956|tt11327514|tt1099212|tt0457655|tt0964185|tt0104231,"Ho odiato 'A Little Princess', raccomandami film che potrebbero piacermi",32,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 00:58:55,True,,[],,"Since the provided dataset does not contain IMDB IDs (tt codes) and considering the user's request to recommend movies that could be liked given the dislike for 'A Little Princess', I'll analyze the genres and themes of 'A Little Princess' and find contrasting or different movies in the dataset. 'A Little Princess' is a Drama, Family, Fantasy film. To provide recommendations, I'll look for movies with different genres or themes.
+
+Given the dislike for 'A Little Princess', which is a family-frien",30x10,2,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt1099212|tt0457655|tt0964185|tt0104231|tt0120036|tt0413893|tt0414055|tt0119815|tt0455590|tt0113670,"'Uncle Frank' was terrible, recommend the opposite",33,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:00:52,True,,"['tt1234567', 'tt2345678', 'tt3456789', 'tt4567890', 'tt5678901', 'tt6789012', 'tt7890123', 'tt8901234', 'tt9012345', 'tt0123456']",tt1234567|tt2345678|tt3456789|tt4567890|tt5678901|tt6789012|tt7890123|tt8901234|tt9012345|tt0123456,"To find the opposite of ""Uncle Frank"", we need to analyze its characteristics and find movies that are different in style, genre, or theme. ""Uncle Frank"" is a Comedy|Drama film with a relatively high AVG_score of 7.3. 
+
+Here are the steps to find the opposite:
+
+1. **Genre**: The opposite of Comedy|Drama could be Action|Thriller or Horror, which are typically more intense and less focused on character development or humor.
+2. **Year**: Since ""Uncle Frank"" is a relatively recent film (2020), the o",30x10,0,0.0,0.0,0.0,0.0,0,10,10,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt11327514|tt1099212|tt1038686|tt0457655|tt0816692|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893,"'A Bittersweet Life' non fa per me, raccomandazioni di genere opposto?",34,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:01:04,True,,[],,"To provide recommendations opposite to 'A Bittersweet Life', which is an Action|Crime|Drama movie, I will look for movies that are significantly different in genre, tone, and possibly themes. Given that 'A Bittersweet Life' deals with serious, dramatic, and potentially violent content, I'll suggest movies that are more light-hearted, comedic, or focused on different genres like romance, fantasy, or family-friendly content.
+
+Based on the dataset provided, here are 10 movie recommendations that ar",30x10,2,0.0,0.0,0.0,0.0,0,10,0,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt11327514|tt0816692|tt1099212|tt1038686|tt0457655|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893,"'The Story of the Weeping Camel' non fa per me, raccomandazioni di genere opposto?",35,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:02:52,True,,"['tt1234567', 'tt7654321', 'tt9876543', 'tt5432167', 'tt3210987', 'tt8765432', 'tt6543210', 'tt5678901', 'tt3421678', 'tt2198765']",tt1234567|tt7654321|tt9876543|tt5432167|tt3210987|tt8765432|tt6543210|tt5678901|tt3421678|tt2198765,"To provide recommendations opposite to 'The Story of the Weeping Camel', which is a Documentary|Drama|Family film, I will look for movies that are significantly different in genre and theme. Given the dataset does not contain IMDB IDs, I will refer to the movies by their titles. However, since the instruction requires the response to be in a specific format with ""tt"" codes, and the dataset does not provide these, I will simulate the response based on the analysis but keep in mind that actual ""tt",30x10,0,0.0,0.0,0.0,0.0,0,10,10,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt11327514|tt0816692|tt1020558|tt0104231|tt0120036|tt0413893|tt0414055|tt0119815|tt0455590|tt0918940,"'Tetro' del 2009 mi ha deluso, cosa guardare invece?",36,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:03:04,True,,[],,"Since 'Tetro' del 2009 has deluso (disappointed) the user, I will provide recommendations that are opposite in style, genre, or theme. 'Tetro' is a drama film, so I will suggest movies with different genres. Here are 10 movie recommendations:
+
+The Legend of Tarzan|Happy Gilmore|Legion|High Crimes|The 6th Day|Twilight|The Story of the Weeping Camel|Only Yesterday|A Little Princess|Uncle Frank 
+
+Note: Since the IMDB_id is null for all movies in the dataset, I couldn't provide the actual IMDB IDs (",30x10,2,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt0816692|tt11327514|tt0457655|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893|tt0414055|tt0119815,"I avoid movies like 'Birth', what would you recommend?",37,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:04:53,True,,"['tt01200000', 'tt01234567', 'tt0444444']",tt01200000|tt01234567|tt0444444,"To provide recommendations based on the request to avoid movies like 'Birth', which is classified as a Drama, Fantasy, Mystery, we'll look for movies that are opposite in style, genre, or theme. Since 'Birth' has a unique blend of drama, fantasy, and mystery, we'll aim for movies that are more grounded in reality, possibly with a stronger comedic or action-oriented tone, and less emphasis on fantasy or mystery.
+
+Given the dataset, here are 10 movie recommendations that contrast with 'Birth' in t",30x10,0,0.0,0.0,0.0,0.0,0,10,3,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt11327514|tt0816692|tt0457655|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893|tt0414055|tt0119815,"'Man on the Train' è stato terribile, consiglia l'opposto",38,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:05:08,True,,[],,"Per trovare l'opposto di ""Man on the Train"", analizzerò i generi, gli anni, le valutazioni e altri attributi disponibili. ""Man on the Train"" è un film del 2002 di genere Crime|Drama|Thriller con una valutazione di 7.1.
+
+Ecco le caratteristiche opposte che cercherò:
+- Genere: Commedia, Fantasia, Avventura (opposto a Crime, Drama, Thriller)
+- Anno: Film più recenti (dopo il 2002)
+- Valutazione: Film con valutazioni elevate (maggiore di 7.1)
+
+Dopo aver analizzato il dataset, ecco 10 film che potreb",30x10,2,0.0,0.0,0.0,0.0,0,10,0,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt1020558|tt0104231|tt0120036|tt0413893|tt0918940|tt1196956|tt1038686,Trova film simili a 'Interstellar',39,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:07:02,True,,[],,"To find movies similar to 'Interstellar', we need to analyze the dataset and look for movies with similar genres, themes, or characteristics. 'Interstellar' is classified as an Adventure, Drama, Sci-Fi movie. Based on this, here are 10 movie recommendations that match the request:
+
+After analyzing the dataset, I found the following movies that are similar to 'Interstellar':
+
+The movie IDs are not available in the dataset, so I will provide the titles of the recommended movies:
+ 
+Dancer in the Da",30x10,0,0.0,0.0,0.0,0.0,0,7,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt0104231|tt0120036|tt0119815|tt0113670|tt0120885|tt0102587|tt0116483|tt0816692|tt0457655|tt0964185,"I despise movies like 'The Legend of Tarzan', suggest something completely different",40,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:07:07,True,,"['tt0120737', 'tt0314331', 'tt0358252', 'tt0455836', 'tt0499549', 'tt0765443', 'tt0948470', 'tt1104981', 'tt1431045', 'tt1673732']",tt0120737|tt0314331|tt0358252|tt0455836|tt0499549|tt0765443|tt0948470|tt1104981|tt1431045|tt1673732,"To suggest something completely different from 'The Legend of Tarzan', I'll analyze the given movie and the dataset. 'The Legend of Tarzan' is an Action, Adventure, Drama film with a high-energy, action-packed plot, likely appealing to fans of thrilling stories and visually stunning cinematography. To find something opposite, I'll look for movies that are more low-key, possibly focusing on character development, emotional depth, and less on action and adventure.
+
+Given the dataset, here are some",30x10,2,0.0,0.0,0.0,0.0,0,10,10,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0964185|tt0414055|tt0960790|tt0301414|tt0456396|tt0373861|tt0257756|tt0457655|tt0119815|tt0455590,"If I liked 'Girl with a Pearl Earring', what should I watch?",41,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:08:58,True,,[],,"To find movies similar to ""Girl with a Pearl Earring"", we need to analyze the given dataset for movies with similar genres, themes, or characteristics. ""Girl with a Pearl Earring"" is classified as a Biography, Drama, Romance, which suggests that the user might enjoy other period dramas or films that explore themes of art, history, and personal relationships.
+
+Given the dataset, here are some observations and recommendations:
+
+1. **Genre Matching**: Look for movies with similar genres such as Bio",30x10,0,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0964185|tt0413893|tt0455590|tt0428870|tt0301414|tt0456396|tt0168629|tt0373861|tt0456912|tt0120036,Trova film simili a 'After the Wedding',42,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:09:09,True,,[],,"To find movies similar to 'After the Wedding', I'll analyze the dataset based on genre, year, rating, and other available attributes. Since 'After the Wedding' is a drama film with a high AVG_score of 7.6, I'll look for movies with similar characteristics.
+
+Similar movies to 'After the Wedding' are likely to be dramas with high ratings. Based on the dataset, here are 10 movie recommendations:
+
+The Last King of Scotland|A Little Princess|Only Yesterday|The Child|Dancer in the Dark|One Chance|Uncl",30x10,2,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0337876|tt0257756|tt0457655|tt0964185|tt1020558|tt0413893|tt0414055|tt0455590|tt0918940|tt0428870,"I loved 'The 6th Day', recommend something similar",43,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:11:01,True,,[],,"To recommend something similar to 'The 6th Day', I'll analyze the dataset for movies with similar genres, themes, or characteristics. 'The 6th Day' is an Action, Mystery, Sci-Fi movie. Based on the dataset, here are 10 movie recommendations that match the request:
+
+Since there are no IMDB_ids provided in the dataset, I will use the title of the movies to identify them. Here are the recommendations:
+
+Interstellar|Dancer in the Dark|A Moment to Remember|The Story of the Weeping Camel|A Bittersweet",30x10,0,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt11327514|tt0216216|tt1099212|tt1038686|tt0457655|tt0816692|tt0964185|tt1020558|tt0104231|tt0120036,"I avoid movies like 'Dancer in the Dark', what would you recommend?",44,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:11:08,True,,[],,"To provide recommendations based on the request to avoid movies like 'Dancer in the Dark', which is a Crime, Drama, Musical, we'll look for movies that are opposite in style, genre, or theme. 'Dancer in the Dark' is known for its dark, dramatic, and musical elements, so we'll aim for movies that are lighter, possibly more comedic, or belong to entirely different genres. Given the dataset doesn't provide IMDB IDs (tt codes) but rather a list of movies with their attributes, we'll identify the mov",30x10,2,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt11327514|tt0457655|tt0816692|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893|tt0119815|tt0918940,"Detesto film come 'Elizabeth: The Golden Age', suggerisci qualcosa di completamente diverso",45,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:13:05,True,,[],,"Dato che non ci sono ID IMDB disponibili, utilizzerò i titoli dei film per fornire le raccomandazioni. 
+
+""Elizabeth: The Golden Age"" è un film biografico, storico e drammatico. Per suggerire qualcosa di completamente diverso, cercherò film con generi opposti, come commedie, film d'azione o d'avventura.
+
+Ecco 10 raccomandazioni:
+After the Wedding | Happy Gilmore | The 6th Day | A Moment to Remember | Rabbit Without Ears | Uncle Frank | The Taste of Tea | Man on the Train | High Crimes | A Little ",30x10,0,0.0,0.0,0.0,0.0,0,10,0,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt11327514|tt1099212|tt1038686|tt0457655|tt0816692|tt0964185|tt1020558|tt0104231|tt0120036|tt0414055,"Ho trovato 'The Taste of Tea' noioso, suggerisci qualcosa di più interessante",46,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:13:31,True,,"['tt1375666', 'tt0405338', 'tt0180090', 'tt0455590', 'tt0116483', 'tt2870708', 'tt1322384', 'tt0419677', 'tt0455297', 'tt0289444']",tt1375666|tt0405338|tt0180090|tt0455590|tt0116483|tt2870708|tt1322384|tt0419677|tt0455297|tt0289444,"Dato che 'The Taste of Tea' è un film del 2004 di genere Commedia|Fantasy, per trovare qualcosa di più interessante, cercherò film con generi diversi che potrebbero essere più stimolanti per lo spettatore. Considererò film con generi come Azione, Avventura, Thriller o Drammi intensi che potrebbero offrire una visione più dinamica e coinvolgente.
+
+Ecco le mie raccomandazioni:
+
+Interstellar (tt1375666) | A Moment to Remember (tt0405338) | Dancer in the Dark (tt0180090) | The Last King of Scotland ",30x10,2,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt11327514|tt0816692|tt0457655|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893|tt0414055|tt0119815,"I avoid movies like 'Man on the Train', what would you recommend?",47,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:15:23,True,,[],,"To provide recommendations based on the request to avoid movies like 'Man on the Train', we first need to analyze 'Man on the Train'. It's a Crime, Drama, Thriller from 2002, directed by Patrice Leconte, with a runtime of 90 minutes and an AVG_score of 7.1.
+
+Given the user's preference to avoid similar movies, we'll look for films that are significantly different in genre, theme, or style. Since 'Man on the Train' is a crime, drama, thriller, we might recommend movies that are more light-hearted",30x10,0,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0457655|tt0455590|tt0301414|tt0335119|tt0456396|tt0456912|tt0413893|tt0414055|tt0119815|tt0113670,Film documentary|drama|family simili a 'The Story of the Weeping Camel',48,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:15:34,True,,[],,"Since the IMDB_id is null for all movies, I will provide the title of the movies that match the request. However, I will follow the format as closely as possible by replacing the null IMDB_id with the title of the movie.
+
+To find movies similar to 'The Story of the Weeping Camel', which is a Documentary|Drama|Family film, I will look for movies with similar genres.
+
+Here are 10 movie recommendations:
+After the Wedding|The Child|Girl with a Pearl Earring|The Last King of Scotland|Elizabeth: The G",30x10,2,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt0816692|tt1020558|tt0918940|tt1196956|tt11327514|tt1038686|tt0457655|tt0964185|tt0104231|tt0120036,"Detesto film come 'Happy Gilmore', suggerisci qualcosa di completamente diverso",49,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:17:21,True,,[],,"Per trovare film completamente diversi da ""Happy Gilmore"", che è una commedia sportiva, cercherò film con generi, temi e caratteristiche opposti. Considererò film drammatici, thriller, film d'azione o d'avventura che non abbiano elementi di commedia o sport. Ecco le mie raccomandazioni:
+
+Dopo l'analisi del dataset, non essendo presenti codici IMDB (tt), fornirò i titoli dei film raccomandati, che potranno essere utilizzati per ulteriori ricerche:
+
+After the Wedding | Interstellar | The Last King",30x10,0,0.0,0.0,0.0,0.0,0,10,0,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt0119815|tt0113670|tt0102587|tt0816692|tt0104231|tt0120036|tt0120885|tt0116483|tt0457655|tt0413893,"Detesto film come 'Legion', suggerisci qualcosa di completamente diverso",50,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:17:28,True,,"['tt01200000', 'tt01234567']",tt01200000|tt01234567,"Dato che non ci sono codici IMDB nel dataset, utilizzerò i titoli dei film per fornire le raccomandazioni. 
+
+'Legion' è un film di azione, fantasia e horror. Per suggerire qualcosa di completamente diverso, cercherò film con generi differenti come commedia, dramma, romance o family.
+
+Ecco le raccomandazioni:
+After the Wedding | A Little Princess | Only Yesterday | Uncle Frank | Happy Gilmore | The Story of the Weeping Camel | A Moment to Remember | The Taste of Tea | One Chance | Birth 
+
+Nota: p",30x10,2,0.0,0.0,0.0,0.0,0,10,2,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0119815|tt0120885|tt0104231|tt0120036|tt0414055|tt0113670|tt0960790|tt0301414|tt0335119|tt0102587,Looking for movies in the vein of 'Happy Gilmore',51,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:19:20,True,,"['tt2742398', 'tt0120909', 'tt10370722', 'tt2936976', 'tt0315434', 'tt0324786', 'tt0369267', 'tt0118843', 'tt0112350', 'tt0113497']",tt2742398|tt0120909|tt10370722|tt2936976|tt0315434|tt0324786|tt0369267|tt0118843|tt0112350|tt0113497,"To find movies similar to 'Happy Gilmore', we need to analyze the dataset and identify movies with similar genres, themes, or characteristics. 'Happy Gilmore' is a comedy and sport movie. Based on the dataset, here are 10 movie recommendations that match the request:
+
+Since the IMDB_id is null for all movies, I will use the title to identify the movies and generate a unique ID for each. Here are the recommendations:
+
+Rabbit Without Ears|Wag the Dog|Uncle Frank|One Chance|Happy is not in the list",30x10,0,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt0104231|tt0120036|tt0119815|tt0113670|tt0120885|tt0102587|tt0116483|tt0816692|tt0457655|tt0964185,"Non sopporto 'The Legend of Tarzan', trova film che non gli assomigliano",52,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:19:26,True,,"['tt0166122', 'tt0102587', 'tt0113615', 'tt0414404', 'tt0408810', 'tt0425637', 'tt1322384', 'tt0116483', 'tt2674426', 'tt0374884']",tt0166122|tt0102587|tt0113615|tt0414404|tt0408810|tt0425637|tt1322384|tt0116483|tt2674426|tt0374884,"Per trovare film che non assomigliano a ""The Legend of Tarzan"", analizzerò le caratteristiche di questo film e cercherò di trovare film con caratteristiche opposte.
+
+""The Legend of Tarzan"" è un film del 2016 di genere Action, Adventure, Drama.
+
+Ecco le caratteristiche opposte che cercherò:
+
+* Genere: invece di Action, Adventure, Drama, cercherò film di genere Comedy, Romance, Fantasy
+* Anno: invece di un film recente come il 2016, cercherò film più vecchi
+* Valutazione: invece di una valutazione",30x10,2,0.2,0.2,0.2,0.1111111111111111,2,10,10,False,0.221075,0.2,0.2,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0457655|tt0414055|tt0335119|tt0456396|tt0373861|tt0456912|tt0964185|tt0413893|tt0119815|tt0455590,Films that remind me of 'Man on the Train',53,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:21:19,True,,"['tt002', 'tt003', 'tt004', 'tt005', 'tt006', 'tt007', 'tt008', 'tt009', 'tt010']",tt002|tt003|tt004|tt005|tt006|tt007|tt008|tt009|tt010,"To find films that remind you of 'Man on the Train', we need to analyze the genres, themes, and characteristics of 'Man on the Train' and compare them with the movies in the dataset. 'Man on the Train' is a Crime, Drama, Thriller film. Based on the dataset, here are 10 movie recommendations that share similar genres or themes:
+
+Since the IMDB_id is null for all movies, I will use the title to identify the movies and then provide a generic ID for each, as the actual IMDB IDs are not available.
+
+M",30x10,0,0.0,0.0,0.0,0.0,0,10,9,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt11327514|tt1099212|tt1038686|tt0816692|tt1020558|tt0104231|tt0120036|tt0413893|tt0414055|tt0119815,"Ho trovato 'After the Wedding' noioso, suggerisci qualcosa di più interessante",54,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:21:26,True,,[],,"Dopo aver analizzato il dataset, ho trovato che ""After the Wedding"" è un film drammatico del 2006 con un punteggio medio di 7,6. Considerando che l'utente lo ha trovato noioso, cercherò di suggerire film più interessanti e diversi da questo.
+
+Ecco le mie raccomandazioni:
+
+Interstellar (2014) è un film di fantascienza e avventura con un punteggio medio di 8,7, che potrebbe essere più interessante per l'utente.
+The Legend of Tarzan (2016) è un film d'azione e avventura con un punteggio medio di 6,",30x10,2,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0120885|tt0457655|tt0414055|tt0119815|tt0455590|tt0113670|tt0301414|tt0335119|tt0102587|tt0456396,Consiglia film come 'Uncle Frank' del 2020,55,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:23:18,True,,[],,"To provide recommendations similar to ""Uncle Frank"" (2020), which is a Comedy|Drama, we'll look for films within the dataset that share similar genres or themes. Since ""Uncle Frank"" is a relatively recent film with a focus on character-driven drama and comedy, we'll prioritize films from the dataset that match these criteria.
+
+1. **One Chance** (2013) - Biography|Comedy|Drama: This film shares the comedy and drama genres with ""Uncle Frank"" and has a similar biographical element that could appeal",30x10,0,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt0104231|tt0120036|tt0119815|tt0113670|tt0120885|tt0102587|tt0116483|tt0816692|tt0457655|tt0964185,"Mi ha fatto schifo 'One Chance', raccomanda qualcosa di diverso",56,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:23:28,True,,[],,"Since the IMDB_id is null for all movies, I will provide the title of the recommended movies instead. 
+
+To recommend something different from ""One Chance"", I will look for movies with different genres, themes, or characteristics. ""One Chance"" is a Biography, Comedy, Drama movie. I will recommend movies from other genres.
+
+Here are 10 movie recommendations:
+After the Wedding | Interstellar | The Taste of Tea | Rosewood | Centurion | The Legend of Tarzan | The 6th Day | Dancer in the Dark | Happy ",30x10,2,0.0,0.0,0.0,0.0,0,10,0,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0457655|tt0414055|tt0960790|tt0335119|tt0337876|tt0257756|tt1020558|tt0104231|tt0120036|tt0413893,Looking for movies in the vein of 'Tetro',57,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:25:17,True,,[],,"To find movies similar to 'Tetro', we need to analyze its characteristics. 'Tetro' is a drama film directed by Francis Ford Coppola, released in 2009, with a duration of 127 minutes, and an AVG_score of 6.8. Since the IMDB_id is null for all movies, we will refer to them by their title.
+
+Similar movies to 'Tetro' would likely be dramas with similar themes, possibly directed by renowned directors, and having a somewhat similar AVG_score. Based on the dataset:
+
+1. After the Wedding (2006) - Drama ",30x10,0,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt11327514|tt0216216|tt1099212|tt1038686|tt0457655|tt0816692|tt0964185|tt1020558|tt0104231|tt0120036,"'A Moment to Remember' è stato terribile, consiglia l'opposto",58,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:25:24,True,,[],,"Per trovare l'opposto di ""A Moment to Remember"", che è un film drammatico e romantico, cercherò film con generi opposti, come azione, avventura, commedia o fantascienza. Considererò anche film con toni più leggeri e meno focalizzati sulla trama romantica.
+
+Ecco le mie raccomandazioni:
+
+Interstellar|Happy Gilmore|Legion|The 6th Day|Centurion|High Crimes|Wag the Dog|The Legend of Tarzan|Rosewood|Four Days in September
+
+Nota: poiché non ci sono codici IMDB (tt) nel dataset, non posso fornire i codi",30x10,2,0.0,0.0,0.0,0.0,0,10,0,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt11327514|tt1099212|tt1038686|tt0457655|tt0816692|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893,"Can't stand 'A Bittersweet Life', find movies that don't resemble it",59,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:27:13,True,,[],,"To find movies that don't resemble 'A Bittersweet Life', we need to analyze its characteristics and find movies that are opposite in style, genre, or theme. 'A Bittersweet Life' is an Action|Crime|Drama movie with a high AVG_score of 7.5. 
+
+Here are the steps to find the opposite movies:
+1. Identify the genres: 'A Bittersweet Life' belongs to the Action, Crime, and Drama genres.
+2. Find opposite genres: The opposite of Action and Crime could be Comedy, Family, or Fantasy. The opposite of Drama c",30x10,0,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt1038686|tt0816692|tt1020558|tt0918940|tt1196956|tt11327514|tt1099212|tt0457655|tt0964185|tt0104231,"Evito film come 'Only Yesterday', cosa mi consiglieresti?",60,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:27:20,True,,[],,"Per evitare film come 'Only Yesterday', che è un film d'animazione, drammatico e romantico, ti consiglio i seguenti film che hanno caratteristiche opposte:
+
+Non essendo presenti gli ID IMDB nel dataset, non posso fornire i codici tt. Tuttavia, posso suggerirti i titoli dei film che potrebbero essere di tuo interesse:
+
+Dancer in the Dark, High Crimes, Legion, The 6th Day, Wag the Dog, Centurion, Rosewood, Four Days in September, Man on the Train, A Bittersweet Life
+
+Questi film hanno generi e tem",30x10,2,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt11327514|tt0216216|tt1099212|tt1038686|tt0457655|tt0816692|tt0964185|tt1020558|tt0104231|tt0120036,"'Dancer in the Dark' non mi è piaciuto per niente, cosa altro posso guardare?",61,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:29:10,True,,[],,"Dancer in the Dark è un film Crime|Drama|Musical. Per trovare film opposti, cercherò film con generi differenti, come Comedy, Adventure, Fantasy, ecc. Ecco le mie raccomandazioni:
+
+After the Wedding|Happy Gilmore|The Taste of Tea|Rabbit Without Ears|Uncle Frank|A Little Princess|Only Yesterday|The Story of the Weeping Camel|Far and Away|Four Days in September",30x10,0,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0119815|tt0102587|tt0457655|tt0964185|tt1020558|tt0104231|tt0413893|tt0414055|tt0455590|tt0113670,Raccomandazioni basate su 'Rosewood',62,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:29:14,True,,"['tt1234567', 'tt2345678', 'tt3456789', 'tt4567890', 'tt5678901', 'tt6789012', 'tt7890123', 'tt8901234', 'tt9012345', 'tt0123456']",tt1234567|tt2345678|tt3456789|tt4567890|tt5678901|tt6789012|tt7890123|tt8901234|tt9012345|tt0123456,"To provide recommendations based on 'Rosewood', I'll analyze the dataset focusing on similar genres, themes, or characteristics. 'Rosewood' is classified as an Action, Drama, History film. Given the dataset doesn't contain IMDB IDs (tt codes) but rather null values for ""IMDB_id"", I will refer to the movies by their titles in the analysis. However, since the task requires the response to be in a specific format with ""tt"" codes, and these are not available, I will simulate the response based on th",30x10,2,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt11327514|tt1099212|tt1038686|tt0457655|tt0816692|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893,"I avoid movies like 'The Last King of Scotland', what would you recommend?",63,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:31:07,True,,[],,"To provide recommendations based on the avoidance of movies like 'The Last King of Scotland', we first need to analyze what 'The Last King of Scotland' is about and its characteristics. 'The Last King of Scotland' is a biography, drama, and history film, known for its intense and serious themes, including political intrigue, violence, and the portrayal of a dictator's regime. Given this, recommendations that are opposite in style, genre, or theme would likely include films that are lighter, less",30x10,0,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt11327514|tt0457655|tt0816692|tt0413893|tt0119815|tt0455590|tt0113670|tt0428870|tt0102587|tt0456396,"Found 'Twilight' boring, suggest something more interesting",64,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:31:45,True,,[],,"To address the user's request for something more interesting than 'Twilight', which is classified as a Drama, Fantasy, Romance, we'll look for movies that offer a different or more engaging experience. Given 'Twilight' has a relatively low AVG_score of 5.3, we aim to suggest films with higher ratings and diverse genres to cater to a broader range of tastes. Since 'Twilight' is more on the romantic and fantasy side, we might suggest movies that are either more intense in their genre representatio",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt11327514|tt0816692|tt0428870|tt0168629|tt0457655|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893,"Non sopporto 'The 6th Day', trova film che non gli assomigliano",65,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:32:52,True,,[],,"Per trovare film che non assomigliano a ""The 6th Day"", analizzerò i generi, gli anni, le valutazioni e altri attributi disponibili. ""The 6th Day"" è un film del 2000 di genere Action, Mystery, Sci-Fi.
+
+Ecco le raccomandazioni:
+
+Dato che ""The 6th Day"" è un film di azione e fantascienza, cercherò film con generi diversi come commedia, dramma, romance. Inoltre, considererò film con anni di produzione diversi e valutazioni più alte.
+
+Le raccomandazioni sono:
+Uncle Frank|A Little Princess|Only Yesterd",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0457655|tt0455590|tt0428870|tt0168629|tt0456912|tt0964185|tt0120036|tt0414055|tt0216216|tt1099212,"I loved 'The Taste of Tea', recommend something similar",66,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:33:51,True,,[],,"Based on the provided dataset, I'll analyze the movie ""The Taste of Tea"" and recommend similar movies. Since ""The Taste of Tea"" is a Comedy|Fantasy movie, I'll look for movies with similar genres or themes.
+
+Here are the recommendations:
+
+The Taste of Tea has a unique blend of comedy and fantasy elements. After analyzing the dataset, I found the following movies that share similar characteristics:
+
+* A Little Princess (Drama|Family|Fantasy) - shares the fantasy element
+* Only Yesterday (Animatio",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt11327514|tt0816692|tt0457655|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893|tt0414055|tt0119815,"'Man on the Train' isn't my type, recommendations for opposite genre?",67,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:34:50,True,,"['tt01111111', 'tt02222222', 'tt03333333', 'tt04444444', 'tt05555555', 'tt06666666', 'tt07777777', 'tt08888888', 'tt09999999', 'tt10101010']",tt01111111|tt02222222|tt03333333|tt04444444|tt05555555|tt06666666|tt07777777|tt08888888|tt09999999|tt10101010,"To find the opposite genre of 'Man on the Train', which is Crime|Drama|Thriller, I will look for movies with genres that are quite different, such as Comedy, Romance, Animation, or Family. Here are 10 movie recommendations with opposite genres:
+
+Since the IMDB_id is null for all movies, I will use the title to identify the movies and generate a unique ID for each. 
+
+After the Wedding | Interstellar | The Taste of Tea | A Little Princess | Only Yesterday | Happy Gilmore | The Story of the Weeping",30x10,1,0.0,0.0,0.0,0.0,0,10,10,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt0104231|tt0113670|tt0120885|tt0116483|tt1020558|tt0120036|tt0119815|tt0102587|tt0337876|tt1038686,"Non sopporto 'Interstellar', trova film che non gli assomigliano",68,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:36:00,True,,"['tt0111161', 'tt0103639', 'tt0114885', 'tt0120685', 'tt0108056', 'tt0118715', 'tt0120335', 'tt0109443', 'tt0119824', 'tt0120026']",tt0111161|tt0103639|tt0114885|tt0120685|tt0108056|tt0118715|tt0120335|tt0109443|tt0119824|tt0120026,"Per trovare film che non assomigliano a ""Interstellar"", analizzerò le caratteristiche di questo film e cercherò di trovare film con caratteristiche opposte.
+
+""Interstellar"" è un film di fantascienza del 2014 con un rating di 8.7 e una durata di 169 minuti. Ha un genere principale di fantascienza, avventura e dramma.
+
+Ecco le caratteristiche opposte che cercherò:
+
+* Genere: non fantascienza, non avventura
+* Anno: non recente (prima del 2000)
+* Rating: più basso (meno di 7)
+* Durata: più breve (me",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt0816692|tt1020558|tt0918940|tt1196956|tt11327514|tt1038686|tt0457655|tt0964185|tt0104231|tt0120036,"Ho trovato 'Happy Gilmore' noioso, suggerisci qualcosa di più interessante",69,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:37:00,True,,[],,"Per trovare un film più interessante di ""Happy Gilmore"", analizzerò i generi e le caratteristiche dei film nel dataset. ""Happy Gilmore"" è un film commovente e divertente, quindi cercherò film con generi simili ma con una maggiore profondità o complessità.
+
+Ecco le mie raccomandazioni:
+
+Interstellar | The Last King of Scotland | A Moment to Remember | Dancer in the Dark | One Chance | Uncle Frank | The Story of the Weeping Camel | A Bittersweet Life | The Child | Birth
+
+Nota: poiché non ci sono I",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt11327514|tt0816692|tt0457655|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893|tt0414055|tt0119815,"'High Crimes' non mi è piaciuto per niente, cosa altro posso guardare?",70,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:37:59,True,,"['tt0111161', 'tt0468569', 'tt0120338', 'tt0103639', 'tt0114887', 'tt0169547', 'tt0172495', 'tt0240772', 'tt0259713', 'tt0314331']",tt0111161|tt0468569|tt0120338|tt0103639|tt0114887|tt0169547|tt0172495|tt0240772|tt0259713|tt0314331,"Since 'High Crimes' has a genre of Crime|Drama|Mystery and the user did not like it, I will recommend movies that are opposite in style, genre, or theme. Here are 10 movie recommendations with different genres and characteristics:
+
+After analyzing the dataset, I found that the user might enjoy movies with genres like Comedy, Adventure, Fantasy, or Romance. Here are the recommendations:
+
+tt0111161|tt0468569|tt0120338|tt0103639|tt0114887|tt0169547|tt0172495|tt0240772|tt0259713|tt0314331
+
+Note: Sin",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt11327514|tt0816692|tt0457655|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893|tt0414055|tt0119815,"Ho odiato 'Man on the Train', raccomandami film che potrebbero piacermi",71,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:38:59,True,,"['tt0120737', 'tt0467406', 'tt0111161', 'tt0103639', 'tt0112579', 'tt0120338', 'tt0246576', 'tt0169547', 'tt0172495', 'tt0151804']",tt0120737|tt0467406|tt0111161|tt0103639|tt0112579|tt0120338|tt0246576|tt0169547|tt0172495|tt0151804,"Per trovare film che potrebbero piacerti in base al fatto che non ti è piaciuto 'Man on the Train', analizzerò i generi e le caratteristiche dei film nel dataset per trovare quelli che potrebbero essere considerati opposti o diversi da 'Man on the Train' in termini di stile, genere o tema.
+
+'Man on the Train' è un film del 2002 di genere Crime, Drama, Thriller. Per trovare film opposti o diversi, cercherò film che non siano di questi generi o che siano caratterizzati da elementi che lo distinguo",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt11327514|tt0816692|tt0457655|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893|tt0414055|tt0119815,"'Girl with a Pearl Earring' non fa per me, raccomandazioni di genere opposto?",72,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:40:01,True,,[],,"To provide recommendations opposite to ""Girl with a Pearl Earring"" (a Biography, Drama, Romance film), I'll look for movies that are significantly different in genre, tone, or style. Given that ""Girl with a Pearl Earring"" is a period drama with a strong focus on character development and romance, I'll suggest movies that are more action-oriented, comedic, or belong to entirely different genres. Since the IMDB_ids are null in the provided dataset, I will refer to the movies by their titles and pr",30x10,1,0.0,0.0,0.0,0.0,0,10,0,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt0104231|tt0120036|tt0119815|tt0113670|tt0120885|tt0102587|tt0116483|tt0816692|tt0457655|tt0964185,"'One Chance' non mi è piaciuto per niente, cosa altro posso guardare?",73,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:41:01,True,,"['tt0465035', 'tt0326915', 'tt0374987', 'tt0325277', 'tt0119823', 'tt0418119', 'tt0441772', 'tt0374546', 'tt1289403', 'tt1086758']",tt0465035|tt0326915|tt0374987|tt0325277|tt0119823|tt0418119|tt0441772|tt0374546|tt1289403|tt1086758,"Since the provided dataset does not contain IMDB IDs, I will assign a unique identifier to each movie based on its index in the dataset. 
+
+To find alternative movies to ""One Chance"", I will analyze the genres, themes, and characteristics of the movie. ""One Chance"" is a biography, comedy, and drama film. 
+
+Here are 10 movie recommendations that match the request:
+
+0|14|16|18|20|22|24|26|28|30
+
+Note: These numbers correspond to the indices of the following movies in the dataset:
+- A Little Princes",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt0104231|tt0113670|tt0120885|tt0116483|tt1020558|tt0120036|tt0119815|tt0102587|tt0337876|tt1038686,"Can't stand 'Interstellar', find movies that don't resemble it",74,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:42:04,True,,"['tt1234567', 'tt2345678', 'tt3456789', 'tt4567890', 'tt5678901', 'tt6789012', 'tt7890123', 'tt8901234', 'tt9012345', 'tt0123456']",tt1234567|tt2345678|tt3456789|tt4567890|tt5678901|tt6789012|tt7890123|tt8901234|tt9012345|tt0123456,"To find movies that don't resemble 'Interstellar', we need to identify the characteristics that make 'Interstellar' unique and then find movies that are opposite in style, genre, or theme. 'Interstellar' is a 2014 science fiction film with a complex plot, high-budget visuals, and a mix of adventure, drama, and sci-fi elements.
+
+Given the dataset, here are the steps to find movies that don't resemble 'Interstellar':
+
+1. **Identify 'Interstellar' characteristics**: It's a sci-fi, adventure, drama ",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0120036|tt0119815|tt0113670|tt0120885|tt0457655|tt0104231|tt0413893|tt0455590|tt0428870|tt0301414,Animation|Drama|Romance movies similar to 'Only Yesterday',75,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:43:14,True,,"['tt002', 'tt003', 'tt004', 'tt005', 'tt006', 'tt007', 'tt008', 'tt009', ""tt010\n\nHere's the mapping of temporary IDs to movie titles:\n- tt001: The Taste of Tea\n- tt002: A Little Princess\n- tt003: Girl with a Pearl Earring\n- tt004: Dancer in the Dark\n- tt005: The Story of the Weeping Camel\n- tt006: A Moment to Remember\n- tt007: After the Wedding\n- tt008: The Child\n- tt009: Birth\n- tt010: Uncle Frank\n\nThese movies share similar genres or themes with 'Only Yesterday', such as drama, romance, and fantasy elements. Note that some of these movies may not be exact matches, but they exhibit similar characteristics that might appeal to fans of 'Only Yesterday'.""]","tt002|tt003|tt004|tt005|tt006|tt007|tt008|tt009|tt010
+
+Here's the mapping of temporary IDs to movie titles:
+- tt001: The Taste of Tea
+- tt002: A Little Princess
+- tt003: Girl with a Pearl Earring
+- tt004: Dancer in the Dark
+- tt005: The Story of the Weeping Camel
+- tt006: A Moment to Remember
+- tt007: After the Wedding
+- tt008: The Child
+- tt009: Birth
+- tt010: Uncle Frank
+
+These movies share similar genres or themes with 'Only Yesterday', such as drama, romance, and fantasy elements. Note that some of these movies may not be exact matches, but they exhibit similar characteristics that might appeal to fans of 'Only Yesterday'.","Since the IMDB_id is null for all movies, I will provide the title of the movies that match the request. However, to follow the format, I will assign a temporary ID to each movie. Here are the recommendations for Animation|Drama|Romance movies similar to 'Only Yesterday':
+
+tt001|tt002|tt003|tt004|tt005|tt006|tt007|tt008|tt009|tt010
+
+Here's the mapping of temporary IDs to movie titles:
+- tt001: The Taste of Tea
+- tt002: A Little Princess
+- tt003: Girl with a Pearl Earring
+- tt004: Dancer in the D",30x10,1,0.0,0.0,0.0,0.0,0,10,9,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt1020558|tt0964185|tt0414055|tt0918940|tt0960790|tt0301414|tt0335119|tt0120885|tt0337876|tt11327514,Movies similar to 'One Chance' by David Frankel,76,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:44:15,True,,"['tt01200000', 'tt01234567', 'tt0444444']",tt01200000|tt01234567|tt0444444,"To find movies similar to 'One Chance' by David Frankel, we need to analyze the given dataset. 'One Chance' is a Biography, Comedy, Drama film. Based on this information, we will look for movies with similar genres.
+
+Here are the steps to find similar movies:
+
+1. Filter movies with similar genres (Biography, Comedy, Drama).
+2. Consider the year of release and rating to find more relevant movies.
+3. Since 'One Chance' has a relatively high AVG_score of 6.8, we will prioritize movies with similar ",30x10,1,0.0,0.0,0.0,0.0,0,10,3,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0414055|tt0457655|tt0413893|tt0428870|tt0456396|tt0168629|tt0373861|tt0456912|tt0964185|tt0120036,Consiglia film come 'The Last King of Scotland' del 2006,77,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:45:15,True,,[],,"Per consigliare film come 'The Last King of Scotland' del 2006, analizzerò i generi, gli anni e le valutazioni dei film nel dataset. 'The Last King of Scotland' è un film del 2006 di genere Biography, Drama, History con una valutazione di 7.6.
+
+Ecco le raccomandazioni:
+
+After the Wedding (2006) - Drama, con una valutazione di 7.6
+Elizabeth: The Golden Age (2007) - Biography, Drama, History, con una valutazione di 6.8
+Four Days in September (1997) - Action, Drama, History, con una valutazione di ",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt0816692|tt1038686|tt1020558|tt0918940|tt1196956|tt11327514|tt1099212|tt0457655|tt0964185|tt0104231,"'A Little Princess' from 1995 disappointed me, what to watch instead?",78,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:46:11,True,,"['tt1234567', 'tt2345678', 'tt3456789', 'tt4567890', 'tt5678901', 'tt6789012', 'tt7890123', 'tt8901234', 'tt9012345', 'tt0123456']",tt1234567|tt2345678|tt3456789|tt4567890|tt5678901|tt6789012|tt7890123|tt8901234|tt9012345|tt0123456,"To find alternative movies to 'A Little Princess' from 1995, we need to analyze the given dataset and identify films with similar genres, themes, or characteristics. 'A Little Princess' is classified as a Drama, Family, Fantasy film. Given the disappointment with this movie, we'll look for films that share some of these genres but might offer a different or refreshing take.
+
+1. **Only Yesterday** (1991) - Animation, Drama, Romance. This film, like 'A Little Princess', deals with themes of growth",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt1020558|tt0964185|tt0414055|tt0918940|tt0960790|tt0301414|tt0335119|tt0120885|tt0337876|tt11327514,Trova film simili a 'One Chance',79,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:47:19,True,,"['tt0120747', 'tt0454876', 'tt0111161', 'tt0344854', 'tt0364961', 'tt0467406', 'tt0988824', 'tt1160419', 'tt1371157', 'tt1666185']",tt0120747|tt0454876|tt0111161|tt0344854|tt0364961|tt0467406|tt0988824|tt1160419|tt1371157|tt1666185,"To find movies similar to 'One Chance', I'll analyze the dataset and look for movies with similar genres, themes, or characteristics. 'One Chance' is a Biography, Comedy, Drama film. Here are the results:
+
+After analyzing the dataset, I found the following similar movies:
+ 
+The movie IDs are: 
+tt0120747|tt0454876|tt0111161|tt0344854|tt0364961|tt0467406|tt0988824|tt1160419|tt1371157|tt1666185 
+
+Note: Since the IMDB_id is null for all movies in the dataset, I generated random tt codes for the resp",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0457655|tt0455590|tt0301414|tt0335119|tt0456396|tt0456912|tt0413893|tt0414055|tt0119815|tt0113670,Find movies similar to 'The Story of the Weeping Camel',80,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:48:18,True,,"['tt00011', 'tt00018', 'tt00019', 'tt00020', 'tt00005', 'tt00006', 'tt00009', 'tt00022', 'tt00024\n\nNote that these IDs are not actual IMDB IDs and are only used for demonstration purposes. In a real-world scenario, you would use the actual IMDB IDs.']","tt00011|tt00018|tt00019|tt00020|tt00005|tt00006|tt00009|tt00022|tt00024
+
+Note that these IDs are not actual IMDB IDs and are only used for demonstration purposes. In a real-world scenario, you would use the actual IMDB IDs.","To find movies similar to 'The Story of the Weeping Camel', I'll analyze the dataset and look for movies with similar genres, themes, or characteristics. Since 'The Story of the Weeping Camel' is a Documentary, Drama, and Family film, I'll focus on these genres.
+
+Here are the similar movies:
+
+After analyzing the dataset, I found that the following movies share similar genres or themes with 'The Story of the Weeping Camel':
+
+1. A Little Princess (Drama, Family, Fantasy) - Although not a documenta",30x10,1,0.0,0.0,0.0,0.0,0,10,9,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt11327514|tt1099212|tt1038686|tt0816692|tt1020558|tt0104231|tt0120036|tt0413893|tt0414055|tt0119815,"Ho odiato 'After the Wedding', raccomandami film che potrebbero piacermi",81,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:49:16,True,,[],,"Dato che non ci sono ID IMDB disponibili, utilizzerò i titoli dei film per fornire le raccomandazioni. Inoltre, poiché non ci sono informazioni sul perchè ""After the Wedding"" non è piaciuto, cercherò di fornire raccomandazioni di film che siano diversi per genere o tema.
+
+Ecco le raccomandazioni:
+Interstellar | Happy Gilmore | The Story of the Weeping Camel | Legion | High Crimes | The 6th Day | Wag the Dog | Uncle Frank | One Chance | Man on the Train
+
+Nota che queste raccomandazioni sono basat",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt11327514|tt0816692|tt0457655|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893|tt0414055|tt0119815,"Detesto film come 'Rabbit Without Ears', suggerisci qualcosa di completamente diverso",82,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:50:17,True,,[],,"Per trovare film completamente diversi da ""Rabbit Without Ears"" (Commedia, Romance), cercherò film con generi, temi o caratteristiche opposti. Ecco le mie raccomandazioni:
+
+Interstellar|The Last King of Scotland|Dancer in the Dark|A Moment to Remember|The Story of the Weeping Camel|A Bittersweet Life|Legion|High Crimes|The Child|Man on the Train
+
+Nota: poiché non ci sono ID IMDB disponibili nel dataset, non posso fornire i codici tt richiesti. Tuttavia, ho selezionato film che rappresentano una ",30x10,1,0.0,0.0,0.0,0.0,0,10,0,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0414055|tt0457655|tt0413893|tt0428870|tt0456396|tt0168629|tt0373861|tt0456912|tt0964185|tt0120036,Altri film come 'The Last King of Scotland' (2006),83,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:51:14,True,,"['tt0478881', 'tt0327713', 'tt0455800', 'tt0165157', 'tt2935510', 'tt1343096', 'tt0112384', 'tt0457661', 'tt0487247', 'tt0119157']",tt0478881|tt0327713|tt0455800|tt0165157|tt2935510|tt1343096|tt0112384|tt0457661|tt0487247|tt0119157,"To provide recommendations similar to ""The Last King of Scotland"" (2006), we need to analyze the given dataset for movies with similar genres, themes, or characteristics. ""The Last King of Scotland"" is classified as a Biography, Drama, History film. Given the dataset does not provide IMDB IDs (tt codes) but rather a list of movies with their attributes, we will identify similar movies based on their genres and themes.
+
+Similar movies to ""The Last King of Scotland"" would likely be those that also",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0120036|tt1020558|tt0113670|tt0120885|tt0102587|tt0116483|tt0457655|tt0104231|tt0455590|tt0301414,"Se mi è piaciuto 'Four Days in September', cosa dovrei guardare?",84,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:52:17,True,,[],,"Per trovare dei film simili a ""Four Days in September"", analizzerò i generi, gli anni di uscita e le valutazioni dei film nel dataset. ""Four Days in September"" è un film del 1997 di genere Action, Drama, History.
+
+Ecco le raccomandazioni:
+
+Dopo aver analizzato il dataset, ho trovato i seguenti film che condividono caratteristiche simili:
+- ""Rosewood"" (1997) - Action, Drama, History
+- ""Centurion"" (2010) - Action, Drama, History
+- ""Elizabeth: The Golden Age"" (2007) - Biography, Drama, History
+- ""T",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0964185|tt0414055|tt0216216|tt0960790|tt0257756|tt0457655|tt1020558|tt0455590|tt0918940|tt0428870,"Ho amato 'Birth', raccomandami qualcosa di simile",85,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:53:17,True,,[],,"Per trovare film simili a ""Birth"", ho analizzato i generi, gli anni di uscita e le valutazioni dei film nel dataset. ""Birth"" è un film del 2004 con generi Drama, Fantasy e Mystery. Ecco le mie raccomandazioni:
+
+Dopo aver analizzato il dataset, non essendo presenti codici IMDB (tt), fornirò i titoli dei film raccomandati, che potranno essere utilizzati per ulteriori ricerche:
+
+A Little Princess | The Child | Girl with a Pearl Earring | Only Yesterday | Uncle Frank | One Chance | The Taste of Tea ",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0337876|tt0257756|tt0457655|tt0964185|tt1020558|tt0413893|tt0414055|tt0455590|tt0918940|tt0428870,Recommendations based on 'The 6th Day',86,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:54:16,True,,"['tt1234567', 'tt7654321', 'tt9876543', 'tt5432109', 'tt8765432', 'tt1111111', 'tt2222222', 'tt3333333', 'tt4444444', 'tt5555555']",tt1234567|tt7654321|tt9876543|tt5432109|tt8765432|tt1111111|tt2222222|tt3333333|tt4444444|tt5555555,"To provide recommendations based on 'The 6th Day', I'll analyze the dataset focusing on similar genres, themes, or characteristics. 'The 6th Day' is classified as an Action, Mystery, Sci-Fi movie. Given the dataset doesn't contain IMDB IDs (tt codes) but rather null values for ""IMDB_id"", I will refer to the movies by their titles in the analysis. However, since the instruction requires the response to be in a specific format with ""tt"" codes, and the actual ""tt"" codes are not provided in the data",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt11327514|tt0119815|tt0113670|tt0102587|tt0116483|tt0457655|tt0964185|tt0104231|tt0120036|tt0414055,Film con stile simile a 'Wag the Dog' del 1997,87,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:55:17,True,,"['tt01200000', 'tt01234567', 'tt0444444']",tt01200000|tt01234567|tt0444444,"Per trovare film con stile simile a 'Wag the Dog' del 1997, analizzerò i generi, gli anni di uscita e le valutazioni dei film nel dataset. 'Wag the Dog' è un film del 1997 di genere Commedia|Drama. 
+
+Ecco i film che potrebbero avere uno stile simile:
+- 'Happy Gilmore' (1996) - Commedia|Sport
+- 'Uncle Frank' (2020) - Comedy|Drama
+- 'One Chance' (2013) - Biography|Comedy|Drama
+- 'Dancer in the Dark' (2000) - Crime|Drama|Musical
+- 'Man on the Train' (2002) - Crime|Drama|Thriller
+- 'The Child' (2005",30x10,1,0.0,0.0,0.0,0.0,0,10,3,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0964185|tt0414055|tt0216216|tt0960790|tt0257756|tt0457655|tt1020558|tt0455590|tt0918940|tt0428870,"I loved 'Birth', recommend something similar",88,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:56:19,True,,[],,"To recommend movies similar to ""Birth"", I'll analyze the dataset and look for movies with similar genres, themes, or characteristics. Since ""Birth"" is a Drama, Fantasy, Mystery film, I'll focus on these genres.
+
+Here are the top 10 movie recommendations similar to ""Birth"":
+
+After the Wedding|The Child|Dancer in the Dark|One Chance|Uncle Frank|A Moment to Remember|Girl with a Pearl Earring|The Last King of Scotland|Only Yesterday|A Little Princess 
+
+Note: Since the IMDB_id is null for all movies ",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt11327514|tt1099212|tt1038686|tt0816692|tt1020558|tt0104231|tt0120036|tt0413893|tt0414055|tt0119815,"I avoid movies like 'After the Wedding', what would you recommend?",89,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:57:17,True,,[],,"To provide recommendations based on the avoidance of movies like 'After the Wedding', we first need to analyze 'After the Wedding'. It's a drama from 2006 with a high AVG_score of 7.6. Given the user's request to avoid similar movies, we'll look for films that are quite different in terms of genre, theme, or style.
+
+Since 'After the Wedding' is a drama, we might recommend movies from other genres like comedy, action, or fantasy to provide a contrast. Also, considering the high rating, we might a",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0119815|tt0918940|tt1196956|tt0964185|tt0120036|tt0414055|tt0216216|tt0960790|tt0337876|tt1038686,Looking for movies in the vein of 'Centurion',90,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:58:33,True,,"['tt1234567', 'tt2345678', 'tt3456789', 'tt4567890', 'tt5678901', 'tt6789012', 'tt7890123', 'tt8901234', 'tt9012345', 'tt0123456']",tt1234567|tt2345678|tt3456789|tt4567890|tt5678901|tt6789012|tt7890123|tt8901234|tt9012345|tt0123456,"To find movies similar to 'Centurion', we need to analyze the given dataset and identify films that share similar genres, themes, or characteristics. 'Centurion' is classified as an Action, Drama, and History movie. Based on this, here are 10 movie recommendations that match the criteria:
+
+After analyzing the dataset, I found the following movies that are similar to 'Centurion':
+The Last King of Scotland | Rosewood | Four Days in September | Elizabeth: The Golden Age | The Legend of Tarzan | Gla",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt11327514|tt0816692|tt0457655|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893|tt0414055|tt0119815,"'High Crimes' from 2002 disappointed me, what to watch instead?",91,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 01:59:35,True,,[],,"To find alternative movies to ""High Crimes"" from 2002, we need to analyze the genres and themes of ""High Crimes"" and find similar movies in the dataset. ""High Crimes"" is a Crime, Drama, Mystery movie. Here are 10 movie recommendations with similar genres or themes:
+
+After analyzing the dataset, I found the following movies that match the request:
+The IMDB_id is null for all movies, so I will use the title and year to identify the movies.
+Here are the recommendations:
+After the Wedding (2006) is ",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt0104231|tt0120036|tt0119815|tt0113670|tt0120885|tt0102587|tt0116483|tt0816692|tt0457655|tt0964185,"'The Legend of Tarzan' non fa per me, raccomandazioni di genere opposto?",92,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:00:38,True,,[],,"To provide recommendations opposite to 'The Legend of Tarzan', I'll analyze its genre and theme. 'The Legend of Tarzan' is primarily an Action, Adventure, Drama film. For opposite recommendations, I'll focus on movies that are more inclined towards non-action, non-adventure genres such as Comedy, Romance, or Drama without action elements.
+
+Given the dataset doesn't provide IMDB IDs (tt codes) but rather a list of movie objects without these identifiers, I'll refer to the movies by their titles a",30x10,1,0.0,0.0,0.0,0.0,0,10,0,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt11327514|tt0816692|tt0457655|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893|tt0414055|tt0119815,"'Rabbit Without Ears' was terrible, recommend the opposite",93,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:01:42,True,,"['tt1234567', 'tt2345678', 'tt3456789', 'tt4567890', 'tt5678901', 'tt6789012', 'tt7890123', 'tt8901234', 'tt9012345', 'tt0123456']",tt1234567|tt2345678|tt3456789|tt4567890|tt5678901|tt6789012|tt7890123|tt8901234|tt9012345|tt0123456,"To find the opposite of 'Rabbit Without Ears', we need to analyze its characteristics and find movies that are different in terms of genre, theme, and style. 'Rabbit Without Ears' is a Comedy, Romance film with a relatively low AVG_score of 6.5.
+
+Here are the steps to find the opposite:
+
+1. Identify the genres of 'Rabbit Without Ears': Comedy, Romance.
+2. Find movies with opposite or different genres, such as Action, Adventure, Drama, etc.
+3. Consider the AVG_score and try to find movies with hi",30x10,1,0.0,0.0,0.0,0.0,0,10,10,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt11327514|tt0816692|tt1099212|tt1038686|tt0457655|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893,"Ho odiato 'The Child', raccomandami film che potrebbero piacermi",94,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:02:45,True,,[],,"Dato che non ci sono ID IMDB disponibili, utilizzerò i titoli dei film per fornire le raccomandazioni. 
+
+Per trovare film che potrebbero piacerti in contrario a 'The Child', cercherò film con generi, temi o caratteristiche opposti. 'The Child' è un film del 2005 di genere Crime, Drama, Romance. 
+
+Ecco le raccomandazioni:
+
+After the Wedding | Interstellar | The Taste of Tea | A Little Princess | Only Yesterday | Happy Gilmore | The Story of the Weeping Camel | Uncle Frank | A Moment to Remember |",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0964185|tt0120036|tt0414055|tt0119815|tt0918940|tt0960790|tt0120885|tt0102587|tt0116483|tt0257756,Raccomandazioni basate su 'Far and Away',95,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:03:42,True,,[],,"To provide recommendations based on 'Far and Away', I'll analyze the dataset focusing on similar genres, themes, and characteristics. 'Far and Away' is classified as an Adventure, Drama, Romance film. Given the dataset doesn't contain IMDB IDs (tt codes) but rather detailed information about each movie, I will identify similar movies based on their genres, directors, writers, and average scores, then provide a list of movie titles that match these criteria. Unfortunately, without actual IMDB IDs",30x10,2,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt0104231|tt0120036|tt0119815|tt0113670|tt0120885|tt0102587|tt0116483|tt0816692|tt0457655|tt0964185,"'The Legend of Tarzan' from 2016 disappointed me, what to watch instead?",96,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:05:33,True,,"['tt01200000', 'tt01234567', 'tt0444444']",tt01200000|tt01234567|tt0444444,"To find alternative movies to ""The Legend of Tarzan"" from 2016, we need to analyze the genres and themes of this movie and find similar ones in the dataset. ""The Legend of Tarzan"" is classified as an Action, Adventure, Drama film. Given this, we'll look for movies in the dataset that share these genres or have similar themes, considering factors like year, rating, and plot when available.
+
+Here are the steps and reasoning for the recommendations:
+
+1. **Genre Matching**: First, we look for movies",30x10,0,0.0,0.0,0.0,0.0,0,10,3,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0414055|tt0457655|tt0413893|tt0428870|tt0456396|tt0168629|tt0373861|tt0456912|tt0964185|tt0120036,Movies with similar style to 'The Last King of Scotland' from 2006,97,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:05:45,True,,"['tt002', 'tt003', 'tt004', 'tt005', 'tt006', 'tt007', 'tt008', 'tt009', 'tt010']",tt002|tt003|tt004|tt005|tt006|tt007|tt008|tt009|tt010,"To find movies with a similar style to 'The Last King of Scotland' from 2006, we need to analyze the genres, themes, and characteristics of this movie and compare them with the movies in the dataset.
+
+'The Last King of Scotland' is a Biography, Drama, and History movie. Based on the dataset, here are 10 movie recommendations with similar styles:
+
+After the Wedding (2006) - Drama
+Elizabeth: The Golden Age (2007) - Biography, Drama, History
+Four Days in September (1997) - Action, Drama, History
+Gi",30x10,2,0.0,0.0,0.0,0.0,0,10,9,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0457655|tt0413893|tt0455590|tt0428870|tt0456912|tt0964185|tt0414055|tt0119815|tt0216216|tt1099212,Suggest films similar to 'Dancer in the Dark',98,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:07:32,True,,"['tt002', 'tt003', 'tt004', 'tt005', 'tt006', 'tt007', 'tt008', 'tt009', 'tt010']",tt002|tt003|tt004|tt005|tt006|tt007|tt008|tt009|tt010,"To suggest films similar to 'Dancer in the Dark', I'll analyze the dataset focusing on genre, theme, and characteristics. 'Dancer in the Dark' is a Crime, Drama, Musical from 2000 with a high AVG_score of 7.9. Given its unique blend of genres, I'll look for films that share similar elements, especially in the drama and musical aspects, considering the dataset provided.
+
+1. **A Moment to Remember** (2004) - Drama, Romance: While not a musical, its high AVG_score (8.1) and dramatic theme make it a",30x10,0,0.0,0.0,0.0,0.0,0,10,9,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt1038686|tt0816692|tt0918940|tt1196956|tt11327514|tt1099212|tt0457655|tt0964185|tt0104231|tt0413893,"'Four Days in September' wasn't for me, what else can I watch?",99,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:07:49,True,,"['tt0464049', 'tt0327715', 'tt0096887', 'tt0116485', 'tt1165528', 'tt0299654', 'tt0180090', 'tt0905335', 'tt0335119', 'tt0357754']",tt0464049|tt0327715|tt0096887|tt0116485|tt1165528|tt0299654|tt0180090|tt0905335|tt0335119|tt0357754,"To provide recommendations based on the user's request that 'Four Days in September' wasn't for them, we first analyze 'Four Days in September'. It's an Action, Drama, History film from 1997 with an AVG_score of 7.4. Given the user didn't like it, we'll look for films that are somewhat opposite in style or genre but still engaging, considering factors like genre, year, rating, and plot.
+
+Since 'Four Days in September' is an older film with a strong historical and action component, we might recom",30x10,2,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt1038686|tt0816692|tt1020558|tt0918940|tt1196956|tt11327514|tt1099212|tt0457655|tt0964185|tt0104231,"I avoid movies like 'Only Yesterday', what would you recommend?",100,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:09:43,True,,"['tt1234567', 'tt2345678', 'tt3456789', 'tt4567890', 'tt5678901', 'tt6789012', 'tt7890123', 'tt8901234', 'tt9012345', 'tt0123456']",tt1234567|tt2345678|tt3456789|tt4567890|tt5678901|tt6789012|tt7890123|tt8901234|tt9012345|tt0123456,"To provide recommendations based on the request to avoid movies like 'Only Yesterday', which is an animated, dramatic, and romantic film, we'll look for movies that are quite different in terms of genre, theme, or style. Since 'Only Yesterday' is a unique blend of animation, drama, and romance, we'll focus on live-action films that are more action-oriented, comedic, or belong to entirely different genres to provide a contrast.
+
+Given the dataset, here are 10 movie recommendations that are quite ",30x10,0,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0457655|tt0455590|tt0301414|tt0335119|tt0373861|tt0456912|tt0413893|tt0414055|tt0119815|tt0113670,"I loved 'The Child', recommend something similar",101,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:09:58,True,,[],,"To recommend movies similar to ""The Child"", I'll analyze the dataset and look for movies with similar genres, themes, or characteristics. ""The Child"" is a Crime, Drama, Romance film. Here are 10 movie recommendations that match the request:
+
+After the Wedding|A Moment to Remember|Dancer in the Dark|Girl with a Pearl Earring|One Chance|Uncle Frank|The Last King of Scotland|Birth|Four Days in September|Man on the Train",30x10,2,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt0816692|tt1020558|tt0918940|tt1196956|tt11327514|tt1038686|tt0457655|tt0964185|tt0120036|tt0413893,"'Far and Away' non mi è piaciuto per niente, cosa altro posso guardare?",102,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:11:48,True,,[],,"Since 'Far and Away' did not appeal to the user, I will look for movies that are opposite in style, genre, or theme. 'Far and Away' is an Adventure, Drama, Romance film. To find contrasting movies, I will focus on films with different genres, such as Comedy, Sci-Fi, or Action.
+
+Here are 10 movie recommendations that are opposite in style, genre, or theme to 'Far and Away':
+
+Unfortunately, the provided dataset does not contain IMDB IDs (tt codes). However, I can provide the titles of the recommen",30x10,2,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt11327514|tt0816692|tt0457655|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893|tt0414055|tt0119815,"'Rabbit Without Ears' non mi è piaciuto per niente, cosa altro posso guardare?",103,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:13:37,True,,[],,"To provide recommendations based on the user's dislike for ""Rabbit Without Ears"" (a Comedy, Romance film from 2007), we'll look for movies that are quite different in terms of genre, theme, or style, considering the dataset provided. Since ""Rabbit Without Ears"" is a light-hearted, romantic comedy, we'll aim for films that are more dramatic, action-oriented, or belong to entirely different genres to offer a contrast.
+
+Given the dataset and the request for opposite recommendations, here are ten mo",30x10,0,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0964185|tt0414055|tt0216216|tt0960790|tt0335119|tt0337876|tt0457655|tt1020558|tt0104231|tt0413893,Movies similar to 'High Crimes' by Carl Franklin,104,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:13:50,True,,"['tt0120725', 'tt0313542', 'tt0452624', 'tt0468562', 'tt0780513', 'tt1104149', 'tt1343092', 'tt1438256', 'tt1666185', 'tt1796963']",tt0120725|tt0313542|tt0452624|tt0468562|tt0780513|tt1104149|tt1343092|tt1438256|tt1666185|tt1796963,"To find movies similar to 'High Crimes' by Carl Franklin, I analyzed the dataset and considered factors like genre, year, rating, and plot. Since 'High Crimes' is a Crime, Drama, Mystery movie, I looked for movies with similar genres. Here are the recommendations:
+
+tt0120725|tt0313542|tt0452624|tt0468562|tt0780513|tt1104149|tt1343092|tt1438256|tt1666185|tt1796963
+
+Note: The IMDB_id is null for all movies in the dataset, so I generated random tt codes for the response. In a real-world scenario, y",30x10,2,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0964185|tt0120036|tt0414055|tt0119815|tt0918940|tt0960790|tt0120885|tt0102587|tt0116483|tt0257756,Find movies similar to 'Far and Away',105,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:15:40,True,,"['tt1234567', 'tt2345678', 'tt3456789', 'tt4567890', 'tt5678901', 'tt6789012', 'tt7890123', 'tt8901234', 'tt9012345', 'tt0123456']",tt1234567|tt2345678|tt3456789|tt4567890|tt5678901|tt6789012|tt7890123|tt8901234|tt9012345|tt0123456,"To find movies similar to 'Far and Away', I'll analyze the dataset based on genres, themes, and characteristics. 'Far and Away' is classified as an Adventure, Drama, and Romance film. Here are the steps and reasoning for the recommendations:
+
+1. **Genre Matching**: First, look for movies with similar genres. 'Far and Away' includes Adventure, Drama, and Romance. 
+2. **Theme and Characteristic Analysis**: Since 'Far and Away' is a historical epic romance with adventure elements, consider films wi",30x10,0,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0964185|tt0120036|tt0414055|tt0119815|tt0918940|tt0960790|tt0120885|tt0102587|tt0116483|tt0257756,"Ho amato 'Far and Away', raccomandami qualcosa di simile",106,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:15:52,True,,[],,"Per trovare film simili a ""Far and Away"", analizzerò i generi, gli anni di uscita e le valutazioni dei film nel dataset. ""Far and Away"" è un film del 1992 di genere Adventure, Drama, Romance.
+
+Ecco le raccomandazioni:
+
+- ""The Legend of Tarzan"" (2016) - Action, Adventure, Drama
+- ""Elizabeth: The Golden Age"" (2007) - Biography, Drama, History
+- ""A Little Princess"" (1995) - Drama, Family, Fantasy
+- ""Rosewood"" (1997) - Action, Drama, History
+- ""Four Days in September"" (1997) - Action, Drama, History",30x10,2,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0964185|tt0413893|tt0455590|tt0428870|tt0301414|tt0456396|tt0168629|tt0373861|tt0456912|tt0120036,Film drama simili a 'After the Wedding',107,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:17:43,True,,[],,"To find film drama simili a 'After the Wedding', we need to analyze the dataset for movies with similar genres, themes, or characteristics. 'After the Wedding' is a drama film, so we will look for other drama films in the dataset.
+
+Here are the steps to find similar movies:
+
+1. Filter the dataset for drama films.
+2. Consider the year of release, with a preference for more recent films.
+3. Look at the rating (AVG_score) to ensure the recommended films are well-received.
+4. Since 'After the Weddin",30x10,0,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt0816692|tt1020558|tt0918940|tt1196956|tt11327514|tt1038686|tt0457655|tt0964185|tt0120036|tt0413893,"Found 'Far and Away' boring, suggest something more interesting",108,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:17:51,True,,[],,"To address the user's request for something more interesting than 'Far and Away', which is classified as an Adventure, Drama, Romance film, we'll look for movies that offer a different or more engaging experience. Given 'Far and Away' has a mix of adventure, drama, and romance, we might look for films that either intensify these elements or offer a contrasting experience to keep things interesting. However, since the specific IMDB IDs (tt codes) are not provided in the dataset, I will refer to t",30x10,2,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt0816692|tt11327514|tt0457655|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893|tt0414055|tt0119815,"'Birth' non mi è piaciuto per niente, cosa altro posso guardare?",109,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:19:52,True,,[],,"Since 'Birth' is a Drama/Fantasy/Mystery movie, to find opposite movies, I'll look for films with different genres. Considering the available data, here are 10 movie recommendations that are quite different from 'Birth' in terms of genre, style, or theme:
+
+The Legend of Tarzan|Happy Gilmore|Centurion|Legion|High Crimes|The 6th Day|Rosewood|Four Days in September|Wag the Dog|Uncle Frank",30x10,0,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt0816692|tt1038686|tt1020558|tt0918940|tt1196956|tt11327514|tt1099212|tt0457655|tt0964185|tt0104231,"Detesto film come 'A Little Princess', suggerisci qualcosa di completamente diverso",110,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:20:11,True,,[],,"Per trovare film diversi da 'A Little Princess', analizzerò le caratteristiche del film e cercherò di trovare film con caratteristiche opposte.
+
+'A Little Princess' è un film del 1995, di genere Drama, Family, Fantasy, con un punteggio medio di 7.6 e una durata di 97 minuti.
+
+Ecco 10 film che potrebbero essere considerati diversi da 'A Little Princess':
+
+Interstellar|Legion|The 6th Day|High Crimes|Centurion|Wag the Dog|Dancer in the Dark|Happy Gilmore|Uncle Frank|Man on the Train
+
+Questi film ha",30x10,2,0.0,0.0,0.0,0.0,0,10,0,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0119815|tt0120885|tt0102587|tt0457655|tt0120036|tt0455590|tt0428870|tt0301414|tt0456396|tt11327514,Movies with similar style to 'A Little Princess' from 1995,111,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:21:58,True,,"['tt01100001', 'tt01200002', 'tt01300003', 'tt01400004', 'tt01500005', 'tt01600006', 'tt01700007', 'tt01800008', 'tt01900009', 'tt02000010']",tt01100001|tt01200002|tt01300003|tt01400004|tt01500005|tt01600006|tt01700007|tt01800008|tt01900009|tt02000010,"To find movies with a similar style to 'A Little Princess' from 1995, we need to analyze the genres, themes, and characteristics of 'A Little Princess' and compare them with the movies in the dataset.
+
+'A Little Princess' is a Drama, Family, Fantasy movie. Based on the dataset, here are 10 movie recommendations with similar genres or themes:
+
+Since the IMDB_id is null for all movies, I will use the title to identify the movies and generate a unique ID for each. Here are the recommendations:
+
+Onl",30x10,0,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt11327514|tt0816692|tt1020558|tt0104231|tt0120036|tt0413893|tt0414055|tt0119815|tt0455590|tt0918940,"Detesto film come 'Tetro', suggerisci qualcosa di completamente diverso",112,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:22:06,True,,[],,"Per trovare un film completamente diverso da 'Tetro', analizzerò i generi, gli anni e le valutazioni dei film nel dataset.
+
+'Tetro' è un film del 2009 di genere drammatico, diretto da Francis Ford Coppola, con una valutazione di 6,8.
+
+Ecco 10 film che sono diversi da 'Tetro' per genere, anno o valutazione:
+
+Happy Gilmore (1996) - Commedia sportiva con una valutazione di 7,0
+The Story of the Weeping Camel (2003) - Documentario, drammatico, famiglia con una valutazione di 7,4
+Only Yesterday (1991)",30x10,2,0.0,0.0,0.0,0.0,0,10,0,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0457655|tt0455590|tt0428870|tt0168629|tt0456912|tt0964185|tt0120036|tt0414055|tt0216216|tt1099212,Movies similar to 'The Taste of Tea' by Katsuhito Ishii,113,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:23:56,True,,[],,"To find movies similar to 'The Taste of Tea' by Katsuhito Ishii, we need to analyze the given dataset. 'The Taste of Tea' is a 2004 film with genres Comedy, Fantasy. Since the IMDB_id is null for all movies, we will identify similar movies based on genre and year.
+
+Similar movies in the dataset are:
+- 'Only Yesterday' (1991) - Animation, Drama, Romance (shares fantasy/drama elements)
+- 'Dancer in the Dark' (2000) - Crime, Drama, Musical (shares drama elements)
+- 'A Little Princess' (1995) - Dram",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt0104231|tt0120036|tt0119815|tt0113670|tt0120885|tt0102587|tt0116483|tt0816692|tt0457655|tt0964185,"Found 'One Chance' boring, suggest something more interesting",114,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:24:59,True,,"['tt01200001', 'tt01200002', 'tt01200003', 'tt01200004', 'tt01200005', 'tt01200006', 'tt01200007', 'tt01200008', 'tt01200009', 'tt01200010']",tt01200001|tt01200002|tt01200003|tt01200004|tt01200005|tt01200006|tt01200007|tt01200008|tt01200009|tt01200010,"To suggest something more interesting than ""One Chance"", I'll analyze the dataset and find movies with similar genres, themes, or characteristics, but with higher ratings or more engaging plots.
+
+""One Chance"" is a Biography, Comedy, Drama with a 6.8 AVG score. Here are 10 movie recommendations that might be more interesting:
+
+After the Wedding (2006) - Drama with a 7.6 AVG score
+The Last King of Scotland (2006) - Biography, Drama, History with a 7.6 AVG score
+A Little Princess (1995) - Drama, Fa",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0119815|tt0918940|tt1196956|tt0964185|tt0120036|tt0414055|tt0216216|tt0960790|tt0337876|tt1038686,Other movies like 'Centurion' (2010),115,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:25:59,True,,"['tt1234567', 'tt2345678', 'tt3456789', 'tt4567890', 'tt5678901', 'tt6789012', 'tt7890123', 'tt8901234', 'tt9012345', 'tt0123456']",tt1234567|tt2345678|tt3456789|tt4567890|tt5678901|tt6789012|tt7890123|tt8901234|tt9012345|tt0123456,"To find movies similar to 'Centurion' (2010), we need to analyze the given dataset for movies with similar genres, themes, or characteristics. 'Centurion' is classified as an Action, Drama, History film. Based on this, we will look for movies within the dataset that share these genres or have similar themes.
+
+Given the dataset, here are the steps and reasoning for the recommendations:
+
+1. **Genre Matching**: First, we identify movies that match the genres of 'Centurion', which are Action, Drama,",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt11327514|tt0816692|tt1099212|tt1038686|tt0457655|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893,"I avoid movies like 'The Story of the Weeping Camel', what would you recommend?",116,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:27:02,True,,[],,"Since the IMDB_id is null for all movies, I will provide the title of the movies that do not match 'The Story of the Weeping Camel' and are likely to be of interest. 
+
+The Story of the Weeping Camel is a Documentary|Drama|Family movie. To find opposite movies, I will look for movies that are not documentaries, dramas, or family movies. 
+
+Here are 10 movie recommendations:
+After the Wedding|Interstellar|Centurion|Far and Away|Rosewood|The 6th Day|Happy Gilmore|Legion|High Crimes|A Bittersweet Lif",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt11327514|tt1099212|tt1038686|tt0457655|tt0816692|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893,"'A Bittersweet Life' è stato terribile, consiglia l'opposto",117,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:28:07,True,,[],,"To find the opposite of 'A Bittersweet Life', we need to analyze its characteristics and find movies that are different in terms of genre, theme, and style. 'A Bittersweet Life' is an action, crime, drama film with a high rating of 7.5. 
+
+Opposite characteristics would be:
+- Genre: Instead of action, crime, drama, we look for movies with genres like comedy, romance, family, etc.
+- Theme: Instead of a dark, intense theme, we look for light-hearted, uplifting themes.
+- Style: Instead of a fast-pac",30x10,1,0.0,0.0,0.0,0.0,0,10,0,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0457655|tt0413893|tt0455590|tt0168629|tt0964185|tt0414055|tt0113670|tt0216216|tt1099212|tt0960790,Consiglia film come 'A Moment to Remember' del 2004,118,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:29:06,True,,[],,"To provide recommendations similar to 'A Moment to Remember' (2004), which is a Drama/Romance film, I'll analyze the dataset focusing on genre, year, and rating similarities. Since 'A Moment to Remember' has a high AVG_score of 8.1 and is classified under Drama and Romance, I'll look for films with similar genres and high ratings.
+
+1. **Only Yesterday** (1991) - Animation, Drama, Romance - AVG_score: 7.6
+2. **The Taste of Tea** (2004) - Comedy, Fantasy - AVG_score: 7.6 (While not strictly Romanc",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0964185|tt0414055|tt0335119|tt0337876|tt0257756|tt0457655|tt1020558|tt0104231|tt0413893|tt0455590,Recommendations based on 'Rabbit Without Ears',119,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:30:05,True,,[],,"To provide recommendations based on 'Rabbit Without Ears', I'll analyze the dataset focusing on similar genres, themes, or characteristics since 'Rabbit Without Ears' is a Comedy|Romance. Given the dataset doesn't contain IMDB IDs but rather a description of each movie, I'll refer to the movies by their titles as listed. Here are the recommendations:
+
+1. **Happy Gilmore** - As a comedy, it shares the comedic aspect with 'Rabbit Without Ears'.
+2. **Wag the Dog** - Combines comedy and drama, which",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0457655|tt0964185|tt0413893|tt0414055|tt0455590|tt0216216|tt0428870|tt0960790|tt0335119|tt0337876,"Se mi è piaciuto 'Twilight', cosa dovrei guardare?",120,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:31:05,True,,"['tt1234567', 'tt2345678', 'tt3456789', 'tt4567890', 'tt5678901', 'tt6789012', 'tt7890123', 'tt8901234', 'tt9012345', 'tt0123456']",tt1234567|tt2345678|tt3456789|tt4567890|tt5678901|tt6789012|tt7890123|tt8901234|tt9012345|tt0123456,"Since the provided dataset does not contain IMDB IDs (tt codes) and considering the user's request is based on the movie ""Twilight"", which is a Drama, Fantasy, Romance film, I will analyze the dataset to find movies with similar genres or themes. Here are the recommendations based on the available data:
+
+After analyzing the dataset, I found the following movies that share similar genres or themes with ""Twilight"":
+- A Little Princess (Drama, Family, Fantasy)
+- Only Yesterday (Animation, Drama, Ro",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt0104231|tt0113670|tt0120885|tt0116483|tt1020558|tt0120036|tt0119815|tt0102587|tt0337876|tt1038686,"'Interstellar' from 2014 disappointed me, what to watch instead?",121,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:32:06,True,,[],,"To find alternative movies to ""Interstellar"" (2014), we'll analyze the dataset for films with similar genres, themes, or characteristics, considering factors like genre, year, rating, and plot. Since ""Interstellar"" is classified as an Adventure, Drama, Sci-Fi movie, we'll look for movies within these genres or those that share similar themes of exploration, human condition, and futuristic settings.
+
+Given the dataset does not provide IMDB IDs (tt codes) but rather a list of movie titles with the",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt0816692|tt11327514|tt0457655|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893|tt0414055|tt0119815,"Ho odiato 'Birth', raccomandami film che potrebbero piacermi",122,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:33:10,True,,[],,"Per trovare film che potrebbero piacerti in base alla tua antipatia per ""Birth"", analizzerò i generi, gli anni, le valutazioni e altri attributi disponibili nel dataset. ""Birth"" è un film del 2004, appartenente ai generi Drama, Fantasy e Mystery, con una valutazione di 6.3.
+
+Ecco le raccomandazioni basate su film che potrebbero essere considerati opposti o diversi per genere, tema o caratteristiche:
+
+- **Drammi con elementi di fantasia o mistero** potrebbero non essere di tuo interesse, quindi c",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0457655|tt0455590|tt0428870|tt0168629|tt0456912|tt0964185|tt0120036|tt0414055|tt0216216|tt1099212,Film simili a 'The Taste of Tea' di Katsuhito Ishii,123,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:34:14,True,,[],,"Per trovare film simili a ""The Taste of Tea"" di Katsuhito Ishii, analizzerò i generi, gli anni e le caratteristiche dei film nel dataset. ""The Taste of Tea"" è un film del 2004 di genere Commedia|Fantasia.
+
+Ecco le raccomandazioni:
+
+Dato che non ci sono ID IMDB disponibili, utilizzerò i titoli dei film per identificarli. Tuttavia, per seguire le istruzioni, non posso fornire ID IMDB (tt) poiché non sono presenti nel dataset. Invece, fornirò i titoli dei film raccomandati, separati da ""|"", come ri",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0964185|tt0413893|tt0455590|tt0428870|tt0301414|tt0456396|tt0168629|tt0373861|tt0456912|tt0120036,Movies similar to 'After the Wedding' by Susanne Bier,124,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:35:14,True,,[],,"To find movies similar to 'After the Wedding' by Susanne Bier, we need to analyze the given dataset. 'After the Wedding' is a drama film, so we will look for other drama films or films with similar themes and characteristics. Since the IMDB_id is null for all movies, we will have to rely on other attributes such as genre, year, and AVG_score to make our recommendations.
+
+Based on the dataset, here are 10 movie recommendations similar to 'After the Wedding':
+
+The Last King of Scotland|A Little Pr",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0120036|tt0119815|tt0113670|tt0120885|tt0457655|tt0104231|tt0413893|tt0455590|tt0428870|tt0301414,Altri film di Isao Takahata simili a 'Only Yesterday',125,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:36:13,True,,"['tt002', 'tt003', 'tt004', 'tt005', 'tt006', 'tt007', 'tt008', 'tt009', 'tt010']",tt002|tt003|tt004|tt005|tt006|tt007|tt008|tt009|tt010,"Since there is no IMDB_id available in the dataset, I will provide the title of similar movies. However, to follow the required format, I will assign a temporary ID to each movie. Here are the recommendations:
+
+Only Yesterday is an Animation, Drama, Romance movie. Based on the dataset, here are 10 similar movie recommendations:
+
+tt001|A Little Princess|tt002|The Taste of Tea|tt003|After the Wedding|tt004|The Child|tt005|Girl with a Pearl Earring|tt006|Birth|tt007|Uncle Frank|tt008|One Chance|tt0",30x10,1,0.0,0.0,0.0,0.0,0,10,9,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt11327514|tt0457655|tt0816692|tt0413893|tt0119815|tt0455590|tt0113670|tt0428870|tt0102587|tt0456396,"'Twilight' non fa per me, raccomandazioni di genere opposto?",126,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:37:12,True,,[],,"To provide recommendations opposite to ""Twilight"", which is a Drama, Fantasy, Romance film, I'll look for movies that are quite different in genre, tone, and style. Given ""Twilight"" is a romantic fantasy with a strong focus on drama and relationships, I'll suggest films that are more action-oriented, comedic, or belong to entirely different genres. Since the IMDB IDs are null in the provided dataset, I'll refer to the movies by their titles and provide a list of recommended movie titles instead,",30x10,1,0.0,0.0,0.0,0.0,0,10,0,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt11327514|tt0816692|tt1099212|tt1038686|tt0457655|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893,"Ho trovato 'The Child' noioso, suggerisci qualcosa di più interessante",127,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:38:11,True,,"['tt01200000', 'tt01234567', 'tt0444444']",tt01200000|tt01234567|tt0444444,"Dato che 'The Child' è un film del 2005 con genere Crime|Drama|Romance e che l'utente lo ha trovato noioso, cercherò di suggerire qualcosa di più interessante e diverso. Ecco le mie raccomandazioni:
+
+Interstellar|Dancer in the Dark|A Moment to Remember|After the Wedding|The Last King of Scotland|Only Yesterday|The Taste of Tea|Happy Gilmore|Uncle Frank|A Little Princess
+
+Nota: poiché non ci sono ID IMDB disponibili nel dataset, non posso fornire i codici tt richiesti. Tuttavia, posso fornire i t",30x10,1,0.0,0.0,0.0,0.0,0,10,3,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0964185|tt0414055|tt0335119|tt0337876|tt0257756|tt0457655|tt1020558|tt0104231|tt0413893|tt0455590,Consiglia film come 'Rabbit Without Ears' del 2007,128,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:39:13,True,,[],,"To provide recommendations similar to 'Rabbit Without Ears' (2007), which is a Comedy|Romance film, I'll analyze the dataset focusing on genre, year, and rating similarities. Since the IMDB_id is null for all movies, I will refer to them by their title and year for identification purposes.
+
+Similar movies to 'Rabbit Without Ears' (2007) based on genre (Comedy|Romance) are:
+
+1. 'Happy Gilmore' (1996) - Comedy|Sport, while not a perfect match, it shares the comedy aspect.
+2. 'Wag the Dog' (1997) -",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0457655|tt0414055|tt0335119|tt0456396|tt0373861|tt0456912|tt0964185|tt0413893|tt0119815|tt0455590,Film simili a 'Man on the Train' di Patrice Leconte,129,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:40:17,True,,[],,"To find movies similar to 'Man on the Train' by Patrice Leconte, we need to analyze the genres, themes, and characteristics of this film and compare them with the movies in the dataset. 'Man on the Train' is a Crime, Drama, Thriller film. Based on the dataset provided, here are the steps and reasoning to find similar movies:
+
+1. **Genre Matching**: First, we look for movies that share similar genres with 'Man on the Train', which are Crime, Drama, and Thriller.
+
+2. **Theme and Characteristic Ana",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0119815|tt0120885|tt0104231|tt0120036|tt0414055|tt0113670|tt0960790|tt0301414|tt0335119|tt0102587,Pellicole che ricordano 'Happy Gilmore',130,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:41:23,True,,[],,"To find movies similar to 'Happy Gilmore', we need to analyze the given dataset for movies with similar genres, themes, or characteristics. 'Happy Gilmore' is a comedy and sport movie. Based on the dataset provided, here are the steps and reasoning to find similar movies:
+
+1. **Genre Matching**: First, we look for movies that match the genre of 'Happy Gilmore', which is Comedy and Sport. However, since there might not be many sport movies in the dataset, we will also consider movies that are pri",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0457655|tt0413893|tt0455590|tt0168629|tt0964185|tt0414055|tt0113670|tt0216216|tt1099212|tt0960790,Recommend movies like 'A Moment to Remember' from 2004,131,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:42:27,True,,[],,"To recommend movies like 'A Moment to Remember' from 2004, we need to analyze the given dataset for similar genres, themes, or characteristics. 'A Moment to Remember' is classified as a Drama/Romance. Given the dataset does not contain IMDB IDs (tt codes) but rather a description of each movie, I will identify the movies that match the criteria based on the provided information and assign a unique identifier based on their index in the dataset for the purpose of this exercise. The actual IMDB ID",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt1038686|tt0816692|tt1020558|tt0918940|tt1196956|tt11327514|tt1099212|tt0457655|tt0964185|tt0104231,"'Only Yesterday' from 1991 disappointed me, what to watch instead?",132,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:43:28,True,,[],,"Since the IMDB_id is null for all movies, I will provide the title of the recommended movies instead. Here are 10 movie recommendations that are similar to ""Only Yesterday"" (1991) but might be more to your liking:
+
+After the Wedding (2006) | The Last King of Scotland (2006) | A Little Princess (1995) | The Child (2005) | Dancer in the Dark (2000) | One Chance (2013) | Uncle Frank (2020) | The Taste of Tea (2004) | A Moment to Remember (2004) | Birth (2004)
+
+These movies share similar genres such",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0120036|tt1020558|tt0113670|tt0120885|tt0102587|tt0116483|tt0457655|tt0104231|tt0455590|tt0301414,"If I liked 'Four Days in September', what should I watch?",133,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:44:26,True,,"['tt0456789', 'tt0987654', 'tt0123467', 'tt0765432', 'tt0234567', 'tt0345678', 'tt0567890', 'tt0678901', 'tt0789012', 'tt0890123']",tt0456789|tt0987654|tt0123467|tt0765432|tt0234567|tt0345678|tt0567890|tt0678901|tt0789012|tt0890123,"To provide recommendations based on the movie ""Four Days in September"", I'll analyze the dataset focusing on similar genres, themes, and characteristics. Since ""Four Days in September"" is classified as an Action, Drama, History film, I'll look for movies that share these genres or have similar themes.
+
+1. **Rosewood** (1997) - Action, Drama, History
+2. **Centurion** (2010) - Action, Drama, History
+3. **Elizabeth: The Golden Age** (2007) - Biography, Drama, History
+4. **The Last King of Scotland*",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt1099212|tt0457655|tt0964185|tt0104231|tt0120036|tt0413893|tt0414055|tt0119815|tt0455590|tt0113670,"Ho trovato 'Uncle Frank' noioso, suggerisci qualcosa di più interessante",134,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:45:26,True,,"['tt1234567', 'tt1234568', 'tt1234569', 'tt1234570', 'tt1234571', 'tt1234572', 'tt1234573', 'tt1234574', 'tt1234575', 'tt1234576']",tt1234567|tt1234568|tt1234569|tt1234570|tt1234571|tt1234572|tt1234573|tt1234574|tt1234575|tt1234576,"Since the IMDB_id is null for all movies, I will use the title to identify the movies. 
+
+'Uncle Frank' is a Comedy|Drama movie. To find something more interesting, I will look for movies with similar genres but with higher AVG_score or different themes.
+
+Here are 10 movie recommendations:
+
+After the Wedding|The Last King of Scotland|A Little Princess|Dancer in the Dark|One Chance|Happy Gilmore|The Story of the Weeping Camel|A Bittersweet Life|Man on the Train|Birth
+
+Note: Since IMDB_id is null, ",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt0119815|tt0113670|tt0102587|tt0816692|tt0104231|tt0120036|tt0120885|tt0116483|tt0457655|tt0413893,"'Legion' non mi è piaciuto per niente, cosa altro posso guardare?",135,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:46:28,True,,[],,"To provide recommendations based on the user's dislike of 'Legion', we first analyze 'Legion' itself. 'Legion' is an Action, Fantasy, Horror movie from 2010 with an AVG_score of 5.3. Given the user's negative sentiment towards 'Legion', we aim to find movies that are somewhat opposite in style, genre, or theme, which would likely mean avoiding horror and fantasy movies with similar action-oriented plots. Instead, we might look for movies with more dramatic, romantic, or comedic elements that hav",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt0816692|tt0104231|tt0113670|tt0120885|tt0102587|tt0116483|tt0457655|tt0964185|tt0413893|tt0414055,"Found 'Centurion' boring, suggest something more interesting",136,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:47:33,True,,[],,"To address the user's request for something more interesting than 'Centurion', which is classified as an Action, Drama, History film, we'll look for movies that offer a different or more engaging experience. Since 'Centurion' received a moderate rating and is known for its action and historical elements, we'll suggest films that either amplify these aspects or offer a contrasting experience to cater to the user's desire for something more interesting.
+
+Given the dataset doesn't provide IMDB IDs ",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt1099212|tt0457655|tt0964185|tt0104231|tt0120036|tt0413893|tt0414055|tt0119815|tt0455590|tt0113670,"Mi ha fatto schifo 'Uncle Frank', raccomanda qualcosa di diverso",137,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:48:51,True,,[],,"Since 'Uncle Frank' is a Comedy|Drama movie, to find something different, I'll look for movies with different genres or themes. Here are 10 movie recommendations:
+
+After the Wedding|Interstellar|The Taste of Tea|Man on the Train|Dancer in the Dark|The Story of the Weeping Camel|A Bittersweet Life|High Crimes|Legion|The 6th Day 
+
+Note: Since IMDB_ids are null in the dataset, I used the title of the movies for the response. In a real-world scenario, you would use the actual IMDB_ids.",30x10,1,0.0,0.0,0.0,0.0,0,10,0,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt11327514|tt0816692|tt0457655|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893|tt0414055|tt0119815,"'Girl with a Pearl Earring' disgusted me, recommend something different",138,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:49:50,True,,[],,"To provide recommendations that are different from ""Girl with a Pearl Earring"", I'll analyze the given dataset and look for movies that diverge in genre, theme, or style. ""Girl with a Pearl Earring"" is a biography, drama, romance film, so I'll suggest movies from other genres or those that have distinct themes.
+
+Given the dataset doesn't contain IMDB IDs (tt codes) but rather a list of movie details, I will refer to the movies by their titles as per the dataset provided. Here are 10 movie recomm",30x10,1,0.0,0.0,0.0,0.0,0,10,0,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt11327514|tt0816692|tt0428870|tt0168629|tt0457655|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893,"'The 6th Day' del 2000 mi ha deluso, cosa guardare invece?",139,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:50:50,True,,"['tt0268126', 'tt0113161', 'tt0102842', 'tt0378875', 'tt0976056', 'tt0119157', 'tt0405813', 'tt2395425', 'tt1162318', 'tt0367188']",tt0268126|tt0113161|tt0102842|tt0378875|tt0976056|tt0119157|tt0405813|tt2395425|tt1162318|tt0367188,"Since 'The 6th Day' del 2000 has deluso (disappointed) the user, I will provide recommendations that are opposite in style, genre, or theme. 'The 6th Day' is an Action|Mystery|Sci-Fi movie. To find opposite movies, I will look for movies with different genres, such as Drama, Romance, or Comedy.
+
+Here are 10 movie recommendations:
+
+After the Wedding|A Little Princess|Only Yesterday|The Taste of Tea|Elizabeth: The Golden Age|Four Days in September|The Child|One Chance|Uncle Frank|Birth 
+
+Note: Sin",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt11327514|tt0816692|tt0457655|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893|tt0414055|tt0119815,"'High Crimes' non fa per me, raccomandazioni di genere opposto?",140,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:51:50,True,,[],,"To provide recommendations opposite to ""High Crimes"" (a Crime, Drama, Mystery movie), I'll look for movies that are significantly different in genre, tone, and style. Given that ""High Crimes"" is a serious, thriller-like movie, I'll suggest movies that are more light-hearted, comedic, or from genres that contrast with crime and mystery. Since the IMDB_id is null for all movies in the dataset, I will refer to the movies by their titles.
+
+Opposite recommendations for ""High Crimes"" could include:
+
+1",30x10,1,0.0,0.0,0.0,0.0,0,10,0,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0457655|tt0413893|tt0455590|tt0301414|tt0456396|tt0168629|tt0373861|tt0964185|tt0120036|tt0414055,Suggerisci film simili a 'A Bittersweet Life',141,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:52:57,True,,[],,"To provide recommendations similar to 'A Bittersweet Life', I'll analyze the dataset focusing on genre, year, and rating, as these are key factors in determining similarity. 'A Bittersweet Life' is an Action, Crime, Drama film from 2005 with a high AVG_score of 7.5.
+
+Given the dataset does not contain IMDB_ids (tt codes) but rather null values for ""IMDB_id"", I will refer to the movies by their titles in the analysis. However, since the final response requires movie IDs separated by ""|"", and the ",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt11327514|tt0119815|tt0113670|tt0102587|tt0116483|tt0457655|tt0964185|tt0104231|tt0120036|tt0414055,Other Barry Levinson films like 'Wag the Dog',142,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:54:03,True,,"['tt00002', 'tt00003', 'tt00004', 'tt00005', 'tt00006', 'tt00007', 'tt00008', 'tt00009', 'tt00010']",tt00002|tt00003|tt00004|tt00005|tt00006|tt00007|tt00008|tt00009|tt00010,"Since the IMDB_id is null for all movies, I will provide the title of the movies that match the request. However, I will follow the format as requested, replacing the null IMDB_id with a unique identifier for each movie.
+
+To find other Barry Levinson films like 'Wag the Dog', I will look for movies with similar genres (Comedy, Drama) and themes. 
+
+Here are 10 movie recommendations:
+Wag the Dog is a Comedy|Drama film. Based on the dataset, here are some similar films:
+After the Wedding|Interstell",30x10,1,0.0,0.0,0.0,0.0,0,10,9,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0119815|tt0102587|tt0457655|tt0964185|tt1020558|tt0104231|tt0413893|tt0414055|tt0455590|tt0113670,Cerco film del genere di 'Rosewood',143,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:55:04,True,,[],,"To find movies similar to 'Rosewood', which is classified as an Action, Drama, and History film, I will look for movies within the dataset that share similar genres. Since the IMDB_id is null for all movies, I will refer to them by their title and year for identification purposes.
+
+Similar movies to 'Rosewood' (1997) based on genre:
+1. Centurion (2010) - Action, Drama, History
+2. Four Days in September (1997) - Action, Drama, History
+3. Elizabeth: The Golden Age (2007) - Biography, Drama, Histor",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt11327514|tt0816692|tt1099212|tt1038686|tt0457655|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893,"I avoid movies like 'The Child', what would you recommend?",144,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:56:04,True,,[],,"To provide recommendations based on the request to avoid movies like 'The Child', which is a Crime, Drama, Romance film, we'll look for movies that are opposite in style, genre, or theme. Since 'The Child' deals with mature, possibly dark themes given its genres, we might look for films that are lighter, more uplifting, or belong to entirely different genres. However, given the dataset doesn't provide IMDB IDs (tt codes) but rather a list of movies without these identifiers, I'll proceed by anal",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt0816692|tt1020558|tt0918940|tt1196956|tt1038686|tt0457655|tt0964185|tt0104231|tt0120036|tt0413893,"I hated 'Wag the Dog', recommend movies I might like",145,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:57:08,True,,"['tt1234567', 'tt2345678', 'tt3456789', 'tt4567890', 'tt5678901', 'tt6789012', 'tt7890123', 'tt8901234', 'tt9012345', 'tt0123456']",tt1234567|tt2345678|tt3456789|tt4567890|tt5678901|tt6789012|tt7890123|tt8901234|tt9012345|tt0123456,"To provide recommendations based on the dislike of 'Wag the Dog', we first analyze 'Wag the Dog'. It's a Comedy/Drama from 1997 with a high AVG_score of 7.1 and a significant number of votes. Given its genre and the user's dislike, we'll look for movies that are somewhat opposite in style or theme but still engaging and well-received. Since 'Wag the Dog' is a comedy/drama, we might look for movies that are more serious or in different genres to offer a contrast. However, without specific IMDB_id",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt11327514|tt1099212|tt1038686|tt0457655|tt0816692|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893,"'The Last King of Scotland' non mi è piaciuto per niente, cosa altro posso guardare?",146,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:58:12,True,,[],,"Since 'The Last King of Scotland' has a genre of Biography, Drama, and History, and the user did not like it, I will look for movies that are opposite in style, genre, or theme. 
+
+Here are 10 movie recommendations that are different from 'The Last King of Scotland':
+
+After the Wedding|Happy Gilmore|The Taste of Tea|Rabbit Without Ears|A Little Princess|Only Yesterday|Uncle Frank|The Story of the Weeping Camel|A Moment to Remember|Dancer in the Dark 
+
+Note: Since the IMDB_id is null for all movie",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt1038686|tt0816692|tt1020558|tt0918940|tt1196956|tt11327514|tt1099212|tt0457655|tt0964185|tt0104231,"'Only Yesterday' del 1991 mi ha deluso, cosa guardare invece?",147,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 02:59:18,True,,[],,"Purtroppo, non ci sono ID IMDB disponibili nel dataset. Tuttavia, posso fornire una lista di titoli di film che potrebbero essere di tuo interesse in base alle caratteristiche del film ""Only Yesterday"" del 1991.
+
+Ecco 10 raccomandazioni di film con generi simili (animazione, dramma, romance):
+
+After the Wedding|A Little Princess|The Taste of Tea|Elizabeth: The Golden Age|Four Days in September|The Last King of Scotland|A Moment to Remember|Girl with a Pearl Earring|Birth|The Child
+
+Nota che ques",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt11327514|tt0816692|tt0457655|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893|tt0414055|tt0119815,"'High Crimes' was terrible, recommend the opposite",148,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:00:19,True,,"['tt0116483', 'tt1234567', 'tt7654321', 'tt8765432', 'tt0987654', 'tt5555555', 'tt4444444', 'tt3333333', 'tt2222222', 'tt1111111']",tt0116483|tt1234567|tt7654321|tt8765432|tt0987654|tt5555555|tt4444444|tt3333333|tt2222222|tt1111111,"To find the opposite of ""High Crimes"", we need to analyze its characteristics and find movies that are different in style, genre, or theme. ""High Crimes"" is a Crime, Drama, Mystery movie with a relatively low AVG_score of 6.4. 
+
+Here are the steps to find the opposite:
+
+1. **Genre**: The opposite of Crime, Drama, Mystery could be Comedy, Fantasy, or Family movies, which are generally lighter and more uplifting.
+2. **AVG_score**: To find highly rated movies, we look for those with higher AVG_scor",30x10,1,0.0,0.0,0.0,0.0,0,10,10,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt0816692|tt11327514|tt0457655|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893|tt0414055|tt0119815,"'Birth' from 2004 disappointed me, what to watch instead?",149,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:01:22,True,,[],,"To find alternative movies to ""Birth"" (2004), we need to analyze its characteristics and find similar movies in the dataset. ""Birth"" is a Drama, Fantasy, Mystery movie with a rating of 6.3. Here are 10 movie recommendations with similar genres or themes:
+
+After the Wedding (2006) - Drama | The Last King of Scotland (2006) - Drama, Biography, History | The Child (2005) - Crime, Drama, Romance | Dancer in the Dark (2000) - Crime, Drama, Musical | One Chance (2013) - Biography, Comedy, Drama | Uncl",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0457655|tt0414055|tt0960790|tt0335119|tt0337876|tt0257756|tt1020558|tt0104231|tt0120036|tt0413893,Cerco film del genere di 'Tetro',150,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:02:21,True,,[],,"To find movies similar to 'Tetro', which is a drama, we'll look for other dramas in the dataset. Since the IMDB_id is null for all movies, we'll have to identify them by their title and other characteristics. Here are 10 movie recommendations that match the drama genre or have similar themes:
+
+After the Wedding|The Last King of Scotland|A Little Princess|Girl with a Pearl Earring|The Child|Dancer in the Dark|One Chance|Uncle Frank|Birth|A Moment to Remember",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt1020558|tt0104231|tt0216216|tt0960790|tt0337876|tt1196956|tt1038686|tt0257756|tt0457655|tt0816692,Movies similar to 'The Legend of Tarzan' by David Yates,151,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:03:18,True,,[],,"To find movies similar to 'The Legend of Tarzan' by David Yates, we need to analyze the genres, themes, and characteristics of 'The Legend of Tarzan' and compare them with the movies in the dataset.
+
+'The Legend of Tarzan' is an Action, Adventure, Drama movie. Based on this information, we can find movies with similar genres.
+
+Here are 10 movie recommendations similar to 'The Legend of Tarzan':
+
+After analyzing the dataset, I found the following movies with similar genres:
+ 
+Centurion (Action, D",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0455590|tt0964185|tt0960790|tt0301414|tt0335119|tt0337876|tt0257756|tt0457655|tt1020558|tt0104231,Movies with similar style to 'Elizabeth: The Golden Age' from 2007,152,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:04:19,True,,[],,"To find movies with a similar style to 'Elizabeth: The Golden Age' from 2007, we need to analyze the genres, themes, and characteristics of this movie and compare them with the movies in the dataset.
+
+'Elizabeth: The Golden Age' is a Biography, Drama, and History movie. Based on the dataset, here are 10 movie recommendations with similar styles:
+
+Since the IMDB_id is null for all movies, I will use the title to identify the movies and provide a unique identifier for each. 
+
+After the Wedding (20",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt0816692|tt1020558|tt0918940|tt1196956|tt1038686|tt0457655|tt0964185|tt0104231|tt0120036|tt0413893,"'Wag the Dog' from 1997 disappointed me, what to watch instead?",153,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:05:31,True,,"['tt002', 'tt003', 'tt004', 'tt005', 'tt006', 'tt007', 'tt008', 'tt009', 'tt010\n\nPlease replace these with actual IDs if available. \n\nGiven the constraints of the problem and the requirement to follow the format to the letter, I must emphasize that the above response is a placeholder due to the absence of actual IMDB IDs in the dataset. In a real-world scenario, you would use the actual IMDB IDs of the recommended movies.']","tt002|tt003|tt004|tt005|tt006|tt007|tt008|tt009|tt010
+
+Please replace these with actual IDs if available. 
+
+Given the constraints of the problem and the requirement to follow the format to the letter, I must emphasize that the above response is a placeholder due to the absence of actual IMDB IDs in the dataset. In a real-world scenario, you would use the actual IMDB IDs of the recommended movies.","To find alternative movies to 'Wag the Dog' from 1997, we need to analyze the given dataset. 'Wag the Dog' is a Comedy|Drama movie. Since the IMDB_id is null for all movies, we will identify similar movies based on genre and year.
+
+Similar movies to 'Wag the Dog' (Comedy|Drama) are:
+- 'Uncle Frank' (Comedy|Drama)
+- 'One Chance' (Biography|Comedy|Drama)
+- 'Happy Gilmore' (Comedy|Sport)
+- 'Rabbit Without Ears' (Comedy|Romance)
+- 'The Taste of Tea' (Comedy|Fantasy)
+- 'Dancer in the Dark' (Crime|Dra",30x10,0,0.0,0.0,0.0,0.0,0,10,9,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0457655|tt0455590|tt0301414|tt0335119|tt0373861|tt0456912|tt0413893|tt0414055|tt0119815|tt0113670,Suggerisci film simili a 'The Child',154,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:06:01,True,,"['tt1234567', 'tt2345678', 'tt3456789', 'tt4567890', 'tt5678901', 'tt6789012', 'tt7890123', 'tt8901234', 'tt9012345', 'tt0123456']",tt1234567|tt2345678|tt3456789|tt4567890|tt5678901|tt6789012|tt7890123|tt8901234|tt9012345|tt0123456,"To provide movie recommendations similar to ""The Child"" (2005), I'll analyze the dataset focusing on genre, theme, and characteristics. ""The Child"" is a Crime, Drama, and Romance film. Given the dataset doesn't contain IMDB IDs but rather detailed information about each movie, I'll identify similar movies based on their genres and themes.
+
+Similar movies to ""The Child"" would likely be dramas with elements of crime or romance, possibly with a strong focus on character development and emotional de",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt11327514|tt0119815|tt0113670|tt0102587|tt0116483|tt0457655|tt0964185|tt0104231|tt0120036|tt0414055,Other movies like 'Wag the Dog' (1997),155,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:07:03,True,,[],,"To find movies similar to 'Wag the Dog' (1997), we need to analyze the given dataset for movies that share similar genres, themes, or characteristics. 'Wag the Dog' is classified as a Comedy|Drama. Given the dataset does not provide IMDB IDs (tt codes) but rather a list of movie attributes, I will identify the movies by their titles as per the dataset provided.
+
+Similar movies based on genre (Comedy|Drama) and considering other attributes like year and rating are:
+
+1. Uncle Frank (2020) - Comedy",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt0816692|tt0104231|tt0113670|tt0120885|tt0102587|tt0116483|tt0457655|tt0964185|tt0413893|tt0414055,"Ho odiato 'Centurion', raccomandami film che potrebbero piacermi",156,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:08:04,True,,[],,"Dato che non ci sono codici IMDB nel dataset, utilizzerò i titoli dei film per fornire le raccomandazioni. Inoltre, poiché non ci sono codici IMDB, non posso fornire i codici tt richiesti. Tuttavia, posso fornire i titoli dei film raccomandati.
+
+Per trovare film che potrebbero piacerti in contrario a 'Centurion', cercherò film con generi, temi o caratteristiche opposti. 'Centurion' è un film d'azione, dramma e storia, quindi cercherò film con generi come commedia, fantasia o romance.
+
+Ecco le ra",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt1099212|tt0457655|tt0964185|tt0104231|tt0120036|tt0413893|tt0414055|tt0119815|tt0455590|tt0113670,"'Uncle Frank' from 2020 disappointed me, what to watch instead?",157,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:09:02,True,,"['tt1234567', 'tt2345678', 'tt3456789', 'tt4567890', 'tt5678901', 'tt6789012', 'tt7890123', 'tt8901234', 'tt9012345', 'tt0123456']",tt1234567|tt2345678|tt3456789|tt4567890|tt5678901|tt6789012|tt7890123|tt8901234|tt9012345|tt0123456,"To find alternative movies to ""Uncle Frank"" (2020), we'll analyze the given dataset for similar genres, themes, or characteristics since ""Uncle Frank"" is classified as a Comedy|Drama. Given that ""Uncle Frank"" disappointed the user, we'll look for movies that share similar elements but might offer a fresher or more satisfying viewing experience.
+
+1. **Happy Gilmore (1996)** - Comedy|Sport: While different in theme, it shares the comedy aspect and is well-regarded.
+2. **Wag the Dog (1997)** - Come",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt0816692|tt1020558|tt0918940|tt1196956|tt11327514|tt1038686|tt0457655|tt0964185|tt0120036|tt0413893,"Can't stand 'Far and Away', find movies that don't resemble it",158,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:10:01,True,,"['tt04603355', 'tt01164835', 'tt04802367', 'tt0165452', 'tt0308461', 'tt0419677', 'tt0288162', 'tt0279614', 'tt2395425', 'tt12562484', 'tt98765432', 'tt76543210', 'tt54321098', 'tt32109876', 'tt65432109', 'tt87654321', 'tt43210987', 'tt21098765', 'tt10987654', 'tt76543211']",tt04603355|tt01164835|tt04802367|tt0165452|tt0308461|tt0419677|tt0288162|tt0279614|tt2395425|tt12562484|tt98765432|tt76543210|tt54321098|tt32109876|tt65432109|tt87654321|tt43210987|tt21098765|tt10987654|tt76543211,"To find movies that don't resemble 'Far and Away', we need to analyze its characteristics and find movies that are opposite in style, genre, or theme. 'Far and Away' is an Adventure, Drama, Romance film released in 1992, directed by Ron Howard, and starring Tom Cruise and Nicole Kidman.
+
+Here are the steps to find the opposite movies:
+
+1. Identify the genres: Adventure, Drama, Romance
+2. Identify the year: 1992
+3. Identify the director: Ron Howard
+4. Identify the main cast: Tom Cruise, Nicole Ki",30x10,1,0.0,0.0,0.0,0.0,0,10,20,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0120885|tt0457655|tt0414055|tt0119815|tt0455590|tt0113670|tt0301414|tt0335119|tt0102587|tt0456396,Altri film come 'Uncle Frank' (2020),159,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:11:02,True,,"['tt0120338', 'tt0242523', 'tt0454796', 'tt0116283', 'tt0169547', 'tt0327717', 'tt0467406', 'tt0988842', 'tt1371157', 'tt1796962']",tt0120338|tt0242523|tt0454796|tt0116283|tt0169547|tt0327717|tt0467406|tt0988842|tt1371157|tt1796962,"To find movies similar to ""Uncle Frank"" (2020), I'll analyze the dataset and look for films with similar genres, themes, or characteristics. Since ""Uncle Frank"" is a Comedy|Drama, I'll focus on movies within these genres.
+
+Here are the top 10 movie recommendations:
+
+After analyzing the dataset, I found the following movies to be similar to ""Uncle Frank"" (2020):
+
+tt0120338|tt0242523|tt0454796|tt0116283|tt0169547|tt0327717|tt0467406|tt0988842|tt1371157|tt1796962
+
+Note: Since the IMDB_id is null fo",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt11327514|tt0457655|tt0816692|tt0413893|tt0119815|tt0455590|tt0113670|tt0428870|tt0102587|tt0456396,"I despise movies like 'Twilight', suggest something completely different",160,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:12:10,True,,"['ttMan on the Train', 'ttWag the Dog', 'ttHappy Gilmore', 'ttThe Story of the Weeping Camel', 'ttA Bittersweet Life', 'ttHigh Crimes', 'ttThe Child', 'ttDancer in the Dark', 'ttUncle Frank']",ttMan on the Train|ttWag the Dog|ttHappy Gilmore|ttThe Story of the Weeping Camel|ttA Bittersweet Life|ttHigh Crimes|ttThe Child|ttDancer in the Dark|ttUncle Frank,"To suggest something completely different from 'Twilight', I'll analyze the dataset and find movies that are opposite in style, genre, or theme. 'Twilight' is a Drama, Fantasy, Romance film. I'll look for movies with different genres, themes, or characteristics.
+
+Here are 10 movie recommendations that are different from 'Twilight':
+
+After the Wedding|Man on the Train|Wag the Dog|Happy Gilmore|The Story of the Weeping Camel|A Bittersweet Life|High Crimes|The Child|Dancer in the Dark|Uncle Frank 
+",30x10,1,0.0,0.0,0.0,0.0,0,10,9,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt1038686|tt0816692|tt0918940|tt1196956|tt11327514|tt1099212|tt0457655|tt0964185|tt0104231|tt0413893,"Non sopporto 'Four Days in September', trova film che non gli assomigliano",161,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:13:08,True,,[],,"Per trovare film che non assomigliano a ""Four Days in September"", analizzerò le caratteristiche di questo film e cercherò di trovare film con caratteristiche opposte.
+
+""Four Days in September"" è un film del 1997 di genere Action, Drama, History.
+
+Ecco le caratteristiche opposte che cercherò:
+
+* Genere: Commedia, Fantasia, Animazione (opposto a Azione, Dramma, Storia)
+* Anno: Film più recenti (dopo il 2000)
+* Valutazione: Film con valutazioni più basse (sotto 6.5)
+
+Ecco le raccomandazioni:
+
+Dance",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0119815|tt0918940|tt1196956|tt0964185|tt0120036|tt0414055|tt0216216|tt0960790|tt0337876|tt1038686,"Se mi è piaciuto 'Centurion', cosa dovrei guardare?",162,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:14:08,True,,[],,"Sfortunatamente, non ci sono ID IMDB disponibili nel dataset. Tuttavia, posso fornire una lista di titoli di film che potrebbero essere di tuo interesse in base alle caratteristiche di ""Centurion"".
+
+Ecco 10 raccomandazioni di film con generi simili (azione, dramma, storia):
+
+After the Wedding|Rosewood|Four Days in September|The Last King of Scotland|Elizabeth: The Golden Age|Man on the Train|Wag the Dog|The Child|High Crimes|Legion
+
+Nota che queste raccomandazioni sono basate sui generi e temi d",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt0816692|tt0104231|tt0113670|tt0120885|tt0102587|tt0116483|tt0457655|tt0964185|tt0413893|tt0414055,"I avoid movies like 'Centurion', what would you recommend?",163,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:15:07,True,,"['tt1234567', 'tt7654321', 'tt9876543', 'tt5432109', 'tt8765432', 'tt3421098', 'tt2198765', 'tt4321987', 'tt6543210']",tt1234567|tt7654321|tt9876543|tt5432109|tt8765432|tt3421098|tt2198765|tt4321987|tt6543210,"To provide recommendations based on the request to avoid movies like 'Centurion', which is an Action|Drama|History film, we'll look for movies that are opposite in style, genre, or theme. Since 'Centurion' is characterized by its action, historical setting, and dramatic elements, we'll seek out films that are more contemporary, less action-oriented, and possibly from different genres such as comedy, romance, or fantasy, which are less likely to involve historical battles or intense action sequen",30x10,1,0.0,0.0,0.0,0.0,0,10,9,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt11327514|tt1099212|tt1038686|tt0457655|tt0816692|tt0964185|tt1020558|tt0104231|tt0120036|tt0414055,"Can't stand 'The Taste of Tea', find movies that don't resemble it",164,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:16:11,True,,"['tt0120000', 'tt0444444', 'tt1431045', 'tt0452624', 'tt0468569', 'tt0480249', 'tt0816711', 'tt1086758', 'tt1343096', 'tt1675434']",tt0120000|tt0444444|tt1431045|tt0452624|tt0468569|tt0480249|tt0816711|tt1086758|tt1343096|tt1675434,"To find movies that don't resemble 'The Taste of Tea', we need to analyze its characteristics and find movies that are opposite in style, genre, or theme. 
+
+'The Taste of Tea' is a 2004 Comedy|Fantasy movie with a high AVG_score of 7.6. 
+
+Opposite movies would likely be:
+
+- Non-comedy and non-fantasy movies
+- Movies with lower AVG_scores
+- Movies from different time periods
+
+Based on these criteria, here are 10 movie recommendations that don't resemble 'The Taste of Tea':
+
+tt0120000|tt0444444|tt",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0455590|tt0964185|tt0960790|tt0301414|tt0335119|tt0337876|tt0257756|tt0457655|tt1020558|tt0104231,Suggerisci film simili a 'Elizabeth: The Golden Age',165,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:17:12,True,,[],,"To provide movie recommendations similar to ""Elizabeth: The Golden Age"", I'll analyze the dataset focusing on genre, year, and rating, as these are key factors in determining similarity. ""Elizabeth: The Golden Age"" is classified as a Biography, Drama, History film. Given the dataset doesn't contain IMDB IDs (tt codes) but rather a list of movies with their attributes, I will identify similar movies based on their attributes and provide their titles as the identifiers, assuming that's the closest",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0119815|tt0918940|tt1196956|tt0964185|tt0120036|tt0414055|tt0216216|tt0960790|tt0337876|tt1038686,Raccomandazioni basate su 'Centurion',166,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:18:15,True,,"['tt1234567', 'tt2345678', 'tt3456789', 'tt4567890', 'tt5678901', 'tt6789012', 'tt7890123', 'tt8901234', 'tt9012345', 'tt0123456']",tt1234567|tt2345678|tt3456789|tt4567890|tt5678901|tt6789012|tt7890123|tt8901234|tt9012345|tt0123456,"To provide recommendations based on 'Centurion', I'll analyze the dataset focusing on similar genres, themes, or characteristics. 'Centurion' is classified as an Action, Drama, History film. Given the dataset doesn't contain IMDB IDs (tt codes) but rather null values for ""IMDB_id"", I will refer to the movies by their titles in the analysis. However, since the task requires returning movie IDs (tt codes) and the dataset doesn't provide them, I'll have to simulate the response based on typical IMD",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt0119815|tt0113670|tt0102587|tt0816692|tt0104231|tt0120036|tt0120885|tt0116483|tt0457655|tt0413893,"I despise movies like 'Legion', suggest something completely different",167,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:19:18,True,,[],,"To suggest something completely different from 'Legion', which is an Action|Fantasy|Horror movie, I will look for movies that are opposite in style, genre, or theme. 'Legion' has a dark, action-packed, and supernatural tone, so I will recommend movies that are lighter, more realistic, and possibly romantic or comedic.
+
+Based on the dataset, here are 10 movie recommendations that are different from 'Legion':
+
+After the Wedding|A Little Princess|Only Yesterday|The Taste of Tea|Uncle Frank|Happy Gi",30x10,1,0.0,0.0,0.0,0.0,0,10,0,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt11327514|tt0816692|tt1020558|tt0104231|tt0120036|tt0413893|tt0414055|tt0119815|tt0455590|tt0918940,"'Tetro' from 2009 disappointed me, what to watch instead?",168,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:20:20,True,,"['tt1234567', 'tt2345678', 'tt3456789', 'tt4567890', 'tt5678901', 'tt6789012', 'tt7890123', 'tt8901234', 'tt9012345', 'tt0123456']",tt1234567|tt2345678|tt3456789|tt4567890|tt5678901|tt6789012|tt7890123|tt8901234|tt9012345|tt0123456,"To find alternative movies to ""Tetro"" (2009), we'll analyze the given dataset focusing on genre, year, and rating since specific plot details are not provided. ""Tetro"" is a drama film directed by Francis Ford Coppola, released in 2009, with a rating of 6.8. Given this information, we'll look for movies that share similar characteristics but are not necessarily identical in genre or theme, aiming to provide a diverse set of recommendations.
+
+1. **Drama Genre**: Many films in the dataset are drama",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0457655|tt0455590|tt0301414|tt0335119|tt0456396|tt0456912|tt0413893|tt0414055|tt0119815|tt0113670,Pellicole che ricordano 'The Story of the Weeping Camel',169,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:21:24,True,,"['tt1234567', 'tt2345678', 'tt3456789', 'tt4567890', 'tt5678901', 'tt6789012', 'tt7890123', 'tt8901234', 'tt9012345', 'tt0123456']",tt1234567|tt2345678|tt3456789|tt4567890|tt5678901|tt6789012|tt7890123|tt8901234|tt9012345|tt0123456,"To find movies similar to ""The Story of the Weeping Camel"", I'll analyze the dataset focusing on genre, theme, and characteristics. ""The Story of the Weeping Camel"" is a Documentary, Drama, and Family film. Given the unique blend of genres, I'll look for films that share similar elements, especially those with documentary, drama, or family aspects, and consider themes that might align with the narrative of ""The Story of the Weeping Camel"", such as stories about human relationships, nature, or pe",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0457655|tt0414055|tt0960790|tt0335119|tt0337876|tt0257756|tt1020558|tt0104231|tt0120036|tt0413893,Other Francis Ford Coppola films like 'Tetro',170,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:22:31,True,,[],,"Since the IMDB_id is null for all movies, I will provide the title of the recommended movies instead. Here are 10 movie recommendations similar to 'Tetro' by Francis Ford Coppola:
+
+After the Wedding|The Last King of Scotland|Elizabeth: The Golden Age|Girl with a Pearl Earring|The Child|Dancer in the Dark|One Chance|Uncle Frank|A Moment to Remember|Birth 
+
+Note: These movies share similar genres such as Drama, and some of them also have similar themes or characteristics, like being a biography or",30x10,0,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0457655|tt0455590|tt0301414|tt0335119|tt0456396|tt0456912|tt0413893|tt0414055|tt0119815|tt0113670,Movies similar to 'The Story of the Weeping Camel' by Luigi Falorni,171,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:23:00,True,,"['tt12345678', 'tt23456789', 'tt34567890', 'tt45678901', 'tt56789012', 'tt67890123', 'tt78901234', 'tt89012345', 'tt90123456', 'tt01234567']",tt12345678|tt23456789|tt34567890|tt45678901|tt56789012|tt67890123|tt78901234|tt89012345|tt90123456|tt01234567,"To find movies similar to 'The Story of the Weeping Camel' by Luigi Falorni, we need to analyze the given dataset. 'The Story of the Weeping Camel' is a Documentary, Drama, and Family film. Since there are no IMDB IDs provided in the dataset, we will have to rely on the title, genre, and other attributes to find similar movies.
+
+Similar movies can be found by looking at films with similar genres. Given that 'The Story of the Weeping Camel' is a Documentary, Drama, and Family film, we will look f",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt0816692|tt1020558|tt0918940|tt1196956|tt11327514|tt1038686|tt0457655|tt0964185|tt0104231|tt0120036,"'Happy Gilmore' was terrible, recommend the opposite",172,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:24:09,True,,[],,"To find the opposite of 'Happy Gilmore', we need to analyze its characteristics and find movies that are opposite in style, genre, or theme. 'Happy Gilmore' is a comedy, sport movie with a high rating of 7.0 and a large number of votes. 
+
+The opposite of a comedy would be a drama or a movie with more serious themes. Considering the dataset, here are 10 movie recommendations that are opposite of 'Happy Gilmore' in terms of genre, theme, or style:
+
+After the Wedding|The Child|Dancer in the Dark|Gi",30x10,2,0.0,0.0,0.0,0.0,0,10,0,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt0816692|tt1020558|tt0918940|tt1196956|tt11327514|tt1038686|tt0457655|tt0964185|tt0104231|tt0120036,"I hated 'Happy Gilmore', recommend movies I might like",173,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:25:59,True,,[],,"To provide recommendations based on the dislike of 'Happy Gilmore', which is a comedy/sport film, I'll look for movies that are quite opposite in terms of genre, theme, and possibly tone. Since 'Happy Gilmore' is known for its comedic and light-hearted nature, I'll suggest movies that are more serious, dramatic, or belong to different genres altogether. Given the dataset doesn't provide IMDB IDs but rather a list of movies with their attributes, I'll refer to the movies by their titles as listed",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0457655|tt0455590|tt0428870|tt0168629|tt0456912|tt0964185|tt0120036|tt0414055|tt0216216|tt1099212,Film con stile simile a 'The Taste of Tea' del 2004,174,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:27:01,True,,[],,"Per trovare film con stile simile a 'The Taste of Tea' del 2004, analizzerò i generi, gli anni e le valutazioni dei film nel dataset. 'The Taste of Tea' è un film del 2004 con generi Commedia e Fantasia.
+
+Ecco le raccomandazioni:
+
+- 'Only Yesterday' (1991) - Anche se è un film d'animazione, condivide elementi di fantasia e ha una valutazione alta (7.6).
+- 'Dancer in the Dark' (2000) - Ha elementi di musical e dramma, ma la sua valutazione alta (7.9) e il mix di generi lo rendono simile per stile",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt11327514|tt0816692|tt0428870|tt0168629|tt0457655|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893,"'The 6th Day' wasn't for me, what else can I watch?",175,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:28:07,True,,[],,"To provide recommendations based on the user's dislike of ""The 6th Day"", we first analyze the characteristics of this movie. ""The 6th Day"" is an Action, Mystery, Sci-Fi film from 2000, directed by Roger Spottiswoode and starring Arnold Schwarzenegger. Given its sci-fi and action-oriented nature, for a user who didn't enjoy it, we might look for films that are quite different in genre, tone, or style.
+
+Given the dataset, here are 10 movie recommendations that contrast with ""The 6th Day"" in terms ",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0457655|tt0414055|tt0335119|tt0456396|tt0373861|tt0456912|tt0964185|tt0413893|tt0119815|tt0455590,Find movies similar to 'Man on the Train',176,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:29:09,True,,"['tt0120735', 'tt0452624', 'tt0111161', 'tt0344854', 'tt0368772', 'tt0478311', 'tt1289403', 'tt1373320', 'tt1666185', 'tt2015381']",tt0120735|tt0452624|tt0111161|tt0344854|tt0368772|tt0478311|tt1289403|tt1373320|tt1666185|tt2015381,"To find movies similar to 'Man on the Train', I analyzed the dataset and considered factors like genre, year, rating, and plot. Since 'Man on the Train' is a Crime, Drama, Thriller movie with a high AVG_score of 7.1, I looked for movies with similar genres and high ratings. Here are the recommendations:
+
+tt0120735|tt0452624|tt0111161|tt0344854|tt0368772|tt0478311|tt1289403|tt1373320|tt1666185|tt2015381
+
+Note: Since the IMDB_id is null for all movies in the dataset, I generated random tt codes fo",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0457655|tt0413893|tt0455590|tt0301414|tt0456396|tt0168629|tt0373861|tt0964185|tt0120036|tt0414055,Film con stile simile a 'A Bittersweet Life' del 2005,177,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:30:11,True,,"['tt0120735', 'tt0314331', 'tt0468569', 'tt1375666', 'tt1673434', 'tt1827487', 'tt2015381', 'tt2402157', 'tt2872732', 'tt3105516']",tt0120735|tt0314331|tt0468569|tt1375666|tt1673434|tt1827487|tt2015381|tt2402157|tt2872732|tt3105516,"Per trovare film con stile simile a 'A Bittersweet Life' del 2005, analizzerò i generi, gli anni di uscita e le valutazioni dei film nel dataset. 'A Bittersweet Life' è un film del 2005 di genere Action|Crime|Drama. Cercherò film con generi simili e valutazioni elevate.
+
+Ecco le raccomandazioni:
+
+tt0120735|tt0314331|tt0468569|tt1375666|tt1673434|tt1827487|tt2015381|tt2402157|tt2872732|tt3105516
+
+Nota: poiché gli ID IMDB sono nulli nel dataset, ho generato degli ID casuali per ogni film. Se il da",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0457655|tt0413893|tt0455590|tt0428870|tt0456912|tt0964185|tt0414055|tt0119815|tt0216216|tt1099212,"Ho amato 'Dancer in the Dark', raccomandami qualcosa di simile",178,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:31:12,True,,[],,"Per trovare film simili a ""Dancer in the Dark"", analizzerò i generi, gli anni, le valutazioni e altri attributi dei film nel dataset. ""Dancer in the Dark"" è un film del 2000 con generi Crime, Drama e Musical, con una valutazione di 7,9.
+
+Ecco le raccomandazioni:
+
+After the Wedding (2006) - Drama
+The Last King of Scotland (2006) - Biography, Drama, History
+A Little Princess (1995) - Drama, Family, Fantasy
+Only Yesterday (1991) - Animation, Drama, Romance
+The Child (2005) - Crime, Drama, Romance
+A",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt1038686|tt0816692|tt0918940|tt1196956|tt11327514|tt1099212|tt0457655|tt0964185|tt0104231|tt0413893,"I hated 'Four Days in September', recommend movies I might like",179,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:32:14,True,,"['tt0111161', 'tt0114885', 'tt0455944', 'tt0118843', 'tt0460791', 'tt0115143', 'tt0404030', 'tt0457563', 'tt0417217', 'tt0421200']",tt0111161|tt0114885|tt0455944|tt0118843|tt0460791|tt0115143|tt0404030|tt0457563|tt0417217|tt0421200,"To provide recommendations based on the dislike of 'Four Days in September', we first analyze the characteristics of this movie and then find movies in the dataset that are dissimilar to it. 'Four Days in September' is an Action, Drama, History film from 1997 with an AVG_score of 7.4.
+
+Given the instruction to recommend movies that might be liked by someone who hated 'Four Days in September', we look for films that are opposite in style, genre, or theme. This means we aim to suggest movies that ",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt1020558|tt0918940|tt1099212|tt1196956|tt0457655|tt0816692|tt0964185|tt0414055|tt0119815|tt0455590,Raccomandazioni basate su 'Legion',180,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:33:20,True,,"['tt1234567', 'tt2345678', 'tt3456789', 'tt4567890', 'tt5678901', 'tt6789012', 'tt7890123', 'tt8901234', 'tt9012345', 'tt0123456']",tt1234567|tt2345678|tt3456789|tt4567890|tt5678901|tt6789012|tt7890123|tt8901234|tt9012345|tt0123456,"To provide recommendations based on 'Legion', I'll analyze the dataset focusing on similar genres, themes, or characteristics since 'Legion' is classified as Action|Fantasy|Horror. Given the dataset doesn't contain IMDB IDs (tt codes) but rather null values for ""IMDB_id"", I will refer to the movies by their titles in the analysis. However, since the instruction requires the response to be in a specific format with ""tt"" codes, and the actual ""tt"" codes are not provided in the dataset, I will simu",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt1020558|tt0964185|tt0414055|tt0918940|tt0960790|tt0301414|tt0335119|tt0120885|tt0337876|tt11327514,Recommend movies like 'One Chance' from 2013,181,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:34:20,True,,"['tt002', 'tt003', 'tt004', 'tt005', 'tt006', 'tt007', 'tt008', 'tt009', 'tt010']",tt002|tt003|tt004|tt005|tt006|tt007|tt008|tt009|tt010,"To recommend movies like 'One Chance' from 2013, I will analyze the dataset and find movies with similar genres, themes, or characteristics.
+
+'One Chance' is a Biography, Comedy, Drama movie. Based on the dataset, here are 10 movie recommendations that match the request:
+
+After analyzing the dataset, I found that the following movies have similar genres or themes:
+- 'Wag the Dog' (1997) is a Comedy, Drama movie
+- 'Happy Gilmore' (1996) is a Comedy, Sport movie
+- 'Uncle Frank' (2020) is a Comedy,",30x10,1,0.0,0.0,0.0,0.0,0,10,9,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0964185|tt0414055|tt0960790|tt0301414|tt0456396|tt0373861|tt0257756|tt0457655|tt0119815|tt0455590,Suggerisci film simili a 'Girl with a Pearl Earring',182,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:35:20,True,,"['tt0123456', 'tt0673926', 'tt0468562', 'tt0455834', 'tt0166122', 'tt2386498', 'tt1174364', 'tt0457661', 'tt0104258', 'tt0357804']",tt0123456|tt0673926|tt0468562|tt0455834|tt0166122|tt2386498|tt1174364|tt0457661|tt0104258|tt0357804,"To provide movie recommendations similar to ""Girl with a Pearl Earring,"" we'll analyze the dataset focusing on genres, themes, and characteristics. ""Girl with a Pearl Earring"" is classified as a Biography, Drama, Romance, which suggests the user might enjoy period dramas, romantic stories, or films based on real events. Given the dataset doesn't contain IMDB IDs but rather detailed information about each movie, we'll identify similar movies based on their genres and themes.
+
+Similar movies to ""G",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt11327514|tt0457655|tt0816692|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893|tt0119815|tt0918940,"I despise movies like 'Elizabeth: The Golden Age', suggest something completely different",183,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:36:25,True,,[],,"To suggest something completely different from 'Elizabeth: The Golden Age', which is a Biography, Drama, History film, I will look for movies that are opposite in style, genre, or theme. Since 'Elizabeth: The Golden Age' is a historical drama with a serious tone, I will recommend movies that are more light-hearted, possibly from different genres such as comedy, animation, or fantasy.
+
+Based on the dataset provided, here are 10 movie recommendations that are quite different from 'Elizabeth: The G",30x10,1,0.0,0.0,0.0,0.0,0,10,0,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt1020558|tt0104231|tt0120036|tt0413893|tt0918940|tt1196956|tt1038686,Other Christopher Nolan films like 'Interstellar',184,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:37:25,True,,[],,"Since there is no IMDB_id in the dataset, I will provide the title of the movies that match the request. However, I will follow the format as requested, replacing the IMDB_id with the title.
+
+To find other Christopher Nolan films like 'Interstellar', I will look for movies with similar genres (Adventure, Drama, Sci-Fi) and themes. Unfortunately, there is only one Christopher Nolan film in the dataset, which is 'Interstellar'. 
+
+However, I can recommend other movies with similar genres:
+
+After th",30x10,1,0.0,0.0,0.0,0.0,0,7,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt11327514|tt1099212|tt1038686|tt0457655|tt0816692|tt0964185|tt1020558|tt0104231|tt0120036|tt0413893,"'The Last King of Scotland' isn't my type, recommendations for opposite genre?",185,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:38:22,True,,[],,"To find the opposite genre of ""The Last King of Scotland"", we first need to identify its genre. ""The Last King of Scotland"" is classified as a Biography, Drama, and History movie. 
+
+Opposite genres can be subjective, but generally, we can consider genres like Comedy, Animation, Fantasy, or Romance as opposites to Biography, Drama, and History, as they tend to have lighter, more fictional, or less historically grounded content.
+
+Given the dataset, here are 10 movie recommendations that fit into t",30x10,1,0.0,0.0,0.0,0.0,0,10,0,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0455590|tt0964185|tt0960790|tt0301414|tt0335119|tt0337876|tt0257756|tt0457655|tt1020558|tt0104231,Cerco film del genere di 'Elizabeth: The Golden Age',186,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:39:24,True,,[],,"To find movies similar to 'Elizabeth: The Golden Age', which is a Biography, Drama, and History film, I will look for movies in the dataset that share similar genres. Since the IMDB_id is null for all movies, I will refer to them by their title and year for identification purposes.
+
+Similar movies based on genre:
+1. The Last King of Scotland (2006) - Biography, Drama, History
+2. Girl with a Pearl Earring (2003) - Biography, Drama, Romance
+3. Four Days in September (1997) - Action, Drama, History",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0457655|tt0964185|tt0413893|tt0414055|tt0455590|tt0216216|tt0428870|tt0960790|tt0335119|tt0337876,Suggerisci film simili a 'Twilight',187,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:40:24,True,,"['tt1234567', 'tt2345678', 'tt3456789', 'tt4567890', 'tt5678901', 'tt6789012', 'tt7890123', 'tt8901234', 'tt9012345', 'tt0123456']",tt1234567|tt2345678|tt3456789|tt4567890|tt5678901|tt6789012|tt7890123|tt8901234|tt9012345|tt0123456,"To provide movie recommendations similar to ""Twilight"", I'll analyze the dataset focusing on genres, themes, and characteristics. ""Twilight"" is categorized as Drama, Fantasy, and Romance. Given this, I'll look for movies that share similar genres and themes.
+
+1. **A Little Princess** (1995) - Drama, Family, Fantasy: Shares the fantasy element and has a strong dramatic storyline.
+2. **Only Yesterday** (1991) - Animation, Drama, Romance: Although animated, it shares the drama and romance genres.
+3",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt1020558|tt0964185|tt0414055|tt0918940|tt0960790|tt0301414|tt0335119|tt0120885|tt0337876|tt11327514,Altri film come 'One Chance' (2013),188,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:41:27,True,,"['tt01200000', 'tt01200001', 'tt01200002', 'tt01200003', 'tt01200004', 'tt01200005', 'tt01200006', 'tt01200007', 'tt01200008', 'tt01200009', 'tt01200010']",tt01200000|tt01200001|tt01200002|tt01200003|tt01200004|tt01200005|tt01200006|tt01200007|tt01200008|tt01200009|tt01200010,"To find movies similar to ""One Chance"" (2013), we need to analyze its genres, which are Biography, Comedy, and Drama. Based on the provided dataset, here are 10 movie recommendations that share similar genres or characteristics:
+
+1. Uncle Frank (2020) - Comedy, Drama
+2. Happy Gilmore (1996) - Comedy
+3. Wag the Dog (1997) - Comedy, Drama
+4. Rabbit Without Ears (2007) - Comedy, Romance
+5. The Child (2005) - Crime, Drama, Romance
+6. Birth (2004) - Drama, Fantasy, Mystery
+7. Girl with a Pearl Earrin",30x10,1,0.0,0.0,0.0,0.0,0,10,11,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt0119815|tt0113670|tt0102587|tt0816692|tt0104231|tt0120036|tt0120885|tt0116483|tt0457655|tt0413893,"'Legion' wasn't for me, what else can I watch?",189,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:42:26,True,,"['tt1234567', 'tt2345678', 'tt3456789', 'tt4567890', 'tt5678901', 'tt6789012', 'tt7890123', 'tt8901234', 'tt9012345', 'tt0123456']",tt1234567|tt2345678|tt3456789|tt4567890|tt5678901|tt6789012|tt7890123|tt8901234|tt9012345|tt0123456,"To provide recommendations based on the user's request that ""'Legion' wasn't for me, what else can I watch?"", we need to analyze the genres and themes of ""Legion"" and find movies in the dataset that are significantly different or offer a contrasting viewing experience. ""Legion"" is classified as Action|Fantasy|Horror, so we'll look for movies that diverge from these genres.
+
+Given the dataset, here are the steps and reasoning for the recommendations:
+
+1. **Identify the genres of ""Legion""**: Actio",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0119815|tt0102587|tt0457655|tt0964185|tt1020558|tt0104231|tt0413893|tt0414055|tt0455590|tt0113670,Suggest films similar to 'Rosewood',190,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:43:30,True,,[],,"To suggest films similar to 'Rosewood', I'll analyze the dataset and look for movies with similar genres, themes, or characteristics. 'Rosewood' is an Action, Drama, and History film. Based on the dataset, here are 10 movie recommendations that match the request:
+
+Since the IMDB_id is null for all movies, I will use the title to identify the movies and provide a unique identifier for each. Here are the recommendations:
+
+After analyzing the dataset, I found the following movies to be similar to '",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt11327514|tt0216216|tt1099212|tt1038686|tt0457655|tt0816692|tt0964185|tt1020558|tt0104231|tt0120036,"'Dancer in the Dark' from 2000 disappointed me, what to watch instead?",191,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:44:27,True,,"['tt12345678', 'tt23456789', 'tt34567890', 'tt45678901', 'tt56789012', 'tt67890123', 'tt78901234', 'tt89012345', 'tt90123456', 'tt01234567']",tt12345678|tt23456789|tt34567890|tt45678901|tt56789012|tt67890123|tt78901234|tt89012345|tt90123456|tt01234567,"To find alternative movies to ""Dancer in the Dark"" from 2000, we need to analyze its genres, which are Crime, Drama, and Musical. Since the user was disappointed with ""Dancer in the Dark,"" we'll look for movies that share some similarities but also offer something different, considering factors like genre, year, rating, and plot. Given the unique blend of genres in ""Dancer in the Dark,"" we'll focus on dramas and movies with strong musical or emotional elements. Here are ten recommendations based",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt1020558|tt0918940|tt1099212|tt1196956|tt0457655|tt0816692|tt0964185|tt0414055|tt0119815|tt0455590,"Se mi è piaciuto 'Legion', cosa dovrei guardare?",192,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:45:30,True,,[],,"Per trovare dei film simili a 'Legion', ho analizzato il dataset e ho selezionato i film con generi e caratteristiche simili. Ecco le mie raccomandazioni:
+
+Interstellar|The 6th Day|Centurion|The Legend of Tarzan|High Crimes|Man on the Train|Dancer in the Dark|A Bittersweet Life|The Story of the Weeping Camel|Four Days in September
+
+Nota che poiché non ci sono ID IMDB disponibili nel dataset, non posso fornire i codici tt. Tuttavia, ho selezionato i film in base ai generi e alle caratteristiche s",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt0816692|tt0918940|tt1196956|tt11327514|tt1038686|tt0457655|tt0964185|tt0104231|tt0413893|tt0414055,"I despise movies like 'Rosewood', suggest something completely different",193,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:46:27,True,,"['tt0478311', 'tt0418773', 'tt0102843', 'tt0116483', 'tt1238045', 'tt0113143', 'tt0374546', 'tt0367185', 'tt0405339', 'tt0369266']",tt0478311|tt0418773|tt0102843|tt0116483|tt1238045|tt0113143|tt0374546|tt0367185|tt0405339|tt0369266,"To suggest something completely different from 'Rosewood', I'll analyze the given movie and find contrasting characteristics.
+
+'Rosewood' is an Action, Drama, History movie from 1997 with an AVG_score of 7.2. 
+
+To find opposite movies, I'll look for films with different genres, themes, or characteristics. Here are 10 movie recommendations that are quite different from 'Rosewood':
+
+After the Wedding|The Taste of Tea|Only Yesterday|Happy Gilmore|Uncle Frank|A Little Princess|The Story of the Weepi",30x10,1,0.0,0.0,0.0,0.0,0,10,10,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,negative_similarity,tt0104231|tt0120036|tt0119815|tt0113670|tt0120885|tt0102587|tt0116483|tt0816692|tt0457655|tt0964185,"Can't stand 'One Chance', find movies that don't resemble it",194,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:47:25,True,,"['tt0120338', 'tt0111161', 'tt1375666', 'tt0317705', 'tt0458354', 'tt0403287', 'tt0446029', 'tt0395161', 'tt0419267', 'tt0451279']",tt0120338|tt0111161|tt1375666|tt0317705|tt0458354|tt0403287|tt0446029|tt0395161|tt0419267|tt0451279,"To find movies that don't resemble 'One Chance', we need to analyze its characteristics and find movies that are opposite in style, genre, or theme. 'One Chance' is a Biography, Comedy, Drama film with a relatively high AVG_score of 6.8 and a duration of 103 minutes.
+
+Here are the steps to find the opposite movies:
+
+1. Identify the genres of 'One Chance': Biography, Comedy, Drama.
+2. Find movies with opposite genres, such as Action, Horror, Sci-Fi, etc.
+3. Consider the year of release. 'One Chan",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0457655|tt0413893|tt0455590|tt0301414|tt0456396|tt0168629|tt0373861|tt0964185|tt0120036|tt0414055,Movies similar to 'A Bittersweet Life' by Kim Jee-woon,195,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:48:27,True,,[],,"To find movies similar to 'A Bittersweet Life' by Kim Jee-woon, we need to analyze the given dataset. 'A Bittersweet Life' is an Action|Crime|Drama film. Based on the genre, here are 10 movie recommendations:
+
+Since the IMDB_id is null for all movies, I will use the title to identify the movies and provide a unique identifier for each. 
+
+1. Centurion (Action|Drama|History) - Similar action and drama elements
+2. The Legend of Tarzan (Action|Adventure|Drama) - Action and drama elements
+3. High Cri",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt0816692|tt0104231|tt0113670|tt0120885|tt0102587|tt0116483|tt0457655|tt0964185|tt0413893|tt0414055,"Detesto film come 'Centurion', suggerisci qualcosa di completamente diverso",196,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:49:26,True,,[],,"Dato che non ci sono codici IMDB nel dataset, utilizzerò i titoli dei film per fornire le raccomandazioni. 
+
+Il film ""Centurion"" è un film d'azione, dramma e storia del 2010. Per suggerire qualcosa di completamente diverso, cercherò film con generi, temi o caratteristiche opposti.
+
+Ecco 10 raccomandazioni di film diversi da ""Centurion"":
+
+After the Wedding | The Taste of Tea | A Little Princess | Only Yesterday | Uncle Frank | Happy Gilmore | The Story of the Weeping Camel | A Moment to Remember ",30x10,1,0.0,0.0,0.0,0.0,0,10,0,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,english,positive_similarity,tt0457655|tt0964185|tt0413893|tt0414055|tt0455590|tt0216216|tt0428870|tt0960790|tt0335119|tt0337876,Looking for movies in the vein of 'Twilight',197,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:50:31,True,,[],,"To find movies similar to 'Twilight', we need to analyze the genres, themes, and characteristics of 'Twilight' and match them with the movies in the dataset. 'Twilight' is a Drama, Fantasy, Romance movie. Based on the dataset, here are 10 movie recommendations that match the genres and themes of 'Twilight':
+
+After analyzing the dataset, I found the following movies that match the genres and themes of 'Twilight':
+The Taste of Tea (Comedy, Fantasy), A Little Princess (Drama, Family, Fantasy), Only",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,positive_similarity,tt0964185|tt0414055|tt0960790|tt0301414|tt0456396|tt0373861|tt0257756|tt0457655|tt0119815|tt0455590,Consiglia film come 'Girl with a Pearl Earring' del 2003,198,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:51:31,True,,"['tt1234567', 'tt2345678', 'tt3456789', 'tt4567890', 'tt5678901', 'tt6789012', 'tt7890123', 'tt8901234', 'tt9012345', 'tt0123456']",tt1234567|tt2345678|tt3456789|tt4567890|tt5678901|tt6789012|tt7890123|tt8901234|tt9012345|tt0123456,"To provide recommendations similar to ""Girl with a Pearl Earring"" (2003), we need to analyze the given dataset for movies with similar genres, themes, or characteristics. ""Girl with a Pearl Earring"" is classified as a Biography, Drama, Romance film. Given the dataset does not provide IMDB IDs (tt codes) but rather a list of movies with their attributes, we will identify similar movies based on their genres and themes.
+
+Similar movies to ""Girl with a Pearl Earring"" would likely be those that shar",30x10,1,0.0,0.0,0.0,0.0,0,10,10,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/similarity/imdb_dataset_cut_300.csv,italian,negative_similarity,tt0816692|tt1020558|tt0918940|tt1196956|tt1038686|tt0457655|tt0964185|tt0104231|tt0120036|tt0413893,"'Wag the Dog' del 1997 mi ha deluso, cosa guardare invece?",199,NULL,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,2025-10-22 03:52:35,True,,[],,"Per trovare un film che sia il contrario di ""Wag the Dog"" (1997), analizzerò i generi, gli anni, le valutazioni e le trame dei film nel dataset. ""Wag the Dog"" è una commedia/dramma, quindi cercherò film con generi diversi, come azione, avventura, fantascienza o film con un tono più serio.
+
+Ecco le mie raccomandazioni:
+
+Interstellar (2014) è un film di fantascienza/avventura con un tono serio e una valutazione alta (8.7), molto diverso da ""Wag the Dog"".
+After the Wedding (2006) è un drama con un ",30x10,1,0.0,0.0,0.0,0.0,0,10,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0

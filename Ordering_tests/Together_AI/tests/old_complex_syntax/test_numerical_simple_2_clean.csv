@@ -1,0 +1,3 @@
+,db_path,db_id,tbl_name,test_category,sql_tag,query,question
+80,data/db_numerical_simple_2.sqlite,db,student_performance_dataset,ORDERBY,ORDERBY-PROJECT,SELECT `pass_status` FROM `student_performance_dataset` ORDER BY `pass_status` ASC LIMIT 5,Project the pass_status ordered in ascending order for the table student_performance_dataset and show only the first 5 entries
+81,data/db_numerical_simple_2.sqlite,db,student_performance_dataset,ORDERBY,ORDERBY-PROJECT,SELECT `pass_status` FROM `student_performance_dataset` ORDER BY `pass_status` DESC LIMIT 5,Project the pass_status ordered in descending order for the table student_performance_dataset and show only the first 5 entries

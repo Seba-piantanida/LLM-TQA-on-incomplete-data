@@ -1,0 +1,138 @@
+# METRICS ANALYSIS REPORT
+Dataset: 4554 rows, 33 features, 6 targets
+==================================================
+
+## GENERAL STATISTICS
+Total rows: 4554
+Available features: 33
+Available targets: 6
+
+## MODEL PERFORMANCE
+
+### cell_precision:
+  Random Forest:
+    - R² Test: 0.265
+    - R² CV: 0.252 ± 0.051
+    - MAE: 0.229
+  Decision Tree:
+    - R² Test: 0.224
+    - R² CV: 0.227 ± 0.083
+    - MAE: 0.245
+  Ridge:
+    - R² Test: 0.049
+    - R² CV: 0.070 ± 0.027
+    - MAE: 0.307
+
+### cell_recall:
+  Random Forest:
+    - R² Test: 0.263
+    - R² CV: 0.242 ± 0.052
+    - MAE: 0.233
+  Decision Tree:
+    - R² Test: 0.191
+    - R² CV: 0.230 ± 0.052
+    - MAE: 0.255
+  Ridge:
+    - R² Test: 0.056
+    - R² CV: 0.070 ± 0.023
+    - MAE: 0.309
+
+### execution_accuracy:
+  Random Forest:
+    - R² Test: 0.215
+    - R² CV: 0.208 ± 0.034
+    - MAE: 0.309
+  Decision Tree:
+    - R² Test: 0.203
+    - R² CV: 0.212 ± 0.035
+    - MAE: 0.324
+  Ridge:
+    - R² Test: 0.159
+    - R² CV: 0.189 ± 0.016
+    - MAE: 0.400
+
+### tuple_cardinality:
+  Random Forest:
+    - R² Test: -0.429
+    - R² CV: -0.109 ± 0.126
+    - MAE: 0.017
+  Decision Tree:
+    - R² Test: -0.393
+    - R² CV: -0.160 ± 0.197
+    - MAE: 0.018
+  Ridge:
+    - R² Test: -0.087
+    - R² CV: 0.079 ± 0.054
+    - MAE: 0.026
+
+### tuple_constraint:
+  Random Forest:
+    - R² Test: 0.318
+    - R² CV: 0.291 ± 0.026
+    - MAE: 0.279
+  Decision Tree:
+    - R² Test: 0.313
+    - R² CV: 0.288 ± 0.033
+    - MAE: 0.284
+  Ridge:
+    - R² Test: 0.232
+    - R² CV: 0.229 ± 0.018
+    - MAE: 0.351
+
+### tuple_order:
+  Random Forest:
+    - R² Test: 0.461
+    - R² CV: 0.422 ± 0.042
+    - MAE: 0.150
+  Decision Tree:
+    - R² Test: 0.459
+    - R² CV: 0.437 ± 0.052
+    - MAE: 0.157
+  Ridge:
+    - R² Test: 0.440
+    - R² CV: 0.428 ± 0.011
+    - MAE: 0.185
+
+## TOP FEATURES PER TARGET
+
+### cell_precision:
+  1. token_prompt_count: 0.215
+  2. semantic_complexity: 0.199
+  3. query_complexity: 0.155
+  4. text_length: 0.142
+  5. avg_unique_vals: 0.038
+
+### cell_recall:
+  1. token_prompt_count: 0.215
+  2. semantic_complexity: 0.183
+  3. query_complexity: 0.166
+  4. text_length: 0.146
+  5. num_nouns: 0.036
+
+### execution_accuracy:
+  1. text_length: 0.362
+  2. semantic_complexity: 0.145
+  3. query_complexity: 0.145
+  4. token_prompt_count: 0.087
+  5. num_selected_columns: 0.033
+
+### tuple_cardinality:
+  1. token_prompt_count: 0.347
+  2. query_complexity: 0.139
+  3. semantic_complexity: 0.135
+  4. text_length: 0.102
+  5. num_adjectives: 0.051
+
+### tuple_constraint:
+  1. text_length: 0.361
+  2. semantic_complexity: 0.158
+  3. query_complexity: 0.109
+  4. token_prompt_count: 0.093
+  5. avg_unique_vals: 0.035
+
+### tuple_order:
+  1. text_length: 0.206
+  2. num_selected_columns: 0.157
+  3. has_order_by: 0.096
+  4. semantic_complexity: 0.088
+  5. has_limit: 0.088

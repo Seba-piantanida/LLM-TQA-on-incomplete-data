@@ -1,0 +1,6 @@
+db_path,db_id,tbl_name,test_category,sql_tag,query,question
+data/db_numerical_simple.sqlite,db,BMI,ORDERBY,ORDERBY-PROJECT,SELECT `BMI` FROM `BMI` ORDER BY `BMI` DESC LIMIT 25,Select only the column `BMI` from `BMI`. Sort it in descending order and return the first 25 values.
+data/db_numerical_simple.sqlite,db,energy_consumption,ORDERBY,ORDERBY-PROJECT,SELECT `id` FROM `energy_consumption` ORDER BY `id` DESC LIMIT 25,Select only the column `id` from `energy_consumption`. Sort it in descending order and return the first 25 values.
+data/db_numerical_simple.sqlite,db,energy_consumption,ORDERBY,ORDERBY-PROJECT,SELECT `total_cost` FROM `energy_consumption` ORDER BY `total_cost` ASC LIMIT 25,Select only the column `total_cost` from `energy_consumption`. Sort it in ascending order and return the first 25 values.
+data/db_numerical_simple.sqlite,db,logistics_delivery,ORDERBY,ORDERBY-PROJECT,SELECT `id` FROM `logistics_delivery` ORDER BY `id` DESC LIMIT 25,Select only the column `id` from `logistics_delivery`. Sort it in descending order and return the first 25 values.
+data/db_numerical_simple.sqlite,db,student_performance,ORDERBY,ORDERBY-PROJECT,SELECT `id` FROM `student_performance` ORDER BY `id` ASC LIMIT 25,Select only the column `id` from `student_performance`. Sort it in ascending order and return the first 25 values.

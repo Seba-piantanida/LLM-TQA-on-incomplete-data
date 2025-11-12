@@ -1,0 +1,348 @@
+db_path,table_name,test_category,query,model,AI_answer,SQL_query,failed_attempts,note,valid_efficiency_score,cell_precision,cell_recall,execution_accuracy,tuple_cardinality,tuple_constraint,tuple_order
+data/db_complete_cut_400.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `grade` from `breast_cancer`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[3], [3], [2], [2], [2]]",SELECT `grade` FROM `breast_cancer` ORDER BY `grade` DESC LIMIT 5,0,,0.0,0.5,1.0,0.0,1.0,0.0,1.0
+data/db_complete_cut_400.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `pgr` from `breast_cancer`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[None], [None], [None], [None], [None]]",SELECT `pgr` FROM `breast_cancer` ORDER BY `pgr` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_400.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `meno` from `breast_cancer`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [0], [0], [0], [0]]",SELECT `meno` FROM `breast_cancer` ORDER BY `meno` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_400.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `er` from `breast_cancer`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[None], [None], [None], [None], [None]]",SELECT `er` FROM `breast_cancer` ORDER BY `er` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_400.sqlite,fitness_trakers,ORDERBY-PROJECT,Select only the column `Color` from `fitness_trakers`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Black'], ['Blue'], ['Green'], ['Purple'], ['Red']]",SELECT `Color` FROM `fitness_trakers` ORDER BY `Color` ASC LIMIT 5,0,,0.0,0.2,1.0,0.0,1.0,0.0,1.0
+data/db_complete_cut_400.sqlite,fitness_trakers,ORDERBY-PROJECT,Select only the column `Display` from `fitness_trakers`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['E-ink'], ['LCD'], ['LED'], ['OLED'], ['Touchscreen']]",SELECT `Display` FROM `fitness_trakers` ORDER BY `Display` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_400.sqlite,heart_attack,ORDERBY-SINGLE,"List the top 5 rows from the table `heart_attack`, sorted by the column `ca` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[42, 1, 0, 140, 226, 0, 1, 178, 0, 0.0, 2, 0, 2, 1], [44, 1, 2, 130, 233, 0, 1, 179, 1, 0.4, 2, 0, 2, 1], [40, 1, 3, 140, 199, 0, 1, 178, 1, 1.4, 2, 0, 3, 1], [43, 1, 0, 150, 247, 0, 1, 171, 0, 1.5, 2, 0, 2, 1], [59, 1, 0, 135, 234, 0, 1, 161, 0, 0.5, 1, 0, 3, 1]]",SELECT * FROM `heart_attack` ORDER BY `ca` ASC LIMIT 5,0,,0.0,0.346,0.333,0.0,1.0,0.0,0.5
+data/db_complete_cut_400.sqlite,heart_attack,ORDERBY-SINGLE,"List the top 5 rows from the table `heart_attack`, sorted by the column `fbs` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[37, 1, 2, 130, 250, 0, 1, 187, 0, 3.5, 0, 0, 2, 1], [41, 0, 1, 130, 204, 0, 0, 172, 0, 1.4, 2, 0, 2, 1], [56, 1, 1, 120, 236, 0, 1, 178, 0, 0.8, 2, 0, 2, 1], [57, 0, 0, 120, 354, 0, 1, 163, 1, 0.6, 2, 0, 2, 1], [57, 1, 0, 140, 192, 0, 1, 148, 0, 0.4, 1, 0, 1, 1]]",SELECT * FROM `heart_attack` ORDER BY `fbs` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_complete_cut_400.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `restecg` from `heart_attack`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[None], [None], [None], [None], [None]]",SELECT `restecg` FROM `heart_attack` ORDER BY `restecg` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_400.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `thal` from `heart_attack`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [0], [0], [0], [0]]",SELECT `thal` FROM `heart_attack` ORDER BY `thal` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_400.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `exang` from `heart_attack`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[None], [None], [None], [None], [None]]",SELECT `exang` FROM `heart_attack` ORDER BY `exang` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_400.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `slope` from `heart_attack`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[None], [None], [None], [None], [None]]",SELECT `slope` FROM `heart_attack` ORDER BY `slope` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_400.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `ca` from `heart_attack`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [0], [0], [0], [0]]",SELECT `ca` FROM `heart_attack` ORDER BY `ca` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_complete_cut_400.sqlite,mobiles,ORDERBY-SINGLE,"List the top 5 rows from the table `mobiles`, sorted by the column `Processor` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Apple', 'iPhone 14 128GB', '172g', '6GB', '12MP', '12MP + 12MP', 'A15 Bionic', '3,200mAh', '6.1 inches', 'PKR 184,999', 'INR 69,999', 'CNY 5,199', 'USD 799', 'AED 2,699', '2022'], ['Apple', 'iPhone 14 256GB', '172g', '6GB', '12MP', '12MP + 12MP', 'A15 Bionic', '3,200mAh', '6.1 inches', 'PKR 194,999', 'INR 74,999', 'CNY 5,599', 'USD 849', 'AED 2,999', '2022'], ['Apple', 'iPhone 15 128GB', '171g', '6GB', '12MP', '48MP', 'A15 Bionic', '3,200mAh', '6.1 inches', 'PKR 204,999', 'INR 74,999', 'CNY 5,299', 'USD 799', 'AED 2,699', '2023'], ['Apple', 'iPhone 15 256GB', '171g', '6GB', '12MP', '48MP', 'A15 Bionic', '3,200mAh', '6.1 inches', 'PKR 214,999', 'INR 79,999', 'CNY 5,599', 'USD 849', 'AED 2,999', '2023'], ['Apple', 'iPhone 15 512GB', '171g', '6GB', '12MP', '48MP', 'A15 Bionic', '3,200mAh', '6.1 inches', 'PKR 224,999', 'INR 89,999', 'CNY 5,999', 'USD 949', 'AED 3,199', '2023']]",SELECT * FROM `mobiles` ORDER BY `Processor` ASC LIMIT 5,0,,0.0,1.0,0.973,0.0,1.0,0.4,1.0
+data/db_complete_cut_400.sqlite,mobiles,ORDERBY-PROJECT,Select only the column `RAM` from `mobiles`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['8GB'], ['8GB'], ['8GB'], ['8GB'], ['8GB']]",SELECT `RAM` FROM `mobiles` ORDER BY `RAM` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_complete_cut_400.sqlite,mobiles,ORDERBY-PROJECT,Select only the column `Model Name` from `mobiles`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['iPhone 16 Pro Max'], ['iPhone 16 Pro'], ['iPhone 16'], ['iPhone 15 Pro Max'], ['iPhone 15 Pro']]",SELECT `Model Name` FROM `mobiles` ORDER BY `Model Name` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_400.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `grade` from `breast_cancer`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `grade` FROM `breast_cancer` ORDER BY `grade` DESC LIMIT 5,3,"<think>
+Alright, let's tackle this problem step by step. The user has provided a dataset and a specific query. My goal is to respond accurately, following all the given instructions.
+
+First, I need to understand the dataset. It's about mobile phones, with various attributes like Company Name, Model Name, Mobile Weight, RAM, etc. The Company Name is all Apple, which makes sense since it's a single company's data.
+
+Looking at the query: the user wants to select only the 'Model Name' column from 'mobiles', sort it in descending order, and return the first 5 values. But wait, I notice that in the dataset provided, the 'Model Name' column is entirely null. That's a problem because there's no data to sort or retrieve.
+
+The instructions say that if any data fields are null, missing, or incomplete, I should infer and fill them with the most logical and contextually appropriate values. So, I need to figure out what the model names should be for these Apple devices.
+
+Given that all entries are from Apple and the 'Launched Year' ranges from 2022 to 2024, I can assume these are iPhone models. Apple typically releases iPhones with numbers or names like iPhone 15, 15 Pro, etc. Since there are 26 entries, it's likely a combination of different models across these years.
+
+I'll start by assigning model names based on the years. For 2024 models, they could be iPhone 16, 16 Plus, 16 Pro, and 16 Pro Max. For 2023, maybe iPhone 15, 15 Pro, etc., and for 2022, iPhone 14 models. I'll distribute these across the 26 entries, ensuring each has a logical model name.
+
+Next, I need to sort these model names in descending order. Since model names like Pro Max come after the base models, I'll order them from highest to lowest. For example, iPhone 16 Pro Max would come before iPhone 16 Pro, which comes before iPhone 16, and so on.
+
+After sorting, I'll pick the top 5 model names. These would likely be the latest and highest-end models available.
+
+Finally, I'll structure the response in the specified JSON format, ensuring all fields are filled and non-null. The table name is 'mobiles', and the ordered entries will be an array of the top 5 model names.
+
+I need to make sure the JSON is valid and follows the exact schema provided. No extra text or explanations should be included outside the JSON. All required fields must be completed with appropriate values.
+
+In summary, the steps are: identify the null 'Model Name' column, infer logical model names based on Apple's typical naming conventions and the launch years, sort them in descending order, select the top 5, and format the response correctly in JSON.
+</think>
+
+```json
+{
+  ""table_name"": ""mobiles"",
+  ""ordered_entries"": [
+    {
+      ""Model Name"": ""iPhone 16 Pro Max""
+    },
+    {
+      ""Model Name"": ""iPhone 16 Pro""
+    },
+    {
+      ""Model Name"": ""iPhone 16""
+    },
+    {
+      ""Model Name"": ""iPhone 15 Pro Max""
+    },
+    {
+      ""Model Name"": ""iPhone 15 Pro""
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_400.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `pgr` from `breast_cancer`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[0], [0], [0], [0], [0]]",SELECT `pgr` FROM `breast_cancer` ORDER BY `pgr` DESC LIMIT 5,1,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_complete_cut_400.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `meno` from `breast_cancer`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `meno` FROM `breast_cancer` ORDER BY `meno` DESC LIMIT 5,3,"{
+  ""table_name"": ""breast_cancer"",
+  ""ordered_entries"": [
+    {
+      ""pgr"": 0
+    },
+    {
+      ""pgr"": 0
+    },
+    {
+      ""pgr"": 0
+    },
+    {
+      ""pgr"": 0
+    },
+    {
+      ""pgr"": 0
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_400.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `er` from `breast_cancer`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1], [1], [1], [1], [1]]",SELECT `er` FROM `breast_cancer` ORDER BY `er` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_400.sqlite,fitness_trakers,ORDERBY-PROJECT,Select only the column `Color` from `fitness_trakers`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `Color` FROM `fitness_trakers` ORDER BY `Color` ASC LIMIT 5,3,"{
+  ""table_name"": ""breast_cancer"",
+  ""ordered_entries"": [
+    {
+      ""er"": 1
+    },
+    {
+      ""er"": 1
+    },
+    {
+      ""er"": 1
+    },
+    {
+      ""er"": 1
+    },
+    {
+      ""er"": 1
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_400.sqlite,fitness_trakers,ORDERBY-PROJECT,Select only the column `Display` from `fitness_trakers`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['None'], ['None'], ['None'], ['None'], ['None']]",SELECT `Display` FROM `fitness_trakers` ORDER BY `Display` ASC LIMIT 5,1,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_400.sqlite,heart_attack,ORDERBY-SINGLE,"List the top 5 rows from the table `heart_attack`, sorted by the column `ca` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT * FROM `heart_attack` ORDER BY `ca` ASC LIMIT 5,3,"{
+  ""table_name"": ""fitness_trakers"",
+  ""ordered_entries"": [
+    {
+      ""Display"": ""None""
+    },
+    {
+      ""Display"": ""None""
+    },
+    {
+      ""Display"": ""None""
+    },
+    {
+      ""Display"": ""None""
+    },
+    {
+      ""Display"": ""None""
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_400.sqlite,heart_attack,ORDERBY-SINGLE,"List the top 5 rows from the table `heart_attack`, sorted by the column `fbs` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[63, 1, 3, 145, 233, 0, 0, 150, 0, 2.3, 0, 0, 1, 1], [37, 1, 2, 130, 250, 0, 1, 187, 0, 3.5, 0, 0, 2, 1], [41, 0, 1, 130, 204, 0, 0, 172, 0, 1.4, 2, 0, 2, 1], [56, 1, 1, 120, 236, 0, 1, 178, 0, 0.8, 2, 0, 2, 1], [57, 0, 0, 120, 354, 0, 1, 163, 1, 0.6, 2, 0, 2, 1]]",SELECT * FROM `heart_attack` ORDER BY `fbs` ASC LIMIT 5,1,,0.0,0.778,0.84,0.0,1.0,0.8,1.0
+data/db_complete_cut_400.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `restecg` from `heart_attack`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `restecg` FROM `heart_attack` ORDER BY `restecg` ASC LIMIT 5,3,"{
+  ""table_name"": ""heart_attack"",
+  ""ordered_entries"": [
+    {
+      ""age"": 63,
+      ""sex"": 1,
+      ""cp"": 3,
+      ""trestbps"": 145,
+      ""chol"": 233,
+      ""fbs"": 0,
+      ""restecg"": 0,
+      ""thalach"": 150,
+      ""exang"": 0,
+      ""oldpeak"": 2.3,
+      ""slope"": 0,
+      ""ca"": 0,
+      ""thal"": 1,
+      ""target"": 1
+    },
+    {
+      ""age"": 37,
+      ""sex"": 1,
+      ""cp"": 2,
+      ""trestbps"": 130,
+      ""chol"": 250,
+      ""fbs"": 0,
+      ""restecg"": 1,
+      ""thalach"": 187,
+      ""exang"": 0,
+      ""oldpeak"": 3.5,
+      ""slope"": 0,
+      ""ca"": 0,
+      ""thal"": 2,
+      ""target"": 1
+    },
+    {
+      ""age"": 41,
+      ""sex"": 0,
+      ""cp"": 1,
+      ""trestbps"": 130,
+      ""chol"": 204,
+      ""fbs"": 0,
+      ""restecg"": 0,
+      ""thalach"": 172,
+      ""exang"": 0,
+      ""oldpeak"": 1.4,
+      ""slope"": 2,
+      ""ca"": 0,
+      ""thal"": 2,
+      ""target"": 1
+    },
+    {
+      ""age"": 56,
+      ""sex"": 1,
+      ""cp"": 1,
+      ""trestbps"": 120,
+      ""chol"": 236,
+      ""fbs"": 0,
+      ""restecg"": 1,
+      ""thalach"": 178,
+      ""exang"": 0,
+      ""oldpeak"": 0.8,
+      ""slope"": 2,
+      ""ca"": 0,
+      ""thal"": 2,
+      ""target"": 1
+    },
+    {
+      ""age"": 57,
+      ""sex"": 0,
+      ""cp"": 0,
+      ""trestbps"": 120,
+      ""chol"": 354,
+      ""fbs"": 0,
+      ""restecg"": 1,
+      ""thalach"": 163,
+      ""exang"": 1,
+      ""oldpeak"": 0.6,
+      ""slope"": 2,
+      ""ca"": 0,
+      ""thal"": 2,
+      ""target"": 1
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_400.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `thal` from `heart_attack`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[3], [3], [3], [3], [3]]",SELECT `thal` FROM `heart_attack` ORDER BY `thal` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_400.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `exang` from `heart_attack`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `exang` FROM `heart_attack` ORDER BY `exang` ASC LIMIT 5,3,"{
+  ""table_name"": ""heart_attack"",
+  ""ordered_entries"": [
+    {
+      ""thal"": 3
+    },
+    {
+      ""thal"": 3
+    },
+    {
+      ""thal"": 3
+    },
+    {
+      ""thal"": 3
+    },
+    {
+      ""thal"": 3
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_400.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `slope` from `heart_attack`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1], [1], [1], [1], [1]]",SELECT `slope` FROM `heart_attack` ORDER BY `slope` ASC LIMIT 5,0,,0.0,1.0,0.5,0.0,1.0,0.0,1.0
+data/db_complete_cut_400.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `ca` from `heart_attack`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `ca` FROM `heart_attack` ORDER BY `ca` ASC LIMIT 5,3,"{
+  ""table_name"": ""heart_attack"",
+  ""ordered_entries"": [
+    {
+      ""slope"": 1
+    },
+    {
+      ""slope"": 1
+    },
+    {
+      ""slope"": 1
+    },
+    {
+      ""slope"": 1
+    },
+    {
+      ""slope"": 1
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_400.sqlite,mobiles,ORDERBY-SINGLE,"List the top 5 rows from the table `mobiles`, sorted by the column `Processor` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Apple', 'iPhone 14 128GB', '172g', '6GB', '12MP', '12MP + 12MP', 'Apple A16 Bionic', '3,200mAh', '6.1 inches', 'PKR 184,999', 'INR 69,999', 'CNY 5,199', 'USD 799', 'AED 2,699', '2022'], ['Apple', 'iPhone 14 256GB', '172g', '6GB', '12MP', '12MP + 12MP', 'Apple A16 Bionic', '3,200mAh', '6.1 inches', 'PKR 194,999', 'INR 74,999', 'CNY 5,599', 'USD 849', 'AED 2,999', '2022'], ['Apple', 'iPhone 15 128GB', '171g', '6GB', '12MP', '48MP', 'Apple A17 Bionic', '3,200mAh', '6.1 inches', 'PKR 204,999', 'INR 74,999', 'CNY 5,299', 'USD 799', 'AED 2,699', '2023'], ['Apple', 'iPhone 15 256GB', '171g', '6GB', '12MP', '48MP', 'Apple A17 Bionic', '3,200mAh', '6.1 inches', 'PKR 214,999', 'INR 79,999', 'CNY 5,599', 'USD 849', 'AED 2,999', '2023'], ['Apple', 'iPhone 15 512GB', '171g', '6GB', '12MP', '48MP', 'Apple A17 Bionic', '3,200mAh', '6.1 inches', 'PKR 224,999', 'INR 89,999', 'CNY 5,999', 'USD 949', 'AED 3,199', '2023']]",SELECT * FROM `mobiles` ORDER BY `Processor` ASC LIMIT 5,1,,0.0,0.946,0.946,0.0,1.0,0.0,0.5
+data/db_complete_cut_400.sqlite,mobiles,ORDERBY-PROJECT,Select only the column `RAM` from `mobiles`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `RAM` FROM `mobiles` ORDER BY `RAM` DESC LIMIT 5,3,"```
+{
+  ""table_name"": ""mobiles"",
+  ""ordered_entries"": [
+    {
+      ""Company Name"": ""Apple"",
+      ""Model Name"": ""iPhone 14 128GB"",
+      ""Mobile Weight"": ""172g"",
+      ""RAM"": ""6GB"",
+      ""Front Camera"": ""12MP"",
+      ""Back Camera"": ""12MP + 12MP"",
+      ""Processor"": ""Apple A16 Bionic"",
+      ""Battery Capacity"": ""3,200mAh"",
+      ""Screen Size"": ""6.1 inches"",
+      ""Launched Price (Pakistan)"": ""PKR 184,999"",
+      ""Launched Price (India)"": ""INR 69,999"",
+      ""Launched Price (China)"": ""CNY 5,199"",
+      ""Launched Price (USA)"": ""USD 799"",
+      ""Launched Price (Dubai)"": ""AED 2,699"",
+      ""Launched Year"": ""2022""
+    },
+    {
+      ""Company Name"": ""Apple"",
+      ""Model Name"": ""iPhone 14 256GB"",
+      ""Mobile Weight"": ""172g"",
+      ""RAM"": ""6GB"",
+      ""Front Camera"": ""12MP"",
+      ""Back Camera"": ""12MP + 12MP"",
+      ""Processor"": ""Apple A16 Bionic"",
+      ""Battery Capacity"": ""3,200mAh"",
+      ""Screen Size"": ""6.1 inches"",
+      ""Launched Price (Pakistan)"": ""PKR 194,999"",
+      ""Launched Price (India)"": ""INR 74,999"",
+      ""Launched Price (China)"": ""CNY 5,599"",
+      ""Launched Price (USA)"": ""USD 849"",
+      ""Launched Price (Dubai)"": ""AED 2,999"",
+      ""Launched Year"": ""2022""
+    },
+    {
+      ""Company Name"": ""Apple"",
+      ""Model Name"": ""iPhone 15 128GB"",
+      ""Mobile Weight"": ""171g"",
+      ""RAM"": ""6GB"",
+      ""Front Camera"": ""12MP"",
+      ""Back Camera"": ""48MP"",
+      ""Processor"": ""Apple A17 Bionic"",
+      ""Battery Capacity"": ""3,200mAh"",
+      ""Screen Size"": ""6.1 inches"",
+      ""Launched Price (Pakistan)"": ""PKR 204,999"",
+      ""Launched Price (India)"": ""INR 74,999"",
+      ""Launched Price (China)"": ""CNY 5,299"",
+      ""Launched Price (USA)"": ""USD 799"",
+      ""Launched Price (Dubai)"": ""AED 2,699"",
+      ""Launched Year"": ""2023""
+    },
+    {
+      ""Company Name"": ""Apple"",
+      ""Model Name"": ""iPhone 15 256GB"",
+      ""Mobile Weight"": ""171g"",
+      ""RAM"": ""6GB"",
+      ""Front Camera"": ""12MP"",
+      ""Back Camera"": ""48MP"",
+      ""Processor"": ""Apple A17 Bionic"",
+      ""Battery Capacity"": ""3,200mAh"",
+      ""Screen Size"": ""6.1 inches"",
+      ""Launched Price (Pakistan)"": ""PKR 214,999"",
+      ""Launched Price (India)"": ""INR 79,999"",
+      ""Launched Price (China)"": ""CNY 5,599"",
+      ""Launched Price (USA)"": ""USD 849"",
+      ""Launched Price (Dubai)"": ""AED 2,999"",
+      ""Launched Year"": ""2023""
+    },
+    {
+      ""Company Name"": ""Apple"",
+      ""Model Name"": ""iPhone 15 512GB"",
+      ""Mobile Weight"": ""171g"",
+      ""RAM"": ""6GB"",
+      ""Front Camera"": ""12MP"",
+      ""Back Camera"": ""48MP"",
+      ""Processor"": ""Apple A17 Bionic"",
+      ""Battery Capacity"": ""3,200mAh"",
+      ""Screen Size"": ""6.1 inches"",
+      ""Launched Price (Pakistan)"": ""PKR 224,999"",
+      ""Launched Price (India)"": ""INR 89,999"",
+      ""Launched Price (China)"": ""CNY 5,999"",
+      ""Launched Price (USA)"": ""USD 949"",
+      ""Launched Price (Dubai)"": ""AED 3,199"",
+      ""Launched Year"": ""2023""
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_400.sqlite,mobiles,ORDERBY-PROJECT,Select only the column `Model Name` from `mobiles`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['iPhone 15 Pro Max'], ['iPhone 15 Pro'], ['iPhone 15'], ['iPhone 14 Pro Max'], ['iPhone 14 Pro']]",SELECT `Model Name` FROM `mobiles` ORDER BY `Model Name` DESC LIMIT 5,1,,0.0,0.0,0.0,0.0,1.0,0.0,0.5

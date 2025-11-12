@@ -1,0 +1,3 @@
+,db_path,db_id,tbl_name,test_category,sql_tag,query,question
+0,data/db_simple.sqlite,db,BMI,ORDERBY,ORDERBY-SINGLE,SELECT * FROM `BMI` ORDER BY `height_m` ASC LIMIT 5,Show the first 5 entries ordered by height_m in ascending order for the table BMI
+4,data/db_simple.sqlite,db,BMI,ORDERBY,ORDERBY-SINGLE,SELECT * FROM `BMI` ORDER BY `BMI` ASC LIMIT 5,Show the first 5 entries ordered by BMI in ascending order for the table BMI

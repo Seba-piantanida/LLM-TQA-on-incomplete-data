@@ -1,0 +1,7 @@
+table_name,model,avg_valid_efficiency_score,avg_cell_precision,avg_cell_recall,avg_execution_accuracy,avg_tuple_cardinality,avg_tuple_constraint,avg_tuple_order
+BMI,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,0.0,0.17414285714285713,0.1857142857142857,0.0,1.0,0.05714285714285715,0.5
+energy_consumption,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,0.0,0.3201818181818182,0.31963636363636366,0.0,1.0,0.2,0.5909090909090909
+financial,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,0.0,0.0,0.0,0.0,0.3333333333333333,0.0,0.16666666666666666
+logistics_delivery,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,0.0,0.3308888888888889,0.3308888888888889,0.0,1.0,0.2222222222222222,0.7222222222222222
+products,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,0.0,0.26,0.16,0.0,1.0,0.0,0.6
+student_performance,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,0.0,0.296,0.30100000000000005,0.0,0.9,0.18,0.65

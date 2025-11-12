@@ -1,0 +1,4 @@
+db_path,db_id,tbl_name,test_category,sql_tag,query,question
+data/db_cut_300.sqlite,db,olympic_games,ORDERBY,ORDERBY-PROJECT,SELECT `city` FROM `olympic_games` ORDER BY `city` DESC LIMIT 5,Project the city ordered in descending order for the table olympic_games and show only the first 5 entries
+data/db_cut_300.sqlite,db,olympic_games,ORDERBY,ORDERBY-PROJECT,SELECT `year` FROM `olympic_games` ORDER BY `year` ASC LIMIT 5,Project the year ordered in ascending order for the table olympic_games and show only the first 5 entries
+data/db_cut_300.sqlite,db,olympic_games,ORDERBY,ORDERBY-PROJECT,SELECT `year` FROM `olympic_games` ORDER BY `year` DESC LIMIT 5,Project the year ordered in descending order for the table olympic_games and show only the first 5 entries

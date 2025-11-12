@@ -1,0 +1,66 @@
+site_name: "QATCH: Query-Aided TRL Checklist"
+site_description: QATCH is a Python library that generates and evaluates tests for Question Answering and Semantic Parsing tasks for structured data.
+site_author: Simone Papicchio
+repo_url: https://github.com/spapicchio/QATCH
+repo_name: spapicchio/QATCH
+edit_uri: https://github.com/spapicchio/QATCH/
+
+theme:
+  name: material
+  logo: assets/qatch_logo.png
+  palette:
+    scheme: slate
+    primary: deep purple
+  features:
+    - search.suggest
+    - search.highlight
+    - search.share
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.top
+    - navigation.tabs.collapse
+
+extra:
+  version: "1.5.18"
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/spapicchio/
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/simone-papicchio/
+
+plugins:
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: google
+            selection:
+              ignore:
+                - my_module.my_function
+  - search
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+
+nav:
+  - Introduction: index.md
+  - Getting Started: getting_started.md
+  - Package:
+       - "Connectors":
+            - base_connectors.md
+            - sqlite_connector.md
+       - "Generate Dataset":
+           - generator_orchestrator.md
+           - template_generator.md
+       - "Evaluate Dataset":
+           - evaluator_orchestrator.md
+           - supported_metrics.md

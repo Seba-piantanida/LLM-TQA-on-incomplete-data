@@ -1,0 +1,2 @@
+exec_type,cell_precision,cell_recall,execution_accuracy,tuple_cardinality,tuple_constraint,tuple_order
+NORMAL_full,4.090345931920429e-05,5.307279922904472e-05,6.058370026289903e-05,3.661634489766298e-05,6.308950551200773e-05,5.524104449928267e-05

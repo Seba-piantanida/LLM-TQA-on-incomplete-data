@@ -1,0 +1,4 @@
+table,model,avg_valid_efficiency_score,avg_cell_precision,avg_cell_recall,avg_execution_accuracy,avg_tuple_cardinality,avg_tuple_constraint,avg_tuple_order
+albums,gemini-2.5-flash,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+artists,gemini-2.5-flash,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+tracks,gemini-2.5-flash,0.0,0.06883333333333334,0.04633333333333334,0.0,0.5971666666666667,0.03333333333333333,0.5971666666666667

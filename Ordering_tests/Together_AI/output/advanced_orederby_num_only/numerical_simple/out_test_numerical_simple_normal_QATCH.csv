@@ -1,0 +1,701 @@
+db_path,table_name,test_category,query,model,AI_answer,SQL_query,failed_attempts,note,valid_efficiency_score,cell_precision,cell_recall,execution_accuracy,tuple_cardinality,tuple_constraint,tuple_order
+data/db_numerical_simple.sqlite,BMI,ORDERBY-ADVANCED,"Compute the sum of the columns height_m, weight_kg for each row in `BMI`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[26, 'Liam', 1.58, 51.6, 20.7, 'Low'], [27, 'Noah', 1.71, 59.7, 20.4, 'Low'], [28, 'Mia', 1.74, 48.4, 16.0, 'Low'], [12, 'Maria', 1.83, 47.6, 14.2, 'Low'], [10, 'Karen', 1.51, 54.2, 23.8, 'Low']]",SELECT * FROM `BMI` ORDER BY `height_m` + `weight_kg` ASC LIMIT 5,0,,0.0,0.615,0.615,0.0,1.0,0.6,0.0
+data/db_numerical_simple.sqlite,BMI,ORDERBY-ADVANCED,"Compute the sum of the columns height_m, weight_kg for each row in `BMI`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[4, 'Emma', 1.56, 117.4, 48.2, 'High'], [21, 'Victor', 1.56, 103.1, 42.4, 'High'], [20, 'Uma', 1.74, 117.7, 38.9, 'High'], [3, 'David', 1.74, 116.2, 38.4, 'High'], [0, 'Alice', 1.65, 90.6, 33.3, 'Medium']]",SELECT * FROM `BMI` ORDER BY `height_m` + `weight_kg` DESC LIMIT 5,0,,0.0,0.64,0.615,0.0,1.0,0.6,0.75
+data/db_numerical_simple.sqlite,BMI,ORDERBY-ADVANCED,"Compute the sum of the columns height_m, BMI for each row in `BMI`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[7, 'Helen', 1.85, 52.3, 15.3, 'Low'], [2, 'Carla', 1.79, 49.9, 15.6, 'Low'], [28, 'Mia', 1.74, 48.4, 16.0, 'Low'], [1, 'Bob', 1.88, 57.8, 16.4, 'Low'], [27, 'Noah', 1.71, 59.7, 20.4, 'Low']]",SELECT * FROM `BMI` ORDER BY `height_m` + `BMI` ASC LIMIT 5,0,,0.0,0.808,0.808,0.0,1.0,0.8,1.0
+data/db_numerical_simple.sqlite,BMI,ORDERBY-ADVANCED,"Compute the sum of the columns height_m, BMI for each row in `BMI`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[4, 'Emma', 1.56, 117.4, 48.2, 'High'], [13, 'Nina', 1.58, 113.2, 45.3, 'High'], [22, 'Wendy', 1.62, 115.5, 44.0, 'High'], [21, 'Victor', 1.56, 103.1, 42.4, 'High'], [23, 'Xander', 1.65, 112.1, 41.2, 'High']]",SELECT * FROM `BMI` ORDER BY `height_m` + `BMI` DESC LIMIT 5,0,,0.0,0.8,0.833,0.0,1.0,0.8,1.0
+data/db_numerical_simple.sqlite,BMI,ORDERBY-ADVANCED,"Compute the sum of the columns height_m, weight_kg, BMI for each row in `BMI`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[7, 'Helen', 1.85, 52.3, 15.3, 'Low', 69.45], [12, 'Maria', 1.83, 47.6, 14.2, 'Low', 65.03], [26, 'Liam', 1.58, 51.6, 20.7, 'Low', 73.9], [27, 'Noah', 1.71, 59.7, 20.4, 'Low', 81.1], [28, 'Mia', 1.74, 48.4, 16.0, 'Low', 79.4]]",SELECT * FROM `BMI` ORDER BY `height_m` + `weight_kg` + `BMI` ASC LIMIT 5,0,,0.0,0.677,0.808,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,BMI,ORDERBY-ADVANCED,"Compute the sum of the columns height_m, weight_kg, BMI for each row in `BMI`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[4, 'Emma', 1.56, 117.4, 48.2, 'High', 167.0], [13, 'Nina', 1.58, 113.2, 45.3, 'High', 159.5], [22, 'Wendy', 1.62, 115.5, 44.0, 'High', 158.5], [20, 'Uma', 1.74, 117.7, 38.9, 'High', 156.4], [3, 'David', 1.74, 116.2, 38.4, 'High', 154.4]]",SELECT * FROM `BMI` ORDER BY `height_m` + `weight_kg` + `BMI` DESC LIMIT 5,0,,0.0,0.833,1.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,BMI,ORDERBY-ADVANCED,"Compute the sum of the columns weight_kg, BMI for each row in `BMI`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[26, 'Liam', 1.58, 51.6, 20.7, 'Low', 72.3], [27, 'Noah', 1.71, 59.7, 20.4, 'Low', 80.1], [28, 'Mia', 1.74, 48.4, 16.0, 'Low', 64.4], [12, 'Maria', 1.83, 47.6, 14.2, 'Low', 61.8], [7, 'Helen', 1.85, 52.3, 15.3, 'Low', 67.6]]",SELECT * FROM `BMI` ORDER BY `weight_kg` + `BMI` ASC LIMIT 5,0,,0.0,0.677,0.808,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,BMI,ORDERBY-ADVANCED,"Compute the sum of the columns weight_kg, BMI for each row in `BMI`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[4, 'Emma', 1.56, 117.4, 48.2, 'High', 165.6], [22, 'Wendy', 1.62, 115.5, 44.0, 'High', 159.5], [13, 'Nina', 1.58, 113.2, 45.3, 'High', 158.5], [3, 'David', 1.74, 116.2, 38.4, 'High', 154.6], [0, 'Alice', 1.65, 90.6, 33.3, 'Medium', 123.9]]",SELECT * FROM `BMI` ORDER BY `weight_kg` + `BMI` DESC LIMIT 5,0,,0.0,0.656,0.84,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-ADVANCED,"Compute the sum of the columns kwh_used, cost_per_kwh, avg_daily_kwh for each row in `energy_consumption`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[24, 'Family_25', 631, 28, 0.21, 22.54, 132.51, 653.75], [14, 'Family_15', 862, 27, 0.28, 31.93, 241.36, 922.21], [13, 'Family_14', 899, 25, 0.34, 35.96, 305.66, 935.3], [7, 'Family_8', 810, 30, 0.28, 27.0, 226.8, 837.28], [22, 'Family_23', 805, 30, 0.3, 26.83, 241.5, 832.13]]",SELECT * FROM `energy_consumption` ORDER BY `kwh_used` + `cost_per_kwh` + `avg_daily_kwh` ASC LIMIT 5,0,,0.0,0.595,0.688,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-ADVANCED,"Compute the sum of the columns kwh_used, cost_per_kwh, avg_daily_kwh for each row in `energy_consumption`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Family_12', 2311, 0.34, 92.44, 2403.78], ['Family_7', 2064, 0.2, 62.55, 2126.75], ['Family_16', 2032, 0.35, 63.5, 2095.85], ['Family_6', 1762, 0.33, 56.84, 1819.17], ['Family_11', 1322, 0.3, 44.07, 1366.37]]",SELECT * FROM `energy_consumption` ORDER BY `kwh_used` + `cost_per_kwh` + `avg_daily_kwh` DESC LIMIT 5,0,,0.0,0.64,0.457,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-ADVANCED,"Compute the sum of the columns id, avg_daily_kwh for each row in `energy_consumption`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[24, 'Family_25', 631, 28, 0.21, 22.54, 132.51, 46.54], [22, 'Family_23', 805, 30, 0.3, 26.83, 241.5, 44.83], [14, 'Family_15', 862, 27, 0.28, 31.93, 241.36, 45.93], [7, 'Family_8', 810, 30, 0.28, 27.0, 226.8, 34.0], [13, 'Family_14', 899, 25, 0.34, 35.96, 305.66, 46.96]]",SELECT * FROM `energy_consumption` ORDER BY `id` + `avg_daily_kwh` ASC LIMIT 5,0,,0.0,0.162,0.188,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-ADVANCED,"Compute the sum of the columns id, avg_daily_kwh for each row in `energy_consumption`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[12, 'Family_11', 2311, 25, 0.34, 92.44, 785.74], [16, 'Family_15', 2032, 32, 0.35, 63.5, 711.2], [7, 'Family_7', 810, 30, 0.28, 27.0, 226.8], [6, 'Family_6', 2064, 33, 0.2, 62.55, 412.8], [11, 'Family_11', 1322, 30, 0.3, 44.07, 396.6]]",SELECT * FROM `energy_consumption` ORDER BY `id` + `avg_daily_kwh` DESC LIMIT 5,2,,0.0,0.667,0.629,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-ADVANCED,"Compute the sum of the columns id, cost_per_kwh, total_cost for each row in `energy_consumption`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[24, 'Family_25', 631, 28, 0.21, 22.54, 132.51], [22, 'Family_23', 805, 30, 0.3, 26.83, 241.5], [14, 'Family_15', 862, 27, 0.28, 31.93, 241.36], [7, 'Family_8', 810, 30, 0.28, 27.0, 226.8], [13, 'Family_14', 899, 25, 0.34, 35.96, 305.66]]",SELECT * FROM `energy_consumption` ORDER BY `id` + `cost_per_kwh` + `total_cost` ASC LIMIT 5,1,,0.0,0.688,0.688,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-ADVANCED,"Compute the sum of the columns id, cost_per_kwh, total_cost for each row in `energy_consumption`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,[],SELECT * FROM `energy_consumption` ORDER BY `id` + `cost_per_kwh` + `total_cost` DESC LIMIT 5,3,"<think>
+Alright, so I need to figure out how to compute the sum of the columns id, cost_per_kwh, and total_cost for each row in the energy_consumption dataset. Then, I have to sort all the rows in descending order based on this sum and return the top 5 rows. Let me break this down step by step.
+
+First, I'll look at the dataset provided. It has several columns: id, household_name, kwh_used, days_active, cost_per_kwh, avg_daily_kwh, and total_cost. The task is to sum id, cost_per_kwh, and total_cost for each row. 
+
+Wait a minute, the id is a numerical value, but it's an identifier. I'm not sure if summing it with cost_per_kwh and total_cost makes sense because they are of different units. Cost_per_kwh is a rate in dollars per kilowatt-hour, and total_cost is in dollars. Adding the id, which is just a number, might not be meaningful. But since the instruction says to compute the sum, I'll proceed as directed.
+
+So, for each row, I'll add the id, cost_per_kwh, and total_cost. Let me pick the first row as an example. The id is 1, cost_per_kwh is 0.28, and total_cost is 276.36. So the sum would be 1 + 0.28 + 276.36 = 277.64. I'll do this for each row.
+
+Once I have the sum for each row, the next step is to sort all the rows in descending order based on this sum. That means the row with the highest sum will be first, and the lowest will be last. After sorting, I need to select the top 5 rows.
+
+I should make sure that I don't miss any rows and that the sorting is accurate. Also, I need to ensure that the JSON output follows the specified schema exactly, with the table name and the ordered entries as an array of objects, each containing the summed value and all the original columns.
+
+Wait, the output schema doesn't specify including the sum, only the original columns. So I need to clarify: do I need to include the sum in the output or just sort based on it? The query says to compute the sum for sorting but doesn't mention including it in the output. Therefore, I'll sort the rows based on the sum but only return the original columns in the JSON.
+
+Let me proceed to calculate the sums for each row:
+
+- Row 0: 1 + 0.28 + 276.36 = 277.64
+- Row 1: 2 + 0.25 + 312.0 = 314.25
+- Row 2: 3 + 0.22 + 247.06 = 250.28
+- Row 3: 4 + 0.27 + 299.16 = 303.43
+- Row 4: 5 + 0.25 + 366.25 = 371.5
+- Row 5: 6 + 0.33 + 581.46 = 587.79
+- Row 6: 7 + 0.2 + 412.8 = 419.0
+- Row 7: 8 + 0.28 + 226.8 = 234.08
+- Row 8: 9 + 0.28 + 287.56 = 296.84
+- Row 9: 10 + 0.21 + 267.12 = 277.33
+- Row 10: 11 + 0.3 + 396.6 = 407.9
+- Row 11: 12 + 0.34 + 785.74 = 797.08
+- Row 12: 13 + 0.32 + 404.8 = 417.12
+- Row 13: 14 + 0.34 + 305.66 = 319.0
+- Row 14: 15 + 0.28 + 241.36 = 256.64
+- Row 15: 16 + 0.35 + 711.2 = 727.55
+- Row 16: 17 + 0.21 + 323.82 = 340.03
+- Row 17: 18 + 0.33 + 280.17 = 298.5
+- Row 18: 19 + 0.34 + 408.34 = 427.68
+- Row 19: 20 + 0.24 + 323.04 = 343.28
+- Row 20: 21 + 0.22 + 276.54 = 297.76
+- Row 21: 22 + 0.29 + 553.9 = 575.19
+- Row 22: 23 + 0.3 + 241.5 = 264.8
+- Row 23: 24 + 0.26 + 298.74 = 322.0
+- Row 24: 25 + 0.21 + 132.51 = 157.72
+
+Now, I'll sort these sums in descending order:
+
+1. Row 15: 727.55
+2. Row 11: 797.08
+3. Row 5: 587.79
+4. Row 18: 427.68
+5. Row 16: 340.03
+
+Wait, I think I made a mistake here. Row 11 has a sum of 797.08, which is higher than Row 15's 727.55. So the correct order should be:
+
+1. Row 11: 797.08
+2. Row 15: 727.55
+3. Row 5: 587.79
+4. Row 18: 427.68
+5. Row 21: 575.19
+
+Wait, no, Row 21 has 575.19, which is higher than Row 18's 427.68. So the top 5 should be:
+
+1. Row 11: 797.08
+2. Row 15: 727.55
+3. Row 5: 587.79
+4. Row 21: 575.19
+5. Row 18: 427.68
+
+Wait, but Row 6 has a sum of 419.0, which is less than Row 18's 427.68. So the top 5 are as above.
+
+Now, I need to extract the data for these top 5 rows and format them into the JSON as specified. Each entry should include all the original columns: id, household_name, kwh_used, days_active, cost_per_kwh, avg_daily_kwh, and total_cost.
+
+Let me list the top 5 rows based on the sum:
+
+1. Row 11: id=12, household_name=""Family_12"", kwh_used=2311, days_active=25, cost_per_kwh=0.34, avg_daily_kwh=92.44, total_cost=785.74
+2. Row 15: id=16, household_name=""Family_16"", kwh_used=2032, days_active=32, cost_per_kwh=0.35, avg_daily_kwh=63.5, total_cost=711.2
+3. Row 5: id=6, household_name=""Family_6"", kwh_used=1762, days_active=31, cost_per_kwh=0.33, avg_daily_kwh=56.84, total_cost=581.46
+4. Row 21: id=22, household_name=""Family_22"", kwh_used=1910, days_active=27, cost_per_kwh=0.29, avg_daily_kwh=70.74, total_cost=553.9
+5. Row 18: id=19, household_name=""Family_19"", kwh_used=1201, days_active=28, cost_per_kwh=0.34, avg_daily_kwh=42.89, total_cost=408.34
+
+I need to make sure that all these values are correctly included in the JSON output. Also, I should verify that the sums were calculated correctly to ensure accurate sorting.
+
+Wait, let me double-check the sum for Row 11: id=12, cost_per_kwh=0.34, total_cost=785.74. So 12 + 0.34 + 785.74 = 797.08. That's correct.
+
+Row 15: id=16, cost_per_kwh=0.35, total_cost=711.2. 16 + 0.35 + 711.2 = 727.55. Correct.
+
+Row 5: id=6, cost_per_kwh=0.33, total_cost=581.46. 6 + 0.33 + 581.46 = 587.79. Correct.
+
+Row 21: id=22, cost_per_kwh=0.29, total_cost=553.9. 22 + 0.29 + 553.9 = 575.19. Correct.
+
+Row 18: id=19, cost_per_kwh=0.34, total_cost=408.34. 19 + 0.34 + 408.34 = 427.68. Correct.
+
+So the top 5 rows are correctly identified. Now, I'll structure the JSON accordingly, ensuring that each entry includes all the necessary fields without any nulls.
+</think>
+
+```json
+{
+  ""table_name"": ""energy_consumption"",
+  ""ordered_entries"": [
+   ",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-ADVANCED,"Compute the sum of the columns id, avg_daily_kwh, total_cost for each row in `energy_consumption`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[24, 'Family_25', 631, 28, 0.21, 22.54, 132.51], [14, 'Family_15', 862, 27, 0.28, 31.93, 241.36], [22, 'Family_23', 805, 30, 0.3, 26.83, 241.5], [7, 'Family_8', 810, 30, 0.28, 27.0, 226.8], [13, 'Family_14', 899, 25, 0.34, 35.96, 305.66]]",SELECT * FROM `energy_consumption` ORDER BY `id` + `avg_daily_kwh` + `total_cost` ASC LIMIT 5,0,,0.0,0.688,0.688,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-ADVANCED,"Compute the sum of the columns id, avg_daily_kwh, total_cost for each row in `energy_consumption`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[307.27, 1, 'Family_1', 987, 33, 0.28, 29.91, 276.36], [312.0, 2, 'Family_2', 1248, 27, 0.25, 46.22, 312.0], [247.06, 3, 'Family_3', 1123, 32, 0.22, 35.09, 247.06], [299.16, 4, 'Family_4', 1108, 29, 0.27, 38.21, 299.16], [366.25, 5, 'Family_5', 1465, 30, 0.25, 48.83, 366.25]]",SELECT * FROM `energy_consumption` ORDER BY `id` + `avg_daily_kwh` + `total_cost` DESC LIMIT 5,0,,0.0,0.086,0.086,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-ADVANCED,"Compute the sum of the columns id, cost_per_kwh, avg_daily_kwh for each row in `energy_consumption`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[24, 'Family_25', 631, 28, 0.21, 22.54], [22, 'Family_23', 805, 30, 0.3, 26.83], [14, 'Family_15', 862, 27, 0.28, 31.93], [13, 'Family_14', 899, 25, 0.34, 35.96], [7, 'Family_8', 810, 30, 0.28, 27.0]]",SELECT * FROM `energy_consumption` ORDER BY `id` + `cost_per_kwh` + `avg_daily_kwh` ASC LIMIT 5,0,,0.0,0.185,0.156,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-ADVANCED,"Compute the sum of the columns id, cost_per_kwh, avg_daily_kwh for each row in `energy_consumption`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[11, 0.34, 92.44, 103.85], [5, 0.33, 56.84, 94.17], [6, 0.2, 62.55, 88.75], [15, 0.35, 63.5, 88.85], [21, 0.29, 70.74, 100.13]]",SELECT * FROM `energy_consumption` ORDER BY `id` + `cost_per_kwh` + `avg_daily_kwh` DESC LIMIT 5,0,,0.0,0.55,0.314,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,financial,ORDERBY-ADVANCED,"Compute the sum of the columns income, expenses, savings for each row in `financial`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[24, 'Yara', 1663, 702, 961, '57.8%', 'Low'], [27, 'Noah', 2495, 4889, -2394, '-96.0%', 'High'], [25, 'Zane', 2998, 4718, -1720, '-57.4%', 'High'], [5, 'Frank', 2059, 8054, -5995, '-291.2%', 'High'], [29, 'Lily', 4763, 8504, -3741, '-78.5%', 'High']]",SELECT * FROM `financial` ORDER BY `income` + `expenses` + `savings` ASC LIMIT 5,2,,0.0,0.625,0.625,0.0,1.0,0.6,0.75
+data/db_numerical_simple.sqlite,financial,ORDERBY-ADVANCED,"Compute the sum of the columns income, expenses, savings for each row in `financial`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0, 'Alice', 7374, 5732, 1642.0, '22.3%', 'Medium'], [19, 'Tina', 9901, 6291, 3610.0, '36.5%', 'Low'], [20, 'Uma', 6575, 10425, -3850.0, '-58.6%', 'High'], [6, 'Grace', 7668, 7780, -112.0, '-1.5%', 'High'], [14, 'Oscar', 8392, 7892, 500.0, '6.0%', 'Medium']]",SELECT * FROM `financial` ORDER BY `income` + `expenses` + `savings` DESC LIMIT 5,0,,0.0,0.455,0.469,0.0,1.0,0.4,1.0
+data/db_numerical_simple.sqlite,financial,ORDERBY-ADVANCED,"Compute the sum of the columns income, expenses for each row in `financial`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[5, 'Frank', 2059, 8054, -5995.0, '-291.2%', 'High'], [15, 'Paul', 2306, 7028, -4722.0, '-204.8%', 'High'], [25, 'Zane', 2998, 4718, -1720.0, '-57.4%', 'High'], [2, 'Carla', 2678, 7085, -4407.0, '-164.6%', 'High'], [12, 'Maria', 2663, 8664, -6001.0, '-225.3%', 'High']]",SELECT * FROM `financial` ORDER BY `income` + `expenses` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,financial,ORDERBY-ADVANCED,"Compute the sum of the columns income, expenses for each row in `financial`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[14, 'Oscar', 8392, 7892, 500.0, '6.0%', 'Medium'], [18, 'Steve', 8526, 2207, 6319.0, '74.1%', 'Low'], [19, 'Tina', 9901, 6291, 3610.0, '36.5%', 'Low'], [16, 'Quincy', 7776, 5749, 2027.0, '26.1%', 'Medium'], [8, 'Ian', 6915, 4196, 2719.0, '39.3%', 'Low']]",SELECT * FROM `financial` ORDER BY `income` + `expenses` DESC LIMIT 5,1,,0.0,0.438,0.424,0.0,1.0,0.4,1.0
+data/db_numerical_simple.sqlite,financial,ORDERBY-ADVANCED,"Compute the sum of the columns income, savings for each row in `financial`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[5, 'Frank', 2059, 8054, -5995.0, '-291.2%', 'High'], [20, 'Uma', 6575, 10425, -3850.0, '-58.6%', 'High'], [25, 'Zane', 2998, 4718, -1720.0, '-57.4%', 'High'], [27, 'Noah', 2495, 4889, -2394.0, '-96.0%', 'High'], [29, 'Lily', 4763, 8504, -3741.0, '-78.5%', 'High']]",SELECT * FROM `financial` ORDER BY `income` + `savings` ASC LIMIT 5,0,,0.0,0.419,0.419,0.0,1.0,0.4,1.0
+data/db_numerical_simple.sqlite,financial,ORDERBY-ADVANCED,"Compute the sum of the columns income, savings for each row in `financial`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[18, 'Steve', 8526, 2207, 6319, '74.1%', 'Low'], [19, 'Tina', 9901, 6291, 3610, '36.5%', 'Low'], [16, 'Quincy', 7776, 5749, 2027, '26.1%', 'Medium'], [8, 'Ian', 6915, 4196, 2719, '39.3%', 'Low'], [0, 'Alice', 7374, 5732, 1642, '22.3%', 'Medium']]",SELECT * FROM `financial` ORDER BY `income` + `savings` DESC LIMIT 5,2,,0.0,0.625,0.625,0.0,1.0,0.6,1.0
+data/db_numerical_simple.sqlite,financial,ORDERBY-ADVANCED,"Compute the sum of the columns expenses, savings for each row in `financial`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[5, 'Frank', 2059, 8054, -5995.0, '-291.2%', 'High'], [20, 'Uma', 6575, 10425, -3850.0, '-58.6%', 'High'], [15, 'Paul', 2306, 7028, -4722.0, '-204.8%', 'High'], [2, 'Carla', 2678, 7085, -4407.0, '-164.6%', 'High'], [12, 'Maria', 2663, 8664, -6001.0, '-225.3%', 'High']]",SELECT * FROM `financial` ORDER BY `expenses` + `savings` ASC LIMIT 5,0,,0.0,0.613,0.594,0.0,1.0,0.6,1.0
+data/db_numerical_simple.sqlite,financial,ORDERBY-ADVANCED,"Compute the sum of the columns expenses, savings for each row in `financial`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,[],SELECT * FROM `financial` ORDER BY `expenses` + `savings` DESC LIMIT 5,3,"<think>
+Okay, so I need to figure out how to compute the sum of the expenses and savings columns for each row in the given financial dataset. Then, I have to sort these sums in descending order and pick the top five rows. Let me break this down step by step.
+
+First, I'll look at the dataset provided. It has several columns: id, name, income, expenses, savings, savings_rate, and risk_profile. My focus is on the expenses and savings columns. For each row, I need to add the expenses and savings values together.
+
+Let me start by calculating the sum for each row. I'll go through each entry from id 0 to id 29.
+
+For id 0: expenses = 5732, savings = 1642. So, sum = 5732 + 1642 = 7374.
+Id 1: expenses = 2353, savings = 5539. Sum = 2353 + 5539 = 7892.
+Id 2: expenses = 7085, savings = -4407. Sum = 7085 - 4407 = 2678.
+Id 3: expenses = 1791, savings = 2451. Sum = 1791 + 2451 = 4242.
+Id 4: expenses = 4081, savings = 1555. Sum = 4081 + 1555 = 5636.
+Id 5: expenses = 8054, savings = -5995. Sum = 8054 - 5995 = 2059.
+Id 6: expenses = 7780, savings = -112. Sum = 7780 - 112 = 7668.
+Id 7: expenses = 2136, savings = 2021. Sum = 2136 + 2021 = 4157.
+Id 8: expenses = 4196, savings = 2719. Sum = 4196 + 2719 = 6915.
+Id 9: expenses = 1198, savings = 2495. Sum = 1198 + 2495 = 3693.
+Id 10: expenses = 5237, savings = -610. Sum = 5237 - 610 = 4627.
+Id 11: expenses = 1354, savings = 5096. Sum = 1354 + 5096 = 6450.
+Id 12: expenses = 8664, savings = -6001. Sum = 8664 - 6001 = 2663.
+Id 13: expenses = 6355, savings = 237. Sum = 6355 + 237 = 6592.
+Id 14: expenses = 7892, savings = 500. Sum = 7892 + 500 = 8392.
+Id 15: expenses = 7028, savings = -4722. Sum = 7028 - 4722 = 2306.
+Id 16: expenses = 5749, savings = 2027. Sum = 5749 + 2027 = 7776.
+Id 17: expenses = 5672, savings = 1192. Sum = 5672 + 1192 = 6864.
+Id 18: expenses = 2207, savings = 6319. Sum = 2207 + 6319 = 8526.
+Id 19: expenses = 6291, savings = 3610. Sum = 6291 + 3610 = 9901.
+Id 20: expenses = 10425, savings = -3850. Sum = 10425 - 3850 = 6575.
+Id 21: expenses = 6035, savings = 495. Sum = 6035 + 495 = 6530.
+Id 22: expenses = 5431, savings = -18. Sum = 5431 - 18 = 5413.
+Id 23: expenses = 4010, savings = 738. Sum = 4010 + 738 = 4748.
+Id 24: expenses = 702, savings = 961. Sum = 702 + 961 = 1663.
+Id 25: expenses = 4718, savings = -1720. Sum = 4718 - 1720 = 2998.
+Id 26: expenses = 9458, savings = -464. Sum = 9458 - 464 = 8994.
+Id 27: expenses = 4889, savings = -2394. Sum = 4889 - 2394 = 2495.
+Id 28: expenses = 2827, savings = 1477. Sum = 2827 + 1477 = 4304.
+Id 29: expenses = 8504, savings = -3741. Sum = 8504 - 3741 = 4763.
+
+Now, I have all the sums. The next step is to sort these sums in descending order. Let me list them out with their corresponding names and sums:
+
+- Id 19: Tina, sum = 9901
+- Id 14: Oscar, sum = 8392
+- Id 18: Steve, sum = 8526
+- Id 16: Quincy, sum = 7776
+- Id 17: Rachel, sum = 6864
+- Id 11: Leo, sum = 6450
+- Id 0: Alice, sum = 7374
+- Id 1: Bob, sum = 7892
+- Id 8: Ian, sum = 6915
+- Id 6: Grace, sum = 7668
+- Id 4: Emma, sum = 5636
+- Id 13: Nina, sum = 6592
+- Id 26: Liam, sum = 8994
+- Id 3: David, sum = 4242
+- Id 10: Karen, sum = 4627
+- Id 12: Maria, sum = 2663
+- Id 15: Paul, sum = 2306
+- Id 5: Frank, sum = 2059
+- Id 2: Carla, sum = 2678
+- Id 7: Helen, sum = 4157
+- Id 9: Jack, sum = 3693
+- Id 20: Uma, sum = 6575
+- Id 21: Victor, sum = 6530
+- Id 22: Wendy, sum = 5413
+- Id 23: Xander, sum = 4748
+- Id 24: Yara, sum = 1663
+- Id 25: Zane, sum = 2998
+- Id 27: Noah, sum = 2495
+- Id 28: Mia, sum = 4304
+- Id 29: Lily, sum = 4763
+
+Wait, I think I might have missed some. Let me recount to ensure I have all 30 entries. Hmm, seems like I have all of them. Now, I need to sort these sums from highest to lowest.
+
+Looking at the sums, the highest is 9901 (Tina), followed by 8994 (Liam), 8526 (Steve), 8392 (Oscar), 7892 (Bob), 7776 (Quincy), 7668 (Grace), 7374 (Alice), 6915 (Ian), etc.
+
+Wait, I think I made a mistake. Let me recheck the sums:
+
+- Id 19: 9901
+- Id 26: 8994
+- Id 18: 8526
+- Id 14: 8392
+- Id 1: 7892
+- Id 16: 7776
+- Id 6: 7668
+- Id 0: 7374
+- Id 8: 6915
+- Id 4: 5636
+- Id 13: 6592
+- Id 17: 6864
+- Id 11: 6450
+- Id 20: 6575
+- Id 21: 6530
+- Id 3: 4242
+- Id 10: 4627
+- Id 12: 2663
+- Id 15: 2306
+- Id 5: 2059
+- Id 2: 2678
+- Id 7: 4157
+- Id 9: 3693
+- Id 22: 5413
+- Id 23: 4748
+- Id 24: 1663
+- Id 25: 2998
+- Id 27: 2495
+- Id 28: 4304
+- Id 29: 4763
+
+Now, sorting these in descending order:
+
+1. 9901 - Tina (Id 19)
+2. 8994 - Liam (Id 26)
+3. 8526 - Steve (Id 18)
+4. 8392 - Oscar (Id 14)
+5. 7892 - Bob (Id 1)
+6. 7776 - Quincy (Id 16)
+7. 7668 - Grace (Id 6)
+8. 7374 - Alice (Id 0)
+9. 6915 - Ian (Id 8)
+10. 6864 - Rachel (Id 17)
+11. 6592 - Nina (Id 13)
+12. 6575 - Uma (Id 20)
+13. 6530 - Victor (Id 21)
+14. 6450 - Leo (Id 11)
+15. 5636 - Emma (Id 4)
+16. 5413 - Wendy (Id 22",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-ADVANCED,"Compute the sum of the columns id, packages, packages_per_km for each row in `logistics_delivery`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[11, 'Driver_11', 52, 75, 5.6, 7.0, 9.3, 7.43, 1.442], [10, 'Driver_10', 41, 69, 5.1, 23.5, 11.4, 2.47, 0.707], [16, 'Driver_16', 15, 15, 5.7, 6.8, 10.4, 8.68, 0.254], [14, 'Driver_14', 64, 22, 5.8, 21.8, 11.0, 2.94, 0.344], [21, 'Driver_21', 50, 75, 3.2, 9.4, 15.6, 5.32, 1.5]]",SELECT * FROM `logistics_delivery` ORDER BY `id` + `packages` + `packages_per_km` ASC LIMIT 5,2,,0.0,0.143,0.136,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-ADVANCED,"Compute the sum of the columns id, packages, packages_per_km for each row in `logistics_delivery`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[22, 75, 1.5], [21, 77, 0.271], [12, 75, 1.442], [23, 64, 0.242], [14, 72, 0.248]]",SELECT * FROM `logistics_delivery` ORDER BY `id` + `packages` + `packages_per_km` DESC LIMIT 5,0,,0.0,1.0,0.318,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-ADVANCED,"Compute the sum of the columns fuel_used_l, speed_kmph for each row in `logistics_delivery`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[10, 'Driver_11', 58, 41, 5.1, 23.5, 11.4, 2.47, 0.707, 34.9], [11, 'Driver_12', 52, 75, 5.6, 7.0, 9.3, 7.43, 1.442, 16.3], [21, 'Driver_22', 50, 75, 3.2, 9.4, 15.6, 5.32, 1.5, 25.0], [16, 'Driver_17', 59, 15, 5.7, 6.8, 10.4, 8.68, 0.254, 17.2], [14, 'Driver_15', 64, 22, 5.8, 21.8, 11.0, 2.94, 0.344, 32.8]]",SELECT * FROM `logistics_delivery` ORDER BY `fuel_used_l` + `speed_kmph` ASC LIMIT 5,0,,0.0,0.812,0.951,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-ADVANCED,"Compute the sum of the columns fuel_used_l, speed_kmph for each row in `logistics_delivery`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[13, 'Driver_13', 290, 72, 1.7, 15.9, 170.6, 186.5], [19, 'Driver_19', 237, 23, 2.6, 21.6, 91.2, 112.8], [20, 'Driver_20', 284, 77, 3.0, 15.1, 94.7, 109.8], [17, 'Driver_17', 214, 41, 3.9, 9.3, 54.9, 64.2], [24, 'Driver_24', 157, 11, 4.8, 17.0, 32.7, 49.7]]",SELECT * FROM `logistics_delivery` ORDER BY `fuel_used_l` + `speed_kmph` DESC LIMIT 5,0,,0.0,0.436,0.386,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-ADVANCED,"Compute the sum of the columns distance_km, fuel_used_l, packages_per_km for each row in `logistics_delivery`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[11, 'Driver_12', 52, 75, 5.6, 7.0, 9.3, 7.43, 1.442, 60.442], [10, 'Driver_11', 58, 41, 5.1, 23.5, 11.4, 2.47, 0.707, 82.207], [21, 'Driver_22', 50, 75, 3.2, 9.4, 15.6, 5.32, 1.5, 60.94], [16, 'Driver_17', 59, 15, 5.7, 6.8, 10.4, 8.68, 0.254, 66.054], [14, 'Driver_15', 64, 22, 5.8, 21.8, 11.0, 2.94, 0.344, 86.144]]",SELECT * FROM `logistics_delivery` ORDER BY `distance_km` + `fuel_used_l` + `packages_per_km` ASC LIMIT 5,0,,0.0,0.812,0.951,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-ADVANCED,"Compute the sum of the columns distance_km, fuel_used_l, packages_per_km for each row in `logistics_delivery`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,[],SELECT * FROM `logistics_delivery` ORDER BY `distance_km` + `fuel_used_l` + `packages_per_km` DESC LIMIT 5,3,"<think>
+Alright, so I need to figure out how to compute the sum of the columns distance_km, fuel_used_l, and packages_per_km for each row in the logistics_delivery dataset. Then, I have to sort all the rows in descending order based on this sum and return the top 5 rows. Let me break this down step by step.
+
+First, I'll look at the dataset provided. It has several columns: id, driver_name, distance_km, packages, time_hrs, fuel_used_l, speed_kmph, fuel_efficiency_kmpl, and packages_per_km. The task is to sum distance_km, fuel_used_l, and packages_per_km for each row. 
+
+Wait, but looking at the query again, it says to compute the sum of these three columns. So for each row, I need to add the values from distance_km, fuel_used_l, and packages_per_km. That makes sense. 
+
+Let me take the first row as an example. The distance_km is 149, fuel_used_l is 29.3, and packages_per_km is 0.154. So the sum would be 149 + 29.3 + 0.154. Let me calculate that: 149 + 29.3 is 178.3, plus 0.154 gives 178.454. I'll do this for each row.
+
+Once I have the sum for each row, the next step is to sort all the rows in descending order based on this sum. That means the row with the highest sum comes first, and the lowest comes last. After sorting, I need to pick the top 5 rows.
+
+Now, I'll go through each row and compute the sum:
+
+Row 0: 149 + 29.3 + 0.154 = 178.454
+Row 1: 210 + 25.4 + 0.167 = 235.567
+Row 2: 293 + 14.2 + 0.044 = 307.244
+Row 3: 115 + 17.7 + 0.617 = 133.317
+Row 4: 152 + 29.5 + 0.441 = 182.941
+Row 5: 204 + 25.2 + 0.353 = 229.553
+Row 6: 200 + 14.3 + 0.365 = 214.665
+Row 7: 181 + 19.6 + 0.133 = 200.733
+Row 8: 230 + 27.8 + 0.065 = 257.865
+Row 9: 157 + 10.0 + 0.439 = 167.439
+Row 10: 58 + 23.5 + 0.707 = 82.207
+Row 11: 52 + 7.0 + 1.442 = 60.442
+Row 12: 272 + 23.4 + 0.092 = 295.492
+Row 13: 290 + 15.9 + 0.248 = 306.148
+Row 14: 64 + 21.8 + 0.344 = 86.144
+Row 15: 147 + 15.6 + 0.156 = 162.756
+Row 16: 59 + 6.8 + 0.254 = 66.054
+Row 17: 214 + 9.3 + 0.192 = 223.492
+Row 18: 63 + 25.3 + 0.683 = 89.0
+Wait, 63 + 25.3 is 88.3, plus 0.683 is 88.983. Hmm, maybe I miscalculated earlier.
+Row 19: 237 + 21.6 + 0.097 = 258.697
+Row 20: 284 + 15.1 + 0.271 = 299.371
+Row 21: 50 + 9.4 + 1.5 = 60.9
+Row 22: 265 + 25.9 + 0.242 = 291.142
+Row 23: 273 + 25.7 + 0.19 = 298.89
+Row 24: 157 + 17.0 + 0.07 = 174.07
+
+Now, I'll list all the sums:
+
+Row 0: 178.454
+Row 1: 235.567
+Row 2: 307.244
+Row 3: 133.317
+Row 4: 182.941
+Row 5: 229.553
+Row 6: 214.665
+Row 7: 200.733
+Row 8: 257.865
+Row 9: 167.439
+Row 10: 82.207
+Row 11: 60.442
+Row 12: 295.492
+Row 13: 306.148
+Row 14: 86.144
+Row 15: 162.756
+Row 16: 66.054
+Row 17: 223.492
+Row 18: 88.983
+Row 19: 258.697
+Row 20: 299.371
+Row 21: 60.9
+Row 22: 291.142
+Row 23: 298.89
+Row 24: 174.07
+
+Next, I need to sort these sums in descending order. Let me list them from highest to lowest:
+
+Row 2: 307.244
+Row 13: 306.148
+Row 23: 298.89
+Row 20: 299.371
+Wait, 299.371 is higher than 298.89, so the order should be Row 20, then Row 23.
+Row 12: 295.492
+Row 22: 291.142
+Row 1: 235.567
+Row 8: 257.865
+Wait, 257.865 is higher than 235.567, so Row 8 comes before Row 1.
+Row 19: 258.697
+Wait, 258.697 is higher than 257.865, so Row 19 comes before Row 8.
+Row 5: 229.553
+Row 17: 223.492
+Row 6: 214.665
+Row 4: 182.941
+Row 0: 178.454
+Row 24: 174.07
+Row 7: 200.733
+Wait, 200.733 is higher than 174.07, so it should come before that.
+Row 9: 167.439
+Row 15: 162.756
+Row 3: 133.317
+Row 14: 86.144
+Row 18: 88.983
+Row 10: 82.207
+Row 16: 66.054
+Row 11: 60.442
+Row 21: 60.9
+
+Wait, I think I made a mistake in ordering. Let me reorganize this properly.
+
+Let me list all the sums with their row numbers:
+
+Row 2: 307.244
+Row 13: 306.148
+Row 20: 299.371
+Row 23: 298.89
+Row 12: 295.492
+Row 22: 291.142
+Row 19: 258.697
+Row 8: 257.865
+Row 1: 235.567
+Row 5: 229.553
+Row 17: 223.492
+Row 6: 214.665
+Row 4: 182.941
+Row 0: 178.454
+Row 24: 174.07
+Row 7: 200.733
+Row 9: 167.439
+Row 15: 162.756
+Row 3: 133.317
+Row 18: 88.983
+Row 14: 86.144
+Row 10: 82.207
+Row 16: 66.054
+Row 21: 60.9
+Row 11: 60.442
+
+Wait, I see that Row 7 has 200.733, which is higher than Row 4's 182.941, so it should come before Row 4. Let me correct the order:
+
+Row 2: 307.244
+Row 13: 306.148
+Row 20: 299.371
+Row 23: 298.89
+Row 12: 295.492
+Row 22: 291.142
+Row 19: 258.697
+Row 8: 257.865
+Row 1: 235.567
+Row 5: 229.553
+Row 17: 223.492
+Row 6: 214.665
+Row 7: 200.733
+Row 4: 182.941
+Row 0: 178.454
+Row 24: 174.07
+Row 9: 167.439
+Row 15: 162.756
+Row 3: 133.317
+Row 18: 88.983
+Row 14: 86.144
+Row 10: 82.207
+Row 16: 66.054
+Row 21: 60.9
+Row 11: 60.442
+
+Now, the top 5 rows based on the sum are:
+
+1.",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-ADVANCED,"Compute the sum of the columns id, distance_km, packages for each row in `logistics_delivery`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[11, 'Driver_12', 52, 75, 5.6, 7.0, 9.3, 7.43, 1.442], [10, 'Driver_11', 58, 41, 5.1, 23.5, 11.4, 2.47, 0.707], [21, 'Driver_22', 50, 75, 3.2, 9.4, 15.6, 5.32, 1.5], [16, 'Driver_17', 59, 15, 5.7, 6.8, 10.4, 8.68, 0.254], [14, 'Driver_15', 64, 22, 5.8, 21.8, 11.0, 2.94, 0.344]]",SELECT * FROM `logistics_delivery` ORDER BY `id` + `distance_km` + `packages` ASC LIMIT 5,1,,0.0,0.744,0.744,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-ADVANCED,"Compute the sum of the columns id, distance_km, packages for each row in `logistics_delivery`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[21, 284, 77, 382], [14, 290, 72, 376], [23, 265, 64, 332], [24, 273, 52, 329], [13, 272, 25, 310]]",SELECT * FROM `logistics_delivery` ORDER BY `id` + `distance_km` + `packages` DESC LIMIT 5,1,,0.0,0.75,0.333,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-ADVANCED,"Compute the sum of the columns distance_km, time_hrs, speed_kmph for each row in `logistics_delivery`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[10, 'Driver_11', 58, 41, 5.1, 23.5, 11.4, 2.47, 0.707], [11, 'Driver_12', 52, 75, 5.6, 7.0, 9.3, 7.43, 1.442], [21, 'Driver_22', 50, 75, 3.2, 9.4, 15.6, 5.32, 1.5], [16, 'Driver_17', 59, 15, 5.7, 6.8, 10.4, 8.68, 0.254], [14, 'Driver_15', 64, 22, 5.8, 21.8, 11.0, 2.94, 0.344]]",SELECT * FROM `logistics_delivery` ORDER BY `distance_km` + `time_hrs` + `speed_kmph` ASC LIMIT 5,2,,0.0,0.907,0.951,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-ADVANCED,"Compute the sum of the columns distance_km, time_hrs, speed_kmph for each row in `logistics_delivery`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[13, 'Driver_13', 290, 72, 1.7, 15.9, 170.6, 18.24, 0.248], [20, 'Driver_20', 284, 77, 3.0, 15.1, 94.7, 18.81, 0.271], [12, 'Driver_12', 272, 25, 5.8, 23.4, 46.9, 11.62, 0.092], [22, 'Driver_22', 265, 64, 3.8, 25.9, 69.7, 10.23, 0.242], [19, 'Driver_19', 237, 23, 2.6, 21.6, 91.2, 10.97, 0.097]]",SELECT * FROM `logistics_delivery` ORDER BY `distance_km` + `time_hrs` + `speed_kmph` DESC LIMIT 5,1,,0.0,0.511,0.523,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,products,ORDERBY-ADVANCED,"Compute the sum of the columns price, units_sold for each row in `products`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[12, 'Mouse Logitech', 'Electronics', 7.12, 402, 2862.24, 'No', 409.14], [17, 'T-shirt H&M', 'Clothing', 89.32, 901, 80477.32, 'Yes', 990.32], [8, 'Frigorifero Bosch', 'Electronics', 89.92, 776, 69777.92, 'Yes', 865.92], [23, 'Birra Heineken', 'Food', 76.74, 250, 19185.0, 'Yes', 326.74], [19, 'Tablet Lenovo', 'Electronics', 139.48, 700, 97636.0, 'Yes', 839.48]]",SELECT * FROM `products` ORDER BY `price` + `units_sold` ASC LIMIT 5,0,,0.0,0.4,0.467,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,products,ORDERBY-ADVANCED,"Compute the sum of the columns price, units_sold for each row in `products`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[10, 'Orologio Casio', 'Accessories', 926.81, 880, 815592.8, 'Yes'], [15, 'Scarpe Nike', 'Clothing', 874.94, 867, 758572.98, 'Yes'], [21, 'Borsa Prada', 'Accessories', 748.15, 873, 653134.95, 'Yes'], [22, 'Occhiali RayBan', 'Accessories', 397.41, 752, 298852.32, 'Yes'], [16, 'Giacca Zara', 'Clothing', 925.64, 563, 521135.32, 'Yes']]",SELECT * FROM `products` ORDER BY `price` + `units_sold` DESC LIMIT 5,0,,0.0,0.643,0.621,0.0,1.0,0.6,1.0
+data/db_numerical_simple.sqlite,products,ORDERBY-ADVANCED,"Compute the sum of the columns units_sold, total_revenue for each row in `products`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,[],SELECT * FROM `products` ORDER BY `units_sold` + `total_revenue` ASC LIMIT 5,3,"<think>
+Okay, so I need to figure out how to compute the sum of the units_sold and total_revenue columns for each row in the products dataset, then sort those rows based on this sum in ascending order and return the first five rows. Let me break this down step by step.
+
+First, I should understand the dataset. It has several columns: id, name, category, price, units_sold, total_revenue, and is_top_seller. Each row represents a different product with its respective data.
+
+The task is to sum units_sold and total_revenue for each product. That means for each row, I'll add the value in units_sold to the value in total_revenue. Once I have these sums, I'll sort all the rows from the smallest sum to the largest. After sorting, I need to pick the top five entries with the smallest sums.
+
+Let me think about how to approach this. I'll probably go through each product, calculate the sum, and then sort them. Since I'm doing this manually, I'll need to list out the sums for each product and then identify the five smallest ones.
+
+Starting with product 0: units_sold is 622 and total_revenue is 290299.84. The sum would be 622 + 290299.84 = 290921.84.
+
+Product 1: units_sold is 952 and total_revenue is 310332.96. Sum is 952 + 310332.96 = 311285.96.
+
+Product 2: units_sold is 471 and total_revenue is 468442.47. Sum is 471 + 468442.47 = 468913.47.
+
+Product 3: units_sold is 652 and total_revenue is 279336.36. Sum is 652 + 279336.36 = 279988.36.
+
+Product 4: units_sold is 778 and total_revenue is 262559.44. Sum is 778 + 262559.44 = 263337.44.
+
+Product 5: units_sold is 14 and total_revenue is 9120.44. Sum is 14 + 9120.44 = 9134.44.
+
+Product 6: units_sold is 227 and total_revenue is 38485.58. Sum is 227 + 38485.58 = 38712.58.
+
+Product 7: units_sold is 512 and total_revenue is 492922.88. Sum is 512 + 492922.88 = 493434.88.
+
+Product 8: units_sold is 776 and total_revenue is 69777.92. Sum is 776 + 69777.92 = 70553.92.
+
+Product 9: units_sold is 407 and total_revenue is 481997.89. Sum is 407 + 481997.89 = 482404.89.
+
+Product 10: units_sold is 880 and total_revenue is 815592.8. Sum is 880 + 815592.8 = 816472.8.
+
+Product 11: units_sold is 804 and total_revenue is 192043.44. Sum is 804 + 192043.44 = 192847.44.
+
+Product 12: units_sold is 402 and total_revenue is 2862.24. Sum is 402 + 2862.24 = 3264.24.
+
+Product 13: units_sold is 216 and total_revenue is 211388.4. Sum is 216 + 211388.4 = 211604.4.
+
+Product 14: units_sold is 24 and total_revenue is 20361.12. Sum is 24 + 20361.12 = 20385.12.
+
+Product 15: units_sold is 867 and total_revenue is 758572.98. Sum is 867 + 758572.98 = 759439.98.
+
+Product 16: units_sold is 563 and total_revenue is 521135.32. Sum is 563 + 521135.32 = 521698.32.
+
+Product 17: units_sold is 901 and total_revenue is 80477.32. Sum is 901 + 80477.32 = 81378.32.
+
+Product 18: units_sold is 470 and total_revenue is 202325.6. Sum is 470 + 202325.6 = 202795.6.
+
+Product 19: units_sold is 700 and total_revenue is 97636.0. Sum is 700 + 97636 = 98336.
+
+Product 20: units_sold is 584 and total_revenue is 604901.36. Sum is 584 + 604901.36 = 605485.36.
+
+Product 21: units_sold is 873 and total_revenue is 653134.95. Sum is 873 + 653134.95 = 654007.95.
+
+Product 22: units_sold is 752 and total_revenue is 298852.32. Sum is 752 + 298852.32 = 299604.32.
+
+Product 23: units_sold is 250 and total_revenue is 19185.0. Sum is 250 + 19185 = 19435.
+
+Product 24: units_sold is 573 and total_revenue is 214026.96. Sum is 573 + 214026.96 = 214599.96.
+
+Product 25: units_sold is 105 and total_revenue is 41008.8. Sum is 105 + 41008.8 = 41113.8.
+
+Product 26: units_sold is 909 and total_revenue is 795974.94. Sum is 909 + 795974.94 = 796883.94.
+
+Product 27: units_sold is 743 and total_revenue is 568580.75. Sum is 743 + 568580.75 = 569323.75.
+
+Product 28: units_sold is 494 and total_revenue is 525966.74. Sum is 494 + 525966.74 = 526460.74.
+
+Product 29: units_sold is 416 and total_revenue is 235838.72. Sum is 416 + 235838.72 = 236254.72.
+
+Now, I need to list all these sums and sort them from smallest to largest. Let me list them out:
+
+- Product 5: 9134.44
+- Product 12: 3264.24
+- Product 14: 20385.12
+- Product 23: 19435
+- Product 25: 41113.8
+- Product 6: 38712.58
+- Product 8: 70553.92
+- Product 17: 81378.32
+- Product 19: 98336
+- Product 24: 214599.96
+- Product 4: 263337.44
+- Product 3: 279988.36
+- Product 13: 211604.4
+- Product 18: 202795.6
+- Product 7: 493434.88
+- Product 9: 482404.89
+- Product 11: 192847.44
+- Product 10: 816472.8
+- Product 15: 759439.98
+- Product 16: 521698.32
+- Product 20: 605485.36
+- Product 21: 654007.95
+- Product 22: 299604.32
+- Product 26: 796883.94
+- Product 27: 569323.75
+- Product 28: 526460.74
+- Product 29: 236254.72
+- Product 0: 290921.84
+- Product 1: 311285.96
+- Product 2: 468913.47
+- Product 5: 9120.44 (Wait, I think I already listed Product 5)
+  
+Wait, I think I might have missed some. Let me recount to ensure I have all 30 products.
+
+Looking back, I think I have all the sums. Now, I need to sort them in ascending order.
+
+Let me list them in order from smallest to largest:
+
+1. Product 12: 3264.24
+2. Product 5: 9134.44
+3. Product 23: 19435
+4. Product 14: 20385.12
+5. Product 25: 41113.8
+6. Product 6: 38712.58
+7. Product 8: 70553.92
+8. Product 17: 81378.32
+9. Product 19: 98336
+10. Product 24: 214599.96
+11. Product 4: 263337.44
+12. Product 3: 279988.36
+13. Product 13: 211604.4
+14. Product 18: 202795.6
+15. Product 7: 493434.88
+16. Product 9: 482404.89
+17. Product 11: 192847.44
+18. Product 10: 816472.8
+19. Product 15: 759439.98
+20. Product 16: 521698.32
+21. Product 20: 605485.36
+22. Product 21: 654007.95
+23. Product 22: 299604.32
+24. Product 26: 796883.94
+25.",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_numerical_simple.sqlite,products,ORDERBY-ADVANCED,"Compute the sum of the columns units_sold, total_revenue for each row in `products`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[10, 'Orologio Casio', 'Accessories', 926.81, 880, 815592.8, 'Yes'], [15, 'Scarpe Nike', 'Clothing', 874.94, 867, 758572.98, 'Yes'], [21, 'Borsa Prada', 'Accessories', 748.15, 873, 653134.95, 'Yes'], [22, 'Occhiali RayBan', 'Accessories', 397.41, 752, 298852.32, 'Yes'], [16, 'Giacca Zara', 'Clothing', 925.64, 563, 521135.32, 'Yes']]",SELECT * FROM `products` ORDER BY `units_sold` + `total_revenue` DESC LIMIT 5,0,,0.0,0.643,0.621,0.0,1.0,0.6,1.0
+data/db_numerical_simple.sqlite,products,ORDERBY-ADVANCED,"Compute the sum of the columns price, units_sold, total_revenue for each row in `products`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[12, 'Mouse Logitech', 'Electronics', 7.12, 402, 2862.24, 'No', 1279.36], [5, 'Samsung TV', 'Electronics', 651.46, 14, 9120.44, 'No', 10086.9], [14, 'Zaino Eastpak', 'Accessories', 848.38, 24, 20361.12, 'Yes', 22233.5], [17, 'T-shirt H&M', 'Clothing', 89.32, 901, 80477.32, 'Yes', 81567.64], [23, 'Birra Heineken', 'Food', 76.74, 250, 19185.0, 'Yes', 19511.74]]",SELECT * FROM `products` ORDER BY `price` + `units_sold` + `total_revenue` ASC LIMIT 5,1,,0.0,0.686,0.8,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,products,ORDERBY-ADVANCED,"Compute the sum of the columns price, units_sold, total_revenue for each row in `products`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,[],SELECT * FROM `products` ORDER BY `price` + `units_sold` + `total_revenue` DESC LIMIT 5,3,"<think>
+Alright, let's tackle this problem step by step. I'm given a dataset of products with various attributes and a specific task to perform. The goal is to compute the sum of the 'price', 'units_sold', and 'total_revenue' columns for each row, sort these sums in descending order, and return the top 5 entries.
+
+First, I need to understand the dataset. It includes product id, name, category, price, units sold, total revenue, and whether it's a top seller. The task involves numerical computations and sorting, so I'll focus on the numerical columns: price, units_sold, and total_revenue.
+
+For each product, I'll calculate the sum of these three columns. Since the user wants the sum of each row across these columns, I'll add price, units_sold, and total_revenue together for every product. This will give me a single value representing the combined metric for each product.
+
+Once I have these sums, the next step is to sort the products based on this sum in descending order. This means the product with the highest sum will come first, and the fifth highest will be the last in the top 5 list.
+
+After sorting, I'll extract the top 5 products. For each of these, I need to create an entry that includes all the original fields plus the computed sum. It's important to ensure that none of the fields are null or missing, so I'll make sure to fill in any missing data with appropriate values based on context, though in this dataset, everything seems complete.
+
+I'll structure the output as specified: a JSON object with the table name and an array of ordered entries. Each entry will be a JSON object containing all the product details, including the computed sum.
+
+I should also verify the calculations to ensure accuracy. For example, for product 0, the sum would be 466.72 (price) + 622 (units_sold) + 290299.84 (total_revenue). Adding these together gives a large number, which I'll compute precisely.
+
+After computing all sums, sorting, and selecting the top 5, I'll format the JSON accordingly, making sure it's valid and follows the specified schema without any additional text or explanations outside the JSON structure.
+
+Finally, I'll review the JSON to ensure all fields are correctly populated and that the top 5 products are accurately represented based on their computed sums.
+</think>
+
+```json
+{
+  ""table_name"": ""products"",
+  ""ordered_entries"": [
+    {
+      ""id"": 10,
+      ""name"": ""Orologio Casio"",
+      ""category"": ""Accessories"",
+      ""price"": 926.81,
+      ""units_sold"": 880,
+      ""total_revenue"": 815592.8,
+      ""is_top_seller"": ""Yes"",
+      ""sum"": 926.81 + 880 + 815592.8 = 817040.61
+    },
+    {
+      ""id"": 15,
+      ""name"": ""Scarpe Nike"",
+      ""category"": ""Clothing"",
+      ""price"": 874.94,
+      ""units_sold"": 867,
+      ""total_revenue"": 758572.98,
+      ""is_top_seller"": ""Yes"",
+      ""sum"": 874.94 + 867 + 758572.98 = 760314.92
+    },
+    {
+      ""id"": 21,
+      ""name"": ""Borsa Prada"",
+      ""category"": ""Accessories"",
+      ""price"": 748.15,
+      ""units_sold"": 873,
+      ""total_revenue"": 653134.95,
+      ""is_top_seller"": ""Yes"",
+      ""sum"": 748.15 + 873 + 653134.95 = 654756.1
+    },
+    {
+      ""id"": 16,
+      ""name"": ""Giacca Zara"",
+      ""category"": ""Clothing"",
+      ""price"": 925.64,
+      ""units_sold"": 563,
+      ""total_revenue"": 521135.32,
+      ""is_top_seller"": ""Yes"",
+      ""sum"": 925.64 + 563 + 521135.32 = 522624.96
+    },
+    {
+      ""id"": 22,
+      ""name"": ""Occhiali RayBan"",
+      ""category"": ""Accessories"",
+      ""price"": 397.41,
+      ""units_sold"": 752,
+      ""total_revenue"": 298852.32,
+      ""is_top_seller"": ""Yes"",
+      ""sum"": 397.41 + 752 + 298852.32 = 300001.73
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_numerical_simple.sqlite,products,ORDERBY-ADVANCED,"Compute the sum of the columns price, total_revenue for each row in `products`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[12, 'Mouse Logitech', 'Electronics', 7.12, 402, 2862.24, 'No', 2869.36], [17, 'T-shirt H&M', 'Clothing', 89.32, 901, 80477.32, 'Yes', 80566.64], [23, 'Birra Heineken', 'Food', 76.74, 250, 19185.0, 'Yes', 19261.74], [19, 'Tablet Lenovo', 'Electronics', 139.48, 700, 97636.0, 'Yes', 97775.48], [5, 'Samsung TV', 'Electronics', 651.46, 14, 9120.44, 'No', 9771.9]]",SELECT * FROM `products` ORDER BY `price` + `total_revenue` ASC LIMIT 5,0,,0.0,0.543,0.633,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,products,ORDERBY-ADVANCED,"Compute the sum of the columns price, total_revenue for each row in `products`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[10, 'Orologio Casio', 'Accessories', 926.81, 880, 815592.8, 'Yes'], [15, 'Scarpe Nike', 'Clothing', 874.94, 867, 758572.98, 'Yes'], [21, 'Borsa Prada', 'Accessories', 748.15, 873, 653134.95, 'Yes'], [22, 'Occhiali RayBan', 'Accessories', 397.41, 752, 298852.32, 'Yes'], [16, 'Giacca Zara', 'Clothing', 925.64, 563, 521135.32, 'Yes']]",SELECT * FROM `products` ORDER BY `price` + `total_revenue` DESC LIMIT 5,1,,0.0,0.643,0.621,0.0,1.0,0.6,1.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-ADVANCED,"Compute the sum of the columns id, english_score for each row in `student_performance`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[5, 'Student_6', 37, 75, 56.0, 'Yes', 80], [7, 'Student_8', 40, 54, 47.0, 'No', 61], [4, 'Student_5', 51, 52, 51.5, 'Yes', 56], [9, 'Student_10', 52, 42, 47.0, 'No', 51], [15, 'Student_16', 62, 30, 46.0, 'No', 45]]",SELECT * FROM `student_performance` ORDER BY `id` + `english_score` ASC LIMIT 5,1,,0.0,0.5,0.583,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-ADVANCED,"Compute the sum of the columns id, english_score for each row in `student_performance`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[22, 'Student_22', 94, 116], [23, 'Student_23', 87, 110], [16, 'Student_16', 92, 108], [18, 'Student_18', 75, 93], [13, 'Student_13', 76, 89]]",SELECT * FROM `student_performance` ORDER BY `id` + `english_score` DESC LIMIT 5,0,,0.0,0.35,0.269,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-ADVANCED,"Compute the sum of the columns id, math_score, english_score for each row in `student_performance`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[12, 'Student_13', 31, 56, 43.5, 'No', 99], [15, 'Student_16', 30, 53, 46.0, 'No', 98], [5, 'Student_6', 37, 75, 56.0, 'Yes', 117], [9, 'Student_10', 42, 55, 47.0, 'No', 96], [14, 'Student_15', 42, 53, 47.5, 'No', 109]]",SELECT * FROM `student_performance` ORDER BY `id` + `math_score` + `english_score` ASC LIMIT 5,0,,0.0,0.448,0.52,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-ADVANCED,"Compute the sum of the columns id, math_score, english_score for each row in `student_performance`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[22, 98, 94, 214], [24, 97, 46, 143], [23, 85, 87, 195], [16, 90, 92, 198], [13, 81, 76, 170]]",SELECT * FROM `student_performance` ORDER BY `id` + `math_score` + `english_score` DESC LIMIT 5,0,,0.0,0.5,0.385,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-ADVANCED,"Compute the sum of the columns id, math_score, average_score for each row in `student_performance`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Student_7', 8, 40, 47.0, 95], ['Student_12', 13, 31, 43.5, 87.5], ['Student_15', 16, 30, 46.0, 92.0], ['Student_5', 6, 37, 56.0, 99.0], ['Student_9', 10, 42, 47.0, 99.0]]",SELECT * FROM `student_performance` ORDER BY `id` + `math_score` + `average_score` ASC LIMIT 5,1,,0.0,0.522,0.462,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-ADVANCED,"Compute the sum of the columns id, math_score, average_score for each row in `student_performance`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[22, 'Student_22', 98, 94, 96.0, 216.0], [24, 'Student_24', 97, 46, 71.5, 168.5], [23, 'Student_23', 85, 87, 86.0, 194.0], [16, 'Student_16', 90, 92, 91.0, 197.0], [18, 'Student_18', 84, 75, 79.5, 181.5]]",SELECT * FROM `student_performance` ORDER BY `id` + `math_score` + `average_score` DESC LIMIT 5,0,,0.0,0.633,0.731,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-ADVANCED,"Compute the sum of the columns id, english_score, average_score for each row in `student_performance`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[15, 'Student_16', 62, 30, 46.0, 'No'], [9, 'Student_10', 52, 42, 47.0, 'No'], [10, 'Student_11', 92, 32, 62.0, 'Yes'], [4, 'Student_5', 51, 52, 51.5, 'Yes'], [7, 'Student_8', 40, 54, 47.0, 'No']]",SELECT * FROM `student_performance` ORDER BY `id` + `english_score` + `average_score` ASC LIMIT 5,1,,0.0,0.833,0.833,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-ADVANCED,"Compute the sum of the columns id, english_score, average_score for each row in `student_performance`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[22, 94, 96], [16, 92, 91], [23, 87, 86], [25, 97, 71.5], [1, 85, 83.5]]",SELECT * FROM `student_performance` ORDER BY `id` + `english_score` + `average_score` DESC LIMIT 5,0,,0.0,0.533,0.32,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-ADVANCED,"Compute the sum of the columns math_score, average_score for each row in `student_performance`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[5, 'Student_6', 37, 75, 56.0, 'Yes'], [9, 'Student_10', 52, 42, 47.0, 'No'], [15, 'Student_16', 62, 30, 46.0, 'No'], [14, 'Student_15', 42, 53, 47.5, 'No'], [12, 'Student_13', 31, 56, 43.5, 'No']]",SELECT * FROM `student_performance` ORDER BY `math_score` + `average_score` ASC LIMIT 5,0,,0.0,0.68,0.708,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-ADVANCED,"Compute the sum of the columns math_score, average_score for each row in `student_performance`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[22, 'Student_22', 98, 94, 96.0, 'Yes', 194.0], [16, 'Student_16', 90, 92, 91.0, 'Yes', 181.0], [23, 'Student_23', 85, 87, 86.0, 'Yes', 171.0], [18, 'Student_18', 84, 75, 79.5, 'Yes', 163.5], [24, 'Student_24', 97, 46, 71.5, 'Yes', 168.5]]",SELECT * FROM `student_performance` ORDER BY `math_score` + `average_score` DESC LIMIT 5,0,,0.0,0.548,0.68,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,BMI,ORDERBY-ADVANCED,"Compute the sum of the columns height_m, weight_kg for each row in `BMI`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[29, 'Lily', 1.52, 69.4, 30.0, 'Medium', 121.92], [10, 'Karen', 1.51, 54.2, 23.8, 'Low', 105.71], [6, 'Grace', 1.52, 67.8, 29.3, 'Medium', 119.32], [28, 'Mia', 1.74, 48.4, 16.0, 'Low', 122.4], [12, 'Maria', 1.83, 47.6, 14.2, 'Low', 130.59]]",SELECT * FROM `BMI` ORDER BY `height_m` + `weight_kg` ASC LIMIT 5,2,,0.0,0.355,0.423,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,BMI,ORDERBY-ADVANCED,"Compute the sum of the columns height_m, weight_kg for each row in `BMI`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[20, 'Uma', 1.74, 117.7, 38.9, 'High', 191.74], [4, 'Emma', 1.56, 117.4, 48.2, 'High', 188.96], [21, 'Victor', 1.56, 103.1, 42.4, 'High', 159.66], [5, 'Frank', 1.56, 105.6, 43.4, 'High', 161.56], [3, 'David', 1.74, 116.2, 38.4, 'High', 190.24]]",SELECT * FROM `BMI` ORDER BY `height_m` + `weight_kg` DESC LIMIT 5,0,,0.0,0.536,0.577,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,BMI,ORDERBY-ADVANCED,"Compute the sum of the columns height_m, BMI for each row in `BMI`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[28, 'Mia', 1.74, 48.4, 16.0, 'Low', 32.74], [12, 'Maria', 1.83, 47.6, 14.2, 'Low', 32.92], [27, 'Noah', 1.71, 59.7, 20.4, 'Low', 33.11], [7, 'Helen', 1.85, 52.3, 15.3, 'Low', 33.15], [1, 'Bob', 1.88, 57.8, 16.4, 'Low', 33.24]]",SELECT * FROM `BMI` ORDER BY `height_m` + `BMI` ASC LIMIT 5,0,,0.0,0.677,0.808,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,BMI,ORDERBY-ADVANCED,"Compute the sum of the columns height_m, BMI for each row in `BMI`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[20, 'Uma', 1.74, 117.7, 38.9, 'High', 42.63], [21, 'Victor', 1.56, 103.1, 42.4, 'High', 42.0], [22, 'Wendy', 1.62, 115.5, 44.0, 'High', 41.62], [4, 'Emma', 1.56, 117.4, 48.2, 'High', 40.76], [13, 'Nina', 1.58, 113.2, 45.3, 'High', 40.58]]",SELECT * FROM `BMI` ORDER BY `height_m` + `BMI` DESC LIMIT 5,0,,0.0,0.667,0.833,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,BMI,ORDERBY-ADVANCED,"Compute the sum of the columns height_m, weight_kg, BMI for each row in `BMI`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[28, 'Mia', 1.74, 48.4, 16.0, 'Low', 85.44], [12, 'Maria', 1.83, 47.6, 14.2, 'Low', 85.61], [7, 'Helen', 1.85, 52.3, 15.3, 'Low', 86.55], [1, 'Bob', 1.88, 57.8, 16.4, 'Low', 90.26], [26, 'Liam', 1.58, 51.6, 20.7, 'Low', 90.95]]",SELECT * FROM `BMI` ORDER BY `height_m` + `weight_kg` + `BMI` ASC LIMIT 5,0,,0.0,0.677,0.808,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,BMI,ORDERBY-ADVANCED,"Compute the sum of the columns height_m, weight_kg, BMI for each row in `BMI`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[20, 'Uma', 1.74, 117.7, 38.9, 'High', 252.48], [4, 'Emma', 1.56, 117.4, 48.2, 'High', 247.12], [21, 'Victor', 1.56, 103.1, 42.4, 'High', 241.92], [22, 'Wendy', 1.62, 115.5, 44.0, 'High', 239.52], [3, 'David', 1.74, 116.2, 38.4, 'High', 238.58]]",SELECT * FROM `BMI` ORDER BY `height_m` + `weight_kg` + `BMI` DESC LIMIT 5,0,,0.0,0.69,0.8,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,BMI,ORDERBY-ADVANCED,"Compute the sum of the columns weight_kg, BMI for each row in `BMI`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[28, 'Mia', 1.74, 48.4, 16.0, 'Low', 64.4], [12, 'Maria', 1.83, 47.6, 14.2, 'Low', 61.8], [7, 'Helen', 1.85, 52.3, 15.3, 'Low', 67.6], [2, 'Carla', 1.79, 49.9, 15.6, 'Low', 65.5], [1, 'Bob', 1.88, 57.8, 16.4, 'Low', 74.2]]",SELECT * FROM `BMI` ORDER BY `weight_kg` + `BMI` ASC LIMIT 5,0,,0.0,0.677,0.808,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,BMI,ORDERBY-ADVANCED,"Compute the sum of the columns weight_kg, BMI for each row in `BMI`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[20, 'Uma', 1.74, 117.7, 38.9, 'High', 156.6], [4, 'Emma', 1.56, 117.4, 48.2, 'High', 165.6], [22, 'Wendy', 1.62, 115.5, 44.0, 'High', 159.5], [21, 'Victor', 1.56, 103.1, 42.4, 'High', 145.5], [23, 'Xander', 1.65, 112.1, 41.2, 'High', 153.3]]",SELECT * FROM `BMI` ORDER BY `weight_kg` + `BMI` DESC LIMIT 5,0,,0.0,0.533,0.64,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-ADVANCED,"Compute the sum of the columns kwh_used, cost_per_kwh, avg_daily_kwh for each row in `energy_consumption`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[24, 'Family_25', 631, 28, 0.21, 22.54, 132.51, 884.25], [22, 'Family_23', 805, 30, 0.3, 26.83, 241.5, 1131.83], [14, 'Family_15', 862, 27, 0.28, 31.93, 241.36, 1171.93], [13, 'Family_14', 899, 25, 0.34, 35.96, 305.66, 1228.96], [7, 'Family_8', 810, 30, 0.28, 27.0, 226.8, 1165.28]]",SELECT * FROM `energy_consumption` ORDER BY `kwh_used` + `cost_per_kwh` + `avg_daily_kwh` ASC LIMIT 5,0,,0.0,0.595,0.688,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-ADVANCED,"Compute the sum of the columns kwh_used, cost_per_kwh, avg_daily_kwh for each row in `energy_consumption`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[11, 'Family_12', 2311, 25, 0.34, 92.44, 785.74, 2646.78], [15, 'Family_16', 2032, 32, 0.35, 63.5, 711.2, 2630.5], [5, 'Family_6', 1762, 31, 0.33, 56.84, 581.46, 2351.67], [6, 'Family_7', 2064, 33, 0.2, 62.55, 412.8, 2346.2], [21, 'Family_22', 1910, 27, 0.29, 70.74, 553.9, 2289.03]]",SELECT * FROM `energy_consumption` ORDER BY `kwh_used` + `cost_per_kwh` + `avg_daily_kwh` DESC LIMIT 5,0,,0.0,0.775,0.886,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-ADVANCED,"Compute the sum of the columns id, avg_daily_kwh for each row in `energy_consumption`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[25, 'Family_25', 631, 28, 0.21, 22.54, 132.51], [14, 'Family_14', 862, 27, 0.28, 31.93, 241.36], [13, 'Family_13', 899, 25, 0.34, 35.96, 305.66], [7, 'Family_7', 810, 30, 0.28, 27.0, 226.8], [22, 'Family_22', 805, 30, 0.3, 26.83, 241.5]]",SELECT * FROM `energy_consumption` ORDER BY `id` + `avg_daily_kwh` ASC LIMIT 5,0,,0.0,0.161,0.156,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-ADVANCED,"Compute the sum of the columns id, avg_daily_kwh for each row in `energy_consumption`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[11, 'Family_12', 2311, 25, 0.34, 92.44, 785.74, 103.44], [21, 'Family_22', 1910, 27, 0.29, 70.74, 553.9, 91.74], [6, 'Family_7', 2064, 33, 0.2, 62.55, 412.8, 68.55], [15, 'Family_16', 2032, 32, 0.35, 63.5, 711.2, 68.5], [5, 'Family_6', 1762, 31, 0.33, 56.84, 581.46, 61.84]]",SELECT * FROM `energy_consumption` ORDER BY `id` + `avg_daily_kwh` DESC LIMIT 5,0,,0.0,0.775,0.886,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-ADVANCED,"Compute the sum of the columns id, cost_per_kwh, total_cost for each row in `energy_consumption`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[25, 'Family_25', 631, 28, 0.21, 22.54, 132.51, 378.76], [14, 'Family_14', 862, 27, 0.28, 31.93, 241.36, 393.36], [22, 'Family_22', 805, 30, 0.3, 26.83, 241.5, 393.5], [13, 'Family_13', 899, 25, 0.34, 35.96, 305.66, 402.66], [7, 'Family_7', 810, 30, 0.28, 27.0, 226.8, 406.8]]",SELECT * FROM `energy_consumption` ORDER BY `id` + `cost_per_kwh` + `total_cost` ASC LIMIT 5,0,,0.0,0.528,0.594,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-ADVANCED,"Compute the sum of the columns id, cost_per_kwh, total_cost for each row in `energy_consumption`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[11, 'Family_12', 2311, 25, 0.34, 92.44, 785.74], [15, 'Family_16', 2032, 32, 0.35, 63.5, 711.2], [5, 'Family_6', 1762, 31, 0.33, 56.84, 581.46], [6, 'Family_7', 2064, 33, 0.2, 62.55, 412.8], [21, 'Family_22', 1910, 27, 0.29, 70.74, 553.9]]",SELECT * FROM `energy_consumption` ORDER BY `id` + `cost_per_kwh` + `total_cost` DESC LIMIT 5,0,,0.0,0.714,0.735,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-ADVANCED,"Compute the sum of the columns id, avg_daily_kwh, total_cost for each row in `energy_consumption`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[25, 'Family_25', 631, 28, 0.21, 22.54, 132.51, 179.05], [14, 'Family_14', 862, 27, 0.28, 31.93, 241.36, 287.29], [13, 'Family_13', 899, 25, 0.34, 35.96, 305.66, 354.62], [22, 'Family_22', 805, 30, 0.3, 26.83, 241.5, 299.33], [7, 'Family_7', 810, 30, 0.28, 27.0, 226.8, 304.8]]",SELECT * FROM `energy_consumption` ORDER BY `id` + `avg_daily_kwh` + `total_cost` ASC LIMIT 5,0,,0.0,0.528,0.594,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-ADVANCED,"Compute the sum of the columns id, avg_daily_kwh, total_cost for each row in `energy_consumption`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[11, 'Family_12', 2311, 25, 0.34, 92.44, 785.74, 898.18], [15, 'Family_16', 2032, 32, 0.35, 63.5, 711.2, 810.7], [6, 'Family_7', 2064, 33, 0.2, 62.55, 412.8, 680.35], [21, 'Family_22', 1910, 27, 0.29, 70.74, 553.9, 664.64], [5, 'Family_6', 1762, 31, 0.33, 56.84, 581.46, 642.3]]",SELECT * FROM `energy_consumption` ORDER BY `id` + `avg_daily_kwh` + `total_cost` DESC LIMIT 5,0,,0.0,0.775,0.886,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-ADVANCED,"Compute the sum of the columns id, cost_per_kwh, avg_daily_kwh for each row in `energy_consumption`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[25, 'Family_25', 631, 28, 0.21, 22.54, 132.51, 75.75], [22, 'Family_22', 805, 30, 0.3, 26.83, 241.5, 78.13], [14, 'Family_14', 862, 27, 0.28, 31.93, 241.36, 80.21], [13, 'Family_13', 899, 25, 0.34, 35.96, 305.66, 88.3], [7, 'Family_7', 810, 30, 0.28, 27.0, 226.8, 88.28]]",SELECT * FROM `energy_consumption` ORDER BY `id` + `cost_per_kwh` + `avg_daily_kwh` ASC LIMIT 5,0,,0.0,0.139,0.156,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-ADVANCED,"Compute the sum of the columns id, cost_per_kwh, avg_daily_kwh for each row in `energy_consumption`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[11, 'Family_12', 2311, 25, 0.34, 92.44, 785.74, 2340.78], [15, 'Family_16', 2032, 32, 0.35, 63.5, 711.2, 2082.85], [6, 'Family_7', 2064, 33, 0.2, 62.55, 412.8, 2068.75], [5, 'Family_6', 1762, 31, 0.33, 56.84, 581.46, 1801.17], [16, 'Family_17', 1542, 34, 0.21, 45.35, 323.82, 1609.56]]",SELECT * FROM `energy_consumption` ORDER BY `id` + `cost_per_kwh` + `avg_daily_kwh` DESC LIMIT 5,0,,0.0,0.65,0.743,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,financial,ORDERBY-ADVANCED,"Compute the sum of the columns income, expenses, savings for each row in `financial`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[24, 'Yara', 1663, 702, 961, '57.8%', 'Low'], [25, 'Zane', 2998, 4718, -1720, '-57.4%', 'High'], [5, 'Frank', 2059, 8054, -5995, '-291.2%', 'High'], [20, 'Uma', 6575, 10425, -3850, '-58.6%', 'High'], [29, 'Lily', 4763, 8504, -3741, '-78.5%', 'High']]",SELECT * FROM `financial` ORDER BY `income` + `expenses` + `savings` ASC LIMIT 5,0,,0.0,0.438,0.438,0.0,1.0,0.4,1.0
+data/db_numerical_simple.sqlite,financial,ORDERBY-ADVANCED,"Compute the sum of the columns income, expenses, savings for each row in `financial`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[19, 'Tina', 9901, 6291, 3610, '36.5%', 'Low', 19802], [18, 'Steve', 8526, 2207, 6319, '74.1%', 'Low', 17052], [14, 'Oscar', 8392, 7892, 500, '6.0%', 'Medium', 16784], [16, 'Quincy', 7776, 5749, 2027, '26.1%', 'Medium', 15552], [17, 'Rachel', 6864, 5672, 1192, '17.4%', 'Medium', 13728]]",SELECT * FROM `financial` ORDER BY `income` + `expenses` + `savings` DESC LIMIT 5,0,,0.0,0.541,0.625,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,financial,ORDERBY-ADVANCED,"Compute the sum of the columns income, expenses for each row in `financial`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[24, 'Yara', 1663, 702, 961, '57.8%', 'Low'], [25, 'Zane', 2998, 4718, -1720, '-57.4%', 'High'], [5, 'Frank', 2059, 8054, -5995, '-291.2%', 'High'], [15, 'Paul', 2306, 7028, -4722, '-204.8%', 'High'], [27, 'Noah', 2495, 4889, -2394, '-96.0%', 'High']]",SELECT * FROM `financial` ORDER BY `income` + `expenses` ASC LIMIT 5,0,,0.0,0.25,0.267,0.0,1.0,0.2,1.0
+data/db_numerical_simple.sqlite,financial,ORDERBY-ADVANCED,"Compute the sum of the columns income, expenses for each row in `financial`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[20, 'Uma', 6575, 10425, -3850, '-58.6%', 'High', 17000], [26, 'Liam', 8994, 9458, -464, '-5.2%', 'High', 18452], [19, 'Tina', 9901, 6291, 3610, '36.5%', 'Low', 16192], [14, 'Oscar', 8392, 7892, 500, '6.0%', 'Medium', 16284], [18, 'Steve', 8526, 2207, 6319, '74.1%', 'Low', 10733]]",SELECT * FROM `financial` ORDER BY `income` + `expenses` DESC LIMIT 5,0,,0.0,0.711,0.818,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,financial,ORDERBY-ADVANCED,"Compute the sum of the columns income, savings for each row in `financial`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[24, 'Yara', 1663, 702, 961, '57.8%', 'Low'], [25, 'Zane', 2998, 4718, -1720, '-57.4%', 'High'], [2, 'Carla', 2678, 7085, -4407, '-164.6%', 'High'], [5, 'Frank', 2059, 8054, -5995, '-291.2%', 'High'], [12, 'Maria', 2663, 8664, -6001, '-225.3%', 'High']]",SELECT * FROM `financial` ORDER BY `income` + `savings` ASC LIMIT 5,0,,0.0,0.594,0.613,0.0,1.0,0.6,0.25
+data/db_numerical_simple.sqlite,financial,ORDERBY-ADVANCED,"Compute the sum of the columns income, savings for each row in `financial`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[19, 'Tina', 9901, 6291, 3610, '36.5%', 'Low'], [18, 'Steve', 8526, 2207, 6319, '74.1%', 'Low'], [1, 'Bob', 7892, 2353, 5539, '70.2%', 'Low'], [14, 'Oscar', 8392, 7892, 500, '6.0%', 'Medium'], [11, 'Leo', 6450, 1354, 5096, '79.0%', 'Low']]",SELECT * FROM `financial` ORDER BY `income` + `savings` DESC LIMIT 5,0,,0.0,0.839,0.812,0.0,1.0,0.8,0.9
+data/db_numerical_simple.sqlite,financial,ORDERBY-ADVANCED,"Compute the sum of the columns expenses, savings for each row in `financial`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[24, 'Yara', 1663, 702, 961, '57.8%', 'Low'], [9, 'Jack', 3693, 1198, 2495, '67.6%', 'Low'], [7, 'Helen', 4157, 2136, 2021, '48.6%', 'Low'], [3, 'David', 4242, 1791, 2451, '57.8%', 'Low'], [8, 'Ian', 6915, 4196, 2719, '39.3%', 'Low']]",SELECT * FROM `financial` ORDER BY `expenses` + `savings` ASC LIMIT 5,0,,0.0,0.267,0.25,0.0,1.0,0.2,1.0
+data/db_numerical_simple.sqlite,financial,ORDERBY-ADVANCED,"Compute the sum of the columns expenses, savings for each row in `financial`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[19, 'Tina', 9901, 6291, 3610, '36.5%', 'Low', 9901], [18, 'Steve', 8526, 2207, 6319, '74.1%', 'Low', 8526], [14, 'Oscar', 8392, 7892, 500, '6.0%', 'Medium', 8392], [16, 'Quincy', 7776, 5749, 2027, '26.1%', 'Medium', 7776], [6, 'Grace', 7668, 7780, -112, '-1.5%', 'High', 7668]]",SELECT * FROM `financial` ORDER BY `expenses` + `savings` DESC LIMIT 5,0,,0.0,0.636,0.656,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-ADVANCED,"Compute the sum of the columns id, packages, packages_per_km for each row in `logistics_delivery`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[21, 'Driver_22', 50, 75, 3.2, 9.4, 15.6, 5.32, 1.5], [11, 'Driver_12', 52, 75, 5.6, 7.0, 9.3, 7.43, 1.442], [10, 'Driver_11', 58, 41, 5.1, 23.5, 11.4, 2.47, 0.707], [16, 'Driver_17', 59, 15, 5.7, 6.8, 10.4, 8.68, 0.254], [14, 'Driver_15', 64, 22, 5.8, 21.8, 11.0, 2.94, 0.344]]",SELECT * FROM `logistics_delivery` ORDER BY `id` + `packages` + `packages_per_km` ASC LIMIT 5,0,,0.0,0.186,0.182,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-ADVANCED,"Compute the sum of the columns id, packages, packages_per_km for each row in `logistics_delivery`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[11, 'Driver_12', 52, 75, 5.6, 7.0, 9.3, 7.43, 1.442, 143.442], [21, 'Driver_22', 50, 75, 3.2, 9.4, 15.6, 5.32, 1.5, 151.5], [3, 'Driver_4', 115, 71, 5.8, 17.7, 19.8, 6.5, 0.617, 145.617], [10, 'Driver_11', 58, 41, 5.1, 23.5, 11.4, 2.47, 0.707, 90.707], [18, 'Driver_19', 63, 43, 2.3, 25.3, 27.4, 2.49, 0.683, 106.683]]",SELECT * FROM `logistics_delivery` ORDER BY `id` + `packages` + `packages_per_km` DESC LIMIT 5,0,,0.0,0.347,0.386,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-ADVANCED,"Compute the sum of the columns fuel_used_l, speed_kmph for each row in `logistics_delivery`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[11, 'Driver_12', 52, 75, 5.6, 7.0, 9.3, 7.43, 1.442, 16.3], [10, 'Driver_11', 58, 41, 5.1, 23.5, 11.4, 2.47, 0.707, 34.9], [16, 'Driver_17', 59, 15, 5.7, 6.8, 10.4, 8.68, 0.254, 17.2], [21, 'Driver_22', 50, 75, 3.2, 9.4, 15.6, 5.32, 1.5, 24.8], [14, 'Driver_15', 64, 22, 5.8, 21.8, 11.0, 2.94, 0.344, 32.8]]",SELECT * FROM `logistics_delivery` ORDER BY `fuel_used_l` + `speed_kmph` ASC LIMIT 5,0,,0.0,0.812,0.951,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-ADVANCED,"Compute the sum of the columns fuel_used_l, speed_kmph for each row in `logistics_delivery`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[20, 'Driver_21', 284, 77, 3.0, 15.1, 94.7, 18.81, 0.271, 109.8], [19, 'Driver_20', 237, 23, 2.6, 21.6, 91.2, 10.97, 0.097, 112.8], [13, 'Driver_14', 290, 72, 1.7, 15.9, 170.6, 18.24, 0.248, 186.5], [17, 'Driver_18', 214, 41, 3.9, 9.3, 54.9, 23.01, 0.192, 64.2], [22, 'Driver_23', 265, 64, 3.8, 25.9, 69.7, 10.23, 0.242, 95.6]]",SELECT * FROM `logistics_delivery` ORDER BY `fuel_used_l` + `speed_kmph` DESC LIMIT 5,0,,0.0,0.5,0.568,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-ADVANCED,"Compute the sum of the columns distance_km, fuel_used_l, packages_per_km for each row in `logistics_delivery`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[21, 'Driver_22', 50, 75, 3.2, 9.4, 15.6, 5.32, 1.5, 61.9], [11, 'Driver_12', 52, 75, 5.6, 7.0, 9.3, 7.43, 1.442, 60.442], [16, 'Driver_17', 59, 15, 5.7, 6.8, 10.4, 8.68, 0.254, 65.254], [10, 'Driver_11', 58, 41, 5.1, 23.5, 11.4, 2.47, 0.707, 81.707], [14, 'Driver_15', 64, 22, 5.8, 21.8, 11.0, 2.94, 0.344, 85.344]]",SELECT * FROM `logistics_delivery` ORDER BY `distance_km` + `fuel_used_l` + `packages_per_km` ASC LIMIT 5,0,,0.0,0.812,0.951,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-ADVANCED,"Compute the sum of the columns distance_km, fuel_used_l, packages_per_km for each row in `logistics_delivery`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[13, 'Driver_14', 290, 72, 1.7, 15.9, 170.6, 18.24, 0.248, 306.148], [20, 'Driver_21', 284, 77, 3.0, 15.1, 94.7, 18.81, 0.271, 299.541], [23, 'Driver_24', 273, 52, 4.2, 25.7, 65.0, 10.62, 0.19, 298.379], [12, 'Driver_13', 272, 25, 5.8, 23.4, 46.9, 11.62, 0.092, 295.092], [2, 'Driver_3', 293, 13, 3.7, 14.2, 79.2, 20.63, 0.044, 307.244]]",SELECT * FROM `logistics_delivery` ORDER BY `distance_km` + `fuel_used_l` + `packages_per_km` DESC LIMIT 5,0,,0.0,0.816,0.93,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-ADVANCED,"Compute the sum of the columns id, distance_km, packages for each row in `logistics_delivery`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[21, 'Driver_22', 50, 75, 3.2, 9.4, 15.6, 5.32, 1.5], [11, 'Driver_12', 52, 75, 5.6, 7.0, 9.3, 7.43, 1.442], [10, 'Driver_11', 58, 41, 5.1, 23.5, 11.4, 2.47, 0.707], [16, 'Driver_17', 59, 15, 5.7, 6.8, 10.4, 8.68, 0.254], [14, 'Driver_15', 64, 22, 5.8, 21.8, 11.0, 2.94, 0.344]]",SELECT * FROM `logistics_delivery` ORDER BY `id` + `distance_km` + `packages` ASC LIMIT 5,0,,0.0,0.744,0.744,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-ADVANCED,"Compute the sum of the columns id, distance_km, packages for each row in `logistics_delivery`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[20, 'Driver_21', 284, 77, 3.0, 15.1, 94.7, 18.81, 0.271, 381], [13, 'Driver_14', 290, 72, 1.7, 15.9, 170.6, 18.24, 0.248, 365], [5, 'Driver_6', 204, 72, 5.6, 25.2, 36.4, 8.1, 0.353, 278], [6, 'Driver_7', 200, 73, 5.4, 14.3, 37.0, 13.99, 0.365, 276], [23, 'Driver_24', 273, 52, 4.2, 25.7, 65.0, 10.62, 0.19, 325]]",SELECT * FROM `logistics_delivery` ORDER BY `id` + `distance_km` + `packages` DESC LIMIT 5,0,,0.0,0.531,0.578,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-ADVANCED,"Compute the sum of the columns distance_km, time_hrs, speed_kmph for each row in `logistics_delivery`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[21, 'Driver_22', 50, 75, 3.2, 9.4, 15.6, 5.32, 1.5, 68.8], [11, 'Driver_12', 52, 75, 5.6, 7.0, 9.3, 7.43, 1.442, 116.9], [16, 'Driver_17', 59, 15, 5.7, 6.8, 10.4, 8.68, 0.254, 124.4], [14, 'Driver_15', 64, 22, 5.8, 21.8, 11.0, 2.94, 0.344, 127.6], [10, 'Driver_11', 58, 41, 5.1, 23.5, 11.4, 2.47, 0.707, 113.5]]",SELECT * FROM `logistics_delivery` ORDER BY `distance_km` + `time_hrs` + `speed_kmph` ASC LIMIT 5,0,,0.0,0.812,0.951,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-ADVANCED,"Compute the sum of the columns distance_km, time_hrs, speed_kmph for each row in `logistics_delivery`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[13, 'Driver_14', 290, 72, 1.7, 15.9, 170.6, 18.24, 0.248, 462.3], [20, 'Driver_21', 284, 77, 3.0, 15.1, 94.7, 18.81, 0.271, 381.7], [23, 'Driver_24', 273, 52, 4.2, 25.7, 65.0, 10.62, 0.19, 380.2], [12, 'Driver_13', 272, 25, 5.8, 23.4, 46.9, 11.62, 0.092, 379.6], [2, 'Driver_3', 293, 13, 3.7, 14.2, 79.2, 20.63, 0.044, 376.4]]",SELECT * FROM `logistics_delivery` ORDER BY `distance_km` + `time_hrs` + `speed_kmph` DESC LIMIT 5,0,,0.0,0.673,0.75,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,products,ORDERBY-ADVANCED,"Compute the sum of the columns price, units_sold for each row in `products`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[12, 'Mouse Logitech', 'Electronics', 7.12, 402, 2862.24, 'No', 409.12], [17, 'T-shirt H&M', 'Clothing', 89.32, 901, 80477.32, 'Yes', 990.32], [23, 'Birra Heineken', 'Food', 76.74, 250, 19185.0, 'Yes', 326.74], [8, 'Frigorifero Bosch', 'Electronics', 89.92, 776, 69777.92, 'Yes', 865.92], [9, 'Batterie Duracell', 'Electronics', 1184.27, 407, 481997.89, 'Yes', 1591.27]]",SELECT * FROM `products` ORDER BY `price` + `units_sold` ASC LIMIT 5,0,,0.0,0.4,0.467,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,products,ORDERBY-ADVANCED,"Compute the sum of the columns price, units_sold for each row in `products`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[10, 'Orologio Casio', 'Accessories', 926.81, 880, 815592.8, 'Yes', 1806.81], [15, 'Scarpe Nike', 'Clothing', 874.94, 867, 758572.98, 'Yes', 1741.94], [21, 'Borsa Prada', 'Accessories', 748.15, 873, 653134.95, 'Yes', 1621.15], [16, 'Giacca Zara', 'Clothing', 925.64, 563, 521135.32, 'Yes', 1488.64], [1, 'iPhone 13', 'Electronics', 325.98, 952, 310332.96, 'Yes', 1277.98]]",SELECT * FROM `products` ORDER BY `price` + `units_sold` DESC LIMIT 5,0,,0.0,0.559,0.655,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,products,ORDERBY-ADVANCED,"Compute the sum of the columns units_sold, total_revenue for each row in `products`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[12, 'Mouse Logitech', 'Electronics', 7.12, 402, 2862.24, 'No', 3264.24], [5, 'Samsung TV', 'Electronics', 651.46, 14, 9120.44, 'No', 9214.44], [23, 'Birra Heineken', 'Food', 76.74, 250, 19185.0, 'Yes', 19435.0], [25, 'Stampante HP', 'Electronics', 390.56, 105, 41008.8, 'Yes', 41113.8], [17, 'T-shirt H&M', 'Clothing', 89.32, 901, 80477.32, 'Yes', 81378.32]]",SELECT * FROM `products` ORDER BY `units_sold` + `total_revenue` ASC LIMIT 5,0,,0.0,0.543,0.633,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,products,ORDERBY-ADVANCED,"Compute the sum of the columns units_sold, total_revenue for each row in `products`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[10, 'Orologio Casio', 'Accessories', 926.81, 880, 815592.8, 'Yes', 904472.8], [15, 'Scarpe Nike', 'Clothing', 874.94, 867, 758572.98, 'Yes', 847439.98], [21, 'Borsa Prada', 'Accessories', 748.15, 873, 653134.95, 'Yes', 738007.95], [26, 'Router TP-Link', 'Electronics', 875.66, 909, 795974.94, 'Yes', 886878.94], [20, 'Fotocamera Canon', 'Electronics', 1035.79, 584, 604901.36, 'Yes', 663485.36]]",SELECT * FROM `products` ORDER BY `units_sold` + `total_revenue` DESC LIMIT 5,0,,0.0,0.853,1.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,products,ORDERBY-ADVANCED,"Compute the sum of the columns price, units_sold, total_revenue for each row in `products`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[12, 'Mouse Logitech', 'Electronics', 7.12, 402, 2862.24, 'No'], [17, 'T-shirt H&M', 'Clothing', 89.32, 901, 80477.32, 'Yes'], [23, 'Birra Heineken', 'Food', 76.74, 250, 19185.0, 'Yes'], [5, 'Samsung TV', 'Electronics', 651.46, 14, 9120.44, 'No'], [25, 'Stampante HP', 'Electronics', 390.56, 105, 41008.8, 'Yes']]",SELECT * FROM `products` ORDER BY `price` + `units_sold` + `total_revenue` ASC LIMIT 5,0,,0.0,0.633,0.633,0.0,1.0,0.6,0.75
+data/db_numerical_simple.sqlite,products,ORDERBY-ADVANCED,"Compute the sum of the columns price, units_sold, total_revenue for each row in `products`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[10, 'Orologio Casio', 'Accessories', 926.81, 880, 815592.8, 'Yes', 817399.61], [15, 'Scarpe Nike', 'Clothing', 874.94, 867, 758572.98, 'Yes', 765316.92], [21, 'Borsa Prada', 'Accessories', 748.15, 873, 653134.95, 'Yes', 660755.1], [20, 'Fotocamera Canon', 'Electronics', 1035.79, 584, 604901.36, 'Yes', 609521.15], [26, 'Router TP-Link', 'Electronics', 875.66, 909, 795974.94, 'Yes', 797759.6]]",SELECT * FROM `products` ORDER BY `price` + `units_sold` + `total_revenue` DESC LIMIT 5,0,,0.0,0.853,1.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,products,ORDERBY-ADVANCED,"Compute the sum of the columns price, total_revenue for each row in `products`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[12, 'Mouse Logitech', 'Electronics', 7.12, 402, 2862.24, 'No', 2869.36], [5, 'Samsung TV', 'Electronics', 651.46, 14, 9120.44, 'No', 9771.9], [23, 'Birra Heineken', 'Food', 76.74, 250, 19185.0, 'Yes', 19261.74], [17, 'T-shirt H&M', 'Clothing', 89.32, 901, 80477.32, 'Yes', 80566.64], [25, 'Stampante HP', 'Electronics', 390.56, 105, 41008.8, 'Yes', 41399.36]]",SELECT * FROM `products` ORDER BY `price` + `total_revenue` ASC LIMIT 5,0,,0.0,0.543,0.633,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,products,ORDERBY-ADVANCED,"Compute the sum of the columns price, total_revenue for each row in `products`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[9, 'Batterie Duracell', 'Electronics', 1184.27, 407, 481997.89, 'Yes', 483182.16], [10, 'Orologio Casio', 'Accessories', 926.81, 880, 815592.8, 'Yes', 816519.61], [20, 'Fotocamera Canon', 'Electronics', 1035.79, 584, 604901.36, 'Yes', 605937.15], [21, 'Borsa Prada', 'Accessories', 748.15, 873, 653134.95, 'Yes', 653883.1], [15, 'Scarpe Nike', 'Clothing', 874.94, 867, 758572.98, 'Yes', 759447.92]]",SELECT * FROM `products` ORDER BY `price` + `total_revenue` DESC LIMIT 5,0,,0.0,0.706,0.828,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-ADVANCED,"Compute the sum of the columns id, english_score for each row in `student_performance`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[7, 'Student_8', 40, 54, 47.0, 'No', 61], [12, 'Student_13', 31, 56, 43.5, 'No', 68], [14, 'Student_15', 42, 53, 47.5, 'No', 67], [5, 'Student_6', 37, 75, 56.0, 'Yes', 80], [15, 'Student_16', 62, 30, 46.0, 'No', 45]]",SELECT * FROM `student_performance` ORDER BY `id` + `english_score` ASC LIMIT 5,0,,0.0,0.29,0.375,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-ADVANCED,"Compute the sum of the columns id, english_score for each row in `student_performance`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[22, 'Student_23', 98, 94, 96.0, 'Yes', 116], [16, 'Student_17', 90, 92, 91.0, 'Yes', 108], [23, 'Student_24', 85, 87, 86.0, 'Yes', 110], [24, 'Student_25', 97, 46, 71.5, 'Yes', 70], [13, 'Student_14', 81, 76, 78.5, 'Yes', 89]]",SELECT * FROM `student_performance` ORDER BY `id` + `english_score` DESC LIMIT 5,0,,0.0,0.484,0.577,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-ADVANCED,"Compute the sum of the columns id, math_score, english_score for each row in `student_performance`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[7, 'Student_8', 40, 54, 47.0, 'No', 101], [12, 'Student_13', 31, 56, 43.5, 'No', 109], [14, 'Student_15', 42, 53, 47.5, 'No', 109], [5, 'Student_6', 37, 75, 56.0, 'Yes', 117], [20, 'Student_21', 49, 55, 52.0, 'Yes', 124]]",SELECT * FROM `student_performance` ORDER BY `id` + `math_score` + `english_score` ASC LIMIT 5,0,,0.0,0.433,0.52,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-ADVANCED,"Compute the sum of the columns id, math_score, english_score for each row in `student_performance`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[22, 'Student_23', 98, 94, 96.0, 'Yes', 194], [24, 'Student_25', 97, 46, 71.5, 'Yes', 167], [16, 'Student_17', 90, 92, 91.0, 'Yes', 198], [23, 'Student_24', 85, 87, 86.0, 'Yes', 175], [10, 'Student_11', 92, 32, 62.0, 'Yes', 134]]",SELECT * FROM `student_performance` ORDER BY `id` + `math_score` + `english_score` DESC LIMIT 5,0,,0.0,0.5,0.577,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-ADVANCED,"Compute the sum of the columns id, math_score, average_score for each row in `student_performance`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[7, 'Student_8', 40, 54, 47.0, 'No', 87.0], [12, 'Student_13', 31, 56, 43.5, 'No', 94.5], [14, 'Student_15', 42, 53, 47.5, 'No', 132.5], [5, 'Student_6', 37, 75, 56.0, 'Yes', 133.0], [15, 'Student_16', 62, 30, 46.0, 'No', 165.0]]",SELECT * FROM `student_performance` ORDER BY `id` + `math_score` + `average_score` ASC LIMIT 5,0,,0.0,0.613,0.731,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-ADVANCED,"Compute the sum of the columns id, math_score, average_score for each row in `student_performance`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[22, 'Student_23', 98, 94, 96.0, 'Yes', 216.0], [24, 'Student_25', 97, 46, 71.5, 'Yes', 168.5], [16, 'Student_17', 90, 92, 91.0, 'Yes', 167.0], [23, 'Student_24', 85, 87, 86.0, 'Yes', 159.0], [10, 'Student_11', 92, 32, 62.0, 'Yes', 154.0]]",SELECT * FROM `student_performance` ORDER BY `id` + `math_score` + `average_score` DESC LIMIT 5,0,,0.0,0.633,0.731,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-ADVANCED,"Compute the sum of the columns id, english_score, average_score for each row in `student_performance`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[12, 'Student_13', 31, 56, 43.5, 'No', 109.5], [15, 'Student_16', 62, 30, 46.0, 'No', 138.0], [7, 'Student_8', 40, 54, 47.0, 'No', 101.0], [14, 'Student_15', 42, 53, 47.5, 'No', 102.5], [5, 'Student_6', 37, 75, 56.0, 'Yes', 117.0]]",SELECT * FROM `student_performance` ORDER BY `id` + `english_score` + `average_score` ASC LIMIT 5,0,,0.0,0.387,0.5,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-ADVANCED,"Compute the sum of the columns id, english_score, average_score for each row in `student_performance`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[22, 'Student_23', 98, 94, 96.0, 'Yes', 222.0], [16, 'Student_17', 90, 92, 91.0, 'Yes', 199.0], [24, 'Student_25', 97, 46, 71.5, 'Yes', 218.5], [23, 'Student_24', 85, 87, 86.0, 'Yes', 206.0], [13, 'Student_14', 81, 76, 78.5, 'Yes', 195.5]]",SELECT * FROM `student_performance` ORDER BY `id` + `english_score` + `average_score` DESC LIMIT 5,0,,0.0,0.516,0.64,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-ADVANCED,"Compute the sum of the columns math_score, average_score for each row in `student_performance`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[12, 'Student_13', 31, 56, 43.5, 'No', 74.5], [15, 'Student_16', 62, 30, 46.0, 'No', 108.0], [5, 'Student_6', 37, 75, 56.0, 'Yes', 93.0], [14, 'Student_15', 42, 53, 47.5, 'No', 89.5], [7, 'Student_8', 40, 54, 47.0, 'No', 87.0]]",SELECT * FROM `student_performance` ORDER BY `math_score` + `average_score` ASC LIMIT 5,0,,0.0,0.581,0.75,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-ADVANCED,"Compute the sum of the columns math_score, average_score for each row in `student_performance`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[22, 'Student_23', 98, 94, 96.0, 'Yes', 194.0], [24, 'Student_25', 97, 46, 71.5, 'Yes', 168.5], [16, 'Student_17', 90, 92, 91.0, 'Yes', 181.0], [23, 'Student_24', 85, 87, 86.0, 'Yes', 171.0], [13, 'Student_14', 81, 76, 78.5, 'Yes', 159.5]]",SELECT * FROM `student_performance` ORDER BY `math_score` + `average_score` DESC LIMIT 5,0,,0.0,0.613,0.76,0.0,1.0,0.0,0.5

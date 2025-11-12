@@ -1,0 +1,128 @@
+db_path,table_name,test_category,query,model,AI_answer,SQL_query,failed_attempts,note,valid_efficiency_score,cell_precision,cell_recall,execution_accuracy,tuple_cardinality,tuple_constraint,tuple_order
+data/db_complete_cut_1000.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `grade` from `breast_cancer`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[80], [65], [60], [58], [57]]",SELECT `grade` FROM `breast_cancer` ORDER BY `grade` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_1000.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `pgr` from `breast_cancer`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[10], [15], [25], [30], [35]]",SELECT `pgr` FROM `breast_cancer` ORDER BY `pgr` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_1000.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `meno` from `breast_cancer`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1], [1], [1], [1], [1]]",SELECT `meno` FROM `breast_cancer` ORDER BY `meno` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_complete_cut_1000.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `er` from `breast_cancer`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [0], [0], [0], [1]]",SELECT `er` FROM `breast_cancer` ORDER BY `er` ASC LIMIT 5,0,,0.0,0.5,1.0,0.0,1.0,0.0,1.0
+data/db_complete_cut_1000.sqlite,fitness_trakers,ORDERBY-PROJECT,Select only the column `Color` from `fitness_trakers`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Black'], ['Black'], ['Black'], ['Black'], ['Black']]",SELECT `Color` FROM `fitness_trakers` ORDER BY `Color` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_complete_cut_1000.sqlite,heart_attack,ORDERBY-SINGLE,"List the top 5 rows from the table `heart_attack`, sorted by the column `fbs` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[44, 1, 2, 130, 233, 1, 187, 0, 3.5, 0, 0, 2, 1], [37, 1, 2, 130, 250, 1, 172, 0, 1.4, 2, 0, 2, 1], [41, 0, 1, 130, 204, 0, 178, 0, 0.8, 2, 0, 2, 1], [56, 1, 1, 120, 236, 1, 178, 0, 0.8, 2, 0, 2, 1], [57, 0, 0, 140, 192, 1, 148, 0, 0.4, 1, 0, 1, 1]]",SELECT * FROM `heart_attack` ORDER BY `fbs` ASC LIMIT 5,0,,0.0,0.917,0.88,0.0,1.0,0.0,0.5
+data/db_complete_cut_1000.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `restecg` from `heart_attack`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [0], [1], [1], [2]]",SELECT `restecg` FROM `heart_attack` ORDER BY `restecg` ASC LIMIT 5,0,,0.0,0.333,1.0,0.0,1.0,0.0,1.0
+data/db_complete_cut_1000.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `restecg` from `heart_attack`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[2], [2], [2], [1], [1]]",SELECT `restecg` FROM `heart_attack` ORDER BY `restecg` DESC LIMIT 5,0,,0.0,0.5,1.0,0.0,1.0,0.0,1.0
+data/db_complete_cut_1000.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `thal` from `heart_attack`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[190], [188], [187], [186], [185]]",SELECT `thal` FROM `heart_attack` ORDER BY `thal` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_1000.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `exang` from `heart_attack`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [0], [0], [0], [0]]",SELECT `exang` FROM `heart_attack` ORDER BY `exang` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_complete_cut_1000.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `exang` from `heart_attack`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [0], [0], [0], [0]]",SELECT `exang` FROM `heart_attack` ORDER BY `exang` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_1000.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `slope` from `heart_attack`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0.0], [0.0], [0.0], [0.0], [0.0]]",SELECT `slope` FROM `heart_attack` ORDER BY `slope` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_complete_cut_1000.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `slope` from `heart_attack`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [0], [0], [0], [0]]",SELECT `slope` FROM `heart_attack` ORDER BY `slope` DESC LIMIT 5,1,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_1000.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `ca` from `heart_attack`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [0], [1], [1], [2]]",SELECT `ca` FROM `heart_attack` ORDER BY `ca` ASC LIMIT 5,0,,0.0,0.333,1.0,0.0,1.0,0.0,1.0
+data/db_complete_cut_1000.sqlite,olympic_games,ORDERBY-SINGLE,"List the top 5 rows from the table `olympic_games`, sorted by the column `city` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0, 1896, 'Athens'], [3, 2004, 'Athens'], [4, 2008, 'Beijing'], [5, 2012, 'London'], [1, 1900, 'Paris'], [2, 1904, 'St. Louis']]",SELECT * FROM `olympic_games` ORDER BY `city` ASC LIMIT 5,0,,0.0,0.588,0.714,0.0,0.833,0.0,0.5
+data/db_complete_cut_1000.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `grade` from `breast_cancer`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[3], [3], [3], [3], [3]]",SELECT `grade` FROM `breast_cancer` ORDER BY `grade` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_complete_cut_1000.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `pgr` from `breast_cancer`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[None], [None], [None], [None], [None]]",SELECT `pgr` FROM `breast_cancer` ORDER BY `pgr` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_1000.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `meno` from `breast_cancer`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `meno` FROM `breast_cancer` ORDER BY `meno` DESC LIMIT 5,3,"{
+  ""table_name"": ""breast_cancer"",
+  ""ordered_entries"": [
+    {
+      ""pgr"": null
+    },
+    {
+      ""pgr"": null
+    },
+    {
+      ""pgr"": null
+    },
+    {
+      ""pgr"": null
+    },
+    {
+      ""pgr"": null
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_1000.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `er` from `breast_cancer`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[0], [0], [0], [0], [0]]",SELECT `er` FROM `breast_cancer` ORDER BY `er` ASC LIMIT 5,1,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_complete_cut_1000.sqlite,fitness_trakers,ORDERBY-PROJECT,Select only the column `Color` from `fitness_trakers`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Black'], ['Black'], ['Black'], ['Black'], ['Black']]",SELECT `Color` FROM `fitness_trakers` ORDER BY `Color` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_complete_cut_1000.sqlite,heart_attack,ORDERBY-SINGLE,"List the top 5 rows from the table `heart_attack`, sorted by the column `fbs` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT * FROM `heart_attack` ORDER BY `fbs` ASC LIMIT 5,3,"```
+{
+  ""table_name"": ""fitness_trakers"",
+  ""ordered_entries"": [
+    {
+      ""Color"": ""Black""
+    },
+    {
+      ""Color"": ""Black""
+    },
+    {
+      ""Color"": ""Black""
+    },
+    {
+      ""Color"": ""Black""
+    },
+    {
+      ""Color"": ""Black""
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_1000.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `restecg` from `heart_attack`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[0], [0], [0], [1], [1]]",SELECT `restecg` FROM `heart_attack` ORDER BY `restecg` ASC LIMIT 5,0,,0.0,0.5,1.0,0.0,1.0,0.0,1.0
+data/db_complete_cut_1000.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `restecg` from `heart_attack`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[2], [2], [2], [2], [2]]",SELECT `restecg` FROM `heart_attack` ORDER BY `restecg` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_1000.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `thal` from `heart_attack`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `thal` FROM `heart_attack` ORDER BY `thal` DESC LIMIT 5,3,"{
+  ""table_name"": ""heart_attack"",
+  ""ordered_entries"": [
+    {
+      ""restecg"": 2
+    },
+    {
+      ""restecg"": 2
+    },
+    {
+      ""restecg"": 2
+    },
+    {
+      ""restecg"": 2
+    },
+    {
+      ""restecg"": 2
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_1000.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `exang` from `heart_attack`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[0], [0], [0], [0], [0]]",SELECT `exang` FROM `heart_attack` ORDER BY `exang` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_complete_cut_1000.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `exang` from `heart_attack`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1], [1], [1], [1], [1]]",SELECT `exang` FROM `heart_attack` ORDER BY `exang` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_complete_cut_1000.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `slope` from `heart_attack`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `slope` FROM `heart_attack` ORDER BY `slope` ASC LIMIT 5,3,"{
+  ""table_name"": ""heart_attack"",
+  ""ordered_entries"": [
+    {
+      ""exang"": 1
+    },
+    {
+      ""exang"": 1
+    },
+    {
+      ""exang"": 1
+    },
+    {
+      ""exang"": 1
+    },
+    {
+      ""exang"": 1
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_1000.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `slope` from `heart_attack`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[2], [2], [2], [2], [2]]",SELECT `slope` FROM `heart_attack` ORDER BY `slope` DESC LIMIT 5,1,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_complete_cut_1000.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `ca` from `heart_attack`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[0], [0], [0], [0], [0]]",SELECT `ca` FROM `heart_attack` ORDER BY `ca` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_complete_cut_1000.sqlite,olympic_games,ORDERBY-SINGLE,"List the top 5 rows from the table `olympic_games`, sorted by the column `city` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT * FROM `olympic_games` ORDER BY `city` ASC LIMIT 5,3,"{
+  ""table_name"": ""heart_attack"",
+  ""ordered_entries"": [
+    {
+      ""ca"": 0
+    },
+    {
+      ""ca"": 0
+    },
+    {
+      ""ca"": 0
+    },
+    {
+      ""ca"": 0
+    },
+    {
+      ""ca"": 0
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0

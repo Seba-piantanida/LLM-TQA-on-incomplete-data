@@ -1,0 +1,7 @@
+table_name,model,avg_valid_efficiency_score,avg_cell_precision,avg_cell_recall,avg_execution_accuracy,avg_tuple_cardinality,avg_tuple_constraint,avg_tuple_order
+energy_consumption,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,0.0,0.48,0.48,0.0,1.0,0.48,0.75
+energy_consumption,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,0.0,0.48,0.48,0.0,0.9465,0.48,0.75
+logistics_delivery,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,0.0,0.73,0.73,0.25,0.9904999999999999,0.73,0.739125
+logistics_delivery,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,0.0,0.73,0.49,0.0,0.72325,0.48,0.75
+student_performance,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,0.0,0.6533333333333333,0.6533333333333333,0.3333333333333333,1.0,0.6533333333333333,0.8333333333333334
+student_performance,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,0.0,0.6503333333333333,0.6503333333333333,0.0,0.6666666666666666,0.32,0.5

@@ -1,0 +1,1509 @@
+db_path,table_name,test_category,query,model,AI_answer,SQL_query,failed_attempts,note,valid_efficiency_score,cell_precision,cell_recall,execution_accuracy,tuple_cardinality,tuple_constraint,tuple_order
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-LIMIT,"Join all records from table `albums` with table `artists` on column `artist_id`, then list the top 5 rows sorted by `album_id` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0, 'Million Dollar Baby - Single', '26-04-2024', 1, 'Tommy Richman'], [1, 'Not Like Us', '04-05-2024', 2, 'Kendrick Lamar'], [2, 'I like the way you kiss me', '19-03-2024', 3, 'Artemas'], [3, 'Flowers - Single', '12-01-2023', 4, 'Miley Cyrus'], [4, 'Houdini', '31-05-2024', 5, 'Eminem']]",SELECT * FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`album_id` ASC LIMIT 5,0,,0.0,0.952,0.8,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-LIMIT,"Join all records from table `albums` with table `artists` on column `artist_id`, then list the top 5 rows sorted by `album_id` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[74, 'Laxed (Siren Beat)', '24-04-2020', 67, 'Dave'], [73, 'un x100to', '17-04-2023', 66, 'Yng Lvcas'], [72, 'Old Town Road', '14-03-2019', 65, 'Eslabon Armado'], [71, 'The Way We Move', '10-03-2023', 64, 'Darell'], [70, 'Shakira: Bzrp Music Sessions, Vol. 53', '11-01-2023', 63, 'Xavi']]",SELECT * FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`album_id` DESC LIMIT 5,0,,0.0,0.76,0.655,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-LIMIT,"Join all records from table `albums` with table `artists` on column `artist_id`, then list the top 5 rows sorted by `title` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, None, '26-04-2024', 1, 'Tommy Richman', '21-03-2000'], [2, None, '04-05-2024', 2, 'Kendrick Lamar', '17-06-1987'], [3, None, '19-03-2024', 3, 'Artemas', '23-09-1999'], [4, None, '31-05-2024', 4, 'Eminem', '17-10-1972'], [5, None, '10-11-2023', 5, 'Jack Harlow', '13-03-1998']]",SELECT * FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`title` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-LIMIT,"Join all records from table `albums` with table `artists` on column `artist_id`, then list the top 5 rows sorted by `title` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 'Tommy Richman', '21-03-2000', 1, ""Tommy Richman's Album"", '26-04-2024'], [2, 'Kendrick Lamar', '17-06-1987', 2, ""Kendrick Lamar's Album"", '04-05-2024'], [3, 'Artemas', '23-09-1999', 3, ""Artemas's Album"", '19-03-2024'], [4, 'Miley Cyrus', '23-11-1992', 4, ""Miley Cyrus's Album"", '12-01-2023'], [5, 'Eminem', '17-10-1972', 5, ""Eminem's Album"", '31-05-2024']]",SELECT * FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`title` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-LIMIT,"Join all records from table `albums` with table `artists` on column `artist_id`, then list the top 5 rows sorted by `release_date (dd-mm-yyyy)` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 'Million Dollar Baby - Single', '01-01-1970', 1, 'Tommy Richman'], [2, 'Not Like Us', '01-01-1970', 2, 'Kendrick Lamar'], [3, 'I like the way you kiss me', '01-01-1970', 3, 'Artemas'], [4, 'Flowers - Single', '01-01-1970', 4, 'Miley Cyrus'], [5, 'Houdini', '01-01-1970', 5, 'Eminem']]",SELECT * FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`release_date (dd-mm-yyyy)` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-LIMIT,"Join all records from table `albums` with table `artists` on column `artist_id`, then list the top 5 rows sorted by `release_date (dd-mm-yyyy)` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[74, 'Laxed (Siren Beat)', '01-01-2024', 'Manskin'], [73, 'un x100to', '01-01-2024', 'Grupo Frontera'], [72, 'Old Town Road', '01-01-2024', 'Lil Nas X'], [71, 'The Way We Move', '01-01-2024', 'Eslabon Armado'], [70, 'Shakira: Bzrp Music Sessions, Vol. 53', '01-01-2024', 'Bizarrap']]",SELECT * FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`release_date (dd-mm-yyyy)` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-LIMIT,"Join all records from table `albums` with table `artists` on column `artist_id`, then list the top 5 rows sorted by `artist_id` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[3, 'Miley Cyrus', '23-11-1992', 3, 'Flowers - Single', '12-01-2023'], [4, 'Eminem', '17-10-1972', 4, 'Houdini', '31-05-2024'], [12, 'Billie Eilish', '18-12-2001', 12, 'HIT ME HARD AND SOFT', '17-05-2024'], [16, 'Taylor Swift', '13-12-1989', 16, 'THE TORTURED POETS DEPARTMENT', '18-04-2024'], [18, 'Harry Styles', '01-03-1927', 18, 'As It Was', '31-03-2022']]",SELECT * FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`artist_id` ASC LIMIT 5,0,,0.0,0.24,0.261,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-LIMIT,"Join all records from table `albums` with table `artists` on column `artist_id`, then list the top 5 rows sorted by `artist_id` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[74, 'Adele', '05-05-1988', 74, 'Laxed (Siren Beat)', '24-04-2020'], [73, 'Lil Durk', '19-10-1992', 73, 'un x100to', '17-04-2023'], [72, 'Yng Lvcas', '01-01-2017', 72, 'Old Town Road', '14-03-2019'], [71, 'Eslabon Armado', '01-01-2017', 71, 'The Way We Move', '10-03-2023'], [70, 'Dave Angel', '01-01-1991', 70, 'Unknown', '11-01-2023']]",SELECT * FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`artist_id` DESC LIMIT 5,0,,0.0,0.542,0.448,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-SINGLE-COL,"Join `albums` and `artists` on `artist_id`, select only the column `album_id`, sort it in ascending order, and return the top 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [1], [2], [3], [4]]",SELECT T1.`album_id` FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`album_id` ASC LIMIT 5,0,,0.0,0.8,0.8,0.0,1.0,0.8,1.0
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-SINGLE-COL,"Join `albums` and `artists` on `artist_id`, select only the column `album_id`, sort it in descending order, and return the top 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[74], [73], [72], [71], [70]]",SELECT T1.`album_id` FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`album_id` DESC LIMIT 5,0,,0.0,0.8,0.8,0.0,1.0,0.8,1.0
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-SINGLE-COL,"Join `albums` and `artists` on `artist_id`, select only the column `title`, sort it in ascending order, and return the top 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Album 1'], ['Album 2'], ['Album 3'], ['Album 4'], ['Album 5']]",SELECT T1.`title` FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`title` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-SINGLE-COL,"Join `albums` and `artists` on `artist_id`, select only the column `title`, sort it in descending order, and return the top 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['New Horizons'], ['Midnight Dreams'], ['Summer Vibes'], ['Urban Lights'], ['Electric Soul']]",SELECT T1.`title` FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`title` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-SINGLE-COL,"Join `albums` and `artists` on `artist_id`, select only the column `release_date (dd-mm-yyyy)`, sort it in ascending order, and return the top 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['01-01-1970'], ['01-01-1970'], ['01-01-1970'], ['01-01-1970'], ['01-01-1970']]",SELECT T1.`release_date (dd-mm-yyyy)` FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`release_date (dd-mm-yyyy)` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-SINGLE-COL,"Join `albums` and `artists` on `artist_id`, select only the column `release_date (dd-mm-yyyy)`, sort it in descending order, and return the top 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['01-01-2024'], ['01-01-2023'], ['01-01-2022'], ['01-01-2021'], ['01-01-2020']]",SELECT T1.`release_date (dd-mm-yyyy)` FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`release_date (dd-mm-yyyy)` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-SINGLE-COL,"Join `albums` and `artists` on `artist_id`, select only the column `artist_id`, sort it in ascending order, and return the top 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [1], [2], [3], [4]]",SELECT T1.`artist_id` FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`artist_id` ASC LIMIT 5,0,,0.0,0.8,1.0,0.0,1.0,0.75,1.0
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-SINGLE-COL,"Join `albums` and `artists` on `artist_id`, select only the column `artist_id`, sort it in descending order, and return the top 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[75], [74], [73], [72], [71]]",SELECT T1.`artist_id` FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`artist_id` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-ADVANCED,"Join `albums` with `artists` on `artist_id`. Sort all rows by the columns album_id, artist_id in ascending order, and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 'Million Dollar Baby - Single', '26-04-2024', 1, 'Tommy Richman', '21-03-2000'], [2, 'Not Like Us', '04-05-2024', 2, 'Artemas', '23-09-1999'], [3, 'I like the way you kiss me', '19-03-2024', 3, 'Miley Cyrus', '23-11-1992'], [4, 'Flowers - Single', '12-01-2023', 4, 'Eminem', '17-10-1972'], [5, 'Houdini', '31-05-2024', 5, 'Jack Harlow', '13-03-1998']]","SELECT * FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`album_id`, T1.`artist_id` ASC LIMIT 5",0,,0.0,0.92,0.92,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-ADVANCED,"Join `albums` with `artists` on `artist_id`. Sort all rows by the columns album_id, artist_id in descending order, and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[74, 'Laxed (Siren Beat)', '24-04-2020', 67, 'Dave', '01-01-1991'], [73, 'un x100to', '17-04-2023', 66, '21 Savage', '22-10-1992'], [72, 'Old Town Road', '14-03-2019', 65, 'Lil Nas X', '09-04-1999'], [71, 'The Way We Move', '10-03-2023', 64, 'Eslabon Armado', '01-01-2017'], [70, 'Shakira: Bzrp Music Sessions, Vol. 53', '11-01-2023', 63, 'Darell', '05-01-1990']]","SELECT * FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`album_id`, T1.`artist_id` DESC LIMIT 5",0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `track_score` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[14, 'bathroom floor', 'NLC242100307', 15, 15, 0, 297185.0, 12.0, 6736502312.0, 3.0, 0, 16, '22-03-2023'], [25, 'Beat Automotivo Tan Tan Tan Viral', 'BXWEH2200054', 25, 25, 0, 7382759.0, 35.0, 4233958.0, 37621885.0, 0, 24, '24-05-2022'], [7, 'Gata Only', 'QZL382406049', 8, 8, 0, 675079153.0, 92.0, None, None, 1, 9, '09-06-2024'], [8, 'Danza Kuduro - Cover', 'TCJPA2463708', 9, 9, 0, 1653018119.0, None, None, None, 1, 10, '23-05-2024'], [22, 'Danza Kuduro - Cover', 'TCJPA2445163', 22, 23, 0, 1655575417.0, None, None, None, 1, 22, '10-02-2024']]",SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_score` ASC LIMIT 5,0,,0.0,0.475,0.422,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `track_score` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[21, 'Espresso', 'USUM72403305', 21, 22, 95, 547882871, 95, 107550212, 209200, 1, 9, '21-05-2024', 'CLUB DE YOKUKIKU YOUGAKU MEDLEY'], [0, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 1, 92, 390470936, 92, 84274754, 5767700, 0, 1, '26-04-2024', 'Million Dollar Baby - Single'], [1, 'Not Like Us', 'USUG12400910', 2, 2, 92, 323703884, 92, 116347040, 674700, 1, 2, '04-05-2024', 'Not Like Us'], [2, 'i like the way you kiss me', 'QZJ842400387', 3, 3, 92, 601309283, 92, 122599116, 3025400, 0, 3, '19-03-2024', 'I like the way you kiss me'], [7, 'Gata Only', 'QZL382406049', 8, 8, 92, 675079153, 92, 228382568, 3500000, 1, 8, '02-02-2024', 'Gata Only']]",SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_score` DESC LIMIT 5,0,,0.0,0.568,0.532,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `tiktok_posts` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[14, 'bathroom floor', 'NLC242100307', 15, 15, 301.6, 297185.0, 12.0, 6736502312.0, 0, 0], [22, 'Danza Kuduro - Cover', 'TCJPA2445163', 22, 23, 279.0, 1655575417.0, None, None, 0, 1], [11, 'The Door', 'USWB12402486', 12, 12, 320.2, 111155129.0, None, None, 0, 1], [8, 'Danza Kuduro - Cover', 'TCJPA2463708', 9, 9, 355.7, 1653018119.0, None, None, 0, 1], [25, 'Beat Automotivo Tan Tan Tan Viral', 'BXWEH2200054', 25, 25, 268.1, 7382759.0, 35.0, 4233958.0, 0, 0]]",SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`tiktok_posts` ASC LIMIT 5,0,,0.0,0.441,0.357,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `tiktok_posts` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[14, 'bathroom floor', 'NLC242100307', 15, 15, 301.6, 297185.0, 12.0, 6736502312.0, 0, 0], [25, 'Beat Automotivo Tan Tan Tan Viral', 'BXWEH2200054', 25, 25, 268.1, 7382759.0, 35.0, 4233958.0, 0, 0], [15, 'LALA', 'USWL12300002', 16, 16, 299.9, 925655569.0, 79.0, 934302031.0, 0, 1], [22, 'Danza Kuduro - Cover', 'TCJPA2445163', 22, 23, 279.0, 1655575417.0, None, None, 0, 1], [8, 'Danza Kuduro - Cover', 'TCJPA2463708', 9, 9, 355.7, 1653018119.0, None, None, 0, 1]]",SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`tiktok_posts` DESC LIMIT 5,0,,0.0,0.5,0.367,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `explicit_track` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 1, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, None, '26-04-2024', 1], [2, 'Not Like Us', 'USUG12400910', 2, 2, 545.9, 323703884.0, 92.0, 116347040.0, 674700.0, None, '04-05-2024', 2], [3, 'i like the way you kiss me', 'QZJ842400387', 3, 3, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, None, '19-03-2024', 3], [4, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, None, '12-01-2023', 4], [5, 'Houdini', 'USUG12403398', 5, 5, 423.3, 107034922.0, 88.0, 77373957.0, 16400.0, None, '31-05-2024', 5]]",SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`explicit_track` ASC LIMIT 5,0,,0.0,0.614,0.562,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `explicit_track` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 1, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, None], [2, 'Not Like Us', 'USUG12400910', 2, 2, 545.9, 323703884.0, 92.0, 116347040.0, 674700.0, None], [3, 'i like the way you kiss me', 'QZJ842400387', 3, 3, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, None], [4, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, None], [5, 'Houdini', 'USUG12403398', 5, 5, 423.3, 107034922.0, 88.0, 77373957.0, 16400.0, None]]",SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`explicit_track` DESC LIMIT 5,0,,0.0,0.462,0.409,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `title` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 'Track 1', 'QM24S2402528', 1, 1, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, 0], [2, 'Track 2', 'USUG12400910', 2, 2, 545.9, 323703884.0, 92.0, 116347040.0, 674700.0, 1], [3, 'Track 3', 'QZJ842400387', 3, 3, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, 0], [4, 'Track 4', 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0], [5, 'Track 5', 'USUG12403398', 5, 5, 423.3, 107034922.0, 88.0, 77373957.0, 16400.0, 1]]",SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`title` ASC LIMIT 5,0,,0.0,0.051,0.041,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `title` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, None, 'QM24S2402528', 1, 1, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, 0], [2, None, 'USUG12400910', 2, 2, 545.9, 323703884.0, 92.0, 116347040.0, 674700.0, 1], [3, None, 'QZJ842400387', 3, 3, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, 0], [4, None, 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0], [5, None, 'USUG12403398', 5, 5, 423.3, 107034922.0, 88.0, 77373957.0, 16400.0, 1]]",SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`title` DESC LIMIT 5,0,,0.0,0.286,0.217,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `spotify_streams` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 1, 725.4, 0, 92.0, 84274754.0, 5767700.0, 0], [2, 'Not Like Us', 'USUG12400910', 2, 2, 545.9, 0, 92.0, 116347040.0, 674700.0, 1], [3, 'i like the way you kiss me', 'QZJ842400387', 3, 3, 538.4, 0, 92.0, 122599116.0, 3025400.0, 0], [4, 'Flowers', 'USSM12209777', 4, 4, 444.9, 0, 85.0, 1096100899.0, 7189811.0, 0], [5, 'Houdini', 'USUG12403398', 5, 5, 423.3, 0, 88.0, 77373957.0, 16400.0, 1]]",SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`spotify_streams` ASC LIMIT 5,0,,0.0,0.088,0.062,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `spotify_streams` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 1, 725.4, 0, 92.0, 84274754.0, 5767700.0, 0, '26-04-2024', 1], [1, 'Not Like Us', 'USUG12400910', 2, 2, 545.9, 0, 92.0, 116347040.0, 674700.0, 1, '04-05-2024', 2], [2, 'i like the way you kiss me', 'QZJ842400387', 3, 3, 538.4, 0, 92.0, 122599116.0, 3025400.0, 0, '19-03-2024', 3], [3, 'Flowers', 'USSM12209777', 4, 4, 444.9, 0, 85.0, 1096100899.0, 7189811.0, 0, '12-01-2023', 4], [4, 'Houdini', 'USUG12403398', 5, 5, 423.3, 0, 88.0, 77373957.0, 16400.0, 1, '31-05-2024', 5]]",SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`spotify_streams` DESC LIMIT 5,0,,0.0,0.256,0.208,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `track_id` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 1, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, 0, 'Million Dollar Baby - Single', '26-04-2024'], [2, 'Not Like Us', 'USUG12400910', 2, 2, 545.9, 323703884.0, 92.0, 116347040.0, 674700.0, 1, 'Not Like Us', '04-05-2024'], [3, 'i like the way you kiss me', 'QZJ842400387', 3, 3, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, 0, 'I like the way you kiss me', '19-03-2024'], [4, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0, 'Flowers - Single', '12-01-2023'], [5, 'Houdini', 'USUG12403398', 5, 5, 423.3, 107034922.0, 88.0, 77373957.0, 16400.0, 1, 'Houdini', '31-05-2024']]",SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id` ASC LIMIT 5,0,,0.0,1.0,1.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `track_id` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[27, 'STAY (with Justin Bieber)', 'USSM12103949', 26, 27, 266.3, 3107100349.0, 78.0, 1256973582.0, 7485966.0, 1], [26, 'Beat Automotivo Tan Tan Tan Viral', 'BXWEH2200054', 25, 26, 268.1, 7382759.0, 35.0, 4233958.0, 37621885.0, 0], [25, 'Future', 'RUA1H2415548', 24, 25, 277.5, None, None, None, 9453333.0, 0], [24, ""TEXAS HOLD 'EM"", 'USSM12401302', 23, 24, 278.9, 426700979.0, 86.0, 35724356.0, 1470500.0, 1], [23, 'Danza Kuduro - Cover', 'TCJPA2445163', 22, 23, 279.0, 1655575417.0, None, None, None, 1]]",SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id` DESC LIMIT 5,0,,0.0,1.0,0.844,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `isrc` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 'MILLION DOLLAR BABY', None, 1, 1, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, 0, 1, '26-04-2024'], [2, 'Not Like Us', None, 2, 2, 545.9, 323703884.0, 92.0, 116347040.0, 674700.0, 1, 2, '04-05-2024'], [3, 'i like the way you kiss me', None, 3, 3, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, 0, 3, '19-03-2024'], [4, 'Flowers', None, 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0, 4, '12-01-2023'], [5, 'Houdini', None, 5, 5, 423.3, 107034922.0, 88.0, 77373957.0, 16400.0, 1, 5, '31-05-2024']]",SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`isrc` ASC LIMIT 5,0,,0.0,0.4,0.34,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `isrc` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 'MILLION DOLLAR BABY', 'DEFAULT', 1, 1, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, 0, '26-04-2024', 1], [2, 'Not Like Us', 'DEFAULT', 2, 2, 545.9, 323703884.0, 92.0, 116347040.0, 674700.0, 1, '04-05-2024', 2], [3, 'i like the way you kiss me', 'DEFAULT', 3, 3, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, 0, '19-03-2024', 3], [4, 'Flowers', 'DEFAULT', 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0, '12-01-2023', 4], [5, 'Houdini', 'DEFAULT', 5, 5, 423.3, 107034922.0, 88.0, 77373957.0, 16400.0, 1, '31-05-2024', 5]]",SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`isrc` DESC LIMIT 5,0,,0.0,0.05,0.043,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `all_time_rank` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[14, 'bathroom floor', 'NLC242100307', 15, 0, 301.6, 297185.0, 12.0, 6736502312.0, 3.0, 0, 16, '22-03-2023'], [15, 'LALA', 'USWL12300002', 16, 0, 299.9, 925655569.0, 79.0, 934302031.0, 11054500.0, 1, 17, '18-04-2024'], [25, 'Beat Automotivo Tan Tan Tan Viral', 'BXWEH2200054', 25, 0, 268.1, 7382759.0, 35.0, 4233958.0, 37621885.0, 0, 24, '24-05-2022'], [17, 'greedy', 'USRC12301932', 17, 0, 293.7, 1258569694.0, 87.0, 141646818.0, 2294429.0, 1, 18, '14-09-2023'], [18, 'BLUE', 'USUM72401996', 13, 0, 292.6, 91272461.0, 86.0, 16038053.0, 941900.0, 0, 14, '22-03-2024']]",SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`all_time_rank` ASC LIMIT 5,0,,0.0,0.06,0.064,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `all_time_rank` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[3, 'Flowers', 'USSM12209777', 4, 1, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0, 4, '12-01-2023'], [0, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 2, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, 0, 1, '26-04-2024'], [2, 'i like the way you kiss me', 'QZJ842400387', 3, 3, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, 0, 3, '19-03-2024'], [15, 'LALA', 'USWL12300002', 16, 4, 299.9, 925655569.0, 79.0, 934302031.0, 11054500.0, 1, 16, '22-03-2023'], [19, 'As It Was', 'USSM12200612', 19, 5, 292.0, 3301814535.0, 87.0, 800899315.0, 2755903.0, 0, 19, '31-03-2022']]",SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`all_time_rank` DESC LIMIT 5,0,,0.0,0.042,0.044,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `youtube_views` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[14, 'bathroom floor', 'NLC242100307', 15, 15, 301.6, 297185.0, 12.0, 0, 3.0, 'LALA - Single', '22-03-2023', 16], [18, 'BLUE', 'USUM72401996', 13, 19, 292.6, 91272461.0, 86.0, 0, 941900.0, 'Unreal Unearth: Unheard', '22-03-2024', 14], [19, 'As It Was', 'USSM12200612', 19, 20, 292.0, 3301814535.0, 87.0, 0, 2755903.0, 'Paint The Town Red', '04-08-2023', 20], [20, 'Paint The Town Red', 'USRC12300907', 20, 21, 290.5, 1065399331.0, 78.0, 0, 3091732.0, 'Espresso', '12-04-2024', 21], [21, 'Espresso', 'USUM72403305', 21, 22, 281.5, 547882871.0, 95.0, 0, 209200.0, 'CLUB DE YOKUKIKU YOUGAKU MEDLEY', '21-05-2024', 9]]",SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`youtube_views` ASC LIMIT 5,0,,0.0,0.122,0.154,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `youtube_views` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[3, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 0, 7189811.0, 'Houdini', '31-05-2024', 5], [19, 'As It Was', 'USSM12200612', 19, 20, 292.0, 3301814535.0, 87.0, 0, 2755903.0, 'Paint The Town Red', '04-08-2023', 20], [26, 'STAY (with Justin Bieber)', 'USSM12103949', 26, 27, 266.3, 3107100349.0, 78.0, 0, 7485966.0, 'STAY (with Justin Bieber)', '09-07-2021', 25], [15, 'LALA', 'USWL12300002', 15, 16, 299.9, 925655569.0, 79.0, 0, 11054500.0, 'LALA - Single', '22-03-2023', 16], [2, 'i like the way you kiss me', 'QZJ842400387', 3, 3, 538.4, 601309283.0, 92.0, 0, 3025400.0, 'I like the way you kiss me', '19-03-2024', 3]]",SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`youtube_views` DESC LIMIT 5,0,,0.0,0.725,0.712,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `album_id` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0, 'MILLION DOLLAR BABY', 'QM24S2402528', 0, 1, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, 0, 1, '26-04-2024'], [1, 'Not Like Us', 'USUG12400910', 1, 2, 545.9, 323703884.0, 92.0, 116347040.0, 674700.0, 1, 2, '04-05-2024'], [2, 'i like the way you kiss me', 'QZJ842400387', 2, 3, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, 0, 3, '19-03-2024'], [3, 'Flowers', 'USSM12209777', 3, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0, 4, '12-01-2023'], [4, 'Houdini', 'USUG12403398', 4, 5, 423.3, 107034922.0, 88.0, 77373957.0, 16400.0, 1, 5, '31-05-2024']]",SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`album_id` ASC LIMIT 5,0,,0.0,1.0,0.936,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `album_id` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[26, 'STAY (with Justin Bieber)', 'USSM12103949', 25, 27, 266.3, 3107100349.0, 78.0, 1256973582.0, 7485966.0, 1], [25, 'Beat Automotivo Tan Tan Tan Viral', 'BXWEH2200054', 24, 26, 268.1, 7382759.0, 35.0, 4233958.0, 37621885.0, 0], [24, 'Future', 'RUA1H2415548', 23, 25, 277.5, None, None, None, 9453333.0, 0], [23, ""TEXAS HOLD 'EM"", 'USSM12401302', 22, 24, 278.9, 426700979.0, 86.0, 35724356.0, 1470500.0, 1], [22, 'Danza Kuduro - Cover', 'TCJPA2445163', 21, 23, 279.0, 1655575417.0, None, None, None, 1]]",SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`album_id` DESC LIMIT 5,0,,0.0,0.974,0.844,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-SINGLE-COL,"Join `tracks` and `albums` on `album_id`, select only the column `isrc`, sort it in ascending order, and return the top 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[None], [None], [None], [None], [None]]",SELECT T1.`isrc` FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`isrc` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-SINGLE-COL,"Join `tracks` and `albums` on `album_id`, select only the column `isrc`, sort it in descending order, and return the top 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['USXXX240001'], ['USXXX240002'], ['USXXX240003'], ['USXXX240004'], ['USXXX240005']]",SELECT T1.`isrc` FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`isrc` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-SINGLE-COL,"Join `tracks` and `albums` on `album_id`, select only the column `track_id`, sort it in ascending order, and return the top 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [1], [2], [3], [4]]",SELECT T1.`track_id` FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id` ASC LIMIT 5,0,,0.0,0.8,0.8,0.0,1.0,0.8,1.0
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-SINGLE-COL,"Join `tracks` and `albums` on `album_id`, select only the column `track_id`, sort it in descending order, and return the top 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[26], [25], [24], [23], [22]]",SELECT T1.`track_id` FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id` DESC LIMIT 5,0,,0.0,0.8,0.8,0.0,1.0,0.8,1.0
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-SINGLE-COL,"Join `tracks` and `albums` on `album_id`, select only the column `album_id`, sort it in ascending order, and return the top 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1], [2], [3], [4], [5]]",SELECT T1.`album_id` FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`album_id` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-SINGLE-COL,"Join `tracks` and `albums` on `album_id`, select only the column `album_id`, sort it in descending order, and return the top 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[26], [25], [24], [23], [22]]",SELECT T1.`album_id` FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`album_id` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-SINGLE-COL,"Join `tracks` and `albums` on `album_id`, select only the column `track_score`, sort it in ascending order, and return the top 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [0], [0], [0], [0]]",SELECT T1.`track_score` FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_score` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-SINGLE-COL,"Join `tracks` and `albums` on `album_id`, select only the column `track_score`, sort it in descending order, and return the top 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[95], [92], [90], [88], [87]]",SELECT T1.`track_score` FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_score` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-SINGLE-COL,"Join `tracks` and `albums` on `album_id`, select only the column `tiktok_posts`, sort it in ascending order, and return the top 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[None], [None], [None], [None], [None]]",SELECT T1.`tiktok_posts` FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`tiktok_posts` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-SINGLE-COL,"Join `tracks` and `albums` on `album_id`, select only the column `tiktok_posts`, sort it in descending order, and return the top 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[None], [None], [None], [None], [None]]",SELECT T1.`tiktok_posts` FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`tiktok_posts` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns track_id, track_score, youtube_views, tiktok_posts, explicit_track in ascending order, and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 1, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, 0], [2, 'Not Like Us', 'USUG12400910', 2, 2, 545.9, 323703884.0, 92.0, 116347040.0, 674700.0, 1], [3, 'i like the way you kiss me', 'QZJ842400387', 3, 3, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, 0], [4, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0], [5, 'Houdini', 'USUG12403398', 5, 5, 423.3, 107034922.0, 88.0, 77373957.0, 16400.0, 1]]","SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id`, T1.`track_score`, T1.`youtube_views`, T1.`tiktok_posts`, T1.`explicit_track` ASC LIMIT 5",0,,0.0,1.0,0.83,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns track_id, track_score, youtube_views, tiktok_posts, explicit_track in descending order, and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 1, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, 0, 1, '26-04-2024'], [2, 'Not Like Us', 'USUG12400910', 2, 2, 545.9, 323703884.0, 92.0, 116347040.0, 674700.0, 1, 2, '04-05-2024'], [3, 'i like the way you kiss me', 'QZJ842400387', 3, 3, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, 0, 3, '19-03-2024'], [4, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0, 4, '12-01-2023'], [5, 'Houdini', 'USUG12403398', 5, 5, 423.3, 107034922.0, 88.0, 77373957.0, 16400.0, 1, 5, '31-05-2024']]","SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id`, T1.`track_score`, T1.`youtube_views`, T1.`tiktok_posts`, T1.`explicit_track` DESC LIMIT 5",0,,0.0,1.0,0.936,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns track_id, album_id, all_time_rank, track_score, spotify_streams, spotify_popularity, tiktok_posts, explicit_track in ascending order, and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 1, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, 0, '26-04-2024', 1], [2, 'Not Like Us', 'USUG12400910', 2, 2, 545.9, 323703884.0, 92.0, 116347040.0, 674700.0, 1, '04-05-2024', 2], [3, 'i like the way you kiss me', 'QZJ842400387', 3, 3, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, 0, '19-03-2024', 3], [4, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0, '12-01-2023', 4], [5, 'Houdini', 'USUG12403398', 5, 5, 423.3, 107034922.0, 88.0, 77373957.0, 16400.0, 1, '31-05-2024', 5]]","SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id`, T1.`album_id`, T1.`all_time_rank`, T1.`track_score`, T1.`spotify_streams`, T1.`spotify_popularity`, T1.`tiktok_posts`, T1.`explicit_track` ASC LIMIT 5",0,,0.0,1.0,0.936,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns track_id, album_id, all_time_rank, track_score, spotify_streams, spotify_popularity, tiktok_posts, explicit_track in descending order, and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[26, 'STAY (with Justin Bieber)', 'USSM12103949', 26, 27, 266.3, 3107100349.0, 78.0, 1256973582.0, 7485966.0, 1, '01-12-2015'], [25, 'Beat Automotivo Tan Tan Tan Viral', 'BXWEH2200054', 25, 26, 268.1, 7382759.0, 35.0, 4233958.0, 37621885.0, 0, '24-05-2022'], [24, 'Future', 'RUA1H2415548', 24, 25, 277.5, None, None, None, 9453333.0, 0, '10-01-2024'], [23, ""TEXAS HOLD 'EM"", 'USSM12401302', 23, 24, 278.9, 426700979.0, 86.0, 35724356.0, 1470500.0, 1, '10-02-2024'], [22, 'Danza Kuduro - Cover', 'TCJPA2445163', 22, 23, 279.0, 1655575417.0, None, None, None, 1, '21-05-2024']]","SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id`, T1.`album_id`, T1.`all_time_rank`, T1.`track_score`, T1.`spotify_streams`, T1.`spotify_popularity`, T1.`tiktok_posts`, T1.`explicit_track` DESC LIMIT 5",0,,0.0,0.047,0.043,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns album_id, spotify_streams, spotify_popularity, youtube_views, tiktok_posts in ascending order, and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[3, 'Flowers', 'USSM12209777', 3, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0], [19, 'As It Was', 'USSM12200612', 18, 20, 292.0, 3301814535.0, 87.0, 800899315.0, 2755903.0, 0], [26, 'STAY (with Justin Bieber)', 'USSM12103949', 25, 27, 266.3, 3107100349.0, 78.0, 1256973582.0, 7485966.0, 1], [15, 'LALA', 'USWL12300002', 15, 16, 299.9, 925655569.0, 79.0, 934302031.0, 11054500.0, 1], [2, 'i like the way you kiss me', 'QZJ842400387', 2, 3, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, 0]]","SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`album_id`, T1.`spotify_streams`, T1.`spotify_popularity`, T1.`youtube_views`, T1.`tiktok_posts` ASC LIMIT 5",0,,0.0,0.396,0.404,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns album_id, spotify_streams, spotify_popularity, youtube_views, tiktok_posts in descending order, and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[3, 'Flowers', 'USSM12209777', 3, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0], [19, 'As It Was', 'USSM12200612', 18, 20, 292.0, 3301814535.0, 87.0, 800899315.0, 2755903.0, 0], [0, 'MILLION DOLLAR BABY', 'QM24S2402528', 0, 1, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, 0], [26, 'STAY (with Justin Bieber)', 'USSM12103949', 25, 27, 266.3, 3107100349.0, 78.0, 1256973582.0, 7485966.0, 1], [15, 'LALA', 'USWL12300002', 15, 16, 299.9, 925655569.0, 79.0, 934302031.0, 11054500.0, 1]]","SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`album_id`, T1.`spotify_streams`, T1.`spotify_popularity`, T1.`youtube_views`, T1.`tiktok_posts` DESC LIMIT 5",0,,0.0,0.383,0.383,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns track_id, track_score, spotify_streams, youtube_views, tiktok_posts in ascending order, and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 1, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, 0], [2, 'Not Like Us', 'USUG12400910', 2, 2, 545.9, 323703884.0, 92.0, 116347040.0, 674700.0, 1], [3, 'i like the way you kiss me', 'QZJ842400387', 3, 3, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, 0], [4, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0], [5, 'Houdini', 'USUG12403398', 5, 5, 423.3, 107034922.0, 88.0, 77373957.0, 16400.0, 1]]","SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id`, T1.`track_score`, T1.`spotify_streams`, T1.`youtube_views`, T1.`tiktok_posts` ASC LIMIT 5",0,,0.0,1.0,0.83,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns track_id, track_score, spotify_streams, youtube_views, tiktok_posts in descending order, and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[3, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0, 4, '12-01-2023'], [2, 'i like the way you kiss me', 'QZJ842400387', 3, 3, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, 0, 3, '19-03-2024'], [0, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 1, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, 0, 1, '26-04-2024'], [26, 'STAY (with Justin Bieber)', 'USSM12103949', 26, 27, 266.3, 3107100349.0, 78.0, 1256973582.0, 7485966.0, 1, 26, '01-12-2015'], [19, 'As It Was', 'USSM12200612', 19, 20, 292.0, 3301814535.0, 87.0, 800899315.0, 2755903.0, 0, 19, '31-03-2022']]","SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id`, T1.`track_score`, T1.`spotify_streams`, T1.`youtube_views`, T1.`tiktok_posts` DESC LIMIT 5",0,,0.0,0.583,0.596,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns all_time_rank, track_score, spotify_streams, spotify_popularity in ascending order, and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[26, 'STAY (with Justin Bieber)', 'USSM12103949', 26, 0, 266.3, 3107100349.0, 78.0, 1256973582.0, 7485966.0, 1, '09-07-2021', 'STAY (with Justin Bieber) - Single'], [25, 'Beat Automotivo Tan Tan Tan Viral', 'BXWEH2200054', 25, 0, 268.1, 7382759.0, 35.0, 4233958.0, 37621885.0, 0, '24-05-2022', 'Beat Automotivo Tan Tan Tan Viral'], [24, 'Future', 'RUA1H2415548', 24, 0, 277.5, None, None, None, 9453333.0, 0, '10-01-2024', 'Future'], [23, ""TEXAS HOLD 'EM"", 'USSM12401302', 23, 0, 278.9, 426700979.0, 86.0, 35724356.0, 1470500.0, 1, '10-02-2024', ""TEXAS HOLD 'EM""], [22, 'Danza Kuduro - Cover', 'TCJPA2445163', 22, 0, 279.0, 1655575417.0, None, None, None, 1, '01-12-2015', 'Danza Kuduro - Single']]","SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`all_time_rank`, T1.`track_score`, T1.`spotify_streams`, T1.`spotify_popularity` ASC LIMIT 5",0,,0.0,0.045,0.043,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns all_time_rank, track_score, spotify_streams, spotify_popularity in descending order, and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[3, 'Flowers', 'USSM12209777', 4, 0, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0], [0, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 0, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, 0], [2, 'i like the way you kiss me', 'QZJ842400387', 3, 0, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, 0], [26, 'STAY (with Justin Bieber)', 'USSM12103949', 26, 0, 266.3, 3107100349.0, 78.0, 1256973582.0, 7485966.0, 1], [15, 'LALA', 'USWL12300002', 16, 0, 299.9, 925655569.0, 79.0, 934302031.0, 11054500.0, 1]]","SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`all_time_rank`, T1.`track_score`, T1.`spotify_streams`, T1.`spotify_popularity` DESC LIMIT 5",0,,0.0,0.595,0.532,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns track_id, album_id, spotify_streams, spotify_popularity, youtube_views in ascending order, and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 1, 725.4, 390470936, 92, 84274754, 5767700, 0], [2, 'Not Like Us', 'USUG12400910', 2, 2, 545.9, 323703884, 92, 116347040, 674700, 1], [3, 'i like the way you kiss me', 'QZJ842400387', 3, 3, 538.4, 601309283, 92, 122599116, 3025400, 0], [4, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633, 85, 1096100899, 7189811, 0], [5, 'Houdini', 'USUG12403398', 5, 5, 423.3, 107034922, 88, 77373957, 16400, 1]]","SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id`, T1.`album_id`, T1.`spotify_streams`, T1.`spotify_popularity`, T1.`youtube_views` ASC LIMIT 5",0,,0.0,1.0,0.83,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns track_id, album_id, spotify_streams, spotify_popularity, youtube_views in descending order, and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[26, 'STAY (with Justin Bieber)', 'USSM12103949', 26, 27, 266.3, 3107100349.0, 78.0, 1256973582.0, 7485966.0, 1], [25, 'Beat Automotivo Tan Tan Tan Viral', 'BXWEH2200054', 25, 26, 268.1, 7382759.0, 35.0, 4233958.0, 37621885.0, 0], [24, 'Future', 'RUA1H2415548', 24, 25, 277.5, None, None, None, 9453333.0, 0], [23, ""TEXAS HOLD 'EM"", 'USSM12401302', 23, 24, 278.9, 426700979.0, 86.0, 35724356.0, 1470500.0, 1], [22, 'Danza Kuduro - Cover', 'TCJPA2445163', 22, 23, 279.0, 1655575417.0, None, None, None, 1]]","SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id`, T1.`album_id`, T1.`spotify_streams`, T1.`spotify_popularity`, T1.`youtube_views` DESC LIMIT 5",0,,0.0,0.053,0.043,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns track_id, album_id, track_score, spotify_streams, spotify_popularity, tiktok_posts, explicit_track in ascending order, and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 1, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, 0, 1, '26-04-2024', 'Million Dollar Baby - Single'], [1, 'Not Like Us', 'USUG12400910', 2, 2, 545.9, 323703884.0, 92.0, 116347040.0, 674700.0, 1, 2, '04-05-2024', 'Not Like Us'], [2, 'i like the way you kiss me', 'QZJ842400387', 3, 3, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, 0, 3, '19-03-2024', 'I like the way you kiss me'], [3, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0, 4, '12-01-2023', 'Flowers - Single'], [4, 'Houdini', 'USUG12403398', 5, 5, 423.3, 107034922.0, 88.0, 77373957.0, 16400.0, 1, 5, '31-05-2024', 'Houdini']]","SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id`, T1.`album_id`, T1.`track_score`, T1.`spotify_streams`, T1.`spotify_popularity`, T1.`tiktok_posts`, T1.`explicit_track` ASC LIMIT 5",0,,0.0,1.0,1.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns track_id, album_id, track_score, spotify_streams, spotify_popularity, tiktok_posts, explicit_track in descending order, and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[3, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0], [0, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 1, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, 0], [2, 'i like the way you kiss me', 'QZJ842400387', 3, 3, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, 0], [1, 'Not Like Us', 'USUG12400910', 2, 2, 545.9, 323703884.0, 92.0, 116347040.0, 674700.0, 1], [4, 'Houdini', 'USUG12403398', 5, 5, 423.3, 107034922.0, 88.0, 77373957.0, 16400.0, 1]]","SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id`, T1.`album_id`, T1.`track_score`, T1.`spotify_streams`, T1.`spotify_popularity`, T1.`tiktok_posts`, T1.`explicit_track` DESC LIMIT 5",0,,0.0,1.0,0.83,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns track_id, album_id, all_time_rank, track_score, spotify_streams in ascending order, and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 1, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, 0], [2, 'Not Like Us', 'USUG12400910', 2, 2, 545.9, 323703884.0, 92.0, 116347040.0, 674700.0, 1], [3, 'i like the way you kiss me', 'QZJ842400387', 3, 3, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, 0], [4, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0], [5, 'Houdini', 'USUG12403398', 5, 5, 423.3, 107034922.0, 88.0, 77373957.0, 16400.0, 1]]","SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id`, T1.`album_id`, T1.`all_time_rank`, T1.`track_score`, T1.`spotify_streams` ASC LIMIT 5",0,,0.0,1.0,0.83,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns track_id, album_id, all_time_rank, track_score, spotify_streams in descending order, and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 1, 725.4, 390470936, 92, 84274754, 5767700, 0], [2, 'Not Like Us', 'USUG12400910', 2, 2, 545.9, 323703884, 92, 116347040, 674700, 1], [3, 'i like the way you kiss me', 'QZJ842400387', 3, 3, 538.4, 601309283, 92, 122599116, 3025400, 0], [4, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633, 85, 1096100899, 7189811, 0], [5, 'Houdini', 'USUG12403398', 5, 5, 423.3, 107034922, 88, 77373957, 16400, 1]]","SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id`, T1.`album_id`, T1.`all_time_rank`, T1.`track_score`, T1.`spotify_streams` DESC LIMIT 5",0,,0.0,1.0,0.83,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns album_id, track_score, spotify_streams, youtube_views, tiktok_posts in ascending order, and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[3, 'Flowers', 'USSM12209777', 3, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0], [19, 'As It Was', 'USSM12200612', 18, 20, 292.0, 3301814535.0, 87.0, 800899315.0, 2755903.0, 0], [26, 'STAY (with Justin Bieber)', 'USSM12103949', 25, 27, 266.3, 3107100349.0, 78.0, 1256973582.0, 7485966.0, 1], [15, 'LALA', 'USWL12300002', 15, 16, 299.9, 925655569.0, 79.0, 934302031.0, 11054500.0, 1], [2, 'i like the way you kiss me', 'QZJ842400387', 2, 3, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, 0]]","SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`album_id`, T1.`track_score`, T1.`spotify_streams`, T1.`youtube_views`, T1.`tiktok_posts` ASC LIMIT 5",0,,0.0,0.396,0.404,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns album_id, track_score, spotify_streams, youtube_views, tiktok_posts in descending order, and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[3, 'Flowers', 'USSM12209777', 3, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0], [19, 'As It Was', 'USSM12200612', 18, 20, 292.0, 3301814535.0, 87.0, 800899315.0, 2755903.0, 0], [0, 'MILLION DOLLAR BABY', 'QM24S2402528', 0, 1, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, 0], [2, 'i like the way you kiss me', 'QZJ842400387', 2, 3, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, 0], [26, 'STAY (with Justin Bieber)', 'USSM12103949', 25, 27, 266.3, 3107100349.0, 78.0, 1256973582.0, 7485966.0, 1]]","SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`album_id`, T1.`track_score`, T1.`spotify_streams`, T1.`youtube_views`, T1.`tiktok_posts` DESC LIMIT 5",0,,0.0,0.556,0.532,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns track_id, all_time_rank, tiktok_posts in ascending order, and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 1, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, 0], [1, 'Not Like Us', 'USUG12400910', 2, 2, 545.9, 323703884.0, 92.0, 116347040.0, 674700.0, 1], [2, 'i like the way you kiss me', 'QZJ842400387', 3, 3, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, 0], [3, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0], [4, 'Houdini', 'USUG12403398', 5, 5, 423.3, 107034922.0, 88.0, 77373957.0, 16400.0, 1]]","SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id`, T1.`all_time_rank`, T1.`tiktok_posts` ASC LIMIT 5",0,,0.0,1.0,0.83,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns track_id, all_time_rank, tiktok_posts in descending order, and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[26, 'STAY (with Justin Bieber)', 'USSM12103949', 26, 27, 266.3, 3107100349.0, 78.0, 1256973582.0, 7485966.0, 1, '01-12-2015'], [25, 'Beat Automotivo Tan Tan Tan Viral', 'BXWEH2200054', 25, 26, 268.1, 7382759.0, 35.0, 4233958.0, 37621885.0, 0, '24-05-2022'], [24, 'Future', 'RUA1H2415548', 24, 25, 277.5, None, None, None, 9453333.0, 0, '10-01-2024'], [23, ""TEXAS HOLD 'EM"", 'USSM12401302', 23, 24, 278.9, 426700979.0, 86.0, 35724356.0, 1470500.0, 1, '10-02-2024'], [22, 'Danza Kuduro - Cover', 'TCJPA2445163', 22, 23, 279.0, 1655575417.0, None, None, None, 1, '21-05-2024']]","SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id`, T1.`all_time_rank`, T1.`tiktok_posts` DESC LIMIT 5",0,,0.0,0.047,0.043,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-LIMIT,"Join all records from table `albums` with table `artists` on column `artist_id`, then list the top 5 rows sorted by `album_id` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1, 'Million Dollar Baby - Single', '26-04-2024', 1, 'Tommy Richman', '21-03-2000'], [2, 'Not Like Us', '04-05-2024', 2, 'Kendrick Lamar', '17-06-1987'], [3, 'I like the way you kiss me', '19-03-2024', 3, 'Artemas', '23-09-1999'], [4, 'Flowers - Single', '12-01-2023', 4, 'Miley Cyrus', '23-11-1992'], [5, 'Houdini', '31-05-2024', 5, 'Eminem', '17-10-1972']]",SELECT * FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`album_id` ASC LIMIT 5,0,,0.0,1.0,1.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-LIMIT,"Join all records from table `albums` with table `artists` on column `artist_id`, then list the top 5 rows sorted by `album_id` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[74, 'Laxed (Siren Beat)', '24-04-2020', 67, 'Dave', '01-01-1991'], [73, 'un x100to', '17-04-2023', 66, '21 Savage', '22-10-1992'], [72, 'Old Town Road', '14-03-2019', 65, 'Grupo Frontera', '08-06-2022'], [71, 'The Way We Move', '10-03-2023', 64, 'Eslabon Armado', '01-01-2017'], [70, 'Shakira: Bzrp Music Sessions, Vol. 53', '11-01-2023', 63, 'Dave Angel', '01-01-1991']]",SELECT * FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`album_id` DESC LIMIT 5,0,,0.0,0.724,0.724,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-LIMIT,"Join all records from table `albums` with table `artists` on column `artist_id`, then list the top 5 rows sorted by `title` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT * FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`title` ASC LIMIT 5,3,"```json
+{
+  ""table_name"": ""albums_artists"",
+  ""ordered_entries"": [
+    {
+      ""album_id"": 74,
+      ""title"": ""Laxed (Siren Beat)"",
+      ""release_date (dd-mm-yyyy)"": ""24-04-2020"",
+      ""artist_id"": 67,
+      ""name"": ""Dave"",
+      ""birth_date (dd-mm-yyyy)"": ""01-01-1991""
+    },
+    {
+      ""album_id"": 73,
+      ""title"": ""un x100to"",
+      ""release_date (dd-mm-yyyy)"": ""17-04-2023"",
+      ""artist_id"": 66,
+      ""name"": ""21 Savage"",
+      ""birth_date (dd-mm-yyyy)"": ""22-10-1992""
+    },
+    {
+      ""album_id"": 72,
+      ""title"": ""Old Town Road"",
+      ""release_date (dd-mm-yyyy)"": ""14-03-2019"",
+      ""artist_id"": 65,
+      ""name"": ""Grupo Frontera"",
+      ""birth_date (dd-mm-yyyy)"": ""08-06-2022""
+    },
+    {
+      ""album_id"": 71,
+      ""title"": ""The Way We Move"",
+      ""release_date (dd-mm-yyyy)"": ""10-03-2023"",
+      ""artist_id"": 64,
+      ""name"": ""Eslabon Armado"",
+      ""birth_date (dd-mm-yyyy)"": ""01-01-2017""
+    },
+    {
+      ""album_id"": 70,
+      ""title"": ""Shakira: Bzrp Music Sessions, Vol. 53"",
+      ""release_date (dd-mm-yyyy)"": ""11-01-2023"",
+      ""artist_id"": 63,
+      ""name"": ""Dave Angel"",
+      ""birth_date (dd-mm-yyyy)"": ""01-01-1991""
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-LIMIT,"Join all records from table `albums` with table `artists` on column `artist_id`, then list the top 5 rows sorted by `title` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[74, 'Unknown', '24-04-2020', 67, 'Dave', '01-01-1991'], [73, 'Unknown', '17-04-2023', 66, 'Grupo Frontera', '08-06-2022'], [72, 'Unknown', '14-03-2019', 65, 'Tyla', '30-12-2022'], [71, 'Unknown', '10-03-2023', 64, 'Peso Pluma', '15-06-1999'], [70, 'Unknown', '11-01-2023', 63, 'PowerDress', '09-05-1995']]",SELECT * FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`title` DESC LIMIT 5,1,,0.0,0.192,0.185,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-LIMIT,"Join all records from table `albums` with table `artists` on column `artist_id`, then list the top 5 rows sorted by `release_date (dd-mm-yyyy)` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[74, 'Laxed (Siren Beat)', '01-01-2020', 67, 'Dave', '01-01-1991'], [43, 'Please Please Please', '01-01-2021', 21, 'Beyoncï¿', '04-09-1981'], [9, 'BAND4BAND (feat. Lil Baby)', '01-01-2022', 10, 'Post Malone', '04-07-1995'], [66, 'What Was I Made For? (From The Motion Picture ""Barbie"")', '01-01-2023', 13, 'Future', '20-11-1983'], [76, 'un x100to', '01-09-2023', 73, '21 Savage', '22-10-1992']]",SELECT * FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`release_date (dd-mm-yyyy)` ASC LIMIT 5,0,,0.0,0.067,0.074,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-LIMIT,"Join all records from table `albums` with table `artists` on column `artist_id`, then list the top 5 rows sorted by `release_date (dd-mm-yyyy)` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT * FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`release_date (dd-mm-yyyy)` DESC LIMIT 5,3,"```json
+{
+  ""table_name"": ""albums_artists"",
+  ""ordered_entries"": [
+    {
+      ""album_id"": 74,
+      ""title"": ""Laxed (Siren Beat)"",
+      ""release_date (dd-mm-yyyy)"": ""01-01-2020"",
+      ""artist_id"": 67,
+      ""name"": ""Dave"",
+      ""birth_date (dd-mm-yyyy)"": ""01-01-1991""
+    },
+    {
+      ""album_id"": 43,
+      ""title"": ""Please Please Please"",
+      ""release_date (dd-mm-yyyy)"": ""01-01-2021"",
+      ""artist_id"": 21,
+      ""name"": ""Beyonc\u00ef\u00bf"",
+      ""birth_date (dd-mm-yyyy)"": ""04-09-1981""
+    },
+    {
+      ""album_id"": 9,
+      ""title"": ""BAND4BAND (feat. Lil Baby)"",
+      ""release_date (dd-mm-yyyy)"": ""01-01-2022"",
+      ""artist_id"": 10,
+      ""name"": ""Post Malone"",
+      ""birth_date (dd-mm-yyyy)"": ""04-07-1995""
+    },
+    {
+      ""album_id"": 66,
+      ""title"": ""What Was I Made For? (From The Motion Picture \""Barbie\"")"",
+      ""release_date (dd-mm-yyyy)"": ""01-01-2023"",
+      ""artist_id"": 13,
+      ""name"": ""Future"",
+      ""birth_date (dd-mm-yyyy)"": ""20-11-1983""
+    },
+    {
+      ""album_id"": 76,
+      ""title"": ""un x100to"",
+      ""release_date (dd-mm-yyyy)"": ""01-09-2023"",
+      ""artist_id"": 73,
+      ""name"": ""21 Savage"",
+      ""birth_date (dd-mm-yyyy)"": ""22-10-1992""
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-LIMIT,"Join all records from table `albums` with table `artists` on column `artist_id`, then list the top 5 rows sorted by `artist_id` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1, 'Million Dollar Baby - Single', '26-04-2024', 1, 'Tommy Richman', '21-03-2000'], [2, 'Not Like Us', '04-05-2024', 2, 'Kendrick Lamar', '17-06-1987'], [3, 'I like the way you kiss me', '19-03-2024', 3, 'Artemas', '23-09-1999'], [4, 'Houdini', '31-05-2024', 4, 'Miley Cyrus', '23-11-1992'], [5, 'Lovin On Me', '10-11-2023', 5, 'Eminem', '17-10-1972']]",SELECT * FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`artist_id` ASC LIMIT 5,1,,0.0,0.72,0.783,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-LIMIT,"Join all records from table `albums` with table `artists` on column `artist_id`, then list the top 5 rows sorted by `artist_id` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[74, 'Laxed (Siren Beat)', '24-04-2020', 100, '', '01-01-1990'], [73, 'un x100to', '17-04-2023', 99, 'BTS', '13-06-2013'], [72, 'Old Town Road', '14-03-2019', 98, '24kGoldn', '13-11-2000'], [71, 'The Way We Move', '10-03-2023', 97, 'Exhumed', '01-01-1991'], [70, 'Shakira: Bzrp Music Sessions, Vol. 53', '11-01-2023', 96, 'OneRepublic', '01-01-2004']]",SELECT * FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`artist_id` DESC LIMIT 5,0,,0.0,0.467,0.483,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-SINGLE-COL,"Join `albums` and `artists` on `artist_id`, select only the column `album_id`, sort it in ascending order, and return the top 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT T1.`album_id` FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`album_id` ASC LIMIT 5,3,"```json
+{
+  ""table_name"": ""albums_artists"",
+  ""ordered_entries"": [
+    {
+      ""album_id"": 74,
+      ""title"": ""Laxed (Siren Beat)"",
+      ""release_date (dd-mm-yyyy)"": ""24-04-2020"",
+      ""artist_id"": 100,
+      ""name"": """",
+      ""birth_date (dd-mm-yyyy)"": ""01-01-1990""
+    },
+    {
+      ""album_id"": 73,
+      ""title"": ""un x100to"",
+      ""release_date (dd-mm-yyyy)"": ""17-04-2023"",
+      ""artist_id"": 99,
+      ""name"": ""BTS"",
+      ""birth_date (dd-mm-yyyy)"": ""13-06-2013""
+    },
+    {
+      ""album_id"": 72,
+      ""title"": ""Old Town Road"",
+      ""release_date (dd-mm-yyyy)"": ""14-03-2019"",
+      ""artist_id"": 98,
+      ""name"": ""24kGoldn"",
+      ""birth_date (dd-mm-yyyy)"": ""13-11-2000""
+    },
+    {
+      ""album_id"": 71,
+      ""title"": ""The Way We Move"",
+      ""release_date (dd-mm-yyyy)"": ""10-03-2023"",
+      ""artist_id"": 97,
+      ""name"": ""Exhumed"",
+      ""birth_date (dd-mm-yyyy)"": ""01-01-1991""
+    },
+    {
+      ""album_id"": 70,
+      ""title"": ""Shakira: Bzrp Music Sessions, Vol. 53"",
+      ""release_date (dd-mm-yyyy)"": ""11-01-2023"",
+      ""artist_id"": 96,
+      ""name"": ""OneRepublic"",
+      ""birth_date (dd-mm-yyyy)"": ""01-01-2004""
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-SINGLE-COL,"Join `albums` and `artists` on `artist_id`, select only the column `album_id`, sort it in descending order, and return the top 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[74], [73], [72], [71], [70]]",SELECT T1.`album_id` FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`album_id` DESC LIMIT 5,1,,0.0,0.8,0.8,0.0,1.0,0.8,1.0
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-SINGLE-COL,"Join `albums` and `artists` on `artist_id`, select only the column `title`, sort it in ascending order, and return the top 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown']]",SELECT T1.`title` FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`title` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-SINGLE-COL,"Join `albums` and `artists` on `artist_id`, select only the column `title`, sort it in descending order, and return the top 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT T1.`title` FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`title` DESC LIMIT 5,3,"```json
+{
+  ""table_name"": ""albums"",
+  ""ordered_entries"": [
+    {
+      ""title"": ""Unknown""
+    },
+    {
+      ""title"": ""Unknown""
+    },
+    {
+      ""title"": ""Unknown""
+    },
+    {
+      ""title"": ""Unknown""
+    },
+    {
+      ""title"": ""Unknown""
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-SINGLE-COL,"Join `albums` and `artists` on `artist_id`, select only the column `release_date (dd-mm-yyyy)`, sort it in ascending order, and return the top 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['01-01-1991'], ['01-01-1991'], ['01-01-1991'], ['01-01-1991'], ['01-01-1991']]",SELECT T1.`release_date (dd-mm-yyyy)` FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`release_date (dd-mm-yyyy)` ASC LIMIT 5,1,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-SINGLE-COL,"Join `albums` and `artists` on `artist_id`, select only the column `release_date (dd-mm-yyyy)`, sort it in descending order, and return the top 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['01-01-2023'], ['01-01-2023'], ['01-01-2023'], ['01-01-2023'], ['01-01-2023']]",SELECT T1.`release_date (dd-mm-yyyy)` FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`release_date (dd-mm-yyyy)` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-SINGLE-COL,"Join `albums` and `artists` on `artist_id`, select only the column `artist_id`, sort it in ascending order, and return the top 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT T1.`artist_id` FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`artist_id` ASC LIMIT 5,3,"```
+{
+  ""table_name"": ""albums"",
+  ""ordered_entries"": [
+    {
+      ""release_date (dd-mm-yyyy)"": ""01-01-2023""
+    },
+    {
+      ""release_date (dd-mm-yyyy)"": ""01-01-2023""
+    },
+    {
+      ""release_date (dd-mm-yyyy)"": ""01-01-2023""
+    },
+    {
+      ""release_date (dd-mm-yyyy)"": ""01-01-2023""
+    },
+    {
+      ""release_date (dd-mm-yyyy)"": ""01-01-2023""
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-SINGLE-COL,"Join `albums` and `artists` on `artist_id`, select only the column `artist_id`, sort it in descending order, and return the top 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[100], [99], [98], [97], [96]]",SELECT T1.`artist_id` FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`artist_id` DESC LIMIT 5,1,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-ADVANCED,"Join `albums` with `artists` on `artist_id`. Sort all rows by the columns album_id, artist_id in ascending order, and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1, 'Million Dollar Baby - Single', '26-04-2024', 1, 'Tommy Richman', '21-03-2000'], [2, 'Not Like Us', '04-05-2024', 2, 'Kendrick Lamar', '17-06-1987'], [3, 'I like the way you kiss me', '19-03-2024', 3, 'Artemas', '23-09-1999'], [4, 'Houdini', '31-05-2024', 5, 'Eminem', '17-10-1972'], [5, 'Lovin On Me', '10-11-2023', 6, 'Jack Harlow', '13-03-1998']]","SELECT * FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`album_id`, T1.`artist_id` ASC LIMIT 5",0,,0.0,0.808,0.84,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,JOIN-ORDERBY-ADVANCED,"Join `albums` with `artists` on `artist_id`. Sort all rows by the columns album_id, artist_id in descending order, and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],"SELECT * FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`album_id`, T1.`artist_id` DESC LIMIT 5",3,"```json
+{
+  ""table_name"": ""albums_artists"",
+  ""ordered_entries"": [
+    {
+      ""album_id"": 1,
+      ""title"": ""Million Dollar Baby - Single"",
+      ""release_date (dd-mm-yyyy)"": ""26-04-2024"",
+      ""artist_id"": 1,
+      ""name"": ""Tommy Richman"",
+      ""birth_date (dd-mm-yyyy)"": ""21-03-2000""
+    },
+    {
+      ""album_id"": 2,
+      ""title"": ""Not Like Us"",
+      ""release_date (dd-mm-yyyy)"": ""04-05-2024"",
+      ""artist_id"": 2,
+      ""name"": ""Kendrick Lamar"",
+      ""birth_date (dd-mm-yyyy)"": ""17-06-1987""
+    },
+    {
+      ""album_id"": 3,
+      ""title"": ""I like the way you kiss me"",
+      ""release_date (dd-mm-yyyy)"": ""19-03-2024"",
+      ""artist_id"": 3,
+      ""name"": ""Artemas"",
+      ""birth_date (dd-mm-yyyy)"": ""23-09-1999""
+    },
+    {
+      ""album_id"": 4,
+      ""title"": ""Houdini"",
+      ""release_date (dd-mm-yyyy)"": ""31-05-2024"",
+      ""artist_id"": 5,
+      ""name"": ""Eminem"",
+      ""birth_date (dd-mm-yyyy)"": ""17-10-1972""
+    },
+    {
+      ""album_id"": 5,
+      ""title"": ""Lovin On Me"",
+      ""release_date (dd-mm-yyyy)"": ""10-11-2023"",
+      ""artist_id"": 6,
+      ""name"": ""Jack Harlow"",
+      ""birth_date (dd-mm-yyyy)"": ""13-03-1998""
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `track_score` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[24, 'Future', 'RUA1H2415548', 24, 25, 0, None, None, None, 9453333, 0, 24, 'Future', '10-01-2024', 23], [14, 'bathroom floor', 'NLC242100307', 15, 15, 0, 297185, 12, 6736502312, 3, 0, 15, 'LALA - Single', '22-03-2023', 16], [25, 'Beat Automotivo Tan Tan Tan Viral', 'BXWEH2200054', 25, 26, 0, 7382759, 35, 4233958, 37621885, 0, 25, 'STAY (with Justin Bieber)', '09-07-2021', 25], [4, 'Houdini', 'USUG12403398', 5, 5, 0, 107034922, 88, 77373957, 16400, 1, 5, 'Houdini', '31-05-2024', 5], [11, 'The Door', 'USWB12402486', 12, 12, 0, 111155129, None, None, None, 1, 12, 'THE TORTURED POETS DEPARTMENT', '18-04-2024', 17]]",SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_score` ASC LIMIT 5,1,,0.0,0.413,0.422,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `track_score` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[21, 'Espresso', 'USUM72403305', 21, 22, 95.0, 547882871.0, 95.0, 107550212.0, 209200.0, 1, 9, '21-05-2024'], [2, 'i like the way you kiss me', 'QZJ842400387', 3, 3, 92.0, 601309283.0, 92.0, 122599116.0, 3025400.0, 0, 3, '19-03-2024'], [0, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 1, 92.0, 390470936.0, 92.0, 84274754.0, 5767700.0, 0, 1, '26-04-2024'], [1, 'Not Like Us', 'USUG12400910', 2, 2, 92.0, 323703884.0, 92.0, 116347040.0, 674700.0, 1, 2, '04-05-2024'], [7, 'Gata Only', 'QZL382406049', 8, 8, 92.0, 675079153.0, 92.0, 228382568.0, 3500000.0, 1, 8, '02-02-2024']]",SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_score` DESC LIMIT 5,0,,0.0,0.561,0.489,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `tiktok_posts` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`tiktok_posts` ASC LIMIT 5,3,"```
+{
+  ""table_name"": ""tracks_and_albums"",
+  ""ordered_entries"": [
+    {
+      ""track_id"": 21,
+      ""title"": ""Espresso"",
+      ""isrc"": ""USUM72403305"",
+      ""album_id"": 21,
+      ""all_time_rank"": 22,
+      ""track_score"": 95.0,
+      ""spotify_streams"": 547882871.0,
+      ""spotify_popularity"": 95.0,
+      ""youtube_views"": 107550212.0,
+      ""tiktok_posts"": 209200.0,
+      ""explicit_track"": 1,
+      ""artist_id"": 9,
+      ""release_date (dd-mm-yyyy)"": ""21-05-2024""
+    },
+    {
+      ""track_id"": 2,
+      ""title"": ""i like the way you kiss me"",
+      ""isrc"": ""QZJ842400387"",
+      ""album_id"": 3,
+      ""all_time_rank"": 3,
+      ""track_score"": 92.0,
+      ""spotify_streams"": 601309283.0,
+      ""spotify_popularity"": 92.0,
+      ""youtube_views"": 122599116.0,
+      ""tiktok_posts"": 3025400.0,
+      ""explicit_track"": 0,
+      ""artist_id"": 3,
+      ""release_date (dd-mm-yyyy)"": ""19-03-2024""
+    },
+    {
+      ""track_id"": 0,
+      ""title"": ""MILLION DOLLAR BABY"",
+      ""isrc"": ""QM24S2402528"",
+      ""album_id"": 1,
+      ""all_time_rank"": 1,
+      ""track_score"": 92.0,
+      ""spotify_streams"": 390470936.0,
+      ""spotify_popularity"": 92.0,
+      ""youtube_views"": 84274754.0,
+      ""tiktok_posts"": 5767700.0,
+      ""explicit_track"": 0,
+      ""artist_id"": 1,
+      ""release_date (dd-mm-yyyy)"": ""26-04-2024""
+    },
+    {
+      ""track_id"": 1,
+      ""title"": ""Not Like Us"",
+      ""isrc"": ""USUG12400910"",
+      ""album_id"": 2,
+      ""all_time_rank"": 2,
+      ""track_score"": 92.0,
+      ""spotify_streams"": 323703884.0,
+      ""spotify_popularity"": 92.0,
+      ""youtube_views"": 116347040.0,
+      ""tiktok_posts"": 674700.0,
+      ""explicit_track"": 1,
+      ""artist_id"": 2,
+      ""release_date (dd-mm-yyyy)"": ""04-05-2024""
+    },
+    {
+      ""track_id"": 7,
+      ""title"": ""Gata Only"",
+      ""isrc"": ""QZL382406049"",
+      ""album_id"": 8,
+      ""all_time_rank"": 8,
+      ""track_score"": 92.0,
+      ""spotify_streams"": 675079153.0,
+      ""spotify_popularity"": 92.0,
+      ""youtube_views"": 228382568.0,
+      ""tiktok_posts"": 3500000.0,
+      ""explicit_track"": 1,
+      ""artist_id"": 8,
+      ""release_date (dd-mm-yyyy)"": ""02-02-2024""
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `tiktok_posts` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[14, 'bathroom floor', 'NLC242100307', 15, 15, 301.6, 297185.0, 12.0, 6736502312.0, 0, 0, 15, 'LALA - Single', '22-03-2023', 15], [8, 'Danza Kuduro - Cover', 'TCJPA2463708', 9, 9, 355.7, 1653018119.0, 0, 0, 0, 1, 9, 'BAND4BAND (feat. Lil Baby)', '23-05-2024', 10], [11, 'The Door', 'USWB12402486', 12, 12, 320.2, 111155129.0, 0, 0, 0, 1, 12, 'The Door', '14-06-2024', 12], [22, 'Danza Kuduro - Cover', 'TCJPA2445163', 22, 23, 279.0, 1655575417.0, 0, 0, 0, 1, 22, ""TEXAS HOLD 'EM"", '10-02-2024', 22], [24, 'Future', 'RUA1H2415548', 24, 25, 277.5, 0, 0, 0, 0, 0, 24, 'Beat Automotivo Tan Tan Tan Viral', '24-05-2022', 24]]",SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`tiktok_posts` DESC LIMIT 5,1,,0.0,0.293,0.245,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `explicit_track` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[0, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 1, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, False, 1, '26-04-2024'], [1, 'Not Like Us', 'USUG12400910', 2, 2, 545.9, 323703884.0, 92.0, 116347040.0, 674700.0, False, 2, '04-05-2024'], [2, 'i like the way you kiss me', 'QZJ842400387', 3, 3, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, False, 3, '19-03-2024'], [3, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, False, 4, '12-01-2023'], [4, 'Houdini', 'USUG12403398', 5, 5, 423.3, 107034922.0, 88.0, 77373957.0, 16400.0, False, 5, '31-05-2024']]",SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`explicit_track` ASC LIMIT 5,0,,0.0,0.614,0.562,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `explicit_track` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`explicit_track` DESC LIMIT 5,3,"```json
+{
+  ""table_name"": ""tracks_and_albums"",
+  ""ordered_entries"": [
+    {
+      ""track_id"": 0,
+      ""title"": ""MILLION DOLLAR BABY"",
+      ""isrc"": ""QM24S2402528"",
+      ""album_id"": 1,
+      ""all_time_rank"": 1,
+      ""track_score"": 725.4,
+      ""spotify_streams"": 390470936.0,
+      ""spotify_popularity"": 92.0,
+      ""youtube_views"": 84274754.0,
+      ""tiktok_posts"": 5767700.0,
+      ""explicit_track"": false,
+      ""artist_id"": 1,
+      ""release_date (dd-mm-yyyy)"": ""26-04-2024""
+    },
+    {
+      ""track_id"": 1,
+      ""title"": ""Not Like Us"",
+      ""isrc"": ""USUG12400910"",
+      ""album_id"": 2,
+      ""all_time_rank"": 2,
+      ""track_score"": 545.9,
+      ""spotify_streams"": 323703884.0,
+      ""spotify_popularity"": 92.0,
+      ""youtube_views"": 116347040.0,
+      ""tiktok_posts"": 674700.0,
+      ""explicit_track"": false,
+      ""artist_id"": 2,
+      ""release_date (dd-mm-yyyy)"": ""04-05-2024""
+    },
+    {
+      ""track_id"": 2,
+      ""title"": ""i like the way you kiss me"",
+      ""isrc"": ""QZJ842400387"",
+      ""album_id"": 3,
+      ""all_time_rank"": 3,
+      ""track_score"": 538.4,
+      ""spotify_streams"": 601309283.0,
+      ""spotify_popularity"": 92.0,
+      ""youtube_views"": 122599116.0,
+      ""tiktok_posts"": 3025400.0,
+      ""explicit_track"": false,
+      ""artist_id"": 3,
+      ""release_date (dd-mm-yyyy)"": ""19-03-2024""
+    },
+    {
+      ""track_id"": 3,
+      ""title"": ""Flowers"",
+      ""isrc"": ""USSM12209777"",
+      ""album_id"": 4,
+      ""all_time_rank"": 4,
+      ""track_score"": 444.9,
+      ""spotify_streams"": 2031280633.0,
+      ""spotify_popularity"": 85.0,
+      ""youtube_views"": 1096100899.0,
+      ""tiktok_posts"": 7189811.0,
+      ""explicit_track"": false,
+      ""artist_id"": 4,
+      ""release_date (dd-mm-yyyy)"": ""12-01-2023""
+    },
+    {
+      ""track_id"": 4,
+      ""title"": ""Houdini"",
+      ""isrc"": ""USUG12403398"",
+      ""album_id"": 5,
+      ""all_time_rank"": 5,
+      ""track_score"": 423.3,
+      ""spotify_streams"": 107034922.0,
+      ""spotify_popularity"": 88.0,
+      ""youtube_views"": 77373957.0,
+      ""tiktok_posts"": 16400.0,
+      ""explicit_track"": false,
+      ""artist_id"": 5,
+      ""release_date (dd-mm-yyyy)"": ""31-05-2024""
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `title` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[18, 'Unknown', 'USUM72401996', 13, 19, 292.0, 91272461.0, 86.0, 16038053.0, 941900.0, 0, 13, 'Unknown', '17-05-2023', 14], [19, 'Unknown', 'USSM12200612', 19, 20, 292.6, 3301814535.0, 87.0, 800899315.0, 2755903.0, 0, 19, 'Unknown', '04-08-2023', 20], [20, 'Unknown', 'USRC12300907', 20, 21, 290.5, 1065399331.0, 78.0, 240970670.0, 3091732.0, 1, 20, 'Unknown', '12-04-2024', 21], [21, 'Unknown', 'USUM72403305', 21, 22, 281.5, 547882871.0, 95.0, 107550212.0, 209200.0, 1, 21, 'Unknown', '21-05-2024', 9], [22, 'Unknown', 'TCJPA2445163', 22, 23, 279.0, 1655575417.0, None, None, None, 1, 22, 'Unknown', '10-02-2024', 22]]",SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`title` ASC LIMIT 5,0,,0.0,0.4,0.367,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `title` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[26, 'Unknown Track', 'USSM12103949', 26, 27, 266.3, 3107100349.0, 78.0, 1256973582.0, 7485966.0, 1, 'Unknown Album', '01-12-2015', 26], [25, 'Unknown Track', 'BXWEH2200054', 25, 25, 268.1, 7382759.0, 35.0, 4233958.0, 37621885.0, 0, 'Unknown Album', '09-07-2021', 25], [24, 'Unknown Track', 'RUA1H2415548', 24, 24, 277.5, 0.0, 0.0, 0.0, 9453333.0, 0, 'Unknown Album', '24-05-2022', 24], [23, 'Unknown Track', 'USSM12401302', 23, 23, 278.9, 426700979.0, 86.0, 35724356.0, 1470500.0, 1, 'Unknown Album', '10-01-2024', 23], [22, 'Unknown Track', 'TCJPA2445163', 22, 22, 279.0, 1655575417.0, 0.0, 0.0, 0.0, 1, 'Unknown Album', '10-02-2024', 22]]",SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`title` DESC LIMIT 5,0,,0.0,0.308,0.261,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `spotify_streams` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`spotify_streams` ASC LIMIT 5,3,"```json
+{
+  ""table_name"": ""tracks_albums"",
+  ""ordered_entries"": [
+    {
+      ""track_id"": 26,
+      ""title"": ""Unknown Track"",
+      ""isrc"": ""USSM12103949"",
+      ""album_id"": 26,
+      ""all_time_rank"": 27,
+      ""track_score"": 266.3,
+      ""spotify_streams"": 3107100349.0,
+      ""spotify_popularity"": 78.0,
+      ""youtube_views"": 1256973582.0,
+      ""tiktok_posts"": 7485966.0,
+      ""explicit_track"": 1,
+      ""album_title"": ""Unknown Album"",
+      ""release_date"": ""01-12-2015"",
+      ""artist_id"": 26
+    },
+    {
+      ""track_id"": 25,
+      ""title"": ""Unknown Track"",
+      ""isrc"": ""BXWEH2200054"",
+      ""album_id"": 25,
+      ""all_time_rank"": 25,
+      ""track_score"": 268.1,
+      ""spotify_streams"": 7382759.0,
+      ""spotify_popularity"": 35.0,
+      ""youtube_views"": 4233958.0,
+      ""tiktok_posts"": 37621885.0,
+      ""explicit_track"": 0,
+      ""album_title"": ""Unknown Album"",
+      ""release_date"": ""09-07-2021"",
+      ""artist_id"": 25
+    },
+    {
+      ""track_id"": 24,
+      ""title"": ""Unknown Track"",
+      ""isrc"": ""RUA1H2415548"",
+      ""album_id"": 24,
+      ""all_time_rank"": 24,
+      ""track_score"": 277.5,
+      ""spotify_streams"": 0.0,
+      ""spotify_popularity"": 0.0,
+      ""youtube_views"": 0.0,
+      ""tiktok_posts"": 9453333.0,
+      ""explicit_track"": 0,
+      ""album_title"": ""Unknown Album"",
+      ""release_date"": ""24-05-2022"",
+      ""artist_id"": 24
+    },
+    {
+      ""track_id"": 23,
+      ""title"": ""Unknown Track"",
+      ""isrc"": ""USSM12401302"",
+      ""album_id"": 23,
+      ""all_time_rank"": 23,
+      ""track_score"": 278.9,
+      ""spotify_streams"": 426700979.0,
+      ""spotify_popularity"": 86.0,
+      ""youtube_views"": 35724356.0,
+      ""tiktok_posts"": 1470500.0,
+      ""explicit_track"": 1,
+      ""album_title"": ""Unknown Album"",
+      ""release_date"": ""10-01-2024"",
+      ""artist_id"": 23
+    },
+    {
+      ""track_id"": 22,
+      ""title"": ""Unknown Track"",
+      ""isrc"": ""TCJPA2445163"",
+      ""album_id"": 22,
+      ""all_time_rank"": 22,
+      ""track_score"": 279.0,
+      ""spotify_streams"": 1655575417.0,
+      ""spotify_popularity"": 0.0,
+      ""youtube_views"": 0.0,
+      ""tiktok_posts"": 0.0,
+      ""explicit_track"": 1,
+      ""album_title"": ""Unknown Album"",
+      ""release_date"": ""10-02-2024"",
+      ""artist_id"": 22
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `spotify_streams` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[14, 'bathroom floor', 'NLC242100307', 15, 15, 301.6, 1000000, 12.0, 6736502312.0, 3.0, 0, 15, 'LALA - Single', '22-03-2023', 16], [3, 'Flowers', 'USSM12209777', 4, 4, 444.9, 900000, 85.0, 1096100899.0, 7189811.0, 0, 4, 'Flowers - Single', '12-01-2023', 4], [15, 'LALA', 'USWL12300002', 16, 16, 299.9, 800000, 79.0, 934302031.0, 11054500.0, 1, 16, 'THE TORTURED POETS DEPARTMENT', '18-04-2024', 17], [19, 'As It Was', 'USSM12200612', 19, 20, 292.0, 700000, 87.0, 800899315.0, 2755903.0, 0, 19, 'As It Was', '31-03-2022', 19], [20, 'Paint The Town Red', 'USRC12300907', 20, 21, 290.5, 600000, 78.0, 240970670.0, 3091732.0, 1, 20, 'Paint The Town Red', '04-08-2023', 20]]",SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`spotify_streams` DESC LIMIT 5,0,,0.0,0.396,0.438,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `track_id` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 1, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, 0, 'Million Dollar Baby - Single', '26-04-2024', 1], [2, 'Not Like Us', 'USUG12400910', 2, 2, 545.9, 323703884.0, 92.0, 116347040.0, 674700.0, 1, 'Not Like Us', '04-05-2024', 2], [3, 'i like the way you kiss me', 'QZJ842400387', 3, 3, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, 0, 'I like the way you kiss me', '19-03-2024', 3], [4, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0, 'Flowers - Single', '12-01-2023', 4], [5, 'Houdini', 'USUG12403398', 5, 5, 423.3, 107034922.0, 88.0, 77373957.0, 16400.0, 1, 'Houdini', '31-05-2024', 5]]",SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id` ASC LIMIT 5,0,,0.0,1.0,1.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `track_id` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id` DESC LIMIT 5,3,"```json
+{
+  ""table_name"": ""tracks_albums"",
+  ""ordered_entries"": [
+    {
+      ""track_id"": 1,
+      ""title"": ""MILLION DOLLAR BABY"",
+      ""isrc"": ""QM24S2402528"",
+      ""album_id"": 1,
+      ""all_time_rank"": 1,
+      ""track_score"": 725.4,
+      ""spotify_streams"": 390470936.0,
+      ""spotify_popularity"": 92.0,
+      ""youtube_views"": 84274754.0,
+      ""tiktok_posts"": 5767700.0,
+      ""explicit_track"": 0,
+      ""album_title"": ""Million Dollar Baby - Single"",
+      ""release_date"": ""26-04-2024"",
+      ""artist_id"": 1
+    },
+    {
+      ""track_id"": 2,
+      ""title"": ""Not Like Us"",
+      ""isrc"": ""USUG12400910"",
+      ""album_id"": 2,
+      ""all_time_rank"": 2,
+      ""track_score"": 545.9,
+      ""spotify_streams"": 323703884.0,
+      ""spotify_popularity"": 92.0,
+      ""youtube_views"": 116347040.0,
+      ""tiktok_posts"": 674700.0,
+      ""explicit_track"": 1,
+      ""album_title"": ""Not Like Us"",
+      ""release_date"": ""04-05-2024"",
+      ""artist_id"": 2
+    },
+    {
+      ""track_id"": 3,
+      ""title"": ""i like the way you kiss me"",
+      ""isrc"": ""QZJ842400387"",
+      ""album_id"": 3,
+      ""all_time_rank"": 3,
+      ""track_score"": 538.4,
+      ""spotify_streams"": 601309283.0,
+      ""spotify_popularity"": 92.0,
+      ""youtube_views"": 122599116.0,
+      ""tiktok_posts"": 3025400.0,
+      ""explicit_track"": 0,
+      ""album_title"": ""I like the way you kiss me"",
+      ""release_date"": ""19-03-2024"",
+      ""artist_id"": 3
+    },
+    {
+      ""track_id"": 4,
+      ""title"": ""Flowers"",
+      ""isrc"": ""USSM12209777"",
+      ""album_id"": 4,
+      ""all_time_rank"": 4,
+      ""track_score"": 444.9,
+      ""spotify_streams"": 2031280633.0,
+      ""spotify_popularity"": 85.0,
+      ""youtube_views"": 1096100899.0,
+      ""tiktok_posts"": 7189811.0,
+      ""explicit_track"": 0,
+      ""album_title"": ""Flowers - Single"",
+      ""release_date"": ""12-01-2023"",
+      ""artist_id"": 4
+    },
+    {
+      ""track_id"": 5,
+      ""title"": ""Houdini"",
+      ""isrc"": ""USUG12403398"",
+      ""album_id"": 5,
+      ""all_time_rank"": 5,
+      ""track_score"": 423.3,
+      ""spotify_streams"": 107034922.0,
+      ""spotify_popularity"": 88.0,
+      ""youtube_views"": 77373957.0,
+      ""tiktok_posts"": 16400.0,
+      ""explicit_track"": 1,
+      ""album_title"": ""Houdini"",
+      ""release_date"": ""31-05-2024"",
+      ""artist_id"": 5
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `isrc` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[24, 'Future', 'Unknown', 24, 25, 277.5, 0, 0, 0, 9453333, 0, 24, 'Future', '10-01-2024'], [8, 'Danza Kuduro - Cover', 'Unknown', 9, 9, 355.7, 1653018119, 0, 0, 0, 1, 9, 'ýýýýýýýýý ýýýýýý ýýýýýýýýýýýý', '09-06-2024'], [11, 'The Door', 'Unknown', 12, 12, 320.2, 111155129, 0, 0, 0, 1, 12, 'THE TORTURED POETS DEPARTMENT', '14-06-2024'], [22, 'Danza Kuduro - Cover', 'Unknown', 22, 23, 279, 1655575417, 0, 0, 0, 1, 22, ""TEXAS HOLD 'EM"", '10-02-2024'], [25, 'Beat Automotivo Tan Tan Tan Viral', 'Unknown', 25, 26, 268.1, 7382759, 0, 4233958, 37621885, 0, 25, 'STAY (with Justin Bieber)', '09-07-2021']]",SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`isrc` ASC LIMIT 5,0,,0.0,0.324,0.255,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `isrc` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[26, 'STAY (with Justin Bieber)', 'Unknown', 26, 27, 266.3, 3107100349.0, 78.0, 1256973582.0, 7485966.0, 1, 26, 'ýýýýýýýýý ýýýýýý ýýýýýýýýýýýý', '01-12-2015', 26], [25, 'Beat Automotivo Tan Tan Tan Viral', 'Unknown', 25, 26, 268.1, 7382759.0, 35.0, 4233958.0, 37621885.0, 0, 25, 'STAY (with Justin Bieber)', '09-07-2021', 25], [24, 'Future', 'Unknown', 24, 25, 277.5, None, None, None, 9453333.0, 0, 24, 'Beat Automotivo Tan Tan Tan Viral', '24-05-2022', 24], [23, ""TEXAS HOLD 'EM"", 'Unknown', 23, 24, 278.9, 426700979.0, 86.0, 35724356.0, 1470500.0, 1, 23, 'Future', '10-02-2024', 23], [22, 'Danza Kuduro - Cover', 'Unknown', 22, 23, 279.0, 1655575417.0, None, None, None, 1, 22, ""TEXAS HOLD 'EM"", '10-02-2024', 22]]",SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`isrc` DESC LIMIT 5,0,,0.0,0.128,0.109,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `all_time_rank` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`all_time_rank` ASC LIMIT 5,3,"```json
+{
+  ""table_name"": ""tracks_albums"",
+  ""ordered_entries"": [
+    {
+      ""track_id"": 26,
+      ""title"": ""STAY (with Justin Bieber)"",
+      ""isrc"": ""Unknown"",
+      ""album_id"": 26,
+      ""all_time_rank"": 27,
+      ""track_score"": 266.3,
+      ""spotify_streams"": 3107100349.0,
+      ""spotify_popularity"": 78.0,
+      ""youtube_views"": 1256973582.0,
+      ""tiktok_posts"": 7485966.0,
+      ""explicit_track"": 1,
+      ""album_id_albums"": 26,
+      ""title_albums"": ""\u00fd\u00fd\u00fd\u00fd\u00fd\u00fd\u00fd\u00fd\u00fd \u00fd\u00fd\u00fd\u00fd\u00fd\u00fd \u00fd\u00fd\u00fd\u00fd\u00fd\u00fd\u00fd\u00fd\u00fd\u00fd\u00fd\u00fd"",
+      ""release_date"": ""01-12-2015"",
+      ""artist_id"": 26
+    },
+    {
+      ""track_id"": 25,
+      ""title"": ""Beat Automotivo Tan Tan Tan Viral"",
+      ""isrc"": ""Unknown"",
+      ""album_id"": 25,
+      ""all_time_rank"": 26,
+      ""track_score"": 268.1,
+      ""spotify_streams"": 7382759.0,
+      ""spotify_popularity"": 35.0,
+      ""youtube_views"": 4233958.0,
+      ""tiktok_posts"": 37621885.0,
+      ""explicit_track"": 0,
+      ""album_id_albums"": 25,
+      ""title_albums"": ""STAY (with Justin Bieber)"",
+      ""release_date"": ""09-07-2021"",
+      ""artist_id"": 25
+    },
+    {
+      ""track_id"": 24,
+      ""title"": ""Future"",
+      ""isrc"": ""Unknown"",
+      ""album_id"": 24,
+      ""all_time_rank"": 25,
+      ""track_score"": 277.5,
+      ""spotify_streams"": null,
+      ""spotify_popularity"": null,
+      ""youtube_views"": null,
+      ""tiktok_posts"": 9453333.0,
+      ""explicit_track"": 0,
+      ""album_id_albums"": 24,
+      ""title_albums"": ""Beat Automotivo Tan Tan Tan Viral"",
+      ""release_date"": ""24-05-2022"",
+      ""artist_id"": 24
+    },
+    {
+      ""track_id"": 23,
+      ""title"": ""TEXAS HOLD 'EM"",
+      ""isrc"": ""Unknown"",
+      ""album_id"": 23,
+      ""all_time_rank"": 24,
+      ""track_score"": 278.9,
+      ""spotify_streams"": 426700979.0,
+      ""spotify_popularity"": 86.0,
+      ""youtube_views"": 35724356.0,
+      ""tiktok_posts"": 1470500.0,
+      ""explicit_track"": 1,
+      ""album_id_albums"": 23,
+      ""title_albums"": ""Future"",
+      ""release_date"": ""10-02-2024"",
+      ""artist_id"": 23
+    },
+    {
+      ""track_id"": 22,
+      ""title"": ""Danza Kuduro - Cover"",
+      ""isrc"": ""Unknown"",
+      ""album_id"": 22,
+      ""all_time_rank"": 23,
+      ""track_score"": 279.0,
+      ""spotify_streams"": 1655575417.0,
+      ""spotify_popularity"": null,
+      ""youtube_views"": null,
+      ""tiktok_posts"": null,
+      ""explicit_track"": 1,
+      ""album_id_albums"": 22,
+      ""title_albums"": ""TEXAS HOLD 'EM"",
+      ""release_date"": ""10-02-2024"",
+      ""artist_id"": 22
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `all_time_rank` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[19, 'As It Was', 'USSM12200612', 19, 1, 292.0, 3301814535.0, 87.0, 800899315.0, 2755903.0, 0, 19, '31-03-2022'], [3, 'Flowers', 'USSM12209777', 4, 2, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0, 4, '12-01-2023'], [0, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 3, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, 0, 1, '26-04-2024'], [2, 'i like the way you kiss me', 'QZJ842400387', 3, 4, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, 0, 3, '19-03-2024'], [1, 'Not Like Us', 'USUG12400910', 2, 5, 545.9, 323703884.0, 92.0, 116347040.0, 674700.0, 1, 2, '04-05-2024']]",SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`all_time_rank` DESC LIMIT 5,0,,0.0,0.044,0.044,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `youtube_views` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[0, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 1, 725.4, 390470936.0, 92.0, 0, 5767700.0, 0, 'Million Dollar Baby - Single', '26-04-2024', 1], [1, 'Not Like Us', 'USUG12400910', 2, 2, 545.9, 323703884.0, 92.0, 0, 674700.0, 1, 'Not Like Us', '04-05-2024', 2], [2, 'i like the way you kiss me', 'QZJ842400387', 3, 3, 538.4, 601309283.0, 92.0, 0, 3025400.0, 0, 'I like the way you kiss me', '19-03-2024', 3], [3, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 0, 7189811.0, 0, 'Flowers - Single', '12-01-2023', 4], [4, 'Houdini', 'USUG12403398', 5, 5, 423.3, 107034922.0, 88.0, 0, 16400.0, 1, 'Houdini', '31-05-2024', 5]]",SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`youtube_views` ASC LIMIT 5,0,,0.0,0.048,0.051,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `youtube_views` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`youtube_views` DESC LIMIT 5,3,"```json
+{
+  ""table_name"": ""tracks_albums"",
+  ""ordered_entries"": [
+    {
+      ""track_id"": 0,
+      ""title"": ""MILLION DOLLAR BABY"",
+      ""isrc"": ""QM24S2402528"",
+      ""album_id"": 1,
+      ""all_time_rank"": 1,
+      ""track_score"": 725.4,
+      ""spotify_streams"": 390470936.0,
+      ""spotify_popularity"": 92.0,
+      ""youtube_views"": 0,
+      ""tiktok_posts"": 5767700.0,
+      ""explicit_track"": 0,
+      ""album_title"": ""Million Dollar Baby - Single"",
+      ""release_date"": ""26-04-2024"",
+      ""artist_id"": 1
+    },
+    {
+      ""track_id"": 1,
+      ""title"": ""Not Like Us"",
+      ""isrc"": ""USUG12400910"",
+      ""album_id"": 2,
+      ""all_time_rank"": 2,
+      ""track_score"": 545.9,
+      ""spotify_streams"": 323703884.0,
+      ""spotify_popularity"": 92.0,
+      ""youtube_views"": 0,
+      ""tiktok_posts"": 674700.0,
+      ""explicit_track"": 1,
+      ""album_title"": ""Not Like Us"",
+      ""release_date"": ""04-05-2024"",
+      ""artist_id"": 2
+    },
+    {
+      ""track_id"": 2,
+      ""title"": ""i like the way you kiss me"",
+      ""isrc"": ""QZJ842400387"",
+      ""album_id"": 3,
+      ""all_time_rank"": 3,
+      ""track_score"": 538.4,
+      ""spotify_streams"": 601309283.0,
+      ""spotify_popularity"": 92.0,
+      ""youtube_views"": 0,
+      ""tiktok_posts"": 3025400.0,
+      ""explicit_track"": 0,
+      ""album_title"": ""I like the way you kiss me"",
+      ""release_date"": ""19-03-2024"",
+      ""artist_id"": 3
+    },
+    {
+      ""track_id"": 3,
+      ""title"": ""Flowers"",
+      ""isrc"": ""USSM12209777"",
+      ""album_id"": 4,
+      ""all_time_rank"": 4,
+      ""track_score"": 444.9,
+      ""spotify_streams"": 2031280633.0,
+      ""spotify_popularity"": 85.0,
+      ""youtube_views"": 0,
+      ""tiktok_posts"": 7189811.0,
+      ""explicit_track"": 0,
+      ""album_title"": ""Flowers - Single"",
+      ""release_date"": ""12-01-2023"",
+      ""artist_id"": 4
+    },
+    {
+      ""track_id"": 4,
+      ""title"": ""Houdini"",
+      ""isrc"": ""USUG12403398"",
+      ""album_id"": 5,
+      ""all_time_rank"": 5,
+      ""track_score"": 423.3,
+      ""spotify_streams"": 107034922.0,
+      ""spotify_popularity"": 88.0,
+      ""youtube_views"": 0,
+      ""tiktok_posts"": 16400.0,
+      ""explicit_track"": 1,
+      ""album_title"": ""Houdini"",
+      ""release_date"": ""31-05-2024"",
+      ""artist_id"": 5
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `album_id` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[3, 'Flowers', 'USSM12209777', 3, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0, 4, '12-01-2023'], [4, 'Houdini', 'USUG12403398', 4, 5, 423.3, 107034922.0, 88.0, 77373957.0, 16400.0, 1, 5, '31-05-2024'], [5, 'Lovin On Me', 'USAT22311371', 5, 6, 410.1, 670665438.0, 83.0, 131148091.0, 4202367.0, 1, 6, '10-11-2023'], [6, 'Beautiful Things', 'USWB12307016', 6, 7, 407.2, 900158751.0, 86.0, 308723145.0, None, 0, 7, '18-01-2024'], [7, 'Gata Only', 'QZL382406049', 7, 8, 375.8, 675079153.0, 92.0, 228382568.0, 3500000.0, 1, 8, '02-02-2024']]",SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`album_id` ASC LIMIT 5,1,,0.0,0.458,0.468,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-LIMIT,"Join all records from table `tracks` with table `albums` on column `album_id`, then list the top 5 rows sorted by `album_id` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[26, 'STAY (with Justin Bieber)', 'USSM12103949', 25, 27, 266.3, 3107100349.0, 78.0, 1256973582.0, 7485966.0, 1, 'STAY (with Justin Bieber)', '09-07-2021'], [25, 'Beat Automotivo Tan Tan Tan Viral', 'BXWEH2200054', 24, 25, 268.1, 7382759.0, 35.0, 4233958.0, 37621885.0, 0, 'Beat Automotivo Tan Tan Tan Viral', '24-05-2022'], [24, 'Future', 'RUA1H2415548', 23, 24, 277.5, None, None, None, 9453333.0, 0, 'Future', '10-01-2024'], [23, ""TEXAS HOLD 'EM"", 'USSM12401302', 22, 23, 278.9, 426700979.0, 86.0, 35724356.0, 1470500.0, 1, ""TEXAS HOLD 'EM"", '10-02-2024'], [22, 'Danza Kuduro - Cover', 'TCJPA2445163', 21, 22, 279.0, 1655575417.0, None, None, None, 1, 'Espresso', '21-05-2024']]",SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`album_id` DESC LIMIT 5,0,,0.0,0.956,0.956,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-SINGLE-COL,"Join `tracks` and `albums` on `album_id`, select only the column `isrc`, sort it in ascending order, and return the top 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT T1.`isrc` FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`isrc` ASC LIMIT 5,3,"```json
+{
+  ""table_name"": ""tracks_albums"",
+  ""ordered_entries"": [
+    {
+      ""track_id"": 26,
+      ""title"": ""STAY (with Justin Bieber)"",
+      ""isrc"": ""USSM12103949"",
+      ""album_id"": 25,
+      ""all_time_rank"": 27,
+      ""track_score"": 266.3,
+      ""spotify_streams"": 3107100349.0,
+      ""spotify_popularity"": 78.0,
+      ""youtube_views"": 1256973582.0,
+      ""tiktok_posts"": 7485966.0,
+      ""explicit_track"": 1,
+      ""album_title"": ""STAY (with Justin Bieber)"",
+      ""release_date"": ""09-07-2021""
+    },
+    {
+      ""track_id"": 25,
+      ""title"": ""Beat Automotivo Tan Tan Tan Viral"",
+      ""isrc"": ""BXWEH2200054"",
+      ""album_id"": 24,
+      ""all_time_rank"": 25,
+      ""track_score"": 268.1,
+      ""spotify_streams"": 7382759.0,
+      ""spotify_popularity"": 35.0,
+      ""youtube_views"": 4233958.0,
+      ""tiktok_posts"": 37621885.0,
+      ""explicit_track"": 0,
+      ""album_title"": ""Beat Automotivo Tan Tan Tan Viral"",
+      ""release_date"": ""24-05-2022""
+    },
+    {
+      ""track_id"": 24,
+      ""title"": ""Future"",
+      ""isrc"": ""RUA1H2415548"",
+      ""album_id"": 23,
+      ""all_time_rank"": 24,
+      ""track_score"": 277.5,
+      ""spotify_streams"": null,
+      ""spotify_popularity"": null,
+      ""youtube_views"": null,
+      ""tiktok_posts"": 9453333.0,
+      ""explicit_track"": 0,
+      ""album_title"": ""Future"",
+      ""release_date"": ""10-01-2024""
+    },
+    {
+      ""track_id"": 23,
+      ""title"": ""TEXAS HOLD 'EM"",
+      ""isrc"": ""USSM12401302"",
+      ""album_id"": 22,
+      ""all_time_rank"": 23,
+      ""track_score"": 278.9,
+      ""spotify_streams"": 426700979.0,
+      ""spotify_popularity"": 86.0,
+      ""youtube_views"": 35724356.0,
+      ""tiktok_posts"": 1470500.0,
+      ""explicit_track"": 1,
+      ""album_title"": ""TEXAS HOLD 'EM"",
+      ""release_date"": ""10-02-2024""
+    },
+    {
+      ""track_id"": 22,
+      ""title"": ""Danza Kuduro - Cover"",
+      ""isrc"": ""TCJPA2445163"",
+      ""album_id"": 21,
+      ""all_time_rank"": 22,
+      ""track_score"": 279.0,
+      ""spotify_streams"": 1655575417.0,
+      ""spotify_popularity"": null,
+      ""youtube_views"": null,
+      ""tiktok_posts"": null,
+      ""explicit_track"": 1,
+      ""album_title"": ""Espresso"",
+      ""release_date"": ""21-05-2024""
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-SINGLE-COL,"Join `tracks` and `albums` on `album_id`, select only the column `isrc`, sort it in descending order, and return the top 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown']]",SELECT T1.`isrc` FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`isrc` DESC LIMIT 5,1,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-SINGLE-COL,"Join `tracks` and `albums` on `album_id`, select only the column `track_id`, sort it in ascending order, and return the top 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1], [2], [3], [4], [5]]",SELECT T1.`track_id` FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-SINGLE-COL,"Join `tracks` and `albums` on `album_id`, select only the column `track_id`, sort it in descending order, and return the top 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT T1.`track_id` FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id` DESC LIMIT 5,3,"```json
+{
+  ""table_name"": ""tracks"",
+  ""ordered_entries"": [
+    {
+      ""track_id"": 1
+    },
+    {
+      ""track_id"": 2
+    },
+    {
+      ""track_id"": 3
+    },
+    {
+      ""track_id"": 4
+    },
+    {
+      ""track_id"": 5
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-SINGLE-COL,"Join `tracks` and `albums` on `album_id`, select only the column `album_id`, sort it in ascending order, and return the top 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1], [2], [3], [4], [5]]",SELECT T1.`album_id` FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`album_id` ASC LIMIT 5,1,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-SINGLE-COL,"Join `tracks` and `albums` on `album_id`, select only the column `album_id`, sort it in descending order, and return the top 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[9], [9], [9], [12], [12]]",SELECT T1.`album_id` FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`album_id` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-SINGLE-COL,"Join `tracks` and `albums` on `album_id`, select only the column `track_score`, sort it in ascending order, and return the top 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT T1.`track_score` FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_score` ASC LIMIT 5,3,"```json
+{
+  ""table_name"": ""tracks_and_albums"",
+  ""ordered_entries"": [
+    {
+      ""album_id"": 9
+    },
+    {
+      ""album_id"": 9
+    },
+    {
+      ""album_id"": 9
+    },
+    {
+      ""album_id"": 12
+    },
+    {
+      ""album_id"": 12
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-SINGLE-COL,"Join `tracks` and `albums` on `album_id`, select only the column `track_score`, sort it in descending order, and return the top 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[0], [0], [0], [0], [0]]",SELECT T1.`track_score` FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_score` DESC LIMIT 5,1,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-SINGLE-COL,"Join `tracks` and `albums` on `album_id`, select only the column `tiktok_posts`, sort it in ascending order, and return the top 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[0], [0], [0], [0], [0]]",SELECT T1.`tiktok_posts` FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`tiktok_posts` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-SINGLE-COL,"Join `tracks` and `albums` on `album_id`, select only the column `tiktok_posts`, sort it in descending order, and return the top 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT T1.`tiktok_posts` FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`tiktok_posts` DESC LIMIT 5,3,"```json
+{
+  ""table_name"": ""tracks"",
+  ""ordered_entries"": [
+    {
+      ""tiktok_posts"": 0
+    },
+    {
+      ""tiktok_posts"": 0
+    },
+    {
+      ""tiktok_posts"": 0
+    },
+    {
+      ""tiktok_posts"": 0
+    },
+    {
+      ""tiktok_posts"": 0
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns track_id, track_score, youtube_views, tiktok_posts, explicit_track in ascending order, and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[14, 'bathroom floor', 'NLC242100307', 15, 15, 301.6, 297185.0, 12.0, 6736502312.0, 3.0, 0, 15, '07-10-2022'], [25, 'Beat Automotivo Tan Tan Tan Viral', 'BXWEH2200054', 25, 25, 268.1, 7382759.0, 35.0, 4233958.0, 37621885.0, 0, 24, '24-05-2022'], [24, 'Future', 'RUA1H2415548', 24, 24, 277.5, 0.0, 0.0, 0.0, 9453333.0, 0, 23, '10-01-2024'], [11, 'The Door', 'USWB12402486', 12, 12, 320.2, 111155129.0, 0.0, 0.0, 0.0, 1, 12, '14-06-2024'], [8, 'Danza Kuduro - Cover', 'TCJPA2463708', 9, 9, 355.7, 1653018119.0, 0.0, 0.0, 0.0, 1, 9, '09-06-2024']]","SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id`, T1.`track_score`, T1.`youtube_views`, T1.`tiktok_posts`, T1.`explicit_track` ASC LIMIT 5",1,,0.0,0.073,0.064,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns track_id, track_score, youtube_views, tiktok_posts, explicit_track in descending order, and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[26, 'STAY (with Justin Bieber)', 'USSM12103949', 26, 27, 266.3, 3107100349.0, 78.0, 1256973582.0, 7485966.0, 1, 26, '01-12-2015'], [25, 'Beat Automotivo Tan Tan Tan Viral', 'BXWEH2200054', 25, 26, 268.1, 7382759.0, 35.0, 4233958.0, 37621885.0, 0, 25, '09-07-2021'], [24, 'Future', 'RUA1H2415548', 24, 25, 277.5, 0.0, 0.0, 0.0, 9453333.0, 0, 24, '24-05-2022'], [23, ""TEXAS HOLD 'EM"", 'USSM12401302', 23, 24, 278.9, 426700979.0, 86.0, 35724356.0, 1470500.0, 1, 23, '10-01-2024'], [22, 'Danza Kuduro - Cover', 'TCJPA2445163', 22, 23, 279.0, 1655575417.0, 0.0, 0.0, 0.0, 1, 22, '10-02-2024']]","SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id`, T1.`track_score`, T1.`youtube_views`, T1.`tiktok_posts`, T1.`explicit_track` DESC LIMIT 5",0,,0.0,0.048,0.043,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns track_id, album_id, all_time_rank, track_score, spotify_streams, spotify_popularity, tiktok_posts, explicit_track in ascending order, and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],"SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id`, T1.`album_id`, T1.`all_time_rank`, T1.`track_score`, T1.`spotify_streams`, T1.`spotify_popularity`, T1.`tiktok_posts`, T1.`explicit_track` ASC LIMIT 5",3,"```json
+{
+  ""table_name"": ""tracks_albums"",
+  ""ordered_entries"": [
+    {
+      ""track_id"": 26,
+      ""title"": ""STAY (with Justin Bieber)"",
+      ""isrc"": ""USSM12103949"",
+      ""album_id"": 26,
+      ""all_time_rank"": 27,
+      ""track_score"": 266.3,
+      ""spotify_streams"": 3107100349.0,
+      ""spotify_popularity"": 78.0,
+      ""youtube_views"": 1256973582.0,
+      ""tiktok_posts"": 7485966.0,
+      ""explicit_track"": 1,
+      ""artist_id"": 26,
+      ""release_date (dd-mm-yyyy)"": ""01-12-2015""
+    },
+    {
+      ""track_id"": 25,
+      ""title"": ""Beat Automotivo Tan Tan Tan Viral"",
+      ""isrc"": ""BXWEH2200054"",
+      ""album_id"": 25,
+      ""all_time_rank"": 26,
+      ""track_score"": 268.1,
+      ""spotify_streams"": 7382759.0,
+      ""spotify_popularity"": 35.0,
+      ""youtube_views"": 4233958.0,
+      ""tiktok_posts"": 37621885.0,
+      ""explicit_track"": 0,
+      ""artist_id"": 25,
+      ""release_date (dd-mm-yyyy)"": ""09-07-2021""
+    },
+    {
+      ""track_id"": 24,
+      ""title"": ""Future"",
+      ""isrc"": ""RUA1H2415548"",
+      ""album_id"": 24,
+      ""all_time_rank"": 25,
+      ""track_score"": 277.5,
+      ""spotify_streams"": 0.0,
+      ""spotify_popularity"": 0.0,
+      ""youtube_views"": 0.0,
+      ""tiktok_posts"": 9453333.0,
+      ""explicit_track"": 0,
+      ""artist_id"": 24,
+      ""release_date (dd-mm-yyyy)"": ""24-05-2022""
+    },
+    {
+      ""track_id"": 23,
+      ""title"": ""TEXAS HOLD 'EM"",
+      ""isrc"": ""USSM12401302"",
+      ""album_id"": 23,
+      ""all_time_rank"": 24,
+      ""track_score"": 278.9,
+      ""spotify_streams"": 426700979.0,
+      ""spotify_popularity"": 86.0,
+      ""youtube_views"": 35724356.0,
+      ""tiktok_posts"": 1470500.0,
+      ""explicit_track"": 1,
+      ""artist_id"": 23,
+      ""release_date (dd-mm-yyyy)"": ""10-01-2024""
+    },
+    {
+      ""track_id"": 22,
+      ""title"": ""Danza Kuduro - Cover"",
+      ""isrc"": ""TCJPA2445163"",
+      ""album_id"": 22,
+      ""all_time_rank"": 23,
+      ""track_score"": 279.0,
+      ""spotify_streams"": 1655575417.0,
+      ""spotify_popularity"": 0.0,
+      ""youtube_views"": 0.0,
+      ""tiktok_posts"": 0.0,
+      ""explicit_track"": 1,
+      ""artist_id"": 22,
+      ""release_date (dd-mm-yyyy)"": ""10-02-2024""
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns track_id, album_id, all_time_rank, track_score, spotify_streams, spotify_popularity, tiktok_posts, explicit_track in descending order, and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[26, 'STAY (with Justin Bieber)', 'USSM12103949', 26, 27, 266.3, 3107100349.0, 78.0, 1256973582.0, 7485966.0, 1, 26, '01-12-2015'], [25, 'Beat Automotivo Tan Tan Tan Viral', 'BXWEH2200054', 25, 26, 268.1, 7382759.0, 35.0, 4233958.0, 37621885.0, 0, 25, '09-07-2021'], [24, 'Future', 'RUA1H2415548', 24, 25, 277.5, 1000000.0, 50.0, 1000000.0, 9453333.0, 0, 24, '24-05-2022'], [23, ""TEXAS HOLD 'EM"", 'USSM12401302', 23, 24, 278.9, 426700979.0, 86.0, 35724356.0, 1470500.0, 1, 23, '10-01-2024'], [22, 'Danza Kuduro - Cover', 'TCJPA2445163', 22, 23, 279.0, 1655575417.0, 50.0, 1000000.0, 1000000.0, 1, 22, '10-02-2024']]","SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id`, T1.`album_id`, T1.`all_time_rank`, T1.`track_score`, T1.`spotify_streams`, T1.`spotify_popularity`, T1.`tiktok_posts`, T1.`explicit_track` DESC LIMIT 5",1,,0.0,0.045,0.043,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns album_id, spotify_streams, spotify_popularity, youtube_views, tiktok_posts in ascending order, and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[14, 'bathroom floor', 'NLC242100307', 14, 15, 301.6, 297185.0, 12.0, 6736502312.0, 3.0, 0, 15, '07-10-2022'], [25, 'Beat Automotivo Tan Tan Tan Viral', 'BXWEH2200054', 24, 25, 268.1, 7382759.0, 35.0, 4233958.0, 37621885.0, 0, 24, '24-05-2022'], [24, 'Future', 'RUA1H2415548', 23, 24, 277.5, None, None, None, 9453333.0, 0, 23, '10-01-2024'], [11, 'The Door', 'USWB12402486', 11, 12, 320.2, 111155129.0, None, None, None, 1, 12, '14-06-2024'], [10, 'I Had Some Help (feat. Morgan Wallen)', 'USUM72404990', 10, 11, 322.1, 250080413.0, 91.0, 32229063.0, None, 1, 11, '10-05-2024']]","SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`album_id`, T1.`spotify_streams`, T1.`spotify_popularity`, T1.`youtube_views`, T1.`tiktok_posts` ASC LIMIT 5",0,,0.0,0.07,0.064,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns album_id, spotify_streams, spotify_popularity, youtube_views, tiktok_posts in descending order, and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],"SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`album_id`, T1.`spotify_streams`, T1.`spotify_popularity`, T1.`youtube_views`, T1.`tiktok_posts` DESC LIMIT 5",3,"```json
+{
+  ""table_name"": ""tracks_albums"",
+  ""ordered_entries"": [
+    {
+      ""track_id"": 14,
+      ""title"": ""bathroom floor"",
+      ""isrc"": ""NLC242100307"",
+      ""album_id"": 14,
+      ""all_time_rank"": 15,
+      ""track_score"": 301.6,
+      ""spotify_streams"": 297185.0,
+      ""spotify_popularity"": 12.0,
+      ""youtube_views"": 6736502312.0,
+      ""tiktok_posts"": 3.0,
+      ""explicit_track"": 0,
+      ""artist_id"": 15,
+      ""release_date (dd-mm-yyyy)"": ""07-10-2022""
+    },
+    {
+      ""track_id"": 25,
+      ""title"": ""Beat Automotivo Tan Tan Tan Viral"",
+      ""isrc"": ""BXWEH2200054"",
+      ""album_id"": 24,
+      ""all_time_rank"": 25,
+      ""track_score"": 268.1,
+      ""spotify_streams"": 7382759.0,
+      ""spotify_popularity"": 35.0,
+      ""youtube_views"": 4233958.0,
+      ""tiktok_posts"": 37621885.0,
+      ""explicit_track"": 0,
+      ""artist_id"": 24,
+      ""release_date (dd-mm-yyyy)"": ""24-05-2022""
+    },
+    {
+      ""track_id"": 24,
+      ""title"": ""Future"",
+      ""isrc"": ""RUA1H2415548"",
+      ""album_id"": 23,
+      ""all_time_rank"": 24,
+      ""track_score"": 277.5,
+      ""spotify_streams"": null,
+      ""spotify_popularity"": null,
+      ""youtube_views"": null,
+      ""tiktok_posts"": 9453333.0,
+      ""explicit_track"": 0,
+      ""artist_id"": 23,
+      ""release_date (dd-mm-yyyy)"": ""10-01-2024""
+    },
+    {
+      ""track_id"": 11,
+      ""title"": ""The Door"",
+      ""isrc"": ""USWB12402486"",
+      ""album_id"": 11,
+      ""all_time_rank"": 12,
+      ""track_score"": 320.2,
+      ""spotify_streams"": 111155129.0,
+      ""spotify_popularity"": null,
+      ""youtube_views"": null,
+      ""tiktok_posts"": null,
+      ""explicit_track"": 1,
+      ""artist_id"": 12,
+      ""release_date (dd-mm-yyyy)"": ""14-06-2024""
+    },
+    {
+      ""track_id"": 10,
+      ""title"": ""I Had Some Help (feat. Morgan Wallen)"",
+      ""isrc"": ""USUM72404990"",
+      ""album_id"": 10,
+      ""all_time_rank"": 11,
+      ""track_score"": 322.1,
+      ""spotify_streams"": 250080413.0,
+      ""spotify_popularity"": 91.0,
+      ""youtube_views"": 32229063.0,
+      ""tiktok_posts"": null,
+      ""explicit_track"": 1,
+      ""artist_id"": 11,
+      ""release_date (dd-mm-yyyy)"": ""10-05-2024""
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns track_id, track_score, spotify_streams, youtube_views, tiktok_posts in ascending order, and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 1, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, 0, 'Million Dollar Baby - Single', '26-04-2024', 1], [2, 'Not Like Us', 'USUG12400910', 2, 2, 545.9, 323703884.0, 92.0, 116347040.0, 674700.0, 1, 'Not Like Us', '04-05-2024', 2], [3, 'i like the way you kiss me', 'QZJ842400387', 3, 3, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, 0, 'I like the way you kiss me', '19-03-2024', 3], [4, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0, 'Flowers - Single', '12-01-2023', 4], [5, 'Houdini', 'USUG12403398', 5, 5, 423.3, 107034922.0, 88.0, 77373957.0, 16400.0, 1, 'Houdini', '31-05-2024', 5]]","SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id`, T1.`track_score`, T1.`spotify_streams`, T1.`youtube_views`, T1.`tiktok_posts` ASC LIMIT 5",0,,0.0,1.0,1.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns track_id, track_score, spotify_streams, youtube_views, tiktok_posts in descending order, and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[19, 'As It Was', 'USSM12200612', 19, 20, 292.0, 3301814535.0, 87.0, 800899315.0, 2755903.0, 0, 19, '31-03-2022'], [3, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0, 4, '12-01-2023'], [20, 'Paint The Town Red', 'USRC12300907', 20, 21, 290.5, 1065399331.0, 78.0, 240970670.0, 3091732.0, 1, 20, '04-08-2023'], [21, 'Espresso', 'USUM72403305', 21, 22, 281.5, 547882871.0, 95.0, 107550212.0, 209200.0, 1, 21, '12-04-2024'], [17, 'greedy', 'USRC12301932', 18, 18, 293.7, 1258569694.0, 87.0, 141646818.0, 2294429.0, 1, 18, '14-09-2023']]","SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id`, T1.`track_score`, T1.`spotify_streams`, T1.`youtube_views`, T1.`tiktok_posts` DESC LIMIT 5",1,,0.0,0.245,0.255,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns all_time_rank, track_score, spotify_streams, spotify_popularity in ascending order, and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],"SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`all_time_rank`, T1.`track_score`, T1.`spotify_streams`, T1.`spotify_popularity` ASC LIMIT 5",3,"```json
+{
+  ""table_name"": ""tracks_and_albums"",
+  ""ordered_entries"": [
+    {
+      ""track_id"": 19,
+      ""title"": ""As It Was"",
+      ""isrc"": ""USSM12200612"",
+      ""album_id"": 19,
+      ""all_time_rank"": 20,
+      ""track_score"": 292.0,
+      ""spotify_streams"": 3301814535.0,
+      ""spotify_popularity"": 87.0,
+      ""youtube_views"": 800899315.0,
+      ""tiktok_posts"": 2755903.0,
+      ""explicit_track"": 0,
+      ""artist_id"": 19,
+      ""release_date (dd-mm-yyyy)"": ""31-03-2022""
+    },
+    {
+      ""track_id"": 3,
+      ""title"": ""Flowers"",
+      ""isrc"": ""USSM12209777"",
+      ""album_id"": 4,
+      ""all_time_rank"": 4,
+      ""track_score"": 444.9,
+      ""spotify_streams"": 2031280633.0,
+      ""spotify_popularity"": 85.0,
+      ""youtube_views"": 1096100899.0,
+      ""tiktok_posts"": 7189811.0,
+      ""explicit_track"": 0,
+      ""artist_id"": 4,
+      ""release_date (dd-mm-yyyy)"": ""12-01-2023""
+    },
+    {
+      ""track_id"": 20,
+      ""title"": ""Paint The Town Red"",
+      ""isrc"": ""USRC12300907"",
+      ""album_id"": 20,
+      ""all_time_rank"": 21,
+      ""track_score"": 290.5,
+      ""spotify_streams"": 1065399331.0,
+      ""spotify_popularity"": 78.0,
+      ""youtube_views"": 240970670.0,
+      ""tiktok_posts"": 3091732.0,
+      ""explicit_track"": 1,
+      ""artist_id"": 20,
+      ""release_date (dd-mm-yyyy)"": ""04-08-2023""
+    },
+    {
+      ""track_id"": 21,
+      ""title"": ""Espresso"",
+      ""isrc"": ""USUM72403305"",
+      ""album_id"": 21,
+      ""all_time_rank"": 22,
+      ""track_score"": 281.5,
+      ""spotify_streams"": 547882871.0,
+      ""spotify_popularity"": 95.0,
+      ""youtube_views"": 107550212.0,
+      ""tiktok_posts"": 209200.0,
+      ""explicit_track"": 1,
+      ""artist_id"": 21,
+      ""release_date (dd-mm-yyyy)"": ""12-04-2024""
+    },
+    {
+      ""track_id"": 17,
+      ""title"": ""greedy"",
+      ""isrc"": ""USRC12301932"",
+      ""album_id"": 18,
+      ""all_time_rank"": 18,
+      ""track_score"": 293.7,
+      ""spotify_streams"": 1258569694.0,
+      ""spotify_popularity"": 87.0,
+      ""youtube_views"": 141646818.0,
+      ""tiktok_posts"": 2294429.0,
+      ""explicit_track"": 1,
+      ""artist_id"": 18,
+      ""release_date (dd-mm-yyyy)"": ""14-09-2023""
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns all_time_rank, track_score, spotify_streams, spotify_popularity in descending order, and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[3, 'Flowers', 'USSM12209777', 4, 1, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0, 'Flowers - Single', '12-01-2023', 4], [19, 'As It Was', 'USSM12200612', 19, 2, 292.0, 3301814535.0, 87.0, 800899315.0, 2755903.0, 0, 'As It Was', '31-03-2022', 19], [26, 'STAY (with Justin Bieber)', 'USSM12103949', 26, 3, 266.3, 3107100349.0, 78.0, 1256973582.0, 7485966.0, 1, '', '09-07-2021', 25], [20, 'Paint The Town Red', 'USRC12300907', 20, 4, 290.5, 1065399331.0, 78.0, 240970670.0, 3091732.0, 1, 'Paint The Town Red', '04-08-2023', 20], [2, 'i like the way you kiss me', 'QZJ842400387', 3, 5, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, 0, 'I like the way you kiss me', '19-03-2024', 3]]","SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`all_time_rank`, T1.`track_score`, T1.`spotify_streams`, T1.`spotify_popularity` DESC LIMIT 5",0,,0.0,0.462,0.511,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns track_id, album_id, spotify_streams, spotify_popularity, youtube_views in ascending order, and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 1, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, 0, 'Million Dollar Baby - Single', '26-04-2024', 1], [2, 'Not Like Us', 'USUG12400910', 2, 2, 545.9, 323703884.0, 92.0, 116347040.0, 674700.0, 1, 'Not Like Us', '04-05-2024', 2], [3, 'i like the way you kiss me', 'QZJ842400387', 3, 3, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, 0, 'I like the way you kiss me', '19-03-2024', 3], [4, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0, 'Flowers - Single', '12-01-2023', 4], [5, 'Houdini', 'USUG12403398', 5, 5, 423.3, 107034922.0, 88.0, 77373957.0, 16400.0, 1, 'Houdini', '31-05-2024', 5]]","SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id`, T1.`album_id`, T1.`spotify_streams`, T1.`spotify_popularity`, T1.`youtube_views` ASC LIMIT 5",1,,0.0,1.0,1.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns track_id, album_id, spotify_streams, spotify_popularity, youtube_views in descending order, and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],"SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id`, T1.`album_id`, T1.`spotify_streams`, T1.`spotify_popularity`, T1.`youtube_views` DESC LIMIT 5",3,"```json
+{
+  ""table_name"": ""tracks_albums"",
+  ""ordered_entries"": [
+    {
+      ""track_id"": 1,
+      ""title"": ""MILLION DOLLAR BABY"",
+      ""isrc"": ""QM24S2402528"",
+      ""album_id"": 1,
+      ""all_time_rank"": 1,
+      ""track_score"": 725.4,
+      ""spotify_streams"": 390470936.0,
+      ""spotify_popularity"": 92.0,
+      ""youtube_views"": 84274754.0,
+      ""tiktok_posts"": 5767700.0,
+      ""explicit_track"": 0,
+      ""album_title"": ""Million Dollar Baby - Single"",
+      ""release_date"": ""26-04-2024"",
+      ""artist_id"": 1
+    },
+    {
+      ""track_id"": 2,
+      ""title"": ""Not Like Us"",
+      ""isrc"": ""USUG12400910"",
+      ""album_id"": 2,
+      ""all_time_rank"": 2,
+      ""track_score"": 545.9,
+      ""spotify_streams"": 323703884.0,
+      ""spotify_popularity"": 92.0,
+      ""youtube_views"": 116347040.0,
+      ""tiktok_posts"": 674700.0,
+      ""explicit_track"": 1,
+      ""album_title"": ""Not Like Us"",
+      ""release_date"": ""04-05-2024"",
+      ""artist_id"": 2
+    },
+    {
+      ""track_id"": 3,
+      ""title"": ""i like the way you kiss me"",
+      ""isrc"": ""QZJ842400387"",
+      ""album_id"": 3,
+      ""all_time_rank"": 3,
+      ""track_score"": 538.4,
+      ""spotify_streams"": 601309283.0,
+      ""spotify_popularity"": 92.0,
+      ""youtube_views"": 122599116.0,
+      ""tiktok_posts"": 3025400.0,
+      ""explicit_track"": 0,
+      ""album_title"": ""I like the way you kiss me"",
+      ""release_date"": ""19-03-2024"",
+      ""artist_id"": 3
+    },
+    {
+      ""track_id"": 4,
+      ""title"": ""Flowers"",
+      ""isrc"": ""USSM12209777"",
+      ""album_id"": 4,
+      ""all_time_rank"": 4,
+      ""track_score"": 444.9,
+      ""spotify_streams"": 2031280633.0,
+      ""spotify_popularity"": 85.0,
+      ""youtube_views"": 1096100899.0,
+      ""tiktok_posts"": 7189811.0,
+      ""explicit_track"": 0,
+      ""album_title"": ""Flowers - Single"",
+      ""release_date"": ""12-01-2023"",
+      ""artist_id"": 4
+    },
+    {
+      ""track_id"": 5,
+      ""title"": ""Houdini"",
+      ""isrc"": ""USUG12403398"",
+      ""album_id"": 5,
+      ""all_time_rank"": 5,
+      ""track_score"": 423.3,
+      ""spotify_streams"": 107034922.0,
+      ""spotify_popularity"": 88.0,
+      ""youtube_views"": 77373957.0,
+      ""tiktok_posts"": 16400.0,
+      ""explicit_track"": 1,
+      ""album_title"": ""Houdini"",
+      ""release_date"": ""31-05-2024"",
+      ""artist_id"": 5
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns track_id, album_id, track_score, spotify_streams, spotify_popularity, tiktok_posts, explicit_track in ascending order, and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 1, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, 0, 1, '26-04-2024'], [2, 'Not Like Us', 'USUG12400910', 2, 2, 545.9, 323703884.0, 92.0, 116347040.0, 674700.0, 1, 2, '04-05-2024'], [3, 'i like the way you kiss me', 'QZJ842400387', 3, 3, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, 0, 3, '19-03-2024'], [4, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0, 4, '12-01-2023'], [5, 'Houdini', 'USUG12403398', 5, 5, 423.3, 107034922.0, 88.0, 77373957.0, 16400.0, 1, 5, '31-05-2024']]","SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id`, T1.`album_id`, T1.`track_score`, T1.`spotify_streams`, T1.`spotify_popularity`, T1.`tiktok_posts`, T1.`explicit_track` ASC LIMIT 5",0,,0.0,1.0,0.936,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns track_id, album_id, track_score, spotify_streams, spotify_popularity, tiktok_posts, explicit_track in descending order, and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[26, 'STAY (with Justin Bieber)', 'USSM12103949', 26, 27, 266.3, 3107100349.0, 78.0, 1256973582.0, 7485966.0, 1, 26, '01-12-2015'], [25, 'Beat Automotivo Tan Tan Tan Viral', 'BXWEH2200054', 25, 26, 268.1, 7382759.0, 35.0, 4233958.0, 37621885.0, 0, 25, '09-07-2021'], [24, 'Future', 'RUA1H2415548', 24, 25, 277.5, 1000000.0, 50.0, 1000000.0, 9453333.0, 0, 24, '24-05-2022'], [23, ""TEXAS HOLD 'EM"", 'USSM12401302', 23, 24, 278.9, 426700979.0, 86.0, 35724356.0, 1470500.0, 1, 23, '10-01-2024'], [22, 'Danza Kuduro - Cover', 'TCJPA2445163', 22, 23, 279.0, 1655575417.0, 50.0, 1000000.0, 1000000.0, 1, 22, '10-02-2024']]","SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id`, T1.`album_id`, T1.`track_score`, T1.`spotify_streams`, T1.`spotify_popularity`, T1.`tiktok_posts`, T1.`explicit_track` DESC LIMIT 5",0,,0.0,0.045,0.043,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns track_id, album_id, all_time_rank, track_score, spotify_streams in ascending order, and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],"SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id`, T1.`album_id`, T1.`all_time_rank`, T1.`track_score`, T1.`spotify_streams` ASC LIMIT 5",3,"```json
+{
+  ""table_name"": ""tracks_albums"",
+  ""ordered_entries"": [
+    {
+      ""track_id"": 26,
+      ""title"": ""STAY (with Justin Bieber)"",
+      ""isrc"": ""USSM12103949"",
+      ""album_id"": 26,
+      ""all_time_rank"": 27,
+      ""track_score"": 266.3,
+      ""spotify_streams"": 3107100349.0,
+      ""spotify_popularity"": 78.0,
+      ""youtube_views"": 1256973582.0,
+      ""tiktok_posts"": 7485966.0,
+      ""explicit_track"": 1,
+      ""artist_id"": 26,
+      ""release_date"": ""01-12-2015""
+    },
+    {
+      ""track_id"": 25,
+      ""title"": ""Beat Automotivo Tan Tan Tan Viral"",
+      ""isrc"": ""BXWEH2200054"",
+      ""album_id"": 25,
+      ""all_time_rank"": 26,
+      ""track_score"": 268.1,
+      ""spotify_streams"": 7382759.0,
+      ""spotify_popularity"": 35.0,
+      ""youtube_views"": 4233958.0,
+      ""tiktok_posts"": 37621885.0,
+      ""explicit_track"": 0,
+      ""artist_id"": 25,
+      ""release_date"": ""09-07-2021""
+    },
+    {
+      ""track_id"": 24,
+      ""title"": ""Future"",
+      ""isrc"": ""RUA1H2415548"",
+      ""album_id"": 24,
+      ""all_time_rank"": 25,
+      ""track_score"": 277.5,
+      ""spotify_streams"": 1000000.0,
+      ""spotify_popularity"": 50.0,
+      ""youtube_views"": 1000000.0,
+      ""tiktok_posts"": 9453333.0,
+      ""explicit_track"": 0,
+      ""artist_id"": 24,
+      ""release_date"": ""24-05-2022""
+    },
+    {
+      ""track_id"": 23,
+      ""title"": ""TEXAS HOLD 'EM"",
+      ""isrc"": ""USSM12401302"",
+      ""album_id"": 23,
+      ""all_time_rank"": 24,
+      ""track_score"": 278.9,
+      ""spotify_streams"": 426700979.0,
+      ""spotify_popularity"": 86.0,
+      ""youtube_views"": 35724356.0,
+      ""tiktok_posts"": 1470500.0,
+      ""explicit_track"": 1,
+      ""artist_id"": 23,
+      ""release_date"": ""10-01-2024""
+    },
+    {
+      ""track_id"": 22,
+      ""title"": ""Danza Kuduro - Cover"",
+      ""isrc"": ""TCJPA2445163"",
+      ""album_id"": 22,
+      ""all_time_rank"": 23,
+      ""track_score"": 279.0,
+      ""spotify_streams"": 1655575417.0,
+      ""spotify_popularity"": 50.0,
+      ""youtube_views"": 1000000.0,
+      ""tiktok_posts"": 1000000.0,
+      ""explicit_track"": 1,
+      ""artist_id"": 22,
+      ""release_date"": ""10-02-2024""
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns track_id, album_id, all_time_rank, track_score, spotify_streams in descending order, and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[26, 'STAY (with Justin Bieber)', 'USSM12103949', 26, 27, 266.3, 3107100349.0, 78.0, 1256973582.0, 7485966.0, 1, 'ýýýýýýýýý ýýýýýý ýýýýýýýýýýýý', '01-12-2015', 26], [25, 'Beat Automotivo Tan Tan Tan Viral', 'BXWEH2200054', 25, 26, 268.1, 7382759.0, 35.0, 4233958.0, 37621885.0, 0, 'STAY (with Justin Bieber)', '09-07-2021', 25], [24, 'Future', 'RUA1H2415548', 24, 25, 277.5, 1000000.0, 50.0, 1000000.0, 9453333.0, 0, 'Beat Automotivo Tan Tan Tan Viral', '24-05-2022', 24], [23, ""TEXAS HOLD 'EM"", 'USSM12401302', 23, 24, 278.9, 426700979.0, 86.0, 35724356.0, 1470500.0, 1, ""TEXAS HOLD 'EM"", '10-02-2024', 23], [22, 'Danza Kuduro - Cover', 'TCJPA2445163', 22, 23, 279.0, 1655575417.0, 50.0, 1000000.0, 1000000.0, 1, 'Danza Kuduro - Cover', '21-05-2024', 22]]","SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id`, T1.`album_id`, T1.`all_time_rank`, T1.`track_score`, T1.`spotify_streams` DESC LIMIT 5",0,,0.0,0.044,0.043,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns album_id, track_score, spotify_streams, youtube_views, tiktok_posts in ascending order, and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[14, 'bathroom floor', 'NLC242100307', 14, 15, 301.6, 297185.0, 12.0, 6736502312.0, 3.0, 0, 15, '07-10-2022'], [25, 'Beat Automotivo Tan Tan Tan Viral', 'BXWEH2200054', 24, 25, 268.1, 7382759.0, 35.0, 4233958.0, 37621885.0, 0, 24, '24-05-2022'], [24, 'Future', 'RUA1H2415548', 23, 24, 277.5, 0.0, 0.0, 0.0, 9453333.0, 0, 23, '10-01-2024'], [11, 'The Door', 'USWB12402486', 11, 12, 320.2, 111155129.0, 0.0, 0.0, 0.0, 1, 12, '14-06-2024'], [10, 'I Had Some Help (feat. Morgan Wallen)', 'USUM72404990', 10, 11, 322.1, 250080413.0, 91.0, 32229063.0, 0.0, 1, 11, '10-05-2024']]","SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`album_id`, T1.`track_score`, T1.`spotify_streams`, T1.`youtube_views`, T1.`tiktok_posts` ASC LIMIT 5",0,,0.0,0.071,0.064,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns album_id, track_score, spotify_streams, youtube_views, tiktok_posts in descending order, and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],"SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`album_id`, T1.`track_score`, T1.`spotify_streams`, T1.`youtube_views`, T1.`tiktok_posts` DESC LIMIT 5",3,"```json
+{
+  ""table_name"": ""tracks_albums"",
+  ""ordered_entries"": [
+    {
+      ""track_id"": 14,
+      ""title"": ""bathroom floor"",
+      ""isrc"": ""NLC242100307"",
+      ""album_id"": 14,
+      ""all_time_rank"": 15,
+      ""track_score"": 301.6,
+      ""spotify_streams"": 297185.0,
+      ""spotify_popularity"": 12.0,
+      ""youtube_views"": 6736502312.0,
+      ""tiktok_posts"": 3.0,
+      ""explicit_track"": 0,
+      ""artist_id"": 15,
+      ""release_date (dd-mm-yyyy)"": ""07-10-2022""
+    },
+    {
+      ""track_id"": 25,
+      ""title"": ""Beat Automotivo Tan Tan Tan Viral"",
+      ""isrc"": ""BXWEH2200054"",
+      ""album_id"": 24,
+      ""all_time_rank"": 25,
+      ""track_score"": 268.1,
+      ""spotify_streams"": 7382759.0,
+      ""spotify_popularity"": 35.0,
+      ""youtube_views"": 4233958.0,
+      ""tiktok_posts"": 37621885.0,
+      ""explicit_track"": 0,
+      ""artist_id"": 24,
+      ""release_date (dd-mm-yyyy)"": ""24-05-2022""
+    },
+    {
+      ""track_id"": 24,
+      ""title"": ""Future"",
+      ""isrc"": ""RUA1H2415548"",
+      ""album_id"": 23,
+      ""all_time_rank"": 24,
+      ""track_score"": 277.5,
+      ""spotify_streams"": 0.0,
+      ""spotify_popularity"": 0.0,
+      ""youtube_views"": 0.0,
+      ""tiktok_posts"": 9453333.0,
+      ""explicit_track"": 0,
+      ""artist_id"": 23,
+      ""release_date (dd-mm-yyyy)"": ""10-01-2024""
+    },
+    {
+      ""track_id"": 11,
+      ""title"": ""The Door"",
+      ""isrc"": ""USWB12402486"",
+      ""album_id"": 11,
+      ""all_time_rank"": 12,
+      ""track_score"": 320.2,
+      ""spotify_streams"": 111155129.0,
+      ""spotify_popularity"": 0.0,
+      ""youtube_views"": 0.0,
+      ""tiktok_posts"": 0.0,
+      ""explicit_track"": 1,
+      ""artist_id"": 12,
+      ""release_date (dd-mm-yyyy)"": ""14-06-2024""
+    },
+    {
+      ""track_id"": 10,
+      ""title"": ""I Had Some Help (feat. Morgan Wallen)"",
+      ""isrc"": ""USUM72404990"",
+      ""album_id"": 10,
+      ""all_time_rank"": 11,
+      ""track_score"": 322.1,
+      ""spotify_streams"": 250080413.0,
+      ""spotify_popularity"": 91.0,
+      ""youtube_views"": 32229063.0,
+      ""tiktok_posts"": 0.0,
+      ""explicit_track"": 1,
+      ""artist_id"": 11,
+      ""release_date (dd-mm-yyyy)"": ""10-05-2024""
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns track_id, all_time_rank, tiktok_posts in ascending order, and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 1, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, 0, 'Million Dollar Baby - Single', '26-04-2024', 1], [2, 'Not Like Us', 'USUG12400910', 2, 2, 545.9, 323703884.0, 92.0, 116347040.0, 674700.0, 1, 'Not Like Us', '04-05-2024', 2], [3, 'i like the way you kiss me', 'QZJ842400387', 3, 3, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, 0, 'I like the way you kiss me', '19-03-2024', 3], [4, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0, 'Flowers - Single', '12-01-2023', 4], [5, 'Houdini', 'USUG12403398', 5, 5, 423.3, 107034922.0, 88.0, 77373957.0, 16400.0, 1, 'Houdini', '31-05-2024', 5]]","SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id`, T1.`all_time_rank`, T1.`tiktok_posts` ASC LIMIT 5",0,,0.0,1.0,1.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,JOIN-ORDERBY-ADVANCED,"Join `tracks` with `albums` on `album_id`. Sort all rows by the columns track_id, all_time_rank, tiktok_posts in descending order, and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[26, 'STAY (with Justin Bieber)', 'USSM12103949', 26, 27, 266.3, 3107100349.0, 78.0, 1256973582.0, 7485966.0, 1, 26, '01-12-2015'], [25, 'Beat Automotivo Tan Tan Tan Viral', 'BXWEH2200054', 25, 26, 268.1, 7382759.0, 35.0, 4233958.0, 37621885.0, 0, 25, '24-05-2022'], [24, 'Future', 'RUA1H2415548', 24, 25, 277.5, 1000000.0, 50.0, 1000000.0, 9453333.0, 0, 24, '10-01-2024'], [23, ""TEXAS HOLD 'EM"", 'USSM12401302', 23, 24, 278.9, 426700979.0, 86.0, 35724356.0, 1470500.0, 1, 23, '10-02-2024'], [22, 'Danza Kuduro - Cover', 'TCJPA2445163', 22, 23, 279.0, 1655575417.0, 70.0, 1000000.0, 1000000.0, 1, 22, '10-02-2024']]","SELECT * FROM `tracks` AS T1 JOIN `albums` AS T2 ON T1.`album_id` = T2.`album_id` ORDER BY T1.`track_id`, T1.`all_time_rank`, T1.`tiktok_posts` DESC LIMIT 5",0,,0.0,0.045,0.043,0.0,1.0,0.0,0.5

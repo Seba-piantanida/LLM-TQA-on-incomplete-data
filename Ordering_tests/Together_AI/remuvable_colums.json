@@ -1,0 +1,135 @@
+{
+    "mobiles": {
+        "removable_columns": [
+            "Company Name",
+            "Model Name",
+            "Mobile Weight",
+            "RAM",
+            "Front Camera",
+            "Back Camera",
+            "Processor",
+            "Battery Capacity",
+            "Screen Size",
+            "Launched Price (Pakistan)",
+            "Launched Price (India)",
+            "Launched Price (China)",
+            "Launched Price (USA)",
+            "Launched Price (Dubai)",
+            "Launched Year"
+        ],
+        "reconstruction_errors": {
+            "Company Name": 0.005290484729380447,
+            "Model Name": 0.005244554450650018,
+            "Mobile Weight": 0.005395599053348847,
+            "RAM": 0.005156502828854883,
+            "Front Camera": 0.005292257768174972,
+            "Back Camera": 0.005312530244958862,
+            "Processor": 0.005268353332962889,
+            "Battery Capacity": 0.005479677190329172,
+            "Screen Size": 0.005279351371106431,
+            "Launched Price (Pakistan)": 0.00549853372369795,
+            "Launched Price (India)": 0.0052017652319841555,
+            "Launched Price (China)": 0.005506119901586396,
+            "Launched Price (USA)": 0.005242103804752384,
+            "Launched Price (Dubai)": 0.00551655124890803,
+            "Launched Year": 0.005038690475827644
+        }
+    },
+    "olympic_games": {
+        "removable_columns": [
+            "city"
+        ],
+        "reconstruction_errors": {
+            "id": 1.9270635403251084,
+            "year": 1.967759690438967,
+            "city": 0.1334586297792924
+        }
+    },
+    "fitness_trakers": {
+        "removable_columns": [
+            "Brand Name",
+            "Device Type",
+            "Model Name",
+            "Color",
+            "Selling Price",
+            "Original Price",
+            "Display",
+            "Strap Material",
+            "Reviews"
+        ],
+        "reconstruction_errors": {
+            "Rating (Out of 5)": 0.7640881287738388,
+            "Average Battery Life (in days)": 0.7635612935779299,
+            "Brand Name": 0.029880962226971976,
+            "Device Type": 0.02916463974783262,
+            "Model Name": 0.02934524789615249,
+            "Color": 0.028956970318426322,
+            "Selling Price": 0.028496537433984052,
+            "Original Price": 0.02986065955647012,
+            "Display": 0.02895851407083171,
+            "Strap Material": 0.029493173462023955,
+            "Reviews": 0.029198733982881635
+        }
+    },
+    "breast_cancer": {
+        "removable_columns": [],
+        "reconstruction_errors": {
+            "id": 0.5435918223009478,
+            "pid": 0.5435413331641322,
+            "age": 0.5441217136047803,
+            "meno": 0.5437188455153453,
+            "size": 0.5443339227937815,
+            "grade": 0.5446523487314526,
+            "nodes": 0.5438758965520673,
+            "pgr": 0.5450614807642434,
+            "er": 0.5460475800696318,
+            "hormon": 0.5441390013082109,
+            "rfstime": 0.5442549619239285,
+            "status": 0.5443010227453849
+        }
+    },
+    "heart_attack": {
+        "removable_columns": [],
+        "reconstruction_errors": {
+            "age": 0.6147020720054245,
+            "sex": 0.6417949883967589,
+            "cp": 0.624446743952061,
+            "trestbps": 0.6208119625575053,
+            "chol": 0.6174427423777853,
+            "fbs": 0.6166466881781797,
+            "restecg": 0.628613126222196,
+            "thalach": 0.622533321558836,
+            "exang": 0.6267467345263633,
+            "oldpeak": 0.6183842991500479,
+            "slope": 0.620517132513635,
+            "ca": 0.6224934740064382,
+            "thal": 0.6279844078249742,
+            "target": 0.6328492594361245
+        }
+    },
+    "accounts_receivable": {
+        "removable_columns": [
+            "customerID",
+            "PaperlessDate",
+            "InvoiceDate",
+            "DueDate",
+            "Disputed",
+            "SettledDate",
+            "PaperlessBill"
+        ],
+        "reconstruction_errors": {
+            "countryCode": 0.5217273578208705,
+            "invoiceNumber": 0.5216853689926527,
+            "InvoiceAmount": 0.521645578654681,
+            "DaysToSettle": 0.5216720921880382,
+            "DaysLate": 0.5217503565803556,
+            "customerID": 0.0021248382916149024,
+            "PaperlessDate": 0.0021234850471531313,
+            "InvoiceDate": 0.002126963178596348,
+            "DueDate": 0.002075394615815807,
+            "Disputed": 0.0021148645326858418,
+            "SettledDate": 0.0020893420184690484,
+            "PaperlessBill": 0.002105643914561751
+        }
+    }
+}

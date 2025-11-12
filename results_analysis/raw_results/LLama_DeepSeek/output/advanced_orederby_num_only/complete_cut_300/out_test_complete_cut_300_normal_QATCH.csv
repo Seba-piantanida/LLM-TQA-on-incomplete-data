@@ -1,0 +1,550 @@
+db_path,table_name,test_category,query,model,AI_answer,SQL_query,failed_attempts,note,valid_efficiency_score,cell_precision,cell_recall,execution_accuracy,tuple_cardinality,tuple_constraint,tuple_order
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-ADVANCED,"Compute the sum of the columns grade, rfstime, status for each row in `breast_cancer`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 132, 49, 0, 18, 2, 2, 0, 0, 0, 1838, 0, 1840], [4, 130, 65, 1, 30, 2, 5, 0, 36, 1, 1855, 0, 1857], [10, 97, 62, 1, 12, 2, 7, 0, 0, 0, 436, 1, 439], [24, 96, 63, 1, 25, 2, 7, 0, 2, 0, 249, 1, 254], [16, 1138, 51, 0, 21, 3, 1, 0, 0, 0, 1720, 0, 1723]]",SELECT * FROM `breast_cancer` ORDER BY `grade` + `rfstime` + `status` ASC LIMIT 5,0,,0.0,0.306,0.407,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-ADVANCED,"Compute the sum of the columns grade, rfstime, status for each row in `breast_cancer`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 132, 49, 0, 18, 2, 2, 0, 0, 0, 1838, 0], [4, 130, 65, 1, 30, 2, 5, 0, 36, 1, 1855, 0], [17, 1138, 51, 0, 21, 3, 1, 0, 0, 0, 1720, 0], [2, 1140, 56, 1, 40, 3, 3, 0, 0, 0, 1603, 0], [18, 526, 63, 1, 27, 2, 1, 0, 0, 0, 1306, 1]]",SELECT * FROM `breast_cancer` ORDER BY `grade` + `rfstime` + `status` DESC LIMIT 5,0,,0.0,0.964,1.0,0.0,1.0,0.6,1.0
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-ADVANCED,"Compute the sum of the columns age, nodes, er for each row in `breast_cancer`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[3, 769, 45, 0, 25, 3, 1, 0, 4, 0, 177, 0], [7, 973, 37, 0, 20, 2, 9, 0, 0, 1, 42, 0], [24, 1762, 42, 0, 25, 2, 7, 0, 2, 0, 249, 1], [6, 475, 48, 0, 21, 3, 8, 0, 0, 0, 293, 1], [10, 97, 62, 1, 12, 2, 7, 0, 0, 0, 436, 1]]",SELECT * FROM `breast_cancer` ORDER BY `age` + `nodes` + `er` ASC LIMIT 5,0,,0.0,0.655,0.731,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-ADVANCED,"Compute the sum of the columns age, nodes, er for each row in `breast_cancer`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,[],SELECT * FROM `breast_cancer` ORDER BY `age` + `nodes` + `er` DESC LIMIT 5,3,"<think>
+Okay, so I need to figure out how to compute the sum of the columns age, nodes, and er for each row in the breast_cancer dataset. Then, I have to sort all the rows in descending order based on this sum and return the first five rows. Let me break this down step by step.
+
+First, I should understand the structure of the dataset. It looks like each column represents a different variable: id, pid, age, meno, size, grade, nodes, pgr, er, hormon, rfsstime, and status. Each row corresponds to a patient's data.
+
+The task is to sum the values in the age, nodes, and er columns for each row. So for each row, I'll add the age value, the nodes value, and the er value together. That will give me a total sum for each patient.
+
+Once I have these sums, I need to sort the rows from the highest sum to the lowest. After sorting, I'll pick the top five rows with the highest sums.
+
+Let me look at the data provided. I'll go through each row, calculate the sum, and then sort them.
+
+Starting with row 0:
+- age: 49
+- nodes: 2
+- er: 0
+Sum: 49 + 2 + 0 = 51
+
+Row 1:
+- age: 55
+- nodes: 16
+- er: 0
+Sum: 55 + 16 + 0 = 71
+
+Row 2:
+- age: 56
+- nodes: 3
+- er: 0
+Sum: 56 + 3 + 0 = 59
+
+Row 3:
+- age: 45
+- nodes: 1
+- er: 4
+Sum: 45 + 1 + 4 = 50
+
+Row 4:
+- age: 65
+- nodes: 5
+- er: 36
+Sum: 65 + 5 + 36 = 106
+
+Row 5:
+- age: 48
+- nodes: 11
+- er: 0
+Sum: 48 + 11 + 0 = 59
+
+Row 6:
+- age: 48
+- nodes: 8
+- er: 0
+Sum: 48 + 8 + 0 = 56
+
+Row 7:
+- age: 37
+- nodes: 9
+- er: 0
+Sum: 37 + 9 + 0 = 46
+
+Row 8:
+- age: 67
+- nodes: 1
+- er: 0
+Sum: 67 + 1 + 0 = 68
+
+Row 9:
+- age: 45
+- nodes: 1
+- er: 0
+Sum: 45 + 1 + 0 = 46
+
+Row 10:
+- age: 62
+- nodes: 7
+- er: 0
+Sum: 62 + 7 + 0 = 69
+
+Row 11:
+- age: 59
+- nodes: 8
+- er: 0
+Sum: 59 + 8 + 0 = 67
+
+Row 12:
+- age: 62
+- nodes: 2
+- er: 0
+Sum: 62 + 2 + 0 = 64
+
+Row 13:
+- age: 51
+- nodes: 2
+- er: 80
+Sum: 51 + 2 + 80 = 133
+
+Row 14:
+- age: 32
+- nodes: 24
+- er: 13
+Sum: 32 + 24 + 13 = 69
+
+Row 15:
+- age: 56
+- nodes: 11
+- er: 36
+Sum: 56 + 11 + 36 = 103
+
+Row 16:
+- age: 51
+- nodes: 1
+- er: 0
+Sum: 51 + 1 + 0 = 52
+
+Row 17:
+- age: 63
+- nodes: 1
+- er: 0
+Sum: 63 + 1 + 0 = 64
+
+Row 18:
+- age: 47
+- nodes: 2
+- er: 50
+Sum: 47 + 2 + 50 = 99
+
+Row 19:
+- age: 58
+- nodes: 4
+- er: 0
+Sum: 58 + 4 + 0 = 62
+
+Row 20:
+- age: 68
+- nodes: 14
+- er: 2
+Sum: 68 + 14 + 2 = 84
+
+Row 21:
+- age: 65
+- nodes: 1
+- er: 0
+Sum: 65 + 1 + 0 = 66
+
+Row 22:
+- age: 64
+- nodes: 12
+- er: 0
+Sum: 64 + 12 + 0 = 76
+
+Row 23:
+- age: 63
+- nodes: 7
+- er: 0
+Sum: 63 + 7 + 0 = 70
+
+Row 24:
+- age: 42
+- nodes: 7
+- er: 2
+Sum: 42 + 7 + 2 = 51
+
+Now, I'll list all the sums:
+
+Row 0: 51
+Row 1: 71
+Row 2: 59
+Row 3: 50
+Row 4: 106
+Row 5: 59
+Row 6: 56
+Row 7: 46
+Row 8: 68
+Row 9: 46
+Row 10: 69
+Row 11: 67
+Row 12: 64
+Row 13: 133
+Row 14: 69
+Row 15: 103
+Row 16: 52
+Row 17: 64
+Row 18: 99
+Row 19: 62
+Row 20: 84
+Row 21: 66
+Row 22: 76
+Row 23: 70
+Row 24: 51
+
+Next, I need to sort these sums in descending order. Let's arrange them from highest to lowest:
+
+133 (Row 13), 106 (Row 4), 103 (Row 15), 99 (Row 18), 84 (Row 20), 76 (Row 22), 71 (Row 1), 70 (Row 23), 69 (Row 10 and Row 14), 68 (Row 8), 67 (Row 11), 66 (Row 21), 64 (Row 12 and Row 17), 62 (Row 19), 61 (none), 60 (none), 59 (Row 2 and Row 5), etc.
+
+Wait, I see that Row 10 and Row 14 both have a sum of 69. Since we're sorting in descending order, they will come after 84 and before 76. But since we need the top five, the first five are:
+
+1. Row 13: 133
+2. Row 4: 106
+3. Row 15: 103
+4. Row 18: 99
+5. Row 20: 84
+
+So the top five rows are rows 13, 4, 15, 18, and 20.
+
+Now, I need to extract the data for these rows. Let me get the details for each:
+
+Row 13:
+- id: 14
+- pid: 762
+- age: 51
+- meno: 1
+- size: 25
+- grade: 2
+- nodes: 2
+- pgr: 0
+- er: 80
+- hormon: 0
+- rfsstime: 503
+- status: 1
+
+Row 4:
+- id: 5
+- pid: 130
+- age: 65
+- meno: 1
+- size: 30
+- grade: 2
+- nodes: 5
+- pgr: 0
+- er: 36
+- hormon: 1
+- rfsstime: 1855
+- status: 0
+
+Row 15:
+- id: 16
+- pid: 1339
+- age: 56
+- meno: 1
+- size: 25
+- grade: 2
+- nodes: 11
+- pgr: 0
+- er: 36
+- hormon: 0
+- rfsstime: 359
+- status: 1
+
+Row 18:
+- id: 19
+- pid: 1185
+- age: 47
+- meno: 1
+- size: 12
+- grade: 2
+- nodes: 2
+- pgr: 0
+- er: 50
+- hormon: 0
+- rfsstime: 942
+- status: 0
+
+Row 20:
+- id: 21
+- pid: 1545
+- age: 68
+- meno: 1
+- size: 18
+- grade: 2
+- nodes: 14
+- pgr: 0
+- er: 2
+- hormon: 0
+- rfsstime: 959
+- status: 1
+
+I need to make sure that all fields are included and none are null. Looking at the data, all fields seem to have values, so no need for inf",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-ADVANCED,"Compute the sum of the columns age, pgr, rfstime for each row in `breast_cancer`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 1575, 55, 1, 20, 3, 16, 0, 0, 0, 403, 1, 458], [13, 762, 51, 1, 25, 2, 2, 0, 80, 0, 503, 1, 503], [21, 99, 65, 1, 18, 3, 1, 0, 0, 1, 552, 1, 552], [8, 569, 67, 1, 20, 2, 1, 0, 0, 1, 564, 1, 564], [23, 96, 63, 1, 30, 2, 7, 0, 0, 1, 698, 1, 698]]",SELECT * FROM `breast_cancer` ORDER BY `age` + `pgr` + `rfstime` ASC LIMIT 5,2,,0.0,0.323,0.37,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-ADVANCED,"Compute the sum of the columns age, pgr, rfstime for each row in `breast_cancer`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[4, 130, 65, 1, 30, 2, 5, 0, 36, 1, 1855, 0], [0, 132, 49, 0, 18, 2, 2, 0, 0, 0, 1838, 0], [16, 1138, 51, 0, 21, 3, 1, 0, 0, 0, 1720, 0], [18, 1568, 47, 1, 12, 2, 2, 0, 50, 0, 942, 0], [9, 1180, 45, 0, 30, 2, 1, 0, 0, 0, 1093, 1]]",SELECT * FROM `breast_cancer` ORDER BY `age` + `pgr` + `rfstime` DESC LIMIT 5,1,,0.0,0.621,0.667,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-ADVANCED,"Compute the sum of the columns id, meno for each row in `breast_cancer`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 132, 49, 0, 18, 2, 2, 0, 0, 0, 1838, 0], [2, 1575, 55, 1, 20, 3, 16, 0, 0, 0, 403, 1], [3, 1140, 56, 1, 40, 3, 3, 0, 0, 0, 1603, 0], [4, 769, 45, 0, 25, 3, 1, 0, 4, 0, 177, 0], [5, 130, 65, 1, 30, 2, 5, 0, 36, 1, 1855, 0]]",SELECT * FROM `breast_cancer` ORDER BY `id` + `meno` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-ADVANCED,"Compute the sum of the columns id, meno for each row in `breast_cancer`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[14, 820, 32, 0, 57, 3, 24, 0, 13, 0, 448, 1, 14], [24, 1762, 42, 0, 25, 2, 7, 0, 2, 0, 249, 1, 24], [19, 1185, 58, 1, 45, 3, 4, 0, 0, 0, 370, 1, 20], [17, 526, 63, 1, 27, 2, 1, 0, 0, 0, 1306, 1, 18], [16, 1138, 51, 0, 21, 3, 1, 0, 0, 0, 1720, 0, 16]]",SELECT * FROM `breast_cancer` ORDER BY `id` + `meno` DESC LIMIT 5,1,,0.0,0.412,0.483,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-ADVANCED,"Compute the sum of the columns meno, rfstime, status for each row in `breast_cancer`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[7, 973, 37, 0, 20, 2, 9, 0, 0, 1, 42, 0], [5, 1642, 48, 0, 52, 2, 11, 0, 0, 0, 842, 1], [3, 769, 45, 0, 25, 3, 1, 0, 4, 0, 177, 0], [24, 1762, 42, 0, 25, 2, 7, 0, 2, 0, 249, 1], [6, 475, 48, 0, 21, 3, 8, 0, 0, 0, 293, 1]]",SELECT * FROM `breast_cancer` ORDER BY `meno` + `rfstime` + `status` ASC LIMIT 5,0,,0.0,0.759,0.815,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-ADVANCED,"Compute the sum of the columns meno, rfstime, status for each row in `breast_cancer`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,[],SELECT * FROM `breast_cancer` ORDER BY `meno` + `rfstime` + `status` DESC LIMIT 5,3,"<think>
+Alright, so I need to figure out how to compute the sum of the columns meno, rfstime, and status for each row in the breast_cancer dataset. Then, I have to sort all the rows in descending order based on this sum and return the first five rows. Let me break this down step by step.
+
+First, I'll look at the dataset provided. It's a JSON object with several keys representing different columns: id, pid, age, meno, size, grade, nodes, pgr, er, hormon, rfstime, and status. Each of these keys has a dictionary where the keys are row indices (from 0 to 24) and the values are the corresponding data points.
+
+My task is to compute the sum for each row across the meno, rfstime, and status columns. So for each row index (0 to 24), I'll add the values from these three columns.
+
+Let me start by extracting the data for each row. For example, for row 0:
+- meno: 0
+- rfstime: 1838
+- status: 0
+Sum = 0 + 1838 + 0 = 1838
+
+I'll do this for each row. Once I have all the sums, I'll sort the rows in descending order based on these sums. After sorting, I'll pick the top five rows with the highest sums.
+
+Wait, but I need to make sure I don't miss any steps. Let me think about potential issues. What if any of the values are missing or null? The instructions say to infer and fill missing information, but looking at the dataset, all the values seem to be present. So I don't need to handle missing data here.
+
+Next, I'll compute the sum for each row. Let me list them out:
+
+Row 0: 0 + 1838 + 0 = 1838
+Row 1: 1 + 403 + 1 = 405
+Row 2: 1 + 1603 + 0 = 1604
+Row 3: 0 + 177 + 0 = 177
+Row 4: 1 + 1855 + 0 = 1856
+Row 5: 0 + 842 + 1 = 843
+Row 6: 0 + 293 + 1 = 294
+Row 7: 0 + 42 + 0 = 42
+Row 8: 1 + 564 + 1 = 566
+Row 9: 0 + 1093 + 1 = 1094
+Row 10: 1 + 436 + 1 = 438
+Row 11: 1 + 238 + 1 = 240
+Row 12: 1 + 723 + 0 = 724
+Row 13: 1 + 503 + 1 = 505
+Row 14: 0 + 448 + 1 = 449
+Row 15: 1 + 359 + 1 = 361
+Row 16: 0 + 1720 + 0 = 1720
+Row 17: 1 + 1306 + 1 = 1308
+Row 18: 1 + 942 + 0 = 943
+Row 19: 1 + 370 + 1 = 372
+Row 20: 1 + 959 + 1 = 961
+Row 21: 1 + 552 + 1 = 554
+Row 22: 1 + 392 + 1 = 394
+Row 23: 1 + 698 + 1 = 700
+Row 24: 0 + 249 + 1 = 250
+
+Now, I'll list all the sums:
+
+Row 0: 1838
+Row 1: 405
+Row 2: 1604
+Row 3: 177
+Row 4: 1856
+Row 5: 843
+Row 6: 294
+Row 7: 42
+Row 8: 566
+Row 9: 1094
+Row 10: 438
+Row 11: 240
+Row 12: 724
+Row 13: 505
+Row 14: 449
+Row 15: 361
+Row 16: 1720
+Row 17: 1308
+Row 18: 943
+Row 19: 372
+Row 20: 961
+Row 21: 554
+Row 22: 394
+Row 23: 700
+Row 24: 250
+
+Next, I need to sort these sums in descending order. Let me arrange them from highest to lowest:
+
+1. Row 4: 1856
+2. Row 16: 1720
+3. Row 17: 1308
+4. Row 9: 1094
+5. Row 2: 1604
+
+Wait, hold on. Row 2 has a sum of 1604, which is higher than Row 17's 1308. So I think I made a mistake in the initial arrangement. Let me correct that.
+
+Correcting the order:
+
+1. Row 4: 1856
+2. Row 16: 1720
+3. Row 2: 1604
+4. Row 17: 1308
+5. Row 9: 1094
+
+So the top five rows based on the sum are rows 4, 16, 2, 17, and 9.
+
+Now, I need to extract the data for these rows. Let me get all the columns for each of these rows.
+
+Starting with Row 4:
+
+id: 5
+pid: 130
+age: 65
+meno: 1
+size: 30
+grade: 2
+nodes: 5
+pgr: 0
+er: 36
+hormon: 1
+rfstime: 1855
+status: 0
+
+Sum: 1 + 1855 + 0 = 1856
+
+Row 16:
+
+id: 17
+pid: 1138
+age: 51
+meno: 0
+size: 21
+grade: 3
+nodes: 1
+pgr: 0
+er: 0
+hormon: 0
+rfstime: 1720
+status: 0
+
+Sum: 0 + 1720 + 0 = 1720
+
+Row 2:
+
+id: 3
+pid: 1140
+age: 56
+meno: 1
+size: 40
+grade: 3
+nodes: 3
+pgr: 0
+er: 0
+hormon: 0
+rfstime: 1603
+status: 0
+
+Sum: 1 + 1603 + 0 = 1604
+
+Row 17:
+
+id: 18
+pid: 526
+age: 63
+meno: 1
+size: 27
+grade: 2
+nodes: 1
+pgr: 0
+er: 0
+hormon: 0
+rfstime: 1306
+status: 1
+
+Sum: 1 + 1306 + 1 = 1308
+
+Row 9:
+
+id: 10
+pid: 1180
+age: 45
+meno: 0
+size: 30
+grade: 2
+nodes: 1
+pgr: 0
+er: 0
+hormon: 0
+rfstime: 1093
+status: 1
+
+Sum: 0 + 1093 + 1 = 1094
+
+Wait, but in the initial sum calculation, Row 9's sum was 1094, which is correct. However, when I sorted, I initially placed Row 2 after Row 16, which is correct because 1604 is less than 1720 but more than 1308.
+
+So the correct order is:
+
+1. Row 4: 1856
+2. Row 16: 1720
+3. Row 2: 1604
+4. Row 17: 1308
+5. Row 9: 1094
+
+Now, I'll prepare the JSON output as per the instructions. The table name is ""breast_cancer"", and the ordered_entries should be an array of the top five rows in the specified order.
+
+Each entry should include all the columns: id, pid, age, meno, size, grade, nodes, pgr, er, hormon, rfstime, and status.
+
+Let me structure each entry correctly.
+
+For Row 4 (index 4):
+
+{
+  ""id"": 5,
+  ""pid"": 130,
+  ""age"": 65,
+  ""meno"": 1,
+  ""size"": 30,
+  ""grade"": 2,
+  ""nodes"": 5,
+  ""pgr"": 0,
+  ""er"": 36,
+  ""hormon"": 1,
+  ""rfstime"": 1855,
+  ""status"": 0
+}
+
+For Row 16 (index 16):
+
+{
+  ""id"": 17,
+  ""pid"": 1138,
+  ""age"": 51,
+  ""meno"": 0,
+  ""size"": 21,
+  ""grade"": 3,
+  ""nodes"": 1,
+  ""pgr"": 0,
+  ""er"": 0,
+  ""hormon"": 0,
+  ""rfstime"": 1720,
+  ""status"": 0
+}
+
+For Row 2 (index 2):
+
+{
+  ""id"": 3,
+  ""pid"":",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-ADVANCED,"Compute the sum of the columns sex, thalach, oldpeak for each row in `heart_attack`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[44, 1, 1, 120, 263, 0, 1, 173, 0, 0.0, 2, 0, 3, 1], [56, 0, 1, 140, 294, 0, 0, 153, 0, 1.3, 1, 0, 2, 1], [57, 1, 0, 140, 192, 0, 1, 148, 0, 0.4, 1, 0, 1, 1], [41, 0, 1, 130, 204, 0, 0, 172, 0, 1.4, 2, 0, 2, 1], [48, 0, 2, 130, 275, 0, 1, 139, 0, 0.2, 2, 0, 2, 1]]",SELECT * FROM `heart_attack` ORDER BY `sex` + `thalach` + `oldpeak` ASC LIMIT 5,1,,0.0,0.538,0.519,0.0,1.0,0.4,0.0
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-ADVANCED,"Compute the sum of the columns sex, thalach, oldpeak for each row in `heart_attack`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[37, 1, 2, 130, 250, 0, 1, 187, 0, 3.5, 0, 0, 2, 1], [63, 1, 3, 145, 233, 1, 0, 150, 0, 2.3, 0, 0, 1, 1], [41, 0, 1, 130, 204, 0, 0, 172, 0, 1.4, 2, 0, 2, 1], [56, 1, 1, 120, 236, 0, 1, 178, 0, 0.8, 2, 0, 2, 1], [57, 0, 0, 120, 354, 0, 1, 163, 1, 0.6, 2, 0, 2, 1]]",SELECT * FROM `heart_attack` ORDER BY `sex` + `thalach` + `oldpeak` DESC LIMIT 5,0,,0.0,0.593,0.615,0.0,1.0,0.4,1.0
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-ADVANCED,"Compute the sum of the columns oldpeak, ca for each row in `heart_attack`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[44, 1, 1, 120, 263, 0, 1, 173, 0, 0.0, 2, 0, 3, 1], [37, 1, 2, 130, 250, 0, 1, 187, 0, 3.5, 0, 0, 2, 1], [41, 0, 1, 130, 204, 0, 0, 172, 0, 1.4, 2, 0, 2, 1], [56, 1, 1, 120, 236, 0, 1, 178, 0, 0.8, 2, 0, 2, 1], [57, 0, 0, 120, 354, 0, 1, 163, 1, 0.6, 2, 0, 2, 1]]",SELECT * FROM `heart_attack` ORDER BY `oldpeak` + `ca` ASC LIMIT 5,1,,0.0,0.44,0.44,0.0,1.0,0.2,1.0
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-ADVANCED,"Compute the sum of the columns oldpeak, ca for each row in `heart_attack`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[37, 1, 2, 130, 250, 0, 1, 187, 0, 3.5, 0, 0, 2, 1], [66, 0, 3, 150, 226, 0, 1, 114, 0, 2.6, 0, 0, 2, 1], [69, 0, 3, 140, 239, 0, 1, 151, 0, 1.8, 2, 2, 2, 1], [57, 1, 0, 140, 192, 0, 1, 148, 0, 0.4, 1, 0, 1, 1], [63, 1, 3, 145, 233, 1, 0, 150, 0, 2.3, 0, 0, 1, 1]]",SELECT * FROM `heart_attack` ORDER BY `oldpeak` + `ca` DESC LIMIT 5,2,,0.0,0.852,0.852,0.0,1.0,0.8,0.7
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-ADVANCED,"Compute the sum of the columns fbs, ca, target for each row in `heart_attack`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[37, 1, 2, 130, 250, 0, 1, 187, 0, 3.5, 0, 0, 2, 1], [41, 0, 1, 130, 204, 0, 0, 172, 0, 1.4, 2, 0, 2, 1], [56, 1, 1, 120, 236, 0, 1, 178, 0, 0.8, 2, 0, 2, 1], [57, 0, 0, 120, 354, 0, 1, 163, 1, 0.6, 2, 0, 2, 1], [57, 1, 0, 140, 192, 0, 1, 148, 0, 0.4, 1, 0, 1, 1]]",SELECT * FROM `heart_attack` ORDER BY `fbs` + `ca` + `target` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-ADVANCED,"Compute the sum of the columns fbs, ca, target for each row in `heart_attack`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[52, 1, 2, 172, 199, 1, 1, 162, 0, 0.5, 2, 0, 3, 1, 2], [57, 0, 0, 140, 192, 0, 1, 148, 0, 0.4, 1, 0, 1, 1, 1], [44, 1, 1, 120, 263, 0, 1, 173, 0, 0.0, 2, 0, 3, 1, 1], [69, 0, 3, 140, 239, 0, 1, 151, 0, 1.8, 2, 2, 2, 1, 3], [37, 1, 2, 130, 250, 0, 1, 187, 0, 3.5, 0, 0, 2, 1, 1]]",SELECT * FROM `heart_attack` ORDER BY `fbs` + `ca` + `target` DESC LIMIT 5,2,,0.0,0.704,0.731,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-ADVANCED,"Compute the sum of the columns exang, slope, target for each row in `heart_attack`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[44, 1, 1, 120, 263, 0, 1, 173, 0, 0.0, 2, 0, 3, 1], [57, 0, 0, 140, 192, 0, 1, 148, 0, 0.4, 1, 0, 1, 1], [41, 0, 1, 130, 204, 0, 0, 172, 0, 1.4, 2, 0, 2, 1], [56, 0, 1, 140, 294, 0, 0, 153, 0, 1.3, 1, 0, 2, 1], [54, 1, 0, 140, 239, 0, 1, 160, 0, 1.2, 2, 0, 2, 1]]",SELECT * FROM `heart_attack` ORDER BY `exang` + `slope` + `target` ASC LIMIT 5,0,,0.0,0.538,0.519,0.0,1.0,0.2,1.0
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-ADVANCED,"Compute the sum of the columns exang, slope, target for each row in `heart_attack`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[52, 1, 2, 172, 199, 1, 1, 162, 0, 0.5, 2, 0, 3, 1], [63, 1, 3, 145, 233, 1, 0, 150, 0, 2.3, 0, 0, 1, 1], [37, 1, 2, 130, 250, 0, 1, 187, 0, 3.5, 0, 0, 2, 1], [57, 0, 0, 140, 192, 0, 1, 148, 0, 0.4, 1, 0, 1, 1], [56, 0, 1, 140, 294, 0, 0, 153, 0, 1.3, 1, 0, 2, 1]]",SELECT * FROM `heart_attack` ORDER BY `exang` + `slope` + `target` DESC LIMIT 5,0,,0.0,0.429,0.48,0.0,1.0,0.2,1.0
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-ADVANCED,"Compute the sum of the columns age, cp, target for each row in `heart_attack`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[41, 0, 1, 130, 204, 0, 0, 172, 0, 1.4, 2, 0, 2, 1], [56, 1, 1, 120, 236, 0, 1, 178, 0, 0.8, 2, 0, 2, 1], [48, 0, 2, 130, 275, 0, 1, 139, 0, 0.2, 2, 0, 2, 1], [49, 1, 1, 130, 266, 0, 1, 171, 0, 0.6, 2, 0, 2, 1], [59, 1, 0, 135, 234, 0, 1, 161, 0, 0.5, 1, 0, 3, 1]]",SELECT * FROM `heart_attack` ORDER BY `age` + `cp` + `target` ASC LIMIT 5,0,,0.0,0.556,0.577,0.0,1.0,0.4,1.0
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-ADVANCED,"Compute the sum of the columns age, cp, target for each row in `heart_attack`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[69, 0, 3, 140, 239, 0, 1, 151, 0, 1.8, 2, 2, 2, 1], [66, 0, 3, 150, 226, 0, 1, 114, 0, 2.6, 0, 0, 2, 1], [63, 1, 3, 145, 233, 1, 0, 150, 0, 2.3, 0, 0, 1, 1], [59, 1, 0, 135, 234, 0, 1, 161, 0, 0.5, 1, 0, 3, 1], [58, 0, 3, 150, 283, 1, 0, 162, 0, 1.0, 2, 0, 2, 1]]",SELECT * FROM `heart_attack` ORDER BY `age` + `cp` + `target` DESC LIMIT 5,1,,0.0,0.808,0.84,0.0,1.0,0.8,1.0
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-ADVANCED,"Compute the sum of the columns grade, rfstime, status for each row in `breast_cancer`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[24, 1762, 42, 0, 25, 2, 7, 0, 2, 0, 249, 1, 253], [7, 973, 37, 0, 20, 9, 0, 0, 1, 42, 0, 2, 44], [16, 1138, 51, 0, 21, 3, 1, 0, 0, 0, 1720, 0, 1726], [10, 97, 62, 1, 12, 2, 7, 0, 0, 0, 436, 1, 441], [6, 475, 48, 0, 21, 3, 8, 0, 0, 0, 293, 1, 297]]",SELECT * FROM `breast_cancer` ORDER BY `grade` + `rfstime` + `status` ASC LIMIT 5,0,,0.0,0.559,0.704,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-ADVANCED,"Compute the sum of the columns grade, rfstime, status for each row in `breast_cancer`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[4, 130, 65, 1, 30, 2, 5, 0, 36, 1, 1855, 0, 1877], [16, 1138, 51, 0, 21, 3, 1, 0, 0, 0, 1720, 0, 1723], [0, 132, 49, 0, 18, 2, 2, 0, 0, 0, 1838, 0, 1840], [17, 526, 63, 1, 27, 2, 1, 0, 0, 0, 1306, 1, 1309], [19, 1185, 58, 1, 45, 3, 4, 0, 0, 0, 370, 1, 374]]",SELECT * FROM `breast_cancer` ORDER BY `grade` + `rfstime` + `status` DESC LIMIT 5,0,,0.0,0.657,0.852,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-ADVANCED,"Compute the sum of the columns age, nodes, er for each row in `breast_cancer`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[14, 820, 32, 0, 57, 3, 24, 0, 13, 0, 448, 1, 69], [7, 973, 37, 0, 20, 9, 0, 0, 1, 42, 0, 46], [24, 1762, 42, 0, 25, 7, 0, 2, 0, 249, 1, 51], [3, 769, 45, 0, 25, 1, 0, 4, 0, 177, 0, 50], [9, 1180, 45, 0, 30, 1, 0, 0, 0, 1093, 1, 46]]",SELECT * FROM `breast_cancer` ORDER BY `age` + `nodes` + `er` ASC LIMIT 5,0,,0.0,0.645,0.769,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-ADVANCED,"Compute the sum of the columns age, nodes, er for each row in `breast_cancer`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[14, 820, 32, 0, 57, 3, 24, 0, 13, 0, 448, 1, 69], [5, 1642, 48, 0, 52, 2, 11, 0, 0, 0, 842, 1, 59], [20, 1545, 68, 1, 18, 2, 14, 0, 2, 0, 959, 1, 84], [19, 1185, 58, 1, 45, 3, 4, 0, 0, 0, 370, 1, 62], [4, 130, 65, 1, 30, 2, 5, 0, 36, 1, 1855, 0, 106]]",SELECT * FROM `breast_cancer` ORDER BY `age` + `nodes` + `er` DESC LIMIT 5,0,,0.0,0.421,0.516,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-ADVANCED,"Compute the sum of the columns age, pgr, rfstime for each row in `breast_cancer`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[7, 973, 37, 0, 20, 2, 9, 0, 0, 1, 42, 0, 79], [14, 820, 32, 0, 57, 3, 24, 0, 13, 0, 448, 1, 482], [23, 96, 63, 1, 30, 2, 7, 0, 0, 1, 698, 1, 761], [24, 1762, 42, 0, 25, 2, 7, 0, 2, 0, 249, 1, 293], [6, 475, 48, 0, 21, 3, 8, 0, 0, 0, 293, 1, 341]]",SELECT * FROM `breast_cancer` ORDER BY `age` + `pgr` + `rfstime` ASC LIMIT 5,0,,0.0,0.543,0.704,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-ADVANCED,"Compute the sum of the columns age, pgr, rfstime for each row in `breast_cancer`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[4, 130, 65, 1, 30, 2, 5, 0, 36, 1, 1855, 0, 1900], [16, 1138, 51, 0, 21, 3, 1, 0, 0, 0, 1720, 0, 1771], [17, 526, 63, 1, 27, 2, 1, 0, 0, 0, 1, 1306, 1369], [0, 132, 49, 0, 18, 2, 2, 0, 0, 0, 1838, 0, 1887], [1, 1575, 55, 1, 20, 3, 16, 0, 0, 0, 403, 1, 458]]",SELECT * FROM `breast_cancer` ORDER BY `age` + `pgr` + `rfstime` DESC LIMIT 5,0,,0.0,0.676,0.852,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-ADVANCED,"Compute the sum of the columns id, meno for each row in `breast_cancer`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1, 132, 49, 0, 18, 2, 2, 0, 0, 0, 1838, 0, 1], [6, 475, 48, 0, 21, 3, 8, 0, 0, 0, 293, 1, 6], [7, 973, 37, 0, 20, 2, 9, 0, 0, 1, 42, 0, 7], [9, 1180, 45, 0, 30, 2, 1, 0, 0, 0, 1093, 1, 9], [16, 1138, 51, 0, 21, 3, 1, 0, 0, 0, 1720, 0, 16]]",SELECT * FROM `breast_cancer` ORDER BY `id` + `meno` ASC LIMIT 5,0,,0.0,0.429,0.429,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-ADVANCED,"Compute the sum of the columns id, meno for each row in `breast_cancer`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[19, 1185, 58, 1, 45, 3, 4, 0, 0, 0, 370, 1, 20], [20, 1545, 68, 1, 18, 2, 14, 0, 2, 0, 959, 1, 21], [18, 1568, 47, 1, 12, 2, 2, 0, 50, 0, 942, 0, 19], [17, 526, 63, 1, 27, 2, 1, 0, 0, 0, 1306, 1, 18], [16, 1138, 51, 0, 21, 3, 1, 0, 0, 0, 1720, 0, 16]]",SELECT * FROM `breast_cancer` ORDER BY `id` + `meno` DESC LIMIT 5,0,,0.0,0.387,0.414,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-ADVANCED,"Compute the sum of the columns meno, rfstime, status for each row in `breast_cancer`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[24, 1762, 42, 0, 25, 2, 7, 0, 2, 0, 249, 1, 251], [7, 973, 37, 0, 20, 2, 9, 0, 0, 1, 42, 0, 42], [14, 820, 32, 0, 57, 3, 24, 0, 13, 0, 448, 1, 449], [16, 1138, 51, 0, 21, 3, 1, 0, 0, 0, 1720, 0, 1720], [17, 526, 63, 1, 27, 2, 1, 0, 0, 0, 1306, 1, 1308]]",SELECT * FROM `breast_cancer` ORDER BY `meno` + `rfstime` + `status` ASC LIMIT 5,0,,0.0,0.424,0.519,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-ADVANCED,"Compute the sum of the columns meno, rfstime, status for each row in `breast_cancer`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[4, 130, 65, 1, 30, 2, 5, 0, 36, 1, 1855, 0, 1872], [16, 1138, 51, 0, 21, 3, 1, 0, 0, 0, 1720, 0, 1720], [0, 132, 49, 0, 18, 2, 2, 0, 0, 0, 1838, 0, 1838], [17, 526, 63, 1, 27, 2, 1, 0, 0, 0, 1306, 1, 1308], [19, 1185, 58, 1, 45, 3, 4, 0, 0, 0, 370, 1, 372]]",SELECT * FROM `breast_cancer` ORDER BY `meno` + `rfstime` + `status` DESC LIMIT 5,0,,0.0,0.697,0.852,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-ADVANCED,"Compute the sum of the columns sex, thalach, oldpeak for each row in `heart_attack`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[41, 0, 1, 130, 204, 0, 0, 172, 0, 1.4, 2, 0, 2, 1, 172.4], [50, 0, 2, 120, 219, 0, 1, 158, 0, 1.6, 1, 0, 2, 1, 159.6], [57, 0, 0, 120, 354, 0, 1, 163, 1, 0.6, 2, 0, 2, 1, 164.6], [57, 1, 0, 140, 192, 0, 1, 148, 0, 0.4, 1, 0, 1, 1, 149.4], [56, 0, 1, 140, 294, 0, 0, 153, 0, 1.3, 1, 0, 2, 1, 154.3]]",SELECT * FROM `heart_attack` ORDER BY `sex` + `thalach` + `oldpeak` ASC LIMIT 5,0,,0.0,0.3,0.333,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-ADVANCED,"Compute the sum of the columns sex, thalach, oldpeak for each row in `heart_attack`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[69, 0, 3, 140, 239, 0, 1, 151, 0, 1.8, 2, 2, 2, 1, 151.8], [66, 0, 3, 150, 226, 0, 1, 114, 0, 2.6, 0, 0, 2, 1, 116.6], [59, 1, 0, 135, 234, 0, 1, 161, 0, 0.5, 1, 0, 3, 1, 162.5], [58, 0, 3, 150, 283, 1, 0, 162, 0, 1.0, 2, 0, 2, 1, 163.0], [57, 1, 2, 150, 168, 0, 1, 174, 0, 1.6, 2, 0, 2, 1, 175.6]]",SELECT * FROM `heart_attack` ORDER BY `sex` + `thalach` + `oldpeak` DESC LIMIT 5,0,,0.0,0.29,0.346,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-ADVANCED,"Compute the sum of the columns oldpeak, ca for each row in `heart_attack`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[57, 0, 0, 120, 354, 0, 1, 163, 1, 0.6, 2, 0, 2, 1], [49, 1, 1, 130, 266, 0, 1, 171, 0, 0.6, 2, 0, 2, 1], [48, 0, 2, 130, 275, 0, 1, 139, 0, 0.2, 2, 0, 2, 1], [58, 0, 2, 120, 340, 0, 1, 172, 0, 0.0, 2, 0, 2, 1], [50, 0, 2, 120, 219, 0, 1, 158, 0, 1.6, 1, 0, 2, 1]]",SELECT * FROM `heart_attack` ORDER BY `oldpeak` + `ca` ASC LIMIT 5,0,,0.0,0.565,0.52,0.0,1.0,0.4,0.0
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-ADVANCED,"Compute the sum of the columns oldpeak, ca for each row in `heart_attack`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[69, 0, 3, 140, 239, 0, 1, 151, 0, 1.8, 2, 2, 2, 1], [66, 0, 3, 150, 226, 0, 1, 114, 0, 2.6, 0, 0, 2, 1], [58, 0, 3, 150, 283, 1, 0, 162, 0, 1.0, 2, 0, 2, 1], [64, 1, 3, 110, 211, 0, 0, 144, 1, 1.8, 1, 0, 2, 1], [59, 1, 0, 135, 234, 0, 1, 161, 0, 0.5, 1, 0, 3, 1]]",SELECT * FROM `heart_attack` ORDER BY `oldpeak` + `ca` DESC LIMIT 5,0,,0.0,0.692,0.667,0.0,1.0,0.6,1.0
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-ADVANCED,"Compute the sum of the columns fbs, ca, target for each row in `heart_attack`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[41, 0, 1, 130, 204, 0, 0, 172, 0, 1.4, 2, 0, 2, 1, 1], [56, 1, 1, 120, 236, 0, 1, 178, 0, 0.8, 2, 0, 2, 1, 1], [57, 0, 0, 120, 354, 0, 1, 163, 1, 0.6, 2, 0, 2, 1, 1], [57, 1, 0, 140, 192, 0, 1, 148, 0, 0.4, 1, 0, 1, 1, 1], [56, 0, 1, 140, 294, 0, 0, 153, 0, 1.3, 1, 0, 2, 1, 1]]",SELECT * FROM `heart_attack` ORDER BY `fbs` + `ca` + `target` ASC LIMIT 5,0,,0.0,0.875,0.84,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-ADVANCED,"Compute the sum of the columns fbs, ca, target for each row in `heart_attack`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[69, 0, 3, 140, 239, 0, 1, 151, 0, 1.8, 2, 2, 2, 1, 3], [37, 1, 2, 130, 250, 0, 1, 187, 0, 3.5, 0, 0, 2, 1, 1], [58, 0, 3, 150, 283, 1, 0, 162, 0, 1.0, 2, 0, 2, 1, 2], [58, 0, 2, 120, 219, 0, 1, 158, 0, 1.6, 1, 0, 2, 1, 1], [52, 1, 2, 172, 199, 1, 1, 162, 0, 0.5, 2, 0, 3, 1, 2]]",SELECT * FROM `heart_attack` ORDER BY `fbs` + `ca` + `target` DESC LIMIT 5,0,,0.0,0.846,0.846,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-ADVANCED,"Compute the sum of the columns exang, slope, target for each row in `heart_attack`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[57, 0, 0, 120, 354, 0, 1, 163, 1, 0.6, 2, 0, 2, 1, 4], [41, 0, 1, 130, 204, 0, 0, 172, 0, 1.4, 2, 0, 2, 1, 3], [56, 0, 1, 140, 294, 0, 0, 153, 0, 1.3, 1, 0, 2, 1, 2], [57, 1, 0, 140, 192, 0, 1, 148, 0, 0.4, 1, 0, 1, 1, 2], [44, 1, 1, 120, 263, 0, 1, 173, 0, 0.0, 2, 0, 3, 1, 3]]",SELECT * FROM `heart_attack` ORDER BY `exang` + `slope` + `target` ASC LIMIT 5,0,,0.0,0.538,0.519,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-ADVANCED,"Compute the sum of the columns exang, slope, target for each row in `heart_attack`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[69, 0, 3, 140, 239, 0, 1, 151, 0, 1.8, 2, 2, 2, 1, 3], [66, 0, 3, 150, 226, 0, 1, 114, 0, 2.6, 0, 0, 2, 1, 1], [63, 1, 3, 145, 233, 1, 0, 150, 0, 2.3, 0, 0, 1, 1, 1], [59, 1, 0, 135, 234, 0, 1, 161, 0, 0.5, 1, 0, 3, 1, 2], [58, 0, 3, 150, 283, 1, 0, 162, 0, 1.0, 2, 0, 2, 1, 3]]",SELECT * FROM `heart_attack` ORDER BY `exang` + `slope` + `target` DESC LIMIT 5,0,,0.0,0.231,0.24,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-ADVANCED,"Compute the sum of the columns age, cp, target for each row in `heart_attack`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[41, 0, 1, 130, 204, 0, 0, 172, 0, 1.4, 2, 0, 2, 1, 43], [44, 1, 1, 120, 263, 0, 1, 173, 0, 0.0, 2, 0, 3, 1, 46], [48, 0, 2, 130, 275, 0, 1, 139, 0, 0.2, 2, 0, 2, 1, 51], [49, 1, 1, 130, 266, 0, 1, 171, 0, 0.6, 2, 0, 2, 1, 51], [50, 0, 2, 120, 219, 0, 1, 158, 0, 1.6, 1, 0, 2, 1, 53]]",SELECT * FROM `heart_attack` ORDER BY `age` + `cp` + `target` ASC LIMIT 5,0,,0.0,0.655,0.731,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-ADVANCED,"Compute the sum of the columns age, cp, target for each row in `heart_attack`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[69, 0, 3, 140, 239, 0, 1, 151, 0, 1.8, 2, 2, 2, 1, 73], [66, 0, 3, 150, 226, 0, 1, 114, 0, 2.6, 0, 0, 2, 1, 70], [63, 1, 3, 145, 233, 1, 0, 150, 0, 2.3, 0, 0, 1, 1, 67], [59, 1, 0, 135, 234, 0, 1, 161, 0, 0.5, 1, 0, 3, 1, 60], [58, 0, 3, 150, 283, 1, 0, 162, 0, 1.0, 2, 0, 2, 1, 62]]",SELECT * FROM `heart_attack` ORDER BY `age` + `cp` + `target` DESC LIMIT 5,0,,0.0,0.677,0.84,0.0,1.0,0.0,0.5

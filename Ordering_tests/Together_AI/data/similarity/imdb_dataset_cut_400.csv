@@ -1,0 +1,41 @@
+IMDB_id,title,year,genre,directors,writers,main_cast,duration_min,AVG_score,number_of_votes
+tt0377556,"Goodbye, Dragon Inn",2003,Comedy|Drama,Tsai Ming-liang,Tsai Ming-liang,Kang-sheng Lee|Shiang-chyi Chen,82,7.1,6905
+tt0420555,How Much Do You Love Me?,2005,Comedy|Drama|Romance,Bertrand Blier,Bertrand Blier,Monica Bellucci|Bernard Campan|Gérard Depardieu|Jean-Pierre Darroussin,95,5.6,8087
+tt0387914,Innocent Voices,2004,Drama|Thriller|War,Luis Mandoki,Luis Mandoki,Leonor Varela,120,7.8,8512
+tt0423877,Boudu,2005,Comedy,Gérard Jugnot,René Fauchois|Gérard Jugnot|Philippe Lopes-Curval,Gérard Depardieu|Gérard Jugnot|Catherine Frot,104,5.2,1324
+tt0357111,RRRrrrr!!!,2004,Comedy|Crime|Mystery,Alain Chabat,Maurice Barthélémy|Alain Chabat|Marina Foïs,Marina Foïs|Gérard Depardieu|Samir Guesmi|Cyril Casmèze,98,5.9,15841
+tt0365478,Man with the Screaming Brain,2005,Comedy|Fantasy|Sci-Fi,Bruce Campbell,Bruce Campbell|David M. Goodman|Sam Raimi,Bruce Campbell|Tamara Gorski|Ted Raimi|Antoinette Byron|Stacy Keach,90,5.4,5775
+tt0383694,Vera Drake,2004,Crime|Drama,Mike Leigh,Mike Leigh,Imelda Staunton|Jim Broadbent|Heather Craney|Richard Graham,125,7.6,28072
+tt0363143,Trauma,2004,Mystery|Thriller,Marc Evans,,Colin Firth|Naomie Harris|Mena Suvari,94,4.7,3630
+tt0282413,A Touch of Fate,2003,Drama,Rebecca Bagley-Cook,Rebecca Bagley-Cook,Teri Hatcher|Andrea Powell|Rhoda Griffis,101,5.5,223
+tt0408351,Yard Sale,2004,Comedy|Romance,Bob Logan,Bob Logan|Robert J. Elisberg,David Lipper,102,7.8,62
+tt0218140,Death and Taxis,2007,Drama,Kevin Mukherji,,Rich Komenich,89,8.1,41
+tt0417976,The Promise,2005,Action|Drama|Fantasy,Kaige Chen,Kaige Chen,Cecilia Cheung|Jang Dong-gun,121,5.6,9637
+tt0347048,Head-On,2004,Drama|Romance,Fatih Akin,Fatih Akin,Güven Kiraç|Stefan Gebelhoff,121,7.8,59863
+tt0419634,The Face of Jizo,2004,Drama,Kazuo Kuroki,Hisashi Inoue|Kazuo Kuroki,Yoshio Harada|Tadanobu Asano,99,7.1,268
+tt0396735,Magic Kitchen,2004,Comedy|Romance,Chi-Ngai Lee,Chi-Ngai Lee,Sheila Chan|Sammi Cheng|Nicola Cheung|Stephen Fung|Asuka Higuchi,105,5.3,561
+tt0367153,Toolbox Murders,2004,Drama|Horror|Mystery,Tobe Hooper,Jace Anderson|Adam Gierasch,Angela Bettis|Rance Howard|Juliet Landau,95,5.3,9221
+tt0417415,Aliens of the Deep,2005,Documentary|Family,James Cameron,,,100,6.3,3599
+tt0353691,Magnifico,2003,Drama,Maryo J. de los Reyes,,Mark Gil,120,8.0,988
+tt0410764,Tideland,2005,Drama|Fantasy|Horror,Terry Gilliam,Tony Grisoni|Terry Gilliam,Jeff Bridges|Jennifer Tilly|Jodelle Ferland|Jodelle Ferland|Janet McTeer,120,6.3,35580
+tt0383460,The Letter: An American Town and the 'Somali Invasion',2003,Documentary,Ziad H. Hamzeh,Ziad H. Hamzeh,,76,7.9,124
+tt0413053,In the Darkness of the Night,2004,Crime|Drama,João Canijo,João Canijo|Pierre Hodgson,Fernando Luís|Rita Blanco|Beatriz Batarda|Cleia Almeida,94,6.7,647
+tt0389860,Click,2006,Comedy|Drama|Fantasy,Frank Coraci,Steve Koren,Adam Sandler|Kate Beckinsale|Christopher Walken|David Hasselhoff|Henry Winkler,107,6.4,377740
+tt0349903,Ocean's Twelve,2004,Crime|Thriller,Steven Soderbergh,George Clayton Johnson,George Clooney|Brad Pitt|Julia Roberts|Catherine Zeta-Jones,125,6.5,431360
+tt0378804,State's Evidence,2004,Drama|Thriller,Benjamin Louis,Mark Brown,Kris Lemche,106,5.9,790
+tt0427392,The Invasion,2007,Sci-Fi|Thriller,Oliver Hirschbiegel,Jack Finney,Nicole Kidman|Daniel Craig|Jeremy Northam,99,5.9,86625
+tt0379269,Dying at Grace,2003,Documentary,Allan King,,,148,8.2,456
+tt0360960,Shadows of Time,2004,Drama|Romance,Florian Gallenberger,Florian Gallenberger,Irrfan Khan,122,7.6,1169
+tt0415679,Boy Eats Girl,2005,Comedy|Fantasy|Horror,Stephen Bradley,,Laurence Kinlan,80,4.9,4095
+tt0416943,Green Hat,2004,Drama,Fendou Liu,Fendou Liu,Haibin Li,94,6.8,279
+tt0338077,Grind,2003,Adventure|Comedy|Sport,Casey La Scala,,Adam Brody|Joey Kern,105,5.9,14051
+tt0306047,Scary Movie 3,2003,Comedy,David Zucker,Marlon Wayans|Buddy Johnson|Phil Beauman|Jason Friedberg,Anna Faris|Charlie Sheen|Regina Hall|Pamela Anderson|Jenny McCarthy-Wahlberg,84,5.6,166781
+tt0411267,The Dark,2005,Drama|Fantasy|Horror,John Fawcett,,Sean Bean|Maria Bello,93,5.3,11755
+tt0266489,Duplex,2003,Comedy,Danny DeVito,Larry Doyle,Ben Stiller|Drew Barrymore|Harvey Fierstein,89,5.9,64682
+tt0399877,What the #$*! Do We (K)now!?,2004,Comedy|Documentary|Drama,William Arntz|Betsy Chasse,William Arntz|Betsy Chasse|Matthew Hoffman,Elaine Hendrix|John Ross Bowie|Robert Bailey Jr.,109,5.2,14036
+tt0424997,L'enfant endormi,2004,Drama,Yasmine Kassari,Yasmine Kassari,,95,6.5,154
+tt0382691,Gilles' Wife,2004,Drama,Frédéric Fonteyne,Philippe Blasband|Frédéric Fonteyne|Marion Hänsel,Emmanuelle Devos|Clovis Cornillac|Colette Emmanuelle|Gil Lagay,103,6.7,914
+tt0286947,Scorched,2003,Comedy|Crime,Gavin Grazer,,Alicia Silverstone|Rachael Leigh Cook|Woody Harrelson|John Cleese|Paulo Costanzo,95,5.9,7294
+tt0409043,Grilled,2006,Comedy|Crime,Jason Ensler,Larry Hankin,Ray Romano|Kevin James|Sofía Vergara|Juliette Lewis|Kim Coates,83,5.2,5971
+tt0392005,Filipinas,2003,Drama,Joel Lamangan,Roy Iglesias,Richard Gomez,100,7.0,69
+tt0416979,Meu Tio Matou um Cara,2004,Adventure|Comedy,Jorge Furtado,Jorge Furtado|Guel Arraes,,87,6.6,3117

@@ -1,0 +1,6 @@
+table,model,avg_valid_efficiency_score,avg_cell_precision,avg_cell_recall,avg_execution_accuracy,avg_tuple_cardinality,avg_tuple_constraint,avg_tuple_order
+accounts_receviable,gpt-5_mini,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+fitness_tracker,gpt-5_mini,0.0,0.375,0.5,0.25,1.0,0.25,1.0
+heart_attack,gpt-5_mini,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+mobiles,gpt-5_mini,0.0,0.625,0.625,0.5,1.0,0.5,1.0
+olympic_games,gpt-5_mini,0.0,0.8400000000000001,0.9334,0.0,1.0,0.6,1.0

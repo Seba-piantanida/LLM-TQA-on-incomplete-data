@@ -1,0 +1,162 @@
+db_path,table_name,test_category,query,model,AI_answer,SQL_query,failed_attempts,note,valid_efficiency_score,cell_precision,cell_recall,execution_accuracy,tuple_cardinality,tuple_constraint,tuple_order
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `grade` from `breast_cancer`. Sort it in descending order and return the first 15 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[3], [3], [3], [3], [3], [3], [3], [3], [3], [3], [3], [3], [3], [3], [3]]",SELECT `grade` FROM `breast_cancer` ORDER BY `grade` DESC LIMIT 15,0,,0.0,1.0,0.5,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `er` from `breast_cancer`. Sort it in descending order and return the first 15 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0]]",SELECT `er` FROM `breast_cancer` ORDER BY `er` DESC LIMIT 15,0,,0.0,1.0,0.143,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,fitness_trakers,ORDERBY-PROJECT,Select only the column `Brand Name` from `fitness_trakers`. Sort it in descending order and return the first 15 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Xiaomi'], ['Xiaomi'], ['HONOR'], ['Xiaomi'], ['Xiaomi'], ['Xiaomi'], ['Fitbit'], ['Fitbit'], ['Xiaomi'], ['Xiaomi'], ['Fitbit'], ['Fitbit'], ['Fitbit'], ['Fitbit']]",SELECT `Brand Name` FROM `fitness_trakers` ORDER BY `Brand Name` DESC LIMIT 15,0,,0.0,0.333,0.333,0.0,0.933,0.0,1.0
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `slope` from `heart_attack`. Sort it in ascending order and return the first 15 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1]]",SELECT `slope` FROM `heart_attack` ORDER BY `slope` ASC LIMIT 15,0,,0.0,1.0,0.333,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `ca` from `heart_attack`. Sort it in ascending order and return the first 15 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0]]",SELECT `ca` FROM `heart_attack` ORDER BY `ca` ASC LIMIT 15,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_complete_cut_300.sqlite,mobiles,ORDERBY-PROJECT,Select only the column `Battery Capacity` from `mobiles`. Sort it in ascending order and return the first 15 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['4000mAh'], ['4100mAh'], ['4200mAh'], ['4200mAh'], ['4300mAh'], ['4300mAh'], ['4400mAh'], ['4400mAh'], ['4500mAh'], ['4500mAh'], ['4600mAh'], ['4600mAh'], ['4700mAh'], ['4800mAh']]",SELECT `Battery Capacity` FROM `mobiles` ORDER BY `Battery Capacity` ASC LIMIT 15,0,,0.0,0.0,0.0,0.0,0.933,0.0,0.5
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `grade` from `breast_cancer`. Sort it in descending order and return the first 15 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[3], [3], [3], [3], [3], [3], [3], [3], [3], [3], [3], [3], [3], [3], [3]]",SELECT `grade` FROM `breast_cancer` ORDER BY `grade` DESC LIMIT 15,0,,0.0,1.0,0.5,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `er` from `breast_cancer`. Sort it in descending order and return the first 15 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `er` FROM `breast_cancer` ORDER BY `er` DESC LIMIT 15,3,"{
+  ""table_name"": ""breast_cancer"",
+  ""ordered_entries"": [
+    {
+      ""grade"": 3
+    },
+    {
+      ""grade"": 3
+    },
+    {
+      ""grade"": 3
+    },
+    {
+      ""grade"": 3
+    },
+    {
+      ""grade"": 3
+    },
+    {
+      ""grade"": 3
+    },
+    {
+      ""grade"": 3
+    },
+    {
+      ""grade"": 3
+    },
+    {
+      ""grade"": 3
+    },
+    {
+      ""grade"": 3
+    },
+    {
+      ""grade"": 3
+    },
+    {
+      ""grade"": 3
+    },
+    {
+      ""grade"": 3
+    },
+    {
+      ""grade"": 3
+    },
+    {
+      ""grade"": 3
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_300.sqlite,fitness_trakers,ORDERBY-PROJECT,Select only the column `Brand Name` from `fitness_trakers`. Sort it in descending order and return the first 15 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown'], ['Unknown']]",SELECT `Brand Name` FROM `fitness_trakers` ORDER BY `Brand Name` DESC LIMIT 15,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `slope` from `heart_attack`. Sort it in ascending order and return the first 15 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `slope` FROM `heart_attack` ORDER BY `slope` ASC LIMIT 15,3,"```
+{
+  ""table_name"": ""fitness_trakers"",
+  ""ordered_entries"": [
+    {
+      ""Brand Name"": ""Unknown""
+    },
+    {
+      ""Brand Name"": ""Unknown""
+    },
+    {
+      ""Brand Name"": ""Unknown""
+    },
+    {
+      ""Brand Name"": ""Unknown""
+    },
+    {
+      ""Brand Name"": ""Unknown""
+    },
+    {
+      ""Brand Name"": ""Unknown""
+    },
+    {
+      ""Brand Name"": ""Unknown""
+    },
+    {
+      ""Brand Name"": ""Unknown""
+    },
+    {
+      ""Brand Name"": ""Unknown""
+    },
+    {
+      ""Brand Name"": ""Unknown""
+    },
+    {
+      ""Brand Name"": ""Unknown""
+    },
+    {
+      ""Brand Name"": ""Unknown""
+    },
+    {
+      ""Brand Name"": ""Unknown""
+    },
+    {
+      ""Brand Name"": ""Unknown""
+    },
+    {
+      ""Brand Name"": ""Unknown""
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `ca` from `heart_attack`. Sort it in ascending order and return the first 15 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0]]",SELECT `ca` FROM `heart_attack` ORDER BY `ca` ASC LIMIT 15,1,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_complete_cut_300.sqlite,mobiles,ORDERBY-PROJECT,Select only the column `Battery Capacity` from `mobiles`. Sort it in ascending order and return the first 15 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `Battery Capacity` FROM `mobiles` ORDER BY `Battery Capacity` ASC LIMIT 15,3,"{
+  ""table_name"": ""heart_attack"",
+  ""ordered_entries"": [
+    {
+      ""ca"": 0
+    },
+    {
+      ""ca"": 0
+    },
+    {
+      ""ca"": 0
+    },
+    {
+      ""ca"": 0
+    },
+    {
+      ""ca"": 0
+    },
+    {
+      ""ca"": 0
+    },
+    {
+      ""ca"": 0
+    },
+    {
+      ""ca"": 0
+    },
+    {
+      ""ca"": 0
+    },
+    {
+      ""ca"": 0
+    },
+    {
+      ""ca"": 0
+    },
+    {
+      ""ca"": 0
+    },
+    {
+      ""ca"": 0
+    },
+    {
+      ""ca"": 0
+    },
+    {
+      ""ca"": 0
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0

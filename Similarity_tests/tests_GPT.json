@@ -1,0 +1,15 @@
+[
+    {
+        "test_path": "tests/test_movie_similarity_bilingual_cut_300.csv",
+        "out_path": "results/no_id/cut_300",
+        "out_name":"cut_300.csv",
+        "modes": [ "NULL", "REMOVE"]
+    },
+
+    {
+        "test_path": "tests/test_movie_similarity_bilingual_cut_1000.csv",
+        "out_path": "results/no_id/cut_1000",
+        "out_name":"cut_1000.csv",
+        "modes": [ "NULL", "REMOVE"]
+    }
+]

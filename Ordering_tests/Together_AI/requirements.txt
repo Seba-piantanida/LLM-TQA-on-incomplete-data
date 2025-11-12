@@ -1,0 +1,15 @@
+func_timeout==4.3.5
+langgraph==0.4.0
+numpy==1.26.4            # ✅ compatibile con pandas 2.2.1
+ollama==0.4.8
+pandas==2.2.1            # ✅ compatibile con Python 3.12
+pydantic==2.11.4
+pytest==8.3.5
+python-dotenv==1.1.0
+scikit-learn==1.4.2      # ✅ ultima versione stabile (1.6.1 non ancora su PyPI)
+scipy==1.13.0
+SQLAlchemy==2.0.40
+tensorflow==2.16.1       # ✅ compatibile con Python 3.12
+together==1.5.5
+tqdm==4.66.4
+typing_extensions==4.13.2

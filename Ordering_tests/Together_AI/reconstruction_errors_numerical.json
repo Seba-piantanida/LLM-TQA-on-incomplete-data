@@ -1,0 +1,101 @@
+{
+    "energy_consumption": {
+        "removable_columns": [
+            "kwh_used",
+            "avg_daily_kwh",
+            "total_cost"
+        ],
+        "reconstruction_errors": {
+            "id": 1.0565743679009691,
+            "kwh_used": 0.006595878938100127,
+            "days_active": 0.8086388523932986,
+            "cost_per_kwh": 0.21644141443374643,
+            "avg_daily_kwh": 0.0085825217962661,
+            "total_cost": 0.008407294627516555
+        },
+        "threshold_used": 0.15,
+        "median_error": 0.11251196811500626
+    },
+    "logistics_delivery": {
+        "removable_columns": [
+            "distance_km",
+            "fuel_efficiency_kmpl",
+            "packages_per_km"
+        ],
+        "reconstruction_errors": {
+            "id": 1.0142856642720903,
+            "distance_km": 0.0973964498488136,
+            "packages": 0.2031024582167792,
+            "time_hrs": 0.6301284491094619,
+            "fuel_used_l": 0.23085553218309016,
+            "speed_kmph": 0.23483981903969822,
+            "fuel_efficiency_kmpl": 0.14551378652862232,
+            "packages_per_km": 0.04845013952807445
+        },
+        "threshold_used": 0.15,
+        "median_error": 0.2169789951999347
+    },
+    "student_performance": {
+        "removable_columns": [
+            "math_score",
+            "english_score",
+            "average_score"
+        ],
+        "reconstruction_errors": {
+            "id": 0.6950537252439382,
+            "math_score": 0.03721014212285458,
+            "english_score": 0.06579201022061164,
+            "average_score": 0.01000600236982106
+        },
+        "threshold_used": 0.15,
+        "median_error": 0.05150107617173311
+    },
+    "products": {
+        "removable_columns": [
+            "price",
+            "total_revenue",
+            "is_top_seller"
+        ],
+        "reconstruction_errors": {
+            "id": 1.3103288566918692,
+            "price": 0.06688608425749319,
+            "units_sold": 0.32283762951495776,
+            "total_revenue": 0.04702977018042762,
+            "is_top_seller": 0.1111111044883728
+        },
+        "threshold_used": 0.15,
+        "median_error": 0.1111111044883728
+    },
+    "BMI": {
+        "removable_columns": [
+            "weight_kg",
+            "BMI",
+            "risk_category"
+        ],
+        "reconstruction_errors": {
+            "id": 1.3443963571197615,
+            "height_m": 0.27532187205805597,
+            "weight_kg": 0.032845160530913166,
+            "BMI": 0.02604886516465048,
+            "risk_category": 0.0
+        },
+        "threshold_used": 0.15,
+        "median_error": 0.032845160530913166
+    },
+    "financial": {
+        "removable_columns": [
+            "income",
+            "expenses",
+            "savings"
+        ],
+        "reconstruction_errors": {
+            "id": 1.3342383802121,
+            "income": 0.10186873863235726,
+            "expenses": 0.048849278175490916,
+            "savings": 0.004687176239390862,
+            "risk_profile": 0.3333333134651184
+        },
+        "threshold_used": 0.15,
+        "median_error": 0.10186873863235726
+    }
+}

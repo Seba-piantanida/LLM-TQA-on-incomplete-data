@@ -1,0 +1,27 @@
+{
+  "models": ["deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free",
+    "meta-llama/Llama-3.3-70B-Instruct-Turbo-Free"],
+  "tests": [
+     {
+      "test_file": "tests/similarity/test_movie_similarity_bilingual_cut_300.csv",
+      "out_path": "output/similarity/no_id/cut_300",
+      "test_types": ["nullable", "remove"],
+      "rem_col": ["movie_id"]
+    },
+    {
+      "test_file": "tests/similarity/test_movie_similarity_bilingual_cut_300.csv",
+      "out_path": "output/similarity/no_all/cut_300",
+      "test_types": ["nullable", "remove"],
+      "rem_col": ["year", "genre", "directors", "writers", "main_cast", "duration_min", "AVG_score", "number_of_votes"]
+    }
+    
+  ],
+  "done": [
+    {
+      "test_file": "tests/similarity/test_movie_similarity_bilingual_cut_1000.csv",
+      "out_path": "output/similarity/no_all/cut_1000",
+      "test_types": ["nullable", "remove"]
+    }
+
+  ]
+}

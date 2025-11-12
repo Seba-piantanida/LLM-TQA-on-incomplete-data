@@ -1,0 +1,581 @@
+db_path,table_name,test_category,query,model,AI_answer,SQL_query,failed_attempts,note,valid_efficiency_score,cell_precision,cell_recall,execution_accuracy,tuple_cardinality,tuple_constraint,tuple_order
+data/db_numerical_simple.sqlite,BMI,ORDERBY-SINGLE,"List the all rows from the table `BMI`, sorted by the column `BMI` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,[],SELECT * FROM `BMI` ORDER BY `BMI` ASC,3,"<think>
+Alright, so I need to figure out how to respond to the user's query. They provided a dataset with BMI information and asked to list all rows sorted by BMI in ascending order. The BMI column is currently all nulls, so my first thought is that I need to calculate the BMI for each entry.
+
+I remember that BMI is calculated by dividing weight in kilograms by the square of height in meters. So, for each person, I'll take their weight_kg and divide it by (height_m squared). Once I have all the BMI values, I can sort the entries from lowest to highest.
+
+Looking at the dataset, I see that each row has an id, name, height_m, weight_kg, and risk_category. Since the BMI is null, I'll compute it for each. For example, the first entry is Alice with height 1.65m and weight 90.6kg. Her BMI would be 90.6 / (1.65^2). Let me calculate that: 1.65 squared is 2.7225, so 90.6 divided by 2.7225 is approximately 33.29. That seems high, so her risk category is probably ""High.""
+
+I'll do this for each person. Once all BMIs are calculated, I'll sort the entire dataset based on the BMI values from lowest to highest. After sorting, I'll prepare the JSON response as specified, making sure all fields are filled and no nulls are present.
+
+I also need to ensure that the JSON structure matches exactly what the user provided, with the table name and an array of ordered entries. Each entry should include id, name, height_m, weight_kg, BMI, and risk_category. I'll double-check that all calculations are correct and that the sorting is accurate.
+
+Finally, I'll format everything properly in JSON, ensuring there are no syntax errors. I'll make sure that the response only includes the JSON without any additional text or explanations, as per the user's instructions.
+</think>
+
+```json
+{
+  ""table_name"": ""BMI"",
+  ""ordered_entries"": [
+    {
+      ""id"": 26,
+      ""name"": ""Liam"",
+      ""height_m"": 1.58,
+      ""weight_kg"": 51.6,
+      ""BMI"": 20.96,
+      ""risk_category"": ""Low""
+    },
+    {
+      ""id"": 10,
+      ""name"": ""Karen"",
+      ""height_m"": 1.51,
+      ""weight_kg"": 54.2,
+      ""BMI"": 23.07,
+      ""risk_category"": ""Low""
+    },
+    {
+      ""id"": 12,
+      ""name"": ""Maria"",
+      ""height_m"": 1.83,
+      ""weight_kg"": 47.6,
+      ""BMI"": 14.69,
+      ""risk_category"": ""Low""
+    },
+    {
+      ""id"": 7,
+      ""name"": ""Helen"",
+      ""height_m"": 1.85,
+      ""weight_kg"": 52.3,
+      ""BMI"": 15.33,
+      ""risk_category"": ""Low""
+    },
+    {
+      ""id"": 27,
+      ""name"": ""Noah"",
+      ""height_m"": 1.71,
+      ""weight_kg"": 59.7,
+      ""BMI"": 20.27,
+      ""risk_category"": ""Low""
+    },
+    {
+      ""id"": 28,
+      ""name"": ""Mia"",
+      ""height_m"": 1.74,
+      ""weight_kg"": 48.4,
+      ""BMI"": 15.84,
+      ""risk_category"": ""Low""
+    },
+    {
+      ""id"": 22,
+      ""name"": ""Wendy"",
+      ""height_m"": 1.62,
+      ""weight_kg"": 115.5,
+      ""BMI"": 43.83,
+      ""risk_category"": ""High""
+    },
+    {
+      ""id"": 19,
+      ""name"": ""Tina"",
+      ""height_m"": 1.62,
+      ""weight_kg"": 58.9,
+      ""BMI"": 22.57,
+      ""risk_category"": ""Low""
+    },
+    {
+      ""id"": 16,
+      ""name"": ""Quincy"",
+      ""height_m"": 1.62,
+      ""weight_kg"": 68.4,
+      ""BMI"": 26.30,
+      ""risk_category"": ""Medium""
+    },
+    {
+      ""id"": 14,
+      ""name"": ""Oscar"",
+      ""height_m"": 1.57,
+      ""weight_kg"": 64.4,
+      ""BMI"": 26.14,
+      ""risk_category"": ""Medium""
+    },
+    {
+      ""id"": 15,
+      ""name"": ""Paul"",
+      ""height_m"": 1.57,
+      ""weight_kg"": 94.7,
+      ""BMI"": 37.93,
+      ""risk_category"": ""High""
+    },
+    {
+      ""id"": 17,
+      ""name"": ""Rachel"",
+      ""height_m"": 1.71,
+      ""weight_kg"": 84.0,
+      ""BMI"": 28.85,
+      ""risk_category"": ""Medium""
+    },
+    {
+      ""id"": 18,
+      ""name"": ""Steve"",
+      ""height_m"": 1.67,
+      ""weight_kg"": 86.0,
+      ""BMI"": 30.96,
+      ""risk_category"": ""Medium""
+    },
+    {
+      ""id"": 24,
+      ""name"": ""Yara"",
+      ""height_m"": 1.68,
+      ""weight_kg"": 89.8,
+      ""BMI"": 31.83,
+      ""risk_category"": ""Medium""
+    },
+    {
+      ""id"": 25,
+      ""name"": ""Zane"",
+      ""height_m"": 1.81,
+      ""weight_kg"": 114.1,
+      ""BMI"": 32.81,
+      ""risk_category"": ""Medium""
+    },
+    {
+      ""id"": 13,
+      ""name"": ""Nina"",
+      ""height_m"": 1.58,
+      ""weight_kg"": 113.2,
+      ""BMI"": 45.46,
+      ""risk_category"": ""High""
+    },
+    {
+      ""id"": 20,
+      ""name"": ""Uma"",
+      ""height_m"": 1.74,
+      ""weight_kg"": 117.7,
+      ""BMI"": 38.79,
+      ""risk_category"": ""High""
+    },
+    {
+      ""id"": 21,
+      ""name"": ""Victor"",
+      ""height_m"": 1.56,
+      ""weight_kg"": 103.1,
+      ""BMI"": 42.16,
+      ""risk_category"": ""High""
+    },
+    {
+      ""id"": 23,
+      ""name"": ""Xander"",
+      ""height_m"": 1.65,
+      ""weight_kg"": 112.1,
+      ""BMI"": 41.33,
+      ""risk_category"": ""High""
+    },
+    {
+      ""id"": 4,
+      ""name"": ""Emma"",
+      ""height_m"": 1.56,
+      ""weight_kg"": 117.4,
+      ""BMI"": 47.96,
+      ""risk_category"": ""High""
+    },
+    {
+      ""id"": 3,
+      ""name"": ""David"",
+      ""height_m"": 1.74,
+      ""weight_kg"": 116.2,
+      ""BMI"": 38.35,
+      ""risk_category"": ""High""
+    },
+    {
+      ""id"": 5,
+      ""name"": ""Frank"",
+      ""height_m"": 1.56,
+      ""weight_kg"": 105.6,
+      ""BMI"": 43.08,
+      ""risk_category"": ""High""
+    },
+    {
+      ""id"": 6,
+      ""name"": ""Grace"",
+      ""height_m"": 1.52,
+      ""weight_kg"": 67.8,
+      ""BMI"": 29.17,
+      ""risk_category"": ""Medium""
+    },
+    {
+      ""id"": 8,
+      ""name"": ""Ian"",
+      ""height_m"": 1.74,
+      ""weight_kg"": 96.3,
+      ""BMI"": 31.74,
+      ""risk_category"": ""Medium""
+    },
+    {
+      ""id"": 9,
+      ""name"": ""Jack"",
+      ""height_m"": 1.78,
+      ""weight_kg"": 78.0,
+      ""BMI"": 24.87,
+      ""risk_category"": ""Low""
+    },
+    {
+      ""id"": 11,
+      ""name"": ""Leo"",
+      ""height_m"": 1.89,
+      ""weight_kg"": 82.1,
+      ""BMI"": 23.43,
+      ""risk_category"": ""Low""
+    },
+    {
+      ""id"": 1,
+      ""name"": ""Bob"",
+      ""height_m"": 1.88,
+      ""weight_kg"": 57.8,
+      ""BMI"": 16.41,
+      ""risk_category"": ""Low""
+    },
+    {
+      ""id"": 2,
+      ""name"": ""Carla"",
+      ""height_m"": 1.79,
+      ""weight_kg"": 49.9,
+      ""BMI"": 15.60,
+      ""risk_category"": ""Low""
+    },
+    {
+      ""id"": 29,
+      ""name"": ""Lily"",
+      ""height_m"": 1.52,
+      ""weight_k",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-PROJECT,Select only the column `id` from `energy_consumption`. Sort it in ascending order and return the all values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25]]",SELECT `id` FROM `energy_consumption` ORDER BY `id` ASC,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-PROJECT,Select only the column `id` from `energy_consumption`. Sort it in descending order and return the all values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[25], [24], [23], [22], [21], [20], [19], [18], [17], [16], [15], [14], [13], [12], [11], [10], [9], [8], [7], [6], [5], [4], [3], [2], [1]]",SELECT `id` FROM `energy_consumption` ORDER BY `id` DESC,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-PROJECT,Select only the column `household_name` from `energy_consumption`. Sort it in ascending order and return the all values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Household 1'], ['Household 2'], ['Household 3'], ['Household 4'], ['Household 5'], ['Household 6'], ['Household 7'], ['Household 8'], ['Household 9'], ['Household 10'], ['Household 11'], ['Household 12'], ['Household 13'], ['Household 14'], ['Household 15'], ['Household 16'], ['Household 17'], ['Household 18'], ['Household 19'], ['Household 20'], ['Household 21'], ['Household 22'], ['Household 23'], ['Household 24'], ['Household 25']]",SELECT `household_name` FROM `energy_consumption` ORDER BY `household_name` ASC,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-PROJECT,Select only the column `speed_kmph` from `logistics_delivery`. Sort it in ascending order and return the all values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[9.29], [10.35], [11.03], [11.37], [15.63], [19.83], [27.39], [30.78], [32.71], [36.43], [37.04], [37.71], [40.83], [43.43], [46.9], [54.87], [59.6], [65.0], [69.74], [82.14], [91.15], [94.67], [110.53], [170.59]]",SELECT `speed_kmph` FROM `logistics_delivery` ORDER BY `speed_kmph` ASC,0,,0.0,0.125,0.12,0.0,0.96,0.12,1.0
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-PROJECT,Select only the column `id` from `logistics_delivery`. Sort it in descending order and return the all values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[25], [24], [23], [22], [21], [20], [19], [18], [17], [16], [15], [14], [13], [12], [11], [10], [9], [8], [7], [6], [5], [4], [3], [2], [1]]",SELECT `id` FROM `logistics_delivery` ORDER BY `id` DESC,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-SINGLE,"List the all rows from the table `student_performance`, sorted by the column `id` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 'Student_1', 82, 85, 83.5, 'Yes'], [2, 'Student_2', 48, 93, 70.5, 'Yes'], [3, 'Student_3', 52, 58, 55.0, 'Yes'], [4, 'Student_4', 62, 83, 72.5, 'Yes'], [5, 'Student_5', 51, 52, 51.5, 'Yes'], [6, 'Student_6', 37, 75, 56.0, 'Yes'], [7, 'Student_7', 76, 84, 80.0, 'Yes'], [8, 'Student_8', 40, 54, 47.0, 'No'], [9, 'Student_9', 57, 55, 56.0, 'Yes'], [10, 'Student_10', 52, 42, 47.0, 'No'], [11, 'Student_11', 92, 32, 62.0, 'Yes'], [12, 'Student_12', 47, 60, 53.5, 'Yes'], [13, 'Student_13', 31, 56, 43.5, 'No'], [14, 'Student_14', 81, 76, 78.5, 'Yes'], [15, 'Student_15', 42, 53, 47.5, 'No'], [16, 'Student_16', 62, 30, 46.0, 'No'], [17, 'Student_17', 90, 92, 91.0, 'Yes'], [18, 'Student_18', 78, 69, 73.5, 'Yes'], [19, 'Student_19', 84, 75, 79.5, 'Yes'], [20, 'Student_20', 51, 65, 58.0, 'Yes'], [21, 'Student_21', 49, 55, 52.0, 'Yes'], [22, 'Student_22', 60, 41, 50.5, 'Yes'], [23, 'Student_23', 98, 94, 96.0, 'Yes'], [24, 'Student_24', 85, 87, 86.0, 'Yes'], [25, 'Student_25', 97, 46, 71.5, 'Yes']]",SELECT * FROM `student_performance` ORDER BY `id` ASC,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-PROJECT,Select only the column `id` from `student_performance`. Sort it in ascending order and return the all values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25]]",SELECT `id` FROM `student_performance` ORDER BY `id` ASC,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-PROJECT,Select only the column `student_name` from `student_performance`. Sort it in ascending order and return the all values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Student 1'], ['Student 2'], ['Student 3'], ['Student 4'], ['Student 5'], ['Student 6'], ['Student 7'], ['Student 8'], ['Student 9'], ['Student 10'], ['Student 11'], ['Student 12'], ['Student 13'], ['Student 14'], ['Student 15'], ['Student 16'], ['Student 17'], ['Student 18'], ['Student 19'], ['Student 20'], ['Student 21'], ['Student 22'], ['Student 23'], ['Student 24'], ['Student 25']]",SELECT `student_name` FROM `student_performance` ORDER BY `student_name` ASC,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-PROJECT,Select only the column `student_name` from `student_performance`. Sort it in descending order and return the all values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Student 25'], ['Student 24'], ['Student 23'], ['Student 22'], ['Student 21'], ['Student 20'], ['Student 19'], ['Student 18'], ['Student 17'], ['Student 16'], ['Student 15'], ['Student 14'], ['Student 13'], ['Student 12'], ['Student 11'], ['Student 10'], ['Student 9'], ['Student 8'], ['Student 7'], ['Student 6'], ['Student 5'], ['Student 4'], ['Student 3'], ['Student 2'], ['Student 1']]",SELECT `student_name` FROM `student_performance` ORDER BY `student_name` DESC,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,BMI,ORDERBY-SINGLE,"List the all rows from the table `BMI`, sorted by the column `BMI` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[7, 'Helen', 1.85, 52.3, 15.23, 'Low'], [12, 'Maria', 1.83, 47.6, 14.25, 'Low'], [28, 'Mia', 1.74, 48.4, 15.95, 'Low'], [10, 'Karen', 1.51, 54.2, 23.63, 'Low'], [26, 'Liam', 1.58, 51.6, 20.63, 'Low'], [1, 'Bob', 1.88, 57.8, 16.53, 'Low'], [2, 'Carla', 1.79, 49.9, 15.57, 'Low'], [9, 'Jack', 1.78, 78.0, 24.63, 'Low'], [19, 'Tina', 1.62, 58.9, 22.43, 'Low'], [27, 'Noah', 1.71, 59.7, 20.35, 'Low'], [6, 'Grace', 1.52, 67.8, 29.21, 'Medium'], [14, 'Oscar', 1.57, 64.4, 26.13, 'Medium'], [16, 'Quincy', 1.62, 68.4, 26.13, 'Medium'], [17, 'Rachel', 1.71, 84.0, 28.93, 'Medium'], [24, 'Yara', 1.68, 89.8, 31.93, 'Medium'], [29, 'Lily', 1.52, 69.4, 30.13, 'Medium'], [0, 'Alice', 1.65, 90.6, 33.22, 'Medium'], [8, 'Ian', 1.74, 96.3, 31.63, 'Medium'], [15, 'Paul', 1.57, 94.7, 38.21, 'High'], [18, 'Steve', 1.67, 86.0, 30.83, 'Medium'], [3, 'David', 1.74, 116.2, 38.13, 'High'], [4, 'Emma', 1.56, 117.4, 47.63, 'High'], [5, 'Frank', 1.56, 105.6, 43.63, 'High'], [11, 'Leo', 1.89, 82.1, 23.13, 'Low'], [13, 'Nina', 1.58, 113.2, 45.13, 'High'], [20, 'Uma', 1.74, 117.7, 38.93, 'High'], [21, 'Victor', 1.56, 103.1, 42.63, 'High'], [22, 'Wendy', 1.62, 115.5, 44.13, 'High'], [23, 'Xander', 1.65, 112.1, 41.13, 'High'], [25, 'Zane', 1.81, 114.1, 34.93, 'High']]",SELECT * FROM `BMI` ORDER BY `BMI` ASC,0,,0.0,0.793,0.816,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-PROJECT,Select only the column `id` from `energy_consumption`. Sort it in ascending order and return the all values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25]]",SELECT `id` FROM `energy_consumption` ORDER BY `id` ASC,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-PROJECT,Select only the column `id` from `energy_consumption`. Sort it in descending order and return the all values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `id` FROM `energy_consumption` ORDER BY `id` DESC,3,"{
+  ""table_name"": ""energy_consumption"",
+  ""ordered_entries"": [
+    {
+      ""id"": 1
+    },
+    {
+      ""id"": 2
+    },
+    {
+      ""id"": 3
+    },
+    {
+      ""id"": 4
+    },
+    {
+      ""id"": 5
+    },
+    {
+      ""id"": 6
+    },
+    {
+      ""id"": 7
+    },
+    {
+      ""id"": 8
+    },
+    {
+      ""id"": 9
+    },
+    {
+      ""id"": 10
+    },
+    {
+      ""id"": 11
+    },
+    {
+      ""id"": 12
+    },
+    {
+      ""id"": 13
+    },
+    {
+      ""id"": 14
+    },
+    {
+      ""id"": 15
+    },
+    {
+      ""id"": 16
+    },
+    {
+      ""id"": 17
+    },
+    {
+      ""id"": 18
+    },
+    {
+      ""id"": 19
+    },
+    {
+      ""id"": 20
+    },
+    {
+      ""id"": 21
+    },
+    {
+      ""id"": 22
+    },
+    {
+      ""id"": 23
+    },
+    {
+      ""id"": 24
+    },
+    {
+      ""id"": 25
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_numerical_simple.sqlite,energy_consumption,ORDERBY-PROJECT,Select only the column `household_name` from `energy_consumption`. Sort it in ascending order and return the all values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Household 1'], ['Household 2'], ['Household 3'], ['Household 4'], ['Household 5'], ['Household 6'], ['Household 7'], ['Household 8'], ['Household 9'], ['Household 10'], ['Household 11'], ['Household 12'], ['Household 13'], ['Household 14'], ['Household 15'], ['Household 16'], ['Household 17'], ['Household 18'], ['Household 19'], ['Household 20'], ['Household 21'], ['Household 22'], ['Household 23'], ['Household 24'], ['Household 25']]",SELECT `household_name` FROM `energy_consumption` ORDER BY `household_name` ASC,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-PROJECT,Select only the column `speed_kmph` from `logistics_delivery`. Sort it in ascending order and return the all values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0]]",SELECT `speed_kmph` FROM `logistics_delivery` ORDER BY `speed_kmph` ASC,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_numerical_simple.sqlite,logistics_delivery,ORDERBY-PROJECT,Select only the column `id` from `logistics_delivery`. Sort it in descending order and return the all values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `id` FROM `logistics_delivery` ORDER BY `id` DESC,3,"{
+  ""table_name"": ""logistics_delivery"",
+  ""ordered_entries"": [
+    {
+      ""speed_kmph"": 0.0
+    },
+    {
+      ""speed_kmph"": 0.0
+    },
+    {
+      ""speed_kmph"": 0.0
+    },
+    {
+      ""speed_kmph"": 0.0
+    },
+    {
+      ""speed_kmph"": 0.0
+    },
+    {
+      ""speed_kmph"": 0.0
+    },
+    {
+      ""speed_kmph"": 0.0
+    },
+    {
+      ""speed_kmph"": 0.0
+    },
+    {
+      ""speed_kmph"": 0.0
+    },
+    {
+      ""speed_kmph"": 0.0
+    },
+    {
+      ""speed_kmph"": 0.0
+    },
+    {
+      ""speed_kmph"": 0.0
+    },
+    {
+      ""speed_kmph"": 0.0
+    },
+    {
+      ""speed_kmph"": 0.0
+    },
+    {
+      ""speed_kmph"": 0.0
+    },
+    {
+      ""speed_kmph"": 0.0
+    },
+    {
+      ""speed_kmph"": 0.0
+    },
+    {
+      ""speed_kmph"": 0.0
+    },
+    {
+      ""speed_kmph"": 0.0
+    },
+    {
+      ""speed_kmph"": 0.0
+    },
+    {
+      ""speed_kmph"": 0.0
+    },
+    {
+      ""speed_kmph"": 0.0
+    },
+    {
+      ""speed_kmph"": 0.0
+    },
+    {
+      ""speed_kmph"": 0.0
+    },
+    {
+      ""speed_kmph"": 0.0
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-SINGLE,"List the all rows from the table `student_performance`, sorted by the column `id` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1, 'Student_1', 82, 85, 83.5, 'Yes'], [2, 'Student_2', 48, 93, 70.5, 'Yes'], [3, 'Student_3', 52, 58, 55.0, 'Yes'], [4, 'Student_4', 62, 83, 72.5, 'Yes'], [5, 'Student_5', 51, 52, 51.5, 'Yes'], [6, 'Student_6', 37, 75, 56.0, 'Yes'], [7, 'Student_7', 76, 84, 80.0, 'Yes'], [8, 'Student_8', 40, 54, 47.0, 'No'], [9, 'Student_9', 57, 55, 56.0, 'Yes'], [10, 'Student_10', 52, 42, 47.0, 'No'], [11, 'Student_11', 92, 32, 62.0, 'Yes'], [12, 'Student_12', 47, 60, 53.5, 'Yes'], [13, 'Student_13', 31, 56, 43.5, 'No'], [14, 'Student_14', 81, 76, 78.5, 'Yes'], [15, 'Student_15', 42, 53, 47.5, 'No'], [16, 'Student_16', 62, 30, 46.0, 'No'], [17, 'Student_17', 90, 92, 91.0, 'Yes'], [18, 'Student_18', 78, 69, 73.5, 'Yes'], [19, 'Student_19', 84, 75, 79.5, 'Yes'], [20, 'Student_20', 51, 65, 58.0, 'Yes'], [21, 'Student_21', 49, 55, 52.0, 'Yes'], [22, 'Student_22', 60, 41, 50.5, 'Yes'], [23, 'Student_23', 98, 94, 96.0, 'Yes'], [24, 'Student_24', 85, 87, 86.0, 'Yes'], [25, 'Student_25', 97, 46, 71.5, 'Yes']]",SELECT * FROM `student_performance` ORDER BY `id` ASC,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-PROJECT,Select only the column `id` from `student_performance`. Sort it in ascending order and return the all values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25]]",SELECT `id` FROM `student_performance` ORDER BY `id` ASC,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-PROJECT,Select only the column `student_name` from `student_performance`. Sort it in ascending order and return the all values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `student_name` FROM `student_performance` ORDER BY `student_name` ASC,3,"{
+  ""table_name"": ""student_performance"",
+  ""ordered_entries"": [
+    {
+      ""id"": 1
+    },
+    {
+      ""id"": 2
+    },
+    {
+      ""id"": 3
+    },
+    {
+      ""id"": 4
+    },
+    {
+      ""id"": 5
+    },
+    {
+      ""id"": 6
+    },
+    {
+      ""id"": 7
+    },
+    {
+      ""id"": 8
+    },
+    {
+      ""id"": 9
+    },
+    {
+      ""id"": 10
+    },
+    {
+      ""id"": 11
+    },
+    {
+      ""id"": 12
+    },
+    {
+      ""id"": 13
+    },
+    {
+      ""id"": 14
+    },
+    {
+      ""id"": 15
+    },
+    {
+      ""id"": 16
+    },
+    {
+      ""id"": 17
+    },
+    {
+      ""id"": 18
+    },
+    {
+      ""id"": 19
+    },
+    {
+      ""id"": 20
+    },
+    {
+      ""id"": 21
+    },
+    {
+      ""id"": 22
+    },
+    {
+      ""id"": 23
+    },
+    {
+      ""id"": 24
+    },
+    {
+      ""id"": 25
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_numerical_simple.sqlite,student_performance,ORDERBY-PROJECT,Select only the column `student_name` from `student_performance`. Sort it in descending order and return the all values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `student_name` FROM `student_performance` ORDER BY `student_name` DESC,3,"""table_name"": ""student_performance"",
+""ordered_entries"": [
+  {
+    ""student_name"": ""Student24""
+  },
+  {
+    ""student_name"": ""Student23""
+  },
+  {
+    ""student_name"": ""Student22""
+  },
+  {
+    ""student_name"": ""Student21""
+  },
+  {
+    ""student_name"": ""Student20""
+  },
+  {
+    ""student_name"": ""Student19""
+  },
+  {
+    ""student_name"": ""Student18""
+  },
+  {
+    ""student_name"": ""Student17""
+  },
+  {
+    ""student_name"": ""Student16""
+  },
+  {
+    ""student_name"": ""Student15""
+  },
+  {
+    ""student_name"": ""Student14""
+  },
+  {
+    ""student_name"": ""Student13""
+  },
+  {
+    ""student_name"": ""Student12""
+  },
+  {
+    ""student_name"": ""Student11""
+  },
+  {
+    ""student_name"": ""Student10""
+  },
+  {
+    ""student_name"": ""Student9""
+  },
+  {
+    ""student_name"": ""Student8""
+  },
+  {
+    ""student_name"": ""Student7""
+  },
+  {
+    ""student_name"": ""Student6""
+  },
+  {
+    ""student_name"": ""Student5""
+  },
+  {
+    ""student_name"": ""Student4""
+  },
+  {
+    ""student_name"": ""Student3""
+  },
+  {
+    ""student_name"": ""Student2""
+  },
+  {
+    ""student_name"": ""Student1""
+  },
+  {
+    ""student_name"": ""Student0""
+  }
+]",0.0,0.0,0.0,0.0,0.0,0.0,0.0

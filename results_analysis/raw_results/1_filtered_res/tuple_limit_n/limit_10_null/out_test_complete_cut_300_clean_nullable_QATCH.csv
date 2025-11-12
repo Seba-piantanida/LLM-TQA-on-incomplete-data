@@ -1,0 +1,193 @@
+db_path,table_name,test_category,query,model,AI_answer,SQL_query,failed_attempts,note,valid_efficiency_score,cell_precision,cell_recall,execution_accuracy,tuple_cardinality,tuple_constraint,tuple_order
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `grade` from `breast_cancer`. Sort it in ascending order and return the first 10 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1], [1], [1], [1], [1], [1], [1], [1], [1], [1]]",SELECT `grade` FROM `breast_cancer` ORDER BY `grade` ASC LIMIT 10,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `age` from `breast_cancer`. Sort it in ascending order and return the first 10 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[40], [42], [43], [45], [47], [48], [49], [50], [51], [55]]",SELECT `age` FROM `breast_cancer` ORDER BY `age` ASC LIMIT 10,0,,0.0,0.6,0.75,0.0,1.0,0.5,1.0
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `pgr` from `breast_cancer`. Sort it in ascending order and return the first 10 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [0], [0], [0], [0], [0], [0], [0], [0], [0]]",SELECT `pgr` FROM `breast_cancer` ORDER BY `pgr` ASC LIMIT 10,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `restecg` from `heart_attack`. Sort it in ascending order and return the first 10 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [0], [0], [0], [0], [0], [0], [0], [0], [0]]",SELECT `restecg` FROM `heart_attack` ORDER BY `restecg` ASC LIMIT 10,0,,0.0,1.0,0.5,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `thal` from `heart_attack`. Sort it in ascending order and return the first 10 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [0], [0], [0], [0], [0], [0], [0], [0], [0]]",SELECT `thal` FROM `heart_attack` ORDER BY `thal` ASC LIMIT 10,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `slope` from `heart_attack`. Sort it in ascending order and return the first 10 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[None], [None], [None], [None], [None], [None], [None], [None], [None], [None]]",SELECT `slope` FROM `heart_attack` ORDER BY `slope` ASC LIMIT 10,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `ca` from `heart_attack`. Sort it in ascending order and return the first 10 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [0], [0], [0], [0], [0], [0], [0], [0], [0]]",SELECT `ca` FROM `heart_attack` ORDER BY `ca` ASC LIMIT 10,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_complete_cut_300.sqlite,mobiles,ORDERBY-PROJECT,Select only the column `RAM` from `mobiles`. Sort it in descending order and return the first 10 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['16GB'], ['16GB'], ['16GB'], ['16GB'], ['16GB'], ['16GB'], ['8GB'], ['8GB'], ['8GB'], ['8GB']]",SELECT `RAM` FROM `mobiles` ORDER BY `RAM` DESC LIMIT 10,0,,0.0,0.5,0.5,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,mobiles,ORDERBY-PROJECT,Select only the column `Model Name` from `mobiles`. Sort it in descending order and return the first 10 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['iPhone 17 Pro Max'], ['iPhone 17 Pro'], ['iPhone 17 Plus'], ['iPhone 17'], ['iPhone 16 Pro Max'], ['iPhone 16 Pro'], ['iPhone 16 Plus'], ['iPhone 16'], ['iPhone 17 Pro Max'], ['iPhone 17 Pro']]",SELECT `Model Name` FROM `mobiles` ORDER BY `Model Name` DESC LIMIT 10,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,olympic_games,ORDERBY-SINGLE,"List the top 10 rows from the table `olympic_games`, sorted by the column `city` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[5, 2012, 'London'], [4, 2008, 'Beijing'], [3, 2004, 'Athens'], [0, 1896, 'Athens'], [1, 1900, 'Paris'], [2, 1904, 'St. Louis']]",SELECT * FROM `olympic_games` ORDER BY `city` DESC LIMIT 10,0,,0.0,0.706,0.706,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `grade` from `breast_cancer`. Sort it in ascending order and return the first 10 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1], [1], [1], [1], [1], [1], [1], [1], [1], [1]]",SELECT `grade` FROM `breast_cancer` ORDER BY `grade` ASC LIMIT 10,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `age` from `breast_cancer`. Sort it in ascending order and return the first 10 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `age` FROM `breast_cancer` ORDER BY `age` ASC LIMIT 10,3,"{
+  ""table_name"": ""breast_cancer"",
+  ""ordered_entries"": [
+    {
+      ""grade"": 1
+    },
+    {
+      ""grade"": 1
+    },
+    {
+      ""grade"": 1
+    },
+    {
+      ""grade"": 1
+    },
+    {
+      ""grade"": 1
+    },
+    {
+      ""grade"": 1
+    },
+    {
+      ""grade"": 1
+    },
+    {
+      ""grade"": 1
+    },
+    {
+      ""grade"": 1
+    },
+    {
+      ""grade"": 1
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_300.sqlite,breast_cancer,ORDERBY-PROJECT,Select only the column `pgr` from `breast_cancer`. Sort it in ascending order and return the first 10 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[0], [0], [0], [0], [0], [0], [0], [0], [0], [0]]",SELECT `pgr` FROM `breast_cancer` ORDER BY `pgr` ASC LIMIT 10,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `restecg` from `heart_attack`. Sort it in ascending order and return the first 10 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `restecg` FROM `heart_attack` ORDER BY `restecg` ASC LIMIT 10,3,"{
+  ""table_name"": ""breast_cancer"",
+  ""ordered_entries"": [
+    {
+      ""pgr"": 0
+    },
+    {
+      ""pgr"": 0
+    },
+    {
+      ""pgr"": 0
+    },
+    {
+      ""pgr"": 0
+    },
+    {
+      ""pgr"": 0
+    },
+    {
+      ""pgr"": 0
+    },
+    {
+      ""pgr"": 0
+    },
+    {
+      ""pgr"": 0
+    },
+    {
+      ""pgr"": 0
+    },
+    {
+      ""pgr"": 0
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `thal` from `heart_attack`. Sort it in ascending order and return the first 10 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[3], [3], [3], [3], [3], [3], [3], [3], [3], [3]]",SELECT `thal` FROM `heart_attack` ORDER BY `thal` ASC LIMIT 10,1,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `slope` from `heart_attack`. Sort it in ascending order and return the first 10 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `slope` FROM `heart_attack` ORDER BY `slope` ASC LIMIT 10,3,"{
+  ""table_name"": ""heart_attack"",
+  ""ordered_entries"": [
+    {
+      ""thal"": 3
+    },
+    {
+      ""thal"": 3
+    },
+    {
+      ""thal"": 3
+    },
+    {
+      ""thal"": 3
+    },
+    {
+      ""thal"": 3
+    },
+    {
+      ""thal"": 3
+    },
+    {
+      ""thal"": 3
+    },
+    {
+      ""thal"": 3
+    },
+    {
+      ""thal"": 3
+    },
+    {
+      ""thal"": 3
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_300.sqlite,heart_attack,ORDERBY-PROJECT,Select only the column `ca` from `heart_attack`. Sort it in ascending order and return the first 10 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[0], [0], [0], [0], [0], [0], [0], [0], [0], [0]]",SELECT `ca` FROM `heart_attack` ORDER BY `ca` ASC LIMIT 10,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_complete_cut_300.sqlite,mobiles,ORDERBY-PROJECT,Select only the column `RAM` from `mobiles`. Sort it in descending order and return the first 10 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `RAM` FROM `mobiles` ORDER BY `RAM` DESC LIMIT 10,3,"{
+  ""table_name"": ""heart_attack"",
+  ""ordered_entries"": [
+    {
+      ""ca"": 0
+    },
+    {
+      ""ca"": 0
+    },
+    {
+      ""ca"": 0
+    },
+    {
+      ""ca"": 0
+    },
+    {
+      ""ca"": 0
+    },
+    {
+      ""ca"": 0
+    },
+    {
+      ""ca"": 0
+    },
+    {
+      ""ca"": 0
+    },
+    {
+      ""ca"": 0
+    },
+    {
+      ""ca"": 0
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_300.sqlite,mobiles,ORDERBY-PROJECT,Select only the column `Model Name` from `mobiles`. Sort it in descending order and return the first 10 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['iPhone 15 Pro Max'], ['iPhone 15 Pro'], ['iPhone 15'], ['iPhone 15 Plus'], ['iPhone 14 Pro Max'], ['iPhone 14 Pro'], ['iPhone 14'], ['iPhone 14 Plus'], ['iPhone 13 Pro Max'], ['iPhone 13 Pro']]",SELECT `Model Name` FROM `mobiles` ORDER BY `Model Name` DESC LIMIT 10,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_complete_cut_300.sqlite,olympic_games,ORDERBY-SINGLE,"List the top 10 rows from the table `olympic_games`, sorted by the column `city` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT * FROM `olympic_games` ORDER BY `city` DESC LIMIT 10,3,"```
+{
+  ""table_name"": ""mobiles"",
+  ""ordered_entries"": [
+    {
+      ""Model Name"": ""iPhone 15 Pro Max""
+    },
+    {
+      ""Model Name"": ""iPhone 15 Pro""
+    },
+    {
+      ""Model Name"": ""iPhone 15""
+    },
+    {
+      ""Model Name"": ""iPhone 15 Plus""
+    },
+    {
+      ""Model Name"": ""iPhone 14 Pro Max""
+    },
+    {
+      ""Model Name"": ""iPhone 14 Pro""
+    },
+    {
+      ""Model Name"": ""iPhone 14""
+    },
+    {
+      ""Model Name"": ""iPhone 14 Plus""
+    },
+    {
+      ""Model Name"": ""iPhone 13 Pro Max""
+    },
+    {
+      ""Model Name"": ""iPhone 13 Pro""
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0

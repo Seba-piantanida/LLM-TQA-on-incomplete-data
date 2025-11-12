@@ -1,0 +1,21 @@
+id,nome,citta,indirizzo,tipo_cucina,fascia_prezzo,punteggio,romantico,vista
+0,La Bella Tavola,Roma,Via delle Rose 12,Italiana,€€,4.6,1,0
+1,Sushi Zen,Milano,Corso Como 22,Giapponese,€€€,4.2,0,1
+2,Verde Vegan,Firenze,Via dei Neri 45,Vegana,€,4.8,1,1
+3,Trattoria da Nino,Napoli,Via Toledo 89,Italiana,€,4.3,0,0
+4,Panorama Bistrot,Firenze,Piazzale Michelangelo 1,Mediterranea,€€€,4.7,1,1
+5,Da Antonio,Napoli,Via dei Tribunali 12,"Italiana, Pizza, Mediterranea",€€,4.6,0,0
+6,Pizzeria Da Ciro,Napoli,Via dei Tribunali 22,"Italiana, Pizza, Mediterranea",€€€,4.2,0,0
+7,Da Matteo,Napoli,Via Toledo 45,"Italiana, Pizza, Mediterranea",€,4.8,0,0
+8,Taverna del Sole,Roma,Corso Italia 36,Fusion,€€€,4.9,1,1
+9,Ristorante Bella,Palermo,Via Verdi 43,Cinese,€€€,3.7,0,1
+10,Delizie della Luna,Venezia,Via Garibaldi 33,Messicana,€,3.7,1,1
+11,Gusto Bella,Roma,Via Libertà 27,Messicana,€€,4.9,0,1
+12,Osteria del Sole,Verona,Via Dante 6,Cinese,€€€,4.2,1,0
+13,Taverna Elegante,Roma,Via Verdi 197,Vegana,€€,5.0,0,0
+14,Ristorante Antica,Verona,Via Libertà 8,Cinese,€€€,4.4,1,0
+15,Taverna Moderna,Firenze,Via Roma 63,Mediterranea,€€,4.7,1,0
+16,Da Mario del Sole,Verona,Corso Italia 79,Italiana,€,4.7,1,1
+17,Delizie della Luna,Verona,Via Milano 166,Mediterranea,€,3.9,0,1
+18,Bistrot Bella,Palermo,Via Dante 186,Italiana,€€,3.7,0,0
+19,Taverna Moderna,Milano,Via Roma 43,Fusion,€,4.5,1,0

@@ -1,0 +1,1961 @@
+db_path,table_name,test_category,query,model,AI_answer,SQL_query,failed_attempts,note,valid_efficiency_score,cell_precision,cell_recall,execution_accuracy,tuple_cardinality,tuple_constraint,tuple_order
+data/db_music_cut_300.sqlite,albums,ORDERBY-SINGLE,"List the top 5 rows from the table `albums`, sorted by the column `album_id` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 'Not Like Us', '04-05-2024'], [2, 'I like the way you kiss me', '19-03-2024'], [3, 'Flowers - Single', '12-01-2023'], [4, 'Houdini', '31-05-2024'], [5, 'Lovin On Me', '10-11-2023']]",SELECT * FROM `albums` ORDER BY `album_id` ASC LIMIT 5,0,,0.0,0.867,0.867,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,ORDERBY-SINGLE,"List the top 5 rows from the table `albums`, sorted by the column `album_id` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[74, 'Laxed (Siren Beat)', '24-04-2020', 67], [73, 'un x100to', '17-04-2023', 66], [72, 'Old Town Road', '14-03-2019', 65], [71, 'The Way We Move', '10-03-2023', 64], [70, 'Shakira: Bzrp Music Sessions, Vol. 53', '11-01-2023', 63]]",SELECT * FROM `albums` ORDER BY `album_id` DESC LIMIT 5,0,,0.0,0.95,0.95,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,ORDERBY-SINGLE,"List the top 5 rows from the table `albums`, sorted by the column `title` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[3, '12-01-2023', 'Flowers - Single'], [15, '22-03-2023', 'LALA - Single'], [27, '08-03-2024', 'eternal sunshine'], [28, '12-04-2024', 'Papercuts'], [69, '12-04-2024', 'Papercuts']]",SELECT * FROM `albums` ORDER BY `title` ASC LIMIT 5,0,,0.0,0.077,0.056,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,ORDERBY-SINGLE,"List the top 5 rows from the table `albums`, sorted by the column `title` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[34, '26-04-2024', ""What's Love Got to Do with It (30th Anniversary Deluxe Edition)""], [66, '13-07-2023', 'What Was I Made For? (From The Motion Picture ""Barbie"")'], [31, '28-07-2023', 'Water'], [13, '22-03-2024', ""WE DON'T TRUST YOU""], [61, '06-05-2022', 'Un Verano Sin Ti']]",SELECT * FROM `albums` ORDER BY `title` DESC LIMIT 5,0,,0.0,0.067,0.056,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,ORDERBY-SINGLE,"List the top 5 rows from the table `albums`, sorted by the column `release_date (dd-mm-yyyy)` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[14, 'bathroom floor', '07-10-2022'], [38, 'Dance Monkey', '10-05-2019'], [72, 'Old Town Road', '14-03-2019'], [47, 'Despacito (Featuring Daddy Yankee)', '13-01-2017'], [51, 'Shape of You', '06-01-2017']]",SELECT * FROM `albums` ORDER BY `release_date (dd-mm-yyyy)` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,ORDERBY-SINGLE,"List the top 5 rows from the table `albums`, sorted by the column `release_date (dd-mm-yyyy)` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0, 'Million Dollar Baby - Single', '26-04-2024', 1], [34, ""What's Love Got to Do with It (30th Anniversary Deluxe Edition)"", '26-04-2024', 34], [69, 'Papercuts', '12-04-2024', 62], [28, 'Papercuts', '12-04-2024', 28], [35, 'A Bar Song (Tipsy)', '12-04-2024', 35]]",SELECT * FROM `albums` ORDER BY `release_date (dd-mm-yyyy)` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,ORDERBY-SINGLE,"List the top 5 rows from the table `albums`, sorted by the column `artist_id` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 'Million Dollar Baby - Single', '26-04-2024', 1], [2, 'Not Like Us', '04-05-2024', 2], [3, 'I like the way you kiss me', '19-03-2024', 3], [4, 'Flowers - Single', '12-01-2023', 4], [5, 'Houdini', '31-05-2024', 5]]",SELECT * FROM `albums` ORDER BY `artist_id` ASC LIMIT 5,0,,0.0,0.8,0.8,0.0,1.0,0.8,1.0
+data/db_music_cut_300.sqlite,albums,ORDERBY-SINGLE,"List the top 5 rows from the table `albums`, sorted by the column `artist_id` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[74, 'Laxed (Siren Beat)', '24-04-2020', 67], [73, 'un x100to', '17-04-2023', 66], [72, 'Old Town Road', '14-03-2019', 65], [71, 'The Way We Move', '10-03-2023', 64], [70, 'Shakira: Bzrp Music Sessions, Vol. 53', '11-01-2023', 63]]",SELECT * FROM `albums` ORDER BY `artist_id` DESC LIMIT 5,0,,0.0,0.95,0.95,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,ORDERBY-ADVANCED,"Compute the sum of the columns album_id, artist_id for each row in `albums`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 1, 2], [2, 2, 4], [3, 3, 6], [4, 4, 8], [5, 5, 10]]",SELECT * FROM `albums` ORDER BY `album_id` + `artist_id` ASC LIMIT 5,0,,0.0,0.625,0.333,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,ORDERBY-ADVANCED,"Compute the sum of the columns album_id, artist_id for each row in `albums`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[74, 67, '24-04-2020', 141], [73, 66, '17-04-2023', 139], [72, 65, '14-03-2019', 137], [71, 64, '10-03-2023', 135], [70, 63, '11-01-2023', 133]]",SELECT * FROM `albums` ORDER BY `album_id` + `artist_id` DESC LIMIT 5,0,,0.0,0.7,0.7,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,ORDERBY-PROJECT,Select only the column `album_id` from `albums`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1], [2], [3], [4], [5]]",SELECT `album_id` FROM `albums` ORDER BY `album_id` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_music_cut_300.sqlite,albums,ORDERBY-PROJECT,Select only the column `album_id` from `albums`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[75], [74], [73], [72], [71]]",SELECT `album_id` FROM `albums` ORDER BY `album_id` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_music_cut_300.sqlite,albums,ORDERBY-PROJECT,Select only the column `title` from `albums`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['As It Was'], ['Beat Automotivo Tan Tan Tan Viral'], ['Beautiful Things'], [""Black Book ID's: Chapter 5 - EP""], ['Blinding Lights']]",SELECT `title` FROM `albums` ORDER BY `title` ASC LIMIT 5,0,,0.0,0.2,0.2,0.0,1.0,0.2,1.0
+data/db_music_cut_300.sqlite,albums,ORDERBY-PROJECT,Select only the column `title` from `albums`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[""What's Love Got to Do with It (30th Anniversary Deluxe Edition)""], [""WE DON'T TRUST YOU""], ['Water'], ['Unreal Unearth: Unheard'], ['Un Verano Sin Ti']]",SELECT `title` FROM `albums` ORDER BY `title` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,ORDERBY-PROJECT,Select only the column `release_date (dd-mm-yyyy)` from `albums`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['07-10-2022'], ['10-11-2023'], ['12-04-2024'], ['17-04-2024'], ['14-05-2024']]",SELECT `release_date (dd-mm-yyyy)` FROM `albums` ORDER BY `release_date (dd-mm-yyyy)` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,ORDERBY-PROJECT,Select only the column `release_date (dd-mm-yyyy)` from `albums`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['09-06-2024'], ['26-04-2024'], ['14-05-2024'], ['12-04-2024'], ['22-03-2024']]",SELECT `release_date (dd-mm-yyyy)` FROM `albums` ORDER BY `release_date (dd-mm-yyyy)` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,ORDERBY-PROJECT,Select only the column `artist_id` from `albums`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1], [2], [3], [4], [5]]",SELECT `artist_id` FROM `albums` ORDER BY `artist_id` ASC LIMIT 5,0,,0.0,0.8,1.0,0.0,1.0,0.75,1.0
+data/db_music_cut_300.sqlite,albums,ORDERBY-PROJECT,Select only the column `artist_id` from `albums`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[74], [73], [72], [71], [70]]",SELECT `artist_id` FROM `albums` ORDER BY `artist_id` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,artists,ORDERBY-SINGLE,"List the top 5 rows from the table `artists`, sorted by the column `artist_id` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 'Tommy Richman', '21-03-2000'], [2, 'Kendrick Lamar', '17-06-1987'], [3, 'Artemas', '23-09-1999'], [4, 'Miley Cyrus', '23-11-1992'], [5, 'Eminem', '17-10-1972']]",SELECT * FROM `artists` ORDER BY `artist_id` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_music_cut_300.sqlite,artists,ORDERBY-SINGLE,"List the top 5 rows from the table `artists`, sorted by the column `artist_id` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[101, 'Unknown', '01-01-1970'], [100, 'BTS', '01-01-1970'], [99, '24kGoldn', '13-11-2000'], [98, 'Exhumed', '01-01-1991'], [97, 'OneRepublic', '01-01-2004']]",SELECT * FROM `artists` ORDER BY `artist_id` DESC LIMIT 5,0,,0.0,0.857,0.8,0.0,1.0,0.6,1.0
+data/db_music_cut_300.sqlite,artists,ORDERBY-SINGLE,"List the top 5 rows from the table `artists`, sorted by the column `name` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[100, ''], [91, '3 Palavrinhas'], [73, '21 Savage'], [98, '24kGoldn'], [74, 'Adele']]",SELECT * FROM `artists` ORDER BY `name` ASC LIMIT 5,0,,0.0,0.6,0.429,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,artists,ORDERBY-SINGLE,"List the top 5 rows from the table `artists`, sorted by the column `name` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[96, 'OneRepublic'], [97, 'Exhumed'], [98, '24kGoldn'], [99, 'BTS'], [100, '']]",SELECT * FROM `artists` ORDER BY `name` DESC LIMIT 5,1,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,artists,ORDERBY-SINGLE,"List the top 5 rows from the table `artists`, sorted by the column `birth_date (dd-mm-yyyy)` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[28, '01-01-1965'], [33, '26-11-1939'], [89, '18-11-1960'], [59, '01-07-1967'], [38, '07-11-1967']]",SELECT * FROM `artists` ORDER BY `birth_date (dd-mm-yyyy)` ASC LIMIT 5,2,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,artists,ORDERBY-SINGLE,"List the top 5 rows from the table `artists`, sorted by the column `birth_date (dd-mm-yyyy)` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[76, '01-09-2023'], [29, '30-12-2022'], [65, '08-06-2022'], [50, '01-01-2021'], [54, '25-10-2020']]",SELECT * FROM `artists` ORDER BY `birth_date (dd-mm-yyyy)` DESC LIMIT 5,1,,0.0,0.1,0.067,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,artists,ORDERBY-PROJECT,Select only the column `artist_id` from `artists`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1], [2], [3], [4], [5]]",SELECT `artist_id` FROM `artists` ORDER BY `artist_id` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_music_cut_300.sqlite,artists,ORDERBY-PROJECT,Select only the column `artist_id` from `artists`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[101], [100], [99], [98], [97]]",SELECT `artist_id` FROM `artists` ORDER BY `artist_id` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_music_cut_300.sqlite,artists,ORDERBY-PROJECT,Select only the column `name` from `artists`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['3 Palavrinhas'], ['21 Savage'], ['24kGoldn'], ['3 Palavrinhas'], ['Adele']]",SELECT `name` FROM `artists` ORDER BY `name` ASC LIMIT 5,0,,0.0,1.0,0.8,0.0,1.0,0.6,0.7
+data/db_music_cut_300.sqlite,artists,ORDERBY-PROJECT,Select only the column `name` from `artists`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Tones And I'], ['Taylor Swift'], ['Tate McRae'], ['Teddy Swims'], ['Tina Turner']]",SELECT `name` FROM `artists` ORDER BY `name` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,artists,ORDERBY-PROJECT,Select only the column `birth_date (dd-mm-yyyy)` from `artists`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['01-03-1927'], ['26-11-1939'], ['01-01-1965'], ['01-07-1967'], ['07-11-1967']]",SELECT `birth_date (dd-mm-yyyy)` FROM `artists` ORDER BY `birth_date (dd-mm-yyyy)` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,artists,ORDERBY-PROJECT,Select only the column `birth_date (dd-mm-yyyy)` from `artists`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['01-09-2023'], ['30-12-2022'], ['08-06-2022'], ['01-01-2021'], ['25-10-2020']]",SELECT `birth_date (dd-mm-yyyy)` FROM `artists` ORDER BY `birth_date (dd-mm-yyyy)` DESC LIMIT 5,0,,0.0,0.2,0.2,0.0,1.0,0.2,1.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-SINGLE,"List the top 5 rows from the table `tracks`, sorted by the column `track_score` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[26, 'STAY (with Justin Bieber)', 'USSM12103949', 26, 27, 266.3, 3107100349.0, 78.0, 1256973582.0, 7485966.0, 1], [25, 'Beat Automotivo Tan Tan Tan Viral', 'BXWEH2200054', 25, 26, 268.1, 7382759.0, 35.0, 4233958.0, 37621885.0, 0], [24, 'Future', 'RUA1H2415548', 24, 25, 277.5, 1000000.0, 20.0, None, 9453333.0, 0], [23, ""TEXAS HOLD 'EM"", 'USSM12401302', 23, 24, 278.9, 426700979.0, 86.0, 35724356.0, 1470500.0, 1], [22, 'Danza Kuduro - Cover', 'TCJPA2445163', 22, 23, 279.0, 1655575417.0, 25.0, None, None, 1]]",SELECT * FROM `tracks` ORDER BY `track_score` ASC LIMIT 5,0,,0.0,0.95,1.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,ORDERBY-SINGLE,"List the top 5 rows from the table `tracks`, sorted by the column `track_score` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 1, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, 0], [2, 'Not Like Us', 'USUG12400910', 2, 2, 545.9, 323703884.0, 92.0, 116347040.0, 674700.0, 1], [3, 'i like the way you kiss me', 'QZJ842400387', 3, 3, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, 0], [4, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0], [5, 'Houdini', 'USUG12403398', 5, 5, 423.3, 107034922.0, 88.0, 77373957.0, 16400.0, 1]]",SELECT * FROM `tracks` ORDER BY `track_score` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-SINGLE,"List the top 5 rows from the table `tracks`, sorted by the column `tiktok_posts` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[14, 'bathroom floor', 'NLC242100307', 15, 15, 301.6, 297185.0, 12.0, 6736502312.0, 3.0, 0], [4, 'Houdini', 'USUG12403398', 5, 5, 423.3, 107034922.0, 88.0, 77373957.0, 16400.0, 1], [16, 'Fortnight (feat. Post Malone)', 'USUG12401028', 17, 17, 297.6, 395433400.0, 89.0, 104673836.0, 139300.0, 0], [12, 'LUNCH', 'USUM72401991', 13, 13, 316.3, 221636195.0, 92.0, 40022524.0, 195300.0, 0], [9, 'BAND4BAND (feat. Lil Baby)', 'USSM12404354', 10, 10, 330.6, 90676573.0, 86.0, 32735244.0, 325800.0, 1]]",SELECT * FROM `tracks` ORDER BY `tiktok_posts` ASC LIMIT 5,0,,0.0,0.152,0.206,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,ORDERBY-SINGLE,"List the top 5 rows from the table `tracks`, sorted by the column `tiktok_posts` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[25, 'Beat Automotivo Tan Tan Tan Viral', 'BXWEH2200054', 25, 26, 268.1, 0, 0, 4233958, 37621885], [15, 'LALA', 'USWL12300002', 16, 16, 299.9, 925655569, 79, 934302031, 11054500], [3, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633, 85, 1096100899, 7189811], [0, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 1, 725.4, 390470936, 92, 84274754, 5767700], [17, 'greedy', 'USRC12301932', 18, 18, 293.7, 1258569694, 87, 141646818, 2294429]]",SELECT * FROM `tracks` ORDER BY `tiktok_posts` DESC LIMIT 5,0,,0.0,0.581,0.61,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,ORDERBY-SINGLE,"List the top 5 rows from the table `tracks`, sorted by the column `explicit_track` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 1, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, 0], [2, 'i like the way you kiss me', 'QZJ842400387', 3, 3, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, 0], [3, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0], [6, 'Beautiful Things', 'USWB12307016', 7, 7, 407.2, 900158751.0, 86.0, 308723145.0, None, 0], [12, 'LUNCH', 'USUM72401991', 13, 13, 316.3, 221636195.0, 92.0, 40022524.0, 195300.0, 0]]",SELECT * FROM `tracks` ORDER BY `explicit_track` ASC LIMIT 5,0,,0.0,0.929,1.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,ORDERBY-SINGLE,"List the top 5 rows from the table `tracks`, sorted by the column `explicit_track` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1, 'Not Like Us', 'USUG12400910', 2, 2, 545.9, 323703884.0, 92.0, 116347040.0, 674700.0, 1], [4, 'Houdini', 'USUG12403398', 5, 5, 423.3, 107034922.0, 88.0, 77373957.0, 16400.0, 1], [5, 'Lovin On Me', 'USAT22311371', 6, 6, 410.1, 670665438.0, 83.0, 131148091.0, 4202367.0, 1], [7, 'Gata Only', 'QZL382406049', 8, 8, 375.8, 675079153.0, 92.0, 228382568.0, 3500000.0, 1], [8, 'Danza Kuduro - Cover', 'TCJPA2463708', 9, 9, 355.7, 1653018119.0, None, None, None, 1]]",SELECT * FROM `tracks` ORDER BY `explicit_track` DESC LIMIT 5,1,,0.0,0.95,1.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,ORDERBY-SINGLE,"List the top 5 rows from the table `tracks`, sorted by the column `title` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,[],SELECT * FROM `tracks` ORDER BY `title` ASC LIMIT 5,3,"<think>
+Alright, so I need to figure out how to respond to the user's query. They want me to list the top 5 rows from the `tracks` table, sorted by the `title` in ascending order. Let me break this down step by step.
+
+First, I should understand the structure of the dataset provided. The `tracks` table has several columns: `track_id`, `title`, `isrc`, `album_id`, `all_time_rank`, `track_score`, `spotify_streams`, `spotify_popularity`, `youtube_views`, `tiktok_posts`, and `explicit_track`. Each row represents a different track with its associated data.
+
+The user's main request is to sort this table by the `title` column in ascending order and then return the top 5 entries. Sorting by title ascending means arranging the titles from A to Z. So, I'll need to look through all the titles and determine their order.
+
+Looking at the titles, I see entries like ""MILLION DOLLAR BABY"", ""Not Like Us"", ""i like the way you kiss me"", and so on. I notice that some titles start with lowercase letters, like ""i like the way you kiss me"" and ""bathroom floor"". In sorting, case sensitivity might affect the order, but typically, in many systems, uppercase letters come before lowercase ones. However, to ensure accuracy, I should consider the exact sorting behavior.
+
+I'll list out all the titles and sort them. Let me jot them down:
+
+1. MILLION DOLLAR BABY
+2. Not Like Us
+3. i like the way you kiss me
+4. Flowers
+5. Houdini
+6. Lovin On Me
+7. Beautiful Things
+8. Gata Only
+9. Danza Kuduro - Cover
+10. BAND4BAND (feat. Lil Baby)
+11. I Had Some Help (feat. Morgan Wallen)
+12. The Door
+13. LUNCH
+14. Like That
+15. bathroom floor
+16. LALA
+17. Fortnight (feat. Post Malone)
+18. greedy
+19. BLUE
+20. As It Was
+21. Paint The Town Red
+22. Espresso
+23. Danza Kuduro - Cover
+24. TEXAS HOLD 'EM
+25. Future
+26. Beat Automotivo Tan Tan Tan Viral
+27. STAY (with Justin Bieber)
+
+Now, sorting these titles in ascending order. I'll start by comparing the first letters:
+
+- ""As It Was"" starts with 'A'
+- ""Beat Automotivo Tan Tan Tan Viral"" starts with 'B'
+- ""Beautiful Things"" starts with 'B'
+- ""BLUE"" starts with 'B'
+- ""BAND4BAND..."" starts with 'B'
+- ""bathroom floor"" starts with 'b' (lowercase)
+- ""Danza Kuduro..."" starts with 'D'
+- ""Espresso"" starts with 'E'
+- ""Flowers"" starts with 'F'
+- ""Fortnight..."" starts with 'F'
+- ""Future"" starts with 'F'
+- ""Gata Only"" starts with 'G'
+- ""greedy"" starts with 'g'
+- ""Houdini"" starts with 'H'
+- ""I Had Some Help..."" starts with 'I'
+- ""i like the way..."" starts with 'i'
+- ""LALA"" starts with 'L'
+- ""Like That"" starts with 'L'
+- ""Lovin On Me"" starts with 'L'
+- ""LUNCH"" starts with 'L'
+- ""MILLION DOLLAR BABY"" starts with 'M'
+- ""Not Like Us"" starts with 'N'
+- ""Paint The Town Red"" starts with 'P'
+- ""STAY..."" starts with 'S'
+- ""TEXAS HOLD 'EM"" starts with 'T'
+- ""The Door"" starts with 'T'
+
+Wait, I think I might have missed some. Let me recount:
+
+Looking back, I have titles starting with A, B, D, E, F, G, H, I, L, M, N, P, S, T.
+
+Now, arranging them in order:
+
+A: As It Was
+B: BAND4BAND..., Beautiful Things, Beat Automotivo..., BLUE
+D: Danza Kuduro... (appears twice)
+E: Espresso
+F: Flowers, Fortnight..., Future
+G: Gata Only, greedy
+H: Houdini
+I: I Had Some Help..., i like the way...
+L: LALA, Like That, Lovin On Me, LUNCH
+M: MILLION DOLLAR BABY
+N: Not Like Us
+P: Paint The Town Red
+S: STAY...
+T: TEXAS HOLD 'EM, The Door
+
+Wait, but ""The Door"" starts with 'T', so it comes after 'TEXAS HOLD 'EM'? Or before? 'TEXAS' comes before 'The' because 'E' comes before 'H' in the alphabet. So TEXAS HOLD 'EM would come before The Door.
+
+Now, considering case sensitivity: 'As It Was' starts with 'A' uppercase, and 'bathroom floor' starts with 'b' lowercase. In many sorting algorithms, uppercase letters come before lowercase, so 'As It Was' would come before 'bathroom floor'.
+
+But looking at the titles, 'bathroom floor' is the only one starting with lowercase 'b', while others start with uppercase. So in the sorted list, 'bathroom floor' would come after all the 'B' titles.
+
+Similarly, 'greedy' starts with lowercase 'g', so it would come after 'Gata Only'.
+
+Now, let's try to sort the titles step by step:
+
+1. As It Was (A)
+2. BAND4BAND (feat. Lil Baby) (B)
+3. Beautiful Things (B)
+4. Beat Automotivo Tan Tan Tan Viral (B)
+5. BLUE (B)
+6. bathroom floor (b)
+7. Danza Kuduro - Cover (D)
+8. Danza Kuduro - Cover (D) again
+9. Espresso (E)
+10. Flowers (F)
+11. Fortnight (feat. Post Malone) (F)
+12. Future (F)
+13. Gata Only (G)
+14. greedy (g)
+15. Houdini (H)
+16. I Had Some Help (feat. Morgan Wallen) (I)
+17. i like the way you kiss me (i)
+18. LALA (L)
+19. Like That (L)
+20. Lovin On Me (L)
+21. LUNCH (L)
+22. MILLION DOLLAR BABY (M)
+23. Not Like Us (N)
+24. Paint The Town Red (P)
+25. STAY (with Justin Bieber) (S)
+26. TEXAS HOLD 'EM (T)
+27. The Door (T)
+
+Wait, but the user wants the top 5 rows, so the first 5 after sorting.
+
+So the top 5 would be:
+
+1. As It Was
+2. BAND4BAND (feat. Lil Baby)
+3. Beautiful Things
+4. Beat Automotivo Tan Tan Tan Viral
+5. BLUE
+
+Now, I need to extract the corresponding rows from the `tracks` table for these titles.
+
+Looking back at the dataset, each title has a `track_id`. Let's find their `track_id`:
+
+- As It Was: track_id 19
+- BAND4BAND (feat. Lil Baby): track_id 9
+- Beautiful Things: track_id 6
+- Beat Automotivo Tan Tan Tan Viral: track_id 25
+- BLUE: track_id 18
+
+Wait, let me confirm:
+
+Looking at the `title` column:
+
+track_id 19: ""As It Was""
+
+track_id 9: ""BAND4BAND (feat. Lil Baby)""
+
+track_id 6: ""Beautiful Things""
+
+track_id 25: ""Beat Automotivo Tan Tan Tan Viral""
+
+track_id 18: ""BLUE""
+
+Yes, that's correct.
+
+Now, I need to create entries for each of these track_ids, including all the columns.
+
+Let me go through each track_id and compile the data:
+
+1. track_id 19:
+   - title: ""As It Was""
+   - isrc: ""USSM12200612""
+   - album_id: 19
+   - all_time_rank: 20
+   - track_score: 292.0
+   - spotify_streams: 3301814535.0
+   - spotify_popularity: 87.0
+   - youtube_views: 800899315.0
+   - tiktok_posts: 2755903.0
+   - explicit_track: 0
+
+2. track_id 9:
+   - title: ""BAND4BAND (feat. Lil Baby)""
+   - isrc: ""USSM12404354""
+   - album_id: 10
+   - all_time_rank: 10
+   - track_score: 330.6
+   - spotify_streams: 90676573.0
+   - spotify_popularity: 86.0
+   - youtube_views: 32735244.0
+   - tiktok_posts: 325800.0
+   - explicit_track: 1
+
+3. track_id 6:
+   - title: ""Beautiful Things""
+   - isrc: ""USWB12307016""
+   - album_id: 7
+   - all_time_rank: 7
+   - track_score: 407.2
+   - spotify_streams: 900158751.0
+   - spotify_popularity: 86.0
+   -",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-SINGLE,"List the top 5 rows from the table `tracks`, sorted by the column `title` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[23, ""TEXAS HOLD 'EM"", 'USSM12401302', 23, 24, 278.9, 426700979.0, 86.0, 35724356.0, 1470500.0, 1], [11, 'The Door', 'USWB12402486', 12, 12, 320.2, 111155129.0, None, None, None, 1], [26, 'STAY (with Justin Bieber)', 'USSM12103949', 26, 27, 266.3, 3107100349.0, 78.0, 1256973582.0, 7485966.0, 1], [20, 'Paint The Town Red', 'USRC12300907', 20, 21, 290.5, 1065399331.0, 78.0, 240970670.0, 3091732.0, 1], [1, 'Not Like Us', 'USUG12400910', 2, 2, 545.9, 323703884.0, 92.0, 116347040.0, 674700.0, 1]]",SELECT * FROM `tracks` ORDER BY `title` DESC LIMIT 5,1,,0.0,0.405,0.436,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,ORDERBY-SINGLE,"List the top 5 rows from the table `tracks`, sorted by the column `spotify_streams` in ascending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[14, 'bathroom floor', 'NLC242100307', 15, 15, 301.6, 297185.0, 12.0, 6736502312.0, 3.0, 0], [25, 'Beat Automotivo Tan Tan Tan Viral', 'BXWEH2200054', 25, 26, 268.1, 7382759.0, 35.0, 4233958.0, 37621885.0, 0], [11, 'The Door', 'USWB12402486', 12, 12, 320.2, 111155129.0, None, None, None, 1], [10, 'I Had Some Help (feat. Morgan Wallen)', 'USUM72404990', 11, 11, 322.1, 250080413.0, 91.0, 32229063.0, None, 1], [9, 'BAND4BAND (feat. Lil Baby)', 'USSM12404354', 10, 10, 330.6, 90676573.0, 86.0, 32735244.0, 325800.0, 1]]",SELECT * FROM `tracks` ORDER BY `spotify_streams` ASC LIMIT 5,0,,0.0,0.683,0.683,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,ORDERBY-SINGLE,"List the top 5 rows from the table `tracks`, sorted by the column `spotify_streams` in descending order.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[19, 'As It Was', 'USSM12200612', 19, 20, 292.0, 3301814535.0, 87.0, 800899315.0, 2755903.0, 0], [3, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0], [8, 'Danza Kuduro - Cover', 'TCJPA2463708', 9, 9, 355.7, 1653018119.0, None, None, None, 1], [20, 'Paint The Town Red', 'USRC12300907', 20, 21, 290.5, 1065399331.0, 78.0, 240970670.0, 3091732.0, 1], [26, 'STAY (with Justin Bieber)', 'USSM12103949', 26, 27, 266.3, 3107100349.0, 78.0, 1256973582.0, 7485966.0, 1]]",SELECT * FROM `tracks` ORDER BY `spotify_streams` DESC LIMIT 5,0,,0.0,0.791,0.872,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,ORDERBY-ADVANCED,"Compute the sum of the columns spotify_streams, spotify_popularity, tiktok_posts for each row in `tracks`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,[],SELECT * FROM `tracks` ORDER BY `spotify_streams` + `spotify_popularity` + `tiktok_posts` ASC LIMIT 5,3,"<think>
+Alright, so I need to figure out how to compute the sum of the columns spotify_streams, spotify_popularity, and tiktok_posts for each row in the given tracks dataset. Then, I have to sort all the rows based on this sum in ascending order and return the first 5 rows. Let me break this down step by step.
+
+First, I'll look at the dataset provided. It's a JSON object with various keys like track_id, title, isrc, album_id, all_time_rank, track_score, spotify_streams, spotify_popularity, youtube_views, and tiktok_posts. Each of these keys has values associated with track IDs from 0 to 26.
+
+My main focus is on the columns spotify_streams, spotify_popularity, and tiktok_posts. I need to compute the sum for each row across these three columns. However, I notice that some of the entries in these columns are null. For example, in spotify_streams, track 24 has a null value, and similarly, there are nulls in spotify_popularity and tiktok_posts for some tracks. 
+
+The instructions say that if any data fields are NULL, missing, or incomplete, I should infer and fill the missing information with the most logical and contextually appropriate value. Also, I must never leave fields empty or set to null. So, I need to handle these nulls appropriately.
+
+Let me think about how to handle nulls in each column:
+
+1. **spotify_streams**: These are numerical values representing the number of streams. A null here could mean that the track hasn't been streamed, so maybe I should set it to 0. Alternatively, if the track is missing this data, perhaps it's not available on Spotify, but since it's part of the dataset, it's safer to assume 0 streams.
+
+2. **spotify_popularity**: This is a score out of 100. Nulls here might indicate that the track's popularity hasn't been calculated yet or isn't available. Since it's a score, setting it to 0 might make sense, as it's the lowest possible value.
+
+3. **tiktok_posts**: These are counts of posts on TikTok. A null could mean no posts, so setting it to 0 is logical.
+
+Now, I'll go through each row and compute the sum. Let's start with track 0:
+
+- **Track 0**: 
+  - spotify_streams: 390470936
+  - spotify_popularity: 92
+  - tiktok_posts: 5767700
+  - Sum: 390470936 + 92 + 5767700 = 396,238,728
+
+Wait, that seems too high. Maybe I should just add the three numbers as they are, but considering that spotify_streams are in the hundreds of millions, while tiktok_posts are in the millions, and spotify_popularity is a small number, the sum will be dominated by spotify_streams. But the instruction is to sum them as they are, so I'll proceed.
+
+But looking at the data, I see that for track 8, spotify_streams is 1,653,018,119, which is a very high number. Similarly, track 3 has 2,031,280,633 streams. These will have very high sums. On the other hand, track 14 has a very low spotify_streams (297,185) but a high tiktok_posts (3,736,502,312). Wait, no, looking back, track 14's tiktok_posts are 3.0, which is very low. Wait, no, in the data, track 14's tiktok_posts are 3.0, which is correct.
+
+Wait, I think I made a mistake. Let me recheck the data:
+
+Looking at the tiktok_posts for track 14, it's 3.0, which is correct. Track 25 has 37,621,885 tiktok_posts, which is high.
+
+Now, for each track, I'll compute the sum, replacing nulls with 0.
+
+Let me create a table for clarity:
+
+| track_id | spotify_streams | spotify_popularity | tiktok_posts | Sum                  |
+|----------|-----------------|--------------------|--------------|-----------------------|
+| 0        | 390,470,936     | 92                 | 5,767,700     | 396,238,728           |
+| 1        | 323,703,884     | 92                 | 674,700       | 324,378,584           |
+| 2        | 601,309,283     | 92                 | 3,025,400     | 604,334,683           |
+| 3        | 2,031,280,633   | 85                 | 7,189,811     | 2,038,470,444         |
+| 4        | 107,034,922     | 88                 | 16,400        | 107,051,322           |
+| 5        | 670,665,438     | 83                 | 4,202,367     | 674,867,805           |
+| 6        | 900,158,751     | 86                 | null         | 900,158,751 + 86 + 0 = 900,244,837 |
+| 7        | 675,079,153     | 92                 | 3,500,000     | 678,579,153           |
+| 8        | 1,653,018,119   | null               | null         | 1,653,018,119 + 0 + 0 = 1,653,018,119 |
+| 9        | 90,676,573      | 86                 | 325,800       | 90,676,573 + 86 + 325,800 = 91,002,459 |
+| 10       | 250,080,413     | 91                 | null         | 250,080,413 + 91 + 0 = 250,171,504 |
+| 11       | 111,155,129     | null               | null         | 111,155,129 + 0 + 0 = 111,155,129 |
+| 12       | 221,636,195     | 92                 | 195,300       | 221,636,195 + 92 + 195,300 = 221,831,587 |
+| 13       | 355,186,436     | 88                 | null         | 355,186,436 + 88 + 0 = 355,274,524 |
+| 14       | 297,185         | 12                 | 3            | 297,185 + 12 + 3 = 297,200 |
+| 15       | 925,655,569     | 79                 | 11,054,500    | 925,655,569 + 79 + 11,054,500 = 936,709,148 |
+| 16       | 395,433,400     | 89                 | 139,300       | 395,433,400 + 89 + 139,300 = 395,572,789 |
+| 17       | 1,258,569,694   | 87                 | 2,294,429     | 1,258,569,694 + 87 + 2,294,429 = 1,260,864,212 |
+| 18       | 91,272,461      | 86                 | 941,900       | 91,272,461 + 86 + 941,900 = 92,214,347 |
+| 19       | 3,301,814,535   | 87                 | 2,755,903     | 3,301,814,535 + 87 + 2,755,903 = 3,304,570,425 |
+| 20       | 1,065,399,331   | 78                 | 3,091,732     | 1,065,399,331 + 78 + 3,091,732 = 1,068,491,145 |
+| 21       | 547,882,871     | 95                 | 209,200       | 547,882,871 + 95 + 209,200 = 548,092,166 |
+| 22       | 1,655,755,417   | null               | null         | 1,655,755,417 + 0 + 0 = 1,655,755,417 |
+| 23       | 426,700,979     | 86                 | 1,470,500     | 426,700,979 + 86 + 1,470,500 = 428,171,565 |
+| 24       | null            | null               | 9,453,333     | 0 + 0 + 9,453,333 = 9,453,333 |
+| 25       | 7,382,759       | 35                 | 37,621,885    | 7,382,759 + 35 + 37,621,885 = 38,009,679 |
+| 26       | 3,107,100,349   | 78                 | 7,485,966     | 3,107,100,349 + 78 + 7,485,966 = 3,114,586,395 |
+
+Wait, I think I made a mistake in track 8's tiktok_posts. Looking back, track 8's tiktok_posts are null, so I set",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-ADVANCED,"Compute the sum of the columns spotify_streams, spotify_popularity, tiktok_posts for each row in `tracks`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,[],SELECT * FROM `tracks` ORDER BY `spotify_streams` + `spotify_popularity` + `tiktok_posts` DESC LIMIT 5,3,"<think>
+Alright, so I need to figure out how to compute the sum of the columns spotify_streams, spotify_popularity, and tiktok_posts for each row in the given tracks dataset. Then, I have to sort these rows in descending order based on this sum and return the top 5 rows. Let me break this down step by step.
+
+First, I'll look at the dataset provided. It's a JSON object with various fields like track_id, title, isrc, album_id, all_time_rank, track_score, spotify_streams, spotify_popularity, youtube_views, and tiktok_posts. There are 27 entries in total.
+
+My main focus is on the spotify_streams, spotify_popularity, and tiktok_posts columns. I need to sum these three values for each track. However, I notice that some of these fields have null values. For example, in the spotify_streams column, track 24 has a null value. Similarly, spotify_popularity and youtube_views also have some nulls. The instruction says that if any data fields are NULL, missing, or incomplete, I should infer and fill the missing information with the most logical and contextually appropriate value. It also emphasizes never leaving fields empty or set to null, so I must handle these nulls carefully.
+
+Let me think about how to handle nulls in each column:
+
+1. **spotify_streams**: This is a numerical value representing the number of streams. If it's null, I need to infer a logical value. Since streams can't be negative, maybe I can set it to 0. Alternatively, I could look for an average or median, but without additional context, 0 seems safest.
+
+2. **spotify_popularity**: This is a score out of 100. If it's null, perhaps I can set it to 0, assuming the track has no popularity, or maybe take an average. But again, without context, 0 is a safe default.
+
+3. **tiktok_posts**: This is the number of posts on TikTok. If null, setting it to 0 makes sense, as it implies no posts.
+
+Now, I'll go through each row and compute the sum. Let's start with the first few rows to see how it works.
+
+- **Row 0**: 
+  - spotify_streams: 390470936
+  - spotify_popularity: 92
+  - tiktok_posts: 5767700
+  - Sum: 390470936 + 92 + 5767700 = 396,238,728
+
+- **Row 1**:
+  - spotify_streams: 323703884
+  - spotify_popularity: 92
+  - tiktok_posts: 674700
+  - Sum: 323703884 + 92 + 674700 = 324,378,676
+
+- **Row 2**:
+  - spotify_streams: 601309283
+  - spotify_popularity: 92
+  - tiktok_posts: 3025400
+  - Sum: 601309283 + 92 + 3025400 = 604,213,775
+
+- **Row 3**:
+  - spotify_streams: 2031280633
+  - spotify_popularity: 85
+  - tiktok_posts: 7189811
+  - Sum: 2031280633 + 85 + 7189811 = 2,040,370,529
+
+- **Row 4**:
+  - spotify_streams: 107034922
+  - spotify_popularity: 88
+  - tiktok_posts: 16400
+  - Sum: 107034922 + 88 + 16400 = 107,151,410
+
+Continuing this process for all 27 rows, I'll compute the sum for each. However, I need to handle the null values appropriately. For example, in row 8, spotify_streams is null, so I'll set it to 0. Similarly, in row 14, tiktok_posts is 3, which is a very low number, but I'll keep it as is since it's not null.
+
+After computing the sum for each row, the next step is to sort all the rows in descending order based on this sum. This means the row with the highest sum will be first, and the lowest will be last.
+
+Once sorted, I need to pick the top 5 rows. These will be the tracks with the highest combined spotify_streams, spotify_popularity, and tiktok_posts.
+
+I should also ensure that all the other fields in each entry are correctly included in the output. Since the output format requires a table named ""tracks"" and an array of ordered entries, each entry should have all the original fields, including the computed sum.
+
+Wait, the output format doesn't specify including the sum in the entries, just the ordered entries based on the sum. So, I don't need to add the sum as a new field, just sort based on it.
+
+Let me verify the top 5 rows after sorting:
+
+Looking at the computed sums, the top 5 are likely to be the ones with the highest spotify_streams, as that's a large number. For example, row 3 has over 2 billion streams, which is significantly higher than others. Row 19 also has a high number of streams, 3,301,814,535, which is the highest. So, row 19 will probably be first.
+
+Let me list out the top 5 based on the sums I calculated:
+
+1. Row 19: Sum = 3,301,814,535 + 87 + 2,755,903 = 3,304,570,438
+2. Row 3: Sum = 2,031,280,633 + 85 + 7,189,811 = 2,038,554,529
+3. Row 8: Assuming spotify_streams is 0, but wait, row 8 has spotify_streams as 1,653,018,119. Wait, no, in the dataset, row 8's spotify_streams is 1,653,018,119, which is a high number. But I thought it was null. Let me check again.
+
+Wait, looking back, in the dataset, row 8's spotify_streams is 1,653,018,119.0, which is not null. So, I don't need to set it to 0. Similarly, row 22 has spotify_streams as 1,655,575,417.0, which is also a high number.
+
+So, I need to recalculate the sums correctly without assuming nulls where there aren't any. Let me correct that.
+
+For row 8:
+- spotify_streams: 1,653,018,119
+- spotify_popularity: null → set to 0
+- tiktok_posts: null → set to 0
+Sum: 1,653,018,119 + 0 + 0 = 1,653,018,119
+
+For row 22:
+- spotify_streams: 1,655,575,417
+- spotify_popularity: null → 0
+- tiktok_posts: null → 0
+Sum: 1,655,575,417 + 0 + 0 = 1,655,575,417
+
+So, row 22 has a higher sum than row 8.
+
+Similarly, row 26 has spotify_streams: 3,107,100,349, which is the highest. Let me check:
+
+Row 26:
+- spotify_streams: 3,107,100,349
+- spotify_popularity: 78
+- tiktok_posts: 7,485,966
+Sum: 3,107,100,349 + 78 + 7,485,966 = 3,114,586,393
+
+That's actually the highest sum. So, row 26 would be first.
+
+Wait, let me recast all the sums correctly:
+
+- Row 0: 390,470,936 + 92 + 5,767,700 = 396,238,728
+- Row 1: 323,703,884 + 92 + 674,700 = 324,378,676
+- Row 2: 601,309,283 + 92 + 3,025,400 = 604,426,775
+- Row 3: 2,031,280,633 + 85 + 7,189,811 = 2,038,554,529
+- Row 4: 107,034,922 + 88 + 16,400 = 107,139,322
+- Row 5: 670,665,438 + 83 + 4,202,367 = 674,867,805
+- Row 6: 900,158,751 + 86 + null → 900,158,751 + 86 + 0 = 900,158,837
+- Row 7: 675,079,153 + 92 + 3,500,000 = 678,671,153
+- Row 8: 1,653,018,119 + 0 + 0 = 1,653,018,119
+- Row 9: 90,676,573 + 86 + 325,800 = 91,002,373
+- Row 10: 250,080,413 + 91 + null → 250,080,413 + 91 + 0 = 250,171,504
+- Row 11: 111,155,129 + null → 0 + null → 0 = 111,155,129
+- Row 12: 221,636,195 + 92 + 195,300 = 221,831,495
+- Row 13: 355,186,436 + 88 + null → 355",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-ADVANCED,"Compute the sum of the columns album_id, tiktok_posts, explicit_track for each row in `tracks`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,[],SELECT * FROM `tracks` ORDER BY `album_id` + `tiktok_posts` + `explicit_track` ASC LIMIT 5,3,"<think>
+Alright, so I need to figure out how to compute the sum of the columns album_id, tiktok_posts, and explicit_track for each row in the given tracks dataset. Then, I have to sort all the rows based on this sum in ascending order and return the first five rows. Let me break this down step by step.
+
+First, I'll look at the dataset provided. It's a JSON object with various keys like track_id, title, isrc, album_id, all_time_rank, track_score, spotify_streams, spotify_popularity, youtube_views, tiktok_posts, and explicit_track. Each of these keys has values associated with track IDs from 0 to 26.
+
+My task is to compute the sum for each row by adding the values from album_id, tiktok_posts, and explicit_track. I need to make sure that I handle any missing or null values appropriately. The instructions say that if any data fields are NULL, missing, or incomplete, I should infer and fill the missing information with the most logical and contextually appropriate value. Also, I must never leave fields empty or set to null.
+
+Looking at the dataset, I notice that some fields have null values. For example, in the spotify_streams column, track 24 has a null value. Similarly, in spotify_popularity and youtube_views, there are several nulls. However, for this specific task, I'm only dealing with album_id, tiktok_posts, and explicit_track. Let me check these columns for nulls.
+
+Starting with album_id: All entries from 0 to 26 have values, so no nulls here. Album_id ranges from 1 to 26, with some duplicates, like track 18 also having album_id 13.
+
+Next, tiktok_posts: I see that some entries are null. For example, track 6, 8, 10, 11, 12, 13, 14, 22, 24 have null values. Since I can't leave these as null, I need to infer the most logical value. In the context of TikTok posts, a null could mean that there were no posts, so it's reasonable to assume these are zero. Therefore, I'll replace all null values in tiktok_posts with 0.
+
+Explicit_track is a binary column where 0 means not explicit and 1 means explicit. All entries here are either 0 or 1, so no nulls to handle.
+
+Now, for each row, I'll compute the sum as follows: album_id + tiktok_posts + explicit_track. Since album_id is an integer and tiktok_posts is a number (which I'll treat as an integer after replacing nulls with 0), and explicit_track is either 0 or 1, the sum will be an integer.
+
+Let me go through each track and compute the sum:
+
+- Track 0: album_id=1, tiktok_posts=5767700, explicit_track=0 → Sum=1 + 5767700 + 0 = 5767701
+- Track 1: album_id=2, tiktok_posts=674700, explicit_track=1 → Sum=2 + 674700 + 1 = 674703
+- Track 2: album_id=3, tiktok_posts=3025400, explicit_track=0 → Sum=3 + 3025400 + 0 = 3025403
+- Track 3: album_id=4, tiktok_posts=7189811, explicit_track=0 → Sum=4 + 7189811 + 0 = 7189815
+- Track 4: album_id=5, tiktok_posts=16400, explicit_track=1 → Sum=5 + 16400 + 1 = 16406
+- Track 5: album_id=6, tiktok_posts=4202367, explicit_track=1 → Sum=6 + 4202367 + 1 = 4202374
+- Track 6: album_id=7, tiktok_posts=0 (null replaced), explicit_track=0 → Sum=7 + 0 + 0 = 7
+- Track 7: album_id=8, tiktok_posts=3500000, explicit_track=1 → Sum=8 + 3500000 + 1 = 3500009
+- Track 8: album_id=9, tiktok_posts=0 (null replaced), explicit_track=1 → Sum=9 + 0 + 1 = 10
+- Track 9: album_id=10, tiktok_posts=325800, explicit_track=1 → Sum=10 + 325800 + 1 = 325811
+- Track 10: album_id=11, tiktok_posts=0 (null replaced), explicit_track=1 → Sum=11 + 0 + 1 = 12
+- Track 11: album_id=12, tiktok_posts=0 (null replaced), explicit_track=1 → Sum=12 + 0 + 1 = 13
+- Track 12: album_id=13, tiktok_posts=195300, explicit_track=0 → Sum=13 + 195300 + 0 = 195313
+- Track 13: album_id=14, tiktok_posts=0 (null replaced), explicit_track=1 → Sum=14 + 0 + 1 = 15
+- Track 14: album_id=15, tiktok_posts=3, explicit_track=0 → Sum=15 + 3 + 0 = 18
+- Track 15: album_id=16, tiktok_posts=11054500, explicit_track=1 → Sum=16 + 11054500 + 1 = 11054517
+- Track 16: album_id=17, tiktok_posts=139300, explicit_track=0 → Sum=17 + 139300 + 0 = 139317
+- Track 17: album_id=18, tiktok_posts=2294429, explicit_track=1 → Sum=18 + 2294429 + 1 = 2294448
+- Track 18: album_id=13, tiktok_posts=941900, explicit_track=0 → Sum=13 + 941900 + 0 = 941913
+- Track 19: album_id=19, tiktok_posts=2755903, explicit_track=0 → Sum=19 + 2755903 + 0 = 2755922
+- Track 20: album_id=20, tiktok_posts=3091732, explicit_track=1 → Sum=20 + 3091732 + 1 = 3091753
+- Track 21: album_id=21, tiktok_posts=209200, explicit_track=1 → Sum=21 + 209200 + 1 = 209222
+- Track 22: album_id=22, tiktok_posts=0 (null replaced), explicit_track=1 → Sum=22 + 0 + 1 = 23
+- Track 23: album_id=23, tiktok_posts=1470500, explicit_track=1 → Sum=23 + 1470500 + 1 = 1470524
+- Track 24: album_id=24, tiktok_posts=9453333, explicit_track=0 → Sum=24 + 9453333 + 0 = 9453357
+- Track 25: album_id=25, tiktok_posts=37621885, explicit_track=0 → Sum=25 + 37621885 + 0 = 37621910
+- Track 26: album_id=26, tiktok_posts=7485966, explicit_track=1 → Sum=26 + 7485966 + 1 = 7485993
+
+Now, I'll list all the sums:
+
+- Track 0: 5,767,701
+- Track 1: 674,703
+- Track 2: 3,025,403
+- Track 3: 7,189,815
+- Track 4: 16,406
+- Track 5: 4,202,374
+- Track 6: 7
+- Track 7: 3,500,009
+- Track 8: 10
+- Track 9: 325,811
+- Track 10: 12
+- Track 11: 13
+- Track 12: 195,313
+- Track 13: 15
+- Track 14: 18
+- Track 15: 11,054,517
+- Track 16: 139,317
+- Track 17: 2,294,448
+- Track 18: 941,913
+- Track 19: 2,755,922
+- Track 20: 3,091,753
+- Track 21: 209,222
+- Track 22: 23
+- Track 23: 1,470,524
+- Track 24: 9,453,357
+- Track 25: 37,621,910
+- Track 26: 7,485,993
+
+Next, I need to sort these sums in ascending order. Let's list them from smallest to largest:
+
+1. Track 6: 7
+2. Track 8: 10
+3. Track 10: 12
+4. Track 11: 13
+5. Track 13: 15
+6. Track 14: 18
+7. Track 4: 16,406
+8. Track 9: 325,811
+9. Track 12: 195,313
+10. Track 21: 209,222
+11. Track 22: 23
+12. Track 7: 3,500,",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-ADVANCED,"Compute the sum of the columns album_id, tiktok_posts, explicit_track for each row in `tracks`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,[],SELECT * FROM `tracks` ORDER BY `album_id` + `tiktok_posts` + `explicit_track` DESC LIMIT 5,3,"<think>
+Alright, so I need to figure out how to compute the sum of the columns album_id, tiktok_posts, and explicit_track for each row in the given tracks dataset. Then, I have to sort all the rows in descending order based on this sum and return the top 5 rows. Let me break this down step by step.
+
+First, I'll look at the dataset provided. It's a JSON object with various fields like track_id, title, isrc, album_id, all_time_rank, track_score, spotify_streams, spotify_popularity, youtube_views, tiktok_posts, and explicit_track. My focus is on album_id, tiktok_posts, and explicit_track.
+
+I notice that album_id is a numerical value, so that's straightforward. Tiktok_posts also seems to be numerical, but I should check if there are any null values. Explicit_track is a binary field where 0 means not explicit and 1 means explicit. 
+
+Looking at the data, I see that some entries in tiktok_posts are null. Since the instruction says to infer and fill missing information with the most logical value, I'll replace nulls in tiktok_posts with 0. That way, I can compute the sum without issues.
+
+Next, for each row, I'll compute the sum as album_id + tiktok_posts + explicit_track. Since album_id is an integer and tiktok_posts is a large number, the sum will be dominated by tiktok_posts, but I have to include all three as per the query.
+
+After computing the sum for each row, I'll sort the rows in descending order based on this sum. Once sorted, I'll pick the top 5 rows to include in the output.
+
+I also need to make sure that the output is in valid JSON format, following the specified schema. The table name should be ""tracks"", and each entry in ordered_entries should be an object with the computed sum and the original fields.
+
+I'll go through each row, compute the sum, handle nulls, sort, and then extract the top 5. Let me start by processing each entry:
+
+1. For track_id 0:
+   - album_id: 1
+   - tiktok_posts: 5,767,700
+   - explicit_track: 0
+   - Sum: 1 + 5,767,700 + 0 = 5,767,701
+
+2. For track_id 1:
+   - album_id: 2
+   - tiktok_posts: 674,700
+   - explicit_track: 1
+   - Sum: 2 + 674,700 + 1 = 674,703
+
+3. For track_id 2:
+   - album_id: 3
+   - tiktok_posts: 3,025,400
+   - explicit_track: 0
+   - Sum: 3 + 3,025,400 + 0 = 3,025,403
+
+4. For track_id 3:
+   - album_id: 4
+   - tiktok_posts: 7,189,811
+   - explicit_track: 0
+   - Sum: 4 + 7,189,811 + 0 = 7,189,815
+
+5. For track_id 4:
+   - album_id: 5
+   - tiktok_posts: 16,400
+   - explicit_track: 1
+   - Sum: 5 + 16,400 + 1 = 16,406
+
+6. For track_id 5:
+   - album_id: 6
+   - tiktok_posts: 4,202,367
+   - explicit_track: 1
+   - Sum: 6 + 4,202,367 + 1 = 4,202,374
+
+7. For track_id 6:
+   - album_id: 7
+   - tiktok_posts: null → 0
+   - explicit_track: 0
+   - Sum: 7 + 0 + 0 = 7
+
+8. For track_id 7:
+   - album_id: 8
+   - tiktok_posts: 3,500,000
+   - explicit_track: 1
+   - Sum: 8 + 3,500,000 + 1 = 3,500,009
+
+9. For track_id 8:
+   - album_id: 9
+   - tiktok_posts: null → 0
+   - explicit_track: 1
+   - Sum: 9 + 0 + 1 = 10
+
+10. For track_id 9:
+    - album_id: 10
+    - tiktok_posts: 325,800
+    - explicit_track: 1
+    - Sum: 10 + 325,800 + 1 = 325,811
+
+11. For track_id 10:
+    - album_id: 11
+    - tiktok_posts: null → 0
+    - explicit_track: 1
+    - Sum: 11 + 0 + 1 = 12
+
+12. For track_id 11:
+    - album_id: 12
+    - tiktok_posts: null → 0
+    - explicit_track: 1
+    - Sum: 12 + 0 + 1 = 13
+
+13. For track_id 12:
+    - album_id: 13
+    - tiktok_posts: 195,300
+    - explicit_track: 0
+    - Sum: 13 + 195,300 + 0 = 195,313
+
+14. For track_id 13:
+    - album_id: 14
+    - tiktok_posts: null → 0
+    - explicit_track: 1
+    - Sum: 14 + 0 + 1 = 15
+
+15. For track_id 14:
+    - album_id: 15
+    - tiktok_posts: 3.0
+    - explicit_track: 0
+    - Sum: 15 + 3 + 0 = 18
+
+16. For track_id 15:
+    - album_id: 16
+    - tiktok_posts: 11,054,500
+    - explicit_track: 1
+    - Sum: 16 + 11,054,500 + 1 = 11,054,517
+
+17. For track_id 16:
+    - album_id: 17
+    - tiktok_posts: 139,300
+    - explicit_track: 0
+    - Sum: 17 + 139,300 + 0 = 139,317
+
+18. For track_id 17:
+    - album_id: 18
+    - tiktok_posts: 2,294,429
+    - explicit_track: 1
+    - Sum: 18 + 2,294,429 + 1 = 2,294,448
+
+19. For track_id 18:
+    - album_id: 13
+    - tiktok_posts: 941,900
+    - explicit_track: 0
+    - Sum: 13 + 941,900 + 0 = 941,913
+
+20. For track_id 19:
+    - album_id: 19
+    - tiktok_posts: 2,755,903
+    - explicit_track: 0
+    - Sum: 19 + 2,755,903 + 0 = 2,755,922
+
+21. For track_id 20:
+    - album_id: 20
+    - tiktok_posts: 3,091,732
+    - explicit_track: 1
+    - Sum: 20 + 3,091,732 + 1 = 3,091,753
+
+22. For track_id 21:
+    - album_id: 21
+    - tiktok_posts: 209,200
+    - explicit_track: 1
+    - Sum: 21 + 209,200 + 1 = 209,222
+
+23. For track_id 22:
+    - album_id: 22
+    - tiktok_posts: null → 0
+    - explicit_track: 1
+    - Sum: 22 + 0 + 1 = 23
+
+24. For track_id 23:
+    - album_id: 23
+    - tiktok_posts: 357,243.0 → Wait, looking back, the data shows 357,243.0 for track_id 23, but in the dataset provided, track_id 23 has tiktok_posts as 1,470,500. Hmm, maybe I misread. Let me check again.
+
+Wait, in the dataset, for track_id 23, tiktok_posts is 1,470,500. So:
+
+- album_id: 23
+- tiktok_posts: 1,470,500
+- explicit_track: 1
+- Sum: 23 + 1,470,500 + 1 = 1,470,524
+
+25. For track_id 24:
+    - album_id: 24
+    - tiktok_posts: 9,453,333
+    - explicit_track: 0
+    - Sum: 24 + 9,453,333 + 0 = 9,453,357
+
+26. For track_id 25:
+    - album_id: 25
+    - tiktok_posts: 37,621,885
+    - explicit_track: 0
+    - Sum: 25 + 37,621,885 + 0 = 37,621,910
+
+27. For track_id 26:
+    - album_id: 26
+    - tiktok_posts: 7,485,966
+    - explicit_track: 1
+    - Sum: 26 + 7,485,966",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-ADVANCED,"Compute the sum of the columns album_id, all_time_rank, spotify_streams for each row in `tracks`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,[],SELECT * FROM `tracks` ORDER BY `album_id` + `all_time_rank` + `spotify_streams` ASC LIMIT 5,3,"<think>
+Alright, so I need to figure out how to compute the sum of the columns album_id, all_time_rank, and spotify_streams for each row in the tracks dataset. Then, I have to sort all the rows based on this sum in ascending order and return the first five rows. Let me break this down step by step.
+
+First, I'll look at the dataset provided. It's a JSON object with various keys like track_id, title, isrc, album_id, all_time_rank, track_score, spotify_streams, spotify_popularity, youtube_views, and tiktok_posts. Each of these keys has values associated with track IDs from 0 to 26.
+
+The task is to compute the sum for each row across album_id, all_time_rank, and spotify_streams. So, for each track, I'll add these three numbers together. Let me pick a few examples to see how this works.
+
+Take track_id 0: album_id is 1, all_time_rank is 1, and spotify_streams is 390470936. So the sum would be 1 + 1 + 390470936 = 390470938.
+
+Another example, track_id 1: album_id is 2, all_time_rank is 2, spotify_streams is 323703884. Sum is 2 + 2 + 323703884 = 323703888.
+
+Wait, but looking at the data, I notice that some spotify_streams are null. For instance, track_id 24 has a null value for spotify_streams. Since the instruction says to infer and fill missing information, I need to decide how to handle nulls. The best approach here is to treat null as 0 because adding a null would otherwise make the sum invalid or propagate the null, which isn't helpful for sorting.
+
+So, for track_id 24, album_id is 24, all_time_rank is 25, and spotify_streams is null. I'll treat spotify_streams as 0, so the sum is 24 + 25 + 0 = 49.
+
+Similarly, track_id 22 has a null spotify_streams. Album_id is 22, all_time_rank is 23, so sum is 22 + 23 + 0 = 45.
+
+Now, I'll compute this sum for each track from 0 to 26. Once I have all the sums, I'll sort the tracks in ascending order based on these sums. After sorting, I'll pick the first five entries to include in the output.
+
+Let me list out all the tracks with their computed sums:
+
+- Track 0: 1 + 1 + 390470936 = 390470938
+- Track 1: 2 + 2 + 323703884 = 323703888
+- Track 2: 3 + 3 + 601309283 = 601309286
+- Track 3: 4 + 4 + 2031280633 = 2031280637
+- Track 4: 5 + 5 + 107034922 = 107034932
+- Track 5: 6 + 6 + 670665438 = 670665450
+- Track 6: 7 + 7 + 900158751 = 900158765
+- Track 7: 8 + 8 + 675079153 = 675079169
+- Track 8: 9 + 9 + 1653018119 = 1653018137
+- Track 9: 10 + 10 + 90676573 = 90676593
+- Track 10: 11 + 11 + 250080413 = 250080435
+- Track 11: 12 + 12 + 111155129 = 111155153
+- Track 12: 13 + 13 + 221636195 = 221636221
+- Track 13: 14 + 14 + 355186436 = 355186464
+- Track 14: 15 + 15 + 297185 = 297215
+- Track 15: 16 + 16 + 925655569 = 925655601
+- Track 16: 17 + 17 + 395433400 = 395433434
+- Track 17: 18 + 18 + 1258569694 = 1258569720
+- Track 18: 13 + 19 + 91272461 = 91272493
+- Track 19: 19 + 20 + 3301814535 = 3301814554
+- Track 20: 20 + 21 + 1065399331 = 1065399552
+- Track 21: 21 + 22 + 547882871 = 547882914
+- Track 22: 22 + 23 + 0 = 45
+- Track 23: 23 + 24 + 426700979 = 426700026
+- Track 24: 24 + 25 + 0 = 49
+- Track 25: 25 + 26 + 7382759 = 7382780
+- Track 26: 26 + 27 + 3107100349 = 3107100402
+
+Now, I'll sort these sums in ascending order:
+
+- Track 24: 49
+- Track 22: 45
+- Track 14: 297215
+- Track 25: 7382780
+- Track 9: 90676593
+- ... and so on.
+
+Wait, I think I made a mistake here. Track 22 has a sum of 45, which is the smallest, followed by Track 24 with 49, then Track 14 with 297215, Track 25 with 7,382,780, and Track 9 with 90,676,593. So the first five entries after sorting would be:
+
+1. Track 22: sum = 45
+2. Track 24: sum = 49
+3. Track 14: sum = 297,215
+4. Track 25: sum = 7,382,780
+5. Track 9: sum = 90,676,593
+
+Wait, but looking back, Track 14's sum is 297,215, which is higher than Track 25's 7,382,780. So the order should be Track 22 (45), Track 24 (49), Track 14 (297,215), Track 25 (7,382,780), and Track 9 (90,676,593). But actually, 7,382,780 is less than 90,676,593, so Track 25 comes before Track 9.
+
+Wait, no, 7 million is less than 90 million, so Track 25 is indeed before Track 9. So the first five are:
+
+1. Track 22: 45
+2. Track 24: 49
+3. Track 14: 297,215
+4. Track 25: 7,382,780
+5. Track 9: 90,676,593
+
+But wait, Track 14's sum is 297,215, which is higher than Track 25's 7,382,780. So the correct order should be:
+
+1. Track 22: 45
+2. Track 24: 49
+3. Track 14: 297,215
+4. Track 25: 7,382,780
+5. Track 9: 90,676,593
+
+Wait, no, 7,382,780 is larger than 297,215, so Track 25 comes after Track 14. So the correct order is:
+
+1. Track 22: 45
+2. Track 24: 49
+3. Track 14: 297,215
+4. Track 25: 7,382,780
+5. Track 9: 90,676,593
+
+Wait, but 7,382,780 is larger than 297,215, so Track 25 should come after Track 14. So the first five are:
+
+1. Track 22: 45
+2. Track 24: 49
+3. Track 14: 297,215
+4. Track 25: 7,382,780
+5. Track 9: 90,676,593
+
+But looking at the sums, Track 25's sum is 7,382,780, which is indeed larger than Track 14's 297,215. So the order is correct as above.
+
+Now, I need to extract the data for these five tracks and format them into the required JSON structure. Each entry should include all the columns from the original dataset. For the null values, I'll replace them with 0 or appropriate defaults as per the instructions.
+
+For example, Track 22 has spotify_streams as null, so I'll set it to 0. Similarly, any other nulls in these top five entries should be handled accordingly.
+
+So, compiling the data for each of these tracks:
+
+1. Track 22:
+   - track_id: 22
+   - title: ""Danza Kuduro - Cover""
+   - isrc: ""TCJPA2445163""
+   - album_id: 22
+   - all_time_rank: 23
+   - track_score: 279.0
+   - spotify_streams: 0 (originally null)
+   - spotify_popularity: null → 0
+   - youtube_views: null → 0
+   - tiktok_posts: null → 0
+   - explicit_track: 1
+
+2. Track 24:
+   - track_id: 24
+   - title: ""Future""
+   - isrc: ""RUA",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-ADVANCED,"Compute the sum of the columns album_id, all_time_rank, spotify_streams for each row in `tracks`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[3, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0, 2031280641], [19, 'As It Was', 'USSM12200612', 19, 20, 292.0, 3301814535.0, 87.0, 800899315.0, 2755903.0, 0, 3301814554], [0, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 1, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, 0, 390470938], [26, 'STAY (with Justin Bieber)', 'USSM12103949', 26, 27, 266.3, 3107100349.0, 78.0, 1256973582.0, 7485966.0, 1, 3107100376], [15, 'LALA', 'USWL12300002', 16, 16, 299.9, 925655569.0, 79.0, 934302031.0, 11054500.0, 1, 925655584]]",SELECT * FROM `tracks` ORDER BY `album_id` + `all_time_rank` + `spotify_streams` DESC LIMIT 5,0,,0.0,0.56,0.718,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,ORDERBY-ADVANCED,"Compute the sum of the columns spotify_popularity, tiktok_posts for each row in `tracks`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[14, 'bathroom floor', 'NLC242100307', 15, 15, 301.6, 297185.0, 12, 6736502312.0, 3.0, 0, 15.0], [25, 'Beat Automotivo Tan Tan Tan Viral', 'BXWEH2200054', 25, 26, 268.1, 7382759.0, 35, 4233958.0, 37621885.0, 0, 37622.0], [18, 'BLUE', 'USUM72401996', 13, 19, 292.6, 91272461.0, 86, 16038053.0, 941900.0, 0, 941.0], [9, 'BAND4BAND (feat. Lil Baby)', 'USSM12404354', 10, 10, 330.6, 90676573.0, 86, 32735244.0, 325800.0, 1, 325.0], [12, 'LUNCH', 'USUM72401991', 13, 13, 316.3, 221636195.0, 92, 40022524.0, 195300.0, 0, 195.0]]",SELECT * FROM `tracks` ORDER BY `spotify_popularity` + `tiktok_posts` ASC LIMIT 5,0,,0.0,0.122,0.176,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,ORDERBY-ADVANCED,"Compute the sum of the columns spotify_popularity, tiktok_posts for each row in `tracks`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[3, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0], [19, 'As It Was', 'USSM12200612', 19, 20, 292.0, 3301814535.0, 87.0, 800899315.0, 2755903.0, 0], [26, 'STAY (with Justin Bieber)', 'USSM12103949', 26, 27, 266.3, 3107100349.0, 78.0, 1256973582.0, 7485966.0, 1], [15, 'LALA', 'USWL12300002', 16, 16, 299.9, 925655569.0, 79.0, 934302031.0, 11054500.0, 1], [20, 'Paint The Town Red', 'USRC12300907', 20, 21, 290.5, 1065399331.0, 78.0, 240970670.0, 3091732.0, 1]]",SELECT * FROM `tracks` ORDER BY `spotify_popularity` + `tiktok_posts` DESC LIMIT 5,0,,0.0,0.6,0.643,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,ORDERBY-ADVANCED,"Compute the sum of the columns track_id, all_time_rank, spotify_popularity for each row in `tracks`. Sort all rows in ascending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[9, 'BAND4BAND (feat. Lil Baby)', 'USSM12404354', 10, 10, 330.6, 90676573.0, 86.0, 32735244.0, 325800.0, 1], [10, 'I Had Some Help (feat. Morgan Wallen)', 'USUM72404990', 11, 11, 322.1, 250080413.0, 91.0, 32229063.0, None, 1], [11, 'The Door', 'USWB12402486', 12, 12, 320.2, 111155129.0, None, None, None, 1], [12, 'LUNCH', 'USUM72401991', 13, 13, 316.3, 221636195.0, 92.0, 40022524.0, 195300.0, 0], [13, 'Like That', 'USSM12402041', 14, 14, 308.2, 355186436.0, 88.0, 98081493.0, None, 1]]",SELECT * FROM `tracks` ORDER BY `track_id` + `all_time_rank` + `spotify_popularity` ASC LIMIT 5,0,,0.0,0.231,0.29,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,ORDERBY-ADVANCED,"Compute the sum of the columns track_id, all_time_rank, spotify_popularity for each row in `tracks`. Sort all rows in descending order by this sum and return the first 5 rows.",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,[],SELECT * FROM `tracks` ORDER BY `track_id` + `all_time_rank` + `spotify_popularity` DESC LIMIT 5,3,"<think>
+Alright, so I need to figure out how to compute the sum of the columns track_id, all_time_rank, and spotify_popularity for each row in the given tracks dataset. Then, I have to sort all the rows in descending order based on this sum and return the first 5 rows. Let me break this down step by step.
+
+First, I'll look at the dataset provided. It's a JSON object with various fields like track_id, title, isrc, album_id, all_time_rank, track_score, spotify_streams, spotify_popularity, youtube_views, tiktok_posts, and explicit_track. The main columns I need to focus on are track_id, all_time_rank, and spotify_popularity.
+
+I notice that some entries in spotify_popularity are null. The instructions say that if any data fields are null, I should infer and fill them with the most logical and contextually appropriate value. So, I need to handle those nulls before proceeding.
+
+Looking at the spotify_popularity column, the values range from 12 to 95. The nulls are present in rows 8, 11, 22, 24. I'll need to estimate these missing values. One approach is to take the average of the existing spotify_popularity values and use that to fill in the nulls. Let me calculate the average:
+
+Adding up all the non-null spotify_popularity values and dividing by the number of non-null entries. Let's see:
+
+Total = 92 + 92 + 92 + 85 + 88 + 83 + 86 + 92 + 86 + 91 + 92 + 88 + 12 + 79 + 89 + 87 + 86 + 87 + 78 + 95 + 86 + 78 + 35 + 78.
+
+Wait, actually, I should count how many non-null entries there are. There are 26 entries in total, with 4 nulls, so 22 non-null. Let me sum them up:
+
+92 + 92 = 184
+184 + 92 = 276
+276 + 85 = 361
+361 + 88 = 449
+449 + 83 = 532
+532 + 86 = 618
+618 + 92 = 710
+710 + 86 = 796
+796 + 91 = 887
+887 + 92 = 979
+979 + 88 = 1067
+1067 + 12 = 1079
+1079 + 79 = 1158
+1158 + 89 = 1247
+1247 + 87 = 1334
+1334 + 86 = 1420
+1420 + 87 = 1507
+1507 + 78 = 1585
+1585 + 95 = 1680
+1680 + 86 = 1766
+1766 + 78 = 1844
+1844 + 35 = 1879
+1879 + 78 = 1957.
+
+So the total is 1957 across 22 entries. The average is 1957 / 22 ≈ 89. So I'll fill the nulls with 89.
+
+Now, for each row, I'll compute the sum of track_id, all_time_rank, and spotify_popularity (with the filled nulls). Then, I'll sort these sums in descending order and pick the top 5 rows.
+
+Let me go through each row:
+
+Row 0:
+track_id = 1
+all_time_rank = 1
+spotify_popularity = 92
+Sum = 1 + 1 + 92 = 94
+
+Row 1:
+track_id = 2
+all_time_rank = 2
+spotify_popularity = 92
+Sum = 2 + 2 + 92 = 96
+
+Row 2:
+track_id = 3
+all_time_rank = 3
+spotify_popularity = 92
+Sum = 3 + 3 + 92 = 98
+
+Row 3:
+track_id = 4
+all_time_rank = 4
+spotify_popularity = 85
+Sum = 4 + 4 + 85 = 93
+
+Row 4:
+track_id = 5
+all_time_rank = 5
+spotify_popularity = 88
+Sum = 5 + 5 + 88 = 98
+
+Row 5:
+track_id = 6
+all_time_rank = 6
+spotify_popularity = 83
+Sum = 6 + 6 + 83 = 95
+
+Row 6:
+track_id = 7
+all_time_rank = 7
+spotify_popularity = 86
+Sum = 7 + 7 + 86 = 100
+
+Row 7:
+track_id = 8
+all_time_rank = 8
+spotify_popularity = 92
+Sum = 8 + 8 + 92 = 108
+
+Row 8:
+track_id = 9
+all_time_rank = 9
+spotify_popularity = 89 (filled null)
+Sum = 9 + 9 + 89 = 107
+
+Row 9:
+track_id = 10
+all_time_rank = 10
+spotify_popularity = 86
+Sum = 10 + 10 + 86 = 106
+
+Row 10:
+track_id = 11
+all_time_rank = 11
+spotify_popularity = 91
+Sum = 11 + 11 + 91 = 113
+
+Row 11:
+track_id = 12
+all_time_rank = 12
+spotify_popularity = 89 (filled null)
+Sum = 12 + 12 + 89 = 113
+
+Row 12:
+track_id = 13
+all_time_rank = 13
+spotify_popularity = 92
+Sum = 13 + 13 + 92 = 118
+
+Row 13:
+track_id = 14
+all_time_rank = 14
+spotify_popularity = 88
+Sum = 14 + 14 + 88 = 116
+
+Row 14:
+track_id = 15
+all_time_rank = 15
+spotify_popularity = 12
+Sum = 15 + 15 + 12 = 42
+
+Row 15:
+track_id = 16
+all_time_rank = 16
+spotify_popularity = 79
+Sum = 16 + 16 + 79 = 111
+
+Row 16:
+track_id = 17
+all_time_rank = 17
+spotify_popularity = 89
+Sum = 17 + 17 + 89 = 123
+
+Row 17:
+track_id = 18
+all_time_rank = 18
+spotify_popularity = 87
+Sum = 18 + 18 + 87 = 123
+
+Row 18:
+track_id = 19
+all_time_rank = 19
+spotify_popularity = 86
+Sum = 19 + 19 + 86 = 124
+
+Row 19:
+track_id = 20
+all_time_rank = 20
+spotify_popularity = 87
+Sum = 20 + 20 + 87 = 127
+
+Row 20:
+track_id = 21
+all_time_rank = 21
+spotify_popularity = 78
+Sum = 21 + 21 + 78 = 120
+
+Row 21:
+track_id = 22
+all_time_rank = 22
+spotify_popularity = 89 (filled null)
+Sum = 22 + 22 + 89 = 133
+
+Row 22:
+track_id = 23
+all_time_rank = 23
+spotify_popularity = 86
+Sum = 23 + 23 + 86 = 132
+
+Row 23:
+track_id = 24
+all_time_rank = 24
+spotify_popularity = 89 (filled null)
+Sum = 24 + 24 + 89 = 137
+
+Row 24:
+track_id = 25
+all_time_rank = 25
+spotify_popularity = 35
+Sum = 25 + 25 + 35 = 85
+
+Row 25:
+track_id = 26
+all_time_rank = 26
+spotify_popularity = 78
+Sum = 26 + 26 + 78 = 130
+
+Now, I'll list all the sums:
+
+Row 0: 94
+Row 1: 96
+Row 2: 98
+Row 3: 93
+Row 4: 98
+Row 5: 95
+Row 6: 100
+Row 7: 108
+Row 8: 107
+Row 9: 106
+Row 10: 113
+Row 11: 113
+Row 12: 118
+Row 13: 116
+Row 14: 42
+Row 15: 111
+Row 16: 123
+Row 17: 123
+Row 18: 124
+Row 19: 127
+Row 20: 120
+Row 21: 133
+Row 22: 132
+Row 23: 137
+Row 24: 85
+Row 25: 130
+
+Now, I'll sort these sums in descending order:
+
+137 (Row23), 133 (Row21), 132 (Row22), 130 (Row25), 127 (Row19), 124 (Row18), 123 (Row16,17), 120 (Row20), 118 (Row12), 116 (Row13), 113 (Row10,11), 111 (Row15), 108 (Row7), 107 (Row8), 106 (Row9), 100 (Row6), 98 (Row2,4), 96 (Row1), 95 (Row5), 94 (Row0), 93 (Row3), 85",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-PROJECT,Select only the column `album_id` from `tracks`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1], [2], [3], [4], [5]]",SELECT `album_id` FROM `tracks` ORDER BY `album_id` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-PROJECT,Select only the column `album_id` from `tracks`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[26], [25], [24], [23], [22]]",SELECT `album_id` FROM `tracks` ORDER BY `album_id` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-PROJECT,Select only the column `title` from `tracks`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['As It Was'], ['BAND4BAND (feat. Lil Baby)'], ['Beat Automotivo Tan Tan Tan Viral'], ['Beautiful Things'], ['BLUE']]",SELECT `title` FROM `tracks` ORDER BY `title` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,0.85
+data/db_music_cut_300.sqlite,tracks,ORDERBY-PROJECT,Select only the column `title` from `tracks`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['STAY (with Justin Bieber)'], [""TEXAS HOLD 'EM""], ['The Door'], ['Paint The Town Red'], ['Not Like Us']]",SELECT `title` FROM `tracks` ORDER BY `title` DESC LIMIT 5,0,,0.0,0.4,0.4,0.0,1.0,0.4,0.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-PROJECT,Select only the column `tiktok_posts` from `tracks`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[3.0], [16400.0], [195300.0], [209200.0], [3025400.0]]",SELECT `tiktok_posts` FROM `tracks` ORDER BY `tiktok_posts` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,ORDERBY-PROJECT,Select only the column `tiktok_posts` from `tracks`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[37621885.0], [11054500.0], [9453333.0], [7485966.0], [7189811.0]]",SELECT `tiktok_posts` FROM `tracks` ORDER BY `tiktok_posts` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-PROJECT,Select only the column `all_time_rank` from `tracks`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1], [2], [3], [4], [5]]",SELECT `all_time_rank` FROM `tracks` ORDER BY `all_time_rank` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-PROJECT,Select only the column `all_time_rank` from `tracks`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[27], [26], [25], [24], [23]]",SELECT `all_time_rank` FROM `tracks` ORDER BY `all_time_rank` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-PROJECT,Select only the column `youtube_views` from `tracks`. Sort it in ascending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[0], [0], [0], [0], [0]]",SELECT `youtube_views` FROM `tracks` ORDER BY `youtube_views` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,ORDERBY-PROJECT,Select only the column `youtube_views` from `tracks`. Sort it in descending order and return the first 5 values.,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[1096100899.0], [934302031.0], [84274754.0], [800899315.0], [6736502312.0]]",SELECT `youtube_views` FROM `tracks` ORDER BY `youtube_views` DESC LIMIT 5,0,,0.0,0.8,0.8,0.0,1.0,0.8,0.4
+data/db_music_cut_300.sqlite,albums,ORDERBY-SINGLE,"List the top 5 rows from the table `albums`, sorted by the column `album_id` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1, 'Million Dollar Baby - Single', '26-04-2024', 1], [2, 'Not Like Us', '04-05-2024', 2], [3, 'I like the way you kiss me', '19-03-2024', 3], [4, 'Flowers - Single', '12-01-2023', 4], [5, 'Houdini', '31-05-2024', 5]]",SELECT * FROM `albums` ORDER BY `album_id` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_music_cut_300.sqlite,albums,ORDERBY-SINGLE,"List the top 5 rows from the table `albums`, sorted by the column `album_id` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[75, 'Laxed (Siren Beat)', '24-04-2020', 67], [74, 'un x100to', '17-04-2023', 66], [73, 'Old Town Road', '14-03-2019', 65], [72, 'The Way We Move', '10-03-2023', 64], [71, 'Shakira: Bzrp Music Sessions, Vol. 53', '11-01-2023', 63]]",SELECT * FROM `albums` ORDER BY `album_id` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_music_cut_300.sqlite,albums,ORDERBY-SINGLE,"List the top 5 rows from the table `albums`, sorted by the column `title` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT * FROM `albums` ORDER BY `title` ASC LIMIT 5,3,"```
+{
+  ""table_name"": ""albums"",
+  ""ordered_entries"": [
+    {
+      ""album_id"": 75,
+      ""title"": ""Laxed (Siren Beat)"",
+      ""release_date (dd-mm-yyyy)"": ""24-04-2020"",
+      ""artist_id"": 67
+    },
+    {
+      ""album_id"": 74,
+      ""title"": ""un x100to"",
+      ""release_date (dd-mm-yyyy)"": ""17-04-2023"",
+      ""artist_id"": 66
+    },
+    {
+      ""album_id"": 73,
+      ""title"": ""Old Town Road"",
+      ""release_date (dd-mm-yyyy)"": ""14-03-2019"",
+      ""artist_id"": 65
+    },
+    {
+      ""album_id"": 72,
+      ""title"": ""The Way We Move"",
+      ""release_date (dd-mm-yyyy)"": ""10-03-2023"",
+      ""artist_id"": 64
+    },
+    {
+      ""album_id"": 71,
+      ""title"": ""Shakira: Bzrp Music Sessions, Vol. 53"",
+      ""release_date (dd-mm-yyyy)"": ""11-01-2023"",
+      ""artist_id"": 63
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,albums,ORDERBY-SINGLE,"List the top 5 rows from the table `albums`, sorted by the column `title` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[57, 'Unholy (feat. Kim Petras)', '22-09-2022', 52], [58, 'Stereo Love Deluxe (feat. Vika Jigulina)', '05-06-2024', 53], [48, 'euphoria', '30-04-2024', 2], [47, 'Despacito (Featuring Daddy Yankee)', '13-01-2017', 44], [46, 'If We Ever Broke Up', '10-02-2023', 43]]",SELECT * FROM `albums` ORDER BY `title` DESC LIMIT 5,1,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,ORDERBY-SINGLE,"List the top 5 rows from the table `albums`, sorted by the column `release_date (dd-mm-yyyy)` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[18, 'As It Was', '31-03-2022', 19], [24, 'Beat Automotivo Tan Tan Tan Viral', '24-05-2022', 24], [61, 'Un Verano Sin Ti', '06-05-2022', 56], [63, 'Calm Down', '10-02-2022', 46], [74, 'Laxed (Siren Beat)', '24-04-2020', 67]]",SELECT * FROM `albums` ORDER BY `release_date (dd-mm-yyyy)` ASC LIMIT 5,0,,0.0,0.053,0.053,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,ORDERBY-SINGLE,"List the top 5 rows from the table `albums`, sorted by the column `release_date (dd-mm-yyyy)` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT * FROM `albums` ORDER BY `release_date (dd-mm-yyyy)` DESC LIMIT 5,3,"```
+{
+  ""table_name"": ""albums"",
+  ""ordered_entries"": [
+    {
+      ""album_id"": 18,
+      ""title"": ""As It Was"",
+      ""release_date (dd-mm-yyyy)"": ""31-03-2022"",
+      ""artist_id"": 19
+    },
+    {
+      ""album_id"": 24,
+      ""title"": ""Beat Automotivo Tan Tan Tan Viral"",
+      ""release_date (dd-mm-yyyy)"": ""24-05-2022"",
+      ""artist_id"": 24
+    },
+    {
+      ""album_id"": 61,
+      ""title"": ""Un Verano Sin Ti"",
+      ""release_date (dd-mm-yyyy)"": ""06-05-2022"",
+      ""artist_id"": 56
+    },
+    {
+      ""album_id"": 63,
+      ""title"": ""Calm Down"",
+      ""release_date (dd-mm-yyyy)"": ""10-02-2022"",
+      ""artist_id"": 46
+    },
+    {
+      ""album_id"": 74,
+      ""title"": ""Laxed (Siren Beat)"",
+      ""release_date (dd-mm-yyyy)"": ""24-04-2020"",
+      ""artist_id"": 67
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,albums,ORDERBY-SINGLE,"List the top 5 rows from the table `albums`, sorted by the column `artist_id` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1, 'Million Dollar Baby - Single', '26-04-2024', 1], [2, 'Not Like Us', '04-05-2024', 2], [3, 'I like the way you kiss me', '19-03-2024', 3], [4, 'Flowers - Single', '12-01-2023', 4], [5, 'Houdini', '31-05-2024', 5]]",SELECT * FROM `albums` ORDER BY `artist_id` ASC LIMIT 5,1,,0.0,0.8,0.8,0.0,1.0,0.8,1.0
+data/db_music_cut_300.sqlite,albums,ORDERBY-SINGLE,"List the top 5 rows from the table `albums`, sorted by the column `artist_id` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[74, 'Laxed (Siren Beat)', '24-04-2020', 67], [73, 'un x100to', '17-04-2023', 66], [72, 'Old Town Road', '14-03-2019', 65], [71, 'The Way We Move', '10-03-2023', 64], [70, 'Shakira: Bzrp Music Sessions, Vol. 53', '11-01-2023', 63]]",SELECT * FROM `albums` ORDER BY `artist_id` DESC LIMIT 5,0,,0.0,0.95,0.95,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,ORDERBY-ADVANCED,"Compute the sum of the columns album_id, artist_id for each row in `albums`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT * FROM `albums` ORDER BY `album_id` + `artist_id` ASC LIMIT 5,3,"```
+{
+  ""table_name"": ""albums"",
+  ""ordered_entries"": [
+    {
+      ""album_id"": 74,
+      ""title"": ""Laxed (Siren Beat)"",
+      ""release_date (dd-mm-yyyy)"": ""24-04-2020"",
+      ""artist_id"": 67
+    },
+    {
+      ""album_id"": 73,
+      ""title"": ""un x100to"",
+      ""release_date (dd-mm-yyyy)"": ""17-04-2023"",
+      ""artist_id"": 66
+    },
+    {
+      ""album_id"": 72,
+      ""title"": ""Old Town Road"",
+      ""release_date (dd-mm-yyyy)"": ""14-03-2019"",
+      ""artist_id"": 65
+    },
+    {
+      ""album_id"": 71,
+      ""title"": ""The Way We Move"",
+      ""release_date (dd-mm-yyyy)"": ""10-03-2023"",
+      ""artist_id"": 64
+    },
+    {
+      ""album_id"": 70,
+      ""title"": ""Shakira: Bzrp Music Sessions, Vol. 53"",
+      ""release_date (dd-mm-yyyy)"": ""11-01-2023"",
+      ""artist_id"": 63
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,albums,ORDERBY-ADVANCED,"Compute the sum of the columns album_id, artist_id for each row in `albums`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[74, 'Laxed (Siren Beat)', '24-04-2020', 67, 141], [73, 'un x100to', '17-04-2023', 66, 139], [72, 'Old Town Road', '14-03-2019', 65, 137], [71, 'The Way We Move', '10-03-2023', 64, 135], [70, 'Shakira: Bzrp Music Sessions, Vol. 53', '11-01-2023', 63, 133]]",SELECT * FROM `albums` ORDER BY `album_id` + `artist_id` DESC LIMIT 5,1,,0.0,0.76,0.95,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,ORDERBY-PROJECT,Select only the column `album_id` from `albums`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1], [2], [3], [4], [5]]",SELECT `album_id` FROM `albums` ORDER BY `album_id` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_music_cut_300.sqlite,albums,ORDERBY-PROJECT,Select only the column `album_id` from `albums`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `album_id` FROM `albums` ORDER BY `album_id` DESC LIMIT 5,3,"```
+{
+  ""table_name"": ""albums"",
+  ""ordered_entries"": [
+    {
+      ""album_id"": 1
+    },
+    {
+      ""album_id"": 2
+    },
+    {
+      ""album_id"": 3
+    },
+    {
+      ""album_id"": 4
+    },
+    {
+      ""album_id"": 5
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,albums,ORDERBY-PROJECT,Select only the column `title` from `albums`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['400 Degreez (Deluxe Edition)'], ['A Bar Song (Tipsy)'], ['As It Was'], ['BABYMONS7ER'], ['BAND4BAND (feat. Lil Baby)']]",SELECT `title` FROM `albums` ORDER BY `title` ASC LIMIT 5,1,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_music_cut_300.sqlite,albums,ORDERBY-PROJECT,Select only the column `title` from `albums`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['YOUGAKU MORIMORI CLUB MEDLEY'], ['What Was I Made For? (From The Motion Picture ""Barbie"")'], [""What's Love Got to Do with It (30th Anniversary Deluxe Edition)""], ['Unreal Unearth: Unheard'], ['Unholy (feat. Kim Petras)']]",SELECT `title` FROM `albums` ORDER BY `title` DESC LIMIT 5,1,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,ORDERBY-PROJECT,Select only the column `release_date (dd-mm-yyyy)` from `albums`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `release_date (dd-mm-yyyy)` FROM `albums` ORDER BY `release_date (dd-mm-yyyy)` ASC LIMIT 5,3,"```
+{
+  ""table_name"": ""albums"",
+  ""ordered_entries"": [
+    {
+      ""title"": ""YOUGAKU MORIMORI CLUB MEDLEY""
+    },
+    {
+      ""title"": ""What Was I Made For? (From The Motion Picture \""Barbie\"")""
+    },
+    {
+      ""title"": ""What's Love Got to Do with It (30th Anniversary Deluxe Edition)""
+    },
+    {
+      ""title"": ""Unreal Unearth: Unheard""
+    },
+    {
+      ""title"": ""Unholy (feat. Kim Petras)""
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,albums,ORDERBY-PROJECT,Select only the column `release_date (dd-mm-yyyy)` from `albums`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['26-04-2024'], ['26-04-2024'], ['25-04-2024'], ['24-05-2024'], ['23-05-2024']]",SELECT `release_date (dd-mm-yyyy)` FROM `albums` ORDER BY `release_date (dd-mm-yyyy)` DESC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,albums,ORDERBY-PROJECT,Select only the column `artist_id` from `albums`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1], [2], [2], [3], [3]]",SELECT `artist_id` FROM `albums` ORDER BY `artist_id` ASC LIMIT 5,0,,0.0,1.0,0.75,0.0,1.0,0.5,1.0
+data/db_music_cut_300.sqlite,albums,ORDERBY-PROJECT,Select only the column `artist_id` from `albums`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `artist_id` FROM `albums` ORDER BY `artist_id` DESC LIMIT 5,3,"```
+{
+  ""table_name"": ""albums"",
+  ""ordered_entries"": [
+    {
+      ""artist_id"": 1
+    },
+    {
+      ""artist_id"": 2
+    },
+    {
+      ""artist_id"": 2
+    },
+    {
+      ""artist_id"": 3
+    },
+    {
+      ""artist_id"": 3
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,artists,ORDERBY-SINGLE,"List the top 5 rows from the table `artists`, sorted by the column `artist_id` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1, 'Tommy Richman', '21-03-2000'], [2, 'Kendrick Lamar', '17-06-1987'], [3, 'Artemas', '23-09-1999'], [4, 'Miley Cyrus', '23-11-1992'], [5, 'Eminem', '17-10-1972']]",SELECT * FROM `artists` ORDER BY `artist_id` ASC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_music_cut_300.sqlite,artists,ORDERBY-SINGLE,"List the top 5 rows from the table `artists`, sorted by the column `artist_id` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[100, 'Unknown Artist', '01-01-1900'], [99, 'BTS', '13-06-2013'], [98, '24kGoldn', '13-11-2000'], [97, 'Exhumed', '01-01-1991'], [96, 'OneRepublic', '01-01-2004']]",SELECT * FROM `artists` ORDER BY `artist_id` DESC LIMIT 5,0,,0.0,0.8,0.8,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,artists,ORDERBY-SINGLE,"List the top 5 rows from the table `artists`, sorted by the column `name` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT * FROM `artists` ORDER BY `name` ASC LIMIT 5,3,"```
+{
+  ""table_name"": ""artists"",
+  ""ordered_entries"": [
+    {
+      ""artist_id"": 100,
+      ""name"": ""Unknown Artist"",
+      ""birth_date (dd-mm-yyyy)"": ""01-01-1900""
+    },
+    {
+      ""artist_id"": 99,
+      ""name"": ""BTS"",
+      ""birth_date (dd-mm-yyyy)"": ""13-06-2013""
+    },
+    {
+      ""artist_id"": 98,
+      ""name"": ""24kGoldn"",
+      ""birth_date (dd-mm-yyyy)"": ""13-11-2000""
+    },
+    {
+      ""artist_id"": 97,
+      ""name"": ""Exhumed"",
+      ""birth_date (dd-mm-yyyy)"": ""01-01-1991""
+    },
+    {
+      ""artist_id"": 96,
+      ""name"": ""OneRepublic"",
+      ""birth_date (dd-mm-yyyy)"": ""01-01-2004""
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,artists,ORDERBY-SINGLE,"List the top 5 rows from the table `artists`, sorted by the column `name` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[58, 'SZA', '08-11-1989'], [57, 'ýý$', '01-01-1990'], [56, 'JUVENILE', '25-03-1975'], [55, 'Bad Bunny', '10-03-1994'], [54, 'aespa', '25-10-2020']]",SELECT * FROM `artists` ORDER BY `name` DESC LIMIT 5,1,,0.0,0.2,0.25,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,artists,ORDERBY-SINGLE,"List the top 5 rows from the table `artists`, sorted by the column `birth_date (dd-mm-yyyy)` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[33, 'Tina Turner', '26-11-1939'], [56, 'JUVENILE', '25-03-1975'], [89, 'Tollan Kim', '18-11-1960'], [59, 'Guy Mac', '01-07-1967'], [38, 'David Guetta', '07-11-1967']]",SELECT * FROM `artists` ORDER BY `birth_date (dd-mm-yyyy)` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,artists,ORDERBY-SINGLE,"List the top 5 rows from the table `artists`, sorted by the column `birth_date (dd-mm-yyyy)` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT * FROM `artists` ORDER BY `birth_date (dd-mm-yyyy)` DESC LIMIT 5,3,"```
+{
+  ""table_name"": ""artists"",
+  ""ordered_entries"": [
+    {
+      ""artist_id"": 33,
+      ""name"": ""Tina Turner"",
+      ""birth_date (dd-mm-yyyy)"": ""26-11-1939""
+    },
+    {
+      ""artist_id"": 56,
+      ""name"": ""JUVENILE"",
+      ""birth_date (dd-mm-yyyy)"": ""25-03-1975""
+    },
+    {
+      ""artist_id"": 89,
+      ""name"": ""Tollan Kim"",
+      ""birth_date (dd-mm-yyyy)"": ""18-11-1960""
+    },
+    {
+      ""artist_id"": 59,
+      ""name"": ""Guy Mac"",
+      ""birth_date (dd-mm-yyyy)"": ""01-07-1967""
+    },
+    {
+      ""artist_id"": 38,
+      ""name"": ""David Guetta"",
+      ""birth_date (dd-mm-yyyy)"": ""07-11-1967""
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,artists,ORDERBY-PROJECT,Select only the column `artist_id` from `artists`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1], [2], [3], [4], [5]]",SELECT `artist_id` FROM `artists` ORDER BY `artist_id` ASC LIMIT 5,1,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_music_cut_300.sqlite,artists,ORDERBY-PROJECT,Select only the column `artist_id` from `artists`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[101], [100], [99], [98], [97]]",SELECT `artist_id` FROM `artists` ORDER BY `artist_id` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_music_cut_300.sqlite,artists,ORDERBY-PROJECT,Select only the column `name` from `artists`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `name` FROM `artists` ORDER BY `name` ASC LIMIT 5,3,"```
+{
+  ""table_name"": ""artists"",
+  ""ordered_entries"": [
+    {
+      ""artist_id"": 101
+    },
+    {
+      ""artist_id"": 100
+    },
+    {
+      ""artist_id"": 99
+    },
+    {
+      ""artist_id"": 98
+    },
+    {
+      ""artist_id"": 97
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,artists,ORDERBY-PROJECT,Select only the column `name` from `artists`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Tyla'], ['Tones And I'], ['Tina Turner'], ['Taylor Swift'], ['Teddy Swims']]",SELECT `name` FROM `artists` ORDER BY `name` DESC LIMIT 5,1,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,artists,ORDERBY-PROJECT,Select only the column `birth_date (dd-mm-yyyy)` from `artists`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['01-01-1965'], ['01-01-1968'], ['18-06-1942'], ['18-11-1960'], ['26-11-1939']]",SELECT `birth_date (dd-mm-yyyy)` FROM `artists` ORDER BY `birth_date (dd-mm-yyyy)` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,artists,ORDERBY-PROJECT,Select only the column `birth_date (dd-mm-yyyy)` from `artists`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `birth_date (dd-mm-yyyy)` FROM `artists` ORDER BY `birth_date (dd-mm-yyyy)` DESC LIMIT 5,3,"```
+{
+  ""table_name"": ""artists"",
+  ""ordered_entries"": [
+    {
+      ""birth_date (dd-mm-yyyy)"": ""01-01-1965""
+    },
+    {
+      ""birth_date (dd-mm-yyyy)"": ""01-01-1968""
+    },
+    {
+      ""birth_date (dd-mm-yyyy)"": ""18-06-1942""
+    },
+    {
+      ""birth_date (dd-mm-yyyy)"": ""18-11-1960""
+    },
+    {
+      ""birth_date (dd-mm-yyyy)"": ""26-11-1939""
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-SINGLE,"List the top 5 rows from the table `tracks`, sorted by the column `track_score` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[14, 'bathroom floor', 'NLC242100307', 15, 15, 301.6, 297185.0, 12.0, 6736502312.0, 3.0, 0], [15, 'LALA', 'USWL12300002', 16, 16, 299.9, 925655569.0, 79.0, 934302031.0, 11054500.0, 1], [16, 'Fortnight (feat. Post Malone)', 'USUG12401028', 17, 17, 297.6, 395433400.0, 89.0, 104673836.0, 139300.0, 0], [17, 'greedy', 'USRC12301932', 18, 18, 293.7, 1258569694.0, 87.0, 141646818.0, 2294429.0, 1], [18, 'BLUE', 'USUM72401996', 13, 19, 292.6, 91272461.0, 86.0, 16038053.0, 941900.0, 0]]",SELECT * FROM `tracks` ORDER BY `track_score` ASC LIMIT 5,1,,0.0,0.068,0.079,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,ORDERBY-SINGLE,"List the top 5 rows from the table `tracks`, sorted by the column `track_score` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 1, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, 0], [2, 'Not Like Us', 'USUG12400910', 2, 2, 545.9, 323703884.0, 92.0, 116347040.0, 674700.0, 1], [3, 'i like the way you kiss me', 'QZJ842400387', 3, 3, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, 0], [4, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0], [5, 'Houdini', 'USUG12403398', 5, 5, 423.3, 107034922.0, 88.0, 77373957.0, 16400.0, 1]]",SELECT * FROM `tracks` ORDER BY `track_score` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-SINGLE,"List the top 5 rows from the table `tracks`, sorted by the column `tiktok_posts` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT * FROM `tracks` ORDER BY `tiktok_posts` ASC LIMIT 5,3,"```
+{
+  ""table_name"": ""tracks"",
+  ""ordered_entries"": [
+    {
+      ""track_id"": 1,
+      ""title"": ""MILLION DOLLAR BABY"",
+      ""isrc"": ""QM24S2402528"",
+      ""album_id"": 1,
+      ""all_time_rank"": 1,
+      ""track_score"": 725.4,
+      ""spotify_streams"": 390470936.0,
+      ""spotify_popularity"": 92.0,
+      ""youtube_views"": 84274754.0,
+      ""tiktok_posts"": 5767700.0,
+      ""explicit_track"": 0
+    },
+    {
+      ""track_id"": 2,
+      ""title"": ""Not Like Us"",
+      ""isrc"": ""USUG12400910"",
+      ""album_id"": 2,
+      ""all_time_rank"": 2,
+      ""track_score"": 545.9,
+      ""spotify_streams"": 323703884.0,
+      ""spotify_popularity"": 92.0,
+      ""youtube_views"": 116347040.0,
+      ""tiktok_posts"": 674700.0,
+      ""explicit_track"": 1
+    },
+    {
+      ""track_id"": 3,
+      ""title"": ""i like the way you kiss me"",
+      ""isrc"": ""QZJ842400387"",
+      ""album_id"": 3,
+      ""all_time_rank"": 3,
+      ""track_score"": 538.4,
+      ""spotify_streams"": 601309283.0,
+      ""spotify_popularity"": 92.0,
+      ""youtube_views"": 122599116.0,
+      ""tiktok_posts"": 3025400.0,
+      ""explicit_track"": 0
+    },
+    {
+      ""track_id"": 4,
+      ""title"": ""Flowers"",
+      ""isrc"": ""USSM12209777"",
+      ""album_id"": 4,
+      ""all_time_rank"": 4,
+      ""track_score"": 444.9,
+      ""spotify_streams"": 2031280633.0,
+      ""spotify_popularity"": 85.0,
+      ""youtube_views"": 1096100899.0,
+      ""tiktok_posts"": 7189811.0,
+      ""explicit_track"": 0
+    },
+    {
+      ""track_id"": 5,
+      ""title"": ""Houdini"",
+      ""isrc"": ""USUG12403398"",
+      ""album_id"": 5,
+      ""all_time_rank"": 5,
+      ""track_score"": 423.3,
+      ""spotify_streams"": 107034922.0,
+      ""spotify_popularity"": 88.0,
+      ""youtube_views"": 77373957.0,
+      ""tiktok_posts"": 16400.0,
+      ""explicit_track"": 1
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-SINGLE,"List the top 5 rows from the table `tracks`, sorted by the column `tiktok_posts` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[25, 'Beat Automotivo Tan Tan Tan Viral', 'BXWEH2200054', 25, 26, 268.1, 7382759.0, 35.0, 4233958.0, 37621885.0, 0], [15, 'LALA', 'USWL12300002', 16, 16, 299.9, 925655569.0, 79.0, 934302031.0, 11054500.0, 1], [3, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0], [0, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 1, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, 0], [5, 'Lovin On Me', 'USAT22311371', 6, 6, 410.1, 670665438.0, 83.0, 131148091.0, 4202367.0, 1]]",SELECT * FROM `tracks` ORDER BY `tiktok_posts` DESC LIMIT 5,0,,0.0,0.6,0.659,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,ORDERBY-SINGLE,"List the top 5 rows from the table `tracks`, sorted by the column `explicit_track` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[1, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 1, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, 0], [3, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0], [19, 'As It Was', 'USSM12200612', 19, 20, 292.0, 3301814535.0, 87.0, 800899315.0, 2755903.0, 0], [2, 'i like the way you kiss me', 'QZJ842400387', 3, 3, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, 0], [12, 'LUNCH', 'USUM72401991', 13, 13, 316.3, 221636195.0, 92.0, 40022524.0, 195300.0, 0]]",SELECT * FROM `tracks` ORDER BY `explicit_track` ASC LIMIT 5,0,,0.0,0.738,0.795,0.0,1.0,0.2,1.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-SINGLE,"List the top 5 rows from the table `tracks`, sorted by the column `explicit_track` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT * FROM `tracks` ORDER BY `explicit_track` DESC LIMIT 5,3,"```
+{
+  ""table_name"": ""tracks"",
+  ""ordered_entries"": [
+    {
+      ""track_id"": 1,
+      ""title"": ""MILLION DOLLAR BABY"",
+      ""isrc"": ""QM24S2402528"",
+      ""album_id"": 1,
+      ""all_time_rank"": 1,
+      ""track_score"": 725.4,
+      ""spotify_streams"": 390470936.0,
+      ""spotify_popularity"": 92.0,
+      ""youtube_views"": 84274754.0,
+      ""tiktok_posts"": 5767700.0,
+      ""explicit_track"": 0
+    },
+    {
+      ""track_id"": 3,
+      ""title"": ""Flowers"",
+      ""isrc"": ""USSM12209777"",
+      ""album_id"": 4,
+      ""all_time_rank"": 4,
+      ""track_score"": 444.9,
+      ""spotify_streams"": 2031280633.0,
+      ""spotify_popularity"": 85.0,
+      ""youtube_views"": 1096100899.0,
+      ""tiktok_posts"": 7189811.0,
+      ""explicit_track"": 0
+    },
+    {
+      ""track_id"": 19,
+      ""title"": ""As It Was"",
+      ""isrc"": ""USSM12200612"",
+      ""album_id"": 19,
+      ""all_time_rank"": 20,
+      ""track_score"": 292.0,
+      ""spotify_streams"": 3301814535.0,
+      ""spotify_popularity"": 87.0,
+      ""youtube_views"": 800899315.0,
+      ""tiktok_posts"": 2755903.0,
+      ""explicit_track"": 0
+    },
+    {
+      ""track_id"": 2,
+      ""title"": ""i like the way you kiss me"",
+      ""isrc"": ""QZJ842400387"",
+      ""album_id"": 3,
+      ""all_time_rank"": 3,
+      ""track_score"": 538.4,
+      ""spotify_streams"": 601309283.0,
+      ""spotify_popularity"": 92.0,
+      ""youtube_views"": 122599116.0,
+      ""tiktok_posts"": 3025400.0,
+      ""explicit_track"": 0
+    },
+    {
+      ""track_id"": 12,
+      ""title"": ""LUNCH"",
+      ""isrc"": ""USUM72401991"",
+      ""album_id"": 13,
+      ""all_time_rank"": 13,
+      ""track_score"": 316.3,
+      ""spotify_streams"": 221636195.0,
+      ""spotify_popularity"": 92.0,
+      ""youtube_views"": 40022524.0,
+      ""tiktok_posts"": 195300.0,
+      ""explicit_track"": 0
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-SINGLE,"List the top 5 rows from the table `tracks`, sorted by the column `title` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[3, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0], [17, 'greedy', 'USRC12301932', 18, 18, 293.7, 1258569694.0, 87.0, 141646818.0, 2294429.0, 1], [19, 'As It Was', 'USSM12200612', 19, 20, 292.0, 3301814535.0, 87.0, 800899315.0, 2755903.0, 0], [15, 'LALA', 'USWL12300002', 16, 16, 299.9, 925655569.0, 79.0, 934302031.0, 11054500.0, 1], [16, 'Fortnight (feat. Post Malone)', 'USUG12401028', 17, 17, 297.6, 395433400.0, 89.0, 104673836.0, 139300.0, 0]]",SELECT * FROM `tracks` ORDER BY `title` ASC LIMIT 5,1,,0.0,0.25,0.262,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,ORDERBY-SINGLE,"List the top 5 rows from the table `tracks`, sorted by the column `title` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[15, 'LALA', 'USWL12300002', 16, 16, 299.9, 925655569.0, 79.0, 934302031.0, 11054500.0, 1], [17, 'Fortnight (feat. Post Malone)', 'USUG12401028', 17, 17, 297.6, 395433400.0, 89.0, 104673836.0, 139300.0, 0], [19, 'greedy', 'USRC12301932', 18, 18, 293.7, 1258569694.0, 87.0, 141646818.0, 2294429.0, 1], [20, 'As It Was', 'USSM12200612', 19, 19, 292.6, 3301814535.0, 87.0, 800899315.0, 2755903.0, 0], [21, 'BLUE', 'USUM72401996', 13, 20, 292.0, 1065399331.0, 78.0, 240970670.0, 3091732.0, 1]]",SELECT * FROM `tracks` ORDER BY `title` DESC LIMIT 5,0,,0.0,0.25,0.282,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,ORDERBY-SINGLE,"List the top 5 rows from the table `tracks`, sorted by the column `spotify_streams` in ascending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT * FROM `tracks` ORDER BY `spotify_streams` ASC LIMIT 5,3,"```
+{
+  ""table_name"": ""tracks"",
+  ""ordered_entries"": [
+    {
+      ""track_id"": 15,
+      ""title"": ""LALA"",
+      ""isrc"": ""USWL12300002"",
+      ""album_id"": 16,
+      ""all_time_rank"": 16,
+      ""track_score"": 299.9,
+      ""spotify_streams"": 925655569.0,
+      ""spotify_popularity"": 79.0,
+      ""youtube_views"": 934302031.0,
+      ""tiktok_posts"": 11054500.0,
+      ""explicit_track"": 1
+    },
+    {
+      ""track_id"": 17,
+      ""title"": ""Fortnight (feat. Post Malone)"",
+      ""isrc"": ""USUG12401028"",
+      ""album_id"": 17,
+      ""all_time_rank"": 17,
+      ""track_score"": 297.6,
+      ""spotify_streams"": 395433400.0,
+      ""spotify_popularity"": 89.0,
+      ""youtube_views"": 104673836.0,
+      ""tiktok_posts"": 139300.0,
+      ""explicit_track"": 0
+    },
+    {
+      ""track_id"": 19,
+      ""title"": ""greedy"",
+      ""isrc"": ""USRC12301932"",
+      ""album_id"": 18,
+      ""all_time_rank"": 18,
+      ""track_score"": 293.7,
+      ""spotify_streams"": 1258569694.0,
+      ""spotify_popularity"": 87.0,
+      ""youtube_views"": 141646818.0,
+      ""tiktok_posts"": 2294429.0,
+      ""explicit_track"": 1
+    },
+    {
+      ""track_id"": 20,
+      ""title"": ""As It Was"",
+      ""isrc"": ""USSM12200612"",
+      ""album_id"": 19,
+      ""all_time_rank"": 19,
+      ""track_score"": 292.6,
+      ""spotify_streams"": 3301814535.0,
+      ""spotify_popularity"": 87.0,
+      ""youtube_views"": 800899315.0,
+      ""tiktok_posts"": 2755903.0,
+      ""explicit_track"": 0
+    },
+    {
+      ""track_id"": 21,
+      ""title"": ""BLUE"",
+      ""isrc"": ""USUM72401996"",
+      ""album_id"": 13,
+      ""all_time_rank"": 20,
+      ""track_score"": 292.0,
+      ""spotify_streams"": 1065399331.0,
+      ""spotify_popularity"": 78.0,
+      ""youtube_views"": 240970670.0,
+      ""tiktok_posts"": 3091732.0,
+      ""explicit_track"": 1
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-SINGLE,"List the top 5 rows from the table `tracks`, sorted by the column `spotify_streams` in descending order.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[3, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0], [19, 'As It Was', 'USSM12200612', 19, 20, 292.0, 3301814535.0, 87.0, 800899315.0, 2755903.0, 0], [20, 'Paint The Town Red', 'USRC12300907', 20, 21, 290.5, 1065399331.0, 78.0, 240970670.0, 3091732.0, 1], [26, 'STAY (with Justin Bieber)', 'USSM12103949', 26, 27, 266.3, 3107100349.0, 78.0, 1256973582.0, 7485966.0, 1], [2, 'i like the way you kiss me', 'QZJ842400387', 3, 3, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, 0]]",SELECT * FROM `tracks` ORDER BY `spotify_streams` DESC LIMIT 5,0,,0.0,0.636,0.718,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,ORDERBY-ADVANCED,"Compute the sum of the columns spotify_streams, spotify_popularity, tiktok_posts for each row in `tracks`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[14, 'bathroom floor', 'NLC242100307', 15, 15, 301.6, 297185.0, 12.0, 6736502312.0, 3.0, 0], [25, 'Beat Automotivo Tan Tan Tan Viral', 'BXWEH2200054', 25, 26, 268.1, 7382759.0, 35.0, 4233958.0, 37621885.0, 0], [4, 'Houdini', 'USUG12403398', 5, 5, 423.3, 107034922.0, 88.0, 77373957.0, 16400.0, 1], [18, 'BLUE', 'USUM72401996', 13, 19, 292.6, 91272461.0, 86.0, 16038053.0, 941900.0, 0], [9, 'BAND4BAND (feat. Lil Baby)', 'USSM12404354', 10, 10, 330.6, 90676573.0, 86.0, 32735244.0, 325800.0, 1]]",SELECT * FROM `tracks` ORDER BY `spotify_streams` + `spotify_popularity` + `tiktok_posts` ASC LIMIT 5,0,,0.0,0.149,0.206,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,ORDERBY-ADVANCED,"Compute the sum of the columns spotify_streams, spotify_popularity, tiktok_posts for each row in `tracks`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT * FROM `tracks` ORDER BY `spotify_streams` + `spotify_popularity` + `tiktok_posts` DESC LIMIT 5,3,"```json
+{
+  ""table_name"": ""tracks"",
+  ""ordered_entries"": [
+    {
+      ""track_id"": 14,
+      ""title"": ""bathroom floor"",
+      ""isrc"": ""NLC242100307"",
+      ""album_id"": 15,
+      ""all_time_rank"": 15,
+      ""track_score"": 301.6,
+      ""spotify_streams"": 297185.0,
+      ""spotify_popularity"": 12.0,
+      ""youtube_views"": 6736502312.0,
+      ""tiktok_posts"": 3.0,
+      ""explicit_track"": 0
+    },
+    {
+      ""track_id"": 25,
+      ""title"": ""Beat Automotivo Tan Tan Tan Viral"",
+      ""isrc"": ""BXWEH2200054"",
+      ""album_id"": 25,
+      ""all_time_rank"": 26,
+      ""track_score"": 268.1,
+      ""spotify_streams"": 7382759.0,
+      ""spotify_popularity"": 35.0,
+      ""youtube_views"": 4233958.0,
+      ""tiktok_posts"": 37621885.0,
+      ""explicit_track"": 0
+    },
+    {
+      ""track_id"": 4,
+      ""title"": ""Houdini"",
+      ""isrc"": ""USUG12403398"",
+      ""album_id"": 5,
+      ""all_time_rank"": 5,
+      ""track_score"": 423.3,
+      ""spotify_streams"": 107034922.0,
+      ""spotify_popularity"": 88.0,
+      ""youtube_views"": 77373957.0,
+      ""tiktok_posts"": 16400.0,
+      ""explicit_track"": 1
+    },
+    {
+      ""track_id"": 18,
+      ""title"": ""BLUE"",
+      ""isrc"": ""USUM72401996"",
+      ""album_id"": 13,
+      ""all_time_rank"": 19,
+      ""track_score"": 292.6,
+      ""spotify_streams"": 91272461.0,
+      ""spotify_popularity"": 86.0,
+      ""youtube_views"": 16038053.0,
+      ""tiktok_posts"": 941900.0,
+      ""explicit_track"": 0
+    },
+    {
+      ""track_id"": 9,
+      ""title"": ""BAND4BAND (feat. Lil Baby)"",
+      ""isrc"": ""USSM12404354"",
+      ""album_id"": 10,
+      ""all_time_rank"": 10,
+      ""track_score"": 330.6,
+      ""spotify_streams"": 90676573.0,
+      ""spotify_popularity"": 86.0,
+      ""youtube_views"": 32735244.0,
+      ""tiktok_posts"": 325800.0,
+      ""explicit_track"": 1
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-ADVANCED,"Compute the sum of the columns album_id, tiktok_posts, explicit_track for each row in `tracks`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[14, 'bathroom floor', 'NLC242100307', 15, 15, 301.6, 297185.0, 12.0, 6736502312.0, 3.0, 0], [25, 'Beat Automotivo Tan Tan Tan Viral', 'BXWEH2200054', 25, 26, 268.1, 7382759.0, 35.0, 4233958.0, 37621885.0, 0], [4, 'Houdini', 'USUG12403398', 5, 5, 423.3, 107034922.0, 88.0, 77373957.0, 16400.0, 1], [18, 'BLUE', 'USUM72401996', 13, 19, 292.6, 91272461.0, 86.0, 16038053.0, 941900.0, 0], [9, 'BAND4BAND (feat. Lil Baby)', 'USSM12404354', 10, 10, 330.6, 90676573.0, 86.0, 32735244.0, 325800.0, 1]]",SELECT * FROM `tracks` ORDER BY `album_id` + `tiktok_posts` + `explicit_track` ASC LIMIT 5,0,,0.0,0.149,0.206,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,ORDERBY-ADVANCED,"Compute the sum of the columns album_id, tiktok_posts, explicit_track for each row in `tracks`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[3, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0], [19, 'As It Was', 'USSM12200612', 19, 20, 292.0, 3301814535.0, 87.0, 800899315.0, 2755903.0, 0], [26, 'STAY (with Justin Bieber)', 'USSM12103949', 26, 27, 266.3, 3107100349.0, 78.0, 1256973582.0, 7485966.0, 1], [17, 'greedy', 'USRC12301932', 18, 18, 293.7, 1258569694.0, 87.0, 141646818.0, 2294429.0, 1], [15, 'LALA', 'USWL12300002', 16, 16, 299.9, 925655569.0, 79.0, 934302031.0, 11054500.0, 1]]",SELECT * FROM `tracks` ORDER BY `album_id` + `tiktok_posts` + `explicit_track` DESC LIMIT 5,0,,0.0,0.587,0.659,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,ORDERBY-ADVANCED,"Compute the sum of the columns album_id, all_time_rank, spotify_streams for each row in `tracks`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT * FROM `tracks` ORDER BY `album_id` + `all_time_rank` + `spotify_streams` ASC LIMIT 5,3,"```json
+{
+  ""table_name"": ""tracks"",
+  ""ordered_entries"": [
+    {
+      ""track_id"": 3,
+      ""title"": ""Flowers"",
+      ""isrc"": ""USSM12209777"",
+      ""album_id"": 4,
+      ""all_time_rank"": 4,
+      ""track_score"": 444.9,
+      ""spotify_streams"": 2031280633.0,
+      ""spotify_popularity"": 85.0,
+      ""youtube_views"": 1096100899.0,
+      ""tiktok_posts"": 7189811.0,
+      ""explicit_track"": 0
+    },
+    {
+      ""track_id"": 19,
+      ""title"": ""As It Was"",
+      ""isrc"": ""USSM12200612"",
+      ""album_id"": 19,
+      ""all_time_rank"": 20,
+      ""track_score"": 292.0,
+      ""spotify_streams"": 3301814535.0,
+      ""spotify_popularity"": 87.0,
+      ""youtube_views"": 800899315.0,
+      ""tiktok_posts"": 2755903.0,
+      ""explicit_track"": 0
+    },
+    {
+      ""track_id"": 26,
+      ""title"": ""STAY (with Justin Bieber)"",
+      ""isrc"": ""USSM12103949"",
+      ""album_id"": 26,
+      ""all_time_rank"": 27,
+      ""track_score"": 266.3,
+      ""spotify_streams"": 3107100349.0,
+      ""spotify_popularity"": 78.0,
+      ""youtube_views"": 1256973582.0,
+      ""tiktok_posts"": 7485966.0,
+      ""explicit_track"": 1
+    },
+    {
+      ""track_id"": 17,
+      ""title"": ""greedy"",
+      ""isrc"": ""USRC12301932"",
+      ""album_id"": 18,
+      ""all_time_rank"": 18,
+      ""track_score"": 293.7,
+      ""spotify_streams"": 1258569694.0,
+      ""spotify_popularity"": 87.0,
+      ""youtube_views"": 141646818.0,
+      ""tiktok_posts"": 2294429.0,
+      ""explicit_track"": 1
+    },
+    {
+      ""track_id"": 15,
+      ""title"": ""LALA"",
+      ""isrc"": ""USWL12300002"",
+      ""album_id"": 16,
+      ""all_time_rank"": 16,
+      ""track_score"": 299.9,
+      ""spotify_streams"": 925655569.0,
+      ""spotify_popularity"": 79.0,
+      ""youtube_views"": 934302031.0,
+      ""tiktok_posts"": 11054500.0,
+      ""explicit_track"": 1
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-ADVANCED,"Compute the sum of the columns album_id, all_time_rank, spotify_streams for each row in `tracks`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[3, 'Flowers', 'USSM12209777', 4, 4, 444.9, 2031280633.0, 85.0, 1096100899.0, 7189811.0, 0, 2031280671.0], [19, 'As It Was', 'USSM12200612', 19, 20, 292.0, 3301814535.0, 87.0, 800899315.0, 2755903.0, 0, 3301837574.0], [26, 'STAY (with Justin Bieber)', 'USSM12103949', 26, 27, 266.3, 3107100349.0, 78.0, 1256973582.0, 7485966.0, 1, 3107100612.0], [20, 'Paint The Town Red', 'USRC12300907', 20, 21, 290.5, 1065399331.0, 78.0, 240970670.0, 3091732.0, 1, 1065399552.0], [17, 'greedy', 'USRC12301932', 18, 18, 293.7, 1258569694.0, 87.0, 141646818.0, 2294429.0, 1, 1258570352.0]]",SELECT * FROM `tracks` ORDER BY `album_id` + `all_time_rank` + `spotify_streams` DESC LIMIT 5,1,,0.0,0.571,0.718,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,ORDERBY-ADVANCED,"Compute the sum of the columns spotify_popularity, tiktok_posts for each row in `tracks`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[14, 'bathroom floor', 'NLC242100307', 15, 15, 301.6, 297185.0, 12.0, 6736502312.0, 3.0, 0], [25, 'Beat Automotivo Tan Tan Tan Viral', 'BXWEH2200054', 25, 26, 268.1, 7382759.0, 35.0, 4233958.0, 37621885.0, 0], [18, 'BLUE', 'USUM72401996', 13, 19, 292.6, 91272461.0, 86.0, 16038053.0, 941900.0, 0], [4, 'Houdini', 'USUG12403398', 5, 5, 423.3, 107034922.0, 88.0, 77373957.0, 16400.0, 1], [9, 'BAND4BAND (feat. Lil Baby)', 'USSM12404354', 10, 10, 330.6, 90676573.0, 86.0, 32735244.0, 325800.0, 1]]",SELECT * FROM `tracks` ORDER BY `spotify_popularity` + `tiktok_posts` ASC LIMIT 5,0,,0.0,0.149,0.206,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,ORDERBY-ADVANCED,"Compute the sum of the columns spotify_popularity, tiktok_posts for each row in `tracks`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT * FROM `tracks` ORDER BY `spotify_popularity` + `tiktok_posts` DESC LIMIT 5,3,"```json
+{
+  ""table_name"": ""tracks"",
+  ""ordered_entries"": [
+    {
+      ""track_id"": 14,
+      ""title"": ""bathroom floor"",
+      ""isrc"": ""NLC242100307"",
+      ""album_id"": 15,
+      ""all_time_rank"": 15,
+      ""track_score"": 301.6,
+      ""spotify_streams"": 297185.0,
+      ""spotify_popularity"": 12.0,
+      ""youtube_views"": 6736502312.0,
+      ""tiktok_posts"": 3.0,
+      ""explicit_track"": 0
+    },
+    {
+      ""track_id"": 25,
+      ""title"": ""Beat Automotivo Tan Tan Tan Viral"",
+      ""isrc"": ""BXWEH2200054"",
+      ""album_id"": 25,
+      ""all_time_rank"": 26,
+      ""track_score"": 268.1,
+      ""spotify_streams"": 7382759.0,
+      ""spotify_popularity"": 35.0,
+      ""youtube_views"": 4233958.0,
+      ""tiktok_posts"": 37621885.0,
+      ""explicit_track"": 0
+    },
+    {
+      ""track_id"": 18,
+      ""title"": ""BLUE"",
+      ""isrc"": ""USUM72401996"",
+      ""album_id"": 13,
+      ""all_time_rank"": 19,
+      ""track_score"": 292.6,
+      ""spotify_streams"": 91272461.0,
+      ""spotify_popularity"": 86.0,
+      ""youtube_views"": 16038053.0,
+      ""tiktok_posts"": 941900.0,
+      ""explicit_track"": 0
+    },
+    {
+      ""track_id"": 4,
+      ""title"": ""Houdini"",
+      ""isrc"": ""USUG12403398"",
+      ""album_id"": 5,
+      ""all_time_rank"": 5,
+      ""track_score"": 423.3,
+      ""spotify_streams"": 107034922.0,
+      ""spotify_popularity"": 88.0,
+      ""youtube_views"": 77373957.0,
+      ""tiktok_posts"": 16400.0,
+      ""explicit_track"": 1
+    },
+    {
+      ""track_id"": 9,
+      ""title"": ""BAND4BAND (feat. Lil Baby)"",
+      ""isrc"": ""USSM12404354"",
+      ""album_id"": 10,
+      ""all_time_rank"": 10,
+      ""track_score"": 330.6,
+      ""spotify_streams"": 90676573.0,
+      ""spotify_popularity"": 86.0,
+      ""youtube_views"": 32735244.0,
+      ""tiktok_posts"": 325800.0,
+      ""explicit_track"": 1
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-ADVANCED,"Compute the sum of the columns track_id, all_time_rank, spotify_popularity for each row in `tracks`. Sort all rows in ascending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[14, 'bathroom floor', 'NLC242100307', 15, 15, 301.6, 297185.0, 12.0, 6736502312.0, 3.0, 0], [25, 'Beat Automotivo Tan Tan Tan Viral', 'BXWEH2200054', 25, 26, 268.1, 7382759.0, 35.0, 4233958.0, 37621885.0, 0], [18, 'BLUE', 'USUM72401996', 13, 19, 292.6, 91272461.0, 86.0, 16038053.0, 941900.0, 0], [24, 'Future', 'RUA1H2415548', 24, 25, 277.5, 0.0, 0.0, 0.0, 9453333.0, 0], [15, 'LALA', 'USWL12300002', 16, 16, 299.9, 925655569.0, 79.0, 934302031.0, 11054500.0, 1]]",SELECT * FROM `tracks` ORDER BY `track_id` + `all_time_rank` + `spotify_popularity` ASC LIMIT 5,0,,0.0,0.372,0.516,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,ORDERBY-ADVANCED,"Compute the sum of the columns track_id, all_time_rank, spotify_popularity for each row in `tracks`. Sort all rows in descending order by this sum and return the first 5 rows.",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[21, 'Espresso', 'USUM72403305', 21, 22, 281.5, 547882871.0, 95.0, 107550212.0, 209200.0, 1, 138], [1, 'Not Like Us', 'USUG12400910', 2, 2, 545.9, 323703884.0, 92.0, 116347040.0, 674700.0, 1, 95], [0, 'MILLION DOLLAR BABY', 'QM24S2402528', 1, 1, 725.4, 390470936.0, 92.0, 84274754.0, 5767700.0, 0, 93], [2, 'i like the way you kiss me', 'QZJ842400387', 3, 3, 538.4, 601309283.0, 92.0, 122599116.0, 3025400.0, 0, 97], [26, 'STAY (with Justin Bieber)', 'USSM12103949', 26, 27, 266.3, 3107100349.0, 78.0, 1256973582.0, 7485966.0, 1, 101]]",SELECT * FROM `tracks` ORDER BY `track_id` + `all_time_rank` + `spotify_popularity` DESC LIMIT 5,1,,0.0,0.444,0.444,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,ORDERBY-PROJECT,Select only the column `album_id` from `tracks`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `album_id` FROM `tracks` ORDER BY `album_id` ASC LIMIT 5,3,"```json
+{
+  ""table_name"": ""tracks"",
+  ""ordered_entries"": [
+    {
+      ""track_id"": 21,
+      ""title"": ""Espresso"",
+      ""isrc"": ""USUM72403305"",
+      ""album_id"": 21,
+      ""all_time_rank"": 22,
+      ""track_score"": 281.5,
+      ""spotify_streams"": 547882871.0,
+      ""spotify_popularity"": 95.0,
+      ""youtube_views"": 107550212.0,
+      ""tiktok_posts"": 209200.0,
+      ""explicit_track"": 1,
+      ""sum"": 138
+    },
+    {
+      ""track_id"": 1,
+      ""title"": ""Not Like Us"",
+      ""isrc"": ""USUG12400910"",
+      ""album_id"": 2,
+      ""all_time_rank"": 2,
+      ""track_score"": 545.9,
+      ""spotify_streams"": 323703884.0,
+      ""spotify_popularity"": 92.0,
+      ""youtube_views"": 116347040.0,
+      ""tiktok_posts"": 674700.0,
+      ""explicit_track"": 1,
+      ""sum"": 95
+    },
+    {
+      ""track_id"": 0,
+      ""title"": ""MILLION DOLLAR BABY"",
+      ""isrc"": ""QM24S2402528"",
+      ""album_id"": 1,
+      ""all_time_rank"": 1,
+      ""track_score"": 725.4,
+      ""spotify_streams"": 390470936.0,
+      ""spotify_popularity"": 92.0,
+      ""youtube_views"": 84274754.0,
+      ""tiktok_posts"": 5767700.0,
+      ""explicit_track"": 0,
+      ""sum"": 93
+    },
+    {
+      ""track_id"": 2,
+      ""title"": ""i like the way you kiss me"",
+      ""isrc"": ""QZJ842400387"",
+      ""album_id"": 3,
+      ""all_time_rank"": 3,
+      ""track_score"": 538.4,
+      ""spotify_streams"": 601309283.0,
+      ""spotify_popularity"": 92.0,
+      ""youtube_views"": 122599116.0,
+      ""tiktok_posts"": 3025400.0,
+      ""explicit_track"": 0,
+      ""sum"": 97
+    },
+    {
+      ""track_id"": 26,
+      ""title"": ""STAY (with Justin Bieber)"",
+      ""isrc"": ""USSM12103949"",
+      ""album_id"": 26,
+      ""all_time_rank"": 27,
+      ""track_score"": 266.3,
+      ""spotify_streams"": 3107100349.0,
+      ""spotify_popularity"": 78.0,
+      ""youtube_views"": 1256973582.0,
+      ""tiktok_posts"": 7485966.0,
+      ""explicit_track"": 1,
+      ""sum"": 101
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-PROJECT,Select only the column `album_id` from `tracks`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[26], [25], [24], [23], [22]]",SELECT `album_id` FROM `tracks` ORDER BY `album_id` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-PROJECT,Select only the column `title` from `tracks`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['As It Was'], ['Beat Automotivo Tan Tan Tan Viral'], ['Beautiful Things'], ['BLUE'], ['BAND4BAND (feat. Lil Baby)']]",SELECT `title` FROM `tracks` ORDER BY `title` ASC LIMIT 5,1,,0.0,1.0,1.0,1.0,1.0,1.0,0.55
+data/db_music_cut_300.sqlite,tracks,ORDERBY-PROJECT,Select only the column `title` from `tracks`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `title` FROM `tracks` ORDER BY `title` DESC LIMIT 5,3,"{
+  ""table_name"": ""tracks"",
+  ""ordered_entries"": [
+    {
+      ""title"": ""As It Was""
+    },
+    {
+      ""title"": ""Beat Automotivo Tan Tan Tan Viral""
+    },
+    {
+      ""title"": ""Beautiful Things""
+    },
+    {
+      ""title"": ""BLUE""
+    },
+    {
+      ""title"": ""BAND4BAND (feat. Lil Baby)""
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-PROJECT,Select only the column `tiktok_posts` from `tracks`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[3.0], [16400.0], [195300.0], [325800.0], [3500000.0]]",SELECT `tiktok_posts` FROM `tracks` ORDER BY `tiktok_posts` ASC LIMIT 5,0,,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+data/db_music_cut_300.sqlite,tracks,ORDERBY-PROJECT,Select only the column `tiktok_posts` from `tracks`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[37621885.0], [11054500.0], [7485966.0], [7189811.0], [5767700.0]]",SELECT `tiktok_posts` FROM `tracks` ORDER BY `tiktok_posts` DESC LIMIT 5,1,,0.0,0.8,0.8,0.0,1.0,0.8,1.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-PROJECT,Select only the column `all_time_rank` from `tracks`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `all_time_rank` FROM `tracks` ORDER BY `all_time_rank` ASC LIMIT 5,3,"```
+{
+  ""table_name"": ""tracks"",
+  ""ordered_entries"": [
+    {
+      ""tiktok_posts"": 37621885.0
+    },
+    {
+      ""tiktok_posts"": 11054500.0
+    },
+    {
+      ""tiktok_posts"": 7485966.0
+    },
+    {
+      ""tiktok_posts"": 7189811.0
+    },
+    {
+      ""tiktok_posts"": 5767700.0
+    }
+  ]
+}
+```",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-PROJECT,Select only the column `all_time_rank` from `tracks`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[27], [26], [25], [24], [23]]",SELECT `all_time_rank` FROM `tracks` ORDER BY `all_time_rank` DESC LIMIT 5,0,,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-PROJECT,Select only the column `youtube_views` from `tracks`. Sort it in ascending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[[32735244.0], [32229063.0], [40022524.0], [35724356.0], [4233958.0]]",SELECT `youtube_views` FROM `tracks` ORDER BY `youtube_views` ASC LIMIT 5,0,,0.0,0.2,0.5,0.0,1.0,0.5,1.0
+data/db_music_cut_300.sqlite,tracks,ORDERBY-PROJECT,Select only the column `youtube_views` from `tracks`. Sort it in descending order and return the first 5 values.,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],SELECT `youtube_views` FROM `tracks` ORDER BY `youtube_views` DESC LIMIT 5,3,"{
+  ""table_name"": ""tracks"",
+  ""ordered_entries"": [
+    {
+      ""youtube_views"": 32735244.0
+    },
+    {
+      ""youtube_views"": 32229063.0
+    },
+    {
+      ""youtube_views"": 40022524.0
+    },
+    {
+      ""youtube_views"": 35724356.0
+    },
+    {
+      ""youtube_views"": 4233958.0
+    }
+  ]
+}",0.0,0.0,0.0,0.0,0.0,0.0,0.0

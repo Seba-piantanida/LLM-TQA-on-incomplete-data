@@ -1,0 +1,44 @@
+{
+  "models": [
+    "deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free",
+    "meta-llama/Llama-3.3-70B-Instruct-Turbo-Free"
+  ],
+  "tests": [
+    
+    {
+      "test_file": "tests/test_numerical_simple_clean.csv",
+      "out_path": "variance_analysis/numerical_simple",
+      "label": "clean"
+    }
+    ,
+  {
+      "test_file": "tests/test_complete_cut_300_clean.csv",
+      "out_path": "variance_analysis/complete_cut_300",
+      "label": "clean"
+    },
+    {
+      "test_file": "tests/test_categorical_simple_clean.csv",
+      "out_path": "variance_analysis/categorical_simple",
+      "label": "clean"
+    }
+
+  ],
+  "not_included": [
+    {
+      "test_file": "tests/test_categorical_simple.csv",
+      "out_path": "variance_analysis/categorical_simple",
+      "label": "full"
+    },
+        {
+      "test_file": "tests/test_complete_cut_300.csv",
+      "out_path": "variance_analysis/complete_cut_300",
+      "label": "full"
+    },
+     {
+      "test_file": "tests/test_numerical_simple.csv",
+      "out_path": "variance_analysis/numerical_simple",
+      "label": "full"
+    }
+  ]
+}
+

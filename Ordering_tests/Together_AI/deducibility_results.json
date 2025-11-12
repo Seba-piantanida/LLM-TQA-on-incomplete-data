@@ -1,0 +1,135 @@
+{
+    "mobiles": {
+        "Company Name": {
+            "score": 0.6451612903225806,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Model Name": {
+            "score": 0.043010752688172046,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Mobile Weight": {
+            "score": 0.3387096774193548,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "RAM": {
+            "score": 0.6075268817204301,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Front Camera": {
+            "score": 0.6774193548387096,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Back Camera": {
+            "score": 0.6344086021505376,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Processor": {
+            "score": 0.43548387096774194,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Battery Capacity": {
+            "score": 0.478494623655914,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Screen Size": {
+            "score": 0.4731182795698925,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Launched Price (Pakistan)": {
+            "score": 0.1881720430107527,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Launched Price (India)": {
+            "score": 0.22580645161290322,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Launched Price (China)": {
+            "score": 0.21505376344086022,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Launched Price (USA)": {
+            "score": 0.25806451612903225,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Launched Price (Dubai)": {
+            "score": 0.1989247311827957,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Launched Year": {
+            "score": 0.5591397849462365,
+            "metric": "accuracy",
+            "deducible": false
+        }
+    },
+    "olympic_games": {
+        "id": {
+            "score": 0.0,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "year": {
+            "score": 0.0,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "city": {
+            "score": 0.0,
+            "metric": "accuracy",
+            "deducible": false
+        }
+    },
+    "fitness_trakers": {
+        "Brand Name": {
+            "score": 0.625,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Device Type": {
+            "score": 0.875,
+            "metric": "accuracy",
+            "deducible": true
+        },
+        "Model Name": {
+            "score": 0.25,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Color": {
+            "score": 0.3125,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Selling Price": {
+            "score": 0.1875,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Original Price": {
+            "score": 0.3125,
+            "metric": "accuracy",
+            "deducible": false
+        },
+        "Display": {
+            "score": 0.875,
+            "metric": "accuracy",
+            "deducible": true
+        },
+        "Rating (Out of 5)": {
+            "score": -0.24678446043165803,
+            "metric": "R2",
+            "deducible": 

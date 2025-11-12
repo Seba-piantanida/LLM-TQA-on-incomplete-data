@@ -1,0 +1,7 @@
+table_name,model,avg_valid_efficiency_score,avg_cell_precision,avg_cell_recall,avg_execution_accuracy,avg_tuple_cardinality,avg_tuple_constraint,avg_tuple_order
+accounts_receivable,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,0.0,0.5355,0.5405,0.0,1.0,0.0,0.5
+breast_cancer,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,0.0,0.4755384615384616,0.556923076923077,0.23076923076923078,1.0,0.23076923076923078,0.6923076923076923
+fitness_trakers,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,0.0,0.3135,0.32716666666666666,0.16666666666666666,0.8333333333333334,0.16666666666666666,0.5
+heart_attack,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,0.0,0.5504,0.5452,0.26666666666666666,1.0,0.3333333333333333,0.8333333333333334
+mobiles,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,0.0,0.521,0.5724444444444444,0.2222222222222222,1.0,0.2222222222222222,0.6666666666666666
+olympic_games,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,0.0,0.19033333333333333,0.19033333333333333,0.0,1.0,0.0,0.5

@@ -1,0 +1,5 @@
+table,model,avg_valid_efficiency_score,avg_cell_precision,avg_cell_recall,avg_execution_accuracy,avg_tuple_cardinality,avg_tuple_constraint,avg_tuple_order
+animals,gemini-2.5-pro,0.0,0.22625,0.25225,0.0,1.0,0.05,0.75
+cars,gemini-2.5-pro,0.0,0.8552857142857143,0.8632857142857143,0.42857142857142855,1.0,0.8285714285714285,0.9500000000000001
+monuments,gemini-2.5-pro,0.0,0.82,0.82,0.5,1.0,0.7,1.0
+movies,gemini-2.5-pro,0.0,0.9333333333333332,0.9333333333333332,0.8333333333333334,1.0,0.9333333333333332,1.0
