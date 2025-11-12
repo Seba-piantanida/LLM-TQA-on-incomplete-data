@@ -1,0 +1,7 @@
+table,model,avg_valid_efficiency_score,avg_cell_precision,avg_cell_recall,avg_execution_accuracy,avg_tuple_cardinality,avg_tuple_constraint,avg_tuple_order
+BMI,gemini-2.5-flash,0.0,0.2645,0.28525,0.0,1.0,0.0,0.625
+energy_consumption,gemini-2.5-flash,0.0,0.896375,0.878,0.375,1.0,0.65,0.875
+financial,gemini-2.5-flash,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+logistics_delivery,gemini-2.5-flash,0.0,0.4571428571428572,0.4412857142857143,0.0,1.0,0.31428571428571433,0.7857142857142857
+products,gemini-2.5-flash,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+student_performance,gemini-2.5-flash,0.0,0.6571428571428571,0.6285714285714287,0.2857142857142857,1.0,0.5142857142857143,0.7857142857142857

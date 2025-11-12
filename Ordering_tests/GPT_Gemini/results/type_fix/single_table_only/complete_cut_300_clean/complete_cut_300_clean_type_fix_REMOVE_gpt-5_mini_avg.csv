@@ -1,0 +1,6 @@
+table,model,avg_valid_efficiency_score,avg_cell_precision,avg_cell_recall,avg_execution_accuracy,avg_tuple_cardinality,avg_tuple_constraint,avg_tuple_order
+breast_cancer,gpt-5_mini,0.0,0.875,0.875,0.875,1.0,0.875,0.9375
+fitness_trakers,gpt-5_mini,0.0,0.0,0.0,0.0,1.0,0.0,0.5
+heart_attack,gpt-5_mini,0.0,0.9776666666666666,0.9776666666666666,0.8333333333333334,1.0,0.6833333333333332,0.9583333333333334
+mobiles,gpt-5_mini,0.0,0.947375,0.910875,0.75,1.0,0.8125,0.9375
+olympic_games,gpt-5_mini,0.0,0.2855,0.2855,0.0,1.0,0.0,0.5

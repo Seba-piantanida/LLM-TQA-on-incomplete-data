@@ -1,0 +1,5 @@
+db_path,db_id,tbl_name,test_category,sql_tag,query,question
+data/db_numerical_simple.sqlite,db,energy_consumption,ORDERBY,ORDERBY-PROJECT,SELECT `id` FROM `energy_consumption` ORDER BY `id` ASC LIMIT 20,Select only the column `id` from `energy_consumption`. Sort it in ascending order and return the first 20 values.
+data/db_numerical_simple.sqlite,db,logistics_delivery,ORDERBY,ORDERBY-PROJECT,SELECT `id` FROM `logistics_delivery` ORDER BY `id` ASC LIMIT 20,Select only the column `id` from `logistics_delivery`. Sort it in ascending order and return the first 20 values.
+data/db_numerical_simple.sqlite,db,student_performance,ORDERBY,ORDERBY-SINGLE,SELECT * FROM `student_performance` ORDER BY `id` ASC LIMIT 20,"List the top 20 rows from the table `student_performance`, sorted by the column `id` in ascending order."
+data/db_numerical_simple.sqlite,db,student_performance,ORDERBY,ORDERBY-PROJECT,SELECT `pass_status` FROM `student_performance` ORDER BY `pass_status` ASC LIMIT 20,Select only the column `pass_status` from `student_performance`. Sort it in ascending order and return the first 20 values.

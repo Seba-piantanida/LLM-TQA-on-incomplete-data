@@ -1,0 +1,6 @@
+table,model,avg_valid_efficiency_score,avg_cell_precision,avg_cell_recall,avg_execution_accuracy,avg_tuple_cardinality,avg_tuple_constraint,avg_tuple_order
+accounts_receviable,gemini-2.5-flash,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+fitness_tracker,gemini-2.5-flash,0.0,0.75,0.75,0.75,1.0,0.75,1.0
+heart_attack,gemini-2.5-flash,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+mobiles,gemini-2.5-flash,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+olympic_games,gemini-2.5-flash,0.0,1.0,1.0,1.0,1.0,1.0,1.0

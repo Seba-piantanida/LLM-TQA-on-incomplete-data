@@ -1,0 +1,4 @@
+db_path,db_id,tbl_name,test_category,sql_tag,query,question
+data/db_complete_cut_300.sqlite,db,mobiles,ORDERBY,ORDERBY-PROJECT,SELECT `Model Name` FROM `mobiles` ORDER BY `Model Name` ASC LIMIT 30,Select only the column `Model Name` from `mobiles`. Sort it in ascending order and return the first 30 values.
+data/db_complete_cut_300.sqlite,db,mobiles,ORDERBY,ORDERBY-PROJECT,SELECT `Model Name` FROM `mobiles` ORDER BY `Model Name` DESC LIMIT 30,Select only the column `Model Name` from `mobiles`. Sort it in descending order and return the first 30 values.
+data/db_complete_cut_300.sqlite,db,olympic_games,ORDERBY,ORDERBY-SINGLE,SELECT * FROM `olympic_games` ORDER BY `city` ASC LIMIT 30,"List the top 30 rows from the table `olympic_games`, sorted by the column `city` in ascending order."

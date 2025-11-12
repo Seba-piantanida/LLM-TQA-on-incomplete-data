@@ -1,0 +1,5 @@
+table,model,avg_valid_efficiency_score,avg_cell_precision,avg_cell_recall,avg_execution_accuracy,avg_tuple_cardinality,avg_tuple_constraint,avg_tuple_order
+animals,gpt-5_mini,0.0,0.99,0.99,0.8,1.0,0.96,1.0
+cars,gpt-5_mini,0.0,0.5425,0.53925,0.25,0.75,0.45,0.625
+monuments,gpt-5_mini,0.0,0.9199999999999999,0.9199999999999999,0.6666666666666666,1.0,0.8666666666666667,1.0
+movies,gpt-5_mini,0.0,0.7725,0.7618333333333333,0.6666666666666666,1.0,0.7333333333333334,0.9166666666666666

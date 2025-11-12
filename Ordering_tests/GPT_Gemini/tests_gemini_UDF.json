@@ -1,0 +1,22 @@
+[
+ {
+    "test_path": "tests/UDF/test_UDF_categorical_simple.csv",
+    "out_dir": "output/UDF/categorical_simple",
+    "progress_path": "progress_gemini_flash.json",
+    "modes": ["NORMAL", "NULL" ]
+    },
+     {
+    "test_path": "tests/UDF/test_UDF_numerical_simple.csv",
+    "out_dir": "output/UDF/numerical_simple",
+    "progress_path": "progress_gemini_flsh.json",
+    "modes": ["NORMAL", "NULL" ]
+    },
+    {
+    "test_path": "tests/UDF/test_UDF_complete_cut_300.csv",
+    "out_dir": "output/UDF/complete_cut_300",
+    "progress_path": "progress_gemini_flash.json",
+    "modes": ["NORMAL", "NULL" ]
+    }
+  
+]
+

@@ -1,0 +1,11 @@
+db_path,db_id,tbl_name,test_category,sql_tag,query,question
+data/db_cut_300.sqlite,db,breast_cancer,ORDERBY,ORDERBY-SINGLE,SELECT * FROM `breast_cancer` ORDER BY `id` ASC LIMIT 15,Show the first 15 entries ordered by id in ascending order for the table breast_cancer
+data/db_cut_300.sqlite,db,breast_cancer,ORDERBY,ORDERBY-PROJECT,SELECT `id` FROM `breast_cancer` ORDER BY `id` ASC LIMIT 19,Project the id ordered in ascending order for the table breast_cancer and show only the first 19 entries
+data/db_cut_300.sqlite,db,fitness_trakers,ORDERBY,ORDERBY-PROJECT,SELECT `Device Type` FROM `fitness_trakers` ORDER BY `Device Type` DESC LIMIT 11,Project the Device Type ordered in descending order for the table fitness_trakers and show only the first 11 entries
+data/db_cut_300.sqlite,db,heart_attack,ORDERBY,ORDERBY-ADVANCED,SELECT * FROM `heart_attack` ORDER BY `age` + `fbs` DESC LIMIT 6,"Show the first 6 entries ordered by the sum of [age + fbs], in descending order for the table heart_attack"
+data/db_cut_300.sqlite,db,mobiles,ORDERBY,ORDERBY-PROJECT,SELECT `Model Name` FROM `mobiles` ORDER BY `Model Name` DESC LIMIT 5,Project the Model Name ordered in descending order for the table mobiles and show only the first 5 entries
+data/db_cut_300.sqlite,db,olympic_games,ORDERBY,ORDERBY-SINGLE,SELECT * FROM `olympic_games` ORDER BY `id` DESC LIMIT 15,Show the first 15 entries ordered by id in descending order for the table olympic_games
+data/db_cut_300.sqlite,db,olympic_games,ORDERBY,ORDERBY-SINGLE,SELECT * FROM `olympic_games` ORDER BY `year` DESC LIMIT 15,Show the first 15 entries ordered by year in descending order for the table olympic_games
+data/db_cut_300.sqlite,db,olympic_games,ORDERBY,ORDERBY-SINGLE,SELECT * FROM `olympic_games` ORDER BY `city` DESC LIMIT 15,Show the first 15 entries ordered by city in descending order for the table olympic_games
+data/db_cut_300.sqlite,db,olympic_games,ORDERBY,ORDERBY-PROJECT,SELECT `id` FROM `olympic_games` ORDER BY `id` DESC LIMIT 8,Project the id ordered in descending order for the table olympic_games and show only the first 8 entries
+data/db_cut_300.sqlite,db,olympic_games,ORDERBY,ORDERBY-PROJECT,SELECT `year` FROM `olympic_games` ORDER BY `year` DESC LIMIT 8,Project the year ordered in descending order for the table olympic_games and show only the first 8 entries

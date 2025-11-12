@@ -1,0 +1,34 @@
+[
+
+   {
+    "test_path": "tests/tuple_limit_n/clean/test_numerical_simple_clean_limit_10.csv",
+    "out_dir": "output/tuple_limit/clean/limit_10",
+    "progress_path": "progress_gemini_flash.json",
+    "modes": [ "NULL" ]
+    },
+    {
+    "test_path": "tests/tuple_limit_n/clean/test_numerical_simple_clean_limit_15.csv",
+    "out_dir": "output/tuple_limit/clean/limit_15",
+    "progress_path": "progress_gemini_flash.json",
+    "modes": [ "NULL" ]
+    },
+    {
+    "test_path": "tests/tuple_limit_n/clean/test_numerical_simple_clean_limit_20.csv",
+    "out_dir": "output/tuple_limit/clean/limit_20",
+    "progress_path": "progress_gemini_flash.json",
+    "modes": [ "NULL" ]
+    },
+    {
+    "test_path": "tests/tuple_limit_n/clean/test_numerical_simple_clean_limit_25.csv",
+    "out_dir": "output/tuple_limit/clean/limit_25",
+    "progress_path": "progress_gemini_flash.json",
+    "modes": [ "NULL" ]
+    },
+    {
+    "test_path": "tests/tuple_limit_n/clean/test_numerical_simple_clean_limit_n.csv",
+    "out_dir": "output/tuple_limit/clean/limit_n",
+    "progress_path": "progress_gemini_flash.json",
+    "modes": [ "NULL" ]
+    }
+
+]

@@ -1,0 +1,184 @@
+db_path,execution_type,table,tables_used,test_category,question,model,result,sql_query,failed_attempts,note,valid_efficiency_score,cell_precision,cell_recall,execution_accuracy,tuple_cardinality,tuple_constraint,tuple_order
+data/db_complete_cut_300.sqlite,NULL,olympic_games,['olympic_games'],UDF,"Return only the city name in title case from the olympic_games table, order results by the transformed value ascending, and output the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Beijing'], ['Berlin'], ['London'], ['Los Angeles'], ['Moscow']]","[('Athens',), ('Athens',), ('Beijing',), ('London',), ('Paris',)]",1,,0.0,0.4,0.5,0.0,1.0,0.5,1.0
+data/db_complete_cut_300.sqlite,NULL,olympic_games,['olympic_games'],UDF,"Return only the canonicalized city (punctuation removed and spaces normalized) from the olympic_games table, order results ascending, and output the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Athens'], ['Barcelona'], ['Beijing'], ['London'], ['Los Angeles']]","[('athens',), ('athens',), ('beijing',), ('london',), ('paris',)]",0,,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,NULL,olympic_games,['olympic_games'],UDF,"Return only the decade label derived from year from the olympic_games table, order results ascending, and output the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['1890s'], ['1900s'], ['1910s'], ['1920s'], ['1930s']]","[('1890s',), ('1900s',), ('1900s',), ('2000s',), ('2000s',)]",0,,0.0,0.4,0.667,0.0,1.0,0.333,1.0
+data/db_complete_cut_300.sqlite,NULL,mobiles,['mobiles'],UDF,"Return only the battery capacity in mAh parsed from 'Battery Capacity' from the mobiles table, order results ascending, and output the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[[4000], [4082], [4614], [5000], [5000]]","[(3200,), (3200,), (3200,), (3600,), (3600,)]",0,,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,NULL,fitness_tracker,['fitness_trakers'],UDF,"Return only the rating label derived from 'Rating (Out of 5)' from the fitness_trakers table, order results ascending, and output the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,[],"[('high',), ('low',), ('low',), ('mid',), ('mid',)]",0,,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_300.sqlite,NULL,heart_attack,['heart_attack'],UDF,"Return only the sex label derived from sex from the heart_attack table (0 -> female, 1 -> male), order results ascending, and output the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['female'], ['female'], ['female'], ['male'], ['male']]","[('female',), ('female',), ('female',), ('female',), ('female',)]",0,,0.0,0.5,1.0,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,NULL,olympic_games,['olympic_games'],UDF,"Return only the city name transformed to uppercase from the olympic_games table, order results by the uppercase value ascending, and output the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['BEIJING'], ['LONDON'], ['LOS ANGELES'], ['PARIS'], ['TOKYO']]","[('ATHENS',), ('ATHENS',), ('BEIJING',), ('LONDON',), ('PARIS',)]",0,,0.0,0.6,0.75,0.0,1.0,0.75,1.0
+data/db_complete_cut_300.sqlite,NULL,olympic_games,['olympic_games'],UDF,"Return only the city name transformed to lowercase from the olympic_games table, order results by the lowercase value ascending, and output the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['beijing'], ['london'], ['paris'], ['sydney'], ['tokyo']]","[('athens',), ('athens',), ('beijing',), ('london',), ('paris',)]",0,,0.0,0.6,0.75,0.0,1.0,0.75,1.0
+data/db_complete_cut_300.sqlite,NULL,mobiles,['mobiles'],UDF,"Return only the company name transformed to uppercase from the mobiles table, order results by the uppercase value ascending, and output the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['APPLE'], ['GOOGLE'], ['HUAWEI'], ['Motorola'], ['Nokia']]","[('APPLE',), ('APPLE',), ('APPLE',), ('APPLE',), ('APPLE',)]",0,,0.0,0.2,1.0,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,NULL,mobiles,['mobiles'],UDF,"Return only the model name transformed to lowercase from the mobiles table, order results by the lowercase value ascending, and output the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['google pixel 6'], ['huawei p40 pro'], ['iphone 13'], ['motorola edge 30'], ['nokia g50']]","[('iphone 15 128gb',), ('iphone 15 256gb',), ('iphone 15 512gb',), ('iphone 15 plus 128gb',), ('iphone 15 plus 256gb',)]",1,,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,NULL,mobiles,['mobiles'],UDF,"Return only the processor value converted to title case from the mobiles table, order results by the title-cased value ascending, and output the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,[],"[('A16 Bionic',), ('A16 Bionic',), ('A16 Bionic',), ('A16 Bionic',), ('A16 Bionic',)]",0,,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_300.sqlite,NULL,fitness_tracker,['fitness_trakers'],UDF,"Return only the display type transformed to uppercase from the fitness_trakers table, order results by the uppercase value ascending, and output the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['COLOR LCD'], ['E INK'], ['LED'], ['MONOCHROME'], ['OLED']]","[('AMOLED DISPLAY',), ('AMOLED DISPLAY',), ('AMOLED DISPLAY',), ('AMOLED DISPLAY',), ('AMOLED DISPLAY',)]",0,,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,NULL,fitness_tracker,['fitness_trakers'],UDF,"Return only the device type transformed to lowercase from the fitness_trakers table, order results by the lowercase value ascending, and output the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['fitbit'], ['garmin'], ['misfit'], ['polar'], ['xiaomi']]","[('fitnessband',), ('fitnessband',), ('fitnessband',), ('fitnessband',), ('fitnessband',)]",0,,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,NULL,fitness_tracker,['fitness_trakers'],UDF,"Return only the strap material converted to title case from the fitness_trakers table, order results by the title-cased value ascending, and output the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['Leather'], ['Nylon'], ['Polyurethane'], ['Rubber'], ['Silicone']]","[('Elastomer',), ('Elastomer',), ('Elastomer',), ('Elastomer',), ('Elastomer',)]",0,,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,NULL,accounts_receviable,['accounts_receivable'],UDF,"Return only the paperless billing mode transformed to uppercase from the accounts_receivable table, order results by the uppercase value ascending, and output the first 5 rows",deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,"[['NO'], ['NO'], ['NO'], ['YES'], ['YES']]","[('ELECTRONIC',), ('ELECTRONIC',), ('ELECTRONIC',), ('ELECTRONIC',), ('ELECTRONIC',)]",0,,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,NULL,olympic_games,['olympic_games'],UDF,"Return only the city name in title case from the olympic_games table, order results by the transformed value ascending, and output the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],"[('Athens',), ('Athens',), ('Beijing',), ('London',), ('Paris',)]",3,"""table_name"": ""olympic_games"",
+""ordered_entries"": [
+  {
+    ""city"": ""Atlanta""
+  },
+  {
+    ""city"": ""Barcelona""
+  },
+  {
+    ""city"": ""Beijing""
+  },
+  {
+    ""city"": ""Berlin""
+  },
+  {
+    ""city"": ""London""
+  }
+]}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_300.sqlite,NULL,olympic_games,['olympic_games'],UDF,"Return only the canonicalized city (punctuation removed and spaces normalized) from the olympic_games table, order results ascending, and output the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],"[('athens',), ('athens',), ('beijing',), ('london',), ('paris',)]",3,"""table_name"": ""olympic_games"",
+""ordered_entries"": [
+  {
+    ""city"": ""athens""
+  },
+  {
+    ""city"": ""beijing""
+  },
+  {
+    ""city"": ""berlin""
+  },
+  {
+    ""city"": ""london""
+  },
+  {
+    ""city"": ""losangeles""
+  }
+]}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_300.sqlite,NULL,olympic_games,['olympic_games'],UDF,"Return only the decade label derived from year from the olympic_games table, order results ascending, and output the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['1900-1909'], ['1900-1909'], ['1910-1919'], ['1910-1919'], ['1920-1929']]","[('1890s',), ('1900s',), ('1900s',), ('2000s',), ('2000s',)]",0,,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,NULL,mobiles,['mobiles'],UDF,"Return only the battery capacity in mAh parsed from 'Battery Capacity' from the mobiles table, order results ascending, and output the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],"[(3200,), (3200,), (3200,), (3600,), (3600,)]",3,"""table_name"": ""mobiles"",
+""ordered_entries"": [
+  {
+    ""battery_capacity"": 2500
+  },
+  {
+    ""battery_capacity"": 2800
+  },
+  {
+    ""battery_capacity"": 3000
+  },
+  {
+    ""battery_capacity"": 3200
+  },
+  {
+    ""battery_capacity"": 3500
+  }
+]}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_300.sqlite,NULL,fitness_tracker,['fitness_trakers'],UDF,"Return only the rating label derived from 'Rating (Out of 5)' from the fitness_trakers table, order results ascending, and output the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Poor'], ['Fair'], ['Average'], ['Good'], ['Excellent']]","[('high',), ('low',), ('low',), ('mid',), ('mid',)]",0,,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,NULL,heart_attack,['heart_attack'],UDF,"Return only the sex label derived from sex from the heart_attack table (0 -> female, 1 -> male), order results ascending, and output the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['female'], ['female'], ['male'], ['male'], ['male']]","[('female',), ('female',), ('female',), ('female',), ('female',)]",0,,0.0,0.5,1.0,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,NULL,olympic_games,['olympic_games'],UDF,"Return only the city name transformed to uppercase from the olympic_games table, order results by the uppercase value ascending, and output the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['ATHENS'], ['ATLANTA'], ['BARCELONA'], ['BEIJING'], ['BERLIN']]","[('ATHENS',), ('ATHENS',), ('BEIJING',), ('LONDON',), ('PARIS',)]",2,,0.0,0.4,0.5,0.0,1.0,0.25,1.0
+data/db_complete_cut_300.sqlite,NULL,olympic_games,['olympic_games'],UDF,"Return only the city name transformed to lowercase from the olympic_games table, order results by the lowercase value ascending, and output the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],"[('athens',), ('athens',), ('beijing',), ('london',), ('paris',)]",3,"""table_name"": ""olympic_games"",
+""ordered_entries"": [
+  {
+    ""city"": ""athens""
+  },
+  {
+    ""city"": ""atlanta""
+  },
+  {
+    ""city"": ""barcelona""
+  },
+  {
+    ""city"": ""beijing""
+  },
+  {
+    ""city"": ""berlin""
+  }
+]}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_300.sqlite,NULL,mobiles,['mobiles'],UDF,"Return only the company name transformed to uppercase from the mobiles table, order results by the uppercase value ascending, and output the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],"[('APPLE',), ('APPLE',), ('APPLE',), ('APPLE',), ('APPLE',)]",3,"""table_name"": ""mobiles"",
+""ordered_entries"": [
+  {
+    ""company_name"": ""APPLE""
+  },
+  {
+    ""company_name"": ""HUAWEI""
+  },
+  {
+    ""company_name"": ""LG""
+  },
+  {
+    ""company_name"": ""MOTOROLA""
+  },
+  {
+    ""company_name"": ""NOKIA""
+  }
+]}",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_300.sqlite,NULL,mobiles,['mobiles'],UDF,"Return only the model name transformed to lowercase from the mobiles table, order results by the lowercase value ascending, and output the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],"[('iphone 15 128gb',), ('iphone 15 256gb',), ('iphone 15 512gb',), ('iphone 15 plus 128gb',), ('iphone 15 plus 256gb',)]",3,"""table_name"": ""mobiles"",
+""ordered_entries"": [
+  {
+    ""model_name"": ""iphone""
+  },
+  {
+    ""model_name"": ""iphone""
+  },
+  {
+    ""model_name"": ""m30""
+  },
+  {
+    ""model_name"": ""m30""
+  },
+  {
+    ""model_name"": ""note""
+  }
+]",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_300.sqlite,NULL,mobiles,['mobiles'],UDF,"Return only the processor value converted to title case from the mobiles table, order results by the title-cased value ascending, and output the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Apple A14 Bionic'], ['Exynos 2100'], ['MediaTek Dimensity 800'], ['Qualcomm Snapdragon 680'], ['Qualcomm Snapdragon 888']]","[('A16 Bionic',), ('A16 Bionic',), ('A16 Bionic',), ('A16 Bionic',), ('A16 Bionic',)]",1,,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,NULL,fitness_tracker,['fitness_trakers'],UDF,"Return only the display type transformed to uppercase from the fitness_trakers table, order results by the uppercase value ascending, and output the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],"[('AMOLED DISPLAY',), ('AMOLED DISPLAY',), ('AMOLED DISPLAY',), ('AMOLED DISPLAY',), ('AMOLED DISPLAY',)]",3,"""table_name"": ""fitness_trakers"",
+""ordered_entries"": [
+  {
+    ""display_type"": ""CLIP""
+  },
+  {
+    ""display_type"": ""HANDHELD""
+  },
+  {
+    ""display_type"": ""SMARTWATCH""
+  },
+  {
+    ""display_type"": ""WRISTBAND""
+  },
+  {
+    ""display_type"": ""WRISTSTRAP""
+  }
+]",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_300.sqlite,NULL,fitness_tracker,['fitness_trakers'],UDF,"Return only the device type transformed to lowercase from the fitness_trakers table, order results by the lowercase value ascending, and output the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],"[('fitnessband',), ('fitnessband',), ('fitnessband',), ('fitnessband',), ('fitnessband',)]",3,"""table_name"": ""fitness_trakers"",
+""ordered_entries"": [
+  {
+    ""device_type"": ""fitbit""
+  },
+  {
+    ""device_type"": ""garmin""
+  },
+  {
+    ""device_type"": ""misfit""
+  },
+  {
+    ""device_type"": ""polar""
+  },
+  {
+    ""device_type"": ""xiao""
+  }
+]",0.0,0.0,0.0,0.0,0.0,0.0,0.0
+data/db_complete_cut_300.sqlite,NULL,fitness_tracker,['fitness_trakers'],UDF,"Return only the strap material converted to title case from the fitness_trakers table, order results by the title-cased value ascending, and output the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,"[['Leather'], ['Metal'], ['Nylon'], ['Plastic'], ['Rubber']]","[('Elastomer',), ('Elastomer',), ('Elastomer',), ('Elastomer',), ('Elastomer',)]",0,,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+data/db_complete_cut_300.sqlite,NULL,accounts_receviable,['accounts_receivable'],UDF,"Return only the paperless billing mode transformed to uppercase from the accounts_receivable table, order results by the uppercase value ascending, and output the first 5 rows",meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,[],"[('ELECTRONIC',), ('ELECTRONIC',), ('ELECTRONIC',), ('ELECTRONIC',), ('ELECTRONIC',)]",3,"""table_name"": ""accounts_receivable"",
+""ordered_entries"": [
+  {
+    ""paperless_billing_mode"": ""ELECTRONIC""
+  },
+  {
+    ""paperless_billing_mode"": ""ELECTRONIC""
+  },
+  {
+    ""paperless_billing_mode"": ""EMAIL""
+  },
+  {
+    ""paperless_billing_mode"": ""EMAIL""
+  },
+  {
+    ""paperless_billing_mode"": ""ONLINE""
+  }
+]",0.0,0.0,0.0,0.0,0.0,0.0,0.0

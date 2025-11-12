@@ -1,0 +1,9 @@
+[
+   
+    {
+        "test_path": "tests/test_complete_cut_300.csv",
+        "out_dir": "results/type_fix/complete_cut_300",
+        "progress_path": "progress_gemini_3.json",
+        "modes": ["NULL"]
+    }
+]

@@ -1,0 +1,15 @@
+[
+      {
+        "test_path": "tests/tuple_limit_n/limit_25/test_numerical_simple.csv",
+        "out_dir": "output/tuple_limit/limit_n",
+        "progress_path": "progress_gemini.json",
+        "modes": [  "NORMAL","REMOVE"]
+    },
+ 
+      {
+        "test_path": "tests/tuple_limit_n/limit_n/test_numerical_simple.csv",
+        "out_dir": "output/tuple_limit/limit_n",
+        "progress_path": "progress_gemini.json",
+        "modes": [   "NORMAL","REMOVE"]
+    }
+]

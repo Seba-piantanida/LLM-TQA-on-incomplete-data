@@ -1,0 +1,20 @@
+[
+   
+
+    {
+        "name": "UDF_categorical_simple",
+        "modes": ["NORMAL", "NULL" ]
+    },
+    {
+        "name": "UDF_numerical_simple",
+        "modes": ["NORMAL","NULL" ]
+    },
+    {
+        "name": "UDF_complete_cut_300",
+        "modes": ["NORMAL","NULL" ]
+    }
+
+
+  
+   
+]

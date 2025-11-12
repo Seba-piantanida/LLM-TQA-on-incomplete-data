@@ -1,0 +1,41 @@
+# Ignore all virtual environments (anywhere)
+**/venv/
+**/venv*/ 
+**/.venv/
+**/.venv*/ 
+**/chrome_profile/
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+*.log
+**/Cache/
+**/userdata/
+**/.git/
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# VSCode / IDE configs
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Environment and secret files
+.env
+*.env
+.env.*
+
+# Temporary or backup files
+*~
+*.tmp
+*.bak
+*.swp
+
+/UDF_preparation
+/UDF_tests

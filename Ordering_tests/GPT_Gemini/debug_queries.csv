@@ -1,0 +1,11 @@
+sql_query_sample,query_sample
+"[(66.2944,), (60.7756,), (60.38759999999999,), (54.9275,), (54.49439999999999,)]","SELECT weight_gap(weight_kg, height_m) AS gap FROM bmi ORDER BY gap DESC LIMIT 5;"
+"[('alice', 33.3), ('bob', 16.4), ('carla', 15.6), ('david', 38.4), ('emma', 48.2)]","SELECT normalize_name(name) AS nome_normalizzato, BMI FROM bmi ORDER BY nome_normalizzato ASC LIMIT 5;"
+"[(808.6188999999999,), (722.1936,), (710.9968,), (668.309,), (616.5237999999999,)]",SELECT carbon_footprint(kwh_used) AS co2_kg FROM energy_consumption ORDER BY co2_kg DESC LIMIT 5;
+"[(1,), (1,), (1,), (1,), (1,)]",SELECT pass_flag(pass_status) AS pass_num FROM student_performance ORDER BY pass_num DESC LIMIT 5;
+"[(1, 83.5), (2, 70.5), (3, 55.0), (4, 72.5), (5, 51.5)]","SELECT extract_numeric_suffix(student_name) AS idx, average_score FROM student_performance ORDER BY idx ASC LIMIT 5;"
+"[(1184.27,), (1064.71,), (1035.79,), (994.5699999999999,), (978.65,)]","SELECT revenue_per_unit(total_revenue, units_sold) AS rev_per_unit FROM products ORDER BY rev_per_unit DESC LIMIT 5;"
+"[(0.021490191262702237,), (0.028289210023810085,), (0.22071220558933224,), (0.2688447357640311,), (0.343671628935969,)]","SELECT demand_elasticity(units_sold, price) AS elasticity FROM products ORDER BY elasticity ASC LIMIT 5;"
+"[('airpods',), ('batterie duracell',), ('birra heineken',), ('borsa prada',), ('caffe lavazza',)]",SELECT normalize_text(name) AS name_norm FROM products ORDER BY name_norm ASC LIMIT 5;
+"[(None,), (None,), (None,), (None,), (None,)]",SELECT parse_percent(savings_rate) AS savings_rate_num FROM financial ORDER BY savings_rate_num DESC LIMIT 5;
+"[(3.9116075764934433,), (3.2534735260983854,), (3.047701647875108,), (2.645631067961165,), (1.9595190380761522,)]","SELECT burn_rate(expenses, income) AS burn FROM financial ORDER BY burn DESC LIMIT 5;"

@@ -1,0 +1,11 @@
+db_path,db_id,tbl_name,test_category,sql_tag,query,question
+data/db_ristoranti.sqlite,db,ristoranti,ORDERBY,HAND-MADE,"[['10', 'delizie della luna', 'venezia', 'via garibaldi 33', 'messicana', '€', '3.7', '1', '1'],['12', 'osteria del sole', 'verona', 'via dante 6', 'cinese', '€€€', '4.2', '1', '0'],['16', 'da mario del sole', 'verona', 'corso italia 79', 'italiana', '€', '4.7', '1', '1'],['19', 'taverna moderna', 'milano', 'via roma 43', 'fusion', '€', '4.5', '1', '0']]",Quali sono i 5 peggiori ristoranti romantici situati nel nord Italia?
+data/db_ristoranti.sqlite,db,ristoranti,ORDERBY,HAND-MADE,,Mostrami i ristoranti esotici con punteggio elevato nelle città costiere.
+data/db_ristoranti.sqlite,db,ristoranti,ORDERBY,HAND-MADE,,Qual è il miglior compromesso tra prezzo e qualità tra i ristoranti romantici?
+data/db_ristoranti.sqlite,db,ristoranti,ORDERBY,HAND-MADE,,"Trova ristoranti simili a quelli con punteggio massimo, ma che costano meno."
+data/db_ristoranti.sqlite,db,ristoranti,ORDERBY,HAND-MADE,,Elenca i migliori 3 ristoranti ideali per un primo appuntamento.
+data/db_ristoranti.sqlite,db,ristoranti,ORDERBY,HAND-MADE,"SELECT * FROM ristoranti WHERE tipo_cucina IN ('italiana', 'locale') AND punteggio > 4.5 ORDER BY punteggio DESC LIMIT 3",Quali sono i migliori 3 ristoranti da suggerire a un turista che vuole assaggiare la vera cucina locale?
+data/db_ristoranti.sqlite,db,ristoranti,ORDERBY,HAND-MADE,SELECT * FROM ristoranti WHERE fascia_prezzo = '€' AND punteggio > 4.5 ORDER BY punteggio DESC LIMIT 5,Quali sono i 5 ristoranti più economici ma con punteggio superiore a 4.5?
+data/db_ristoranti.sqlite,db,ristoranti,ORDERBY,HAND-MADE,SELECT * FROM ristoranti WHERE romantico = 'sì' AND regione = 'Lombardia' ORDER BY punteggio ASC LIMIT 5,Quali sono i 5 peggiori ristoranti romantici della Lombardia?
+data/db_ristoranti.sqlite,db,ristoranti,ORDERBY,HAND-MADE,SELECT * FROM ristoranti WHERE vista = 'sì' AND romantico = 'sì' AND punteggio < 4.0 ORDER BY punteggio ASC,"Fammi una classifica dei ristoranti con vista più romantica, ma con punteggio non troppo alto."
+data/db_ristoranti.sqlite,db,ristoranti,ORDERBY,HAND-MADE,,"Quali ristoranti sono alternativi a uno di fascia €€€ con punteggio 5.0, ma più economici?"

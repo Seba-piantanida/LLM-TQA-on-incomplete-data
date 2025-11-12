@@ -1,0 +1,2 @@
+db_path,db_id,tbl_name,test_category,sql_tag,query,question
+data/db_complete.sqlite,db,olympic_games,ORDERBY,ORDERBY-SINGLE,SELECT * FROM `olympic_games` ORDER BY `city` ASC LIMIT 5,"List the top 5 rows from the table `olympic_games`, sorted by the column `city` in ascending order."

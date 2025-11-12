@@ -1,0 +1,19 @@
+{
+    "models": [
+        "gemini-2.5-pro",
+        "gemini-2.5-flash"
+    ],
+    "tests": [
+                
+
+            {
+                "test_path": "tests/test_music_UDF.csv",
+                "out_dir": "output/UDF/music_UDF",
+                "progress_path": "progress_gemini_UDF.json",
+                "modes": [ "NORMAL"]
+            }
+        
+  
+
+    ]
+}

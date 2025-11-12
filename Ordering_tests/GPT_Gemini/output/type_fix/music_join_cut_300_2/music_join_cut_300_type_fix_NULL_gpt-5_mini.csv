@@ -1,0 +1,2 @@
+model,execution_type,db_path,table,sql_query,question,result,tables_used,retry_count
+gpt-5_mini,NULL,data/db_music_cut_300.sqlite,albums,SELECT * FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`album_id` ASC LIMIT 5,"Join all records from table `albums` with table `artists` on column `artist_id`, then list the top 5 rows sorted by `album_id` in ascending order.",[],"['artists', 'albums']",3

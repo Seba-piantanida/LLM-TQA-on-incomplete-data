@@ -1,0 +1,9 @@
+table,model,avg_valid_efficiency_score,avg_cell_precision,avg_cell_recall,avg_execution_accuracy,avg_tuple_cardinality,avg_tuple_constraint,avg_tuple_order
+animals,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,0.0,0.8,0.875,0.5,1.0,0.75,1.0
+animals,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+cars,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,0.0,0.25,0.25,0.25,0.75,0.25,0.75
+cars,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+monuments,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,0.0,0.32,0.32,0.0,1.0,0.32,1.0
+monuments,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,0.0,0.4,0.4,0.4,0.6,0.4,0.6
+movies,deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free,0.0,0.6,0.6666666666666666,0.5,0.6666666666666666,0.5555,0.6666666666666666
+movies,meta-llama/Llama-3.3-70B-Instruct-Turbo-Free,0.0,0.6,0.6,0.5,0.6666666666666666,0.6,0.6666666666666666

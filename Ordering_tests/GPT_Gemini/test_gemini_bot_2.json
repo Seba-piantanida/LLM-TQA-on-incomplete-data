@@ -1,0 +1,15 @@
+[
+    {
+    "test_path": "tests/test_categorical_simple_eng.csv",
+    "out_dir": "output/type_fix/categorical_simple_eng",
+    "progress_path": "progress_gemini_2.json",
+    "modes": [ "NORMAL"]
+    },
+    {
+    "test_path": "tests/test_categorical_simple_eng_clean.csv",
+    "out_dir": "output/type_fix/categorical_simple_eng_clean",  
+    "progress_path": "progress_gemini_2.json",
+    "modes": [ "NULL"]
+    }
+
+]

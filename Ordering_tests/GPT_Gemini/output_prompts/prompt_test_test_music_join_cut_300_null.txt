@@ -1,0 +1,265 @@
+=== PROMPT GENERATION TEST ===
+Input file: tests/test_music_join_cut_300.csv
+Execution type: NULL
+Max samples: 5
+Generated on: 2025-09-18 12:37:45.005676
+==================================================
+
+SAMPLE 1
+Database: data/db_music_cut_300.sqlite
+Primary Table: albums
+Tables Used: []
+Execution Type: NULL
+------------------------------
+SQL QUERY:
+SELECT * FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`album_id` ASC LIMIT 5
+
+QUESTION:
+Join all records from table `albums` with table `artists` on column `artist_id`, then list the top 5 rows sorted by `album_id` in ascending order.
+
+GENERATED PROMPT:
+
+You are a highly skilled data analyst. Always follow instructions carefully. Always respond strictly in valid JSON.
+
+Objective:
+- Respond accurately to the provided query using the given dataset(s).
+- If any data fields are NULL, missing, or incomplete, **infer and fill** the missing information with the most logical and contextually appropriate value.
+- **Never leave fields empty or set to null.** Always provide the best inferred value based on the dataset context.
+
+Context:
+- Here are the dataset(s):
+
+
+Query:
+- Join all records from table `albums` with table `artists` on column `artist_id`, then list the top 5 rows sorted by `album_id` in ascending order.
+
+Output Format:
+- Provide the response strictly in **valid JSON** format.
+- Follow exactly this schema:
+
+  "table_name": "table name",
+  "ordered_entries": [
+    {
+      entry0
+    },
+    {
+      entry1
+    },
+    {
+      entry2
+    }
+  ]
+}
+- Do not include any explanatory text or notes outside the JSON.
+- Ensure that all required fields are completed with non-null values.
+
+==================================================
+
+SAMPLE 2
+Database: data/db_music_cut_300.sqlite
+Primary Table: albums
+Tables Used: []
+Execution Type: NULL
+------------------------------
+SQL QUERY:
+SELECT * FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`album_id` DESC LIMIT 5
+
+QUESTION:
+Join all records from table `albums` with table `artists` on column `artist_id`, then list the top 5 rows sorted by `album_id` in descending order.
+
+GENERATED PROMPT:
+
+You are a highly skilled data analyst. Always follow instructions carefully. Always respond strictly in valid JSON.
+
+Objective:
+- Respond accurately to the provided query using the given dataset(s).
+- If any data fields are NULL, missing, or incomplete, **infer and fill** the missing information with the most logical and contextually appropriate value.
+- **Never leave fields empty or set to null.** Always provide the best inferred value based on the dataset context.
+
+Context:
+- Here are the dataset(s):
+
+
+Query:
+- Join all records from table `albums` with table `artists` on column `artist_id`, then list the top 5 rows sorted by `album_id` in descending order.
+
+Output Format:
+- Provide the response strictly in **valid JSON** format.
+- Follow exactly this schema:
+
+  "table_name": "table name",
+  "ordered_entries": [
+    {
+      entry0
+    },
+    {
+      entry1
+    },
+    {
+      entry2
+    }
+  ]
+}
+- Do not include any explanatory text or notes outside the JSON.
+- Ensure that all required fields are completed with non-null values.
+
+==================================================
+
+SAMPLE 3
+Database: data/db_music_cut_300.sqlite
+Primary Table: albums
+Tables Used: []
+Execution Type: NULL
+------------------------------
+SQL QUERY:
+SELECT * FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`title` ASC LIMIT 5
+
+QUESTION:
+Join all records from table `albums` with table `artists` on column `artist_id`, then list the top 5 rows sorted by `title` in ascending order.
+
+GENERATED PROMPT:
+
+You are a highly skilled data analyst. Always follow instructions carefully. Always respond strictly in valid JSON.
+
+Objective:
+- Respond accurately to the provided query using the given dataset(s).
+- If any data fields are NULL, missing, or incomplete, **infer and fill** the missing information with the most logical and contextually appropriate value.
+- **Never leave fields empty or set to null.** Always provide the best inferred value based on the dataset context.
+
+Context:
+- Here are the dataset(s):
+
+
+Query:
+- Join all records from table `albums` with table `artists` on column `artist_id`, then list the top 5 rows sorted by `title` in ascending order.
+
+Output Format:
+- Provide the response strictly in **valid JSON** format.
+- Follow exactly this schema:
+
+  "table_name": "table name",
+  "ordered_entries": [
+    {
+      entry0
+    },
+    {
+      entry1
+    },
+    {
+      entry2
+    }
+  ]
+}
+- Do not include any explanatory text or notes outside the JSON.
+- Ensure that all required fields are completed with non-null values.
+
+==================================================
+
+SAMPLE 4
+Database: data/db_music_cut_300.sqlite
+Primary Table: albums
+Tables Used: []
+Execution Type: NULL
+------------------------------
+SQL QUERY:
+SELECT * FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`title` DESC LIMIT 5
+
+QUESTION:
+Join all records from table `albums` with table `artists` on column `artist_id`, then list the top 5 rows sorted by `title` in descending order.
+
+GENERATED PROMPT:
+
+You are a highly skilled data analyst. Always follow instructions carefully. Always respond strictly in valid JSON.
+
+Objective:
+- Respond accurately to the provided query using the given dataset(s).
+- If any data fields are NULL, missing, or incomplete, **infer and fill** the missing information with the most logical and contextually appropriate value.
+- **Never leave fields empty or set to null.** Always provide the best inferred value based on the dataset context.
+
+Context:
+- Here are the dataset(s):
+
+
+Query:
+- Join all records from table `albums` with table `artists` on column `artist_id`, then list the top 5 rows sorted by `title` in descending order.
+
+Output Format:
+- Provide the response strictly in **valid JSON** format.
+- Follow exactly this schema:
+
+  "table_name": "table name",
+  "ordered_entries": [
+    {
+      entry0
+    },
+    {
+      entry1
+    },
+    {
+      entry2
+    }
+  ]
+}
+- Do not include any explanatory text or notes outside the JSON.
+- Ensure that all required fields are completed with non-null values.
+
+==================================================
+
+SAMPLE 5
+Database: data/db_music_cut_300.sqlite
+Primary Table: albums
+Tables Used: []
+Execution Type: NULL
+------------------------------
+SQL QUERY:
+SELECT * FROM `albums` AS T1 JOIN `artists` AS T2 ON T1.`artist_id` = T2.`artist_id` ORDER BY T1.`release_date (dd-mm-yyyy)` ASC LIMIT 5
+
+QUESTION:
+Join all records from table `albums` with table `artists` on column `artist_id`, then list the top 5 rows sorted by `release_date (dd-mm-yyyy)` in ascending order.
+
+GENERATED PROMPT:
+
+You are a highly skilled data analyst. Always follow instructions carefully. Always respond strictly in valid JSON.
+
+Objective:
+- Respond accurately to the provided query using the given dataset(s).
+- If any data fields are NULL, missing, or incomplete, **infer and fill** the missing information with the most logical and contextually appropriate value.
+- **Never leave fields empty or set to null.** Always provide the best inferred value based on the dataset context.
+
+Context:
+- Here are the dataset(s):
+
+
+Query:
+- Join all records from table `albums` with table `artists` on column `artist_id`, then list the top 5 rows sorted by `release_date (dd-mm-yyyy)` in ascending order.
+
+Output Format:
+- Provide the response strictly in **valid JSON** format.
+- Follow exactly this schema:
+
+  "table_name": "table name",
+  "ordered_entries": [
+    {
+      entry0
+    },
+    {
+      entry1
+    },
+    {
+      entry2
+    }
+  ]
+}
+- Do not include any explanatory text or notes outside the JSON.
+- Ensure that all required fields are completed with non-null values.
+
+==================================================
+
+SUMMARY
+==============================
+Total samples processed: 5
+Cache entries: 0
+Average prompt length: 1046 characters
+Average tables per query: 0.0
+Unique tables encountered: 0
+Tables: 

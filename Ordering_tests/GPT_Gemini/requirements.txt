@@ -1,0 +1,6 @@
+pandas
+google-generativeai
+qatch
+requests
+dotenv
+sqlparse
